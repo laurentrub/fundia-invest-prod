@@ -45,13 +45,47 @@ const step2Schema = z.object({
 });
 
 const step3Schema = z.object({
-  employmentStatus: z.string().min(1, { message: "Le statut professionnel est requis" }),
-  monthlyIncome: z.string()
-    .min(1, { message: "Le revenu mensuel est requis" })
-    .refine((val) => Number(val) >= 0, { message: "Le revenu doit être positif" }),
+  employmentStatus: z.string().min(1, { message: "Le type de contrat est requis" }),
+  contractStartDate: z.string().optional(),
+  contractEndDate: z.string().optional(),
+  monthlyIncome: z.string().optional(),
+  annualRevenue: z.string().optional(),
+  bankName: z.string().min(1, { message: "Le nom de la banque est requis" }),
   housingStatus: z.string().min(1, { message: "Le statut de logement est requis" }),
-  monthlyRent: z.string().optional(),
-});
+  leaseStartDate: z.string().optional(),
+  hasMortgage: z.string().optional(),
+  monthlyMortgage: z.string().optional(),
+}).refine((data) => {
+  // Validation pour CDD: date de début et fin requises
+  if (data.employmentStatus === "cdd" && (!data.contractStartDate || !data.contractEndDate)) {
+    return false;
+  }
+  // Validation pour CDI: date de début requise
+  if (data.employmentStatus === "cdi" && !data.contractStartDate) {
+    return false;
+  }
+  // Validation pour salariés et retraités: revenu mensuel requis
+  if ((data.employmentStatus === "cdd" || data.employmentStatus === "cdi" || data.employmentStatus === "retired") && !data.monthlyIncome) {
+    return false;
+  }
+  // Validation pour travailleur indépendant: chiffre d'affaires requis
+  if (data.employmentStatus === "self-employed" && !data.annualRevenue) {
+    return false;
+  }
+  // Validation pour locataire: date de bail requise
+  if (data.housingStatus === "renter" && !data.leaseStartDate) {
+    return false;
+  }
+  // Validation pour propriétaire: statut crédit immobilier requis
+  if (data.housingStatus === "owner" && !data.hasMortgage) {
+    return false;
+  }
+  // Validation pour propriétaire avec crédit: mensualité requise
+  if (data.housingStatus === "owner" && data.hasMortgage === "yes" && !data.monthlyMortgage) {
+    return false;
+  }
+  return true;
+}, { message: "Veuillez remplir tous les champs requis selon votre situation" });
 
 const step4Schema = z.object({
   address: z.string()
@@ -90,9 +124,15 @@ const ApplyPage = () => {
     
     // Étape 3: Informations financières
     employmentStatus: "",
+    contractStartDate: "",
+    contractEndDate: "",
     monthlyIncome: "",
+    annualRevenue: "",
+    bankName: "",
     housingStatus: "",
-    monthlyRent: "",
+    leaseStartDate: "",
+    hasMortgage: "",
+    monthlyMortgage: "",
     
     // Étape 4: Adresse
     address: "",
@@ -125,9 +165,15 @@ const ApplyPage = () => {
       } else if (stepNumber === 3) {
         step3Schema.parse({
           employmentStatus: formData.employmentStatus,
+          contractStartDate: formData.contractStartDate,
+          contractEndDate: formData.contractEndDate,
           monthlyIncome: formData.monthlyIncome,
+          annualRevenue: formData.annualRevenue,
+          bankName: formData.bankName,
           housingStatus: formData.housingStatus,
-          monthlyRent: formData.monthlyRent,
+          leaseStartDate: formData.leaseStartDate,
+          hasMortgage: formData.hasMortgage,
+          monthlyMortgage: formData.monthlyMortgage,
         });
       } else if (stepNumber === 4) {
         step4Schema.parse({
@@ -390,34 +436,105 @@ const ApplyPage = () => {
                   <h2 className="text-2xl font-bold text-foreground mb-6">Informations Financières</h2>
                   
                   <div>
-                    <Label htmlFor="employmentStatus">Statut professionnel *</Label>
+                    <Label htmlFor="employmentStatus">Sélectionnez votre contrat *</Label>
                     <Select value={formData.employmentStatus} onValueChange={(value) => updateFormData("employmentStatus", value)}>
                       <SelectTrigger>
-                        <SelectValue placeholder="Sélectionnez votre statut" />
+                        <SelectValue placeholder="Sélectionnez votre contrat" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="employed">Salarié (Temps plein)</SelectItem>
-                        <SelectItem value="employed-part">Salarié (Temps partiel)</SelectItem>
-                        <SelectItem value="self-employed">Travailleur indépendant</SelectItem>
+                        <SelectItem value="cdi">CDI</SelectItem>
+                        <SelectItem value="cdd">CDD</SelectItem>
+                        <SelectItem value="self-employed">Travailleur Indépendant</SelectItem>
                         <SelectItem value="retired">Retraité</SelectItem>
-                        <SelectItem value="other">Autre</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
 
+                  {/* Dates de contrat pour CDD */}
+                  {formData.employmentStatus === "cdd" && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <Label htmlFor="contractStartDate">Date de début du contrat *</Label>
+                        <Input
+                          id="contractStartDate"
+                          type="date"
+                          value={formData.contractStartDate}
+                          onChange={(e) => updateFormData("contractStartDate", e.target.value)}
+                          max={new Date().toISOString().split('T')[0]}
+                        />
+                      </div>
+                      <div>
+                        <Label htmlFor="contractEndDate">Date de fin du contrat *</Label>
+                        <Input
+                          id="contractEndDate"
+                          type="date"
+                          value={formData.contractEndDate}
+                          onChange={(e) => updateFormData("contractEndDate", e.target.value)}
+                          min={formData.contractStartDate}
+                        />
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Date de début pour CDI */}
+                  {formData.employmentStatus === "cdi" && (
+                    <div>
+                      <Label htmlFor="contractStartDate">Date de début du contrat *</Label>
+                      <Input
+                        id="contractStartDate"
+                        type="date"
+                        value={formData.contractStartDate}
+                        onChange={(e) => updateFormData("contractStartDate", e.target.value)}
+                        max={new Date().toISOString().split('T')[0]}
+                      />
+                    </div>
+                  )}
+
+                  {/* Revenu mensuel pour salariés et retraités */}
+                  {(formData.employmentStatus === "cdi" || formData.employmentStatus === "cdd" || formData.employmentStatus === "retired") && (
+                    <div>
+                      <Label htmlFor="monthlyIncome">Revenu mensuel net (€) *</Label>
+                      <Input
+                        id="monthlyIncome"
+                        type="number"
+                        min="0"
+                        step="100"
+                        value={formData.monthlyIncome}
+                        onChange={(e) => updateFormData("monthlyIncome", e.target.value)}
+                        placeholder="2500"
+                      />
+                    </div>
+                  )}
+
+                  {/* Chiffre d'affaires pour travailleur indépendant */}
+                  {formData.employmentStatus === "self-employed" && (
+                    <div>
+                      <Label htmlFor="annualRevenue">Chiffre d'affaires annuel (€) *</Label>
+                      <Input
+                        id="annualRevenue"
+                        type="number"
+                        min="0"
+                        step="1000"
+                        value={formData.annualRevenue}
+                        onChange={(e) => updateFormData("annualRevenue", e.target.value)}
+                        placeholder="50000"
+                      />
+                    </div>
+                  )}
+
+                  {/* Banque */}
                   <div>
-                    <Label htmlFor="monthlyIncome">Revenu mensuel net (€) *</Label>
+                    <Label htmlFor="bankName">Quelle est votre banque ? *</Label>
                     <Input
-                      id="monthlyIncome"
-                      type="number"
-                      min="0"
-                      step="100"
-                      value={formData.monthlyIncome}
-                      onChange={(e) => updateFormData("monthlyIncome", e.target.value)}
-                      placeholder="2500"
+                      id="bankName"
+                      value={formData.bankName}
+                      onChange={(e) => updateFormData("bankName", e.target.value)}
+                      placeholder="Ex: BNP Paribas, Crédit Agricole..."
+                      maxLength={100}
                     />
                   </div>
 
+                  {/* Statut de logement */}
                   <div>
                     <Label htmlFor="housingStatus">Statut de logement *</Label>
                     <Select value={formData.housingStatus} onValueChange={(value) => updateFormData("housingStatus", value)}>
@@ -427,25 +544,56 @@ const ApplyPage = () => {
                       <SelectContent>
                         <SelectItem value="owner">Propriétaire</SelectItem>
                         <SelectItem value="renter">Locataire</SelectItem>
-                        <SelectItem value="living-with-parents">Logé chez les parents</SelectItem>
                         <SelectItem value="other">Autre</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
 
+                  {/* Date de bail pour locataire */}
                   {formData.housingStatus === "renter" && (
                     <div>
-                      <Label htmlFor="monthlyRent">Loyer mensuel (€)</Label>
+                      <Label htmlFor="leaseStartDate">Date de début du bail *</Label>
                       <Input
-                        id="monthlyRent"
-                        type="number"
-                        min="0"
-                        step="50"
-                        value={formData.monthlyRent}
-                        onChange={(e) => updateFormData("monthlyRent", e.target.value)}
-                        placeholder="800"
+                        id="leaseStartDate"
+                        type="date"
+                        value={formData.leaseStartDate}
+                        onChange={(e) => updateFormData("leaseStartDate", e.target.value)}
+                        max={new Date().toISOString().split('T')[0]}
                       />
                     </div>
+                  )}
+
+                  {/* Crédit immobilier pour propriétaire */}
+                  {formData.housingStatus === "owner" && (
+                    <>
+                      <div>
+                        <Label htmlFor="hasMortgage">Crédit immobilier en cours ? *</Label>
+                        <Select value={formData.hasMortgage} onValueChange={(value) => updateFormData("hasMortgage", value)}>
+                          <SelectTrigger>
+                            <SelectValue placeholder="Sélectionnez" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="yes">Oui</SelectItem>
+                            <SelectItem value="no">Non</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+
+                      {formData.hasMortgage === "yes" && (
+                        <div>
+                          <Label htmlFor="monthlyMortgage">Mensualité du crédit immobilier (€) *</Label>
+                          <Input
+                            id="monthlyMortgage"
+                            type="number"
+                            min="0"
+                            step="50"
+                            value={formData.monthlyMortgage}
+                            onChange={(e) => updateFormData("monthlyMortgage", e.target.value)}
+                            placeholder="800"
+                          />
+                        </div>
+                      )}
+                    </>
                   )}
                 </div>
               )}
