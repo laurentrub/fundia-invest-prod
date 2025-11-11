@@ -6,87 +6,87 @@ import { Briefcase, CheckCircle } from "lucide-react";
 
 const BusinessLoan = () => {
   const benefits = [
-    "Loans from €5,000 to €75,000",
-    "Flexible terms: 12-84 months",
-    "Fast approval for entrepreneurs",
-    "Use for any business purpose",
-    "Competitive rates for SMEs",
-    "Preserve business cash flow",
+    "Prêts de 5 000 € à 75 000 €",
+    "Durées flexibles : 12 à 84 mois",
+    "Approbation rapide pour entrepreneurs",
+    "Utilisable pour tout projet professionnel",
+    "Taux compétitifs pour PME",
+    "Préservez votre trésorerie",
   ];
 
   const useCases = [
     {
-      title: "Working Capital",
-      description: "Cover operating expenses, payroll, inventory, or seasonal cash flow gaps",
-      typical: "€10,000-€50,000"
+      title: "Fonds de Roulement",
+      description: "Couvrir les dépenses opérationnelles, la paie, les stocks ou les écarts de trésorerie saisonniers",
+      typical: "10 000 € - 50 000 €"
     },
     {
-      title: "Equipment Purchase",
-      description: "Buy machinery, vehicles, computers, or specialized tools",
-      typical: "€15,000-€75,000"
+      title: "Achat d'Équipement",
+      description: "Acheter des machines, véhicules, ordinateurs ou outils spécialisés",
+      typical: "15 000 € - 75 000 €"
     },
     {
-      title: "Business Expansion",
-      description: "Open new locations, hire staff, or enter new markets",
-      typical: "€20,000-€75,000"
+      title: "Expansion de l'Entreprise",
+      description: "Ouvrir de nouveaux locaux, recruter du personnel ou conquérir de nouveaux marchés",
+      typical: "20 000 € - 75 000 €"
     },
     {
-      title: "Marketing & Growth",
-      description: "Fund advertising campaigns, website development, or sales initiatives",
-      typical: "€5,000-€30,000"
+      title: "Marketing & Croissance",
+      description: "Financer des campagnes publicitaires, le développement web ou des initiatives commerciales",
+      typical: "5 000 € - 30 000 €"
     },
     {
-      title: "Inventory Purchase",
-      description: "Stock up on products, materials, or supplies",
-      typical: "€10,000-€50,000"
+      title: "Achat de Stock",
+      description: "Constituer des stocks de produits, matériaux ou fournitures",
+      typical: "10 000 € - 50 000 €"
     },
     {
-      title: "Refinancing",
-      description: "Consolidate business debts or refinance at better terms",
-      typical: "€15,000-€75,000"
+      title: "Refinancement",
+      description: "Regrouper des dettes professionnelles ou refinancer à de meilleures conditions",
+      typical: "15 000 € - 75 000 €"
     },
   ];
 
   const faqs = [
     {
-      q: "Who qualifies for a business loan?",
-      a: "Sole proprietors, partnerships, LLCs, corporations, and self-employed professionals can apply. You'll need to have been in business for at least 6 months (preferably 12+ months), show consistent revenue, and provide business financial documentation. Personal credit score is also considered since these are often personally guaranteed."
+      q: "Qui peut bénéficier d'un crédit professionnel ?",
+      a: "Les entrepreneurs individuels, sociétés de personnes, SARL, SA et professionnels indépendants peuvent faire une demande. Vous devez être en activité depuis au moins 6 mois (de préférence 12+ mois), afficher un chiffre d'affaires régulier et fournir des documents financiers professionnels. Le score de crédit personnel est également pris en compte car ces prêts sont souvent garantis personnellement."
     },
     {
-      q: "What documents do I need to apply?",
-      a: "You'll need business formation documents (registration, articles of incorporation), tax returns (business and personal for last 2 years), profit & loss statements, bank statements (3-6 months), a business plan or explanation of fund usage, and personal identification. Self-employed individuals should provide thorough income documentation."
+      q: "Quels documents sont nécessaires pour la demande ?",
+      a: "Vous aurez besoin des documents de création de l'entreprise (immatriculation, statuts), des déclarations fiscales (professionnelles et personnelles des 2 dernières années), bilans et comptes de résultat, relevés bancaires (3-6 mois), un business plan ou explication de l'utilisation des fonds, et une pièce d'identité. Les travailleurs indépendants doivent fournir une documentation complète de leurs revenus."
     },
     {
-      q: "Is this a secured or unsecured loan?",
-      a: "Our business loans are typically unsecured, meaning you don't need to pledge specific business assets as collateral. However, you may need to provide a personal guarantee, meaning you're personally responsible for repayment if the business cannot pay."
+      q: "S'agit-il d'un prêt garanti ou non garanti ?",
+      a: "Nos crédits professionnels sont généralement non garantis, ce qui signifie que vous n'avez pas besoin de mettre en gage des actifs professionnels spécifiques en garantie. Cependant, vous devrez peut-être fournir une garantie personnelle, ce qui signifie que vous êtes personnellement responsable du remboursement si l'entreprise ne peut pas payer."
     },
     {
-      q: "How quickly can I get funding?",
-      a: "Business loan approval typically takes 2-5 business days depending on the complexity of your application and how quickly you provide documentation. Once approved, funds are usually disbursed within 24-48 hours."
+      q: "Dans quel délai puis-je obtenir le financement ?",
+      a: "L'approbation d'un crédit professionnel prend généralement 2 à 5 jours ouvrables selon la complexité de votre demande et la rapidité avec laquelle vous fournissez les documents. Une fois approuvés, les fonds sont généralement versés dans les 24 à 48 heures."
     },
     {
-      q: "What if my business is brand new?",
-      a: "Brand new businesses (under 6 months) have limited options with traditional lenders. Consider applying for a personal loan to fund your startup, using business crowdfunding, seeking angel investors, or waiting until you have 6-12 months of revenue history. Strong personal credit and a detailed business plan can help."
+      q: "Que faire si mon entreprise est toute nouvelle ?",
+      a: "Les entreprises très récentes (moins de 6 mois) ont des options limitées avec les prêteurs traditionnels. Envisagez de demander un prêt personnel pour financer votre startup, utilisez le financement participatif, recherchez des investisseurs providentiels, ou attendez d'avoir 6-12 mois d'historique de revenus. Un bon crédit personnel et un business plan détaillé peuvent aider."
     },
     {
-      q: "Can I use this loan to start a business?",
-      a: "While our business loans are primarily for existing businesses, if you have a very strong business plan, significant industry experience, substantial personal investment, and excellent personal credit, we may consider startup funding on a case-by-case basis."
+      q: "Puis-je utiliser ce prêt pour créer une entreprise ?",
+      a: "Bien que nos crédits professionnels soient principalement destinés aux entreprises existantes, si vous avez un business plan très solide, une expérience significative du secteur, un investissement personnel substantiel et un excellent crédit personnel, nous pouvons envisager le financement de startup au cas par cas."
     },
     {
-      q: "What interest rates can I expect?",
-      a: "Rates typically range from 5% to 12% APR depending on your business revenue, time in business, personal credit score, and loan amount/term. Established businesses with strong financials and good personal credit receive the best rates."
+      q: "À quels taux d'intérêt puis-je m'attendre ?",
+      a: "Les taux varient généralement de 5 % à 12 % TAEG selon le chiffre d'affaires de votre entreprise, l'ancienneté, votre score de crédit personnel et le montant/durée du prêt. Les entreprises établies avec des finances solides et un bon crédit personnel obtiennent les meilleurs taux."
     },
     {
-      q: "How does business loan repayment work?",
-      a: "Repayment is typically through fixed monthly payments that include both principal and interest. Payments are often automatically deducted from your business bank account. There are no prepayment penalties if you want to pay off the loan early."
+      q: "Comment fonctionne le remboursement d'un crédit professionnel ?",
+      a: "Le remboursement se fait généralement par mensualités fixes comprenant le capital et les intérêts. Les paiements sont souvent prélevés automatiquement sur votre compte bancaire professionnel. Il n'y a pas de pénalités de remboursement anticipé si vous souhaitez rembourser le prêt plus tôt."
     },
     {
-      q: "Will this affect my personal credit?",
-      a: "Yes, applying will result in a hard inquiry on your personal credit report since you're personally guaranteeing the loan. On-time payments can positively impact your personal credit, while missed payments will hurt it. Additionally, the loan may appear on your personal credit report."
+      q: "Cela affectera-t-il mon crédit personnel ?",
+      a: "Oui, la demande entraînera une enquête approfondie sur votre rapport de crédit personnel car vous garantissez personnellement le prêt. Les paiements à temps peuvent impacter positivement votre crédit personnel, tandis que les paiements manqués le détérioreront. De plus, le prêt peut apparaître sur votre rapport de crédit personnel."
     },
     {
-      q: "Can I get a loan if my business has debt?",
-      a: "Yes, existing business debt doesn't automatically disqualify you. We'll evaluate your debt-to-income ratio and ensure your business generates sufficient revenue to handle the additional payment. Many businesses use our loans specifically to consolidate and refinance existing higher-interest debt."
+      q: "Puis-je obtenir un prêt si mon entreprise a des dettes ?",
+      a: "Oui, l'endettement professionnel existant ne vous disqualifie pas automatiquement. Nous évaluerons votre ratio d'endettement et nous assurerons que votre entreprise génère suffisamment de revenus pour gérer le paiement supplémentaire. Beaucoup d'entreprises utilisent nos prêts spécifiquement pour consolider et refinancer des dettes existantes à taux d'intérêt plus élevés."
     },
   ];
 
@@ -100,10 +100,10 @@ const BusinessLoan = () => {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <Briefcase className="h-10 w-10" />
-                <h1 className="text-4xl md:text-5xl font-bold">Business Loans</h1>
+                <h1 className="text-4xl md:text-5xl font-bold">Crédit Professionnel</h1>
               </div>
               <p className="text-xl mb-6 text-primary-foreground/90">
-                Flexible financing for entrepreneurs, SMEs, and growing businesses. Fund expansion, equipment, working capital, and more.
+                Financement flexible pour entrepreneurs, PME et entreprises en croissance. Financez l'expansion, l'équipement, le fonds de roulement et plus encore.
               </p>
             </div>
             <div>
@@ -123,7 +123,7 @@ const BusinessLoan = () => {
 
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Why Choose Our Business Loans?</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-8">Pourquoi Choisir Notre Crédit Professionnel ?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start gap-3">
@@ -137,13 +137,13 @@ const BusinessLoan = () => {
 
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 max-w-5xl">
-          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Common Business Loan Uses</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Utilisations Courantes du Crédit Professionnel</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {useCases.map((useCase, index) => (
               <Card key={index} className="p-6">
                 <h3 className="text-xl font-bold text-foreground mb-2">{useCase.title}</h3>
                 <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{useCase.description}</p>
-                <div className="text-xs text-accent font-semibold">Typical: {useCase.typical}</div>
+                <div className="text-xs text-accent font-semibold">Montant typique : {useCase.typical}</div>
               </Card>
             ))}
           </div>
@@ -153,166 +153,166 @@ const BusinessLoan = () => {
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="prose prose-lg max-w-none space-y-6">
-            <h2 className="text-3xl font-bold text-foreground">Complete Business Loan Guide</h2>
+            <h2 className="text-3xl font-bold text-foreground">Guide Complet du Crédit Professionnel</h2>
             
-            <h3 className="text-2xl font-bold text-foreground">What is a Business Loan?</h3>
+            <h3 className="text-2xl font-bold text-foreground">Qu'est-ce qu'un Crédit Professionnel ?</h3>
             <p className="text-foreground leading-relaxed">
-              A business loan provides capital to help your company grow, manage cash flow, purchase assets, or handle unexpected expenses. At Privat Equity, we offer term loans ranging from €5,000 to €75,000 with repayment periods from 12 to 84 months, designed specifically for small and medium-sized enterprises (SMEs), entrepreneurs, and self-employed professionals.
+              Un crédit professionnel fournit des capitaux pour aider votre entreprise à se développer, gérer la trésorerie, acheter des actifs ou faire face à des dépenses imprévues. Chez Privat Equity, nous proposons des prêts à terme de 5 000 € à 75 000 € avec des périodes de remboursement de 12 à 84 mois, conçus spécifiquement pour les petites et moyennes entreprises (PME), les entrepreneurs et les professionnels indépendants.
             </p>
             <p className="text-foreground leading-relaxed">
-              Unlike traditional bank business loans that can take weeks or months to process, our streamlined application focuses on your business's actual performance and potential rather than just paperwork. Interest rates typically range from 5-12% APR depending on your business strength, time in operation, and creditworthiness.
+              Contrairement aux prêts bancaires professionnels traditionnels qui peuvent prendre des semaines ou des mois à traiter, notre processus de demande simplifié se concentre sur les performances réelles et le potentiel de votre entreprise plutôt que sur la paperasserie. Les taux d'intérêt varient généralement de 5 à 12 % TAEG selon la solidité de votre entreprise, son ancienneté et votre solvabilité.
             </p>
 
-            <h3 className="text-2xl font-bold text-foreground mt-8">Benefits of Business Loans</h3>
+            <h3 className="text-2xl font-bold text-foreground mt-8">Avantages des Crédits Professionnels</h3>
             <ul className="space-y-3 text-foreground">
-              <li><strong>Maintain Cash Flow:</strong> Keep working capital available for daily operations while funding major expenses</li>
-              <li><strong>Preserve Equity:</strong> Avoid giving up ownership stakes in your business to investors</li>
-              <li><strong>Build Business Credit:</strong> Establishing a positive payment history helps build your business credit profile</li>
-              <li><strong>Tax Advantages:</strong> Interest payments on business loans are typically tax-deductible business expenses</li>
-              <li><strong>Predictable Payments:</strong> Fixed monthly payments make budgeting and cash flow planning easier</li>
-              <li><strong>Fast Access to Capital:</strong> Get funding much faster than traditional bank loans or raising equity</li>
-              <li><strong>Flexible Use:</strong> Use funds for almost any legitimate business purpose without restrictions</li>
+              <li><strong>Maintenir la Trésorerie :</strong> Gardez le fonds de roulement disponible pour les opérations quotidiennes tout en finançant les dépenses importantes</li>
+              <li><strong>Préserver les Capitaux Propres :</strong> Évitez de céder des parts de propriété de votre entreprise aux investisseurs</li>
+              <li><strong>Construire le Crédit d'Entreprise :</strong> Établir un historique de paiement positif aide à construire le profil de crédit de votre entreprise</li>
+              <li><strong>Avantages Fiscaux :</strong> Les paiements d'intérêts sur les prêts professionnels sont généralement déductibles fiscalement</li>
+              <li><strong>Paiements Prévisibles :</strong> Les mensualités fixes facilitent la budgétisation et la planification de trésorerie</li>
+              <li><strong>Accès Rapide aux Capitaux :</strong> Obtenez un financement beaucoup plus rapidement que les prêts bancaires traditionnels ou la levée de fonds</li>
+              <li><strong>Utilisation Flexible :</strong> Utilisez les fonds pour presque tout usage professionnel légitime sans restrictions</li>
             </ul>
 
-            <h3 className="text-2xl font-bold text-foreground mt-8">Types of Businesses We Finance</h3>
+            <h3 className="text-2xl font-bold text-foreground mt-8">Types d'Entreprises que Nous Finançons</h3>
             <p className="text-foreground leading-relaxed">
-              We work with a wide range of business types and structures:
+              Nous travaillons avec une large gamme de types d'entreprises et de structures :
             </p>
             <ul className="space-y-2 text-foreground">
-              <li><strong>Sole Proprietorships:</strong> Individual business owners including freelancers and consultants</li>
-              <li><strong>Partnerships:</strong> Businesses owned by two or more people</li>
-              <li><strong>Limited Liability Companies (LLC/SARL):</strong> The most common small business structure</li>
-              <li><strong>Corporations (SAS/SA):</strong> Larger structured businesses</li>
-              <li><strong>Self-Employed Professionals:</strong> Doctors, lawyers, accountants, contractors, and other professionals</li>
-              <li><strong>E-commerce Businesses:</strong> Online retailers and service providers</li>
-              <li><strong>Brick-and-Mortar Retail:</strong> Physical stores and showrooms</li>
-              <li><strong>Service Businesses:</strong> Consulting, maintenance, health, beauty, and personal services</li>
-              <li><strong>Manufacturing:</strong> Small-scale production and fabrication businesses</li>
-              <li><strong>Food Service:</strong> Restaurants, cafes, catering, food trucks</li>
+              <li><strong>Entreprises Individuelles :</strong> Propriétaires d'entreprise individuels y compris freelances et consultants</li>
+              <li><strong>Sociétés de Personnes :</strong> Entreprises détenues par deux personnes ou plus</li>
+              <li><strong>Sociétés à Responsabilité Limitée (SARL):</strong> La structure de petite entreprise la plus courante</li>
+              <li><strong>Sociétés par Actions (SAS/SA):</strong> Entreprises structurées plus importantes</li>
+              <li><strong>Professionnels Indépendants :</strong> Médecins, avocats, comptables, entrepreneurs et autres professionnels</li>
+              <li><strong>Entreprises de Commerce Électronique :</strong> Détaillants et prestataires de services en ligne</li>
+              <li><strong>Commerce de Détail Physique :</strong> Magasins physiques et showrooms</li>
+              <li><strong>Entreprises de Services :</strong> Conseil, maintenance, santé, beauté et services personnels</li>
+              <li><strong>Fabrication :</strong> Entreprises de production et de fabrication à petite échelle</li>
+              <li><strong>Restauration :</strong> Restaurants, cafés, traiteurs, food trucks</li>
             </ul>
 
-            <h3 className="text-2xl font-bold text-foreground mt-8">Common Uses for Business Loans</h3>
+            <h3 className="text-2xl font-bold text-foreground mt-8">Utilisations Courantes des Crédits Professionnels</h3>
 
-            <h4 className="text-xl font-semibold text-foreground mt-6">Working Capital</h4>
+            <h4 className="text-xl font-semibold text-foreground mt-6">Fonds de Roulement</h4>
             <p className="text-foreground leading-relaxed">
-              Cover day-to-day operational expenses, manage seasonal fluctuations, pay suppliers, meet payroll during slow periods, or bridge the gap between receivables and payables. Working capital loans keep your business running smoothly during growth phases or temporary cash crunches.
+              Couvrir les dépenses opérationnelles quotidiennes, gérer les fluctuations saisonnières, payer les fournisseurs, respecter la paie pendant les périodes creuses, ou combler l'écart entre les créances et les dettes. Les prêts de fonds de roulement maintiennent votre entreprise en marche pendant les phases de croissance ou les crises temporaires de trésorerie.
             </p>
 
-            <h4 className="text-xl font-semibold text-foreground mt-6">Equipment and Asset Purchases</h4>
+            <h4 className="text-xl font-semibold text-foreground mt-6">Achats d'Équipement et d'Actifs</h4>
             <p className="text-foreground leading-relaxed">
-              Buy machinery, vehicles, computers, furniture, specialized tools, or any equipment your business needs to operate or grow. Financing equipment preserves your cash reserves while allowing you to acquire assets that generate revenue or improve efficiency.
+              Acheter des machines, véhicules, ordinateurs, mobilier, outils spécialisés ou tout équipement dont votre entreprise a besoin pour fonctionner ou se développer. Le financement d'équipement préserve vos réserves de trésorerie tout en vous permettant d'acquérir des actifs qui génèrent des revenus ou améliorent l'efficacité.
             </p>
 
-            <h4 className="text-xl font-semibold text-foreground mt-6">Business Expansion</h4>
+            <h4 className="text-xl font-semibold text-foreground mt-6">Expansion de l'Entreprise</h4>
             <p className="text-foreground leading-relaxed">
-              Open additional locations, hire new employees, enter new markets, launch new product lines, or increase production capacity. Expansion requires capital, and strategic borrowing can accelerate growth while minimizing dilution of ownership.
+              Ouvrir de nouveaux locaux, embaucher de nouveaux employés, entrer sur de nouveaux marchés, lancer de nouvelles gammes de produits ou augmenter la capacité de production. L'expansion nécessite des capitaux, et l'emprunt stratégique peut accélérer la croissance tout en minimisant la dilution de la propriété.
             </p>
 
-            <h4 className="text-xl font-semibold text-foreground mt-6">Inventory and Stock</h4>
+            <h4 className="text-xl font-semibold text-foreground mt-6">Stock et Inventaire</h4>
             <p className="text-foreground leading-relaxed">
-              Purchase inventory in bulk to take advantage of discounts, stock up for busy seasons, or maintain adequate inventory levels to meet customer demand. Retail and e-commerce businesses especially benefit from inventory financing.
+              Acheter des stocks en gros pour profiter de remises, faire des réserves pour les saisons chargées ou maintenir des niveaux de stock adéquats pour répondre à la demande des clients. Les entreprises de vente au détail et de commerce électronique bénéficient particulièrement du financement de stock.
             </p>
 
-            <h4 className="text-xl font-semibold text-foreground mt-6">Marketing and Business Development</h4>
+            <h4 className="text-xl font-semibold text-foreground mt-6">Marketing et Développement Commercial</h4>
             <p className="text-foreground leading-relaxed">
-              Fund advertising campaigns, develop professional websites, attend trade shows, hire sales staff, or implement CRM systems. Marketing investments often have excellent ROI but require upfront capital that loans can provide.
+              Financer des campagnes publicitaires, développer des sites web professionnels, assister à des salons professionnels, embaucher du personnel commercial ou mettre en place des systèmes CRM. Les investissements marketing ont souvent un excellent ROI mais nécessitent des capitaux initiaux que les prêts peuvent fournir.
             </p>
 
-            <h4 className="text-xl font-semibold text-foreground mt-6">Debt Consolidation and Refinancing</h4>
+            <h4 className="text-xl font-semibold text-foreground mt-6">Consolidation et Refinancement de Dettes</h4>
             <p className="text-foreground leading-relaxed">
-              Consolidate multiple business debts or high-interest merchant cash advances into one lower-rate loan. This simplifies finances, reduces total interest costs, and can significantly improve monthly cash flow.
+              Regrouper plusieurs dettes professionnelles ou avances de trésorerie commerçant à taux d'intérêt élevé en un seul prêt à taux inférieur. Cela simplifie les finances, réduit les coûts d'intérêt totaux et peut considérablement améliorer la trésorerie mensuelle.
             </p>
 
-            <h3 className="text-2xl font-bold text-foreground mt-8">Eligibility Requirements</h3>
+            <h3 className="text-2xl font-bold text-foreground mt-8">Conditions d'Éligibilité</h3>
             <p className="text-foreground leading-relaxed">
-              To qualify for a business loan with Privat Equity, you should generally meet these criteria:
+              Pour être admissible à un crédit professionnel avec Privat Equity, vous devez généralement remplir ces critères :
             </p>
             <ul className="space-y-2 text-foreground">
-              <li>Business operational for at least 6-12 months (exceptions for strong startups)</li>
-              <li>Minimum monthly revenue of €5,000-€10,000 depending on loan amount</li>
-              <li>Personal credit score of 600+ (higher scores get better rates)</li>
-              <li>No recent bankruptcies or major defaults</li>
-              <li>Registered business with proper licensing and documentation</li>
-              <li>Debt service coverage ratio showing ability to repay</li>
-              <li>French residency or proper business registration in France</li>
+              <li>Entreprise en activité depuis au moins 6-12 mois (exceptions pour les startups solides)</li>
+              <li>Chiffre d'affaires mensuel minimum de 5 000 € - 10 000 € selon le montant du prêt</li>
+              <li>Score de crédit personnel de 600+ (les scores plus élevés obtiennent de meilleurs taux)</li>
+              <li>Aucune faillite récente ou défaut majeur</li>
+              <li>Entreprise enregistrée avec licence et documentation appropriées</li>
+              <li>Ratio de couverture du service de la dette montrant la capacité de remboursement</li>
+              <li>Résidence française ou immatriculation commerciale appropriée en France</li>
             </ul>
 
-            <h3 className="text-2xl font-bold text-foreground mt-8">Required Documentation</h3>
+            <h3 className="text-2xl font-bold text-foreground mt-8">Documentation Requise</h3>
             <p className="text-foreground leading-relaxed">
-              Prepare these documents to speed up your application:
+              Préparez ces documents pour accélérer votre demande :
             </p>
             <ul className="space-y-2 text-foreground">
-              <li><strong>Business Documentation:</strong> Business registration, articles of incorporation, operating agreement, business licenses</li>
-              <li><strong>Financial Statements:</strong> Last 2 years of business tax returns, profit & loss statements, balance sheets</li>
-              <li><strong>Bank Statements:</strong> 3-6 months of business bank statements showing revenue and expenses</li>
-              <li><strong>Personal Information:</strong> Owner's personal tax returns, personal identification, proof of address</li>
-              <li><strong>Business Plan:</strong> Description of your business, how loan funds will be used, growth projections</li>
-              <li><strong>Accounts Receivable/Payable:</strong> If applicable, aging reports showing money owed to and by your business</li>
+              <li><strong>Documentation d'Entreprise :</strong> Immatriculation, statuts, accord d'exploitation, licences commerciales</li>
+              <li><strong>États Financiers :</strong> 2 dernières années de déclarations fiscales professionnelles, bilans et comptes de résultat</li>
+              <li><strong>Relevés Bancaires :</strong> 3-6 mois de relevés bancaires professionnels montrant revenus et dépenses</li>
+              <li><strong>Informations Personnelles :</strong> Déclarations fiscales personnelles du propriétaire, pièce d'identité, justificatif de domicile</li>
+              <li><strong>Business Plan :</strong> Description de votre entreprise, utilisation prévue des fonds du prêt, projections de croissance</li>
+              <li><strong>Comptes Clients/Fournisseurs :</strong> Si applicable, rapports d'ancienneté montrant l'argent dû à et par votre entreprise</li>
             </ul>
 
-            <h3 className="text-2xl font-bold text-foreground mt-8">Understanding Business Loan Terms</h3>
+            <h3 className="text-2xl font-bold text-foreground mt-8">Comprendre les Conditions du Crédit Professionnel</h3>
 
-            <h4 className="text-xl font-semibold text-foreground mt-6">Interest Rates (APR)</h4>
+            <h4 className="text-xl font-semibold text-foreground mt-6">Taux d'Intérêt (TAEG)</h4>
             <p className="text-foreground leading-relaxed">
-              Your rate depends on multiple factors: time in business (longer is better), annual revenue (higher is better), profit margins, personal credit score, loan amount and term, and your industry. Established profitable businesses with strong credit can secure rates as low as 5% APR, while newer or higher-risk businesses might see rates of 10-12% APR.
+              Votre taux dépend de plusieurs facteurs : ancienneté de l'entreprise (plus longue est mieux), chiffre d'affaires annuel (plus élevé est mieux), marges bénéficiaires, score de crédit personnel, montant et durée du prêt, et votre secteur d'activité. Les entreprises établies et rentables avec un bon crédit peuvent obtenir des taux aussi bas que 5 % TAEG, tandis que les entreprises plus récentes ou à risque plus élevé pourraient voir des taux de 10-12 % TAEG.
             </p>
 
-            <h4 className="text-xl font-semibold text-foreground mt-6">Loan Terms and Amortization</h4>
+            <h4 className="text-xl font-semibold text-foreground mt-6">Durées de Prêt et Amortissement</h4>
             <p className="text-foreground leading-relaxed">
-              Shorter terms (12-36 months) have higher monthly payments but lower total interest costs. Longer terms (60-84 months) reduce monthly payments but increase total interest paid. Choose a term that balances affordable payments with minimizing interest costs.
+              Les durées plus courtes (12-36 mois) ont des mensualités plus élevées mais des coûts d'intérêt totaux plus faibles. Les durées plus longues (60-84 mois) réduisent les mensualités mais augmentent le total des intérêts payés. Choisissez une durée qui équilibre mensualités abordables et minimisation des coûts d'intérêt.
             </p>
 
-            <h4 className="text-xl font-semibold text-foreground mt-6">Personal Guarantees</h4>
+            <h4 className="text-xl font-semibold text-foreground mt-6">Garanties Personnelles</h4>
             <p className="text-foreground leading-relaxed">
-              Most business loans under €75,000 require a personal guarantee from the business owner(s), meaning you're personally liable for repayment if the business cannot pay. This is standard for small business lending and reflects the lender's need for security.
+              La plupart des crédits professionnels de moins de 75 000 € nécessitent une garantie personnelle du ou des propriétaires de l'entreprise, ce qui signifie que vous êtes personnellement responsable du remboursement si l'entreprise ne peut pas payer. C'est standard pour les prêts aux petites entreprises et reflète le besoin de sécurité du prêteur.
             </p>
 
-            <h3 className="text-2xl font-bold text-foreground mt-8">How to Improve Your Approval Chances</h3>
+            <h3 className="text-2xl font-bold text-foreground mt-8">Comment Améliorer Vos Chances d'Approbation</h3>
             <ul className="space-y-2 text-foreground">
-              <li>Maintain clean personal and business credit - correct errors before applying</li>
-              <li>Demonstrate consistent revenue growth or stable revenue patterns</li>
-              <li>Reduce existing business debt to improve debt-to-income ratios</li>
-              <li>Have a clear, realistic business plan explaining loan usage and ROI</li>
-              <li>Keep detailed financial records showing profitability or path to profitability</li>
-              <li>Build a relationship with the lender before needing urgent funding</li>
-              <li>Consider a co-signer if your credit or business history is limited</li>
-              <li>Start with a smaller loan amount to establish a track record</li>
+              <li>Maintenir un crédit personnel et professionnel propre - corriger les erreurs avant de faire une demande</li>
+              <li>Démontrer une croissance constante des revenus ou des modèles de revenus stables</li>
+              <li>Réduire la dette professionnelle existante pour améliorer les ratios d'endettement</li>
+              <li>Avoir un business plan clair et réaliste expliquant l'utilisation du prêt et le ROI</li>
+              <li>Tenir des registres financiers détaillés montrant la rentabilité ou le chemin vers la rentabilité</li>
+              <li>Construire une relation avec le prêteur avant d'avoir besoin d'un financement urgent</li>
+              <li>Envisager un cosignataire si votre crédit ou historique d'entreprise est limité</li>
+              <li>Commencer par un montant de prêt plus petit pour établir un historique</li>
             </ul>
 
-            <h3 className="text-2xl font-bold text-foreground mt-8">Alternatives to Business Loans</h3>
+            <h3 className="text-2xl font-bold text-foreground mt-8">Alternatives aux Crédits Professionnels</h3>
 
-            <h4 className="text-xl font-semibold text-foreground mt-6">Business Line of Credit</h4>
+            <h4 className="text-xl font-semibold text-foreground mt-6">Ligne de Crédit d'Entreprise</h4>
             <p className="text-foreground leading-relaxed">
-              Similar to a credit card, you're approved for a maximum amount and only pay interest on what you actually use. Good for ongoing working capital needs rather than one-time purchases.
+              Similaire à une carte de crédit, vous êtes approuvé pour un montant maximum et ne payez des intérêts que sur ce que vous utilisez réellement. Bon pour les besoins de fonds de roulement continus plutôt que pour les achats ponctuels.
             </p>
 
-            <h4 className="text-xl font-semibold text-foreground mt-6">Equipment Financing</h4>
+            <h4 className="text-xl font-semibold text-foreground mt-6">Financement d'Équipement</h4>
             <p className="text-foreground leading-relaxed">
-              Secured loans where the equipment itself serves as collateral, often resulting in lower rates. The equipment must be the primary use of funds.
+              Prêts garantis où l'équipement lui-même sert de garantie, entraînant souvent des taux plus bas. L'équipement doit être l'utilisation principale des fonds.
             </p>
 
-            <h4 className="text-xl font-semibold text-foreground mt-6">Invoice Factoring</h4>
+            <h4 className="text-xl font-semibold text-foreground mt-6">Affacturage de Factures</h4>
             <p className="text-foreground leading-relaxed">
-              Sell your outstanding invoices to a factoring company at a discount to get immediate cash. Expensive but useful for businesses with cash flow problems due to slow-paying customers.
+              Vendez vos factures impayées à une société d'affacturage avec une décote pour obtenir de l'argent immédiatement. Coûteux mais utile pour les entreprises ayant des problèmes de trésorerie dus à des clients qui paient lentement.
             </p>
 
-            <h4 className="text-xl font-semibold text-foreground mt-6">Merchant Cash Advance</h4>
+            <h4 className="text-xl font-semibold text-foreground mt-6">Avance de Trésorerie Commerçant</h4>
             <p className="text-foreground leading-relaxed">
-              Receive a lump sum in exchange for a percentage of daily credit card sales. Very expensive (often 30-100% APR equivalent) and should only be used as a last resort.
+              Recevez une somme forfaitaire en échange d'un pourcentage des ventes quotidiennes par carte de crédit. Très coûteux (souvent 30-100 % de TAEG équivalent) et ne devrait être utilisé qu'en dernier recours.
             </p>
 
-            <h3 className="text-2xl font-bold text-foreground mt-8">Managing Your Business Loan</h3>
+            <h3 className="text-2xl font-bold text-foreground mt-8">Gérer Votre Crédit Professionnel</h3>
             <p className="text-foreground leading-relaxed">
-              Once approved, proper loan management is crucial:
+              Une fois approuvé, une gestion appropriée du prêt est cruciale :
             </p>
             <ul className="space-y-2 text-foreground">
-              <li>Set up automatic payments from your business bank account to never miss a payment</li>
-              <li>Track how loan funds are being used against your business plan</li>
-              <li>Monitor the ROI of your loan - is it generating the expected returns?</li>
-              <li>Make extra payments when cash flow allows to reduce interest costs</li>
-              <li>Maintain open communication with your lender if challenges arise</li>
-              <li>Keep detailed records for tax purposes (interest is typically deductible)</li>
-              <li>Consider refinancing if your business grows and you qualify for better terms</li>
+              <li>Mettez en place des paiements automatiques depuis votre compte bancaire professionnel pour ne jamais manquer un paiement</li>
+              <li>Suivez comment les fonds du prêt sont utilisés par rapport à votre business plan</li>
+              <li>Surveillez le ROI de votre prêt - génère-t-il les rendements attendus ?</li>
+              <li>Effectuez des paiements supplémentaires lorsque la trésorerie le permet pour réduire les coûts d'intérêt</li>
+              <li>Maintenez une communication ouverte avec votre prêteur si des défis surviennent</li>
+              <li>Conservez des registres détaillés à des fins fiscales (les intérêts sont généralement déductibles)</li>
+              <li>Envisagez un refinancement si votre entreprise se développe et que vous êtes admissible à de meilleures conditions</li>
             </ul>
           </div>
         </div>
@@ -320,7 +320,7 @@ const BusinessLoan = () => {
 
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Business Loan FAQ</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-8">Questions Fréquentes sur le Crédit Professionnel</h2>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
               <Card key={index} className="p-6">

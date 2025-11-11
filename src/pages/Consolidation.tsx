@@ -6,85 +6,85 @@ import { CheckCircle, AlertTriangle, TrendingDown } from "lucide-react";
 
 const Consolidation = () => {
   const benefits = [
-    "Combine multiple debts into one payment",
-    "Potentially lower overall interest rate",
-    "Simplify financial management",
-    "Fixed monthly payment",
-    "May improve credit score over time",
-    "Reduce stress and financial anxiety",
+    "Regroupez plusieurs dettes en un seul paiement",
+    "Taux d'intérêt global potentiellement inférieur",
+    "Simplifiez la gestion financière",
+    "Mensualité fixe",
+    "Peut améliorer le score de crédit avec le temps",
+    "Réduisez le stress et l'anxiété financière",
   ];
 
   const whenToConsolidate = [
     {
       icon: CheckCircle,
-      scenario: "Multiple High-Interest Debts",
-      description: "You have several credit cards or loans with rates above 10-15% APR"
+      scenario: "Plusieurs Dettes à Taux Élevé",
+      description: "Vous avez plusieurs cartes de crédit ou prêts avec des taux supérieurs à 10-15 % TAEG"
     },
     {
       icon: CheckCircle,
-      scenario: "Struggling to Track Payments",
-      description: "Managing multiple due dates is overwhelming and you've missed payments"
+      scenario: "Difficulté à Suivre les Paiements",
+      description: "Gérer plusieurs dates d'échéance est accablant et vous avez manqué des paiements"
     },
     {
       icon: CheckCircle,
-      scenario: "Good Credit Score",
-      description: "Your credit score qualifies you for a rate lower than your current average"
+      scenario: "Bon Score de Crédit",
+      description: "Votre score de crédit vous qualifie pour un taux inférieur à votre moyenne actuelle"
     },
     {
       icon: CheckCircle,
-      scenario: "Stable Income",
-      description: "You have consistent income to maintain the consolidated payment"
+      scenario: "Revenus Stables",
+      description: "Vous avez des revenus réguliers pour maintenir le paiement regroupé"
     },
   ];
 
   const risks = [
-    "May extend repayment period, increasing total interest paid",
-    "Closing credit cards can temporarily lower credit score",
-    "Doesn't address underlying spending habits",
-    "Requires discipline to avoid accumulating new debt",
-    "Some loans have origination fees that add to costs",
+    "Peut prolonger la période de remboursement, augmentant le total des intérêts payés",
+    "La fermeture de cartes de crédit peut temporairement réduire le score de crédit",
+    "Ne résout pas les habitudes de dépenses sous-jacentes",
+    "Nécessite de la discipline pour éviter d'accumuler de nouvelles dettes",
+    "Certains prêts ont des frais de dossier qui s'ajoutent aux coûts",
   ];
 
   const faqs = [
     {
-      q: "How does debt consolidation work?",
-      a: "Debt consolidation involves taking out a new loan to pay off multiple existing debts. Instead of juggling several payments with different rates and due dates, you make one monthly payment on the new loan, ideally at a lower interest rate than your average current rate."
+      q: "Comment fonctionne le regroupement de crédits ?",
+      a: "Le regroupement de crédits consiste à contracter un nouveau prêt pour rembourser plusieurs dettes existantes. Au lieu de jongler avec plusieurs paiements avec différents taux et dates d'échéance, vous effectuez un seul paiement mensuel sur le nouveau prêt, idéalement à un taux d'intérêt inférieur à votre taux moyen actuel."
     },
     {
-      q: "Will consolidating debt hurt my credit score?",
-      a: "Initially, you may see a small dip from the hard inquiry and from closing paid-off accounts (which reduces your available credit). However, if you make on-time payments and don't accumulate new debt, consolidation typically improves your credit score over time by lowering your credit utilization and demonstrating responsible payment behavior."
+      q: "Le regroupement de crédits nuira-t-il à mon score de crédit ?",
+      a: "Initialement, vous pouvez constater une légère baisse due à l'enquête approfondie et à la fermeture de comptes remboursés (ce qui réduit votre crédit disponible). Cependant, si vous effectuez des paiements à temps et n'accumulez pas de nouvelles dettes, le regroupement améliore généralement votre score de crédit avec le temps en réduisant votre taux d'utilisation du crédit et en démontrant un comportement de paiement responsable."
     },
     {
-      q: "What types of debt can I consolidate?",
-      a: "You can consolidate most unsecured debts including credit card balances, personal loans, medical bills, store cards, payday loans, and some student loans. You cannot consolidate secured debts like mortgages or auto loans through a personal consolidation loan."
+      q: "Quels types de dettes puis-je regrouper ?",
+      a: "Vous pouvez regrouper la plupart des dettes non garanties, y compris les soldes de cartes de crédit, les prêts personnels, les factures médicales, les cartes de magasin, les prêts sur salaire et certains prêts étudiants. Vous ne pouvez pas regrouper les dettes garanties comme les hypothèques ou les prêts auto via un prêt de regroupement personnel."
     },
     {
-      q: "Is debt consolidation the same as debt settlement?",
-      a: "No, they're very different. Debt consolidation pays off your debts in full with a new loan. Debt settlement involves negotiating with creditors to pay less than you owe, which severely damages your credit and may have tax implications. Consolidation is much less damaging to your financial health."
+      q: "Le regroupement de crédits est-il identique au règlement de dettes ?",
+      a: "Non, ce sont très différents. Le regroupement de crédits rembourse vos dettes en totalité avec un nouveau prêt. Le règlement de dettes implique de négocier avec les créanciers pour payer moins que ce que vous devez, ce qui endommage gravement votre crédit et peut avoir des implications fiscales. Le regroupement est beaucoup moins dommageable pour votre santé financière."
     },
     {
-      q: "How much can I save with debt consolidation?",
-      a: "Savings depend on your current rates vs. the new rate. If you're consolidating credit cards at 18-25% APR to a personal loan at 6-8% APR, you could save thousands in interest. Use our calculator to see your potential savings based on your specific situation."
+      q: "Combien puis-je économiser avec le regroupement de crédits ?",
+      a: "Les économies dépendent de vos taux actuels par rapport au nouveau taux. Si vous regroupez des cartes de crédit à 18-25 % TAEG en un prêt personnel à 6-8 % TAEG, vous pourriez économiser des milliers en intérêts. Utilisez notre calculateur pour voir vos économies potentielles en fonction de votre situation spécifique."
     },
     {
-      q: "What's a better option: consolidation or balance transfer?",
-      a: "Balance transfers (moving debt to a 0% APR card) can save more if you can pay off the balance during the promotional period (usually 12-18 months). However, consolidation loans are better for larger debts that need longer repayment periods, and they don't require excellent credit like most balance transfer cards."
+      q: "Quelle est la meilleure option : regroupement ou transfert de solde ?",
+      a: "Les transferts de solde (transfert de dette vers une carte à 0 % TAEG) peuvent économiser plus si vous pouvez rembourser le solde pendant la période promotionnelle (généralement 12-18 mois). Cependant, les prêts de regroupement sont meilleurs pour les dettes plus importantes qui nécessitent des périodes de remboursement plus longues, et ils ne nécessitent pas un excellent crédit comme la plupart des cartes de transfert de solde."
     },
     {
-      q: "Can I consolidate debt if I have bad credit?",
-      a: "Yes, though your interest rate will be higher. If your credit score is below 650, you might not save as much on interest, but consolidation can still simplify your finances and help you avoid missed payments. Consider a co-signer to qualify for better rates."
+      q: "Puis-je regrouper mes dettes si j'ai un mauvais crédit ?",
+      a: "Oui, bien que votre taux d'intérêt sera plus élevé. Si votre score de crédit est inférieur à 650, vous ne pourriez pas économiser autant sur les intérêts, mais le regroupement peut quand même simplifier vos finances et vous aider à éviter les paiements manqués. Envisagez un cosignataire pour être admissible à de meilleurs taux."
     },
     {
-      q: "Should I close my credit cards after paying them off?",
-      a: "Generally no, especially for your oldest accounts. Keeping them open maintains your credit history length and credit utilization ratio. However, if you struggle with spending temptation, you might keep them open but stored away securely, or close newer accounts while keeping older ones."
+      q: "Dois-je fermer mes cartes de crédit après les avoir remboursées ?",
+      a: "Généralement non, surtout pour vos comptes les plus anciens. Les garder ouverts maintient la longueur de votre historique de crédit et votre taux d'utilisation du crédit. Cependant, si vous avez du mal avec la tentation de dépenser, vous pourriez les garder ouverts mais rangés en sécurité, ou fermer les comptes plus récents tout en gardant les plus anciens."
     },
     {
-      q: "What if I can't afford the consolidated loan payment?",
-      a: "If the new payment is too high, you might need a longer loan term to reduce monthly costs, though this increases total interest paid. Alternatively, consider debt management plans through credit counseling agencies, or in severe cases, consult a bankruptcy attorney. Never ignore the problem - contact your lender immediately if you're struggling."
+      q: "Que faire si je ne peux pas me permettre le paiement du prêt regroupé ?",
+      a: "Si le nouveau paiement est trop élevé, vous pourriez avoir besoin d'une durée de prêt plus longue pour réduire les coûts mensuels, bien que cela augmente le total des intérêts payés. Alternativement, envisagez des plans de gestion de dettes via des agences de conseil en crédit, ou dans les cas graves, consultez un avocat spécialisé en faillite. N'ignorez jamais le problème - contactez votre prêteur immédiatement si vous rencontrez des difficultés."
     },
     {
-      q: "How soon will I see results from consolidation?",
-      a: "You'll immediately benefit from simplified payments. Credit score improvements typically appear within 3-6 months as you establish a positive payment history. Financial stress relief is often immediate as you're no longer juggling multiple bills."
+      q: "Dans combien de temps verrai-je les résultats du regroupement ?",
+      a: "Vous bénéficierez immédiatement de paiements simplifiés. Les améliorations du score de crédit apparaissent généralement dans les 3-6 mois alors que vous établissez un historique de paiement positif. Le soulagement du stress financier est souvent immédiat car vous ne jonglez plus avec plusieurs factures."
     },
   ];
 
@@ -97,16 +97,16 @@ const Consolidation = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Debt Consolidation Loans
+                Regroupement de Crédits
                 <br />
-                <span className="text-accent-light">Simplify Your Finances</span>
+                <span className="text-accent-light">Simplifiez Vos Finances</span>
               </h1>
               <p className="text-xl mb-6 text-primary-foreground/90">
-                Combine multiple debts into one manageable monthly payment with a potentially lower interest rate. Take control of your finances today.
+                Regroupez plusieurs dettes en un seul paiement mensuel gérable avec un taux d'intérêt potentiellement inférieur. Reprenez le contrôle de vos finances dès aujourd'hui.
               </p>
               <div className="flex items-center gap-2 mb-4">
                 <TrendingDown className="h-5 w-5" />
-                <span className="text-sm">Lower your monthly payments and total interest</span>
+                <span className="text-sm">Réduisez vos mensualités et le total des intérêts</span>
               </div>
             </div>
             <div>
@@ -126,7 +126,7 @@ const Consolidation = () => {
 
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Benefits of Debt Consolidation</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-8">Avantages du Regroupement de Crédits</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start gap-3">
@@ -140,7 +140,7 @@ const Consolidation = () => {
 
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">When Should You Consider Consolidation?</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Quand Envisager le Regroupement ?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {whenToConsolidate.map((item, index) => {
               const Icon = item.icon;
@@ -163,78 +163,78 @@ const Consolidation = () => {
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="prose prose-lg max-w-none space-y-6">
-            <h2 className="text-3xl font-bold text-foreground">Complete Guide to Debt Consolidation</h2>
+            <h2 className="text-3xl font-bold text-foreground">Guide Complet du Regroupement de Crédits</h2>
             
-            <h3 className="text-2xl font-bold text-foreground">What is Debt Consolidation?</h3>
+            <h3 className="text-2xl font-bold text-foreground">Qu'est-ce que le Regroupement de Crédits ?</h3>
             <p className="text-foreground leading-relaxed">
-              Debt consolidation is a financial strategy that combines multiple debts into a single new loan with one monthly payment. Instead of managing several credit cards, personal loans, and other debts with different interest rates, payment dates, and lenders, you take out one loan to pay them all off, leaving you with just one creditor and one payment to track.
+              Le regroupement de crédits est une stratégie financière qui combine plusieurs dettes en un seul nouveau prêt avec un paiement mensuel unique. Au lieu de gérer plusieurs cartes de crédit, prêts personnels et autres dettes avec différents taux d'intérêt, dates de paiement et prêteurs, vous contractez un prêt pour tous les rembourser, ne vous laissant qu'un seul créancier et un seul paiement à suivre.
             </p>
             <p className="text-foreground leading-relaxed">
-              At Privat Equity, our debt consolidation loans range from €5,000 to €75,000 with repayment terms from 24 to 84 months. Interest rates start from 4.2% APR for qualified borrowers, often significantly lower than credit card rates which typically range from 15-25% APR. The goal is to save money on interest while simplifying your financial life.
+              Chez Privat Equity, nos prêts de regroupement de crédits vont de 5 000 € à 75 000 € avec des durées de remboursement de 24 à 84 mois. Les taux d'intérêt commencent à partir de 4,2 % TAEG pour les emprunteurs qualifiés, souvent nettement inférieurs aux taux des cartes de crédit qui varient généralement de 15 à 25 % TAEG. L'objectif est d'économiser de l'argent sur les intérêts tout en simplifiant votre vie financière.
             </p>
 
-            <h3 className="text-2xl font-bold text-foreground mt-8">How Debt Consolidation Works</h3>
+            <h3 className="text-2xl font-bold text-foreground mt-8">Comment Fonctionne le Regroupement de Crédits</h3>
             <p className="text-foreground leading-relaxed">
-              The process is straightforward:
+              Le processus est simple :
             </p>
             <ol className="space-y-3 list-decimal list-inside text-foreground">
-              <li><strong>Assess Your Debts:</strong> Calculate your total debt, current interest rates, and monthly payments</li>
-              <li><strong>Apply for a Consolidation Loan:</strong> Get approved for a loan amount that covers all or most of your debts</li>
-              <li><strong>Pay Off Existing Debts:</strong> Use the loan funds to pay off credit cards, personal loans, and other debts</li>
-              <li><strong>Make One Monthly Payment:</strong> Repay your new consolidation loan with a single fixed monthly payment</li>
-              <li><strong>Save Money and Rebuild Credit:</strong> Benefit from lower interest rates and simplified finances while establishing positive payment history</li>
+              <li><strong>Évaluez Vos Dettes :</strong> Calculez votre dette totale, les taux d'intérêt actuels et les paiements mensuels</li>
+              <li><strong>Demandez un Prêt de Regroupement :</strong> Obtenez l'approbation d'un montant de prêt qui couvre toutes ou la plupart de vos dettes</li>
+              <li><strong>Remboursez les Dettes Existantes :</strong> Utilisez les fonds du prêt pour rembourser les cartes de crédit, prêts personnels et autres dettes</li>
+              <li><strong>Effectuez Un Seul Paiement Mensuel :</strong> Remboursez votre nouveau prêt de regroupement avec un seul paiement mensuel fixe</li>
+              <li><strong>Économisez et Reconstruisez Votre Crédit :</strong> Bénéficiez de taux d'intérêt plus bas et de finances simplifiées tout en établissant un historique de paiement positif</li>
             </ol>
 
-            <h3 className="text-2xl font-bold text-foreground mt-8">Types of Debt You Can Consolidate</h3>
+            <h3 className="text-2xl font-bold text-foreground mt-8">Types de Dettes que Vous Pouvez Regrouper</h3>
             <p className="text-foreground leading-relaxed">
-              Consolidation loans work best for unsecured debts:
+              Les prêts de regroupement fonctionnent mieux pour les dettes non garanties :
             </p>
             <ul className="space-y-2 text-foreground">
-              <li><strong>Credit Card Balances:</strong> High-interest revolving debt, often 15-25% APR</li>
-              <li><strong>Personal Loans:</strong> Existing loans with higher rates can be refinanced</li>
-              <li><strong>Medical Bills:</strong> Outstanding healthcare expenses that need structured repayment</li>
-              <li><strong>Store Credit Cards:</strong> Retail cards often have very high interest rates</li>
-              <li><strong>Payday Loans:</strong> Extremely high-interest short-term loans that trap borrowers</li>
-              <li><strong>Collection Accounts:</strong> Debts in collections (though this may require negotiation)</li>
-              <li><strong>Private Student Loans:</strong> Some private education debt can be consolidated</li>
+              <li><strong>Soldes de Cartes de Crédit :</strong> Dette renouvelable à taux d'intérêt élevé, souvent 15-25 % TAEG</li>
+              <li><strong>Prêts Personnels :</strong> Les prêts existants avec des taux plus élevés peuvent être refinancés</li>
+              <li><strong>Factures Médicales :</strong> Dépenses de santé impayées nécessitant un remboursement structuré</li>
+              <li><strong>Cartes de Magasin :</strong> Les cartes de détail ont souvent des taux d'intérêt très élevés</li>
+              <li><strong>Prêts sur Salaire :</strong> Prêts à court terme à intérêt extrêmement élevé qui piègent les emprunteurs</li>
+              <li><strong>Comptes en Recouvrement :</strong> Dettes en recouvrement (bien que cela puisse nécessiter une négociation)</li>
+              <li><strong>Prêts Étudiants Privés :</strong> Certaines dettes d'éducation privées peuvent être regroupées</li>
             </ul>
             <p className="text-foreground leading-relaxed mt-4">
-              <strong>Note:</strong> You typically cannot consolidate secured debts like mortgages or auto loans through a personal consolidation loan, as these are tied to specific collateral.
+              <strong>Note :</strong> Vous ne pouvez généralement pas regrouper les dettes garanties comme les hypothèques ou les prêts auto via un prêt de regroupement personnel, car celles-ci sont liées à des garanties spécifiques.
             </p>
 
-            <h3 className="text-2xl font-bold text-foreground mt-8">Benefits of Debt Consolidation</h3>
+            <h3 className="text-2xl font-bold text-foreground mt-8">Avantages du Regroupement de Crédits</h3>
 
-            <h4 className="text-xl font-semibold text-foreground mt-6">1. Lower Interest Costs</h4>
+            <h4 className="text-xl font-semibold text-foreground mt-6">1. Réduction des Coûts d'Intérêt</h4>
             <p className="text-foreground leading-relaxed">
-              If you're paying 18-25% APR on credit cards and can consolidate at 5-8% APR, your savings can be substantial. For example, consolidating €20,000 in credit card debt at 20% APR into a 5-year personal loan at 6% APR saves approximately €12,000 in interest.
+              Si vous payez 18-25 % TAEG sur des cartes de crédit et que vous pouvez regrouper à 5-8 % TAEG, vos économies peuvent être substantielles. Par exemple, regrouper 20 000 € de dettes de carte de crédit à 20 % TAEG en un prêt personnel de 5 ans à 6 % TAEG permet d'économiser environ 12 000 € en intérêts.
             </p>
 
-            <h4 className="text-xl font-semibold text-foreground mt-6">2. Simplified Financial Management</h4>
+            <h4 className="text-xl font-semibold text-foreground mt-6">2. Gestion Financière Simplifiée</h4>
             <p className="text-foreground leading-relaxed">
-              Managing one payment instead of five or ten eliminates confusion, reduces the chance of missed payments, and makes budgeting much easier. You'll have one due date to remember and one amount to plan for each month.
+              Gérer un paiement au lieu de cinq ou dix élimine la confusion, réduit les risques de paiements manqués et facilite grandement la budgétisation. Vous aurez une seule date d'échéance à retenir et un seul montant à planifier chaque mois.
             </p>
 
-            <h4 className="text-xl font-semibold text-foreground mt-6">3. Fixed Repayment Timeline</h4>
+            <h4 className="text-xl font-semibold text-foreground mt-6">3. Calendrier de Remboursement Fixe</h4>
             <p className="text-foreground leading-relaxed">
-              Unlike credit cards with no fixed payoff date, consolidation loans have a specific term. You'll know exactly when you'll be debt-free, which provides psychological benefits and helps with long-term financial planning.
+              Contrairement aux cartes de crédit sans date de remboursement fixe, les prêts de regroupement ont une durée spécifique. Vous saurez exactement quand vous serez libéré de vos dettes, ce qui procure des avantages psychologiques et aide à la planification financière à long terme.
             </p>
 
-            <h4 className="text-xl font-semibold text-foreground mt-6">4. Potential Credit Score Improvement</h4>
+            <h4 className="text-xl font-semibold text-foreground mt-6">4. Amélioration Potentielle du Score de Crédit</h4>
             <p className="text-foreground leading-relaxed">
-              Paying off credit cards reduces your credit utilization ratio (the percentage of available credit you're using), which is a major factor in credit scores. Additionally, consistent on-time payments on your consolidation loan build positive payment history.
+              Le remboursement des cartes de crédit réduit votre taux d'utilisation du crédit (le pourcentage de crédit disponible que vous utilisez), qui est un facteur majeur dans les scores de crédit. De plus, des paiements réguliers à temps sur votre prêt de regroupement construisent un historique de paiement positif.
             </p>
 
-            <h4 className="text-xl font-semibold text-foreground mt-6">5. Reduced Financial Stress</h4>
+            <h4 className="text-xl font-semibold text-foreground mt-6">5. Réduction du Stress Financier</h4>
             <p className="text-foreground leading-relaxed">
-              The mental burden of multiple debts, collection calls, and financial juggling takes a real toll. Consolidation provides a clear path forward and often immediate relief from anxiety.
+              Le fardeau mental de plusieurs dettes, d'appels de recouvrement et de jonglage financier a un impact réel. Le regroupement offre un chemin clair vers l'avant et souvent un soulagement immédiat de l'anxiété.
             </p>
 
-            <h3 className="text-2xl font-bold text-foreground mt-8">Potential Risks and Considerations</h3>
+            <h3 className="text-2xl font-bold text-foreground mt-8">Risques Potentiels et Considérations</h3>
             <div className="bg-warning/10 border border-warning/30 rounded-lg p-6 my-6">
               <div className="flex items-start gap-4">
                 <AlertTriangle className="h-8 w-8 text-warning flex-shrink-0" />
                 <div>
-                  <h4 className="text-lg font-bold text-foreground mb-3">Important Warnings</h4>
+                  <h4 className="text-lg font-bold text-foreground mb-3">Avertissements Importants</h4>
                   <ul className="space-y-2 text-foreground">
                     {risks.map((risk, index) => (
                       <li key={index} className="text-sm leading-relaxed">• {risk}</li>
@@ -244,75 +244,75 @@ const Consolidation = () => {
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold text-foreground mt-8">Is Debt Consolidation Right for You?</h3>
+            <h3 className="text-2xl font-bold text-foreground mt-8">Le Regroupement de Crédits Est-il Fait Pour Vous ?</h3>
             <p className="text-foreground leading-relaxed">
-              Consolidation works best if you:
+              Le regroupement fonctionne mieux si vous :
             </p>
             <ul className="space-y-2 text-foreground">
-              <li>Have multiple debts with high interest rates (above 10-12%)</li>
-              <li>Have steady income to maintain the new payment</li>
-              <li>Have good enough credit to qualify for a lower rate than your current average</li>
-              <li>Are committed to not accumulating new debt after consolidating</li>
-              <li>Have a plan to address the spending or circumstances that led to the debt</li>
+              <li>Avez plusieurs dettes avec des taux d'intérêt élevés (supérieurs à 10-12 %)</li>
+              <li>Avez des revenus stables pour maintenir le nouveau paiement</li>
+              <li>Avez un crédit suffisamment bon pour être admissible à un taux inférieur à votre moyenne actuelle</li>
+              <li>Êtes engagé à ne pas accumuler de nouvelles dettes après le regroupement</li>
+              <li>Avez un plan pour résoudre les dépenses ou les circonstances qui ont conduit à la dette</li>
             </ul>
 
             <p className="text-foreground leading-relaxed mt-6">
-              Consolidation might NOT be right if:
+              Le regroupement pourrait NE PAS convenir si :
             </p>
             <ul className="space-y-2 text-foreground">
-              <li>Your debt is relatively small (under €3,000) and you can pay it off quickly</li>
-              <li>You haven't addressed underlying spending issues and will likely accumulate more debt</li>
-              <li>Your credit score is so low that you can't qualify for a rate lower than your current debts</li>
-              <li>You have very limited income and need debt relief rather than consolidation</li>
+              <li>Votre dette est relativement faible (moins de 3 000 €) et vous pouvez la rembourser rapidement</li>
+              <li>Vous n'avez pas résolu les problèmes de dépenses sous-jacents et accumulerez probablement plus de dettes</li>
+              <li>Votre score de crédit est si bas que vous ne pouvez pas être admissible à un taux inférieur à vos dettes actuelles</li>
+              <li>Vous avez des revenus très limités et avez besoin d'un allègement de dettes plutôt que d'un regroupement</li>
             </ul>
 
-            <h3 className="text-2xl font-bold text-foreground mt-8">Alternatives to Debt Consolidation</h3>
+            <h3 className="text-2xl font-bold text-foreground mt-8">Alternatives au Regroupement de Crédits</h3>
             
-            <h4 className="text-xl font-semibold text-foreground mt-6">Balance Transfer Credit Card</h4>
+            <h4 className="text-xl font-semibold text-foreground mt-6">Carte de Crédit avec Transfert de Solde</h4>
             <p className="text-foreground leading-relaxed">
-              Transfer balances to a card with 0% APR for 12-18 months. Good if you can pay off the balance during the promotional period. Requires good credit and usually includes a 3-5% transfer fee.
+              Transférez les soldes vers une carte avec 0 % TAEG pendant 12-18 mois. Bon si vous pouvez rembourser le solde pendant la période promotionnelle. Nécessite un bon crédit et comprend généralement des frais de transfert de 3-5 %.
             </p>
 
-            <h4 className="text-xl font-semibold text-foreground mt-6">Debt Management Plan (DMP)</h4>
+            <h4 className="text-xl font-semibold text-foreground mt-6">Plan de Gestion de Dettes (PGD)</h4>
             <p className="text-foreground leading-relaxed">
-              Work with a credit counseling agency to negotiate lower interest rates with creditors. You make one payment to the agency, which distributes it to creditors. Typically requires closing credit accounts.
+              Travaillez avec une agence de conseil en crédit pour négocier des taux d'intérêt plus bas avec les créanciers. Vous effectuez un paiement à l'agence, qui le distribue aux créanciers. Nécessite généralement la fermeture des comptes de crédit.
             </p>
 
-            <h4 className="text-xl font-semibold text-foreground mt-6">Debt Settlement</h4>
+            <h4 className="text-xl font-semibold text-foreground mt-6">Règlement de Dettes</h4>
             <p className="text-foreground leading-relaxed">
-              Negotiate with creditors to pay less than you owe. Severely damages credit and may have tax consequences. Only consider if you're facing bankruptcy.
+              Négociez avec les créanciers pour payer moins que ce que vous devez. Endommage gravement le crédit et peut avoir des conséquences fiscales. Ne considérez que si vous faites face à la faillite.
             </p>
 
-            <h4 className="text-xl font-semibold text-foreground mt-6">Bankruptcy</h4>
+            <h4 className="text-xl font-semibold text-foreground mt-6">Faillite</h4>
             <p className="text-foreground leading-relaxed">
-              Legal process that eliminates or restructures debts. Severe credit impact lasting 7-10 years. Should be an absolute last resort after consulting an attorney.
+              Processus juridique qui élimine ou restructure les dettes. Impact grave sur le crédit durant 7-10 ans. Devrait être un dernier recours absolu après consultation d'un avocat.
             </p>
 
-            <h3 className="text-2xl font-bold text-foreground mt-8">Making Consolidation Work Long-Term</h3>
+            <h3 className="text-2xl font-bold text-foreground mt-8">Faire Fonctionner le Regroupement à Long Terme</h3>
             <p className="text-foreground leading-relaxed">
-              To ensure consolidation truly helps your financial situation:
+              Pour vous assurer que le regroupement aide vraiment votre situation financière :
             </p>
             <ul className="space-y-2 text-foreground">
-              <li><strong>Create a Budget:</strong> Track income and expenses to prevent new debt accumulation</li>
-              <li><strong>Build Emergency Savings:</strong> Aim for 3-6 months of expenses to avoid future debt</li>
-              <li><strong>Address Root Causes:</strong> Identify why you accumulated debt and make necessary changes</li>
-              <li><strong>Make Extra Payments:</strong> When possible, pay more than the minimum to reduce interest and payoff time</li>
-              <li><strong>Avoid New Debt:</strong> Resist using newly available credit - consider keeping only one card for emergencies</li>
-              <li><strong>Set Financial Goals:</strong> Focus on positive objectives like saving for a home or retirement</li>
-              <li><strong>Monitor Your Credit:</strong> Check your credit reports regularly to track improvement</li>
-              <li><strong>Seek Help if Needed:</strong> Consider financial counseling if you're struggling with spending habits</li>
+              <li><strong>Créez un Budget :</strong> Suivez les revenus et les dépenses pour éviter l'accumulation de nouvelles dettes</li>
+              <li><strong>Constituez une Épargne d'Urgence :</strong> Visez 3-6 mois de dépenses pour éviter les futures dettes</li>
+              <li><strong>Traitez les Causes Profondes :</strong> Identifiez pourquoi vous avez accumulé des dettes et apportez les changements nécessaires</li>
+              <li><strong>Effectuez des Paiements Supplémentaires :</strong> Lorsque possible, payez plus que le minimum pour réduire les intérêts et le délai de remboursement</li>
+              <li><strong>Évitez les Nouvelles Dettes :</strong> Résistez à l'utilisation du crédit nouvellement disponible - envisagez de ne garder qu'une carte pour les urgences</li>
+              <li><strong>Fixez des Objectifs Financiers :</strong> Concentrez-vous sur des objectifs positifs comme épargner pour une maison ou la retraite</li>
+              <li><strong>Surveillez Votre Crédit :</strong> Vérifiez régulièrement vos rapports de crédit pour suivre l'amélioration</li>
+              <li><strong>Cherchez de l'Aide si Nécessaire :</strong> Envisagez un conseil financier si vous avez du mal avec vos habitudes de dépenses</li>
             </ul>
 
-            <h3 className="text-2xl font-bold text-foreground mt-8">The Application Process</h3>
+            <h3 className="text-2xl font-bold text-foreground mt-8">Le Processus de Demande</h3>
             <ol className="space-y-3 list-decimal list-inside text-foreground">
-              <li><strong>Calculate Total Debt:</strong> List all debts you want to consolidate with balances and rates</li>
-              <li><strong>Check Your Credit:</strong> Know your score to understand what rates you might qualify for</li>
-              <li><strong>Compare Options:</strong> Review consolidation loan offers from multiple lenders</li>
-              <li><strong>Apply:</strong> Submit your application with income and debt documentation</li>
-              <li><strong>Review Loan Terms:</strong> Carefully examine the APR, fees, and total cost before accepting</li>
-              <li><strong>Pay Off Debts:</strong> Use funds to pay creditors directly (we can often do this for you)</li>
-              <li><strong>Confirm Payoffs:</strong> Verify all old accounts show zero balances</li>
-              <li><strong>Set Up Auto-Payment:</strong> Ensure you never miss your new loan payment</li>
+              <li><strong>Calculez la Dette Totale :</strong> Listez toutes les dettes que vous souhaitez regrouper avec les soldes et les taux</li>
+              <li><strong>Vérifiez Votre Crédit :</strong> Connaissez votre score pour comprendre quels taux vous pourriez obtenir</li>
+              <li><strong>Comparez les Options :</strong> Examinez les offres de prêts de regroupement de plusieurs prêteurs</li>
+              <li><strong>Faites Votre Demande :</strong> Soumettez votre demande avec la documentation des revenus et des dettes</li>
+              <li><strong>Examinez les Conditions du Prêt :</strong> Examinez attentivement le TAEG, les frais et le coût total avant d'accepter</li>
+              <li><strong>Remboursez les Dettes :</strong> Utilisez les fonds pour payer directement les créanciers (nous pouvons souvent le faire pour vous)</li>
+              <li><strong>Confirmez les Remboursements :</strong> Vérifiez que tous les anciens comptes affichent des soldes nuls</li>
+              <li><strong>Configurez le Paiement Automatique :</strong> Assurez-vous de ne jamais manquer le paiement de votre nouveau prêt</li>
             </ol>
           </div>
         </div>
@@ -320,7 +320,7 @@ const Consolidation = () => {
 
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Debt Consolidation FAQ</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-8">Questions Fréquentes sur le Regroupement de Crédits</h2>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
               <Card key={index} className="p-6">
