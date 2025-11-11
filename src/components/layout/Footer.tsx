@@ -70,24 +70,24 @@ const Footer = () => {
             <h4 className="text-sm font-semibold mb-4">Entreprise</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                <Link to="/about" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   À propos
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                <Link to="/privacy" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   Politique de confidentialité
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                <Link to="/terms" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   Conditions d'utilisation
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                <Link to="/contact" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

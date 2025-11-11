@@ -4,157 +4,157 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const faqs = [
   {
-    category: "General Questions",
+    category: "Questions Générales",
     questions: [
       {
-        q: "What is CreditPro?",
-        a: "CreditPro is an online lending platform that connects borrowers with competitive loan offers. We provide personal loans, auto loans, home improvement loans, debt consolidation, and business financing."
+        q: "Qu'est-ce que Privat Equity ?",
+        a: "Privat Equity est une plateforme de prêt en ligne qui connecte les emprunteurs avec des offres de crédit compétitives. Nous proposons des prêts personnels, des crédits auto, des crédits travaux, du rachat de crédit et des prêts entreprise."
       },
       {
-        q: "How does CreditPro make money?",
-        a: "We earn a fee from our lending partners when we successfully match borrowers with loans. This service is free for borrowers - we never charge application fees or upfront costs."
+        q: "Comment Privat Equity gagne-t-il de l'argent ?",
+        a: "Nous recevons une commission de nos partenaires financiers lorsque nous mettons en relation des emprunteurs avec des prêts. Ce service est gratuit pour les emprunteurs - nous ne facturons jamais de frais de dossier ou de coûts initiaux."
       },
       {
-        q: "Is CreditPro safe and legitimate?",
-        a: "Yes, CreditPro is a licensed and regulated lending platform. We use bank-level encryption, are fully GDPR compliant, and work only with licensed financial institutions."
+        q: "Privat Equity est-il sûr et légitime ?",
+        a: "Oui, Privat Equity est une plateforme de prêt agréée et réglementée. Nous utilisons un cryptage de niveau bancaire, sommes entièrement conformes au RGPD et ne travaillons qu'avec des institutions financières agréées."
       },
     ]
   },
   {
-    category: "Application Process",
+    category: "Processus de Demande",
     questions: [
       {
-        q: "How long does the application take?",
-        a: "Our online application takes about 5-10 minutes to complete. You'll receive a preliminary decision instantly, and final approval typically takes 24-48 hours."
+        q: "Combien de temps prend la demande ?",
+        a: "Notre demande en ligne prend environ 5 à 10 minutes à compléter. Vous recevrez une décision préliminaire instantanément, et l'approbation finale prend généralement 24 à 48 heures."
       },
       {
-        q: "What documents do I need?",
-        a: "You'll need a valid ID, proof of income (pay slips or tax returns), bank statements from the last 3 months, and proof of address. Additional documents may be requested based on your application."
+        q: "Quels documents ai-je besoin ?",
+        a: "Vous aurez besoin d'une pièce d'identité valide, d'une preuve de revenu (bulletins de salaire ou déclarations fiscales), de relevés bancaires des 3 derniers mois et d'un justificatif de domicile. Des documents supplémentaires peuvent être demandés selon votre demande."
       },
       {
-        q: "Will checking my rate affect my credit score?",
-        a: "No! Checking your rate on CreditPro uses a soft credit inquiry which doesn't impact your credit score. Only when you formally accept a loan offer will a hard inquiry be made."
+        q: "La vérification de mon taux affectera-t-elle mon score de crédit ?",
+        a: "Non ! Vérifier votre taux sur Privat Equity utilise une enquête de crédit douce qui n'affecte pas votre score. Une enquête approfondie ne sera effectuée que lorsque vous accepterez formellement une offre de prêt."
       },
       {
-        q: "Can I apply if I'm self-employed?",
-        a: "Yes! Self-employed individuals are welcome to apply. You'll need to provide additional documentation such as tax returns, business bank statements, and proof of business registration."
+        q: "Puis-je faire une demande si je suis travailleur indépendant ?",
+        a: "Oui ! Les travailleurs indépendants sont les bienvenus. Vous devrez fournir des documents supplémentaires tels que des déclarations fiscales, des relevés bancaires professionnels et une preuve d'enregistrement de l'entreprise."
       },
       {
-        q: "What if my application is denied?",
-        a: "If your application is denied, we'll explain why and may suggest alternatives. Common reasons include insufficient income, high debt-to-income ratio, or credit issues. You can reapply after addressing these concerns."
+        q: "Que se passe-t-il si ma demande est refusée ?",
+        a: "Si votre demande est refusée, nous vous expliquerons pourquoi et pourrons suggérer des alternatives. Les raisons courantes incluent un revenu insuffisant, un ratio d'endettement élevé ou des problèmes de crédit. Vous pouvez faire une nouvelle demande après avoir résolu ces problèmes."
       },
     ]
   },
   {
-    category: "Loan Terms & Rates",
+    category: "Taux et Conditions",
     questions: [
       {
-        q: "What interest rates do you offer?",
-        a: "Our rates start from 2.9% APR for qualified borrowers. Your specific rate depends on your credit profile, loan amount, term length, and type of loan."
+        q: "Quels taux d'intérêt proposez-vous ?",
+        a: "Nos taux commencent à partir de 2,9% TAEG pour les emprunteurs qualifiés. Votre taux spécifique dépend de votre profil de crédit, du montant du prêt, de la durée et du type de prêt."
       },
       {
-        q: "How is my interest rate determined?",
-        a: "Interest rates are based on your credit score, income, debt-to-income ratio, loan amount, and term length. Better credit and financial profiles typically receive lower rates."
+        q: "Comment mon taux d'intérêt est-il déterminé ?",
+        a: "Les taux d'intérêt sont basés sur votre score de crédit, vos revenus, votre ratio d'endettement, le montant du prêt et la durée. De meilleurs profils de crédit et financiers reçoivent généralement des taux plus bas."
       },
       {
-        q: "Are rates fixed or variable?",
-        a: "All our personal, auto, and home improvement loans have fixed rates, meaning your rate and monthly payment never change. This provides predictability throughout your loan term."
+        q: "Les taux sont-ils fixes ou variables ?",
+        a: "Tous nos prêts personnels, crédits auto et crédits travaux ont des taux fixes, ce qui signifie que votre taux et votre mensualité ne changent jamais. Cela offre une prévisibilité tout au long de votre prêt."
       },
       {
-        q: "What loan amounts are available?",
-        a: "We offer loans from €1,000 to €75,000 depending on the loan type. Personal loans go up to €75,000, while specific product limits may vary."
+        q: "Quels montants de prêt sont disponibles ?",
+        a: "Nous proposons des prêts de 1 000 € à 75 000 € selon le type de prêt. Les prêts personnels vont jusqu'à 75 000 €, tandis que les limites spécifiques peuvent varier selon le produit."
       },
       {
-        q: "What repayment terms are available?",
-        a: "Repayment terms range from 12 to 84 months depending on the loan type and amount. Longer terms have lower monthly payments but more total interest."
+        q: "Quelles durées de remboursement sont disponibles ?",
+        a: "Les durées de remboursement vont de 12 à 84 mois selon le type et le montant du prêt. Des durées plus longues ont des mensualités plus faibles mais plus d'intérêts au total."
       },
       {
-        q: "Are there any fees?",
-        a: "We don't charge application fees. Some loans may have origination fees (typically 1-5% of the loan amount), which are clearly disclosed before you accept an offer."
+        q: "Y a-t-il des frais ?",
+        a: "Nous ne facturons pas de frais de dossier. Certains prêts peuvent avoir des frais d'origination (généralement 1 à 5% du montant du prêt), qui sont clairement divulgués avant d'accepter une offre."
       },
     ]
   },
   {
-    category: "Repayment & Management",
+    category: "Remboursement et Gestion",
     questions: [
       {
-        q: "How do I make payments?",
-        a: "Payments are automatically deducted from your bank account on your scheduled payment date each month. You can also make manual payments through your online account."
+        q: "Comment effectuer mes paiements ?",
+        a: "Les paiements sont automatiquement prélevés sur votre compte bancaire à la date de paiement prévue chaque mois. Vous pouvez également effectuer des paiements manuels via votre compte en ligne."
       },
       {
-        q: "Can I change my payment date?",
-        a: "Yes, contact our customer service team to request a payment date change. We'll work with you to align payments with your income schedule."
+        q: "Puis-je changer ma date de paiement ?",
+        a: "Oui, contactez notre service client pour demander un changement de date de paiement. Nous travaillerons avec vous pour aligner les paiements sur votre calendrier de revenus."
       },
       {
-        q: "Can I pay off my loan early?",
-        a: "Yes! All our loans allow early repayment with no penalties. You'll save on interest by paying off your loan ahead of schedule."
+        q: "Puis-je rembourser mon prêt par anticipation ?",
+        a: "Oui ! Tous nos prêts permettent le remboursement anticipé sans pénalités. Vous économiserez sur les intérêts en remboursant votre prêt avant l'échéance."
       },
       {
-        q: "What happens if I miss a payment?",
-        a: "Contact us immediately if you can't make a payment. We may be able to arrange a payment plan or temporary deferral. Missing payments can result in late fees and damage to your credit score."
+        q: "Que se passe-t-il si je manque un paiement ?",
+        a: "Contactez-nous immédiatement si vous ne pouvez pas effectuer un paiement. Nous pourrons peut-être organiser un plan de paiement ou un report temporaire. Manquer des paiements peut entraîner des frais de retard et endommager votre score de crédit."
       },
       {
-        q: "Can I increase my loan amount later?",
-        a: "Once your loan is active, you can't increase the amount. However, once you've made several on-time payments, you may qualify to refinance for a larger amount."
+        q: "Puis-je augmenter le montant de mon prêt plus tard ?",
+        a: "Une fois votre prêt actif, vous ne pouvez pas augmenter le montant. Cependant, après plusieurs paiements à temps, vous pourriez être éligible pour refinancer un montant plus élevé."
       },
     ]
   },
   {
-    category: "Credit & Eligibility",
+    category: "Crédit et Éligibilité",
     questions: [
       {
-        q: "What credit score do I need?",
-        a: "While we prefer scores above 650, we consider applications from various credit profiles. A lower score doesn't automatically disqualify you - we evaluate your complete financial picture."
+        q: "Quel score de crédit ai-je besoin ?",
+        a: "Bien que nous préférions des scores supérieurs à 650, nous considérons les demandes de divers profils de crédit. Un score inférieur ne vous disqualifie pas automatiquement - nous évaluons votre situation financière complète."
       },
       {
-        q: "Can I apply with bad credit?",
-        a: "Yes, we work with borrowers across the credit spectrum. Bad credit may result in higher rates or require a co-signer, but many options are still available."
+        q: "Puis-je faire une demande avec un mauvais crédit ?",
+        a: "Oui, nous travaillons avec des emprunteurs de tous profils de crédit. Un mauvais crédit peut entraîner des taux plus élevés ou nécessiter un co-emprunteur, mais de nombreuses options restent disponibles."
       },
       {
-        q: "Do you accept applications with co-signers?",
-        a: "Yes, adding a co-signer with good credit can improve your approval chances and potentially lower your interest rate."
+        q: "Acceptez-vous les demandes avec co-emprunteur ?",
+        a: "Oui, ajouter un co-emprunteur avec un bon crédit peut améliorer vos chances d'approbation et potentiellement réduire votre taux d'intérêt."
       },
       {
-        q: "What is the minimum income requirement?",
-        a: "There's no strict minimum, but you must demonstrate sufficient income to cover loan payments. We typically look for a debt-to-income ratio below 40%."
+        q: "Quelle est l'exigence de revenu minimum ?",
+        a: "Il n'y a pas de minimum strict, mais vous devez démontrer un revenu suffisant pour couvrir les paiements du prêt. Nous recherchons généralement un ratio d'endettement inférieur à 40%."
       },
     ]
   },
   {
-    category: "Security & Privacy",
+    category: "Sécurité et Confidentialité",
     questions: [
       {
-        q: "How is my personal information protected?",
-        a: "We use 256-bit SSL encryption, the same security used by banks. Your data is never sold or shared without your explicit consent, and we're fully GDPR compliant."
+        q: "Comment mes informations personnelles sont-elles protégées ?",
+        a: "Nous utilisons un cryptage SSL 256 bits, la même sécurité utilisée par les banques. Vos données ne sont jamais vendues ou partagées sans votre consentement explicite, et nous sommes entièrement conformes au RGPD."
       },
       {
-        q: "Who has access to my information?",
-        a: "Only authorized CreditPro staff and our lending partners (when you accept an offer) have access to your information. We never sell your data to third parties."
+        q: "Qui a accès à mes informations ?",
+        a: "Seul le personnel autorisé de Privat Equity et nos partenaires financiers (lorsque vous acceptez une offre) ont accès à vos informations. Nous ne vendons jamais vos données à des tiers."
       },
       {
-        q: "How long do you keep my information?",
-        a: "We retain your information according to legal requirements and our privacy policy. You can request deletion of your data at any time, subject to regulatory obligations."
+        q: "Combien de temps conservez-vous mes informations ?",
+        a: "Nous conservons vos informations conformément aux exigences légales et à notre politique de confidentialité. Vous pouvez demander la suppression de vos données à tout moment, sous réserve des obligations réglementaires."
       },
     ]
   },
   {
-    category: "Special Situations",
+    category: "Situations Particulières",
     questions: [
       {
-        q: "Can I apply if I'm retired?",
-        a: "Yes! Retired individuals with pension or retirement income can apply. You'll need to provide proof of your retirement income."
+        q: "Puis-je faire une demande si je suis retraité ?",
+        a: "Oui ! Les personnes retraitées avec une pension ou un revenu de retraite peuvent faire une demande. Vous devrez fournir une preuve de votre revenu de retraite."
       },
       {
-        q: "Do you offer loans to students?",
-        a: "Students with part-time jobs or other income sources can apply. However, income requirements still apply, and a co-signer may be beneficial."
+        q: "Proposez-vous des prêts aux étudiants ?",
+        a: "Les étudiants ayant des emplois à temps partiel ou d'autres sources de revenus peuvent faire une demande. Cependant, les exigences de revenu s'appliquent toujours, et un co-emprunteur peut être bénéfique."
       },
       {
-        q: "Can I use a loan to start a business?",
-        a: "For business purposes, we recommend our dedicated Business Loan product, which is specifically designed for entrepreneurs and business owners."
+        q: "Puis-je utiliser un prêt pour créer une entreprise ?",
+        a: "Pour les besoins professionnels, nous recommandons notre produit Prêt Entreprise dédié, spécialement conçu pour les entrepreneurs et les propriétaires d'entreprise."
       },
       {
-        q: "What if I'm going through a divorce?",
-        a: "Divorcing individuals can apply, but you'll need to show your individual income and debts. Joint debts are considered in your debt-to-income calculation."
+        q: "Que faire si je traverse un divorce ?",
+        a: "Les personnes en cours de divorce peuvent faire une demande, mais vous devrez montrer vos revenus et dettes individuels. Les dettes conjointes sont considérées dans votre calcul de ratio d'endettement."
       },
     ]
   },
@@ -167,9 +167,9 @@ const FAQ = () => {
 
       <section className="py-16 bg-gradient-hero text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Frequently Asked Questions</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Questions Fréquentes</h1>
           <p className="text-xl max-w-2xl mx-auto text-primary-foreground/90">
-            Everything you need to know about loans, applications, and CreditPro
+            Tout ce que vous devez savoir sur les prêts, les demandes et Privat Equity
           </p>
         </div>
       </section>

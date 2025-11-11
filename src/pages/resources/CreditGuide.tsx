@@ -6,94 +6,94 @@ import { BookOpen } from "lucide-react";
 const CreditGuide = () => {
   const articles = [
     {
-      title: "How to Choose the Right Loan for Your Needs",
-      content: `Selecting the right loan requires careful consideration of your financial situation, goals, and repayment capacity. Start by identifying your specific need - is it debt consolidation, a major purchase, home improvement, or business investment? Each purpose may be better suited to different loan types.
+      title: "Comment choisir le bon prêt pour vos besoins",
+      content: `Choisir le bon prêt nécessite une attention particulière à votre situation financière, vos objectifs et votre capacité de remboursement. Commencez par identifier votre besoin spécifique - s'agit-il d'un rachat de crédit, d'un achat important, de travaux ou d'un investissement professionnel ? Chaque objectif peut être mieux adapté à différents types de prêts.
 
-Consider the loan amount you truly need. Borrowing too little means you might need additional financing later; borrowing too much increases costs unnecessarily. Create a detailed budget showing exactly how you'll use the funds.
+Réfléchissez au montant dont vous avez réellement besoin. Emprunter trop peu signifie que vous pourriez avoir besoin d'un financement supplémentaire plus tard ; emprunter trop augmente les coûts inutilement. Créez un budget détaillé montrant exactement comment vous utiliserez les fonds.
 
-Compare interest rates across multiple lenders, but remember that APR (Annual Percentage Rate) is more important than the base interest rate as it includes fees. Fixed rates provide payment stability, while variable rates might start lower but carry risk of increases.
+Comparez les taux d'intérêt chez plusieurs prêteurs, mais rappelez-vous que le TAEG (Taux Annuel Effectif Global) est plus important que le taux d'intérêt de base car il inclut les frais. Les taux fixes offrent une stabilité de paiement, tandis que les taux variables peuvent commencer plus bas mais comportent un risque d'augmentation.
 
-Evaluate repayment terms carefully. Shorter terms mean higher monthly payments but lower total interest costs. Longer terms reduce monthly payments but significantly increase the total amount paid over time. Choose a term that balances affordability with minimizing interest.
+Évaluez attentivement les conditions de remboursement. Des durées plus courtes signifient des mensualités plus élevées mais des coûts d'intérêt totaux plus faibles. Des durées plus longues réduisent les mensualités mais augmentent considérablement le montant total payé. Choisissez une durée qui équilibre l'accessibilité avec la minimisation des intérêts.
 
-Check for fees including origination fees, prepayment penalties, late payment charges, and annual fees. Some loans advertise low rates but have high fees that increase the true cost.
+Vérifiez les frais, notamment les frais de dossier, les pénalités de remboursement anticipé, les frais de retard et les frais annuels. Certains prêts affichent des taux bas mais ont des frais élevés qui augmentent le coût réel.
 
-Consider your credit score realistically. If your score is below 650, you might face higher rates or need a co-signer. Improving your credit before applying can save thousands in interest.
+Considérez votre score de crédit de manière réaliste. Si votre score est inférieur à 650, vous pourriez faire face à des taux plus élevés ou avoir besoin d'un co-emprunteur. Améliorer votre crédit avant de faire une demande peut vous faire économiser des milliers d'euros en intérêts.
 
-Finally, read the fine print. Understand all terms, conditions, and your obligations before signing. Never feel pressured to accept an offer - legitimate lenders give you time to review and decide.`
+Enfin, lisez les petits caractères. Comprenez tous les termes, conditions et vos obligations avant de signer. Ne vous sentez jamais pressé d'accepter une offre - les prêteurs légitimes vous donnent le temps d'examiner et de décider.`
     },
     {
-      title: "Understanding and Calculating Your Debt-to-Income Ratio",
-      content: `Your debt-to-income ratio (DTI) is one of the most important factors lenders consider when evaluating your loan application. It measures what percentage of your gross monthly income goes toward debt payments, indicating your ability to manage monthly payments.
+      title: "Comprendre et calculer votre taux d'endettement",
+      content: `Votre taux d'endettement est l'un des facteurs les plus importants que les prêteurs considèrent lors de l'évaluation de votre demande de prêt. Il mesure quel pourcentage de votre revenu mensuel brut est consacré aux paiements de dettes, indiquant votre capacité à gérer les mensualités.
 
-To calculate your DTI, first determine your total monthly debt payments. Include credit card minimum payments, personal loan payments, auto loans, student loans, mortgage or rent, and any other recurring debt obligations. Do not include utilities, groceries, or insurance unless they're part of a payment plan.
+Pour calculer votre taux d'endettement, déterminez d'abord vos paiements mensuels de dettes totaux. Incluez les paiements minimums de cartes de crédit, les remboursements de prêts personnels, les crédits auto, les prêts étudiants, le loyer ou l'hypothèque, et toute autre obligation de dette récurrente. N'incluez pas les services publics, l'épicerie ou les assurances sauf s'ils font partie d'un plan de paiement.
 
-Next, calculate your gross monthly income (before taxes). Include salary, bonuses, commission, rental income, alimony, child support, and any other regular income sources.
+Ensuite, calculez votre revenu mensuel brut (avant impôts). Incluez le salaire, les primes, les commissions, les revenus locatifs, la pension alimentaire, la pension pour enfants et toute autre source de revenu régulière.
 
-Divide total monthly debt payments by gross monthly income, then multiply by 100 to get your percentage. For example: €1,200 in debt payments ÷ €4,000 gross income = 0.30 or 30% DTI.
+Divisez les paiements mensuels de dettes totaux par le revenu mensuel brut, puis multipliez par 100 pour obtenir votre pourcentage. Par exemple : 1 200 € de paiements de dettes ÷ 4 000 € de revenu brut = 0,30 ou 30% de taux d'endettement.
 
-Most lenders prefer a DTI below 36%, with no more than 28% going to housing costs. You can still qualify with DTI up to 43-45%, but you'll likely face higher interest rates. Above 45%, approval becomes very difficult.
+La plupart des prêteurs préfèrent un taux d'endettement inférieur à 36%, avec pas plus de 28% consacré aux frais de logement. Vous pouvez toujours être qualifié avec un taux d'endettement allant jusqu'à 43-45%, mais vous ferez probablement face à des taux d'intérêt plus élevés. Au-dessus de 45%, l'approbation devient très difficile.
 
-To improve your DTI, you can increase income through raises, side jobs, or bonuses, or reduce debt by paying down balances, consolidating high-interest debts, or avoiding new debt. Sometimes postponing a loan application while improving your DTI results in much better terms.
+Pour améliorer votre taux d'endettement, vous pouvez augmenter vos revenus par des augmentations, des emplois secondaires ou des primes, ou réduire vos dettes en remboursant les soldes, en consolidant les dettes à taux d'intérêt élevé ou en évitant de nouvelles dettes. Parfois, reporter une demande de prêt tout en améliorant votre taux d'endettement aboutit à de bien meilleures conditions.
 
-When applying for a new loan, lenders calculate DTI including the proposed new payment. Ensure you can comfortably afford this combined payment while maintaining emergency savings and quality of life.`
+Lors d'une demande de nouveau prêt, les prêteurs calculent le taux d'endettement en incluant le nouveau paiement proposé. Assurez-vous de pouvoir confortablement vous permettre ce paiement combiné tout en maintenant une épargne d'urgence et une qualité de vie.`
     },
     {
-      title: "How to Compare Loan Offers Effectively",
-      content: `Comparing loan offers requires looking beyond the advertised interest rate. Use these strategies to make an informed decision:
+      title: "Comment comparer efficacement les offres de prêt",
+      content: `Comparer les offres de prêt nécessite de regarder au-delà du taux d'intérêt annoncé. Utilisez ces stratégies pour prendre une décision éclairée :
 
-First, focus on APR (Annual Percentage Rate) rather than just the interest rate. APR includes origination fees, processing fees, and other costs, giving you the true annual cost of borrowing. A loan with a 5% interest rate but 5% origination fee might have a 7% APR, making it more expensive than a loan with 6% interest and no fees.
+D'abord, concentrez-vous sur le TAEG (Taux Annuel Effectif Global) plutôt que sur le seul taux d'intérêt. Le TAEG inclut les frais de dossier, les frais de traitement et autres coûts, vous donnant le véritable coût annuel de l'emprunt. Un prêt avec un taux d'intérêt de 5% mais 5% de frais de dossier pourrait avoir un TAEG de 7%, le rendant plus cher qu'un prêt à 6% sans frais.
 
-Compare total loan costs by multiplying your monthly payment by the number of payments. A €10,000 loan at 5% APR for 36 months costs €299/month (€10,764 total), while the same loan at 7% APR costs €308/month (€11,088 total) - a €324 difference.
+Comparez les coûts totaux du prêt en multipliant votre mensualité par le nombre de paiements. Un prêt de 10 000 € à 5% TAEG sur 36 mois coûte 299 €/mois (10 764 € au total), tandis que le même prêt à 7% TAEG coûte 308 €/mois (11 088 € au total) - une différence de 324 €.
 
-Examine all fees carefully. Common fees include origination fees (typically 1-6% of loan amount), application fees, prepayment penalties, late payment fees, and check processing fees. Some lenders charge no fees but higher rates, while others do the opposite.
+Examinez attentivement tous les frais. Les frais courants incluent les frais de dossier (généralement 1-6% du montant du prêt), les frais de demande, les pénalités de remboursement anticipé, les frais de retard et les frais de traitement de chèque. Certains prêteurs ne facturent pas de frais mais ont des taux plus élevés, tandis que d'autres font l'inverse.
 
-Check the repayment flexibility. Can you make extra payments without penalty? Can you change your payment date? Is there a grace period for late payments? These features matter when life circumstances change.
+Vérifiez la flexibilité de remboursement. Pouvez-vous effectuer des paiements supplémentaires sans pénalité ? Pouvez-vous modifier votre date de paiement ? Y a-t-il un délai de grâce pour les paiements en retard ? Ces caractéristiques comptent lorsque les circonstances de la vie changent.
 
-Read reviews and research lender reputation. Check the Better Business Bureau, consumer finance websites, and social media. Beware of lenders with complaints about hidden fees, poor customer service, or aggressive collection practices.
+Lisez les avis et recherchez la réputation du prêteur. Vérifiez auprès du Better Business Bureau, des sites web de finances personnelles et des réseaux sociaux. Méfiez-vous des prêteurs avec des plaintes concernant des frais cachés, un mauvais service client ou des pratiques de recouvrement agressives.
 
-Verify the lender's credentials. Ensure they're properly licensed in France and compliant with consumer protection laws. Legitimate lenders clearly disclose all terms and never pressure you to sign immediately.
+Vérifiez les références du prêteur. Assurez-vous qu'ils sont correctement agréés en France et conformes aux lois de protection des consommateurs. Les prêteurs légitimes divulguent clairement tous les termes et ne vous pressent jamais de signer immédiatement.
 
-Finally, get everything in writing. Compare written loan offers side-by-side, including APR, monthly payment, total cost, fees, and terms. Take time to review - never sign under pressure.`
+Enfin, obtenez tout par écrit. Comparez les offres de prêt écrites côte à côte, y compris le TAEG, la mensualité, le coût total, les frais et les conditions. Prenez le temps d'examiner - ne signez jamais sous pression.`
     },
     {
-      title: "The Truth About Paying Off Loans Early",
-      content: `Paying off a loan early can save significant money in interest, but it's not always the best financial move. Understanding the implications helps you make the right decision.
+      title: "La vérité sur le remboursement anticipé des prêts",
+      content: `Rembourser un prêt par anticipation peut économiser beaucoup d'intérêts, mais ce n'est pas toujours la meilleure décision financière. Comprendre les implications vous aide à faire le bon choix.
 
-Most personal loans use simple interest calculated daily on the remaining balance. Paying early or making extra payments reduces the principal faster, which reduces the interest that accrues. For example, adding €100/month to a €10,000 loan at 6% APR can save over €500 in interest and cut months off your repayment.
+La plupart des prêts personnels utilisent un intérêt simple calculé quotidiennement sur le solde restant. Payer tôt ou effectuer des paiements supplémentaires réduit le capital plus rapidement, ce qui réduit les intérêts accumulés. Par exemple, ajouter 100 €/mois à un prêt de 10 000 € à 6% TAEG peut économiser plus de 500 € en intérêts et réduire de plusieurs mois votre remboursement.
 
-However, check for prepayment penalties first. While increasingly rare on personal loans, some lenders charge fees (typically 2-5% of the remaining balance) if you pay off the loan within the first 1-3 years. This fee might eliminate your interest savings, making early payoff pointless.
+Cependant, vérifiez d'abord les pénalités de remboursement anticipé. Bien qu'elles soient de plus en plus rares sur les prêts personnels, certains prêteurs facturent des frais (généralement 2-5% du solde restant) si vous remboursez le prêt dans les premières 1-3 années. Ces frais pourraient éliminer vos économies d'intérêts, rendant le remboursement anticipé inutile.
 
-Consider opportunity cost before making extra payments. If your loan rate is 5% but you could earn 8% by investing that money, you might be better off making minimum payments and investing the difference. This is especially true if your employer matches retirement contributions - that's free money you shouldn't miss.
+Considérez le coût d'opportunité avant d'effectuer des paiements supplémentaires. Si votre taux de prêt est de 5% mais que vous pourriez gagner 8% en investissant cet argent, vous pourriez être mieux servi en effectuant des paiements minimums et en investissant la différence. Cela est particulièrement vrai si votre employeur abonde vos cotisations de retraite - c'est de l'argent gratuit que vous ne devriez pas manquer.
 
-Don't prioritize loan payoff at the expense of emergency savings. Financial experts recommend 3-6 months of expenses in readily accessible savings before aggressively paying down low-interest debt. Without emergency funds, you might need to take on high-interest debt during a crisis.
+Ne priorisez pas le remboursement du prêt au détriment de l'épargne d'urgence. Les experts financiers recommandent 3-6 mois de dépenses en épargne facilement accessible avant de rembourser agressivement des dettes à faible taux d'intérêt. Sans fonds d'urgence, vous pourriez avoir besoin de contracter des dettes à taux d'intérêt élevé lors d'une crise.
 
-Focus extra payments on high-interest debt first. If you have a personal loan at 6% and credit cards at 20%, pay minimums on the loan and attack the credit cards. This "avalanche method" saves the most money.
+Concentrez les paiements supplémentaires d'abord sur les dettes à taux d'intérêt élevé. Si vous avez un prêt personnel à 6% et des cartes de crédit à 20%, payez les minimums sur le prêt et attaquez les cartes de crédit. Cette "méthode avalanche" économise le plus d'argent.
 
-Paying off loans early does improve your credit score by reducing your credit utilization and debt-to-income ratio, which helps if you're planning to apply for a mortgage or other major loan soon.
+Rembourser les prêts par anticipation améliore votre score de crédit en réduisant votre utilisation du crédit et votre taux d'endettement, ce qui aide si vous prévoyez demander une hypothèque ou un autre prêt important bientôt.
 
-Calculate your exact savings using an early payoff calculator before deciding. Sometimes the savings are minimal, while other times they're substantial.`
+Calculez vos économies exactes en utilisant un calculateur de remboursement anticipé avant de décider. Parfois, les économies sont minimes, tandis que d'autres fois elles sont substantielles.`
     },
     {
-      title: "Building and Maintaining Good Credit",
-      content: `Your credit score impacts every financial aspect of your life - loan approvals, interest rates, housing applications, and even employment. Understanding how to build and maintain good credit is essential for financial success.
+      title: "Construire et maintenir un bon crédit",
+      content: `Votre score de crédit impacte tous les aspects financiers de votre vie - approbations de prêts, taux d'intérêt, demandes de logement et même l'emploi. Comprendre comment construire et maintenir un bon crédit est essentiel pour la réussite financière.
 
-Credit scores range from 300 to 850. Scores above 750 are excellent, 700-749 is good, 650-699 is fair, 600-649 is poor, and below 600 is very poor. The exact score formula is proprietary, but we know the key factors.
+Les scores de crédit vont de 300 à 850. Les scores supérieurs à 750 sont excellents, 700-749 est bon, 650-699 est correct, 600-649 est faible et en dessous de 600 est très faible. La formule exacte du score est propriétaire, mais nous connaissons les facteurs clés.
 
-Payment history accounts for 35% of your score. Never miss payments - even one 30-day late payment can drop your score 100+ points. Set up automatic payments or calendar reminders for all debts. If you do miss a payment, pay it immediately and contact the creditor - they sometimes agree not to report it if you have a good history.
+L'historique de paiement représente 35% de votre score. Ne manquez jamais de paiements - même un seul paiement en retard de 30 jours peut faire chuter votre score de plus de 100 points. Configurez des paiements automatiques ou des rappels de calendrier pour toutes les dettes. Si vous manquez un paiement, payez-le immédiatement et contactez le créancier - ils acceptent parfois de ne pas le signaler si vous avez un bon historique.
 
-Credit utilization (amounts owed) represents 30% of your score. Keep credit card balances below 30% of limits, ideally below 10%. Pay down balances rather than moving debt around. High utilization signals financial stress even if you pay on time.
+L'utilisation du crédit (montants dus) représente 30% de votre score. Maintenez les soldes de cartes de crédit en dessous de 30% des limites, idéalement en dessous de 10%. Remboursez les soldes plutôt que de déplacer la dette. Une utilisation élevée signale un stress financier même si vous payez à temps.
 
-Length of credit history contributes 15%. Keep old accounts open even if unused, as they establish your credit history depth. The average age of your accounts matters significantly.
+La durée de l'historique de crédit contribue à 15%. Gardez les anciens comptes ouverts même si vous ne les utilisez pas, car ils établissent la profondeur de votre historique de crédit. L'âge moyen de vos comptes compte considérablement.
 
-Credit mix accounts for 10%. Having different types of credit (credit cards, installment loans, mortgage) shows you can manage various obligations, though you shouldn't take on debt just for mix.
+Le mix de crédit représente 10%. Avoir différents types de crédit (cartes de crédit, prêts à tempérament, hypothèque) montre que vous pouvez gérer diverses obligations, bien que vous ne devriez pas contracter de dettes juste pour le mix.
 
-New credit inquiries make up 10%. Each hard inquiry (when you apply for credit) can drop your score 5-10 points temporarily. Rate shopping for mortgages or auto loans within 14-45 days counts as one inquiry, so consolidate shopping periods.
+Les nouvelles enquêtes de crédit représentent 10%. Chaque enquête approfondie (lorsque vous demandez un crédit) peut faire chuter votre score de 5 à 10 points temporairement. La recherche de taux pour les hypothèques ou les crédits auto dans les 14-45 jours compte comme une seule enquête, donc consolidez les périodes de recherche.
 
-To build credit from scratch, start with a secured credit card, become an authorized user on a responsible person's account, or get a credit-builder loan. Make small charges and pay in full monthly.
+Pour construire un crédit à partir de zéro, commencez par une carte de crédit sécurisée, devenez utilisateur autorisé sur le compte d'une personne responsable, ou obtenez un prêt de construction de crédit. Effectuez de petits achats et payez intégralement chaque mois.
 
-Monitor your credit regularly through free annual reports. Dispute any errors immediately, as mistakes are common and can significantly hurt your score.
+Surveillez régulièrement votre crédit via des rapports annuels gratuits. Contestez immédiatement toute erreur, car les erreurs sont courantes et peuvent nuire considérablement à votre score.
 
-Avoid credit repair scams. No one can legally remove accurate negative information, and disputing accurate items wastes time and money.`
+Évitez les arnaques de réparation de crédit. Personne ne peut légalement supprimer des informations négatives précises, et contester des éléments précis fait perdre du temps et de l'argent.`
     }
   ];
 
@@ -103,9 +103,9 @@ Avoid credit repair scams. No one can legally remove accurate negative informati
 
       <section className="py-16 bg-gradient-hero text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Credit Guide</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Guide du Crédit</h1>
           <p className="text-xl max-w-2xl mx-auto text-primary-foreground/90">
-            Educational resources to help you make informed borrowing decisions
+            Ressources éducatives pour vous aider à prendre des décisions d'emprunt éclairées
           </p>
         </div>
       </section>
