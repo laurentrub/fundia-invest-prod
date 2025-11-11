@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Star, Quote } from "lucide-react";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const Testimonials = () => {
   const testimonials = [
@@ -9,6 +10,8 @@ const Testimonials = () => {
       rating: 5,
       text: "Excellent service ! J'ai obtenu mon prêt personnel en 48h pour financer les travaux de ma maison. Le processus était simple et transparent, et le conseiller était très professionnel.",
       project: "Crédit travaux - 15 000€",
+      initials: "MD",
+      color: "bg-accent"
     },
     {
       name: "Pierre Martin",
@@ -16,6 +19,8 @@ const Testimonials = () => {
       rating: 5,
       text: "Après avoir comparé plusieurs banques, Privat Equity m'a proposé le meilleur taux pour mon crédit auto. La simulation en ligne est très pratique et l'approbation a été rapide.",
       project: "Crédit auto - 22 000€",
+      initials: "PM",
+      color: "bg-primary"
     },
     {
       name: "Sophie Laurent",
@@ -23,6 +28,8 @@ const Testimonials = () => {
       rating: 5,
       text: "Je recommande vivement ! Le rachat de mes crédits m'a permis de réduire considérablement mes mensualités. L'équipe a été à l'écoute et m'a bien accompagnée.",
       project: "Rachat de crédit - 35 000€",
+      initials: "SL",
+      color: "bg-secondary"
     },
     {
       name: "Thomas Bernard",
@@ -30,6 +37,8 @@ const Testimonials = () => {
       rating: 5,
       text: "Service impeccable du début à la fin. La plateforme en ligne est intuitive, et j'ai pu faire toutes mes démarches sans me déplacer. Mon prêt a été validé en moins de 24h.",
       project: "Prêt personnel - 8 000€",
+      initials: "TB",
+      color: "bg-accent"
     },
   ];
 
@@ -50,10 +59,19 @@ const Testimonials = () => {
             <Card key={index} className="p-6 hover:shadow-xl transition-shadow relative">
               <Quote className="absolute top-4 right-4 h-8 w-8 text-accent/20" />
               
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-accent text-accent" />
-                ))}
+              <div className="flex items-start gap-4 mb-4">
+                <Avatar className="h-12 w-12 flex-shrink-0">
+                  <AvatarFallback className={`${testimonial.color} text-white font-semibold`}>
+                    {testimonial.initials}
+                  </AvatarFallback>
+                </Avatar>
+                <div className="flex-1">
+                  <div className="flex items-center gap-1 mb-2">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-accent text-accent" />
+                    ))}
+                  </div>
+                </div>
               </div>
 
               <p className="text-foreground mb-4 leading-relaxed">

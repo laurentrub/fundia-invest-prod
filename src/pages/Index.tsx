@@ -9,6 +9,12 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Shield, Clock, TrendingUp, Users, Award } from "lucide-react";
 import heroImage from "@/assets/hero-finance.jpg";
+import teamMeeting from "@/assets/team-meeting.jpg";
+import happyClients from "@/assets/happy-clients.jpg";
+import advisorWoman from "@/assets/advisor-woman.jpg";
+import advisorMan from "@/assets/advisor-man.jpg";
+import teamGroup from "@/assets/team-group.jpg";
+import carLoanSuccess from "@/assets/car-loan-success.jpg";
 
 const Index = () => {
   const features = [
@@ -221,6 +227,195 @@ const Index = () => {
                 </Link>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <img 
+                src={teamMeeting} 
+                alt="Équipe de conseillers Privat Equity en réunion avec des clients"
+                className="rounded-2xl shadow-2xl w-full object-cover"
+              />
+            </div>
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Comment ça marche ?
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Un processus simple et rapide en 4 étapes pour obtenir votre financement
+              </p>
+              <div className="space-y-6">
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-accent rounded-full flex items-center justify-center text-accent-foreground font-bold text-xl">
+                    1
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-2">Simulez votre crédit</h3>
+                    <p className="text-muted-foreground">Utilisez notre calculateur pour estimer vos mensualités en quelques secondes</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-accent rounded-full flex items-center justify-center text-accent-foreground font-bold text-xl">
+                    2
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-2">Soumettez votre demande</h3>
+                    <p className="text-muted-foreground">Remplissez notre formulaire en ligne sécurisé en moins de 5 minutes</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-accent rounded-full flex items-center justify-center text-accent-foreground font-bold text-xl">
+                    3
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-2">Recevez une réponse instantanée</h3>
+                    <p className="text-muted-foreground">Notre système vous donne une réponse préliminaire immédiate</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-accent rounded-full flex items-center justify-center text-accent-foreground font-bold text-xl">
+                    4
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-2">Obtenez vos fonds</h3>
+                    <p className="text-muted-foreground">Une fois approuvé, recevez votre argent sous 48h sur votre compte</p>
+                  </div>
+                </div>
+              </div>
+              <Link to="/apply" className="inline-block mt-8">
+                <Button size="lg" variant="accent">
+                  Commencer maintenant
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Team Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Notre équipe d'experts à votre service
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Des conseillers dédiés et expérimentés pour vous accompagner dans tous vos projets de financement
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+            <Card className="overflow-hidden hover:shadow-xl transition-shadow">
+              <img 
+                src={advisorWoman} 
+                alt="Sophie Martin, Conseillère en financement personnel"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-6 text-center">
+                <h3 className="text-xl font-bold text-foreground mb-1">Sophie Martin</h3>
+                <p className="text-accent font-semibold mb-2">Conseillère Senior</p>
+                <p className="text-muted-foreground text-sm">
+                  Spécialiste en crédits personnels et immobiliers avec 8 ans d'expérience
+                </p>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-xl transition-shadow">
+              <img 
+                src={advisorMan} 
+                alt="Thomas Dubois, Expert en financement automobile"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-6 text-center">
+                <h3 className="text-xl font-bold text-foreground mb-1">Thomas Dubois</h3>
+                <p className="text-accent font-semibold mb-2">Expert Financement</p>
+                <p className="text-muted-foreground text-sm">
+                  Expert en crédits auto et professionnels, plus de 500 clients satisfaits
+                </p>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-xl transition-shadow">
+              <img 
+                src={teamGroup} 
+                alt="Équipe complète de Privat Equity"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-6 text-center">
+                <h3 className="text-xl font-bold text-foreground mb-1">Équipe dédiée</h3>
+                <p className="text-accent font-semibold mb-2">Support 24/7</p>
+                <p className="text-muted-foreground text-sm">
+                  Une équipe de 15+ experts disponibles pour répondre à toutes vos questions
+                </p>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Success Stories Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Ils ont réalisé leurs projets avec nous
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Des milliers de clients nous font confiance pour financer leurs projets de vie
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <Card className="overflow-hidden hover:shadow-xl transition-shadow">
+              <img 
+                src={carLoanSuccess} 
+                alt="Couple heureux ayant obtenu leur crédit auto"
+                className="w-full h-72 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-foreground mb-3">Crédit Auto</h3>
+                <p className="text-muted-foreground mb-4">
+                  "Nous avons obtenu notre crédit auto en 24h ! Le processus était simple et l'équipe très professionnelle. Nous recommandons vivement Privat Equity."
+                </p>
+                <div className="flex items-center gap-2">
+                  <div className="w-10 h-10 bg-gradient-accent rounded-full flex items-center justify-center text-accent-foreground font-bold">
+                    ML
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground">Marie & Luc</p>
+                    <p className="text-sm text-muted-foreground">Lyon - Crédit de 22 000€</p>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            <Card className="overflow-hidden hover:shadow-xl transition-shadow">
+              <img 
+                src={happyClients} 
+                alt="Clients satisfaits après obtention de leur crédit"
+                className="w-full h-72 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-foreground mb-3">Prêt Personnel</h3>
+                <p className="text-muted-foreground mb-4">
+                  "Service exceptionnel du début à la fin. Les conseillers ont pris le temps de comprendre mes besoins et m'ont proposé la meilleure solution. Merci !"
+                </p>
+                <div className="flex items-center gap-2">
+                  <div className="w-10 h-10 bg-gradient-accent rounded-full flex items-center justify-center text-accent-foreground font-bold">
+                    AK
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground">Ahmed K.</p>
+                    <p className="text-sm text-muted-foreground">Paris - Crédit de 15 000€</p>
+                  </div>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
