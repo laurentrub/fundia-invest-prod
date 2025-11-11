@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import CreditSimulator from "@/components/credit/CreditSimulator";
+import Newsletter from "@/components/Newsletter";
+import Testimonials from "@/components/Testimonials";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Shield, Clock, TrendingUp, Users, Award } from "lucide-react";
@@ -222,6 +225,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <Testimonials />
+
       {/* About Section - Rich Content for SEO */}
       <section className="py-20">
         <div className="container mx-auto px-4 max-w-4xl">
@@ -363,7 +369,11 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Newsletter Section */}
+      <Newsletter />
+
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 };
