@@ -297,62 +297,47 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Our Team Section */}
+      {/* Our Mission Section */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Notre équipe d'experts à votre service
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Notre mission
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Des conseillers dédiés et expérimentés pour vous accompagner dans tous vos projets de financement
+            <p className="text-2xl md:text-3xl font-semibold text-foreground max-w-4xl mx-auto leading-relaxed">
+              Rendre le financement simple, accessible et sécurisé pour tous.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
-            <Card className="overflow-hidden hover:shadow-xl transition-shadow">
-              <img 
-                src={advisorWoman} 
-                alt="Sophie Martin, Conseillère en financement personnel"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-bold text-foreground mb-1">Sophie Martin</h3>
-                <p className="text-accent font-semibold mb-2">Conseillère Senior</p>
-                <p className="text-muted-foreground text-sm">
-                  Spécialiste en crédits personnels et immobiliers avec 8 ans d'expérience
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <Card className="p-8 text-center hover:shadow-xl transition-shadow border-2">
+              <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="h-8 w-8 text-accent-foreground" />
               </div>
+              <h3 className="text-2xl font-bold text-foreground mb-4">Accessibilité</h3>
+              <p className="text-muted-foreground text-lg">
+                Des solutions de financement ouvertes à tous, avec des processus simplifiés et transparents.
+              </p>
             </Card>
 
-            <Card className="overflow-hidden hover:shadow-xl transition-shadow">
-              <img 
-                src={advisorMan} 
-                alt="Thomas Dubois, Expert en financement automobile"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-bold text-foreground mb-1">Thomas Dubois</h3>
-                <p className="text-accent font-semibold mb-2">Expert Financement</p>
-                <p className="text-muted-foreground text-sm">
-                  Expert en crédits auto et professionnels, plus de 500 clients satisfaits
-                </p>
+            <Card className="p-8 text-center hover:shadow-xl transition-shadow border-2">
+              <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                <Shield className="h-8 w-8 text-accent-foreground" />
               </div>
+              <h3 className="text-2xl font-bold text-foreground mb-4">Confiance</h3>
+              <p className="text-muted-foreground text-lg">
+                Sécurité maximale de vos données et accompagnement personnalisé à chaque étape.
+              </p>
             </Card>
 
-            <Card className="overflow-hidden hover:shadow-xl transition-shadow">
-              <img 
-                src={teamGroup} 
-                alt="Équipe complète de Privat Equity"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-bold text-foreground mb-1">Équipe dédiée</h3>
-                <p className="text-accent font-semibold mb-2">Support 24/7</p>
-                <p className="text-muted-foreground text-sm">
-                  Une équipe de 15+ experts disponibles pour répondre à toutes vos questions
-                </p>
+            <Card className="p-8 text-center hover:shadow-xl transition-shadow border-2">
+              <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                <Award className="h-8 w-8 text-accent-foreground" />
               </div>
+              <h3 className="text-2xl font-bold text-foreground mb-4">Innovation</h3>
+              <p className="text-muted-foreground text-lg">
+                Technologie de pointe pour des décisions rapides et des taux compétitifs.
+              </p>
             </Card>
           </div>
         </div>
