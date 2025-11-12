@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, LogOut } from "lucide-react";
 import { useState } from "react";
 import {
   NavigationMenu,
@@ -18,6 +19,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const Header = () => {
+  const { user, signOut } = useAuth();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [language, setLanguage] = useState(() => {
     const browserLang = navigator.language.split('-')[0];
@@ -116,11 +118,20 @@ const Header = () => {
             </Button>
           </Link>
           
-          <Link to="/apply">
-            <Button variant="outline" size="default">
-              Demande de crédit
-            </Button>
+          <Link to="/dashboard">
+            <Button variant="outline">Mes demandes</Button>
           </Link>
+          
+          {user ? (
+            <Button variant="ghost" size="sm" onClick={signOut} className="gap-2">
+              <LogOut className="h-4 w-4" />
+              Déconnexion
+            </Button>
+          ) : (
+            <Link to="/auth">
+              <Button variant="ghost">Connexion</Button>
+            </Link>
+          )}
           
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -202,6 +213,28 @@ const Header = () => {
                   Demande de crédit
                 </Button>
               </Link>
+              
+              <Link to="/dashboard" onClick={() => setMobileMenuOpen(false)}>
+                <Button variant="outline" size="default" className="w-full">
+                  Mes demandes
+                </Button>
+              </Link>
+              
+              {user ? (
+                <Button variant="ghost" size="default" onClick={() => {
+                  setMobileMenuOpen(false);
+                  signOut();
+                }} className="w-full gap-2">
+                  <LogOut className="h-4 w-4" />
+                  Déconnexion
+                </Button>
+              ) : (
+                <Link to="/auth" onClick={() => setMobileMenuOpen(false)}>
+                  <Button variant="ghost" size="default" className="w-full">
+                    Connexion
+                  </Button>
+                </Link>
+              )}
               
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>

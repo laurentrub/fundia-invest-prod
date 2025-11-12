@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth";
+import { supabase } from "@/integrations/supabase/client";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Card } from "@/components/ui/card";
@@ -106,8 +108,21 @@ const step4Schema = z.object({
 const ApplyPage = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
+  const { user, loading: authLoading } = useAuth();
   const [step, setStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // Redirect to auth if not logged in
+  useEffect(() => {
+    if (!authLoading && !user) {
+      toast({
+        title: "Authentification requise",
+        description: "Vous devez être connecté pour faire une demande de crédit",
+      });
+      navigate('/auth');
+    }
+  }, [user, authLoading, navigate, toast]);
+  
   const [formData, setFormData] = useState({
     // Étape 1: Détails du crédit
     loanType: "",
@@ -210,31 +225,49 @@ const ApplyPage = () => {
     e.preventDefault();
     
     if (!validateStep(4)) return;
+    if (!user) {
+      toast({
+        variant: "destructive",
+        title: "Erreur",
+        description: "Vous devez être connecté",
+      });
+      navigate('/auth');
+      return;
+    }
     
     setIsSubmitting(true);
     
     try {
-      // Simuler l'envoi de la demande
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      const { error } = await supabase
+        .from('loan_requests')
+        .insert({
+          user_id: user.id,
+          loan_type: formData.loanType,
+          amount: parseFloat(formData.amount),
+          duration: parseInt(formData.duration),
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          status: 'pending',
+        });
+
+      if (error) throw error;
       
-      // Stocker les données dans sessionStorage pour la page de confirmation
-      sessionStorage.setItem('applicationData', JSON.stringify({
-        name: `${formData.firstName} ${formData.lastName}`,
-        email: formData.email,
-        loanType: formData.loanType,
-        amount: formData.amount,
-        duration: formData.duration,
-        submittedAt: new Date().toISOString(),
-      }));
+      toast({
+        title: "Demande envoyée !",
+        description: "Votre demande de crédit a été soumise avec succès",
+      });
       
-      // Rediriger vers la page de confirmation
-      navigate('/apply/confirmation');
-    } catch (error) {
+      navigate('/dashboard');
+    } catch (error: any) {
+      console.error('Erreur lors de la soumission:', error);
       toast({
         variant: "destructive",
         title: "Erreur",
-        description: "Une erreur s'est produite lors de l'envoi de votre demande. Veuillez réessayer.",
+        description: "Une erreur est survenue lors de l'envoi de votre demande",
       });
+    } finally {
       setIsSubmitting(false);
     }
   };
