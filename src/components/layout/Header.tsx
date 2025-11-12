@@ -122,6 +122,12 @@ const Header = () => {
             <Button variant="outline">Mes demandes</Button>
           </Link>
           
+          {user && (
+            <Link to="/profile">
+              <Button variant="outline">Mon profil</Button>
+            </Link>
+          )}
+          
           {user ? (
             <Button variant="ghost" size="sm" onClick={signOut} className="gap-2">
               <LogOut className="h-4 w-4" />
@@ -219,6 +225,14 @@ const Header = () => {
                   Mes demandes
                 </Button>
               </Link>
+              
+              {user && (
+                <Link to="/profile" onClick={() => setMobileMenuOpen(false)}>
+                  <Button variant="outline" size="default" className="w-full">
+                    Mon profil
+                  </Button>
+                </Link>
+              )}
               
               {user ? (
                 <Button variant="ghost" size="default" onClick={() => {
