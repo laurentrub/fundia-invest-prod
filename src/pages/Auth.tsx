@@ -12,9 +12,10 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
 export default function Auth() {
-  const { signIn, signUp, user } = useAuth();
+  const { signIn, signUp, resetPassword, user } = useAuth();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
+  const [resetEmailSent, setResetEmailSent] = useState(false);
 
   // Redirect if already logged in
   useEffect(() => {
@@ -34,6 +35,8 @@ export default function Auth() {
     firstName: '',
     lastName: '',
   });
+
+  const [resetEmail, setResetEmail] = useState('');
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -70,6 +73,22 @@ export default function Auth() {
     setLoading(false);
   };
 
+  const handleResetPassword = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const { error } = await resetPassword(resetEmail);
+
+    if (error) {
+      toast.error(error.message);
+    } else {
+      setResetEmailSent(true);
+      toast.success('Email de réinitialisation envoyé !');
+    }
+
+    setLoading(false);
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -83,9 +102,10 @@ export default function Auth() {
           </CardHeader>
           <CardContent>
             <Tabs defaultValue="login" className="w-full">
-              <TabsList className="grid w-full grid-cols-2">
+              <TabsList className="grid w-full grid-cols-3">
                 <TabsTrigger value="login">Connexion</TabsTrigger>
                 <TabsTrigger value="signup">Inscription</TabsTrigger>
+                <TabsTrigger value="reset">Mot de passe oublié</TabsTrigger>
               </TabsList>
 
               <TabsContent value="login">
@@ -177,6 +197,44 @@ export default function Auth() {
                     {loading ? 'Création...' : "S'inscrire"}
                   </Button>
                 </form>
+              </TabsContent>
+
+              <TabsContent value="reset">
+                {!resetEmailSent ? (
+                  <form onSubmit={handleResetPassword} className="space-y-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="reset-email">Email</Label>
+                      <Input
+                        id="reset-email"
+                        type="email"
+                        required
+                        value={resetEmail}
+                        onChange={(e) => setResetEmail(e.target.value)}
+                        placeholder="Entrez votre adresse email"
+                      />
+                    </div>
+                    <Button type="submit" className="w-full" disabled={loading}>
+                      {loading ? 'Envoi...' : 'Envoyer le lien de réinitialisation'}
+                    </Button>
+                  </form>
+                ) : (
+                  <div className="space-y-4 text-center">
+                    <p className="text-sm text-muted-foreground">
+                      Un email de réinitialisation a été envoyé à <strong>{resetEmail}</strong>.
+                      Veuillez vérifier votre boîte de réception et cliquer sur le lien pour réinitialiser votre mot de passe.
+                    </p>
+                    <Button 
+                      variant="outline" 
+                      className="w-full"
+                      onClick={() => {
+                        setResetEmailSent(false);
+                        setResetEmail('');
+                      }}
+                    >
+                      Renvoyer un email
+                    </Button>
+                  </div>
+                )}
               </TabsContent>
             </Tabs>
           </CardContent>
