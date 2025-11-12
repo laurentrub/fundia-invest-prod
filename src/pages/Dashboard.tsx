@@ -81,6 +81,22 @@ export default function Dashboard() {
       if (error) throw error;
 
       toast.success('Statut mis à jour');
+      
+      // Envoyer la notification par email
+      try {
+        const { error: emailError } = await supabase.functions.invoke('send-status-notification', {
+          body: { loanRequestId: id, newStatus },
+        });
+        
+        if (emailError) {
+          console.error('Erreur lors de l\'envoi de l\'email:', emailError);
+        } else {
+          toast.success('Notification envoyée par email');
+        }
+      } catch (emailError) {
+        console.error('Erreur lors de l\'envoi de l\'email:', emailError);
+      }
+      
       fetchRequests();
     } catch (error: any) {
       toast.error('Erreur lors de la mise à jour');
