@@ -1,0 +1,104 @@
+{
+  "nav": {
+    "particuliers": "Particulares",
+    "professionnels": "Profesionales",
+    "personalLoan": "Préstamo Personal",
+    "autoLoan": "Crédito Auto",
+    "homeImprovement": "Crédito Reformas",
+    "consolidation": "Reunificación de Deudas",
+    "businessLoan": "Préstamo Empresarial",
+    "cashFlow": "Crédito de Tesorería",
+    "equipment": "Crédito de Equipamiento",
+    "financeProject": "Financiar Mi Proyecto",
+    "creditRequest": "Solicitud de Crédito",
+    "myProfile": "Mi Perfil",
+    "login": "Iniciar Sesión",
+    "logout": "Cerrar Sesión"
+  },
+  "languages": {
+    "fr": "Français",
+    "en": "English",
+    "de": "Deutsch",
+    "es": "Español",
+    "pt": "Português",
+    "nl": "Nederlands",
+    "hr": "Hrvatski"
+  },
+  "home": {
+    "hero": {
+      "title": "Soluciones de Crédito a Medida",
+      "subtitle": "Realice sus proyectos con nuestras soluciones de financiación adaptadas a sus necesidades. Simulación gratuita y respuesta rápida.",
+      "simulateButton": "Simular Mi Crédito",
+      "applyButton": "Solicitar Ahora"
+    },
+    "features": {
+      "title": "¿Por Qué Elegirnos?",
+      "fast": {
+        "title": "Respuesta Rápida",
+        "description": "Una respuesta preliminar en un máximo de 48 horas"
+      },
+      "personalized": {
+        "title": "Solución a Medida",
+        "description": "Ofertas adaptadas a su situación"
+      },
+      "secure": {
+        "title": "100% Seguro",
+        "description": "Sus datos están protegidos"
+      }
+    },
+    "products": {
+      "title": "Nuestras Soluciones de Crédito",
+      "personal": {
+        "title": "Préstamo Personal",
+        "description": "Para sus proyectos personales"
+      },
+      "auto": {
+        "title": "Crédito Auto",
+        "description": "Financie su vehículo"
+      },
+      "home": {
+        "title": "Crédito Reformas",
+        "description": "Renueve su hogar"
+      },
+      "consolidation": {
+        "title": "Reunificación de Deudas",
+        "description": "Simplifique sus pagos"
+      }
+    },
+    "howItWorks": {
+      "title": "¿Cómo Funciona?",
+      "step1": {
+        "title": "1. Simule",
+        "description": "Use nuestro simulador gratuito"
+      },
+      "step2": {
+        "title": "2. Envíe Su Solicitud",
+        "description": "Complete el formulario en línea"
+      },
+      "step3": {
+        "title": "3. Reciba Su Oferta",
+        "description": "Respuesta en un máximo de 48 horas"
+      }
+    },
+    "cta": {
+      "title": "¿Listo para Hacer Realidad Su Proyecto?",
+      "description": "Obtenga una simulación gratuita sin compromiso",
+      "button": "Comenzar"
+    }
+  },
+  "footer": {
+    "company": "Empresa",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "legal": "Aviso Legal",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos y Condiciones",
+    "products": "Productos",
+    "resources": "Recursos",
+    "faq": "Preguntas Frecuentes",
+    "glossary": "Glosario",
+    "creditGuide": "Guía de Crédito",
+    "newsletter": "Boletín",
+    "copyright": "© 2024 Privat Equity. Todos los derechos reservados."
+  }
+}

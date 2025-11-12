@@ -1,0 +1,104 @@
+{
+  "nav": {
+    "particuliers": "Particuliers",
+    "professionnels": "Professionnels",
+    "personalLoan": "Prêt personnel",
+    "autoLoan": "Crédit auto",
+    "homeImprovement": "Crédit travaux",
+    "consolidation": "Rachat de crédit",
+    "businessLoan": "Prêt entreprise",
+    "cashFlow": "Crédit trésorerie",
+    "equipment": "Crédit équipement",
+    "financeProject": "Financer mon projet",
+    "creditRequest": "Demande de crédit",
+    "myProfile": "Mon profil",
+    "login": "Connexion",
+    "logout": "Déconnexion"
+  },
+  "languages": {
+    "fr": "Français",
+    "en": "English",
+    "de": "Deutsch",
+    "es": "Español",
+    "pt": "Português",
+    "nl": "Nederlands",
+    "hr": "Hrvatski"
+  },
+  "home": {
+    "hero": {
+      "title": "Solutions de Crédit Sur Mesure",
+      "subtitle": "Réalisez vos projets avec nos solutions de financement adaptées à vos besoins. Simulation gratuite et réponse rapide.",
+      "simulateButton": "Simuler mon crédit",
+      "applyButton": "Faire une demande"
+    },
+    "features": {
+      "title": "Pourquoi nous choisir ?",
+      "fast": {
+        "title": "Réponse rapide",
+        "description": "Une réponse de principe en 48h maximum"
+      },
+      "personalized": {
+        "title": "Solution sur mesure",
+        "description": "Des offres adaptées à votre situation"
+      },
+      "secure": {
+        "title": "100% sécurisé",
+        "description": "Vos données sont protégées"
+      }
+    },
+    "products": {
+      "title": "Nos Solutions de Crédit",
+      "personal": {
+        "title": "Prêt Personnel",
+        "description": "Pour vos projets personnels"
+      },
+      "auto": {
+        "title": "Crédit Auto",
+        "description": "Financez votre véhicule"
+      },
+      "home": {
+        "title": "Crédit Travaux",
+        "description": "Rénovez votre logement"
+      },
+      "consolidation": {
+        "title": "Rachat de Crédit",
+        "description": "Simplifiez vos remboursements"
+      }
+    },
+    "howItWorks": {
+      "title": "Comment ça marche ?",
+      "step1": {
+        "title": "1. Simulez",
+        "description": "Utilisez notre simulateur gratuit"
+      },
+      "step2": {
+        "title": "2. Déposez votre demande",
+        "description": "Complétez le formulaire en ligne"
+      },
+      "step3": {
+        "title": "3. Recevez votre offre",
+        "description": "Réponse sous 48h maximum"
+      }
+    },
+    "cta": {
+      "title": "Prêt à concrétiser votre projet ?",
+      "description": "Faites une simulation gratuite et sans engagement",
+      "button": "Commencer"
+    }
+  },
+  "footer": {
+    "company": "Entreprise",
+    "about": "À propos",
+    "contact": "Contact",
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions générales",
+    "products": "Produits",
+    "resources": "Ressources",
+    "faq": "FAQ",
+    "glossary": "Glossaire",
+    "creditGuide": "Guide du crédit",
+    "newsletter": "Newsletter",
+    "copyright": "© 2024 Privat Equity. Tous droits réservés."
+  }
+}

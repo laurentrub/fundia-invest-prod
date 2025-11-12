@@ -1,0 +1,104 @@
+{
+  "nav": {
+    "particuliers": "Pojedinci",
+    "professionnels": "Profesionalci",
+    "personalLoan": "Osobni Kredit",
+    "autoLoan": "Auto Kredit",
+    "homeImprovement": "Kredit za Obnovu",
+    "consolidation": "Konsolidacija Duga",
+    "businessLoan": "Poslovni Kredit",
+    "cashFlow": "Kredit za Likvidnost",
+    "equipment": "Kredit za Opremu",
+    "financeProject": "Financirajte Moj Projekt",
+    "creditRequest": "Zahtjev za Kredit",
+    "myProfile": "Moj Profil",
+    "login": "Prijava",
+    "logout": "Odjava"
+  },
+  "languages": {
+    "fr": "Français",
+    "en": "English",
+    "de": "Deutsch",
+    "es": "Español",
+    "pt": "Português",
+    "nl": "Nederlands",
+    "hr": "Hrvatski"
+  },
+  "home": {
+    "hero": {
+      "title": "Prilagođena Kreditna Rješenja",
+      "subtitle": "Ostvarite svoje projekte s našim financijskim rješenjima prilagođenim vašim potrebama. Besplatna simulacija i brz odgovor.",
+      "simulateButton": "Simulirajte Moj Kredit",
+      "applyButton": "Prijavite se Sada"
+    },
+    "features": {
+      "title": "Zašto Nas Odabrati?",
+      "fast": {
+        "title": "Brz Odgovor",
+        "description": "Preliminarni odgovor u roku od maksimalno 48 sati"
+      },
+      "personalized": {
+        "title": "Prilagođeno Rješenje",
+        "description": "Ponude prilagođene vašoj situaciji"
+      },
+      "secure": {
+        "title": "100% Sigurno",
+        "description": "Vaši podaci su zaštićeni"
+      }
+    },
+    "products": {
+      "title": "Naša Kreditna Rješenja",
+      "personal": {
+        "title": "Osobni Kredit",
+        "description": "Za vaše osobne projekte"
+      },
+      "auto": {
+        "title": "Auto Kredit",
+        "description": "Financirajte svoje vozilo"
+      },
+      "home": {
+        "title": "Kredit za Obnovu",
+        "description": "Obnovite svoj dom"
+      },
+      "consolidation": {
+        "title": "Konsolidacija Duga",
+        "description": "Pojednostavite svoje otplate"
+      }
+    },
+    "howItWorks": {
+      "title": "Kako Funkcionira?",
+      "step1": {
+        "title": "1. Simulirajte",
+        "description": "Koristite naš besplatni simulator"
+      },
+      "step2": {
+        "title": "2. Pošaljite Svoj Zahtjev",
+        "description": "Ispunite online obrazac"
+      },
+      "step3": {
+        "title": "3. Primite Svoju Ponudu",
+        "description": "Odgovor u roku od maksimalno 48 sati"
+      }
+    },
+    "cta": {
+      "title": "Spremni Ostvariti Svoj Projekt?",
+      "description": "Dobijte besplatnu simulaciju bez obveze",
+      "button": "Započnite"
+    }
+  },
+  "footer": {
+    "company": "Tvrtka",
+    "about": "O Nama",
+    "contact": "Kontakt",
+    "legal": "Pravna Obavijest",
+    "privacy": "Politika Privatnosti",
+    "terms": "Uvjeti i Odredbe",
+    "products": "Proizvodi",
+    "resources": "Resursi",
+    "faq": "Česta Pitanja",
+    "glossary": "Pojmovnik",
+    "creditGuide": "Vodič za Kredit",
+    "newsletter": "Bilten",
+    "copyright": "© 2024 Privat Equity. Sva prava pridržana."
+  }
+}

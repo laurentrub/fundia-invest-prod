@@ -1,0 +1,104 @@
+{
+  "nav": {
+    "particuliers": "Privatpersonen",
+    "professionnels": "Professionelle",
+    "personalLoan": "Privatkredit",
+    "autoLoan": "Autokredit",
+    "homeImprovement": "Renovierungskredit",
+    "consolidation": "Kreditumschuldung",
+    "businessLoan": "Unternehmenskredit",
+    "cashFlow": "Liquiditätskredit",
+    "equipment": "Ausrüstungskredit",
+    "financeProject": "Projekt Finanzieren",
+    "creditRequest": "Kreditantrag",
+    "myProfile": "Mein Profil",
+    "login": "Anmelden",
+    "logout": "Abmelden"
+  },
+  "languages": {
+    "fr": "Français",
+    "en": "English",
+    "de": "Deutsch",
+    "es": "Español",
+    "pt": "Português",
+    "nl": "Nederlands",
+    "hr": "Hrvatski"
+  },
+  "home": {
+    "hero": {
+      "title": "Maßgeschneiderte Kreditlösungen",
+      "subtitle": "Verwirklichen Sie Ihre Projekte mit unseren auf Ihre Bedürfnisse zugeschnittenen Finanzierungslösungen. Kostenlose Simulation und schnelle Antwort.",
+      "simulateButton": "Kredit Simulieren",
+      "applyButton": "Jetzt Beantragen"
+    },
+    "features": {
+      "title": "Warum Uns Wählen?",
+      "fast": {
+        "title": "Schnelle Antwort",
+        "description": "Eine vorläufige Antwort innerhalb von maximal 48 Stunden"
+      },
+      "personalized": {
+        "title": "Maßgeschneiderte Lösung",
+        "description": "Angebote an Ihre Situation angepasst"
+      },
+      "secure": {
+        "title": "100% Sicher",
+        "description": "Ihre Daten sind geschützt"
+      }
+    },
+    "products": {
+      "title": "Unsere Kreditlösungen",
+      "personal": {
+        "title": "Privatkredit",
+        "description": "Für Ihre persönlichen Projekte"
+      },
+      "auto": {
+        "title": "Autokredit",
+        "description": "Finanzieren Sie Ihr Fahrzeug"
+      },
+      "home": {
+        "title": "Renovierungskredit",
+        "description": "Renovieren Sie Ihr Zuhause"
+      },
+      "consolidation": {
+        "title": "Kreditumschuldung",
+        "description": "Vereinfachen Sie Ihre Rückzahlungen"
+      }
+    },
+    "howItWorks": {
+      "title": "Wie Funktioniert Es?",
+      "step1": {
+        "title": "1. Simulieren",
+        "description": "Nutzen Sie unseren kostenlosen Simulator"
+      },
+      "step2": {
+        "title": "2. Antrag Einreichen",
+        "description": "Füllen Sie das Online-Formular aus"
+      },
+      "step3": {
+        "title": "3. Angebot Erhalten",
+        "description": "Antwort innerhalb von maximal 48 Stunden"
+      }
+    },
+    "cta": {
+      "title": "Bereit, Ihr Projekt zu Verwirklichen?",
+      "description": "Erhalten Sie eine kostenlose Simulation ohne Verpflichtung",
+      "button": "Loslegen"
+    }
+  },
+  "footer": {
+    "company": "Unternehmen",
+    "about": "Über Uns",
+    "contact": "Kontakt",
+    "legal": "Impressum",
+    "privacy": "Datenschutzerklärung",
+    "terms": "Allgemeine Geschäftsbedingungen",
+    "products": "Produkte",
+    "resources": "Ressourcen",
+    "faq": "FAQ",
+    "glossary": "Glossar",
+    "creditGuide": "Kreditleitfaden",
+    "newsletter": "Newsletter",
+    "copyright": "© 2024 Privat Equity. Alle Rechte vorbehalten."
+  }
+}

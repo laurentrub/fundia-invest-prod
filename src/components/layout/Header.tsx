@@ -3,6 +3,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, LogOut } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -21,33 +22,34 @@ import {
 const Header = () => {
   const { user, signOut } = useAuth();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [language, setLanguage] = useState(() => {
-    const browserLang = navigator.language.split('-')[0];
-    const supportedLangs = ['fr', 'en', 'de', 'it', 'es', 'pt'];
-    return supportedLangs.includes(browserLang) ? browserLang : 'fr';
-  });
+  const { t, i18n } = useTranslation();
   const location = useLocation();
 
   const languages = {
     fr: { name: "Français", flag: "🇫🇷" },
     en: { name: "English", flag: "🇬🇧" },
     de: { name: "Deutsch", flag: "🇩🇪" },
-    it: { name: "Italiano", flag: "🇮🇹" },
     es: { name: "Español", flag: "🇪🇸" },
     pt: { name: "Português", flag: "🇵🇹" },
+    nl: { name: "Nederlands", flag: "🇳🇱" },
+    hr: { name: "Hrvatski", flag: "🇭🇷" },
+  };
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
   };
 
   const navigation = {
     particuliers: [
-      { name: "Prêt personnel", href: "/personal-loan" },
-      { name: "Crédit auto", href: "/auto-loan" },
-      { name: "Crédit travaux", href: "/home-improvement" },
-      { name: "Rachat de crédit", href: "/consolidation" },
+      { name: t('nav.personalLoan'), href: "/personal-loan" },
+      { name: t('nav.autoLoan'), href: "/auto-loan" },
+      { name: t('nav.homeImprovement'), href: "/home-improvement" },
+      { name: t('nav.consolidation'), href: "/consolidation" },
     ],
     professionnels: [
-      { name: "Prêt entreprise", href: "/business-loan" },
-      { name: "Crédit trésorerie", href: "/business-loan" },
-      { name: "Crédit équipement", href: "/business-loan" },
+      { name: t('nav.businessLoan'), href: "/business-loan" },
+      { name: t('nav.cashFlow'), href: "/business-loan" },
+      { name: t('nav.equipment'), href: "/business-loan" },
     ],
   };
 
@@ -68,7 +70,7 @@ const Header = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Particuliers</NavigationMenuTrigger>
+                <NavigationMenuTrigger>{t('nav.particuliers')}</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                     {navigation.particuliers.map((item) => (
@@ -88,7 +90,7 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger>Professionnels</NavigationMenuTrigger>
+                <NavigationMenuTrigger>{t('nav.professionnels')}</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                     {navigation.professionnels.map((item) => (
@@ -114,35 +116,35 @@ const Header = () => {
         <div className="hidden md:flex md:items-center md:space-x-3">
           <Link to="/project-financing">
             <Button variant="accent" size="default">
-              Financer mon projet
+              {t('nav.financeProject')}
             </Button>
           </Link>
           
           <Link to="/apply">
-            <Button variant="outline">Demande de crédit</Button>
+            <Button variant="outline">{t('nav.creditRequest')}</Button>
           </Link>
           
           {user && (
             <Link to="/profile">
-              <Button variant="outline">Mon profil</Button>
+              <Button variant="outline">{t('nav.myProfile')}</Button>
             </Link>
           )}
           
           {user ? (
             <Button variant="ghost" size="sm" onClick={signOut} className="gap-2">
               <LogOut className="h-4 w-4" />
-              Déconnexion
+              {t('nav.logout')}
             </Button>
           ) : (
             <Link to="/auth">
-              <Button variant="ghost">Connexion</Button>
+              <Button variant="ghost">{t('nav.login')}</Button>
             </Link>
           )}
           
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" size="sm" className="gap-2">
-                <span className="text-xl">{languages[language as keyof typeof languages].flag}</span>
+                <span className="text-xl">{languages[i18n.language as keyof typeof languages]?.flag || "🇫🇷"}</span>
                 <ChevronDown className="h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
@@ -150,7 +152,7 @@ const Header = () => {
               {Object.entries(languages).map(([code, { name, flag }]) => (
                 <DropdownMenuItem
                   key={code}
-                  onClick={() => setLanguage(code)}
+                  onClick={() => changeLanguage(code)}
                   className="cursor-pointer"
                 >
                   <span className="mr-2 text-xl">{flag}</span>
@@ -178,7 +180,7 @@ const Header = () => {
           <div className="space-y-1 px-4 pb-3 pt-2">
             <div className="space-y-4">
               <div>
-                <div className="px-3 py-2 text-sm font-semibold text-foreground">Particuliers</div>
+                <div className="px-3 py-2 text-sm font-semibold text-foreground">{t('nav.particuliers')}</div>
                 {navigation.particuliers.map((item) => (
                   <Link
                     key={item.name}
@@ -192,7 +194,7 @@ const Header = () => {
               </div>
 
               <div>
-                <div className="px-3 py-2 text-sm font-semibold text-foreground">Professionnels</div>
+                <div className="px-3 py-2 text-sm font-semibold text-foreground">{t('nav.professionnels')}</div>
                 {navigation.professionnels.map((item) => (
                   <Link
                     key={item.name}
@@ -210,20 +212,20 @@ const Header = () => {
             <div className="pt-4 space-y-2">
               <Link to="/project-financing" onClick={() => setMobileMenuOpen(false)}>
                 <Button variant="accent" size="default" className="w-full">
-                  Financer mon projet
+                  {t('nav.financeProject')}
                 </Button>
               </Link>
               
               <Link to="/apply" onClick={() => setMobileMenuOpen(false)}>
                 <Button variant="outline" size="default" className="w-full">
-                  Demande de crédit
+                  {t('nav.creditRequest')}
                 </Button>
               </Link>
               
               {user && (
                 <Link to="/profile" onClick={() => setMobileMenuOpen(false)}>
                   <Button variant="outline" size="default" className="w-full">
-                    Mon profil
+                    {t('nav.myProfile')}
                   </Button>
                 </Link>
               )}
@@ -234,12 +236,12 @@ const Header = () => {
                   signOut();
                 }} className="w-full gap-2">
                   <LogOut className="h-4 w-4" />
-                  Déconnexion
+                  {t('nav.logout')}
                 </Button>
               ) : (
                 <Link to="/auth" onClick={() => setMobileMenuOpen(false)}>
                   <Button variant="ghost" size="default" className="w-full">
-                    Connexion
+                    {t('nav.login')}
                   </Button>
                 </Link>
               )}
@@ -247,8 +249,8 @@ const Header = () => {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="outline" size="default" className="w-full gap-2">
-                    <span className="text-xl">{languages[language as keyof typeof languages].flag}</span>
-                    {languages[language as keyof typeof languages].name}
+                    <span className="text-xl">{languages[i18n.language as keyof typeof languages]?.flag || "🇫🇷"}</span>
+                    {languages[i18n.language as keyof typeof languages]?.name || "Français"}
                     <ChevronDown className="h-4 w-4 ml-auto" />
                   </Button>
                 </DropdownMenuTrigger>
@@ -256,7 +258,7 @@ const Header = () => {
                   {Object.entries(languages).map(([code, { name, flag }]) => (
                     <DropdownMenuItem
                       key={code}
-                      onClick={() => setLanguage(code)}
+                      onClick={() => changeLanguage(code)}
                       className="cursor-pointer"
                     >
                       <span className="mr-2 text-xl">{flag}</span>

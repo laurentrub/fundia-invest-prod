@@ -1,0 +1,104 @@
+{
+  "nav": {
+    "particuliers": "Particulieren",
+    "professionnels": "Professionals",
+    "personalLoan": "Persoonlijke Lening",
+    "autoLoan": "Autolening",
+    "homeImprovement": "Verbouwingskrediet",
+    "consolidation": "Schuldconsolidatie",
+    "businessLoan": "Zakelijke Lening",
+    "cashFlow": "Liquiditeitskrediet",
+    "equipment": "Apparatuurgskrediet",
+    "financeProject": "Financier Mijn Project",
+    "creditRequest": "Kredietaanvraag",
+    "myProfile": "Mijn Profiel",
+    "login": "Inloggen",
+    "logout": "Uitloggen"
+  },
+  "languages": {
+    "fr": "Français",
+    "en": "English",
+    "de": "Deutsch",
+    "es": "Español",
+    "pt": "Português",
+    "nl": "Nederlands",
+    "hr": "Hrvatski"
+  },
+  "home": {
+    "hero": {
+      "title": "Op Maat Gemaakte Kredietoplossingen",
+      "subtitle": "Realiseer uw projecten met onze financieringsoplossingen aangepast aan uw behoeften. Gratis simulatie en snel antwoord.",
+      "simulateButton": "Simuleer Mijn Krediet",
+      "applyButton": "Nu Aanvragen"
+    },
+    "features": {
+      "title": "Waarom Voor Ons Kiezen?",
+      "fast": {
+        "title": "Snel Antwoord",
+        "description": "Een voorlopig antwoord binnen maximaal 48 uur"
+      },
+      "personalized": {
+        "title": "Op Maat Gemaakte Oplossing",
+        "description": "Aanbiedingen aangepast aan uw situatie"
+      },
+      "secure": {
+        "title": "100% Veilig",
+        "description": "Uw gegevens zijn beschermd"
+      }
+    },
+    "products": {
+      "title": "Onze Kredietoplossingen",
+      "personal": {
+        "title": "Persoonlijke Lening",
+        "description": "Voor uw persoonlijke projecten"
+      },
+      "auto": {
+        "title": "Autolening",
+        "description": "Financier uw voertuig"
+      },
+      "home": {
+        "title": "Verbouwingskrediet",
+        "description": "Renoveer uw woning"
+      },
+      "consolidation": {
+        "title": "Schuldconsolidatie",
+        "description": "Vereenvoudig uw terugbetalingen"
+      }
+    },
+    "howItWorks": {
+      "title": "Hoe Werkt Het?",
+      "step1": {
+        "title": "1. Simuleer",
+        "description": "Gebruik onze gratis simulator"
+      },
+      "step2": {
+        "title": "2. Dien Uw Aanvraag In",
+        "description": "Vul het online formulier in"
+      },
+      "step3": {
+        "title": "3. Ontvang Uw Offerte",
+        "description": "Antwoord binnen maximaal 48 uur"
+      }
+    },
+    "cta": {
+      "title": "Klaar om Uw Project te Realiseren?",
+      "description": "Krijg een gratis simulatie zonder verplichting",
+      "button": "Begin"
+    }
+  },
+  "footer": {
+    "company": "Bedrijf",
+    "about": "Over Ons",
+    "contact": "Contact",
+    "legal": "Juridische Kennisgeving",
+    "privacy": "Privacybeleid",
+    "terms": "Algemene Voorwaarden",
+    "products": "Producten",
+    "resources": "Bronnen",
+    "faq": "Veelgestelde Vragen",
+    "glossary": "Woordenlijst",
+    "creditGuide": "Kredietgids",
+    "newsletter": "Nieuwsbrief",
+    "copyright": "© 2024 Privat Equity. Alle rechten voorbehouden."
+  }
+}

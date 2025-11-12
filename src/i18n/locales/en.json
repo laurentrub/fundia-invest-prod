@@ -1,0 +1,104 @@
+{
+  "nav": {
+    "particuliers": "Individuals",
+    "professionnels": "Professionals",
+    "personalLoan": "Personal Loan",
+    "autoLoan": "Auto Loan",
+    "homeImprovement": "Home Improvement",
+    "consolidation": "Debt Consolidation",
+    "businessLoan": "Business Loan",
+    "cashFlow": "Cash Flow Credit",
+    "equipment": "Equipment Credit",
+    "financeProject": "Finance My Project",
+    "creditRequest": "Credit Application",
+    "myProfile": "My Profile",
+    "login": "Login",
+    "logout": "Logout"
+  },
+  "languages": {
+    "fr": "Français",
+    "en": "English",
+    "de": "Deutsch",
+    "es": "Español",
+    "pt": "Português",
+    "nl": "Nederlands",
+    "hr": "Hrvatski"
+  },
+  "home": {
+    "hero": {
+      "title": "Tailored Credit Solutions",
+      "subtitle": "Realize your projects with our financing solutions adapted to your needs. Free simulation and quick response.",
+      "simulateButton": "Simulate My Credit",
+      "applyButton": "Apply Now"
+    },
+    "features": {
+      "title": "Why Choose Us?",
+      "fast": {
+        "title": "Fast Response",
+        "description": "A preliminary answer within 48 hours maximum"
+      },
+      "personalized": {
+        "title": "Tailored Solution",
+        "description": "Offers adapted to your situation"
+      },
+      "secure": {
+        "title": "100% Secure",
+        "description": "Your data is protected"
+      }
+    },
+    "products": {
+      "title": "Our Credit Solutions",
+      "personal": {
+        "title": "Personal Loan",
+        "description": "For your personal projects"
+      },
+      "auto": {
+        "title": "Auto Loan",
+        "description": "Finance your vehicle"
+      },
+      "home": {
+        "title": "Home Improvement",
+        "description": "Renovate your home"
+      },
+      "consolidation": {
+        "title": "Debt Consolidation",
+        "description": "Simplify your repayments"
+      }
+    },
+    "howItWorks": {
+      "title": "How It Works?",
+      "step1": {
+        "title": "1. Simulate",
+        "description": "Use our free simulator"
+      },
+      "step2": {
+        "title": "2. Submit Your Application",
+        "description": "Complete the online form"
+      },
+      "step3": {
+        "title": "3. Receive Your Offer",
+        "description": "Response within 48 hours maximum"
+      }
+    },
+    "cta": {
+      "title": "Ready to Make Your Project a Reality?",
+      "description": "Get a free simulation with no commitment",
+      "button": "Get Started"
+    }
+  },
+  "footer": {
+    "company": "Company",
+    "about": "About Us",
+    "contact": "Contact",
+    "legal": "Legal Notice",
+    "privacy": "Privacy Policy",
+    "terms": "Terms and Conditions",
+    "products": "Products",
+    "resources": "Resources",
+    "faq": "FAQ",
+    "glossary": "Glossary",
+    "creditGuide": "Credit Guide",
+    "newsletter": "Newsletter",
+    "copyright": "© 2024 Privat Equity. All rights reserved."
+  }
+}
