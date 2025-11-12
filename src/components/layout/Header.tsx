@@ -118,8 +118,8 @@ const Header = () => {
             </Button>
           </Link>
           
-          <Link to="/dashboard">
-            <Button variant="outline">Mes demandes</Button>
+          <Link to="/apply">
+            <Button variant="outline">Demande de crédit</Button>
           </Link>
           
           {user && (
@@ -217,12 +217,6 @@ const Header = () => {
               <Link to="/apply" onClick={() => setMobileMenuOpen(false)}>
                 <Button variant="outline" size="default" className="w-full">
                   Demande de crédit
-                </Button>
-              </Link>
-              
-              <Link to="/dashboard" onClick={() => setMobileMenuOpen(false)}>
-                <Button variant="outline" size="default" className="w-full">
-                  Mes demandes
                 </Button>
               </Link>
               
