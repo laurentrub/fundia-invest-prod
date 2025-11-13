@@ -112,16 +112,27 @@ const ApplyPage = () => {
   const [step, setStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   
-  // Redirect to auth if not logged in
+  // Restore form data after login
   useEffect(() => {
-    if (!authLoading && !user) {
-      toast({
-        title: "Authentification requise",
-        description: "Vous devez être connecté pour faire une demande de crédit",
-      });
-      navigate('/auth');
+    if (user && !authLoading) {
+      const savedData = localStorage.getItem('pendingLoanApplication');
+      if (savedData) {
+        try {
+          const parsedData = JSON.parse(savedData);
+          setFormData(parsedData);
+          localStorage.removeItem('pendingLoanApplication');
+          
+          toast({
+            title: "Données restaurées",
+            description: "Vous pouvez maintenant soumettre votre demande",
+          });
+        } catch (error) {
+          console.error('Error restoring form data:', error);
+          localStorage.removeItem('pendingLoanApplication');
+        }
+      }
     }
-  }, [user, authLoading, navigate, toast]);
+  }, [user, authLoading, toast]);
   
   const [formData, setFormData] = useState({
     // Étape 1: Détails du crédit
@@ -225,13 +236,19 @@ const ApplyPage = () => {
     e.preventDefault();
     
     if (!validateStep(4)) return;
+    
+    // Check authentication at submission time
     if (!user) {
+      // Save form data before redirecting to auth
+      localStorage.setItem('pendingLoanApplication', JSON.stringify(formData));
+      
       toast({
-        variant: "destructive",
-        title: "Erreur",
-        description: "Vous devez être connecté",
+        title: "Connexion requise",
+        description: "Veuillez vous connecter ou créer un compte pour soumettre votre demande",
+        variant: "default"
       });
-      navigate('/auth');
+      
+      navigate('/auth?redirect=/apply');
       return;
     }
     
