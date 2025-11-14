@@ -8,8 +8,10 @@ import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",

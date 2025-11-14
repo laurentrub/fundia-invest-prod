@@ -84,7 +84,105 @@
       "title": "Klaar om Uw Project te Realiseren?",
       "description": "Krijg een gratis simulatie zonder verplichting",
       "button": "Begin"
+    },
+    "indexFeatures": {
+      "fastApproval": "Snelle Goedkeuring",
+      "fastApprovalDesc": "Ontvang uw voorlopige goedkeuring in minder dan 5 minuten met ons instant beslissingssysteem.",
+      "secure": "100% Veilig",
+      "secureDesc": "Bankversleuteling en gegevensbescherming. Uw informatie is altijd veilig.",
+      "bestRates": "Beste Tarieven",
+      "bestRatesDesc": "Concurrerende rentetarieven vanaf 2,9% JKP. Vergelijk en kies de beste optie.",
+      "expertSupport": "Deskundige Ondersteuning",
+      "expertSupportDesc": "Toegewijde adviseurs beschikbaar om u bij elke stap van het proces te begeleiden."
+    },
+    "loanProducts": {
+      "personal": "Persoonlijke Lening",
+      "personalDesc": "Van €1.000 tot €75.000 voor al uw persoonlijke projecten",
+      "personalRate": "Vanaf 2,9% JKP",
+      "auto": "Autolening",
+      "autoDesc": "Financier uw dromauto met flexibele betalingsopties",
+      "autoRate": "Vanaf 3,2% JKP",
+      "home": "Verbouwingskrediet",
+      "homeDesc": "Transformeer uw huis met onze renovatieleningen",
+      "homeRate": "Vanaf 3,5% JKP",
+      "consolidation": "Schuldconsolidatie",
+      "consolidationDesc": "Vereenvoudig uw financiën door meerdere schulden samen te voegen",
+      "consolidationRate": "Vanaf 4,2% JKP"
+    },
+    "faqs": {
+      "q1": "Hoe snel kan ik mijn lening goedgekeurd krijgen?",
+      "a1": "Ons instant beslissingssysteem biedt een voorlopige goedkeuring in minder dan 5 minuten. Definitieve goedkeuring duurt meestal 24 tot 48 uur na documentverificatie.",
+      "q2": "Wat is de minimaal vereiste kredietscore?",
+      "a2": "We accepteren aanvragen van klanten met verschillende kredietprofielen. Hoewel een score boven 650 uw kansen verbetert, beoordelen we elke aanvraag individueel.",
+      "q3": "Kan ik mijn lening vervroegd afbetalen zonder boetes?",
+      "a3": "Ja, al onze leningen staan vervroegde terugbetaling zonder boetes toe. U bespaart op rente door uw lening eerder af te betalen.",
+      "q4": "Welke documenten moet ik aanleveren om aan te vragen?",
+      "a4": "U heeft een geldig identiteitsbewijs, inkomstenbewijs (laatste 3 loonstroken), bankafschriften en adresbewijs nodig. Aanvullende documenten kunnen worden gevraagd op basis van uw situatie.",
+      "q5": "Hoe wordt mijn maandelijkse betaling berekend?",
+      "a5": "Uw maandelijkse betaling hangt af van het leningbedrag, de looptijd en uw JKP. Gebruik onze simulator hierboven voor een directe berekening op maat van uw behoeften.",
+      "q6": "Beïnvloedt het controleren van tarieven mijn kredietscore?",
+      "a6": "Nee, het controleren van uw geschiktheid heeft geen invloed op uw kredietscore. Alleen de formele kredietaanvraag wordt geregistreerd in uw kredietgeschiedenis."
     }
+  },
+  "about": {
+    "title": "Over Privat Equity",
+    "subtitle": "Uw vertrouwde partner voor transparante en gepersonaliseerde kredietoplossingen",
+    "intro1": "Privat Equity is een innovatief online leenplatform dat de toegang tot krediet in Frankrijk revolutioneert. Opgericht met de missie om persoonlijke financiering transparanter, toegankelijker en eerlijker te maken, verbinden we duizenden leners met de beste kredietaanbiedingen op de markt.",
+    "intro2": "Ons platform maakt gebruik van geavanceerde technologie om uw financiële profiel te analyseren en u in enkele minuten gepersonaliseerde aanbiedingen te doen. We werken met een zorgvuldig geselecteerd netwerk van financiële partners om ervoor te zorgen dat u altijd de best mogelijke voorwaarden krijgt.",
+    "mission": {
+      "title": "Onze Missie",
+      "description": "Democratiseren van de toegang tot krediet door transparante, snelle en op maat gemaakte financieringsoplossingen te bieden voor ieders behoeften. We geloven dat iedereen recht heeft op eerlijke financieringsopties, ongeacht hun profiel."
+    },
+    "values": {
+      "title": "Onze Waarden",
+      "description": "Transparantie, integriteit en respect voor de klant staan centraal in alles wat we doen. We zijn toegewijd aan het verstrekken van duidelijke informatie, zonder verborgen kosten, en het behandelen van elke klant met het respect dat zij verdienen."
+    },
+    "security": {
+      "title": "Veiligheid & Compliance",
+      "description": "We gebruiken de meest geavanceerde beveiligingstechnologieën om uw persoonlijke gegevens te beschermen. Ons platform is volledig AVG-conform en we worden gereguleerd door de Franse financiële autoriteiten."
+    },
+    "expertise": {
+      "title": "Onze Expertise",
+      "description": "Met meer dan 15 jaar gecombineerde ervaring in de financiële sector begrijpt ons team de uitdagingen waarmee leners te maken hebben. We gebruiken deze expertise om een leenervaring te creëren die eenvoudig, snel en op maat is van uw behoeften."
+    }
+  },
+  "contact": {
+    "title": "Neem Contact Op",
+    "subtitle": "Ons team staat tot uw beschikking om al uw vragen te beantwoorden",
+    "phone": "Telefoon",
+    "phoneNumber": "01 23 45 67 89",
+    "phoneHours": "Ma-Za: 9u-18u",
+    "email": "E-mail",
+    "emailAddress": "contact@privatequity.fr",
+    "emailResponse": "Reactie binnen 24u",
+    "address": "Adres",
+    "addressLine1": "123 Avenue des Champs-Élysées",
+    "addressLine2": "75008 Parijs, Frankrijk",
+    "form": {
+      "title": "Stuur ons een bericht",
+      "name": "Volledige naam",
+      "email": "E-mail",
+      "phone": "Telefoon",
+      "subject": "Onderwerp",
+      "message": "Bericht",
+      "send": "Bericht versturen",
+      "success": "Bericht verzonden!",
+      "successDesc": "We reageren zo snel mogelijk."
+    },
+    "sidebar": {
+      "hours": "Openingstijden",
+      "weekdays": "Maandag - Vrijdag: 9:00 - 18:00",
+      "saturday": "Zaterdag: 9:00 - 13:00",
+      "sunday": "Zondag: Gesloten",
+      "faqLink": "Bekijk onze FAQ",
+      "faqDesc": "Vind snel antwoorden op uw vragen",
+      "callNow": "Nu Bellen"
+    }
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Oeps! Pagina niet gevonden",
+    "backHome": "Terug naar Home"
   },
   "footer": {
     "company": "Bedrijf",

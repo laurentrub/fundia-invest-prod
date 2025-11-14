@@ -84,7 +84,105 @@
       "title": "¿Listo para Hacer Realidad Su Proyecto?",
       "description": "Obtenga una simulación gratuita sin compromiso",
       "button": "Comenzar"
+    },
+    "indexFeatures": {
+      "fastApproval": "Aprobación Rápida",
+      "fastApprovalDesc": "Obtenga su aprobación preliminar en menos de 5 minutos con nuestro sistema de decisión instantánea.",
+      "secure": "100% Seguro",
+      "secureDesc": "Cifrado bancario y protección de datos. Su información siempre está segura.",
+      "bestRates": "Mejores Tasas",
+      "bestRatesDesc": "Tasas de interés competitivas desde 2,9% TAE. Compare y elija la mejor opción.",
+      "expertSupport": "Soporte Experto",
+      "expertSupportDesc": "Asesores dedicados disponibles para guiarlo en cada paso del proceso."
+    },
+    "loanProducts": {
+      "personal": "Préstamo Personal",
+      "personalDesc": "De 1.000€ a 75.000€ para todos sus proyectos personales",
+      "personalRate": "Desde 2,9% TAE",
+      "auto": "Crédito Auto",
+      "autoDesc": "Financie el coche de sus sueños con opciones de pago flexibles",
+      "autoRate": "Desde 3,2% TAE",
+      "home": "Crédito Reformas",
+      "homeDesc": "Transforme su hogar con nuestros préstamos de renovación",
+      "homeRate": "Desde 3,5% TAE",
+      "consolidation": "Reunificación de Deudas",
+      "consolidationDesc": "Simplifique sus finanzas consolidando múltiples deudas",
+      "consolidationRate": "Desde 4,2% TAE"
+    },
+    "faqs": {
+      "q1": "¿En cuánto tiempo puedo obtener la aprobación de mi préstamo?",
+      "a1": "Nuestro sistema de decisión instantánea proporciona una aprobación preliminar en menos de 5 minutos. La aprobación final generalmente toma de 24 a 48 horas después de la verificación de documentos.",
+      "q2": "¿Cuál es la puntuación de crédito mínima requerida?",
+      "a2": "Aceptamos solicitudes de clientes con varios perfiles de crédito. Aunque una puntuación superior a 650 mejora sus posibilidades, evaluamos cada solicitud individualmente.",
+      "q3": "¿Puedo pagar mi préstamo anticipadamente sin penalizaciones?",
+      "a3": "Sí, todos nuestros préstamos permiten el pago anticipado sin penalizaciones. Ahorrará en intereses al pagar su préstamo antes.",
+      "q4": "¿Qué documentos necesito proporcionar para solicitar?",
+      "a4": "Necesitará una identificación válida, comprobante de ingresos (últimos 3 recibos de sueldo), extractos bancarios y comprobante de domicilio. Se pueden solicitar documentos adicionales según su situación.",
+      "q5": "¿Cómo se calcula mi pago mensual?",
+      "a5": "Su pago mensual depende del monto del préstamo, la duración y su TAE. Use nuestro simulador arriba para un cálculo instantáneo adaptado a sus necesidades.",
+      "q6": "¿La verificación de tasas afecta mi puntuación de crédito?",
+      "a6": "No, verificar su elegibilidad no afecta su puntuación de crédito. Solo la solicitud formal de crédito se registrará en su historial crediticio."
     }
+  },
+  "about": {
+    "title": "Acerca de Privat Equity",
+    "subtitle": "Su socio de confianza para soluciones de crédito transparentes y personalizadas",
+    "intro1": "Privat Equity es una plataforma de préstamos en línea innovadora que revoluciona el acceso al crédito en Francia. Fundada con la misión de hacer que la financiación personal sea más transparente, accesible y justa, conectamos a miles de prestatarios con las mejores ofertas de crédito del mercado.",
+    "intro2": "Nuestra plataforma utiliza tecnología de vanguardia para analizar su perfil financiero y ofrecerle ofertas personalizadas en minutos. Trabajamos con una red de socios financieros cuidadosamente seleccionados para garantizar que siempre obtenga las mejores condiciones posibles.",
+    "mission": {
+      "title": "Nuestra Misión",
+      "description": "Democratizar el acceso al crédito ofreciendo soluciones de financiamiento transparentes, rápidas y adaptadas a las necesidades de todos. Creemos que todos merecen acceso a opciones de financiamiento justas, independientemente de su perfil."
+    },
+    "values": {
+      "title": "Nuestros Valores",
+      "description": "La transparencia, la integridad y el respeto al cliente están en el corazón de todo lo que hacemos. Nos comprometemos a proporcionar información clara, sin tarifas ocultas, y a tratar a cada cliente con el respeto que merece."
+    },
+    "security": {
+      "title": "Seguridad y Cumplimiento",
+      "description": "Utilizamos las tecnologías de seguridad más avanzadas para proteger sus datos personales. Nuestra plataforma cumple completamente con el RGPD y estamos regulados por las autoridades financieras francesas."
+    },
+    "expertise": {
+      "title": "Nuestra Experiencia",
+      "description": "Con más de 15 años de experiencia combinada en el sector financiero, nuestro equipo comprende los desafíos que enfrentan los prestatarios. Usamos esta experiencia para crear una experiencia de préstamo que es simple, rápida y adaptada a sus necesidades."
+    }
+  },
+  "contact": {
+    "title": "Contáctenos",
+    "subtitle": "Nuestro equipo está a su disposición para responder a todas sus preguntas",
+    "phone": "Teléfono",
+    "phoneNumber": "01 23 45 67 89",
+    "phoneHours": "Lun-Sáb: 9h-18h",
+    "email": "Correo Electrónico",
+    "emailAddress": "contact@privatequity.fr",
+    "emailResponse": "Respuesta en 24h",
+    "address": "Dirección",
+    "addressLine1": "123 Avenue des Champs-Élysées",
+    "addressLine2": "75008 París, Francia",
+    "form": {
+      "title": "Envíenos un mensaje",
+      "name": "Nombre completo",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "send": "Enviar mensaje",
+      "success": "¡Mensaje enviado!",
+      "successDesc": "Responderemos lo antes posible."
+    },
+    "sidebar": {
+      "hours": "Horario de Atención",
+      "weekdays": "Lunes - Viernes: 9:00 - 18:00",
+      "saturday": "Sábado: 9:00 - 13:00",
+      "sunday": "Domingo: Cerrado",
+      "faqLink": "Consulte nuestras preguntas frecuentes",
+      "faqDesc": "Encuentre respuestas rápidas a sus preguntas",
+      "callNow": "Llamar Ahora"
+    }
+  },
+  "notFound": {
+    "title": "404",
+    "message": "¡Ups! Página no encontrada",
+    "backHome": "Volver al Inicio"
   },
   "footer": {
     "company": "Empresa",

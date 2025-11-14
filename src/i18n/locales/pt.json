@@ -84,7 +84,105 @@
       "title": "Pronto para Concretizar o Seu Projeto?",
       "description": "Faça uma simulação gratuita e sem compromisso",
       "button": "Começar"
+    },
+    "indexFeatures": {
+      "fastApproval": "Aprovação Rápida",
+      "fastApprovalDesc": "Obtenha a sua aprovação preliminar em menos de 5 minutos com o nosso sistema de decisão instantânea.",
+      "secure": "100% Seguro",
+      "secureDesc": "Criptografia bancária e proteção de dados. As suas informações estão sempre seguras.",
+      "bestRates": "Melhores Taxas",
+      "bestRatesDesc": "Taxas de juros competitivas a partir de 2,9% TAEG. Compare e escolha a melhor opção.",
+      "expertSupport": "Suporte Especializado",
+      "expertSupportDesc": "Consultores dedicados disponíveis para orientá-lo em cada etapa do processo."
+    },
+    "loanProducts": {
+      "personal": "Empréstimo Pessoal",
+      "personalDesc": "De 1.000€ a 75.000€ para todos os seus projetos pessoais",
+      "personalRate": "A partir de 2,9% TAEG",
+      "auto": "Crédito Auto",
+      "autoDesc": "Financie o carro dos seus sonhos com opções de pagamento flexíveis",
+      "autoRate": "A partir de 3,2% TAEG",
+      "home": "Crédito Obras",
+      "homeDesc": "Transforme a sua casa com os nossos empréstimos para renovação",
+      "homeRate": "A partir de 3,5% TAEG",
+      "consolidation": "Consolidação de Crédito",
+      "consolidationDesc": "Simplifique as suas finanças consolidando várias dívidas",
+      "consolidationRate": "A partir de 4,2% TAEG"
+    },
+    "faqs": {
+      "q1": "Quanto tempo demora para obter aprovação do meu empréstimo?",
+      "a1": "O nosso sistema de decisão instantânea fornece uma aprovação preliminar em menos de 5 minutos. A aprovação final geralmente leva de 24 a 48 horas após verificação dos documentos.",
+      "q2": "Qual é a pontuação de crédito mínima necessária?",
+      "a2": "Aceitamos pedidos de clientes com vários perfis de crédito. Embora uma pontuação acima de 650 melhore as suas chances, avaliamos cada pedido individualmente.",
+      "q3": "Posso pagar o meu empréstimo antecipadamente sem penalidades?",
+      "a3": "Sim, todos os nossos empréstimos permitem pagamento antecipado sem penalidades. Poupará em juros ao pagar o seu empréstimo mais cedo.",
+      "q4": "Que documentos preciso fornecer para solicitar?",
+      "a4": "Precisará de um documento de identificação válido, comprovativo de rendimentos (últimos 3 recibos de vencimento), extratos bancários e comprovativo de morada. Documentos adicionais podem ser solicitados conforme a sua situação.",
+      "q5": "Como é calculada a minha mensalidade?",
+      "a5": "A sua mensalidade depende do valor do empréstimo, duração e da sua TAEG. Use o nosso simulador acima para um cálculo instantâneo adaptado às suas necessidades.",
+      "q6": "A verificação de taxas afeta a minha pontuação de crédito?",
+      "a6": "Não, verificar a sua elegibilidade não afeta a sua pontuação de crédito. Apenas o pedido formal de crédito será registado no seu histórico de crédito."
     }
+  },
+  "about": {
+    "title": "Sobre a Privat Equity",
+    "subtitle": "O seu parceiro de confiança para soluções de crédito transparentes e personalizadas",
+    "intro1": "A Privat Equity é uma plataforma de empréstimos online inovadora que revoluciona o acesso ao crédito em França. Fundada com a missão de tornar o financiamento pessoal mais transparente, acessível e justo, conectamos milhares de mutuários com as melhores ofertas de crédito do mercado.",
+    "intro2": "A nossa plataforma utiliza tecnologia de ponta para analisar o seu perfil financeiro e oferecer-lhe ofertas personalizadas em minutos. Trabalhamos com uma rede de parceiros financeiros cuidadosamente selecionados para garantir que obtém sempre as melhores condições possíveis.",
+    "mission": {
+      "title": "A Nossa Missão",
+      "description": "Democratizar o acesso ao crédito oferecendo soluções de financiamento transparentes, rápidas e adaptadas às necessidades de todos. Acreditamos que todos merecem acesso a opções de financiamento justas, independentemente do seu perfil."
+    },
+    "values": {
+      "title": "Os Nossos Valores",
+      "description": "Transparência, integridade e respeito pelo cliente estão no centro de tudo o que fazemos. Comprometemo-nos a fornecer informações claras, sem taxas ocultas, e a tratar cada cliente com o respeito que merece."
+    },
+    "security": {
+      "title": "Segurança e Conformidade",
+      "description": "Utilizamos as tecnologias de segurança mais avançadas para proteger os seus dados pessoais. A nossa plataforma está totalmente em conformidade com o RGPD e somos regulados pelas autoridades financeiras francesas."
+    },
+    "expertise": {
+      "title": "A Nossa Experiência",
+      "description": "Com mais de 15 anos de experiência combinada no setor financeiro, a nossa equipa compreende os desafios que os mutuários enfrentam. Usamos esta experiência para criar uma experiência de empréstimo que é simples, rápida e adaptada às suas necessidades."
+    }
+  },
+  "contact": {
+    "title": "Contacte-nos",
+    "subtitle": "A nossa equipa está à sua disposição para responder a todas as suas questões",
+    "phone": "Telefone",
+    "phoneNumber": "01 23 45 67 89",
+    "phoneHours": "Seg-Sáb: 9h-18h",
+    "email": "E-mail",
+    "emailAddress": "contact@privatequity.fr",
+    "emailResponse": "Resposta em 24h",
+    "address": "Morada",
+    "addressLine1": "123 Avenue des Champs-Élysées",
+    "addressLine2": "75008 Paris, França",
+    "form": {
+      "title": "Envie-nos uma mensagem",
+      "name": "Nome completo",
+      "email": "E-mail",
+      "phone": "Telefone",
+      "subject": "Assunto",
+      "message": "Mensagem",
+      "send": "Enviar mensagem",
+      "success": "Mensagem enviada!",
+      "successDesc": "Responderemos o mais breve possível."
+    },
+    "sidebar": {
+      "hours": "Horário de Atendimento",
+      "weekdays": "Segunda - Sexta: 9h00 - 18h00",
+      "saturday": "Sábado: 9h00 - 13h00",
+      "sunday": "Domingo: Fechado",
+      "faqLink": "Consulte as nossas FAQ",
+      "faqDesc": "Encontre respostas rápidas às suas questões",
+      "callNow": "Ligar Agora"
+    }
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Ops! Página não encontrada",
+    "backHome": "Voltar ao Início"
   },
   "footer": {
     "company": "Empresa",

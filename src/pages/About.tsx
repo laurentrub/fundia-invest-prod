@@ -2,17 +2,20 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Card } from "@/components/ui/card";
 import { Users, Target, Shield, Award } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
+  
   return (
     <div className="min-h-screen bg-background">
       <Header />
 
       <section className="py-16 bg-gradient-hero text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">À Propos de Privat Equity</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">{t('about.title')}</h1>
           <p className="text-xl max-w-2xl mx-auto text-primary-foreground/90">
-            Votre partenaire de confiance pour des solutions de crédit transparentes et personnalisées
+            {t('about.subtitle')}
           </p>
         </div>
       </section>

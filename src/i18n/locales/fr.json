@@ -84,7 +84,105 @@
       "title": "Prêt à concrétiser votre projet ?",
       "description": "Faites une simulation gratuite et sans engagement",
       "button": "Commencer"
+    },
+    "indexFeatures": {
+      "fastApproval": "Approbation rapide",
+      "fastApprovalDesc": "Obtenez votre accord préliminaire en moins de 5 minutes avec notre système de décision instantanée.",
+      "secure": "100% sécurisé",
+      "secureDesc": "Chiffrement bancaire et protection des données. Vos informations sont toujours en sécurité.",
+      "bestRates": "Meilleurs taux",
+      "bestRatesDesc": "Taux d'intérêt compétitifs à partir de 2,9% TAEG. Comparez et choisissez la meilleure option.",
+      "expertSupport": "Support expert",
+      "expertSupportDesc": "Conseillers dédiés disponibles pour vous guider à chaque étape du processus."
+    },
+    "loanProducts": {
+      "personal": "Prêt personnel",
+      "personalDesc": "De 1 000€ à 75 000€ pour tous vos projets personnels",
+      "personalRate": "À partir de 2,9% TAEG",
+      "auto": "Crédit auto",
+      "autoDesc": "Financez la voiture de vos rêves avec des options de paiement flexibles",
+      "autoRate": "À partir de 3,2% TAEG",
+      "home": "Crédit travaux",
+      "homeDesc": "Transformez votre maison avec nos prêts rénovation",
+      "homeRate": "À partir de 3,5% TAEG",
+      "consolidation": "Rachat de crédit",
+      "consolidationDesc": "Simplifiez vos finances en regroupant plusieurs dettes",
+      "consolidationRate": "À partir de 4,2% TAEG"
+    },
+    "faqs": {
+      "q1": "En combien de temps puis-je obtenir l'approbation de mon prêt ?",
+      "a1": "Notre système de décision instantanée fournit une approbation préliminaire en moins de 5 minutes. L'approbation finale prend généralement 24 à 48 heures après vérification des documents.",
+      "q2": "Quel est le score de crédit minimum requis ?",
+      "a2": "Nous acceptons les demandes de clients avec différents profils de crédit. Bien qu'un score supérieur à 650 améliore vos chances, nous évaluons chaque demande individuellement.",
+      "q3": "Puis-je rembourser mon prêt par anticipation sans pénalités ?",
+      "a3": "Oui, tous nos prêts permettent le remboursement anticipé sans pénalités. Vous économiserez sur les intérêts en remboursant votre prêt plus tôt.",
+      "q4": "Quels documents dois-je fournir pour postuler ?",
+      "a4": "Vous aurez besoin d'une pièce d'identité valide, d'une preuve de revenus (3 derniers bulletins de salaire), de relevés bancaires et d'un justificatif de domicile. Des documents supplémentaires peuvent être demandés selon votre situation.",
+      "q5": "Comment est calculée ma mensualité ?",
+      "a5": "Votre mensualité dépend du montant du prêt, de la durée et de votre TAEG. Utilisez notre simulateur ci-dessus pour obtenir un calcul instantané adapté à vos besoins.",
+      "q6": "La vérification des taux affecte-t-elle mon score de crédit ?",
+      "a6": "Non, la vérification de votre éligibilité n'affecte pas votre score de crédit. Seule la demande formelle de crédit sera enregistrée dans votre historique."
     }
+  },
+  "about": {
+    "title": "À Propos de Privat Equity",
+    "subtitle": "Votre partenaire de confiance pour des solutions de crédit transparentes et personnalisées",
+    "intro1": "Privat Equity est une plateforme de prêt en ligne innovante qui révolutionne l'accès au crédit en France. Fondée avec la mission de rendre le financement personnel plus transparent, accessible et équitable, nous connectons des milliers d'emprunteurs avec les meilleures offres de crédit du marché.",
+    "intro2": "Notre plateforme utilise une technologie de pointe pour analyser votre profil financier et vous proposer des offres personnalisées en quelques minutes. Nous travaillons avec un réseau de partenaires financiers soigneusement sélectionnés pour garantir que vous obtenez toujours les meilleures conditions possibles.",
+    "mission": {
+      "title": "Notre Mission",
+      "description": "Démocratiser l'accès au crédit en offrant des solutions de financement transparentes, rapides et adaptées aux besoins de chacun. Nous croyons que tout le monde mérite d'avoir accès à des options de financement équitables, quel que soit son profil."
+    },
+    "values": {
+      "title": "Nos Valeurs",
+      "description": "Transparence, intégrité et respect du client sont au cœur de tout ce que nous faisons. Nous nous engageons à fournir des informations claires, sans frais cachés, et à traiter chaque client avec le respect qu'il mérite."
+    },
+    "security": {
+      "title": "Sécurité & Conformité",
+      "description": "Nous utilisons les technologies de sécurité les plus avancées pour protéger vos données personnelles. Notre plateforme est entièrement conforme au RGPD et nous sommes régulés par les autorités financières françaises."
+    },
+    "expertise": {
+      "title": "Notre Expertise",
+      "description": "Avec plus de 15 ans d'expérience combinée dans le secteur financier, notre équipe comprend les défis auxquels font face les emprunteurs. Nous utilisons cette expertise pour créer une expérience de prêt qui est simple, rapide et adaptée à vos besoins."
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Notre équipe est à votre disposition pour répondre à toutes vos questions",
+    "phone": "Téléphone",
+    "phoneNumber": "01 23 45 67 89",
+    "phoneHours": "Lun-Sam: 9h-18h",
+    "email": "Email",
+    "emailAddress": "contact@privatequity.fr",
+    "emailResponse": "Réponse sous 24h",
+    "address": "Adresse",
+    "addressLine1": "123 Avenue des Champs-Élysées",
+    "addressLine2": "75008 Paris, France",
+    "form": {
+      "title": "Envoyez-nous un message",
+      "name": "Nom complet",
+      "email": "Email",
+      "phone": "Téléphone",
+      "subject": "Sujet",
+      "message": "Message",
+      "send": "Envoyer le message",
+      "success": "Message envoyé !",
+      "successDesc": "Nous vous répondrons dans les plus brefs délais."
+    },
+    "sidebar": {
+      "hours": "Horaires d'ouverture",
+      "weekdays": "Lundi - Vendredi: 9h00 - 18h00",
+      "saturday": "Samedi: 9h00 - 13h00",
+      "sunday": "Dimanche: Fermé",
+      "faqLink": "Consultez notre FAQ",
+      "faqDesc": "Trouvez rapidement des réponses à vos questions",
+      "callNow": "Appelez maintenant"
+    }
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Oups ! Page introuvable",
+    "backHome": "Retour à l'accueil"
   },
   "footer": {
     "company": "Entreprise",

@@ -84,7 +84,105 @@
       "title": "Bereit, Ihr Projekt zu Verwirklichen?",
       "description": "Erhalten Sie eine kostenlose Simulation ohne Verpflichtung",
       "button": "Loslegen"
+    },
+    "indexFeatures": {
+      "fastApproval": "Schnelle Genehmigung",
+      "fastApprovalDesc": "Erhalten Sie Ihre vorläufige Genehmigung in weniger als 5 Minuten mit unserem sofortigen Entscheidungssystem.",
+      "secure": "100% Sicher",
+      "secureDesc": "Bankverschlüsselung und Datenschutz. Ihre Informationen sind immer sicher.",
+      "bestRates": "Beste Zinssätze",
+      "bestRatesDesc": "Wettbewerbsfähige Zinssätze ab 2,9% effektiver Jahreszins. Vergleichen und wählen Sie die beste Option.",
+      "expertSupport": "Expertenunterstützung",
+      "expertSupportDesc": "Engagierte Berater stehen Ihnen bei jedem Schritt des Prozesses zur Verfügung."
+    },
+    "loanProducts": {
+      "personal": "Privatkredit",
+      "personalDesc": "Von 1.000€ bis 75.000€ für alle Ihre persönlichen Projekte",
+      "personalRate": "Ab 2,9% effektiver Jahreszins",
+      "auto": "Autokredit",
+      "autoDesc": "Finanzieren Sie Ihr Traumauto mit flexiblen Zahlungsoptionen",
+      "autoRate": "Ab 3,2% effektiver Jahreszins",
+      "home": "Renovierungskredit",
+      "homeDesc": "Verwandeln Sie Ihr Zuhause mit unseren Renovierungsdarlehen",
+      "homeRate": "Ab 3,5% effektiver Jahreszins",
+      "consolidation": "Kreditumschuldung",
+      "consolidationDesc": "Vereinfachen Sie Ihre Finanzen durch Zusammenführung mehrerer Schulden",
+      "consolidationRate": "Ab 4,2% effektiver Jahreszins"
+    },
+    "faqs": {
+      "q1": "Wie schnell kann ich meinen Kredit genehmigt bekommen?",
+      "a1": "Unser sofortiges Entscheidungssystem bietet eine vorläufige Genehmigung in weniger als 5 Minuten. Die endgültige Genehmigung dauert in der Regel 24 bis 48 Stunden nach Dokumentenprüfung.",
+      "q2": "Was ist die erforderliche Mindest-Kreditwürdigkeit?",
+      "a2": "Wir akzeptieren Anträge von Kunden mit verschiedenen Kreditprofilen. Während ein Wert über 650 Ihre Chancen verbessert, bewerten wir jeden Antrag individuell.",
+      "q3": "Kann ich meinen Kredit vorzeitig ohne Strafen zurückzahlen?",
+      "a3": "Ja, alle unsere Kredite erlauben vorzeitige Rückzahlung ohne Strafen. Sie sparen Zinsen, indem Sie Ihren Kredit früher zurückzahlen.",
+      "q4": "Welche Unterlagen muss ich vorlegen?",
+      "a4": "Sie benötigen einen gültigen Ausweis, Einkommensnachweis (letzte 3 Gehaltsabrechnungen), Kontoauszüge und einen Wohnsitznachweis. Je nach Situation können zusätzliche Dokumente angefordert werden.",
+      "q5": "Wie wird meine monatliche Rate berechnet?",
+      "a5": "Ihre monatliche Rate hängt vom Kreditbetrag, der Laufzeit und Ihrem effektiven Jahreszins ab. Nutzen Sie unseren Simulator oben für eine sofortige Berechnung nach Ihren Bedürfnissen.",
+      "q6": "Beeinflusst die Überprüfung der Zinssätze meine Kreditwürdigkeit?",
+      "a6": "Nein, die Überprüfung Ihrer Berechtigung beeinflusst Ihre Kreditwürdigkeit nicht. Nur der formelle Kreditantrag wird in Ihrer Kredithistorie erfasst."
     }
+  },
+  "about": {
+    "title": "Über Privat Equity",
+    "subtitle": "Ihr vertrauenswürdiger Partner für transparente und personalisierte Kreditlösungen",
+    "intro1": "Privat Equity ist eine innovative Online-Kreditplattform, die den Zugang zu Krediten in Frankreich revolutioniert. Mit der Mission gegründet, die persönliche Finanzierung transparenter, zugänglicher und fairer zu machen, verbinden wir Tausende von Kreditnehmern mit den besten Kreditangeboten auf dem Markt.",
+    "intro2": "Unsere Plattform nutzt modernste Technologie, um Ihr Finanzprofil zu analysieren und Ihnen in wenigen Minuten personalisierte Angebote zu unterbreiten. Wir arbeiten mit einem sorgfältig ausgewählten Netzwerk von Finanzpartnern zusammen, um sicherzustellen, dass Sie immer die bestmöglichen Konditionen erhalten.",
+    "mission": {
+      "title": "Unsere Mission",
+      "description": "Demokratisierung des Zugangs zu Krediten durch transparente, schnelle und auf die Bedürfnisse jedes Einzelnen zugeschnittene Finanzierungslösungen. Wir glauben, dass jeder Zugang zu fairen Finanzierungsoptionen verdient, unabhängig von seinem Profil."
+    },
+    "values": {
+      "title": "Unsere Werte",
+      "description": "Transparenz, Integrität und Kundenrespekt stehen im Mittelpunkt von allem, was wir tun. Wir verpflichten uns, klare Informationen ohne versteckte Gebühren bereitzustellen und jeden Kunden mit dem gebührenden Respekt zu behandeln."
+    },
+    "security": {
+      "title": "Sicherheit & Compliance",
+      "description": "Wir verwenden die fortschrittlichsten Sicherheitstechnologien zum Schutz Ihrer persönlichen Daten. Unsere Plattform ist vollständig DSGVO-konform und wir werden von den französischen Finanzbehörden reguliert."
+    },
+    "expertise": {
+      "title": "Unsere Expertise",
+      "description": "Mit über 15 Jahren kombinierter Erfahrung im Finanzsektor versteht unser Team die Herausforderungen, mit denen Kreditnehmer konfrontiert sind. Wir nutzen diese Expertise, um ein Krediterlebnis zu schaffen, das einfach, schnell und auf Ihre Bedürfnisse zugeschnitten ist."
+    }
+  },
+  "contact": {
+    "title": "Kontaktieren Sie Uns",
+    "subtitle": "Unser Team steht Ihnen zur Verfügung, um alle Ihre Fragen zu beantworten",
+    "phone": "Telefon",
+    "phoneNumber": "01 23 45 67 89",
+    "phoneHours": "Mo-Sa: 9-18 Uhr",
+    "email": "E-Mail",
+    "emailAddress": "contact@privatequity.fr",
+    "emailResponse": "Antwort innerhalb von 24 Stunden",
+    "address": "Adresse",
+    "addressLine1": "123 Avenue des Champs-Élysées",
+    "addressLine2": "75008 Paris, Frankreich",
+    "form": {
+      "title": "Senden Sie uns eine Nachricht",
+      "name": "Vollständiger Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "send": "Nachricht senden",
+      "success": "Nachricht gesendet!",
+      "successDesc": "Wir werden so schnell wie möglich antworten."
+    },
+    "sidebar": {
+      "hours": "Öffnungszeiten",
+      "weekdays": "Montag - Freitag: 9:00 - 18:00 Uhr",
+      "saturday": "Samstag: 9:00 - 13:00 Uhr",
+      "sunday": "Sonntag: Geschlossen",
+      "faqLink": "Unsere FAQ ansehen",
+      "faqDesc": "Finden Sie schnell Antworten auf Ihre Fragen",
+      "callNow": "Jetzt Anrufen"
+    }
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Hoppla! Seite nicht gefunden",
+    "backHome": "Zurück zur Startseite"
   },
   "footer": {
     "company": "Unternehmen",

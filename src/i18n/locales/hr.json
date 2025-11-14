@@ -2,14 +2,14 @@
   "nav": {
     "particuliers": "Pojedinci",
     "professionnels": "Profesionalci",
-    "personalLoan": "Osobni Kredit",
+    "personalLoan": "Osobni Zajam",
     "autoLoan": "Auto Kredit",
     "homeImprovement": "Kredit za Obnovu",
-    "consolidation": "Konsolidacija Duga",
-    "businessLoan": "Poslovni Kredit",
+    "consolidation": "Konsolidacija Dugova",
+    "businessLoan": "Poslovni Zajam",
     "cashFlow": "Kredit za Likvidnost",
     "equipment": "Kredit za Opremu",
-    "financeProject": "Financirajte Moj Projekt",
+    "financeProject": "Financiraj Moj Projekt",
     "creditRequest": "Zahtjev za Kredit",
     "myProfile": "Moj Profil",
     "login": "Prijava",
@@ -28,14 +28,14 @@
     "hero": {
       "title": "Prilagođena Kreditna Rješenja",
       "subtitle": "Ostvarite svoje projekte s našim financijskim rješenjima prilagođenim vašim potrebama. Besplatna simulacija i brz odgovor.",
-      "simulateButton": "Simulirajte Moj Kredit",
-      "applyButton": "Prijavite se Sada"
+      "simulateButton": "Simuliraj Moj Kredit",
+      "applyButton": "Prijavi Sada"
     },
     "features": {
-      "title": "Zašto Nas Odabrati?",
+      "title": "Zašto Odabrati Nas?",
       "fast": {
         "title": "Brz Odgovor",
-        "description": "Preliminarni odgovor u roku od maksimalno 48 sati"
+        "description": "Preliminarni odgovor u maksimalno 48 sati"
       },
       "personalized": {
         "title": "Prilagođeno Rješenje",
@@ -49,7 +49,7 @@
     "products": {
       "title": "Naša Kreditna Rješenja",
       "personal": {
-        "title": "Osobni Kredit",
+        "title": "Osobni Zajam",
         "description": "Za vaše osobne projekte"
       },
       "auto": {
@@ -61,14 +61,14 @@
         "description": "Obnovite svoj dom"
       },
       "consolidation": {
-        "title": "Konsolidacija Duga",
+        "title": "Konsolidacija Dugova",
         "description": "Pojednostavite svoje otplate"
       }
     },
     "howItWorks": {
       "title": "Kako Funkcionira?",
       "step1": {
-        "title": "1. Simulirajte",
+        "title": "1. Simuliraj",
         "description": "Koristite naš besplatni simulator"
       },
       "step2": {
@@ -77,14 +77,112 @@
       },
       "step3": {
         "title": "3. Primite Svoju Ponudu",
-        "description": "Odgovor u roku od maksimalno 48 sati"
+        "description": "Odgovor u maksimalno 48 sati"
       }
     },
     "cta": {
       "title": "Spremni Ostvariti Svoj Projekt?",
       "description": "Dobijte besplatnu simulaciju bez obveze",
-      "button": "Započnite"
+      "button": "Počni"
+    },
+    "indexFeatures": {
+      "fastApproval": "Brzo Odobrenje",
+      "fastApprovalDesc": "Dobijte preliminarno odobrenje za manje od 5 minuta s našim sustavom trenutne odluke.",
+      "secure": "100% Sigurno",
+      "secureDesc": "Bankovna enkripcija i zaštita podataka. Vaše informacije su uvijek sigurne.",
+      "bestRates": "Najbolje Stope",
+      "bestRatesDesc": "Konkurentne kamatne stope od 2,9% EKS. Usporedite i odaberite najbolju opciju.",
+      "expertSupport": "Stručna Podrška",
+      "expertSupportDesc": "Posvećeni savjetnici dostupni da vas vode kroz svaki korak procesa."
+    },
+    "loanProducts": {
+      "personal": "Osobni Zajam",
+      "personalDesc": "Od 1.000€ do 75.000€ za sve vaše osobne projekte",
+      "personalRate": "Od 2,9% EKS",
+      "auto": "Auto Kredit",
+      "autoDesc": "Financirajte svoj automobil iz snova s fleksibilnim opcijama plaćanja",
+      "autoRate": "Od 3,2% EKS",
+      "home": "Kredit za Obnovu",
+      "homeDesc": "Transformirajte svoj dom s našim kreditima za obnovu",
+      "homeRate": "Od 3,5% EKS",
+      "consolidation": "Konsolidacija Dugova",
+      "consolidationDesc": "Pojednostavite svoje financije konsolidacijom više dugova",
+      "consolidationRate": "Od 4,2% EKS"
+    },
+    "faqs": {
+      "q1": "Koliko brzo mogu dobiti odobrenje svog zajma?",
+      "a1": "Naš sustav trenutne odluke pruža preliminarno odobrenje za manje od 5 minuta. Konačno odobrenje obično traje 24 do 48 sati nakon provjere dokumenata.",
+      "q2": "Koja je minimalna potrebna kreditna ocjena?",
+      "a2": "Prihvaćamo zahtjeve klijenata s različitim kreditnim profilima. Iako ocjena iznad 650 poboljšava vaše šanse, svaki zahtjev ocjenjujemo pojedinačno.",
+      "q3": "Mogu li otplatiti svoj zajam ranije bez kazni?",
+      "a3": "Da, svi naši zajmovi dopuštaju prijevremenu otplatu bez kazni. Uštedit ćete na kamatama otplativši svoj zajam ranije.",
+      "q4": "Koje dokumente moram dostaviti za prijavu?",
+      "a4": "Trebat će vam valjana osobna iskaznica, dokaz o prihodima (zadnje 3 platne liste), bankovni izvodi i dokaz o adresi. Dodatni dokumenti mogu biti zatraženi ovisno o vašoj situaciji.",
+      "q5": "Kako se izračunava moja mjesečna rata?",
+      "a5": "Vaša mjesečna rata ovisi o iznosu zajma, trajanju i vašem EKS-u. Koristite naš simulator iznad za trenutni izračun prilagođen vašim potrebama.",
+      "q6": "Utječe li provjera stopa na moju kreditnu ocjenu?",
+      "a6": "Ne, provjera vaše podobnosti ne utječe na vašu kreditnu ocjenu. Samo formalni zahtjev za kredit bit će evidentiran u vašoj kreditnoj povijesti."
     }
+  },
+  "about": {
+    "title": "O Privat Equity",
+    "subtitle": "Vaš pouzdani partner za transparentna i personalizirana kreditna rješenja",
+    "intro1": "Privat Equity je inovativna online platforma za zajmove koja revolucionira pristup kreditu u Francuskoj. Osnovana s misijom činjenja osobnog financiranja transparentnijim, dostupnijim i pravednijim, povezujemo tisuće zajmoprimaca s najboljim kreditnim ponudama na tržištu.",
+    "intro2": "Naša platforma koristi najsuvremeniju tehnologiju za analizu vašeg financijskog profila i nudi vam personalizirane ponude za nekoliko minuta. Radimo s pažljivo odabranom mrežom financijskih partnera kako bismo osigurali da uvijek dobijete najbolje moguće uvjete.",
+    "mission": {
+      "title": "Naša Misija",
+      "description": "Demokratizirati pristup kreditu nudeći transparentna, brza i prilagođena financijska rješenja za potrebe svakoga. Vjerujemo da svi zaslužuju pristup pravednim opcijama financiranja, bez obzira na njihov profil."
+    },
+    "values": {
+      "title": "Naše Vrijednosti",
+      "description": "Transparentnost, integritet i poštovanje klijenta su u srcu svega što radimo. Obvezujemo se pružiti jasne informacije, bez skrivenih naknada, i tretirati svakog klijenta s poštovanjem koje zaslužuje."
+    },
+    "security": {
+      "title": "Sigurnost i Usklađenost",
+      "description": "Koristimo najnaprednije sigurnosne tehnologije za zaštitu vaših osobnih podataka. Naša platforma je u potpunosti usklađena s GDPR-om i regulirani smo od strane francuskih financijskih vlasti."
+    },
+    "expertise": {
+      "title": "Naša Ekspertiza",
+      "description": "S više od 15 godina kombiniranog iskustva u financijskom sektoru, naš tim razumije izazove s kojima se zajmoprimci susreću. Koristimo ovu ekspertizu za stvaranje iskustva zajma koje je jednostavno, brzo i prilagođeno vašim potrebama."
+    }
+  },
+  "contact": {
+    "title": "Kontaktirajte Nas",
+    "subtitle": "Naš tim je na raspolaganju za odgovor na sva vaša pitanja",
+    "phone": "Telefon",
+    "phoneNumber": "01 23 45 67 89",
+    "phoneHours": "Pon-Sub: 9-18h",
+    "email": "Email",
+    "emailAddress": "contact@privatequity.fr",
+    "emailResponse": "Odgovor u roku od 24h",
+    "address": "Adresa",
+    "addressLine1": "123 Avenue des Champs-Élysées",
+    "addressLine2": "75008 Pariz, Francuska",
+    "form": {
+      "title": "Pošaljite nam poruku",
+      "name": "Puno ime",
+      "email": "Email",
+      "phone": "Telefon",
+      "subject": "Predmet",
+      "message": "Poruka",
+      "send": "Pošalji poruku",
+      "success": "Poruka poslana!",
+      "successDesc": "Odgovorit ćemo što je prije moguće."
+    },
+    "sidebar": {
+      "hours": "Radno Vrijeme",
+      "weekdays": "Ponedjeljak - Petak: 9:00 - 18:00",
+      "saturday": "Subota: 9:00 - 13:00",
+      "sunday": "Nedjelja: Zatvoreno",
+      "faqLink": "Pogledajte naš FAQ",
+      "faqDesc": "Pronađite brze odgovore na svoja pitanja",
+      "callNow": "Nazovi Sada"
+    }
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Ups! Stranica nije pronađena",
+    "backHome": "Povratak na Početnu"
   },
   "footer": {
     "company": "Tvrtka",
@@ -95,10 +193,10 @@
     "terms": "Uvjeti i Odredbe",
     "products": "Proizvodi",
     "resources": "Resursi",
-    "faq": "Česta Pitanja",
+    "faq": "Često Postavljana Pitanja",
     "glossary": "Pojmovnik",
     "creditGuide": "Vodič za Kredit",
-    "newsletter": "Bilten",
+    "newsletter": "Newsletter",
     "copyright": "© 2024 Privat Equity. Sva prava pridržana."
   }
 }

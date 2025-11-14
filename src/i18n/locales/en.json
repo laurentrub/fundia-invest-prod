@@ -84,7 +84,105 @@
       "title": "Ready to Make Your Project a Reality?",
       "description": "Get a free simulation with no commitment",
       "button": "Get Started"
+    },
+    "indexFeatures": {
+      "fastApproval": "Fast Approval",
+      "fastApprovalDesc": "Get your preliminary approval in less than 5 minutes with our instant decision system.",
+      "secure": "100% Secure",
+      "secureDesc": "Bank-grade encryption and data protection. Your information is always safe.",
+      "bestRates": "Best Rates",
+      "bestRatesDesc": "Competitive interest rates starting from 2.9% APR. Compare and choose the best option.",
+      "expertSupport": "Expert Support",
+      "expertSupportDesc": "Dedicated advisors available to guide you through every step of the process."
+    },
+    "loanProducts": {
+      "personal": "Personal Loan",
+      "personalDesc": "From €1,000 to €75,000 for all your personal projects",
+      "personalRate": "From 2.9% APR",
+      "auto": "Auto Loan",
+      "autoDesc": "Finance your dream car with flexible payment options",
+      "autoRate": "From 3.2% APR",
+      "home": "Home Improvement",
+      "homeDesc": "Transform your home with our renovation loans",
+      "homeRate": "From 3.5% APR",
+      "consolidation": "Debt Consolidation",
+      "consolidationDesc": "Simplify your finances by consolidating multiple debts",
+      "consolidationRate": "From 4.2% APR"
+    },
+    "faqs": {
+      "q1": "How quickly can I get my loan approved?",
+      "a1": "Our instant decision system provides a preliminary approval in less than 5 minutes. Final approval typically takes 24 to 48 hours after document verification.",
+      "q2": "What is the minimum required credit score?",
+      "a2": "We accept applications from clients with various credit profiles. While a score above 650 improves your chances, we evaluate each application individually.",
+      "q3": "Can I pay off my loan early without penalties?",
+      "a3": "Yes, all our loans allow early repayment without penalties. You'll save on interest by paying off your loan sooner.",
+      "q4": "What documents do I need to provide to apply?",
+      "a4": "You'll need a valid ID, proof of income (last 3 pay stubs), bank statements, and proof of address. Additional documents may be requested based on your situation.",
+      "q5": "How is my monthly payment calculated?",
+      "a5": "Your monthly payment depends on the loan amount, duration, and your APR. Use our simulator above for an instant calculation tailored to your needs.",
+      "q6": "Does checking rates affect my credit score?",
+      "a6": "No, checking your eligibility does not affect your credit score. Only the formal credit application will be recorded in your credit history."
     }
+  },
+  "about": {
+    "title": "About Privat Equity",
+    "subtitle": "Your trusted partner for transparent and personalized credit solutions",
+    "intro1": "Privat Equity is an innovative online lending platform revolutionizing credit access in France. Founded with the mission of making personal financing more transparent, accessible, and fair, we connect thousands of borrowers with the best credit offers on the market.",
+    "intro2": "Our platform uses cutting-edge technology to analyze your financial profile and offer you personalized offers in minutes. We work with a carefully selected network of financial partners to ensure you always get the best possible conditions.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "Democratize access to credit by offering transparent, fast, and tailored financing solutions to everyone's needs. We believe everyone deserves access to fair financing options, regardless of their profile."
+    },
+    "values": {
+      "title": "Our Values",
+      "description": "Transparency, integrity, and customer respect are at the heart of everything we do. We are committed to providing clear information, with no hidden fees, and treating each customer with the respect they deserve."
+    },
+    "security": {
+      "title": "Security & Compliance",
+      "description": "We use the most advanced security technologies to protect your personal data. Our platform is fully GDPR compliant and we are regulated by French financial authorities."
+    },
+    "expertise": {
+      "title": "Our Expertise",
+      "description": "With over 15 years of combined experience in the financial sector, our team understands the challenges borrowers face. We use this expertise to create a lending experience that is simple, fast, and tailored to your needs."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Our team is at your disposal to answer all your questions",
+    "phone": "Phone",
+    "phoneNumber": "01 23 45 67 89",
+    "phoneHours": "Mon-Sat: 9am-6pm",
+    "email": "Email",
+    "emailAddress": "contact@privatequity.fr",
+    "emailResponse": "Response within 24h",
+    "address": "Address",
+    "addressLine1": "123 Avenue des Champs-Élysées",
+    "addressLine2": "75008 Paris, France",
+    "form": {
+      "title": "Send us a message",
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send message",
+      "success": "Message sent!",
+      "successDesc": "We will respond as soon as possible."
+    },
+    "sidebar": {
+      "hours": "Opening Hours",
+      "weekdays": "Monday - Friday: 9:00am - 6:00pm",
+      "saturday": "Saturday: 9:00am - 1:00pm",
+      "sunday": "Sunday: Closed",
+      "faqLink": "Check our FAQ",
+      "faqDesc": "Find quick answers to your questions",
+      "callNow": "Call Now"
+    }
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Oops! Page not found",
+    "backHome": "Return to Home"
   },
   "footer": {
     "company": "Company",
