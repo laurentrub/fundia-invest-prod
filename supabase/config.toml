@@ -1,7 +1,7 @@
 project_id = "biyqutgdhqmsdyllgjkp"
 
 [functions.send-status-notification]
-verify_jwt = false
+verify_jwt = true
 
 [functions.send-reset-password-email]
 verify_jwt = false

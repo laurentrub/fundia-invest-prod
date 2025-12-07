@@ -43,17 +43,65 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const supabase = createClient(
+    // Create client with service role for database operations
+    const supabaseAdmin = createClient(
       Deno.env.get("SUPABASE_URL") ?? "",
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
     );
+
+    // Extract and verify the JWT token from the request
+    const authHeader = req.headers.get("Authorization");
+    if (!authHeader || !authHeader.startsWith("Bearer ")) {
+      console.error("Missing or invalid authorization header");
+      return new Response(
+        JSON.stringify({ error: "Unauthorized: Missing authentication token" }),
+        { status: 401, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
+
+    const token = authHeader.replace("Bearer ", "");
+    
+    // Create a client with the user's token to verify their identity
+    const supabaseUser = createClient(
+      Deno.env.get("SUPABASE_URL") ?? "",
+      Deno.env.get("SUPABASE_ANON_KEY") ?? "",
+      { global: { headers: { Authorization: `Bearer ${token}` } } }
+    );
+
+    // Get the authenticated user
+    const { data: { user }, error: authError } = await supabaseUser.auth.getUser();
+    if (authError || !user) {
+      console.error("Failed to authenticate user:", authError);
+      return new Response(
+        JSON.stringify({ error: "Unauthorized: Invalid authentication token" }),
+        { status: 401, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
+
+    // Verify the user has admin role using the service role client
+    const { data: roleData, error: roleError } = await supabaseAdmin
+      .from("user_roles")
+      .select("role")
+      .eq("user_id", user.id)
+      .eq("role", "admin")
+      .maybeSingle();
+
+    if (roleError || !roleData) {
+      console.error("User is not an admin:", user.id);
+      return new Response(
+        JSON.stringify({ error: "Forbidden: Admin access required" }),
+        { status: 403, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
+
+    console.log("Admin user verified:", user.id);
 
     const { loanRequestId, newStatus }: NotificationRequest = await req.json();
 
     console.log("Sending notification for loan request:", loanRequestId, "with status:", newStatus);
 
     // Récupérer les détails de la demande
-    const { data: loanRequest, error: loanError } = await supabase
+    const { data: loanRequest, error: loanError } = await supabaseAdmin
       .from("loan_requests")
       .select("*")
       .eq("id", loanRequestId)
