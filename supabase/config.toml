@@ -8,3 +8,6 @@ verify_jwt = false
 
 [functions.send-document-request]
 verify_jwt = true
+
+[functions.send-contract]
+verify_jwt = true

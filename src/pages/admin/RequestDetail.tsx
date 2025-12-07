@@ -8,6 +8,7 @@ import { RequestNotes } from '@/components/admin/RequestNotes';
 import { QuickActions } from '@/components/admin/QuickActions';
 import { StatusChangeModal } from '@/components/admin/StatusChangeModal';
 import { DocumentRequestModal } from '@/components/admin/DocumentRequestModal';
+import { ContractPreviewModal } from '@/components/admin/ContractPreviewModal';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -86,6 +87,7 @@ export default function RequestDetail() {
   const [loading, setLoading] = useState(true);
   const [statusModalOpen, setStatusModalOpen] = useState(false);
   const [documentModalOpen, setDocumentModalOpen] = useState(false);
+  const [contractModalOpen, setContractModalOpen] = useState(false);
 
   useEffect(() => {
     if (id) {
@@ -286,6 +288,37 @@ export default function RequestDetail() {
     }
   };
 
+  const handleSendContract = async (pdfBlob: Blob) => {
+    if (!request) return;
+
+    try {
+      const arrayBuffer = await pdfBlob.arrayBuffer();
+      const uint8Array = new Uint8Array(arrayBuffer);
+      let binary = '';
+      for (let i = 0; i < uint8Array.length; i++) {
+        binary += String.fromCharCode(uint8Array[i]);
+      }
+      const pdfBase64 = btoa(binary);
+
+      const { error } = await supabase.functions.invoke('send-contract', {
+        body: {
+          requestId: request.id,
+          clientEmail: request.email,
+          clientName: `${request.first_name} ${request.last_name}`,
+          pdfBase64,
+        },
+      });
+
+      if (error) throw error;
+
+      toast.success(t('admin.messages.contractSent'));
+      fetchHistory();
+    } catch (error: any) {
+      console.error('Contract send error:', error);
+      toast.error(t('admin.messages.contractError'));
+    }
+  };
+
   const getLoanTypeLabel = (type: string) => {
     const types: Record<string, string> = {
       personal: t('dashboard.loanTypes.personal'),
@@ -455,9 +488,7 @@ export default function RequestDetail() {
               toast.info(t('admin.messages.emailFeature'));
             }}
             onRequestDocuments={() => setDocumentModalOpen(true)}
-            onGenerateContract={() => {
-              toast.info(t('admin.messages.generateContractFeature'));
-            }}
+            onGenerateContract={() => setContractModalOpen(true)}
           />
         </div>
       </div>
@@ -476,6 +507,14 @@ export default function RequestDetail() {
         onOpenChange={setDocumentModalOpen}
         onSubmit={handleDocumentRequest}
         clientName={`${request.first_name} ${request.last_name}`}
+      />
+
+      {/* Contract preview modal */}
+      <ContractPreviewModal
+        open={contractModalOpen}
+        onOpenChange={setContractModalOpen}
+        request={request}
+        onSendContract={handleSendContract}
       />
     </div>
   );

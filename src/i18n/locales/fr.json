@@ -1487,7 +1487,9 @@
       "requestDocumentsFeature": "Fonctionnalité demande de justificatif à venir",
       "generateContractFeature": "Fonctionnalité génération de contrat à venir",
       "documentRequestSent": "Demande de justificatifs envoyée avec succès",
-      "documentRequestError": "Erreur lors de l'envoi de la demande"
+      "documentRequestError": "Erreur lors de l'envoi de la demande",
+      "contractSent": "Contrat envoyé avec succès au client",
+      "contractError": "Erreur lors de l'envoi du contrat"
     },
     "documentRequest": {
       "title": "Demande de justificatifs",
@@ -1506,6 +1508,13 @@
         "businessRegistration": "Extrait Kbis / Immatriculation",
         "other": "Autre document"
       }
+    },
+    "contract": {
+      "previewTitle": "Aperçu du contrat",
+      "previewDescription": "Vérifiez le contrat avant de l'envoyer à {name} pour signature",
+      "download": "Télécharger",
+      "sendForSignature": "Envoyer pour signature",
+      "errorGenerating": "Erreur lors de la génération du contrat"
     }
   }
 }
