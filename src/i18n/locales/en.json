@@ -486,7 +486,64 @@
       },
       "typicalAmount": "Typical amount",
       "guideTitle": "Complete Business Loan Guide",
-      "faqTitle": "Business Loan FAQ"
+      "guide": {
+        "introTitle": "What is a Business Loan?",
+        "introP1": "A business loan is financing specifically designed to meet the needs of businesses, craftsmen, merchants, and professionals. Unlike personal loans, it is intended to finance projects related to your professional activity: equipment acquisition, commercial development, working capital, or expansion.",
+        "introP2": "At Privat Equity, we offer business loans from €5,000 to €75,000 with repayment terms of 12 to 84 months. Our competitive rates starting from 6.5% APR are adapted to the economic realities of SMEs and entrepreneurs.",
+        "typesTitle": "Types of Business Loans",
+        "types": {
+          "shortTerm": "Short-term credit: 3 to 12-month financing for immediate cash needs, ideal for managing cash flow gaps or financing seasonal stock.",
+          "mediumTerm": "Medium-term credit: 1 to 5-year financing for material investments such as purchasing equipment, vehicles, or machinery.",
+          "longTerm": "Long-term credit: 5 to 15-year financing for major expansion projects, premises acquisition, or professional real estate investments.",
+          "creditLine": "Credit line: Renewable cash facility to manage daily cash flow fluctuations."
+        },
+        "eligibilityTitle": "Eligibility Criteria",
+        "eligibilityIntro": "To obtain a business loan at Privat Equity, you generally must:",
+        "eligibility": {
+          "registered": "Have a registered business (sole trader, LLC, SAS, etc.)",
+          "activity": "Demonstrate economic activity of at least 6 to 12 months",
+          "revenues": "Present stable revenues or turnover",
+          "documents": "Provide required financial documents (balance sheets, income statements, etc.)",
+          "project": "Have a clearly defined professional project"
+        },
+        "documentsTitle": "Required Documents",
+        "documentsIntro": "Here are the documents generally required when applying for a business loan:",
+        "documents": {
+          "identity": "Director's ID document",
+          "kbis": "Company registration extract (less than 3 months old)",
+          "financials": "Balance sheets and income statements for the last 2 fiscal years",
+          "bankStatements": "Business bank statements for the last 6 months",
+          "taxReturns": "Personal and business tax notices",
+          "businessPlan": "Business plan for development projects"
+        },
+        "tipsTitle": "Tips to Optimize Your Application",
+        "tips": {
+          "tip1": "Prepare a complete and organized file to speed up processing",
+          "tip2": "Present realistic and justified financial projections",
+          "tip3": "Build a personal contribution of at least 10-20% of the project",
+          "tip4": "Maintain healthy cash flow in the months before application",
+          "tip5": "Anticipate your needs: apply before you're in difficulty"
+        }
+      },
+      "faqTitle": "Business Loan FAQ",
+      "faq": {
+        "q1": "What's the difference between a business loan and a personal loan?",
+        "a1": "A business loan is intended to finance your professional activity and requires accounting documents from your business. It generally offers higher amounts and conditions adapted to business economic cycles. A personal loan finances your personal needs and relies solely on your individual income.",
+        "q2": "Can I get a business loan as a sole trader/freelancer?",
+        "a2": "Yes, sole traders and freelancers can absolutely apply for a business loan. You'll need to provide your turnover declarations, bank statements, and demonstrate at least 6 to 12 months of activity. Amounts granted depend on your activity level.",
+        "q3": "How long does it take to get a response?",
+        "a3": "At Privat Equity, you receive a preliminary response within 24 to 48 hours. Fund release generally occurs within 5 to 10 business days after complete file validation and document signing.",
+        "q4": "Do I need collateral for my business loan?",
+        "a4": "For small amounts (up to €25,000), no collateral is generally required. For higher amounts, a personal guarantee from the director or a lien on business assets may be requested depending on the risk profile.",
+        "q5": "Can I repay my business loan early?",
+        "a5": "Yes, all our business loans allow early repayment. Depending on the amount and remaining term, early repayment penalties may apply (generally limited to 6 months of interest). These conditions are clearly indicated in your contract.",
+        "q6": "How are rates determined for businesses?",
+        "a6": "Rates depend on several criteria: business age, financial health (ratios, cash flow), loan amount and term, industry sector, and proposed guarantees. Businesses with a solid balance sheet and stable activity get the best rates.",
+        "q7": "Can I apply if my business is being created?",
+        "a7": "Yes, we support business creators. You'll need to present a solid business plan, credible financial projections, and ideally a personal contribution. Amounts and conditions will be adapted to your project's development stage.",
+        "q8": "What expenses can I finance with a business loan?",
+        "a8": "A business loan can finance almost all your business needs: equipment and machinery, utility vehicles, stock and raw materials, marketing campaigns, recruitment, IT development, renovation work, working capital, etc."
+      }
     },
     "consolidation": {
       "title": "Debt Consolidation",

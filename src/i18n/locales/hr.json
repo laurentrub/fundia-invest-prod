@@ -619,8 +619,65 @@
       "useCasesTitle": "Česte Primjene",
       "useCases": { "workingCapital": { "title": "Obrtni Kapital", "description": "Pokriti operativne troškove", "typical": "10.000€ - 50.000€" }, "equipment": { "title": "Oprema", "description": "Strojevi, vozila", "typical": "15.000€ - 75.000€" }, "expansion": { "title": "Ekspanzija", "description": "Nove lokacije", "typical": "20.000€ - 75.000€" }, "marketing": { "title": "Marketing", "description": "Reklamne kampanje", "typical": "5.000€ - 30.000€" }, "inventory": { "title": "Zalihe", "description": "Proizvodi, materijali", "typical": "10.000€ - 50.000€" }, "refinancing": { "title": "Refinanciranje", "description": "Konsolidacija dugova", "typical": "15.000€ - 75.000€" } },
       "typicalAmount": "Tipični iznos",
-      "guideTitle": "Potpuni Vodič",
-      "faqTitle": "FAQ Poslovni Kredit"
+      "guideTitle": "Potpuni Vodič za Poslovni Kredit",
+      "guide": {
+        "introTitle": "Što je poslovni kredit?",
+        "introP1": "Poslovni kredit je financiranje posebno osmišljeno za potrebe poduzeća, obrtnika, trgovaca i slobodnih profesija. Za razliku od osobnih zajmova, namijenjen je financiranju projekata povezanih s vašom profesionalnom djelatnošću: nabava opreme, komercijalni razvoj, obrtni kapital ili proširenje.",
+        "introP2": "U Privat Equity nudimo poslovne kredite od 5.000 € do 75.000 € s rokovima od 12 do 84 mjeseca. Naše konkurentne stope od 6,5% EKS prilagođene su ekonomskim realnostima malih i srednjih poduzeća te poduzetnika.",
+        "typesTitle": "Vrste poslovnih kredita",
+        "types": {
+          "shortTerm": "Kratkoročni kredit: 3 do 12 mjeseci financiranja za neposredne potrebe likvidnosti, idealno za upravljanje prazninama u novčanom toku ili financiranje sezonskih zaliha.",
+          "mediumTerm": "Srednjoročni kredit: 1 do 5 godina financiranja za materijalna ulaganja poput kupnje opreme, vozila ili strojeva.",
+          "longTerm": "Dugoročni kredit: 5 do 15 godina financiranja za veće projekte proširenja, kupnju poslovnih prostora ili profesionalna ulaganja u nekretnine.",
+          "creditLine": "Kreditna linija: Obnovljiva gotovinska olakšica za upravljanje dnevnim fluktuacijama novčanog toka."
+        },
+        "eligibilityTitle": "Kriteriji prihvatljivosti",
+        "eligibilityIntro": "Za dobivanje poslovnog kredita u Privat Equity, općenito morate:",
+        "eligibility": {
+          "registered": "Imati registrirano poduzeće (obrt, d.o.o., d.d., itd.)",
+          "activity": "Dokazati gospodarsku aktivnost od najmanje 6 do 12 mjeseci",
+          "revenues": "Predstaviti stabilne prihode ili promet",
+          "documents": "Dostaviti potrebne financijske dokumente (bilance, račun dobiti i gubitka, itd.)",
+          "project": "Imati jasno definiran poslovni projekt"
+        },
+        "documentsTitle": "Potrebni dokumenti",
+        "documentsIntro": "Ovo su dokumenti koji se obično traže pri podnošenju zahtjeva za poslovni kredit:",
+        "documents": {
+          "identity": "Osobna iskaznica direktora",
+          "kbis": "Izvadak iz sudskog registra (ne stariji od 3 mjeseca)",
+          "financials": "Bilance i računi dobiti i gubitka za posljednje 2 poslovne godine",
+          "bankStatements": "Poslovni bankovni izvodi za posljednjih 6 mjeseci",
+          "taxReturns": "Osobne i poslovne porezne prijave",
+          "businessPlan": "Poslovni plan za razvojne projekte"
+        },
+        "tipsTitle": "Savjeti za optimizaciju vašeg zahtjeva",
+        "tips": {
+          "tip1": "Pripremite potpunu i organiziranu dokumentaciju za ubrzanje obrade",
+          "tip2": "Predstavite realistične i opravdane financijske projekcije",
+          "tip3": "Osigurajte vlastiti doprinos od najmanje 10-20% projekta",
+          "tip4": "Održavajte zdrav novčani tok u mjesecima prije podnošenja zahtjeva",
+          "tip5": "Anticipirajte svoje potrebe: podnesite zahtjev prije nego što ste u poteškoćama"
+        }
+      },
+      "faqTitle": "FAQ Poslovni Kredit",
+      "faq": {
+        "q1": "Koja je razlika između poslovnog kredita i osobnog zajma?",
+        "a1": "Poslovni kredit namijenjen je financiranju vaše profesionalne djelatnosti i zahtijeva računovodstvene dokumente vašeg poduzeća. Općenito nudi više iznose i uvjete prilagođene poslovnim ekonomskim ciklusima. Osobni zajam financira vaše osobne potrebe i temelji se isključivo na vašim individualnim prihodima.",
+        "q2": "Mogu li dobiti poslovni kredit kao obrtnik/freelancer?",
+        "a2": "Da, obrtnici i freelanceri svakako mogu podnijeti zahtjev za poslovni kredit. Trebat ćete dostaviti svoje izjave o prometu, bankovne izvode i dokazati aktivnost od najmanje 6 do 12 mjeseci. Odobreni iznosi ovise o vašoj razini aktivnosti.",
+        "q3": "Koliko dugo treba da se dobije odgovor?",
+        "a3": "U Privat Equity primit ćete preliminarni odgovor unutar 24 do 48 sati. Isplata sredstava općenito se događa unutar 5 do 10 radnih dana nakon potpune validacije dokumentacije i potpisivanja dokumenata.",
+        "q4": "Trebam li jamstvo za svoj poslovni kredit?",
+        "a4": "Za male iznose (do 25.000 €) općenito nije potrebno jamstvo. Za veće iznose može se zatražiti osobno jamstvo direktora ili zalog na imovinu poduzeća, ovisno o profilu rizika.",
+        "q5": "Mogu li otplatiti svoj poslovni kredit ranije?",
+        "a5": "Da, svi naši poslovni krediti dopuštaju prijevremenu otplatu. Ovisno o iznosu i preostalom roku, mogu se primijeniti naknade za prijevremenu otplatu (obično ograničene na 6 mjeseci kamata). Ti uvjeti jasno su navedeni u vašem ugovoru.",
+        "q6": "Kako se određuju kamatne stope za poduzeća?",
+        "a6": "Stope ovise o nekoliko kriterija: starost poduzeća, financijsko zdravlje (omjeri, novčani tok), iznos i rok kredita, sektor djelatnosti i ponuđena jamstva. Poduzeća sa solidnom bilancom i stabilnom aktivnošću dobivaju najbolje stope.",
+        "q7": "Mogu li podnijeti zahtjev ako je moje poduzeće u osnivanju?",
+        "a7": "Da, podržavamo osnivače poduzeća. Trebat ćete predstaviti solidan poslovni plan, vjerodostojne financijske projekcije i idealno vlastiti doprinos. Iznosi i uvjeti bit će prilagođeni fazi razvoja vašeg projekta.",
+        "q8": "Koje troškove mogu financirati poslovnim kreditom?",
+        "a8": "Poslovni kredit može financirati gotovo sve vaše poslovne potrebe: opremu i strojeve, gospodarska vozila, zalihe i sirovine, marketinške kampanje, zapošljavanje, IT razvoj, renovacijske radove, obrtni kapital, itd."
+      }
     },
     "consolidation": {
       "title": "Konsolidacija Dugova",

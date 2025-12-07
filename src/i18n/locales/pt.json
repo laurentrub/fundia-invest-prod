@@ -694,8 +694,65 @@
       "useCasesTitle": "Usos Comuns",
       "useCases": { "workingCapital": { "title": "Fundo de Maneio", "description": "Cobrir despesas operacionais", "typical": "10.000€ - 50.000€" }, "equipment": { "title": "Equipamentos", "description": "Máquinas, veículos", "typical": "15.000€ - 75.000€" }, "expansion": { "title": "Expansão", "description": "Novas instalações", "typical": "20.000€ - 75.000€" }, "marketing": { "title": "Marketing", "description": "Campanhas publicitárias", "typical": "5.000€ - 30.000€" }, "inventory": { "title": "Stock", "description": "Produtos, materiais", "typical": "10.000€ - 50.000€" }, "refinancing": { "title": "Refinanciamento", "description": "Consolidar dívidas", "typical": "15.000€ - 75.000€" } },
       "typicalAmount": "Montante típico",
-      "guideTitle": "Guia Completo",
-      "faqTitle": "FAQ Crédito Empresarial"
+      "guideTitle": "Guia Completo do Crédito Empresarial",
+      "guide": {
+        "introTitle": "O que é um crédito empresarial?",
+        "introP1": "O crédito empresarial é um financiamento especialmente concebido para responder às necessidades das empresas, artesãos, comerciantes e profissionais liberais. Ao contrário dos empréstimos pessoais, destina-se a financiar projetos relacionados com a sua atividade profissional: aquisição de equipamentos, desenvolvimento comercial, fundo de maneio ou expansão.",
+        "introP2": "Na Privat Equity, oferecemos créditos empresariais de 5.000 € a 75.000 € com prazos de 12 a 84 meses. As nossas taxas competitivas a partir de 6,5% TAEG estão adaptadas às realidades económicas das PME e empreendedores.",
+        "typesTitle": "Tipos de créditos empresariais",
+        "types": {
+          "shortTerm": "Crédito de curto prazo: Financiamento de 3 a 12 meses para necessidades de tesouraria imediatas, ideal para gerir desfasamentos de tesouraria ou financiar stock sazonal.",
+          "mediumTerm": "Crédito de médio prazo: Financiamento de 1 a 5 anos para investimentos materiais como a compra de equipamento, veículos ou máquinas.",
+          "longTerm": "Crédito de longo prazo: Financiamento de 5 a 15 anos para projetos de expansão importantes, aquisição de instalações ou investimentos imobiliários profissionais.",
+          "creditLine": "Linha de crédito: Facilidade de tesouraria renovável para gerir as flutuações de tesouraria diárias."
+        },
+        "eligibilityTitle": "Critérios de elegibilidade",
+        "eligibilityIntro": "Para obter um crédito empresarial na Privat Equity, geralmente deve:",
+        "eligibility": {
+          "registered": "Ter uma empresa registada (empresário em nome individual, Lda., SA, etc.)",
+          "activity": "Justificar uma atividade económica de pelo menos 6 a 12 meses",
+          "revenues": "Apresentar rendimentos ou volume de negócios estável",
+          "documents": "Fornecer os documentos financeiros necessários (balanços, demonstração de resultados, etc.)",
+          "project": "Ter um projeto profissional claramente definido"
+        },
+        "documentsTitle": "Documentos necessários",
+        "documentsIntro": "Eis os documentos geralmente solicitados ao pedir um crédito empresarial:",
+        "documents": {
+          "identity": "Documento de identificação do gerente",
+          "kbis": "Certidão permanente (com menos de 3 meses)",
+          "financials": "Balanços e demonstrações de resultados dos últimos 2 exercícios",
+          "bankStatements": "Extratos bancários empresariais dos últimos 6 meses",
+          "taxReturns": "Declarações de IRS pessoal e empresarial",
+          "businessPlan": "Plano de negócios para projetos de desenvolvimento"
+        },
+        "tipsTitle": "Dicas para otimizar o seu pedido",
+        "tips": {
+          "tip1": "Prepare um dossiê completo e organizado para acelerar o tratamento",
+          "tip2": "Apresente previsões financeiras realistas e justificadas",
+          "tip3": "Constitua uma contribuição pessoal de pelo menos 10-20% do projeto",
+          "tip4": "Mantenha uma tesouraria saudável nos meses anteriores ao pedido",
+          "tip5": "Antecipe as suas necessidades: peça antes de estar em dificuldades"
+        }
+      },
+      "faqTitle": "FAQ Crédito Empresarial",
+      "faq": {
+        "q1": "Qual é a diferença entre um crédito empresarial e um empréstimo pessoal?",
+        "a1": "O crédito empresarial destina-se a financiar a sua atividade profissional e requer documentos contabilísticos da sua empresa. Geralmente oferece montantes mais elevados e condições adaptadas aos ciclos económicos das empresas. O empréstimo pessoal financia as suas necessidades pessoais e baseia-se unicamente nos seus rendimentos individuais.",
+        "q2": "Posso obter um crédito empresarial como empresário em nome individual?",
+        "a2": "Sim, os empresários em nome individual podem perfeitamente solicitar um crédito empresarial. Terá de fornecer as suas declarações de faturação, extratos bancários e justificar uma atividade de pelo menos 6 a 12 meses. Os montantes concedidos dependem do seu nível de atividade.",
+        "q3": "Quanto tempo demora a obter uma resposta?",
+        "a3": "Na Privat Equity, recebe uma resposta de princípio em 24 a 48 horas. A libertação dos fundos ocorre geralmente em 5 a 10 dias úteis após a validação completa do dossiê e assinatura dos documentos.",
+        "q4": "Preciso de garantias para o meu crédito empresarial?",
+        "a4": "Para montantes pequenos (até 25.000 €), geralmente não são necessárias garantias. Para montantes superiores, pode ser solicitada uma garantia pessoal do gerente ou uma garantia sobre os ativos da empresa, dependendo do perfil de risco.",
+        "q5": "Posso reembolsar o meu crédito empresarial antecipadamente?",
+        "a5": "Sim, todos os nossos créditos empresariais permitem o reembolso antecipado. Dependendo do montante e do prazo restante, podem aplicar-se indemnizações por reembolso antecipado (geralmente limitadas a 6 meses de juros). Estas condições estão claramente indicadas no seu contrato.",
+        "q6": "Como são determinadas as taxas para empresas?",
+        "a6": "As taxas dependem de vários critérios: antiguidade da empresa, saúde financeira (rácios, tesouraria), montante e prazo do crédito, setor de atividade e garantias propostas. As empresas com um balanço sólido e atividade estável obtêm as melhores taxas.",
+        "q7": "Posso candidatar-me se a minha empresa está em criação?",
+        "a7": "Sim, acompanhamos os criadores de empresas. Terá de apresentar um plano de negócios sólido, previsões financeiras credíveis e idealmente uma contribuição pessoal. Os montantes e condições serão adaptados à fase de desenvolvimento do seu projeto.",
+        "q8": "Que despesas posso financiar com um crédito empresarial?",
+        "a8": "O crédito empresarial pode financiar praticamente todas as suas necessidades empresariais: equipamentos e máquinas, veículos utilitários, stock e matérias-primas, campanhas de marketing, recrutamento, desenvolvimento informático, obras de renovação, fundo de maneio, etc."
+      }
     },
     "consolidation": {
       "title": "Consolidação de Créditos",

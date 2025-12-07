@@ -619,8 +619,65 @@
       "useCasesTitle": "Veelvoorkomende Toepassingen",
       "useCases": { "workingCapital": { "title": "Werkkapitaal", "description": "Operationele kosten dekken", "typical": "€10.000 - €50.000" }, "equipment": { "title": "Apparatuur", "description": "Machines, voertuigen", "typical": "€15.000 - €75.000" }, "expansion": { "title": "Uitbreiding", "description": "Nieuwe locaties", "typical": "€20.000 - €75.000" }, "marketing": { "title": "Marketing", "description": "Reclamecampagnes", "typical": "€5.000 - €30.000" }, "inventory": { "title": "Voorraad", "description": "Producten, materialen", "typical": "€10.000 - €50.000" }, "refinancing": { "title": "Herfinanciering", "description": "Schulden consolideren", "typical": "€15.000 - €75.000" } },
       "typicalAmount": "Typisch bedrag",
-      "guideTitle": "Complete Gids",
-      "faqTitle": "FAQ Zakelijke Lening"
+      "guideTitle": "Complete Gids Zakelijke Lening",
+      "guide": {
+        "introTitle": "Wat is een zakelijke lening?",
+        "introP1": "Een zakelijke lening is financiering die speciaal is ontworpen om te voldoen aan de behoeften van bedrijven, ambachtslieden, handelaren en vrije beroepen. In tegenstelling tot persoonlijke leningen is deze bedoeld om projecten te financieren die verband houden met uw professionele activiteit: aanschaf van apparatuur, commerciële ontwikkeling, werkkapitaal of uitbreiding.",
+        "introP2": "Bij Privat Equity bieden wij zakelijke leningen van € 5.000 tot € 75.000 met looptijden van 12 tot 84 maanden. Onze concurrerende tarieven vanaf 6,5% JKP zijn aangepast aan de economische realiteiten van MKB en ondernemers.",
+        "typesTitle": "Soorten zakelijke leningen",
+        "types": {
+          "shortTerm": "Kortlopend krediet: 3 tot 12 maanden financiering voor directe liquiditeitsbehoeften, ideaal voor het beheren van kasstroomproblemen of het financieren van seizoensvoorraad.",
+          "mediumTerm": "Middellang krediet: 1 tot 5 jaar financiering voor materiële investeringen zoals de aankoop van apparatuur, voertuigen of machines.",
+          "longTerm": "Langlopend krediet: 5 tot 15 jaar financiering voor grote uitbreidingsprojecten, aankoop van bedrijfspanden of professionele vastgoedinvesteringen.",
+          "creditLine": "Kredietlijn: Hernieuwbare kasfaciliteit om dagelijkse kasstroomfluctuaties te beheren."
+        },
+        "eligibilityTitle": "Toelatingscriteria",
+        "eligibilityIntro": "Om een zakelijke lening bij Privat Equity te verkrijgen, moet u over het algemeen:",
+        "eligibility": {
+          "registered": "Een geregistreerd bedrijf hebben (zzp'er, BV, NV, enz.)",
+          "activity": "Een economische activiteit van minimaal 6 tot 12 maanden aantonen",
+          "revenues": "Stabiele inkomsten of omzet presenteren",
+          "documents": "Vereiste financiële documenten verstrekken (balansen, winst- en verliesrekeningen, enz.)",
+          "project": "Een duidelijk gedefinieerd zakelijk project hebben"
+        },
+        "documentsTitle": "Vereiste documenten",
+        "documentsIntro": "Dit zijn de documenten die doorgaans worden gevraagd bij een aanvraag voor een zakelijke lening:",
+        "documents": {
+          "identity": "Identiteitsbewijs van de directeur",
+          "kbis": "KvK-uittreksel (minder dan 3 maanden oud)",
+          "financials": "Balansen en winst- en verliesrekeningen van de laatste 2 boekjaren",
+          "bankStatements": "Zakelijke bankafschriften van de laatste 6 maanden",
+          "taxReturns": "Persoonlijke en zakelijke belastingaangiften",
+          "businessPlan": "Businessplan voor ontwikkelingsprojecten"
+        },
+        "tipsTitle": "Tips om uw aanvraag te optimaliseren",
+        "tips": {
+          "tip1": "Bereid een volledig en georganiseerd dossier voor om de verwerking te versnellen",
+          "tip2": "Presenteer realistische en onderbouwde financiële prognoses",
+          "tip3": "Breng een eigen bijdrage van minimaal 10-20% van het project in",
+          "tip4": "Houd een gezonde kasstroom aan in de maanden voor de aanvraag",
+          "tip5": "Anticipeer op uw behoeften: vraag aan voordat u in moeilijkheden komt"
+        }
+      },
+      "faqTitle": "FAQ Zakelijke Lening",
+      "faq": {
+        "q1": "Wat is het verschil tussen een zakelijke lening en een persoonlijke lening?",
+        "a1": "Een zakelijke lening is bedoeld om uw professionele activiteit te financieren en vereist boekhoudkundige documenten van uw bedrijf. Het biedt over het algemeen hogere bedragen en voorwaarden die zijn aangepast aan economische bedrijfscycli. Een persoonlijke lening financiert uw persoonlijke behoeften en is uitsluitend gebaseerd op uw individuele inkomen.",
+        "q2": "Kan ik als zzp'er/freelancer een zakelijke lening krijgen?",
+        "a2": "Ja, zzp'ers en freelancers kunnen absoluut een zakelijke lening aanvragen. U moet uw omzetaangiften, bankafschriften verstrekken en minimaal 6 tot 12 maanden activiteit aantonen. De toegekende bedragen zijn afhankelijk van uw activiteitsniveau.",
+        "q3": "Hoe lang duurt het om een antwoord te krijgen?",
+        "a3": "Bij Privat Equity ontvangt u binnen 24 tot 48 uur een voorlopig antwoord. De vrijgave van fondsen vindt over het algemeen plaats binnen 5 tot 10 werkdagen na volledige validatie van het dossier en ondertekening van de documenten.",
+        "q4": "Heb ik onderpand nodig voor mijn zakelijke lening?",
+        "a4": "Voor kleine bedragen (tot € 25.000) is over het algemeen geen onderpand vereist. Voor hogere bedragen kan een persoonlijke garantie van de directeur of een pandrecht op bedrijfsactiva worden gevraagd, afhankelijk van het risicoprofiel.",
+        "q5": "Kan ik mijn zakelijke lening vervroegd aflossen?",
+        "a5": "Ja, al onze zakelijke leningen staan vervroegde aflossing toe. Afhankelijk van het bedrag en de resterende looptijd kunnen boetes voor vervroegde aflossing van toepassing zijn (over het algemeen beperkt tot 6 maanden rente). Deze voorwaarden zijn duidelijk vermeld in uw contract.",
+        "q6": "Hoe worden de tarieven voor bedrijven bepaald?",
+        "a6": "De tarieven zijn afhankelijk van verschillende criteria: bedrijfsleeftijd, financiële gezondheid (ratio's, kasstroom), leningbedrag en -looptijd, sector en voorgestelde zekerheden. Bedrijven met een solide balans en stabiele activiteit krijgen de beste tarieven.",
+        "q7": "Kan ik een aanvraag indienen als mijn bedrijf wordt opgericht?",
+        "a7": "Ja, wij ondersteunen startende ondernemers. U moet een solide businessplan, geloofwaardige financiële prognoses en idealiter een eigen bijdrage presenteren. Bedragen en voorwaarden worden aangepast aan de ontwikkelingsfase van uw project.",
+        "q8": "Welke uitgaven kan ik financieren met een zakelijke lening?",
+        "a8": "Een zakelijke lening kan vrijwel al uw zakelijke behoeften financieren: apparatuur en machines, bedrijfsvoertuigen, voorraad en grondstoffen, marketingcampagnes, werving, IT-ontwikkeling, renovatiewerkzaamheden, werkkapitaal, enz."
+      }
     },
     "consolidation": {
       "title": "Schuldenconsolidatie",

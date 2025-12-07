@@ -89,6 +89,39 @@ const BusinessLoan = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="prose prose-lg max-w-none space-y-6">
             <h2 className="text-3xl font-bold text-foreground">{t("products.businessLoan.guideTitle")}</h2>
+            <h3 className="text-xl font-semibold text-foreground mt-8">{t("products.businessLoan.guide.introTitle")}</h3>
+            <p className="text-muted-foreground leading-relaxed">{t("products.businessLoan.guide.introP1")}</p>
+            <p className="text-muted-foreground leading-relaxed">{t("products.businessLoan.guide.introP2")}</p>
+            
+            <h3 className="text-xl font-semibold text-foreground mt-8">{t("products.businessLoan.guide.typesTitle")}</h3>
+            <ul className="space-y-3">
+              {["shortTerm", "mediumTerm", "longTerm", "creditLine"].map((type) => (
+                <li key={type} className="text-muted-foreground">{t(`products.businessLoan.guide.types.${type}`)}</li>
+              ))}
+            </ul>
+
+            <h3 className="text-xl font-semibold text-foreground mt-8">{t("products.businessLoan.guide.eligibilityTitle")}</h3>
+            <p className="text-muted-foreground">{t("products.businessLoan.guide.eligibilityIntro")}</p>
+            <ul className="space-y-2">
+              {["registered", "activity", "revenues", "documents", "project"].map((item) => (
+                <li key={item} className="text-muted-foreground">• {t(`products.businessLoan.guide.eligibility.${item}`)}</li>
+              ))}
+            </ul>
+
+            <h3 className="text-xl font-semibold text-foreground mt-8">{t("products.businessLoan.guide.documentsTitle")}</h3>
+            <p className="text-muted-foreground">{t("products.businessLoan.guide.documentsIntro")}</p>
+            <ul className="space-y-2">
+              {["identity", "kbis", "financials", "bankStatements", "taxReturns", "businessPlan"].map((doc) => (
+                <li key={doc} className="text-muted-foreground">• {t(`products.businessLoan.guide.documents.${doc}`)}</li>
+              ))}
+            </ul>
+
+            <h3 className="text-xl font-semibold text-foreground mt-8">{t("products.businessLoan.guide.tipsTitle")}</h3>
+            <ul className="space-y-2">
+              {["tip1", "tip2", "tip3", "tip4", "tip5"].map((tip) => (
+                <li key={tip} className="text-muted-foreground">• {t(`products.businessLoan.guide.tips.${tip}`)}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -96,6 +129,14 @@ const BusinessLoan = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl font-bold text-foreground mb-8">{t("products.businessLoan.faqTitle")}</h2>
+          <div className="space-y-4">
+            {["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8"].map((q, index) => (
+              <Card key={q} className="p-6">
+                <h3 className="text-lg font-semibold text-foreground mb-2">{t(`products.businessLoan.faq.${q}`)}</h3>
+                <p className="text-muted-foreground">{t(`products.businessLoan.faq.a${index + 1}`)}</p>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 

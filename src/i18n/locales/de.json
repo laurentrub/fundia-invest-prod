@@ -979,7 +979,64 @@
       },
       "typicalAmount": "Typischer Betrag",
       "guideTitle": "Vollständiger Geschäftskredit-Leitfaden",
-      "faqTitle": "Geschäftskredit FAQ"
+      "guide": {
+        "introTitle": "Was ist ein Geschäftskredit?",
+        "introP1": "Ein Geschäftskredit ist eine Finanzierung, die speziell auf die Bedürfnisse von Unternehmen, Handwerkern, Händlern und Freiberuflern zugeschnitten ist. Im Gegensatz zu Privatkrediten dient er zur Finanzierung von Projekten im Zusammenhang mit Ihrer beruflichen Tätigkeit: Anschaffung von Ausrüstung, Geschäftsentwicklung, Betriebskapital oder Expansion.",
+        "introP2": "Bei Privat Equity bieten wir Geschäftskredite von 5.000 € bis 75.000 € mit Laufzeiten von 12 bis 84 Monaten an. Unsere wettbewerbsfähigen Zinssätze ab 6,5% effektivem Jahreszins sind an die wirtschaftlichen Realitäten von KMU und Unternehmern angepasst.",
+        "typesTitle": "Arten von Geschäftskrediten",
+        "types": {
+          "shortTerm": "Kurzfristkredit: 3- bis 12-monatige Finanzierung für sofortigen Liquiditätsbedarf, ideal zur Überbrückung von Liquiditätsengpässen oder zur Finanzierung von Saisonware.",
+          "mediumTerm": "Mittelfristkredit: 1- bis 5-jährige Finanzierung für materielle Investitionen wie den Kauf von Ausrüstung, Fahrzeugen oder Maschinen.",
+          "longTerm": "Langfristkredit: 5- bis 15-jährige Finanzierung für größere Expansionsprojekte, Immobilienerwerb oder gewerbliche Immobilieninvestitionen.",
+          "creditLine": "Kreditlinie: Erneuerbare Kreditfazilität zur Bewältigung täglicher Liquiditätsschwankungen."
+        },
+        "eligibilityTitle": "Zulassungskriterien",
+        "eligibilityIntro": "Um einen Geschäftskredit bei Privat Equity zu erhalten, müssen Sie in der Regel:",
+        "eligibility": {
+          "registered": "Ein eingetragenes Unternehmen haben (Einzelunternehmer, GmbH, AG usw.)",
+          "activity": "Eine Geschäftstätigkeit von mindestens 6 bis 12 Monaten nachweisen",
+          "revenues": "Stabile Einnahmen oder Umsätze vorweisen",
+          "documents": "Erforderliche Finanzdokumente vorlegen (Bilanzen, Gewinn- und Verlustrechnungen usw.)",
+          "project": "Ein klar definiertes Geschäftsprojekt haben"
+        },
+        "documentsTitle": "Erforderliche Dokumente",
+        "documentsIntro": "Hier sind die bei einem Geschäftskreditantrag üblicherweise erforderlichen Dokumente:",
+        "documents": {
+          "identity": "Ausweis des Geschäftsführers",
+          "kbis": "Handelsregisterauszug (weniger als 3 Monate alt)",
+          "financials": "Bilanzen und Gewinn- und Verlustrechnungen der letzten 2 Geschäftsjahre",
+          "bankStatements": "Geschäftskontoauszüge der letzten 6 Monate",
+          "taxReturns": "Persönliche und geschäftliche Steuerbescheide",
+          "businessPlan": "Businessplan für Entwicklungsprojekte"
+        },
+        "tipsTitle": "Tipps zur Optimierung Ihres Antrags",
+        "tips": {
+          "tip1": "Bereiten Sie vollständige und organisierte Unterlagen vor, um die Bearbeitung zu beschleunigen",
+          "tip2": "Präsentieren Sie realistische und begründete Finanzprognosen",
+          "tip3": "Bringen Sie einen Eigenkapitalanteil von mindestens 10-20% des Projekts ein",
+          "tip4": "Halten Sie in den Monaten vor dem Antrag eine gesunde Liquidität aufrecht",
+          "tip5": "Planen Sie voraus: Beantragen Sie, bevor Sie in Schwierigkeiten geraten"
+        }
+      },
+      "faqTitle": "Geschäftskredit FAQ",
+      "faq": {
+        "q1": "Was ist der Unterschied zwischen einem Geschäftskredit und einem Privatkredit?",
+        "a1": "Ein Geschäftskredit ist zur Finanzierung Ihrer beruflichen Tätigkeit bestimmt und erfordert Buchhaltungsunterlagen Ihres Unternehmens. Er bietet in der Regel höhere Beträge und an Geschäftszyklen angepasste Konditionen. Ein Privatkredit finanziert Ihre persönlichen Bedürfnisse und basiert ausschließlich auf Ihrem individuellen Einkommen.",
+        "q2": "Kann ich als Freiberufler/Einzelunternehmer einen Geschäftskredit bekommen?",
+        "a2": "Ja, Freiberufler und Einzelunternehmer können selbstverständlich einen Geschäftskredit beantragen. Sie müssen Ihre Umsatzerklärungen, Kontoauszüge und eine Geschäftstätigkeit von mindestens 6 bis 12 Monaten nachweisen. Die gewährten Beträge hängen von Ihrer Geschäftstätigkeit ab.",
+        "q3": "Wie lange dauert es, eine Antwort zu erhalten?",
+        "a3": "Bei Privat Equity erhalten Sie innerhalb von 24 bis 48 Stunden eine Vorabentscheidung. Die Auszahlung der Mittel erfolgt in der Regel innerhalb von 5 bis 10 Werktagen nach vollständiger Prüfung und Unterzeichnung der Dokumente.",
+        "q4": "Brauche ich Sicherheiten für meinen Geschäftskredit?",
+        "a4": "Für kleinere Beträge (bis zu 25.000 €) sind in der Regel keine Sicherheiten erforderlich. Für höhere Beträge kann je nach Risikoprofil eine persönliche Bürgschaft des Geschäftsführers oder eine Sicherheit auf Unternehmensvermögen verlangt werden.",
+        "q5": "Kann ich meinen Geschäftskredit vorzeitig zurückzahlen?",
+        "a5": "Ja, alle unsere Geschäftskredite erlauben eine vorzeitige Rückzahlung. Je nach Betrag und Restlaufzeit können Vorfälligkeitsentschädigungen anfallen (in der Regel auf 6 Monate Zinsen begrenzt). Diese Bedingungen sind klar in Ihrem Vertrag angegeben.",
+        "q6": "Wie werden die Zinssätze für Unternehmen festgelegt?",
+        "a6": "Die Zinssätze hängen von mehreren Kriterien ab: Unternehmensalter, finanzielle Gesundheit (Kennzahlen, Liquidität), Kredithöhe und -laufzeit, Branche und angebotene Sicherheiten. Unternehmen mit solider Bilanz und stabiler Geschäftstätigkeit erhalten die besten Zinssätze.",
+        "q7": "Kann ich einen Antrag stellen, wenn mein Unternehmen gerade gegründet wird?",
+        "a7": "Ja, wir unterstützen Unternehmensgründer. Sie müssen einen soliden Businessplan, glaubwürdige Finanzprognosen und idealerweise eine Eigenkapitalbeteiligung vorlegen. Beträge und Konditionen werden an den Entwicklungsstand Ihres Projekts angepasst.",
+        "q8": "Welche Ausgaben kann ich mit einem Geschäftskredit finanzieren?",
+        "a8": "Ein Geschäftskredit kann nahezu alle Ihre Geschäftsbedürfnisse finanzieren: Ausrüstung und Maschinen, Nutzfahrzeuge, Lager und Rohstoffe, Marketingkampagnen, Personaleinstellungen, IT-Entwicklung, Renovierungsarbeiten, Betriebskapital usw."
+      }
     },
     "consolidation": {
       "title": "Schuldenkonsolidierung",

@@ -1042,7 +1042,64 @@
       },
       "typicalAmount": "Montant typique",
       "guideTitle": "Guide Complet du Crédit Professionnel",
-      "faqTitle": "FAQ Crédit Professionnel"
+      "guide": {
+        "introTitle": "Qu'est-ce qu'un crédit professionnel ?",
+        "introP1": "Le crédit professionnel est un financement spécialement conçu pour répondre aux besoins des entreprises, des artisans, des commerçants et des professions libérales. Contrairement aux prêts personnels, il est destiné à financer des projets liés à votre activité professionnelle : acquisition d'équipements, développement commercial, fonds de roulement ou expansion.",
+        "introP2": "Chez Privat Equity, nous proposons des crédits professionnels de 5 000 € à 75 000 € avec des durées de remboursement de 12 à 84 mois. Nos taux compétitifs à partir de 6,5% TAEG sont adaptés aux réalités économiques des PME et des entrepreneurs.",
+        "typesTitle": "Types de crédits professionnels",
+        "types": {
+          "shortTerm": "Crédit court terme : Financement de 3 à 12 mois pour les besoins de trésorerie immédiat, idéal pour gérer les décalages de trésorerie ou financer un stock saisonnier.",
+          "mediumTerm": "Crédit moyen terme : Financement de 1 à 5 ans pour les investissements matériels comme l'achat d'équipement, de véhicules ou de machines.",
+          "longTerm": "Crédit long terme : Financement de 5 à 15 ans pour les projets d'expansion majeurs, l'acquisition de locaux ou les investissements immobiliers professionnels.",
+          "creditLine": "Ligne de crédit : Facilité de caisse renouvelable pour gérer les fluctuations de trésorerie au quotidien."
+        },
+        "eligibilityTitle": "Critères d'éligibilité",
+        "eligibilityIntro": "Pour obtenir un crédit professionnel chez Privat Equity, vous devez généralement :",
+        "eligibility": {
+          "registered": "Avoir une entreprise enregistrée (auto-entrepreneur, SARL, SAS, etc.)",
+          "activity": "Justifier d'une activité économique d'au moins 6 à 12 mois",
+          "revenues": "Présenter des revenus ou un chiffre d'affaires stable",
+          "documents": "Fournir les documents financiers requis (bilans, compte de résultat, etc.)",
+          "project": "Avoir un projet professionnel clairement défini"
+        },
+        "documentsTitle": "Documents requis",
+        "documentsIntro": "Voici les documents généralement demandés lors d'une demande de crédit professionnel :",
+        "documents": {
+          "identity": "Pièce d'identité du dirigeant",
+          "kbis": "Extrait Kbis de moins de 3 mois",
+          "financials": "Bilans et comptes de résultat des 2 derniers exercices",
+          "bankStatements": "Relevés bancaires professionnels des 6 derniers mois",
+          "taxReturns": "Avis d'imposition personnel et professionnel",
+          "businessPlan": "Business plan pour les projets de développement"
+        },
+        "tipsTitle": "Conseils pour optimiser votre demande",
+        "tips": {
+          "tip1": "Préparez un dossier complet et organisé pour accélérer le traitement",
+          "tip2": "Présentez des prévisions financières réalistes et justifiées",
+          "tip3": "Constituez un apport personnel d'au moins 10-20% du projet",
+          "tip4": "Maintenez une trésorerie saine dans les mois précédant la demande",
+          "tip5": "Anticipez vos besoins : demandez avant d'être en difficulté"
+        }
+      },
+      "faqTitle": "FAQ Crédit Professionnel",
+      "faq": {
+        "q1": "Quelle est la différence entre un crédit professionnel et un prêt personnel ?",
+        "a1": "Le crédit professionnel est destiné à financer votre activité professionnelle et nécessite des documents comptables de votre entreprise. Il offre généralement des montants plus élevés et des conditions adaptées aux cycles économiques des entreprises. Le prêt personnel finance vos besoins personnels et s'appuie uniquement sur vos revenus individuels.",
+        "q2": "Puis-je obtenir un crédit professionnel en tant qu'auto-entrepreneur ?",
+        "a2": "Oui, les auto-entrepreneurs peuvent tout à fait demander un crédit professionnel. Vous devrez fournir vos déclarations de chiffre d'affaires, vos relevés bancaires et justifier d'une activité d'au moins 6 à 12 mois. Les montants accordés dépendent de votre niveau d'activité.",
+        "q3": "Combien de temps faut-il pour obtenir une réponse ?",
+        "a3": "Chez Privat Equity, vous recevez une réponse de principe sous 24 à 48 heures. Le déblocage des fonds intervient généralement sous 5 à 10 jours ouvrés après validation complète du dossier et signature des documents.",
+        "q4": "Ai-je besoin d'une garantie pour mon crédit professionnel ?",
+        "a4": "Pour les petits montants (jusqu'à 25 000 €), aucune garantie n'est généralement requise. Pour les montants supérieurs, une caution personnelle du dirigeant ou une garantie sur les actifs de l'entreprise peut être demandée selon le profil de risque.",
+        "q5": "Puis-je rembourser mon crédit professionnel par anticipation ?",
+        "a5": "Oui, tous nos crédits professionnels permettent le remboursement anticipé. Selon le montant et la durée restante, des indemnités de remboursement anticipé peuvent s'appliquer (généralement limitées à 6 mois d'intérêts). Ces conditions sont clairement indiquées dans votre contrat.",
+        "q6": "Comment les taux sont-ils déterminés pour les entreprises ?",
+        "a6": "Les taux dépendent de plusieurs critères : ancienneté de l'entreprise, santé financière (ratios, trésorerie), montant et durée du prêt, secteur d'activité et garanties proposées. Les entreprises avec un bilan solide et une activité stable bénéficient des meilleurs taux.",
+        "q7": "Puis-je faire une demande si mon entreprise est en création ?",
+        "a7": "Oui, nous accompagnons les créateurs d'entreprise. Vous devrez présenter un business plan solide, des prévisions financières crédibles et idéalement un apport personnel. Les montants et conditions seront adaptés au stade de développement de votre projet.",
+        "q8": "Quelles dépenses puis-je financer avec un crédit professionnel ?",
+        "a8": "Le crédit professionnel peut financer quasiment tous vos besoins d'entreprise : équipement et machines, véhicules utilitaires, stock et matières premières, campagnes marketing, recrutement, développement informatique, travaux d'aménagement, fonds de roulement, etc."
+      }
     },
     "consolidation": {
       "title": "Regroupement de Crédits",
