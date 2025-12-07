@@ -311,6 +311,19 @@ export default function RequestDetail() {
 
       if (error) throw error;
 
+      // Create contract record for client tracking
+      const { error: contractError } = await supabase
+        .from('contracts')
+        .insert({
+          loan_request_id: request.id,
+          user_id: request.user_id,
+          status: 'pending_signature',
+        });
+
+      if (contractError) {
+        console.error('Contract record error:', contractError);
+      }
+
       toast.success(t('admin.messages.contractSent'));
       fetchHistory();
     } catch (error: any) {

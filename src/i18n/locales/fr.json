@@ -787,7 +787,8 @@
     "tabs": {
       "info": "Informations",
       "password": "Mot de passe",
-      "requests": "Mes demandes"
+      "requests": "Mes demandes",
+      "contracts": "Mes contrats"
     },
     "info": {
       "title": "Informations personnelles",
@@ -814,6 +815,30 @@
       "amount": "Montant",
       "duration": "Durée",
       "date": "Date"
+    },
+    "contracts": {
+      "noContracts": "Vous n'avez aucun contrat en attente",
+      "contract": "Contrat de prêt",
+      "amount": "Montant",
+      "duration": "Durée",
+      "receivedOn": "Reçu le",
+      "signedOn": "Signé le",
+      "verifiedOn": "Vérifié le",
+      "rejectionReason": "Raison du refus",
+      "uploadSigned": "Téléverser le contrat signé",
+      "uploadHint": "Format PDF uniquement, 10 Mo maximum",
+      "downloadSigned": "Télécharger le contrat signé",
+      "pdfOnly": "Veuillez sélectionner un fichier PDF",
+      "fileTooLarge": "Le fichier ne doit pas dépasser 10 Mo",
+      "uploadSuccess": "Contrat signé téléversé avec succès",
+      "uploadError": "Erreur lors du téléversement du contrat",
+      "downloadError": "Erreur lors du téléchargement",
+      "status": {
+        "pendingSignature": "En attente de signature",
+        "signed": "Signé",
+        "verified": "Vérifié",
+        "rejected": "Refusé"
+      }
     },
     "messages": {
       "profileLoadError": "Erreur lors du chargement du profil",

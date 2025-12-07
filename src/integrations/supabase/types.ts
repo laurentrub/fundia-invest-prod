@@ -14,6 +14,50 @@ export type Database = {
   }
   public: {
     Tables: {
+      contracts: {
+        Row: {
+          created_at: string
+          id: string
+          loan_request_id: string
+          rejection_reason: string | null
+          signed_at: string | null
+          signed_document_path: string | null
+          status: string
+          user_id: string
+          verified_at: string | null
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          loan_request_id: string
+          rejection_reason?: string | null
+          signed_at?: string | null
+          signed_document_path?: string | null
+          status?: string
+          user_id: string
+          verified_at?: string | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          loan_request_id?: string
+          rejection_reason?: string | null
+          signed_at?: string | null
+          signed_document_path?: string | null
+          status?: string
+          user_id?: string
+          verified_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "contracts_loan_request_id_fkey"
+            columns: ["loan_request_id"]
+            isOneToOne: false
+            referencedRelation: "loan_requests"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       loan_requests: {
         Row: {
           amount: number

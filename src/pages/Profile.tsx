@@ -15,6 +15,7 @@ import {
   User, 
   Lock, 
   FileText,
+  FileSignature,
   Clock, 
   CheckCircle, 
   XCircle,
@@ -22,6 +23,7 @@ import {
   Calendar
 } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { UserContracts } from '@/components/profile/UserContracts';
 
 interface LoanRequest {
   id: string;
@@ -207,7 +209,7 @@ export default function Profile() {
           <h1 className="text-3xl font-bold mb-8">{t('profile.title')}</h1>
           
           <Tabs defaultValue="info" className="w-full">
-            <TabsList className="grid w-full grid-cols-3">
+            <TabsList className="grid w-full grid-cols-4">
               <TabsTrigger value="info">
                 <User className="h-4 w-4 mr-2" />
                 {t('profile.tabs.info')}
@@ -219,6 +221,10 @@ export default function Profile() {
               <TabsTrigger value="requests">
                 <FileText className="h-4 w-4 mr-2" />
                 {t('profile.tabs.requests')}
+              </TabsTrigger>
+              <TabsTrigger value="contracts">
+                <FileSignature className="h-4 w-4 mr-2" />
+                {t('profile.tabs.contracts')}
               </TabsTrigger>
             </TabsList>
 
@@ -387,6 +393,10 @@ export default function Profile() {
                   ))
                 )}
               </div>
+            </TabsContent>
+
+            <TabsContent value="contracts" className="mt-6">
+              <UserContracts />
             </TabsContent>
           </Tabs>
         </div>
