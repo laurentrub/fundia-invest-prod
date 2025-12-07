@@ -182,6 +182,26 @@ export default function Documents() {
 
       if (error) throw error;
 
+      // Send email notification to client
+      if (selectedContract.loan_request) {
+        try {
+          await supabase.functions.invoke('send-contract-notification', {
+            body: {
+              contractId: selectedContract.id,
+              clientEmail: selectedContract.loan_request.email,
+              clientName: `${selectedContract.loan_request.first_name} ${selectedContract.loan_request.last_name}`,
+              action: actionType === 'verify' ? 'verified' : 'rejected',
+              rejectionReason: actionType === 'reject' ? rejectionReason : undefined,
+              loanType: selectedContract.loan_request.loan_type,
+              amount: selectedContract.loan_request.amount,
+            },
+          });
+        } catch (emailError) {
+          console.error('Email notification error:', emailError);
+          // Don't fail the whole operation if email fails
+        }
+      }
+
       toast.success(
         actionType === 'verify'
           ? t('admin.documents.verifySuccess')

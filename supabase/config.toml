@@ -11,3 +11,6 @@ verify_jwt = true
 
 [functions.send-contract]
 verify_jwt = true
+
+[functions.send-contract-notification]
+verify_jwt = true
