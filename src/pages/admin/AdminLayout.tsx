@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
-import { AdminSidebar } from '@/components/admin/AdminSidebar';
+import { ManagerProfileSidebar } from '@/components/admin/ManagerProfileSidebar';
 import { Loader2 } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 
@@ -52,8 +52,8 @@ export default function AdminLayout() {
   }
 
   return (
-    <div className="min-h-screen flex bg-muted/30">
-      <AdminSidebar
+    <div className="min-h-screen flex w-full bg-muted/30">
+      <ManagerProfileSidebar
         collapsed={sidebarCollapsed}
         onToggle={() => setSidebarCollapsed(!sidebarCollapsed)}
       />
