@@ -268,7 +268,7 @@ export default function RequestDetail() {
     if (!request) return;
 
     try {
-      const { error } = await supabase.functions.invoke('send-document-request', {
+      const { data, error } = await supabase.functions.invoke('send-document-request', {
         body: {
           requestId: request.id,
           clientEmail: request.email,
@@ -278,13 +278,34 @@ export default function RequestDetail() {
         },
       });
 
-      if (error) throw error;
+      if (error) {
+        console.error('Document request error:', error);
+        // Extract error message from FunctionsHttpError
+        let errorMessage = t('admin.messages.documentRequestError');
+        if (error.message) {
+          errorMessage = error.message;
+        }
+        if (error.context?.body) {
+          try {
+            const body = typeof error.context.body === 'string' 
+              ? JSON.parse(error.context.body) 
+              : error.context.body;
+            if (body.error) {
+              errorMessage = body.error;
+            }
+          } catch (e) {
+            // Keep default error message
+          }
+        }
+        toast.error(errorMessage);
+        return;
+      }
 
       toast.success(t('admin.messages.documentRequestSent'));
       fetchHistory();
     } catch (error: any) {
       console.error('Document request error:', error);
-      toast.error(t('admin.messages.documentRequestError'));
+      toast.error(error.message || t('admin.messages.documentRequestError'));
     }
   };
 
@@ -300,7 +321,7 @@ export default function RequestDetail() {
       }
       const pdfBase64 = btoa(binary);
 
-      const { error } = await supabase.functions.invoke('send-contract', {
+      const { data, error } = await supabase.functions.invoke('send-contract', {
         body: {
           requestId: request.id,
           clientEmail: request.email,
@@ -309,7 +330,27 @@ export default function RequestDetail() {
         },
       });
 
-      if (error) throw error;
+      if (error) {
+        console.error('Contract send error:', error);
+        let errorMessage = t('admin.messages.contractError');
+        if (error.message) {
+          errorMessage = error.message;
+        }
+        if (error.context?.body) {
+          try {
+            const body = typeof error.context.body === 'string' 
+              ? JSON.parse(error.context.body) 
+              : error.context.body;
+            if (body.error) {
+              errorMessage = body.error;
+            }
+          } catch (e) {
+            // Keep default error message
+          }
+        }
+        toast.error(errorMessage);
+        return;
+      }
 
       // Create contract record for client tracking
       const { error: contractError } = await supabase
@@ -328,7 +369,7 @@ export default function RequestDetail() {
       fetchHistory();
     } catch (error: any) {
       console.error('Contract send error:', error);
-      toast.error(t('admin.messages.contractError'));
+      toast.error(error.message || t('admin.messages.contractError'));
     }
   };
 

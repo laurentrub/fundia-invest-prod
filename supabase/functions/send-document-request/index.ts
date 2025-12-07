@@ -155,7 +155,9 @@ const handler = async (req: Request): Promise<Response> => {
     });
   } catch (error: any) {
     console.error("Error in send-document-request function:", error);
-    return new Response(JSON.stringify({ error: error.message }), {
+    console.error("Error stack:", error.stack);
+    const errorMessage = error.message || "Une erreur s'est produite lors de l'envoi de la demande";
+    return new Response(JSON.stringify({ error: errorMessage, details: error.stack }), {
       status: 500,
       headers: { "Content-Type": "application/json", ...corsHeaders },
     });
