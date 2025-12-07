@@ -1425,7 +1425,8 @@
     "nav": {
       "dashboard": "Tableau de bord",
       "requests": "Demandes",
-      "documents": "Documents",
+      "documents": "Contrats",
+      "clientDocuments": "Documents clients",
       "team": "Équipe",
       "settings": "Paramètres",
       "logout": "Déconnexion"

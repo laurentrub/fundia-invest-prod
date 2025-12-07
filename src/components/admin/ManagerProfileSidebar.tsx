@@ -14,6 +14,7 @@ import {
   LayoutDashboard,
   FileText,
   FileCheck,
+  FolderOpen,
   Users,
   Settings,
   ChevronLeft,
@@ -39,6 +40,7 @@ const menuItems = [
   { key: 'dashboard', path: '/admin', icon: LayoutDashboard },
   { key: 'requests', path: '/admin/requests', icon: FileText },
   { key: 'documents', path: '/admin/documents', icon: FileCheck },
+  { key: 'clientDocuments', path: '/admin/client-documents', icon: FolderOpen },
   { key: 'team', path: '/admin/team', icon: Users },
   { key: 'settings', path: '/admin/settings', icon: Settings },
 ];
