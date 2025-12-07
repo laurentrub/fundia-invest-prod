@@ -428,6 +428,12 @@ export default function RequestDetail() {
             onSendEmail={() => {
               toast.info(t('admin.messages.emailFeature'));
             }}
+            onRequestDocuments={() => {
+              toast.info(t('admin.messages.requestDocumentsFeature'));
+            }}
+            onGenerateContract={() => {
+              toast.info(t('admin.messages.generateContractFeature'));
+            }}
           />
         </div>
       </div>

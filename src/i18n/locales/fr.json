@@ -1415,7 +1415,9 @@
       "title": "Actions rapides",
       "changeStatus": "Changer le statut",
       "sendEmail": "Envoyer un email",
-      "downloadPdf": "Télécharger PDF"
+      "downloadPdf": "Télécharger PDF",
+      "requestDocuments": "Demande de justificatif",
+      "generateContract": "Générer un contrat"
     },
     "statusModal": {
       "title": "Changer le statut",
@@ -1481,7 +1483,9 @@
       "noteAdded": "Note ajoutée",
       "noteDeleted": "Note supprimée",
       "noteError": "Erreur lors de l'opération",
-      "emailFeature": "Fonctionnalité email à venir"
+      "emailFeature": "Fonctionnalité email à venir",
+      "requestDocumentsFeature": "Fonctionnalité demande de justificatif à venir",
+      "generateContractFeature": "Fonctionnalité génération de contrat à venir"
     }
   }
 }
