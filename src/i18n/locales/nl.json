@@ -260,8 +260,8 @@
     "emailAddress": "contact@privatequity.fr",
     "emailResponse": "Reactie binnen 24u",
     "address": "Adres",
-    "addressLine1": "123 Avenue des Champs-Élysées",
-    "addressLine2": "75008 Parijs, Frankrijk",
+    "addressLine1": "5588 Rue Frontenac",
+    "addressLine2": "Montréal, QC H2H 2L9, Canada",
     "form": {
       "title": "Stuur ons een bericht",
       "name": "Volledige naam",
@@ -291,6 +291,9 @@
   "footer": {
     "company": "Bedrijf",
     "description": "Privat Equity begeleidt particulieren en bedrijven al meer dan 10 jaar bij hun financieringsprojecten. Onze missie: krediet toegankelijk, transparant en aangepast aan elke situatie maken.",
+    "addressLabel": "Adres",
+    "addressLine1": "5588 Rue Frontenac",
+    "addressLine2": "Montréal, QC H2H 2L9, Canada",
     "about": "Over Ons",
     "contact": "Contact",
     "legal": "Juridische Kennisgeving",

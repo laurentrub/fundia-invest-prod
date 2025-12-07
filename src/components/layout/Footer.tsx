@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { MapPin } from "lucide-react";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -11,9 +12,16 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-lg font-bold mb-4">Privat Equity</h3>
-            <p className="text-sm text-primary-foreground/80 leading-relaxed">
+            <p className="text-sm text-primary-foreground/80 leading-relaxed mb-4">
               {t('footer.description')}
             </p>
+            <div className="flex items-start gap-2 text-sm text-primary-foreground/80">
+              <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
+              <div>
+                <p>{t('footer.addressLine1')}</p>
+                <p>{t('footer.addressLine2')}</p>
+              </div>
+            </div>
           </div>
 
           <div>

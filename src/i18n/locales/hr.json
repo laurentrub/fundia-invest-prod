@@ -260,8 +260,8 @@
     "emailAddress": "contact@privatequity.fr",
     "emailResponse": "Odgovor u roku od 24h",
     "address": "Adresa",
-    "addressLine1": "123 Avenue des Champs-Élysées",
-    "addressLine2": "75008 Pariz, Francuska",
+    "addressLine1": "5588 Rue Frontenac",
+    "addressLine2": "Montréal, QC H2H 2L9, Kanada",
     "form": {
       "title": "Pošaljite nam poruku",
       "name": "Puno ime",
@@ -291,6 +291,9 @@
   "footer": {
     "company": "Tvrtka",
     "description": "Privat Equity već više od 10 godina prati privatne osobe i tvrtke u njihovim projektima financiranja. Naša misija: učiniti kredit dostupnim, transparentnim i prilagođenim svakoj situaciji.",
+    "addressLabel": "Adresa",
+    "addressLine1": "5588 Rue Frontenac",
+    "addressLine2": "Montréal, QC H2H 2L9, Kanada",
     "about": "O Nama",
     "contact": "Kontakt",
     "legal": "Pravna Obavijest",

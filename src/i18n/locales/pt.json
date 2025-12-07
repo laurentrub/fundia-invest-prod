@@ -335,8 +335,8 @@
     "emailAddress": "contact@privatequity.fr",
     "emailResponse": "Resposta em 24h",
     "address": "Morada",
-    "addressLine1": "123 Avenue des Champs-Élysées",
-    "addressLine2": "75008 Paris, França",
+    "addressLine1": "5588 Rue Frontenac",
+    "addressLine2": "Montréal, QC H2H 2L9, Canadá",
     "form": {
       "title": "Envie-nos uma mensagem",
       "name": "Nome completo",
@@ -366,6 +366,9 @@
   "footer": {
     "company": "Empresa",
     "description": "A Privat Equity acompanha particulares e empresas nos seus projetos de financiamento há mais de 10 anos. A nossa missão: tornar o crédito acessível, transparente e adaptado a cada situação.",
+    "addressLabel": "Morada",
+    "addressLine1": "5588 Rue Frontenac",
+    "addressLine2": "Montréal, QC H2H 2L9, Canadá",
     "about": "Sobre Nós",
     "contact": "Contacto",
     "legal": "Aviso Legal",
