@@ -478,6 +478,449 @@
     "months": "mois",
     "years": "ans",
     "currency": "€",
-    "required": "Requis"
+    "required": "Requis",
+    "learnMore": "En savoir plus",
+    "apply": "Faire une demande",
+    "perMonth": "/mois"
+  },
+  "products": {
+    "personalLoan": {
+      "title": "Prêt personnel",
+      "subtitle": "De 1 000€ à 75 000€",
+      "description": "Financez vos rêves avec nos prêts personnels flexibles. Que ce soit pour un mariage, des vacances, des frais médicaux ou tout projet personnel - nous avons ce qu'il vous faut.",
+      "approvalTime": "Approbation en 5 min",
+      "secure": "100% sécurisé",
+      "fromRate": "À partir de 2,9% TAEG",
+      "whyChoose": "Pourquoi choisir notre prêt personnel ?",
+      "benefits": {
+        "noCollateral": "Aucune garantie requise",
+        "flexibleTerms": "Durées de remboursement flexibles (12-84 mois)",
+        "earlyRepayment": "Remboursement anticipé sans pénalités",
+        "fastFunds": "Fonds disponibles sous 48 heures",
+        "onlineProcess": "Processus de demande 100% en ligne",
+        "transparentFees": "Frais transparents - aucun coût caché"
+      },
+      "examplesTitle": "Exemples de prêts",
+      "tableHeaders": {
+        "amount": "Montant",
+        "duration": "Durée",
+        "monthly": "Mensualité",
+        "apr": "TAEG",
+        "totalCost": "Coût total"
+      },
+      "examplesDisclaimer": "*Les exemples sont à titre indicatif. Vos taux et paiements réels peuvent varier en fonction de votre profil de crédit.",
+      "guideTitle": "Guide complet des prêts personnels",
+      "guide": {
+        "whatIsTitle": "Qu'est-ce qu'un prêt personnel ?",
+        "whatIsP1": "Un prêt personnel est un prêt non garanti qui vous fournit une somme d'argent forfaitaire pour usage personnel. Contrairement aux hypothèques ou crédits auto liés à des achats spécifiques, les prêts personnels offrent une flexibilité maximale. Vous pouvez utiliser les fonds pour pratiquement toute fin légale - du regroupement de dettes au financement d'un mariage, en passant par les frais médicaux ou les rénovations domiciliaires.",
+        "whatIsP2": "Chez Privat Equity, nos prêts personnels vont de 1 000€ à 75 000€ avec des durées de remboursement de 12 à 84 mois. Nous proposons des taux d'intérêt fixes compétitifs à partir de 2,9% TAEG, selon votre solvabilité et les conditions du prêt. Parce que les prêts personnels sont non garantis, vous n'avez pas besoin de fournir de garantie, ce qui les rend accessibles et simples.",
+        "usesTitle": "Utilisations courantes des prêts personnels",
+        "uses": {
+          "consolidation": "Regroupement de dettes : Combinez plusieurs dettes à taux d'intérêt élevés en un seul paiement mensuel gérable",
+          "renovation": "Rénovations domiciliaires : Rénovez votre cuisine, ajoutez une salle de bain ou améliorez votre propriété",
+          "purchases": "Achats importants : Achetez des meubles, des appareils électroménagers ou de l'électronique sans épuiser vos économies",
+          "medical": "Frais médicaux : Couvrez les coûts de santé imprévus ou les procédures électives",
+          "wedding": "Mariages : Financez le mariage de vos rêves sans stress financier",
+          "education": "Éducation : Payez des cours, des certifications ou une formation continue",
+          "vacation": "Vacances : Créez des expériences mémorables avec vos proches",
+          "emergency": "Dépenses d'urgence : Gérez les coûts imprévus comme les réparations automobiles ou les réparations urgentes de la maison"
+        },
+        "qualifyTitle": "Comment se qualifier",
+        "qualifyIntro": "Bien que les critères d'éligibilité varient selon le prêteur, chez Privat Equity nous exigeons généralement que les demandeurs :",
+        "qualifyItems": {
+          "age": "Aient au moins 18 ans",
+          "residency": "Soient résidents français ou aient un permis de résidence valide",
+          "income": "Aient une source de revenus stable (employé, travailleur indépendant ou retraité avec pension)",
+          "debtRatio": "Aient un ratio d'endettement inférieur à 40%",
+          "documents": "Fournissent la documentation nécessaire (pièce d'identité, preuve de revenus, relevés bancaires)"
+        },
+        "aprTitle": "Comprendre les taux d'intérêt et le TAEG",
+        "aprIntro": "Le Taux Annuel Effectif Global (TAEG) est le coût annuel total de votre prêt exprimé en pourcentage. Il inclut à la fois le taux d'intérêt et tous les frais, vous donnant une image complète de ce que le prêt vous coûtera. Chez CreditPro, votre TAEG dépend de plusieurs facteurs :",
+        "aprFactors": {
+          "creditScore": "Score de crédit : Des scores plus élevés se qualifient généralement pour des taux plus bas",
+          "loanAmount": "Montant du prêt : Les prêts plus importants peuvent avoir des structures de taux différentes",
+          "loanTerm": "Durée du prêt : Les durées plus courtes ont souvent des taux plus bas mais des paiements mensuels plus élevés",
+          "debtRatio": "Ratio d'endettement : Des ratios plus faibles démontrent une meilleure capacité de remboursement",
+          "incomeStability": "Stabilité des revenus : Un historique d'emploi cohérent améliore votre taux"
+        },
+        "processTitle": "Le processus de demande",
+        "processSteps": {
+          "step1": "Vérifiez votre éligibilité : Utilisez notre simulateur pour estimer vos paiements mensuels",
+          "step2": "Rassemblez les documents : Préparez votre pièce d'identité, preuve de revenus et relevés bancaires",
+          "step3": "Soumettez la demande : Complétez notre formulaire en ligne sécurisé (prend environ 5 minutes)",
+          "step4": "Obtenez une décision instantanée : Recevez une approbation ou un refus préliminaire en quelques minutes",
+          "step5": "Vérifiez les informations : Notre équipe examine votre demande et vos documents",
+          "step6": "Signez l'accord : Examinez et signez électroniquement votre contrat de prêt",
+          "step7": "Recevez les fonds : L'argent est déposé directement sur votre compte bancaire"
+        },
+        "tipsTitle": "Conseils pour obtenir le meilleur taux",
+        "tips": {
+          "tip1": "Vérifiez et améliorez votre score de crédit avant de postuler",
+          "tip2": "Comparez les offres de plusieurs prêteurs",
+          "tip3": "Envisagez une durée de prêt plus courte si vous pouvez vous permettre des paiements mensuels plus élevés",
+          "tip4": "N'empruntez que ce dont vous avez besoin - les prêts plus importants ont souvent des taux plus élevés",
+          "tip5": "Configurez des paiements automatiques pour ne jamais manquer une échéance",
+          "tip6": "Envisagez un co-emprunteur si votre crédit n'est pas idéal"
+        }
+      },
+      "faqTitle": "FAQ Prêt personnel",
+      "faqs": {
+        "q1": "À quoi puis-je utiliser un prêt personnel ?",
+        "a1": "Les prêts personnels sont polyvalents et peuvent être utilisés pour presque toutes les fins légales : mariages, vacances, frais médicaux, regroupement de dettes, rénovations, éducation ou dépenses imprévues.",
+        "q2": "Quel est le score de crédit minimum requis ?",
+        "a2": "Bien que nous préférions les demandeurs avec un score de crédit supérieur à 650, nous évaluons chaque demande individuellement. Un score inférieur ne vous disqualifie pas automatiquement - nous considérons votre profil financier complet.",
+        "q3": "En combien de temps puis-je obtenir l'argent ?",
+        "a3": "Une fois votre demande approuvée et tous les documents vérifiés, les fonds sont généralement transférés sur votre compte bancaire dans les 24 à 48 heures.",
+        "q4": "Y a-t-il des frais pour le remboursement anticipé ?",
+        "a4": "Non ! Tous nos prêts personnels sont sans pénalités de remboursement anticipé. Vous pouvez rembourser votre prêt en avance et économiser sur les intérêts.",
+        "q5": "Quels documents dois-je fournir ?",
+        "a5": "Vous aurez besoin d'une pièce d'identité valide, d'une preuve de revenus (3 derniers bulletins de salaire ou déclarations fiscales si travailleur indépendant), de relevés bancaires récents (3 derniers mois) et d'un justificatif de domicile actuel.",
+        "q6": "Puis-je postuler si je suis travailleur indépendant ?",
+        "a6": "Oui ! Les travailleurs indépendants sont les bienvenus. Vous devrez fournir des documents supplémentaires tels que des déclarations fiscales et des relevés bancaires professionnels.",
+        "q7": "Qu'est-ce que le TAEG et comment affecte-t-il mon prêt ?",
+        "a7": "Le TAEG (Taux Annuel Effectif Global) représente le coût annuel total de votre prêt, incluant les intérêts et les frais. Un TAEG plus bas signifie des coûts globaux plus faibles. Votre TAEG spécifique dépend de votre profil de crédit et des conditions du prêt.",
+        "q8": "Puis-je modifier ma date de paiement mensuel ?",
+        "a8": "Oui, nous offrons de la flexibilité avec les dates de paiement. Contactez notre service client pour organiser un calendrier de paiement qui s'aligne avec votre cycle de revenus.",
+        "q9": "Que se passe-t-il si je manque un paiement ?",
+        "a9": "Nous comprenons que des imprévus arrivent. Si vous avez du mal à effectuer un paiement, contactez-nous immédiatement. Nous pourrons peut-être organiser un plan de paiement ou un report temporaire. Les paiements en retard peuvent entraîner des frais et affecter votre score de crédit.",
+        "q10": "Mes informations personnelles sont-elles sécurisées ?",
+        "a10": "Absolument. Nous utilisons un chiffrement SSL 256 bits de niveau bancaire et sommes entièrement conformes aux réglementations RGPD. Vos données ne sont jamais partagées avec des tiers sans votre consentement explicite."
+      }
+    },
+    "autoLoan": {
+      "title": "Crédit Auto",
+      "description": "Conduisez la voiture de vos rêves dès aujourd'hui avec nos options de financement automobile flexibles. Neuf ou d'occasion, nous avons ce qu'il vous faut.",
+      "benefitsTitle": "Avantages du Crédit Auto",
+      "benefits": {
+        "newUsed": "Financement de véhicules neufs ou d'occasion",
+        "competitiveRates": "Taux compétitifs à partir de 3,2% TAEG",
+        "upTo": "Jusqu'à 50 000 € de financement",
+        "flexibleTerms": "Durées flexibles : 12 à 72 mois",
+        "noDownPayment": "Aucun acompte requis",
+        "fastApproval": "Processus d'approbation rapide"
+      },
+      "guideTitle": "Guide Complet du Crédit Auto",
+      "guide": {
+        "whatIsTitle": "Qu'est-ce qu'un Crédit Auto ?",
+        "whatIsP1": "Un crédit auto est un prêt garanti spécialement conçu pour vous aider à acheter un véhicule. La voiture elle-même sert de garantie, ce qui entraîne généralement des taux d'intérêt plus bas par rapport aux prêts personnels non garantis. Chez Privat Equity, nous offrons un financement automobile pour les véhicules neufs et d'occasion, avec des montants de prêt de 5 000 € à 50 000 € et des durées de remboursement flexibles de 12 à 72 mois.",
+        "whatIsP2": "Nos taux compétitifs commencent à partir de 3,2% TAEG pour les emprunteurs qualifiés, et le processus de demande est entièrement en ligne. Contrairement au financement traditionnel par concessionnaire, obtenir une pré-approbation avec Privat Equity vous donne un pouvoir de négociation chez le concessionnaire, car vous saurez exactement combien vous pouvez dépenser avant de commencer vos recherches.",
+        "benefitsTitle": "Avantages des Crédits Auto",
+        "benefitsIntro": "Financer l'achat de votre véhicule offre plusieurs avantages par rapport au paiement en espèces :",
+        "benefitsList": {
+          "savings": "Préserver Votre Épargne : Gardez votre fonds d'urgence intact tout en obtenant la voiture dont vous avez besoin",
+          "credit": "Construire un Historique de Crédit : Effectuer des paiements à temps améliore votre score de crédit",
+          "betterCar": "Obtenir une Meilleure Voiture : Le financement vous permet de vous offrir un véhicule plus fiable et plus sûr",
+          "fixedPayments": "Mensualités Fixes : Budgétisez en toute confiance en sachant que votre paiement ne changera pas",
+          "flexibleTerms": "Durées Flexibles : Choisissez une période de remboursement qui correspond à votre situation financière",
+          "taxBenefits": "Avantages Fiscaux : Si vous utilisez le véhicule pour les affaires, les intérêts du prêt peuvent être déductibles d'impôts"
+        }
+      },
+      "faqTitle": "FAQ Crédit Auto",
+      "faqs": {
+        "q1": "Quelle est la différence entre votre financement et celui d'un concessionnaire ?",
+        "a1": "Obtenir une pré-approbation avec Privat Equity vous donne un taux et un montant garantis avant vos recherches, vous plaçant dans une position de négociation plus forte. Le financement par concessionnaire est déterminé après avoir choisi une voiture, et les taux peuvent être moins compétitifs.",
+        "q2": "Puis-je financer une voiture d'occasion auprès d'un vendeur particulier ?",
+        "a2": "Oui ! Nous finançons les véhicules d'occasion provenant de concessionnaires et de vendeurs particuliers. Pour les ventes entre particuliers, nous aurons besoin du numéro VIN du véhicule, du kilométrage actuel et des détails sur l'état pour déterminer la valeur et finaliser votre prêt.",
+        "q3": "Quel âge maximum peut avoir une voiture d'occasion pour être financée ?",
+        "a3": "Nous finançons généralement les véhicules d'occasion jusqu'à 8 ans au moment de l'achat. L'âge du véhicule, le kilométrage et l'état influencent tous l'approbation du prêt et la détermination du taux d'intérêt.",
+        "q4": "Ai-je besoin d'un acompte ?",
+        "a4": "Aucun acompte n'est requis, bien qu'en verser un (généralement 10-20%) puisse réduire vos mensualités, diminuer les coûts d'intérêt et potentiellement vous qualifier pour de meilleurs taux.",
+        "q5": "Quelle assurance dois-je avoir pour un véhicule financé ?",
+        "a5": "Une assurance tous risques et collision est requise pour les véhicules financés afin de vous protéger ainsi que le prêteur. Vous devrez nommer Privat Equity comme créancier hypothécaire sur votre police d'assurance.",
+        "q6": "Puis-je reprendre mon véhicule actuel ?",
+        "a6": "Absolument ! Si vous possédez votre véhicule actuel en totalité, la valeur de reprise peut servir d'acompte. Si vous devez encore de l'argent dessus, nous travaillerons avec vous pour intégrer le solde restant.",
+        "q7": "Puis-je refinancer mon prêt auto plus tard ?",
+        "a7": "Oui ! Si les taux d'intérêt baissent ou si votre crédit s'améliore considérablement, vous pouvez refinancer votre prêt auto pour obtenir de meilleures conditions. Nous recommandons d'attendre au moins 6 à 12 mois.",
+        "q8": "Que se passe-t-il si ma voiture est détruite ou volée ?",
+        "a8": "Votre assurance tous risques devrait couvrir la valeur du véhicule. Tout paiement d'assurance sert d'abord à rembourser le solde de votre prêt.",
+        "q9": "Puis-je rembourser mon prêt auto par anticipation ?",
+        "a9": "Oui ! Il n'y a aucune pénalité de remboursement anticipé sur nos prêts auto. Rembourser votre prêt par anticipation vous fait économiser de l'argent sur les intérêts.",
+        "q10": "Que se passe-t-il si la voiture que je veux coûte moins que mon montant approuvé ?",
+        "a10": "Parfait ! Vous emprunterez simplement le montant dont vous avez besoin pour l'achat du véhicule plus les coûts associés. Il n'y a aucune obligation d'emprunter le montant total approuvé."
+      }
+    },
+    "businessLoan": {
+      "title": "Crédit Professionnel",
+      "description": "Financement flexible pour entrepreneurs, PME et entreprises en croissance. Financez l'expansion, l'équipement, le fonds de roulement et plus encore.",
+      "whyChoose": "Pourquoi Choisir Notre Crédit Professionnel ?",
+      "benefits": {
+        "amounts": "Prêts de 5 000 € à 75 000 €",
+        "flexibleTerms": "Durées flexibles : 12 à 84 mois",
+        "fastApproval": "Approbation rapide pour entrepreneurs",
+        "anyProject": "Utilisable pour tout projet professionnel",
+        "competitiveRates": "Taux compétitifs pour PME",
+        "preserveCash": "Préservez votre trésorerie"
+      },
+      "useCasesTitle": "Utilisations Courantes du Crédit Professionnel",
+      "useCases": {
+        "workingCapital": {
+          "title": "Fonds de Roulement",
+          "description": "Couvrir les dépenses opérationnelles, la paie, les stocks ou les écarts de trésorerie saisonniers",
+          "typical": "10 000 € - 50 000 €"
+        },
+        "equipment": {
+          "title": "Achat d'Équipement",
+          "description": "Acheter des machines, véhicules, ordinateurs ou outils spécialisés",
+          "typical": "15 000 € - 75 000 €"
+        },
+        "expansion": {
+          "title": "Expansion de l'Entreprise",
+          "description": "Ouvrir de nouveaux locaux, recruter du personnel ou conquérir de nouveaux marchés",
+          "typical": "20 000 € - 75 000 €"
+        },
+        "marketing": {
+          "title": "Marketing & Croissance",
+          "description": "Financer des campagnes publicitaires, le développement web ou des initiatives commerciales",
+          "typical": "5 000 € - 30 000 €"
+        },
+        "inventory": {
+          "title": "Achat de Stock",
+          "description": "Constituer des stocks de produits, matériaux ou fournitures",
+          "typical": "10 000 € - 50 000 €"
+        },
+        "refinancing": {
+          "title": "Refinancement",
+          "description": "Regrouper des dettes professionnelles ou refinancer à de meilleures conditions",
+          "typical": "15 000 € - 75 000 €"
+        }
+      },
+      "typicalAmount": "Montant typique",
+      "guideTitle": "Guide Complet du Crédit Professionnel",
+      "faqTitle": "FAQ Crédit Professionnel"
+    },
+    "consolidation": {
+      "title": "Regroupement de Crédits",
+      "subtitle": "Simplifiez Vos Finances",
+      "description": "Regroupez plusieurs dettes en un seul paiement mensuel gérable avec un taux d'intérêt potentiellement inférieur. Reprenez le contrôle de vos finances dès aujourd'hui.",
+      "reducePayments": "Réduisez vos mensualités et le total des intérêts",
+      "benefitsTitle": "Avantages du Regroupement de Crédits",
+      "benefits": {
+        "singlePayment": "Regroupez plusieurs dettes en un seul paiement",
+        "lowerRate": "Taux d'intérêt global potentiellement inférieur",
+        "simplified": "Simplifiez la gestion financière",
+        "fixedPayment": "Mensualité fixe",
+        "improveCredit": "Peut améliorer le score de crédit avec le temps",
+        "reduceStress": "Réduisez le stress et l'anxiété financière"
+      },
+      "whenToTitle": "Quand Envisager le Regroupement ?",
+      "scenarios": {
+        "highInterest": {
+          "title": "Plusieurs Dettes à Taux Élevé",
+          "description": "Vous avez plusieurs cartes de crédit ou prêts avec des taux supérieurs à 10-15 % TAEG"
+        },
+        "difficulty": {
+          "title": "Difficulté à Suivre les Paiements",
+          "description": "Gérer plusieurs dates d'échéance est accablant et vous avez manqué des paiements"
+        },
+        "goodCredit": {
+          "title": "Bon Score de Crédit",
+          "description": "Votre score de crédit vous qualifie pour un taux inférieur à votre moyenne actuelle"
+        },
+        "stableIncome": {
+          "title": "Revenus Stables",
+          "description": "Vous avez des revenus réguliers pour maintenir le paiement regroupé"
+        }
+      },
+      "guideTitle": "Guide Complet du Regroupement de Crédits",
+      "risksTitle": "Avertissements Importants",
+      "risks": {
+        "risk1": "Peut prolonger la période de remboursement, augmentant le total des intérêts payés",
+        "risk2": "La fermeture de cartes de crédit peut temporairement réduire le score de crédit",
+        "risk3": "Ne résout pas les habitudes de dépenses sous-jacentes",
+        "risk4": "Nécessite de la discipline pour éviter d'accumuler de nouvelles dettes",
+        "risk5": "Certains prêts ont des frais de dossier qui s'ajoutent aux coûts"
+      },
+      "faqTitle": "FAQ Regroupement de Crédits"
+    },
+    "homeImprovement": {
+      "title": "Crédit Travaux",
+      "description": "Transformez votre habitat avec notre financement travaux flexible. De la rénovation de cuisine aux améliorations énergétiques, nous finançons vos projets de maison idéale.",
+      "whyChoose": "Pourquoi Choisir Notre Crédit Travaux ?",
+      "benefits": {
+        "amounts": "Financement de 3 000 € à 75 000 €",
+        "rates": "Taux à partir de 3,5% TAEG",
+        "terms": "Durées jusqu'à 15 ans disponibles",
+        "noCollateral": "Aucune garantie requise",
+        "allProjects": "Utilisable pour tous vos projets de travaux",
+        "fastApproval": "Approbation et déblocage rapides"
+      },
+      "projectsTitle": "Exemples de Projets Populaires",
+      "projects": {
+        "kitchen": {
+          "title": "Rénovation de Cuisine",
+          "description": "Nouveaux meubles, plans de travail, électroménager et sol"
+        },
+        "bathroom": {
+          "title": "Rénovation de Salle de Bain",
+          "description": "Nouveaux équipements, carrelage, meuble-vasque et douche"
+        },
+        "extension": {
+          "title": "Extension de Maison",
+          "description": "Chambre supplémentaire ou espace de vie agrandi"
+        },
+        "energy": {
+          "title": "Efficacité Énergétique",
+          "description": "Panneaux solaires, isolation, nouvelles fenêtres"
+        }
+      },
+      "loanAmount": "Montant du Prêt",
+      "monthlyPayment": "Mensualité",
+      "durationAt": "Durée {duration} à ~{rate}% TAEG",
+      "projectsDisclaimer": "*Les exemples sont illustratifs. Votre taux et vos paiements réels dépendent de votre profil de crédit et des conditions choisies.",
+      "guideTitle": "Guide Complet du Crédit Travaux",
+      "faqTitle": "FAQ Crédit Travaux"
+    },
+    "projectFinancing": {
+      "title": "Demande de financement de projet",
+      "subtitle": "Complétez ce formulaire pour soumettre votre projet de financement. Notre équipe analysera votre demande sous 48h.",
+      "steps": {
+        "project": "Votre Projet",
+        "funding": "Financement",
+        "company": "Entreprise",
+        "documents": "Documents"
+      },
+      "step1": {
+        "title": "Informations sur votre projet",
+        "projectType": "Type de projet",
+        "projectTypePlaceholder": "Sélectionnez le type de projet",
+        "projectTypes": {
+          "startup": "Création d'entreprise (Startup)",
+          "development": "Développement d'activité",
+          "acquisition": "Acquisition d'entreprise",
+          "realEstate": "Projet immobilier commercial",
+          "innovation": "Innovation technologique",
+          "expansion": "Expansion internationale",
+          "other": "Autre"
+        },
+        "projectName": "Nom du projet",
+        "projectNamePlaceholder": "Ex: Plateforme de e-commerce innovante",
+        "projectDescription": "Description détaillée du projet",
+        "projectDescriptionPlaceholder": "Décrivez votre projet, ses objectifs, son innovation, et sa proposition de valeur...",
+        "minChars": "Minimum 50 caractères",
+        "projectSector": "Secteur d'activité",
+        "projectSectorPlaceholder": "Sélectionnez votre secteur",
+        "sectors": {
+          "tech": "Technologies & Digital",
+          "retail": "Commerce & Distribution",
+          "services": "Services aux entreprises",
+          "industry": "Industrie & Manufacturing",
+          "health": "Santé & Biotechnologie",
+          "food": "Agroalimentaire & Restauration",
+          "realEstate": "Immobilier",
+          "energy": "Énergie & Environnement",
+          "education": "Éducation & Formation",
+          "tourism": "Tourisme & Hôtellerie",
+          "other": "Autre"
+        },
+        "projectLocation": "Localisation du projet",
+        "projectLocationPlaceholder": "Ville, région ou pays"
+      },
+      "step2": {
+        "title": "Détails financiers du projet",
+        "fundingAmount": "Montant du financement recherché",
+        "fundingPurpose": "Utilisation des fonds",
+        "fundingPurposePlaceholder": "Détaillez comment vous utiliserez les fonds (équipements, recrutement, marketing, R&D...)",
+        "ownContribution": "Apport personnel / Fonds propres",
+        "expectedRevenue": "Chiffre d'affaires prévisionnel (première année)",
+        "projectDuration": "Durée estimée du projet",
+        "durationOptions": {
+          "short": "Moins de 6 mois",
+          "medium": "6 à 12 mois",
+          "long": "1 à 2 ans",
+          "veryLong": "Plus de 2 ans"
+        },
+        "breakEvenDate": "Date prévisionnelle de rentabilité",
+        "inEuros": "En euros (€)"
+      },
+      "step3": {
+        "title": "Informations sur l'entreprise",
+        "companyName": "Nom de l'entreprise",
+        "companyStatus": "Statut juridique",
+        "statusOptions": {
+          "ae": "Auto-entrepreneur",
+          "sarl": "SARL",
+          "sas": "SAS/SASU",
+          "sa": "SA",
+          "ei": "Entreprise Individuelle",
+          "creation": "En cours de création"
+        },
+        "siret": "Numéro SIRET (si existant)",
+        "creationDate": "Date de création",
+        "employeeCount": "Nombre d'employés",
+        "employeeOptions": {
+          "solo": "Juste moi",
+          "small": "1-5 employés",
+          "medium": "6-20 employés",
+          "large": "21-50 employés",
+          "veryLarge": "Plus de 50 employés"
+        },
+        "annualRevenue": "Chiffre d'affaires annuel actuel",
+        "revenueOptions": {
+          "preRevenue": "Pré-revenu / Startup",
+          "small": "Moins de 50 000 €",
+          "medium": "50 000 € - 200 000 €",
+          "large": "200 000 € - 500 000 €",
+          "veryLarge": "500 000 € - 1 000 000 €",
+          "enterprise": "Plus de 1 000 000 €"
+        },
+        "founderInfo": "Informations du fondateur / représentant",
+        "firstName": "Prénom",
+        "lastName": "Nom",
+        "email": "Email professionnel",
+        "phone": "Téléphone"
+      },
+      "step4": {
+        "title": "Documents et informations complémentaires",
+        "documentsDescription": "Confirmez que vous disposez des documents suivants. Ils pourront être demandés lors de l'étude de votre dossier.",
+        "businessPlan": "Business Plan",
+        "businessPlanDesc": "Un document détaillant votre projet, votre marché, votre stratégie",
+        "financialProjections": "Prévisions Financières",
+        "financialProjectionsDesc": "Compte de résultat prévisionnel sur 3 ans minimum",
+        "marketStudy": "Étude de Marché",
+        "marketStudyDesc": "Analyse de votre marché cible et de la concurrence",
+        "available": "Disponible",
+        "inProgress": "En cours de préparation",
+        "notAvailable": "Non disponible",
+        "additionalInfo": "Informations complémentaires (optionnel)",
+        "additionalInfoPlaceholder": "Toute information supplémentaire que vous souhaitez partager..."
+      },
+      "navigation": {
+        "previous": "Précédent",
+        "next": "Suivant",
+        "submit": "Soumettre la demande"
+      },
+      "validation": {
+        "projectTypeRequired": "Type de projet requis",
+        "projectNameMin": "Le nom doit contenir au moins 3 caractères",
+        "projectDescriptionMin": "Description d'au moins 50 caractères requise",
+        "projectSectorRequired": "Secteur d'activité requis",
+        "projectLocationRequired": "Localisation requise",
+        "fundingAmountRequired": "Montant requis",
+        "fundingPurposeRequired": "Utilisation des fonds requise",
+        "expectedRevenueRequired": "Chiffre d'affaires prévisionnel requis",
+        "projectDurationRequired": "Durée du projet requise",
+        "breakEvenDateRequired": "Date de rentabilité requise",
+        "ownContributionRequired": "Apport personnel requis",
+        "companyNameRequired": "Nom de l'entreprise requis",
+        "companyStatusRequired": "Statut juridique requis",
+        "siretInvalid": "SIRET doit contenir 14 chiffres",
+        "creationDateRequired": "Date de création requise",
+        "employeeCountRequired": "Nombre d'employés requis",
+        "annualRevenueRequired": "Chiffre d'affaires requis",
+        "firstNameRequired": "Prénom requis",
+        "lastNameRequired": "Nom requis",
+        "emailInvalid": "Email invalide",
+        "phoneInvalid": "Numéro de téléphone invalide",
+        "businessPlanRequired": "Vous devez confirmer avoir un business plan",
+        "financialProjectionsRequired": "Vous devez confirmer avoir des prévisions financières",
+        "marketStudyRequired": "Vous devez confirmer avoir une étude de marché",
+        "validationError": "Erreur de validation",
+        "correctErrors": "Veuillez corriger les erreurs avant de continuer."
+      },
+      "messages": {
+        "success": "Demande envoyée !",
+        "successDesc": "Votre demande de financement a été transmise avec succès."
+      }
+    }
   }
 }
