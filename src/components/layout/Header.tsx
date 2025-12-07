@@ -134,7 +134,7 @@ const Header = () => {
           )}
           
           {isAdmin && (
-            <Link to="/dashboard">
+            <Link to="/admin">
               <Button variant="secondary" className="gap-2">
                 <Shield className="h-4 w-4" />
                 {t('nav.admin')}
@@ -243,7 +243,7 @@ const Header = () => {
               )}
               
               {isAdmin && (
-                <Link to="/dashboard" onClick={() => setMobileMenuOpen(false)}>
+                <Link to="/admin" onClick={() => setMobileMenuOpen(false)}>
                   <Button variant="secondary" size="default" className="w-full gap-2">
                     <Shield className="h-4 w-4" />
                     {t('nav.admin')}
