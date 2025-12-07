@@ -109,6 +109,10 @@ export function RequestedDocuments() {
     setUploadDialogOpen(true);
   };
 
+  const canResubmit = (request: DocumentRequest) => {
+    return request.status === 'pending' || request.status === 'rejected';
+  };
+
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
     if (!files || files.length === 0 || !selectedRequest || !user) return;
@@ -188,7 +192,8 @@ export function RequestedDocuments() {
   };
 
   const pendingRequests = requests.filter(r => r.status === 'pending');
-  const otherRequests = requests.filter(r => r.status !== 'pending');
+  const rejectedRequests = requests.filter(r => r.status === 'rejected');
+  const otherRequests = requests.filter(r => r.status !== 'pending' && r.status !== 'rejected');
 
   if (loading) {
     return (
@@ -275,6 +280,63 @@ export function RequestedDocuments() {
                         <Upload className="h-4 w-4" />
                       )}
                       Envoyer
+                    </Button>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+          )}
+
+          {/* Rejected requests - need resubmission */}
+          {rejectedRequests.length > 0 && (
+            <Card className="border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-900/10">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2 text-red-700 dark:text-red-400">
+                  <XCircle className="h-5 w-5" />
+                  Documents refusés ({rejectedRequests.length})
+                </CardTitle>
+                <CardDescription>
+                  Ces documents ont été refusés. Veuillez les re-soumettre avec les corrections demandées.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                {rejectedRequests.map((request) => (
+                  <div
+                    key={request.id}
+                    className="flex items-center gap-4 p-4 rounded-xl border border-red-200 dark:border-red-800 bg-card"
+                  >
+                    <div className="p-3 rounded-lg bg-red-100 dark:bg-red-900/30 shrink-0">
+                      <FileText className="h-5 w-5 text-red-600 dark:text-red-400" />
+                    </div>
+                    
+                    <div className="flex-1 min-w-0">
+                      <p className="font-medium">{request.document_type}</p>
+                      <p className="text-sm text-muted-foreground mt-0.5">
+                        Pour: {request.loan_request ? getLoanTypeLabel(request.loan_request.loan_type) : 'Demande de crédit'}
+                        {request.loan_request && ` - ${request.loan_request.amount.toLocaleString()} €`}
+                      </p>
+                      {request.rejection_reason && (
+                        <p className="text-sm text-destructive mt-1 font-medium">
+                          Raison du refus: {request.rejection_reason}
+                        </p>
+                      )}
+                      <p className="text-xs text-muted-foreground mt-1">
+                        Refusé le {request.rejected_at && new Date(request.rejected_at).toLocaleDateString('fr-FR')}
+                      </p>
+                    </div>
+
+                    <Button
+                      onClick={() => handleUploadClick(request)}
+                      disabled={uploading === request.id}
+                      variant="outline"
+                      className="gap-2 border-red-300 text-red-700 hover:bg-red-100 dark:border-red-700 dark:text-red-400 dark:hover:bg-red-900/30"
+                    >
+                      {uploading === request.id ? (
+                        <Loader2 className="h-4 w-4 animate-spin" />
+                      ) : (
+                        <Upload className="h-4 w-4" />
+                      )}
+                      Re-soumettre
                     </Button>
                   </div>
                 ))}
