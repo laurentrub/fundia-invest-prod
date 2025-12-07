@@ -784,5 +784,41 @@
         "successDesc": "Your financing application has been successfully transmitted."
       }
     }
+  },
+  "dashboard": {
+    "userTitle": "My Credit Requests",
+    "adminTitle": "Request Management",
+    "userSubtitle": "Track the status of your credit requests",
+    "adminSubtitle": "View and manage all credit requests",
+    "loading": "Loading...",
+    "noRequests": "No credit requests yet",
+    "makeRequest": "Make a Request",
+    "approve": "Approve",
+    "reject": "Reject",
+    "status": {
+      "pending": "Pending",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "loanTypes": {
+      "personal": "Personal Loan",
+      "auto": "Auto Loan",
+      "home_improvement": "Home Improvement",
+      "business": "Business",
+      "consolidation": "Consolidation",
+      "project": "Project Financing"
+    },
+    "fields": {
+      "amount": "Amount",
+      "duration": "Duration",
+      "date": "Date",
+      "contact": "Contact"
+    },
+    "messages": {
+      "loadError": "Error loading requests",
+      "statusUpdated": "Status updated",
+      "updateError": "Error updating",
+      "emailSent": "Email notification sent"
+    }
   }
 }

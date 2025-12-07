@@ -495,10 +495,10 @@
     "resetPasswordDesc": "Voer uw nieuwe wachtwoord in"
   },
   "dashboard": {
-    "title": "Mijn kredietaanvragen",
-    "titleAdmin": "Aanvraagbeheer",
-    "subtitle": "Volg de status van uw kredietaanvragen",
-    "subtitleAdmin": "Bekijk en beheer alle kredietaanvragen",
+    "userTitle": "Mijn kredietaanvragen",
+    "adminTitle": "Aanvraagbeheer",
+    "userSubtitle": "Volg de status van uw kredietaanvragen",
+    "adminSubtitle": "Bekijk en beheer alle kredietaanvragen",
     "loading": "Laden...",
     "noRequests": "Nog geen kredietaanvragen",
     "makeRequest": "Aanvraag doen",

@@ -747,10 +747,10 @@
     "resetPasswordDesc": "Veuillez entrer votre nouveau mot de passe"
   },
   "dashboard": {
-    "title": "Mes demandes de crédit",
-    "titleAdmin": "Gestion des demandes",
-    "subtitle": "Suivez l'état de vos demandes de crédit",
-    "subtitleAdmin": "Visualisez et gérez toutes les demandes de crédit",
+    "userTitle": "Mes demandes de crédit",
+    "adminTitle": "Gestion des demandes",
+    "userSubtitle": "Suivez l'état de vos demandes de crédit",
+    "adminSubtitle": "Visualisez et gérez toutes les demandes de crédit",
     "loading": "Chargement...",
     "noRequests": "Aucune demande de crédit pour le moment",
     "makeRequest": "Faire une demande",

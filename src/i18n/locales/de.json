@@ -684,10 +684,10 @@
     "resetPasswordDesc": "Bitte geben Sie Ihr neues Passwort ein"
   },
   "dashboard": {
-    "title": "Meine Kreditanträge",
-    "titleAdmin": "Antragsverwaltung",
-    "subtitle": "Verfolgen Sie den Status Ihrer Kreditanträge",
-    "subtitleAdmin": "Alle Kreditanträge anzeigen und verwalten",
+    "userTitle": "Meine Kreditanträge",
+    "adminTitle": "Antragsverwaltung",
+    "userSubtitle": "Verfolgen Sie den Status Ihrer Kreditanträge",
+    "adminSubtitle": "Alle Kreditanträge anzeigen und verwalten",
     "loading": "Laden...",
     "noRequests": "Noch keine Kreditanträge",
     "makeRequest": "Antrag stellen",

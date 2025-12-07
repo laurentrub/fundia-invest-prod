@@ -495,10 +495,10 @@
     "resetPasswordDesc": "Molimo unesite svoju novu lozinku"
   },
   "dashboard": {
-    "title": "Moji zahtjevi za kredit",
-    "titleAdmin": "Upravljanje zahtjevima",
-    "subtitle": "Pratite status svojih zahtjeva za kredit",
-    "subtitleAdmin": "Pregledajte i upravljajte svim zahtjevima za kredit",
+    "userTitle": "Moji zahtjevi za kredit",
+    "adminTitle": "Upravljanje zahtjevima",
+    "userSubtitle": "Pratite status svojih zahtjeva za kredit",
+    "adminSubtitle": "Pregledajte i upravljajte svim zahtjevima za kredit",
     "loading": "Učitavanje...",
     "noRequests": "Trenutno nema zahtjeva za kredit",
     "makeRequest": "Podnesi zahtjev",

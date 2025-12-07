@@ -684,10 +684,10 @@
     "resetPasswordDesc": "Por favor ingrese su nueva contraseña"
   },
   "dashboard": {
-    "title": "Mis solicitudes de crédito",
-    "titleAdmin": "Gestión de solicitudes",
-    "subtitle": "Siga el estado de sus solicitudes de crédito",
-    "subtitleAdmin": "Visualice y gestione todas las solicitudes de crédito",
+    "userTitle": "Mis solicitudes de crédito",
+    "adminTitle": "Gestión de solicitudes",
+    "userSubtitle": "Siga el estado de sus solicitudes de crédito",
+    "adminSubtitle": "Visualice y gestione todas las solicitudes de crédito",
     "loading": "Cargando...",
     "noRequests": "No hay solicitudes de crédito por el momento",
     "makeRequest": "Hacer una solicitud",

@@ -570,10 +570,10 @@
     "resetPasswordDesc": "Por favor introduza a sua nova palavra-passe"
   },
   "dashboard": {
-    "title": "Os meus pedidos de crédito",
-    "titleAdmin": "Gestão de pedidos",
-    "subtitle": "Acompanhe o estado dos seus pedidos de crédito",
-    "subtitleAdmin": "Visualize e gira todos os pedidos de crédito",
+    "userTitle": "Os meus pedidos de crédito",
+    "adminTitle": "Gestão de pedidos",
+    "userSubtitle": "Acompanhe o estado dos seus pedidos de crédito",
+    "adminSubtitle": "Visualize e gira todos os pedidos de crédito",
     "loading": "A carregar...",
     "noRequests": "Sem pedidos de crédito de momento",
     "makeRequest": "Fazer um pedido",
