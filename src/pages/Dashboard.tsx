@@ -66,7 +66,7 @@ export default function Dashboard() {
       if (error) throw error;
       setRequests(data || []);
     } catch (error: any) {
-      toast.error(t('dashboard.loadError'));
+      toast.error(t('dashboard.messages.loadError'));
       console.error(error);
     } finally {
       setLoading(false);
@@ -82,7 +82,7 @@ export default function Dashboard() {
 
       if (error) throw error;
 
-      toast.success(t('dashboard.statusUpdated'));
+      toast.success(t('dashboard.messages.statusUpdated'));
       
       // Envoyer la notification par email
       try {
@@ -93,7 +93,7 @@ export default function Dashboard() {
         if (emailError) {
           console.error('Erreur lors de l\'envoi de l\'email:', emailError);
         } else {
-          toast.success(t('dashboard.emailSent'));
+          toast.success(t('dashboard.messages.emailSent'));
         }
       } catch (emailError) {
         console.error('Erreur lors de l\'envoi de l\'email:', emailError);
@@ -101,7 +101,7 @@ export default function Dashboard() {
       
       fetchRequests();
     } catch (error: any) {
-      toast.error(t('dashboard.updateError'));
+      toast.error(t('dashboard.messages.updateError'));
       console.error(error);
     }
   };
@@ -127,7 +127,7 @@ export default function Dashboard() {
     const types: Record<string, string> = {
       personal: t('dashboard.loanTypes.personal'),
       auto: t('dashboard.loanTypes.auto'),
-      home_improvement: t('dashboard.loanTypes.homeImprovement'),
+      home_improvement: t('dashboard.loanTypes.home_improvement'),
       business: t('dashboard.loanTypes.business'),
       consolidation: t('dashboard.loanTypes.consolidation'),
       project: t('dashboard.loanTypes.project'),
@@ -172,7 +172,7 @@ export default function Dashboard() {
                 </p>
                 {!isAdmin && (
                   <Button onClick={() => navigate('/apply')}>
-                    {t('dashboard.applyNow')}
+                    {t('dashboard.makeRequest')}
                   </Button>
                 )}
               </CardContent>
@@ -216,28 +216,28 @@ export default function Dashboard() {
                       <div className="flex items-center gap-2">
                         <Euro className="h-4 w-4 text-muted-foreground" />
                         <div>
-                          <p className="text-sm text-muted-foreground">{t('dashboard.amount')}</p>
+                          <p className="text-sm text-muted-foreground">{t('dashboard.fields.amount')}</p>
                           <p className="font-medium">{request.amount.toLocaleString('fr-FR')} €</p>
                         </div>
                       </div>
                       <div className="flex items-center gap-2">
                         <Calendar className="h-4 w-4 text-muted-foreground" />
                         <div>
-                          <p className="text-sm text-muted-foreground">{t('dashboard.duration')}</p>
+                          <p className="text-sm text-muted-foreground">{t('dashboard.fields.duration')}</p>
                           <p className="font-medium">{request.duration} {t('common.months')}</p>
                         </div>
                       </div>
                       <div className="flex items-center gap-2">
                         <Clock className="h-4 w-4 text-muted-foreground" />
                         <div>
-                          <p className="text-sm text-muted-foreground">{t('dashboard.date')}</p>
+                          <p className="text-sm text-muted-foreground">{t('dashboard.fields.date')}</p>
                           <p className="font-medium">
                             {new Date(request.created_at).toLocaleDateString('fr-FR')}
                           </p>
                         </div>
                       </div>
                       <div>
-                        <p className="text-sm text-muted-foreground">{t('dashboard.contact')}</p>
+                        <p className="text-sm text-muted-foreground">{t('dashboard.fields.contact')}</p>
                         <p className="font-medium text-sm">{request.email}</p>
                         {request.phone && (
                           <p className="text-sm">{request.phone}</p>
