@@ -18,6 +18,18 @@ interface DocumentRequestPayload {
   customMessage?: string;
 }
 
+// HTML escape function to prevent injection attacks
+const escapeHtml = (str: string): string => {
+  const htmlEscapes: Record<string, string> = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  };
+  return str.replace(/[&<>"']/g, char => htmlEscapes[char]);
+};
+
 const handler = async (req: Request): Promise<Response> => {
   console.log("send-document-request function called");
 
@@ -81,13 +93,13 @@ const handler = async (req: Request): Promise<Response> => {
     console.log("Sending document request email to:", clientEmail);
     console.log("Documents requested:", documents);
 
-    // Build document list HTML
+    // Build document list HTML with escaped content
     const documentListHtml = documents
-      .map((doc) => `<li style="margin-bottom: 8px;">${doc}</li>`)
+      .map((doc) => `<li style="margin-bottom: 8px;">${escapeHtml(doc)}</li>`)
       .join("");
 
     const customMessageHtml = customMessage
-      ? `<p style="margin: 20px 0; color: #333;">${customMessage}</p>`
+      ? `<p style="margin: 20px 0; color: #333;">${escapeHtml(customMessage)}</p>`
       : "";
 
     const emailResponse = await resend.emails.send({
@@ -109,7 +121,7 @@ const handler = async (req: Request): Promise<Response> => {
           <div style="background: #ffffff; padding: 30px; border: 1px solid #e5e5e5; border-top: none; border-radius: 0 0 8px 8px;">
             <h2 style="color: #1e3a5f; margin-top: 0;">Demande de justificatifs</h2>
             
-            <p>Bonjour ${clientName},</p>
+            <p>Bonjour ${escapeHtml(clientName)},</p>
             
             <p>Dans le cadre de l'étude de votre demande de financement (référence: ${requestId.slice(0, 8)}), nous avons besoin des documents suivants :</p>
             

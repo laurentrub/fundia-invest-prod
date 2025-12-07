@@ -18,6 +18,18 @@ interface ContractPayload {
   pdfBase64: string;
 }
 
+// HTML escape function to prevent injection attacks
+const escapeHtml = (str: string): string => {
+  const htmlEscapes: Record<string, string> = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  };
+  return str.replace(/[&<>"']/g, char => htmlEscapes[char]);
+};
+
 const handler = async (req: Request): Promise<Response> => {
   console.log("send-contract function called");
 
@@ -96,7 +108,7 @@ const handler = async (req: Request): Promise<Response> => {
           <div style="background: #ffffff; padding: 30px; border: 1px solid #e5e5e5; border-top: none; border-radius: 0 0 8px 8px;">
             <h2 style="color: #1e3a5f; margin-top: 0;">Votre contrat de prêt</h2>
             
-            <p>Bonjour ${clientName},</p>
+            <p>Bonjour ${escapeHtml(clientName)},</p>
             
             <p>Nous avons le plaisir de vous transmettre votre contrat de prêt en pièce jointe.</p>
             

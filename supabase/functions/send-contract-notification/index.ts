@@ -20,6 +20,18 @@ interface ContractNotificationPayload {
   amount: number;
 }
 
+// HTML escape function to prevent injection attacks
+const escapeHtml = (str: string): string => {
+  const htmlEscapes: Record<string, string> = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  };
+  return str.replace(/[&<>"']/g, char => htmlEscapes[char]);
+};
+
 const handler = async (req: Request): Promise<Response> => {
   console.log("send-contract-notification function called");
 
@@ -114,7 +126,7 @@ const handler = async (req: Request): Promise<Response> => {
             
             <h2 style="color: #10b981; margin-top: 0; text-align: center;">Contrat validé !</h2>
             
-            <p>Bonjour ${clientName},</p>
+            <p>Bonjour ${escapeHtml(clientName)},</p>
             
             <p>Nous avons le plaisir de vous informer que votre contrat de prêt a été <strong>validé</strong> par nos services.</p>
             
@@ -162,14 +174,14 @@ const handler = async (req: Request): Promise<Response> => {
           <div style="background: #ffffff; padding: 30px; border: 1px solid #e5e5e5; border-top: none; border-radius: 0 0 8px 8px;">
             <h2 style="color: #1e3a5f; margin-top: 0;">Information importante concernant votre contrat</h2>
             
-            <p>Bonjour ${clientName},</p>
+            <p>Bonjour ${escapeHtml(clientName)},</p>
             
             <p>Après examen de votre contrat signé, nous ne sommes malheureusement pas en mesure de valider votre dossier en l'état.</p>
             
             <div style="background: #fef2f2; padding: 20px; border-radius: 8px; border-left: 4px solid #ef4444; margin: 20px 0;">
               <p style="margin: 0;"><strong>Type de prêt :</strong> ${loanTypeLabel}</p>
               <p style="margin: 10px 0 0 0;"><strong>Montant :</strong> ${amount.toLocaleString("fr-FR")} €</p>
-              ${rejectionReason ? `<p style="margin: 10px 0 0 0;"><strong>Motif :</strong> ${rejectionReason}</p>` : ""}
+              ${rejectionReason ? `<p style="margin: 10px 0 0 0;"><strong>Motif :</strong> ${escapeHtml(rejectionReason)}</p>` : ""}
             </div>
             
             <h3 style="color: #1e3a5f;">Que faire maintenant ?</h3>

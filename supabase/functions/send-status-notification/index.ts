@@ -14,6 +14,18 @@ interface NotificationRequest {
   newStatus: string;
 }
 
+// HTML escape function to prevent injection attacks
+const escapeHtml = (str: string): string => {
+  const htmlEscapes: Record<string, string> = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;'
+  };
+  return str.replace(/[&<>"']/g, char => htmlEscapes[char]);
+};
+
 const statusMessages = {
   pending: {
     subject: "Demande de crédit reçue",
@@ -140,12 +152,12 @@ const handler = async (req: Request): Promise<Response> => {
                 <h1>${statusInfo.title}</h1>
               </div>
               <div class="content">
-                <p>Bonjour ${loanRequest.first_name} ${loanRequest.last_name},</p>
+                <p>Bonjour ${escapeHtml(loanRequest.first_name)} ${escapeHtml(loanRequest.last_name)},</p>
                 <p>${statusInfo.message}</p>
                 
                 <div class="info-box">
                   <strong>Détails de votre demande :</strong><br>
-                  Type de crédit : ${loanRequest.loan_type}<br>
+                  Type de crédit : ${escapeHtml(loanRequest.loan_type)}<br>
                   Montant : ${new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(loanRequest.amount)}<br>
                   Durée : ${loanRequest.duration} mois<br>
                   Statut : <strong>${newStatus}</strong>
