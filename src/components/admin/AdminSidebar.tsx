@@ -1,5 +1,6 @@
 import { useLocation, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useQuery } from '@tanstack/react-query';
 import {
   LayoutDashboard,
   FileText,
@@ -13,6 +14,7 @@ import {
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/hooks/useAuth';
+import { supabase } from '@/integrations/supabase/client';
 
 interface AdminSidebarProps {
   collapsed: boolean;
@@ -20,17 +22,33 @@ interface AdminSidebarProps {
 }
 
 const menuItems = [
-  { key: 'dashboard', path: '/admin', icon: LayoutDashboard },
-  { key: 'requests', path: '/admin/requests', icon: FileText },
-  { key: 'documents', path: '/admin/documents', icon: FileCheck },
-  { key: 'team', path: '/admin/team', icon: Users },
-  { key: 'settings', path: '/admin/settings', icon: Settings },
+  { key: 'dashboard', path: '/admin', icon: LayoutDashboard, adminOnly: false },
+  { key: 'requests', path: '/admin/requests', icon: FileText, adminOnly: false },
+  { key: 'documents', path: '/admin/documents', icon: FileCheck, adminOnly: false },
+  { key: 'team', path: '/admin/team', icon: Users, adminOnly: true },
+  { key: 'settings', path: '/admin/settings', icon: Settings, adminOnly: false },
 ];
 
 export function AdminSidebar({ collapsed, onToggle }: AdminSidebarProps) {
   const { t } = useTranslation();
   const location = useLocation();
-  const { signOut } = useAuth();
+  const { signOut, user } = useAuth();
+
+  // Check if user is admin (not just manager)
+  const { data: isAdmin } = useQuery({
+    queryKey: ['is-admin', user?.id],
+    queryFn: async () => {
+      if (!user?.id) return false;
+      const { data } = await supabase
+        .from('user_roles')
+        .select('role')
+        .eq('user_id', user.id)
+        .eq('role', 'admin')
+        .single();
+      return !!data;
+    },
+    enabled: !!user?.id,
+  });
 
   const isActive = (path: string) => {
     if (path === '/admin') {
@@ -38,6 +56,8 @@ export function AdminSidebar({ collapsed, onToggle }: AdminSidebarProps) {
     }
     return location.pathname.startsWith(path);
   };
+
+  const visibleMenuItems = menuItems.filter(item => !item.adminOnly || isAdmin);
 
   return (
     <aside
@@ -68,7 +88,7 @@ export function AdminSidebar({ collapsed, onToggle }: AdminSidebarProps) {
 
       {/* Navigation */}
       <nav className="flex-1 p-2 space-y-1">
-        {menuItems.map((item) => {
+        {visibleMenuItems.map((item) => {
           const Icon = item.icon;
           const active = isActive(item.path);
 
