@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
@@ -52,6 +53,7 @@ const roleColors: Record<string, string> = {
 
 export default function TeamManagement() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const { user, isAdmin } = useAuth();
   const [members, setMembers] = useState<TeamMember[]>([]);
   const [loading, setLoading] = useState(true);
@@ -60,9 +62,18 @@ export default function TeamManagement() {
   const [newMemberRole, setNewMemberRole] = useState('manager');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // Redirect managers to dashboard
   useEffect(() => {
-    fetchTeamMembers();
-  }, []);
+    if (isAdmin === false) {
+      navigate('/admin', { replace: true });
+    }
+  }, [isAdmin, navigate]);
+
+  useEffect(() => {
+    if (isAdmin) {
+      fetchTeamMembers();
+    }
+  }, [isAdmin]);
 
   const fetchTeamMembers = async () => {
     try {
@@ -205,21 +216,8 @@ export default function TeamManagement() {
 
   if (!isAdmin) {
     return (
-      <div className="space-y-6">
-        <div>
-          <h1 className="text-2xl font-bold">{t('admin.team.title')}</h1>
-          <p className="text-muted-foreground">{t('admin.team.subtitle')}</p>
-        </div>
-
-        <Card>
-          <CardContent className="flex flex-col items-center justify-center py-16">
-            <Shield className="h-16 w-16 text-muted-foreground/50 mb-4" />
-            <h3 className="text-lg font-medium mb-2">{t('admin.team.accessDenied')}</h3>
-            <p className="text-muted-foreground text-center max-w-md">
-              {t('admin.team.accessDeniedDesc')}
-            </p>
-          </CardContent>
-        </Card>
+      <div className="flex items-center justify-center min-h-[400px]">
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />
       </div>
     );
   }
