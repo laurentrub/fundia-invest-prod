@@ -79,7 +79,8 @@
     "creditRequest": "Zahtjev za Kredit",
     "myProfile": "Moj Profil",
     "login": "Prijava",
-    "logout": "Odjava"
+    "logout": "Odjava",
+    "admin": "Administracija"
   },
   "languages": {
     "fr": "Français",

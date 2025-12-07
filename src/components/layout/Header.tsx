@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, LogOut } from "lucide-react";
+import { Menu, X, ChevronDown, LogOut, Shield } from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
@@ -20,7 +20,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const Header = () => {
-  const { user, signOut } = useAuth();
+  const { user, isAdmin, signOut } = useAuth();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
   const location = useLocation();
@@ -133,6 +133,15 @@ const Header = () => {
             </Link>
           )}
           
+          {isAdmin && (
+            <Link to="/dashboard">
+              <Button variant="secondary" className="gap-2">
+                <Shield className="h-4 w-4" />
+                {t('nav.admin')}
+              </Button>
+            </Link>
+          )}
+          
           {user ? (
             <Button variant="ghost" size="sm" onClick={signOut} className="gap-2">
               <LogOut className="h-4 w-4" />
@@ -229,6 +238,15 @@ const Header = () => {
                 <Link to="/profile" onClick={() => setMobileMenuOpen(false)}>
                   <Button variant="outline" size="default" className="w-full">
                     {t('nav.myProfile')}
+                  </Button>
+                </Link>
+              )}
+              
+              {isAdmin && (
+                <Link to="/dashboard" onClick={() => setMobileMenuOpen(false)}>
+                  <Button variant="secondary" size="default" className="w-full gap-2">
+                    <Shield className="h-4 w-4" />
+                    {t('nav.admin')}
                   </Button>
                 </Link>
               )}

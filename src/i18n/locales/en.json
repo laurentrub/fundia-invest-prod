@@ -13,7 +13,8 @@
     "creditRequest": "Credit Application",
     "myProfile": "My Profile",
     "login": "Login",
-    "logout": "Logout"
+    "logout": "Logout",
+    "admin": "Administration"
   },
   "languages": {
     "fr": "Français",

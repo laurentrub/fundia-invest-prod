@@ -154,7 +154,8 @@
     "creditRequest": "Pedido de Crédito",
     "myProfile": "Meu Perfil",
     "login": "Entrar",
-    "logout": "Sair"
+    "logout": "Sair",
+    "admin": "Administração"
   },
   "languages": {
     "fr": "Français",

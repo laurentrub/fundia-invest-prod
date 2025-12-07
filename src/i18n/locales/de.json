@@ -268,7 +268,8 @@
     "creditRequest": "Kreditantrag",
     "myProfile": "Mein Profil",
     "login": "Anmelden",
-    "logout": "Abmelden"
+    "logout": "Abmelden",
+    "admin": "Administration"
   },
   "languages": {
     "fr": "Français",

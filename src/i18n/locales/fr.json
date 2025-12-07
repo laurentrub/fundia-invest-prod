@@ -268,7 +268,8 @@
     "creditRequest": "Demande de crédit",
     "myProfile": "Mon profil",
     "login": "Connexion",
-    "logout": "Déconnexion"
+    "logout": "Déconnexion",
+    "admin": "Administration"
   },
   "languages": {
     "fr": "Français",

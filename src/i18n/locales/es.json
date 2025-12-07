@@ -268,7 +268,8 @@
     "creditRequest": "Solicitud de Crédito",
     "myProfile": "Mi Perfil",
     "login": "Iniciar Sesión",
-    "logout": "Cerrar Sesión"
+    "logout": "Cerrar Sesión",
+    "admin": "Administración"
   },
   "languages": {
     "fr": "Français",

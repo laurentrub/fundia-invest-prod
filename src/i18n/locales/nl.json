@@ -79,7 +79,8 @@
     "creditRequest": "Kredietaanvraag",
     "myProfile": "Mijn Profiel",
     "login": "Inloggen",
-    "logout": "Uitloggen"
+    "logout": "Uitloggen",
+    "admin": "Administratie"
   },
   "languages": {
     "fr": "Français",
