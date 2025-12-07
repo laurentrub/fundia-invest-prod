@@ -107,7 +107,7 @@ const Index = () => {
                   </Button>
                 </Link>
                 <Link to="/project-financing">
-                  <Button variant="outline" size="xl" className="w-full sm:w-auto border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                  <Button variant="hero" size="xl" className="w-full sm:w-auto">
                     {t('home.hero.projectButton')}
                   </Button>
                 </Link>
