@@ -221,7 +221,7 @@ export default function Auth() {
                       setResetEmail('');
                     }}
                   >
-                    {t('common.back')}
+                    {t('auth.back')}
                   </Button>
                 </div>
                 {!resetEmailSent ? (
@@ -234,11 +234,11 @@ export default function Auth() {
                         required
                         value={resetEmail}
                         onChange={(e) => setResetEmail(e.target.value)}
-                        placeholder={t('auth.emailPlaceholder')}
+                        placeholder={t('auth.resetEmailPlaceholder')}
                       />
                     </div>
                     <Button type="submit" className="w-full" disabled={loading}>
-                      {loading ? t('common.sending') : t('auth.sendResetLink')}
+                      {loading ? t('auth.sending') : t('auth.sendResetLink')}
                     </Button>
                   </form>
                 ) : (
