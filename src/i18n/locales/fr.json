@@ -1,4 +1,259 @@
 {
+  "resources": {
+    "faq": {
+      "title": "Questions Fréquentes",
+      "subtitle": "Tout ce que vous devez savoir sur les prêts, les demandes et Privat Equity",
+      "categories": {
+        "general": "Questions Générales",
+        "application": "Processus de Demande",
+        "rates": "Taux et Conditions",
+        "repayment": "Remboursement et Gestion",
+        "credit": "Crédit et Éligibilité",
+        "security": "Sécurité et Confidentialité",
+        "special": "Situations Particulières"
+      },
+      "general": {
+        "q1": "Qu'est-ce que Privat Equity ?",
+        "a1": "Privat Equity est une plateforme de prêt en ligne qui connecte les emprunteurs avec des offres de crédit compétitives. Nous proposons des prêts personnels, des crédits auto, des crédits travaux, du rachat de crédit et des prêts entreprise.",
+        "q2": "Comment Privat Equity gagne-t-il de l'argent ?",
+        "a2": "Nous recevons une commission de nos partenaires financiers lorsque nous mettons en relation des emprunteurs avec des prêts. Ce service est gratuit pour les emprunteurs - nous ne facturons jamais de frais de dossier ou de coûts initiaux.",
+        "q3": "Privat Equity est-il sûr et légitime ?",
+        "a3": "Oui, Privat Equity est une plateforme de prêt agréée et réglementée. Nous utilisons un cryptage de niveau bancaire, sommes entièrement conformes au RGPD et ne travaillons qu'avec des institutions financières agréées."
+      },
+      "application": {
+        "q1": "Combien de temps prend la demande ?",
+        "a1": "Notre demande en ligne prend environ 5 à 10 minutes à compléter. Vous recevrez une décision préliminaire instantanément, et l'approbation finale prend généralement 24 à 48 heures.",
+        "q2": "Quels documents ai-je besoin ?",
+        "a2": "Vous aurez besoin d'une pièce d'identité valide, d'une preuve de revenu (bulletins de salaire ou déclarations fiscales), de relevés bancaires des 3 derniers mois et d'un justificatif de domicile. Des documents supplémentaires peuvent être demandés selon votre demande.",
+        "q3": "La vérification de mon taux affectera-t-elle mon score de crédit ?",
+        "a3": "Non ! Vérifier votre taux sur Privat Equity utilise une enquête de crédit douce qui n'affecte pas votre score. Une enquête approfondie ne sera effectuée que lorsque vous accepterez formellement une offre de prêt.",
+        "q4": "Puis-je faire une demande si je suis travailleur indépendant ?",
+        "a4": "Oui ! Les travailleurs indépendants sont les bienvenus. Vous devrez fournir des documents supplémentaires tels que des déclarations fiscales, des relevés bancaires professionnels et une preuve d'enregistrement de l'entreprise.",
+        "q5": "Que se passe-t-il si ma demande est refusée ?",
+        "a5": "Si votre demande est refusée, nous vous expliquerons pourquoi et pourrons suggérer des alternatives. Les raisons courantes incluent un revenu insuffisant, un ratio d'endettement élevé ou des problèmes de crédit. Vous pouvez faire une nouvelle demande après avoir résolu ces problèmes."
+      },
+      "rates": {
+        "q1": "Quels taux d'intérêt proposez-vous ?",
+        "a1": "Nos taux commencent à partir de 2,9% TAEG pour les emprunteurs qualifiés. Votre taux spécifique dépend de votre profil de crédit, du montant du prêt, de la durée et du type de prêt.",
+        "q2": "Comment mon taux d'intérêt est-il déterminé ?",
+        "a2": "Les taux d'intérêt sont basés sur votre score de crédit, vos revenus, votre ratio d'endettement, le montant du prêt et la durée. De meilleurs profils de crédit et financiers reçoivent généralement des taux plus bas.",
+        "q3": "Les taux sont-ils fixes ou variables ?",
+        "a3": "Tous nos prêts personnels, crédits auto et crédits travaux ont des taux fixes, ce qui signifie que votre taux et votre mensualité ne changent jamais. Cela offre une prévisibilité tout au long de votre prêt.",
+        "q4": "Quels montants de prêt sont disponibles ?",
+        "a4": "Nous proposons des prêts de 1 000 € à 75 000 € selon le type de prêt. Les prêts personnels vont jusqu'à 75 000 €, tandis que les limites spécifiques peuvent varier selon le produit.",
+        "q5": "Quelles durées de remboursement sont disponibles ?",
+        "a5": "Les durées de remboursement vont de 12 à 84 mois selon le type et le montant du prêt. Des durées plus longues ont des mensualités plus faibles mais plus d'intérêts au total.",
+        "q6": "Y a-t-il des frais ?",
+        "a6": "Nous ne facturons pas de frais de dossier. Certains prêts peuvent avoir des frais d'origination (généralement 1 à 5% du montant du prêt), qui sont clairement divulgués avant d'accepter une offre."
+      },
+      "repayment": {
+        "q1": "Comment effectuer mes paiements ?",
+        "a1": "Les paiements sont automatiquement prélevés sur votre compte bancaire à la date de paiement prévue chaque mois. Vous pouvez également effectuer des paiements manuels via votre compte en ligne.",
+        "q2": "Puis-je changer ma date de paiement ?",
+        "a2": "Oui, contactez notre service client pour demander un changement de date de paiement. Nous travaillerons avec vous pour aligner les paiements sur votre calendrier de revenus.",
+        "q3": "Puis-je rembourser mon prêt par anticipation ?",
+        "a3": "Oui ! Tous nos prêts permettent le remboursement anticipé sans pénalités. Vous économiserez sur les intérêts en remboursant votre prêt avant l'échéance.",
+        "q4": "Que se passe-t-il si je manque un paiement ?",
+        "a4": "Contactez-nous immédiatement si vous ne pouvez pas effectuer un paiement. Nous pourrons peut-être organiser un plan de paiement ou un report temporaire. Manquer des paiements peut entraîner des frais de retard et endommager votre score de crédit.",
+        "q5": "Puis-je augmenter le montant de mon prêt plus tard ?",
+        "a5": "Une fois votre prêt actif, vous ne pouvez pas augmenter le montant. Cependant, après plusieurs paiements à temps, vous pourriez être éligible pour refinancer un montant plus élevé."
+      },
+      "credit": {
+        "q1": "Quel score de crédit ai-je besoin ?",
+        "a1": "Bien que nous préférions des scores supérieurs à 650, nous considérons les demandes de divers profils de crédit. Un score inférieur ne vous disqualifie pas automatiquement - nous évaluons votre situation financière complète.",
+        "q2": "Puis-je faire une demande avec un mauvais crédit ?",
+        "a2": "Oui, nous travaillons avec des emprunteurs de tous profils de crédit. Un mauvais crédit peut entraîner des taux plus élevés ou nécessiter un co-emprunteur, mais de nombreuses options restent disponibles.",
+        "q3": "Acceptez-vous les demandes avec co-emprunteur ?",
+        "a3": "Oui, ajouter un co-emprunteur avec un bon crédit peut améliorer vos chances d'approbation et potentiellement réduire votre taux d'intérêt.",
+        "q4": "Quelle est l'exigence de revenu minimum ?",
+        "a4": "Il n'y a pas de minimum strict, mais vous devez démontrer un revenu suffisant pour couvrir les paiements du prêt. Nous recherchons généralement un ratio d'endettement inférieur à 40%."
+      },
+      "security": {
+        "q1": "Comment mes informations personnelles sont-elles protégées ?",
+        "a1": "Nous utilisons un cryptage SSL 256 bits, la même sécurité utilisée par les banques. Vos données ne sont jamais vendues ou partagées sans votre consentement explicite, et nous sommes entièrement conformes au RGPD.",
+        "q2": "Qui a accès à mes informations ?",
+        "a2": "Seul le personnel autorisé de Privat Equity et nos partenaires financiers (lorsque vous acceptez une offre) ont accès à vos informations. Nous ne vendons jamais vos données à des tiers.",
+        "q3": "Combien de temps conservez-vous mes informations ?",
+        "a3": "Nous conservons vos informations conformément aux exigences légales et à notre politique de confidentialité. Vous pouvez demander la suppression de vos données à tout moment, sous réserve des obligations réglementaires."
+      },
+      "special": {
+        "q1": "Puis-je faire une demande si je suis retraité ?",
+        "a1": "Oui ! Les personnes retraitées avec une pension ou un revenu de retraite peuvent faire une demande. Vous devrez fournir une preuve de votre revenu de retraite.",
+        "q2": "Proposez-vous des prêts aux étudiants ?",
+        "a2": "Les étudiants ayant des emplois à temps partiel ou d'autres sources de revenus peuvent faire une demande. Cependant, les exigences de revenu s'appliquent toujours, et un co-emprunteur peut être bénéfique.",
+        "q3": "Puis-je utiliser un prêt pour créer une entreprise ?",
+        "a3": "Pour les besoins professionnels, nous recommandons notre produit Prêt Entreprise dédié, spécialement conçu pour les entrepreneurs et les propriétaires d'entreprise.",
+        "q4": "Que faire si je traverse un divorce ?",
+        "a4": "Les personnes en cours de divorce peuvent faire une demande, mais vous devrez montrer vos revenus et dettes individuels. Les dettes conjointes sont considérées dans votre calcul de ratio d'endettement."
+      }
+    },
+    "glossary": {
+      "title": "Glossaire du crédit",
+      "subtitle": "Comprenez les termes clés du crédit et du prêt pour prendre des décisions financières éclairées",
+      "searchPlaceholder": "Rechercher des termes...",
+      "noResults": "Aucun terme trouvé correspondant à votre recherche.",
+      "terms": {
+        "apr": {
+          "term": "TAEG (Taux Annuel Effectif Global)",
+          "definition": "Le coût annuel d'un prêt exprimé en pourcentage, incluant les intérêts et les frais. Le TAEG fournit une image complète de ce qu'un prêt vous coûtera sur un an."
+        },
+        "amortization": {
+          "term": "Amortissement",
+          "definition": "Le processus de remboursement d'une dette au fil du temps par des paiements réguliers. Chaque paiement couvre à la fois le capital et les intérêts, avec une proportion changeant au cours de la durée du prêt."
+        },
+        "collateral": {
+          "term": "Garantie",
+          "definition": "Un actif (comme une maison ou une voiture) mis en gage par un emprunteur pour garantir un prêt. Si l'emprunteur fait défaut, le prêteur peut saisir la garantie."
+        },
+        "creditScore": {
+          "term": "Score de crédit",
+          "definition": "Une représentation numérique de votre solvabilité, généralement comprise entre 300 et 850. Des scores plus élevés indiquent un risque plus faible pour les prêteurs et peuvent entraîner de meilleures conditions de prêt."
+        },
+        "consolidation": {
+          "term": "Regroupement de crédits",
+          "definition": "Combiner plusieurs dettes en un seul prêt, souvent avec un taux d'intérêt plus bas ou des conditions plus favorables. Cela simplifie le remboursement et peut réduire les paiements mensuels."
+        },
+        "dti": {
+          "term": "Ratio d'endettement",
+          "definition": "Le pourcentage de votre revenu mensuel brut qui va vers les paiements de dettes. Les prêteurs utilisent ceci pour évaluer votre capacité à gérer les paiements mensuels."
+        },
+        "default": {
+          "term": "Défaut de paiement",
+          "definition": "Le non-remboursement d'un prêt selon les conditions convenues. Faire défaut peut gravement endommager votre score de crédit et peut entraîner des poursuites judiciaires."
+        },
+        "deferment": {
+          "term": "Paiement différé",
+          "definition": "Une caractéristique de prêt permettant aux emprunteurs de reporter les paiements pendant une période spécifiée. Les intérêts peuvent continuer à s'accumuler pendant le report."
+        },
+        "fixedRate": {
+          "term": "Taux d'intérêt fixe",
+          "definition": "Un taux d'intérêt qui reste constant pendant toute la durée du prêt, fournissant des paiements mensuels prévisibles."
+        },
+        "gracePeriod": {
+          "term": "Période de grâce",
+          "definition": "Une période après la date d'échéance d'un paiement pendant laquelle vous pouvez effectuer un paiement sans encourir de frais de retard ou de pénalités."
+        },
+        "guarantor": {
+          "term": "Garant",
+          "definition": "Une personne qui accepte de rembourser un prêt si l'emprunteur principal ne le fait pas. Avoir un garant peut améliorer les chances d'approbation pour ceux qui ont un crédit limité."
+        },
+        "hardInquiry": {
+          "term": "Enquête approfondie",
+          "definition": "Une vérification de crédit effectuée lorsque vous demandez un crédit. Les enquêtes approfondies peuvent temporairement abaisser votre score de crédit et restent sur votre rapport pendant deux ans."
+        },
+        "interestRate": {
+          "term": "Taux d'intérêt",
+          "definition": "Le pourcentage facturé sur le montant principal d'un prêt. C'est le coût d'emprunter de l'argent, généralement exprimé comme un taux annuel."
+        },
+        "loanTerm": {
+          "term": "Durée du prêt",
+          "definition": "La durée pendant laquelle vous devez rembourser un prêt, généralement exprimée en mois ou en années. Des durées plus longues signifient des paiements mensuels plus bas mais plus d'intérêts totaux payés."
+        },
+        "originationFee": {
+          "term": "Frais de dossier",
+          "definition": "Des frais facturés par les prêteurs pour traiter une nouvelle demande de prêt. C'est généralement un pourcentage du montant du prêt."
+        },
+        "preApproval": {
+          "term": "Pré-approbation",
+          "definition": "Une évaluation préliminaire par un prêteur indiquant combien vous pourriez être éligible à emprunter. Ce n'est pas une garantie d'approbation finale mais aide à la planification."
+        },
+        "principal": {
+          "term": "Capital",
+          "definition": "Le montant d'argent emprunté à l'origine, sans inclure les intérêts ou les frais. À mesure que vous effectuez des paiements, le capital diminue."
+        },
+        "refinancing": {
+          "term": "Refinancement",
+          "definition": "Remplacer un prêt existant par un nouveau, généralement pour obtenir de meilleures conditions telles qu'un taux d'intérêt plus bas ou une période de remboursement différente."
+        },
+        "securedLoan": {
+          "term": "Prêt garanti",
+          "definition": "Un prêt adossé à une garantie. Si vous faites défaut, le prêteur peut prendre possession de la garantie. Les exemples incluent les hypothèques et les crédits auto."
+        },
+        "softInquiry": {
+          "term": "Enquête souple",
+          "definition": "Une vérification de crédit qui n'affecte pas votre score de crédit. Celles-ci se produisent lorsque vous vérifiez votre propre crédit ou lorsque les prêteurs vous pré-approuvent pour des offres."
+        },
+        "unsecuredLoan": {
+          "term": "Prêt non garanti",
+          "definition": "Un prêt non adossé à une garantie. Les prêts personnels sont généralement non garantis et peuvent avoir des taux d'intérêt plus élevés en raison du risque accru pour le prêteur."
+        },
+        "variableRate": {
+          "term": "Taux d'intérêt variable",
+          "definition": "Un taux d'intérêt qui peut changer au fil du temps en fonction des conditions du marché. Les paiements mensuels peuvent fluctuer avec les changements de taux."
+        },
+        "borrowingCapacity": {
+          "term": "Capacité d'emprunt",
+          "definition": "Le montant maximum qu'un emprunteur peut raisonnablement se permettre d'emprunter en fonction de ses revenus, dépenses et obligations financières existantes."
+        },
+        "coBorrower": {
+          "term": "Co-emprunteur",
+          "definition": "Une personne qui demande un prêt avec vous et partage la responsabilité égale du remboursement. Les deux scores de crédit et revenus sont considérés."
+        },
+        "borrowerInsurance": {
+          "term": "Assurance emprunteur",
+          "definition": "Une assurance qui couvre les paiements du prêt en cas de décès, d'invalidité ou de perte d'emploi. Souvent optionnelle mais peut fournir une tranquillité d'esprit."
+        },
+        "prepaymentPenalty": {
+          "term": "Pénalité de remboursement anticipé",
+          "definition": "Des frais facturés par certains prêteurs si vous remboursez votre prêt avant la fin de la durée prévue. Chez Privat Equity, nous n'avons pas de pénalités de remboursement anticipé."
+        },
+        "revolvingCredit": {
+          "term": "Prêt renouvelable",
+          "definition": "Un type de crédit où vous pouvez emprunter, rembourser et emprunter à nouveau jusqu'à une limite approuvée. Les cartes de crédit sont des exemples de crédit renouvelable."
+        },
+        "amortizationSchedule": {
+          "term": "Tableau d'amortissement",
+          "definition": "Un calendrier détaillé montrant chaque paiement de prêt, décomposé entre capital et intérêts, sur toute la durée du prêt."
+        },
+        "nominalRate": {
+          "term": "Taux annuel nominal",
+          "definition": "Le taux d'intérêt de base sans inclure les frais supplémentaires, contrairement au TAEG qui inclut tous les coûts."
+        },
+        "interestOnly": {
+          "term": "Franchise",
+          "definition": "La période initiale d'un prêt pendant laquelle vous ne payez que les intérêts, sans rembourser le capital."
+        },
+        "debtRestructuring": {
+          "term": "Restructuration de dette",
+          "definition": "Modification des conditions d'un prêt existant pour rendre les paiements plus gérables, comme prolonger la durée ou réduire le taux d'intérêt."
+        },
+        "affectedCredit": {
+          "term": "Crédit affecté",
+          "definition": "Un prêt lié à l'achat d'un bien ou service spécifique, comme un crédit auto ou un crédit mobilier."
+        },
+        "unaffectedCredit": {
+          "term": "Crédit non affecté",
+          "definition": "Un prêt qui n'est pas lié à un achat spécifique et peut être utilisé à votre discrétion, comme un prêt personnel."
+        }
+      }
+    },
+    "creditGuide": {
+      "title": "Guide du Crédit",
+      "subtitle": "Ressources éducatives pour vous aider à prendre des décisions d'emprunt éclairées",
+      "articles": {
+        "choosingLoan": {
+          "title": "Comment choisir le bon prêt pour vos besoins",
+          "content": "Choisir le bon prêt nécessite une attention particulière à votre situation financière, vos objectifs et votre capacité de remboursement. Commencez par identifier votre besoin spécifique - s'agit-il d'un rachat de crédit, d'un achat important, de travaux ou d'un investissement professionnel ? Chaque objectif peut être mieux adapté à différents types de prêts.\n\nRéfléchissez au montant dont vous avez réellement besoin. Emprunter trop peu signifie que vous pourriez avoir besoin d'un financement supplémentaire plus tard ; emprunter trop augmente les coûts inutilement. Créez un budget détaillé montrant exactement comment vous utiliserez les fonds.\n\nComparez les taux d'intérêt chez plusieurs prêteurs, mais rappelez-vous que le TAEG (Taux Annuel Effectif Global) est plus important que le taux d'intérêt de base car il inclut les frais. Les taux fixes offrent une stabilité de paiement, tandis que les taux variables peuvent commencer plus bas mais comportent un risque d'augmentation.\n\nÉvaluez attentivement les conditions de remboursement. Des durées plus courtes signifient des mensualités plus élevées mais des coûts d'intérêt totaux plus faibles. Des durées plus longues réduisent les mensualités mais augmentent considérablement le montant total payé. Choisissez une durée qui équilibre l'accessibilité avec la minimisation des intérêts.\n\nVérifiez les frais, notamment les frais de dossier, les pénalités de remboursement anticipé, les frais de retard et les frais annuels. Certains prêts affichent des taux bas mais ont des frais élevés qui augmentent le coût réel.\n\nConsidérez votre score de crédit de manière réaliste. Si votre score est inférieur à 650, vous pourriez faire face à des taux plus élevés ou avoir besoin d'un co-emprunteur. Améliorer votre crédit avant de faire une demande peut vous faire économiser des milliers d'euros en intérêts.\n\nEnfin, lisez les petits caractères. Comprenez tous les termes, conditions et vos obligations avant de signer. Ne vous sentez jamais pressé d'accepter une offre - les prêteurs légitimes vous donnent le temps d'examiner et de décider."
+        },
+        "debtRatio": {
+          "title": "Comprendre et calculer votre taux d'endettement",
+          "content": "Votre taux d'endettement est l'un des facteurs les plus importants que les prêteurs considèrent lors de l'évaluation de votre demande de prêt. Il mesure quel pourcentage de votre revenu mensuel brut est consacré aux paiements de dettes, indiquant votre capacité à gérer les mensualités.\n\nPour calculer votre taux d'endettement, déterminez d'abord vos paiements mensuels de dettes totaux. Incluez les paiements minimums de cartes de crédit, les remboursements de prêts personnels, les crédits auto, les prêts étudiants, le loyer ou l'hypothèque, et toute autre obligation de dette récurrente. N'incluez pas les services publics, l'épicerie ou les assurances sauf s'ils font partie d'un plan de paiement.\n\nEnsuite, calculez votre revenu mensuel brut (avant impôts). Incluez le salaire, les primes, les commissions, les revenus locatifs, la pension alimentaire, la pension pour enfants et toute autre source de revenu régulière.\n\nDivisez les paiements mensuels de dettes totaux par le revenu mensuel brut, puis multipliez par 100 pour obtenir votre pourcentage. Par exemple : 1 200 € de paiements de dettes ÷ 4 000 € de revenu brut = 0,30 ou 30% de taux d'endettement.\n\nLa plupart des prêteurs préfèrent un taux d'endettement inférieur à 36%, avec pas plus de 28% consacré aux frais de logement. Vous pouvez toujours être qualifié avec un taux d'endettement allant jusqu'à 43-45%, mais vous ferez probablement face à des taux d'intérêt plus élevés. Au-dessus de 45%, l'approbation devient très difficile.\n\nPour améliorer votre taux d'endettement, vous pouvez augmenter vos revenus par des augmentations, des emplois secondaires ou des primes, ou réduire vos dettes en remboursant les soldes, en consolidant les dettes à taux d'intérêt élevé ou en évitant de nouvelles dettes. Parfois, reporter une demande de prêt tout en améliorant votre taux d'endettement aboutit à de bien meilleures conditions.\n\nLors d'une demande de nouveau prêt, les prêteurs calculent le taux d'endettement en incluant le nouveau paiement proposé. Assurez-vous de pouvoir confortablement vous permettre ce paiement combiné tout en maintenant une épargne d'urgence et une qualité de vie."
+        },
+        "comparingOffers": {
+          "title": "Comment comparer efficacement les offres de prêt",
+          "content": "Comparer les offres de prêt nécessite de regarder au-delà du taux d'intérêt annoncé. Utilisez ces stratégies pour prendre une décision éclairée :\n\nD'abord, concentrez-vous sur le TAEG (Taux Annuel Effectif Global) plutôt que sur le seul taux d'intérêt. Le TAEG inclut les frais de dossier, les frais de traitement et autres coûts, vous donnant le véritable coût annuel de l'emprunt. Un prêt avec un taux d'intérêt de 5% mais 5% de frais de dossier pourrait avoir un TAEG de 7%, le rendant plus cher qu'un prêt à 6% sans frais.\n\nComparez les coûts totaux du prêt en multipliant votre mensualité par le nombre de paiements. Un prêt de 10 000 € à 5% TAEG sur 36 mois coûte 299 €/mois (10 764 € au total), tandis que le même prêt à 7% TAEG coûte 308 €/mois (11 088 € au total) - une différence de 324 €.\n\nExaminez attentivement tous les frais. Les frais courants incluent les frais de dossier (généralement 1-6% du montant du prêt), les frais de demande, les pénalités de remboursement anticipé, les frais de retard et les frais de traitement de chèque. Certains prêteurs ne facturent pas de frais mais ont des taux plus élevés, tandis que d'autres font l'inverse.\n\nVérifiez la flexibilité de remboursement. Pouvez-vous effectuer des paiements supplémentaires sans pénalité ? Pouvez-vous modifier votre date de paiement ? Y a-t-il un délai de grâce pour les paiements en retard ? Ces caractéristiques comptent lorsque les circonstances de la vie changent.\n\nLisez les avis et recherchez la réputation du prêteur. Vérifiez auprès du Better Business Bureau, des sites web de finances personnelles et des réseaux sociaux. Méfiez-vous des prêteurs avec des plaintes concernant des frais cachés, un mauvais service client ou des pratiques de recouvrement agressives.\n\nVérifiez les références du prêteur. Assurez-vous qu'ils sont correctement agréés en France et conformes aux lois de protection des consommateurs. Les prêteurs légitimes divulguent clairement tous les termes et ne vous pressent jamais de signer immédiatement.\n\nEnfin, obtenez tout par écrit. Comparez les offres de prêt écrites côte à côte, y compris le TAEG, la mensualité, le coût total, les frais et les conditions. Prenez le temps d'examiner - ne signez jamais sous pression."
+        },
+        "earlyRepayment": {
+          "title": "La vérité sur le remboursement anticipé des prêts",
+          "content": "Rembourser un prêt par anticipation peut économiser beaucoup d'intérêts, mais ce n'est pas toujours la meilleure décision financière. Comprendre les implications vous aide à faire le bon choix.\n\nLa plupart des prêts personnels utilisent un intérêt simple calculé quotidiennement sur le solde restant. Payer tôt ou effectuer des paiements supplémentaires réduit le capital plus rapidement, ce qui réduit les intérêts accumulés. Par exemple, ajouter 100 €/mois à un prêt de 10 000 € à 6% TAEG peut économiser plus de 500 € en intérêts et réduire de plusieurs mois votre remboursement.\n\nCependant, vérifiez d'abord les pénalités de remboursement anticipé. Bien qu'elles soient de plus en plus rares sur les prêts personnels, certains prêteurs facturent des frais (généralement 2-5% du solde restant) si vous remboursez le prêt dans les premières 1-3 années. Ces frais pourraient éliminer vos économies d'intérêts, rendant le remboursement anticipé inutile.\n\nConsidérez le coût d'opportunité avant d'effectuer des paiements supplémentaires. Si votre taux de prêt est de 5% mais que vous pourriez gagner 8% en investissant cet argent, vous pourriez être mieux servi en effectuant des paiements minimums et en investissant la différence. Cela est particulièrement vrai si votre employeur abonde vos cotisations de retraite - c'est de l'argent gratuit que vous ne devriez pas manquer.\n\nNe priorisez pas le remboursement du prêt au détriment de l'épargne d'urgence. Les experts financiers recommandent 3-6 mois de dépenses en épargne facilement accessible avant de rembourser agressivement des dettes à faible taux d'intérêt. Sans fonds d'urgence, vous pourriez avoir besoin de contracter des dettes à taux d'intérêt élevé lors d'une crise.\n\nConcentrez les paiements supplémentaires d'abord sur les dettes à taux d'intérêt élevé. Si vous avez un prêt personnel à 6% et des cartes de crédit à 20%, payez les minimums sur le prêt et attaquez les cartes de crédit. Cette 'méthode avalanche' économise le plus d'argent.\n\nRembourser les prêts par anticipation améliore votre score de crédit en réduisant votre utilisation du crédit et votre taux d'endettement, ce qui aide si vous prévoyez demander une hypothèque ou un autre prêt important bientôt.\n\nCalculez vos économies exactes en utilisant un calculateur de remboursement anticipé avant de décider. Parfois, les économies sont minimes, tandis que d'autres fois elles sont substantielles."
+        },
+        "buildingCredit": {
+          "title": "Construire et maintenir un bon crédit",
+          "content": "Votre score de crédit impacte tous les aspects financiers de votre vie - approbations de prêts, taux d'intérêt, demandes de logement et même l'emploi. Comprendre comment construire et maintenir un bon crédit est essentiel pour la réussite financière.\n\nLes scores de crédit vont de 300 à 850. Les scores supérieurs à 750 sont excellents, 700-749 est bon, 650-699 est correct, 600-649 est faible et en dessous de 600 est très faible. La formule exacte du score est propriétaire, mais nous connaissons les facteurs clés.\n\nL'historique de paiement représente 35% de votre score. Ne manquez jamais de paiements - même un seul paiement en retard de 30 jours peut faire chuter votre score de plus de 100 points. Configurez des paiements automatiques ou des rappels de calendrier pour toutes les dettes. Si vous manquez un paiement, payez-le immédiatement et contactez le créancier - ils acceptent parfois de ne pas le signaler si vous avez un bon historique.\n\nL'utilisation du crédit (montants dus) représente 30% de votre score. Maintenez les soldes de cartes de crédit en dessous de 30% des limites, idéalement en dessous de 10%. Remboursez les soldes plutôt que de déplacer la dette. Une utilisation élevée signale un stress financier même si vous payez à temps.\n\nLa durée de l'historique de crédit contribue à 15%. Gardez les anciens comptes ouverts même si vous ne les utilisez pas, car ils établissent la profondeur de votre historique de crédit. L'âge moyen de vos comptes compte considérablement.\n\nLe mix de crédit représente 10%. Avoir différents types de crédit (cartes de crédit, prêts à tempérament, hypothèque) montre que vous pouvez gérer diverses obligations, bien que vous ne devriez pas contracter de dettes juste pour le mix.\n\nLes nouvelles enquêtes de crédit représentent 10%. Chaque enquête approfondie (lorsque vous demandez un crédit) peut faire chuter votre score de 5 à 10 points temporairement. La recherche de taux pour les hypothèques ou les crédits auto dans les 14-45 jours compte comme une seule enquête, donc consolidez les périodes de recherche.\n\nPour construire un crédit à partir de zéro, commencez par une carte de crédit sécurisée, devenez utilisateur autorisé sur le compte d'une personne responsable, ou obtenez un prêt de construction de crédit. Effectuez de petits achats et payez intégralement chaque mois.\n\nSurveillez régulièrement votre crédit via des rapports annuels gratuits. Contestez immédiatement toute erreur, car les erreurs sont courantes et peuvent nuire considérablement à votre score.\n\nÉvitez les arnaques de réparation de crédit. Personne ne peut légalement supprimer des informations négatives précises, et contester des éléments précis fait perdre du temps et de l'argent."
+        }
+      }
+    }
+  },
   "nav": {
     "particuliers": "Particuliers",
     "professionnels": "Professionnels",
