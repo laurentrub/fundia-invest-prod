@@ -93,9 +93,43 @@ const handler = async (req: Request): Promise<Response> => {
     console.log("Sending document request email to:", clientEmail);
     console.log("Documents requested:", documents);
 
+    // Get the loan request to get user_id
+    const { data: loanRequest, error: loanError } = await supabaseAdmin
+      .from("loan_requests")
+      .select("user_id")
+      .eq("id", requestId)
+      .single();
+
+    if (loanError || !loanRequest) {
+      console.error("Loan request not found:", loanError);
+      return new Response(JSON.stringify({ error: "Loan request not found" }), {
+        status: 404,
+        headers: { "Content-Type": "application/json", ...corsHeaders },
+      });
+    }
+
+    // Create document request records in the database
+    const documentRequestRecords = documents.map((doc: string) => ({
+      loan_request_id: requestId,
+      user_id: loanRequest.user_id,
+      document_type: doc,
+      status: "pending",
+      requested_by: user.id,
+      custom_message: customMessage || null,
+    }));
+
+    const { error: insertError } = await supabaseAdmin
+      .from("document_requests")
+      .insert(documentRequestRecords);
+
+    if (insertError) {
+      console.error("Error creating document requests:", insertError);
+      // Continue with email even if DB insert fails
+    }
+
     // Build document list HTML with escaped content
     const documentListHtml = documents
-      .map((doc) => `<li style="margin-bottom: 8px;">${escapeHtml(doc)}</li>`)
+      .map((doc: string) => `<li style="margin-bottom: 8px;">${escapeHtml(doc)}</li>`)
       .join("");
 
     const customMessageHtml = customMessage

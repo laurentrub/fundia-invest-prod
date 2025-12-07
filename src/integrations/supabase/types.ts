@@ -58,6 +58,62 @@ export type Database = {
           },
         ]
       }
+      document_requests: {
+        Row: {
+          custom_message: string | null
+          document_type: string
+          file_path: string | null
+          id: string
+          loan_request_id: string
+          rejected_at: string | null
+          rejection_reason: string | null
+          requested_at: string
+          requested_by: string
+          status: string
+          submitted_at: string | null
+          user_id: string
+          validated_at: string | null
+        }
+        Insert: {
+          custom_message?: string | null
+          document_type: string
+          file_path?: string | null
+          id?: string
+          loan_request_id: string
+          rejected_at?: string | null
+          rejection_reason?: string | null
+          requested_at?: string
+          requested_by: string
+          status?: string
+          submitted_at?: string | null
+          user_id: string
+          validated_at?: string | null
+        }
+        Update: {
+          custom_message?: string | null
+          document_type?: string
+          file_path?: string | null
+          id?: string
+          loan_request_id?: string
+          rejected_at?: string | null
+          rejection_reason?: string | null
+          requested_at?: string
+          requested_by?: string
+          status?: string
+          submitted_at?: string | null
+          user_id?: string
+          validated_at?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "document_requests_loan_request_id_fkey"
+            columns: ["loan_request_id"]
+            isOneToOne: false
+            referencedRelation: "loan_requests"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       loan_requests: {
         Row: {
           amount: number

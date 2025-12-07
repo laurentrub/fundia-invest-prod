@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '@/hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
-import { User, FileText, FolderOpen, LogOut, Lock, FileSignature, ChevronRight } from 'lucide-react';
+import { User, FileText, FolderOpen, LogOut, Lock, FileSignature, ChevronRight, AlertCircle } from 'lucide-react';
 import {
   Accordion,
   AccordionContent,
@@ -48,6 +48,7 @@ export function ProfileSidebar({ activeSection, onSectionChange, userName, userE
       icon: FileText,
       subItems: [
         { id: 'requests', label: 'Demandes de crédit', icon: FileText },
+        { id: 'requested-docs', label: 'Documents demandés', icon: AlertCircle },
         { id: 'contracts', label: 'Mes contrats', icon: FileSignature },
       ],
     },
@@ -61,7 +62,7 @@ export function ProfileSidebar({ activeSection, onSectionChange, userName, userE
 
   const getDefaultOpen = () => {
     if (['info', 'password'].includes(activeSection)) return 'info-group';
-    if (['requests', 'contracts'].includes(activeSection)) return 'requests-group';
+    if (['requests', 'contracts', 'requested-docs'].includes(activeSection)) return 'requests-group';
     return '';
   };
 

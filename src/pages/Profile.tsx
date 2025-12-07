@@ -24,6 +24,7 @@ import {
 import { UserContracts } from '@/components/profile/UserContracts';
 import { ProfileSidebar } from '@/components/profile/ProfileSidebar';
 import { UserDocuments } from '@/components/profile/UserDocuments';
+import { RequestedDocuments } from '@/components/profile/RequestedDocuments';
 
 interface LoanRequest {
   id: string;
@@ -392,6 +393,9 @@ export default function Profile() {
 
       case 'documents':
         return <UserDocuments />;
+
+      case 'requested-docs':
+        return <RequestedDocuments />;
 
       default:
         return null;
