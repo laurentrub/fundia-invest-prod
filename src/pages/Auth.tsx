@@ -6,17 +6,23 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Alert, AlertDescription } from '@/components/ui/alert';
 import { toast } from 'sonner';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
+import { FileText } from 'lucide-react';
 
 export default function Auth() {
   const { t } = useTranslation();
   const { signIn, signUp, resetPassword, user } = useAuth();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const [loading, setLoading] = useState(false);
   const [resetEmailSent, setResetEmailSent] = useState(false);
+  
+  const redirectTo = searchParams.get('redirect');
+  const isFromApplication = redirectTo === '/apply';
 
   // Redirect if already logged in
   useEffect(() => {
@@ -97,10 +103,20 @@ export default function Auth() {
       <main className="flex-1 flex items-center justify-center py-12 px-4">
         <Card className="w-full max-w-md">
           <CardHeader>
-            <CardTitle>{t('auth.welcome')}</CardTitle>
+            <CardTitle>
+              {isFromApplication ? t('auth.fromApplicationTitle') : t('auth.welcome')}
+            </CardTitle>
             <CardDescription>
-              {t('auth.description')}
+              {isFromApplication ? t('auth.fromApplicationDescription') : t('auth.description')}
             </CardDescription>
+            {isFromApplication && (
+              <Alert className="mt-4 bg-accent/10 border-accent">
+                <FileText className="h-4 w-4 text-accent" />
+                <AlertDescription className="text-sm">
+                  {t('auth.fromApplicationDescription')}
+                </AlertDescription>
+              </Alert>
+            )}
           </CardHeader>
           <CardContent>
             {!showResetPassword ? (

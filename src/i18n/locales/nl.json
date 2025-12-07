@@ -459,6 +459,8 @@
   "auth": {
     "welcome": "Welkom",
     "description": "Meld u aan of maak een account om uw kredietaanvragen te beheren",
+    "fromApplicationTitle": "Voltooi uw aanvraag",
+    "fromApplicationDescription": "Meld u aan of maak een account om uw kredietaanvraag in te dienen. Uw gegevens zijn opgeslagen.",
     "login": "Aanmelden",
     "signup": "Registreren",
     "email": "E-mail",

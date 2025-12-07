@@ -648,6 +648,8 @@
   "auth": {
     "welcome": "Willkommen",
     "description": "Melden Sie sich an oder erstellen Sie ein Konto, um Ihre Kreditanträge zu verwalten",
+    "fromApplicationTitle": "Schließen Sie Ihren Antrag ab",
+    "fromApplicationDescription": "Melden Sie sich an oder erstellen Sie ein Konto, um Ihren Kreditantrag einzureichen. Ihre Daten wurden gespeichert.",
     "login": "Anmelden",
     "signup": "Registrieren",
     "email": "E-Mail",

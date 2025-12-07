@@ -459,6 +459,8 @@
   "auth": {
     "welcome": "Dobrodošli",
     "description": "Prijavite se ili kreirajte račun za upravljanje zahtjevima za kredit",
+    "fromApplicationTitle": "Dovršite svoj zahtjev",
+    "fromApplicationDescription": "Prijavite se ili kreirajte račun za podnošenje zahtjeva za kredit. Vaši podaci su spremljeni.",
     "login": "Prijava",
     "signup": "Registracija",
     "email": "E-mail",

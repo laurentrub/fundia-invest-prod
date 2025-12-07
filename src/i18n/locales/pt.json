@@ -534,6 +534,8 @@
   "auth": {
     "welcome": "Bem-vindo",
     "description": "Inicie sessão ou crie uma conta para gerir os seus pedidos de crédito",
+    "fromApplicationTitle": "Finalize o seu pedido",
+    "fromApplicationDescription": "Inicie sessão ou crie uma conta para submeter o seu pedido de crédito. Os seus dados foram guardados.",
     "login": "Iniciar sessão",
     "signup": "Registar",
     "email": "Email",

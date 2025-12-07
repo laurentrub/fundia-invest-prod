@@ -756,6 +756,8 @@
   "auth": {
     "welcome": "Bienvenue",
     "description": "Connectez-vous ou créez un compte pour gérer vos demandes de crédit",
+    "fromApplicationTitle": "Finalisez votre demande",
+    "fromApplicationDescription": "Connectez-vous ou créez un compte pour soumettre votre demande de crédit. Vos informations ont été sauvegardées.",
     "login": "Connexion",
     "signup": "Inscription",
     "email": "Email",

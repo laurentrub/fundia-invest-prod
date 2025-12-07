@@ -648,6 +648,8 @@
   "auth": {
     "welcome": "Bienvenido",
     "description": "Inicie sesión o cree una cuenta para gestionar sus solicitudes de crédito",
+    "fromApplicationTitle": "Finalice su solicitud",
+    "fromApplicationDescription": "Inicie sesión o cree una cuenta para enviar su solicitud de crédito. Su información ha sido guardada.",
     "login": "Iniciar sesión",
     "signup": "Registrarse",
     "email": "Email",
