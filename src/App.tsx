@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { AuthProvider } from "@/hooks/useAuth";
+import ErrorBoundary from "./components/ErrorBoundary";
 import Index from "./pages/Index";
 import PersonalLoan from "./pages/PersonalLoan";
 import AutoLoan from "./pages/AutoLoan";
@@ -40,6 +41,7 @@ import TeamManagement from "./pages/admin/TeamManagement";
 const queryClient = new QueryClient();
 
 const App = () => (
+  <ErrorBoundary>
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
@@ -87,6 +89,7 @@ const App = () => (
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
+  </ErrorBoundary>
 );
 
 export default App;
