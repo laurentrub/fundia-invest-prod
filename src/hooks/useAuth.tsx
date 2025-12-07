@@ -87,13 +87,27 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const signIn = async (email: string, password: string) => {
-    const { error } = await supabase.auth.signInWithPassword({
+    const { data, error } = await supabase.auth.signInWithPassword({
       email,
       password,
     });
     
-    if (!error) {
-      navigate('/');
+    if (!error && data.user) {
+      // Check if user has admin or manager role
+      const { data: roleData } = await supabase
+        .from('user_roles')
+        .select('role')
+        .eq('user_id', data.user.id);
+      
+      const hasAdminAccess = roleData?.some(
+        (r) => r.role === 'admin' || r.role === 'manager'
+      );
+      
+      if (hasAdminAccess) {
+        navigate('/admin');
+      } else {
+        navigate('/');
+      }
     }
     
     return { error };
