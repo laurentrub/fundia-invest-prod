@@ -99,7 +99,7 @@ export default function Auth() {
           <CardHeader>
             <CardTitle>{t('auth.welcome')}</CardTitle>
             <CardDescription>
-              {t('auth.subtitle')}
+              {t('auth.description')}
             </CardDescription>
           </CardHeader>
           <CardContent>
