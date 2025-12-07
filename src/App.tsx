@@ -35,6 +35,7 @@ import AdminDashboard from "./pages/admin/AdminDashboard";
 import RequestsList from "./pages/admin/RequestsList";
 import RequestDetail from "./pages/admin/RequestDetail";
 import Documents from "./pages/admin/Documents";
+import ClientDocuments from "./pages/admin/ClientDocuments";
 import Settings from "./pages/admin/Settings";
 import TeamManagement from "./pages/admin/TeamManagement";
 
@@ -66,6 +67,7 @@ const App = () => (
               <Route path="requests" element={<RequestsList />} />
               <Route path="requests/:id" element={<RequestDetail />} />
               <Route path="documents" element={<Documents />} />
+              <Route path="client-documents" element={<ClientDocuments />} />
               <Route path="team" element={<TeamManagement />} />
               <Route path="settings" element={<Settings />} />
             </Route>
