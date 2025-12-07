@@ -7,8 +7,8 @@ interface AuthContextType {
   user: User | null;
   session: Session | null;
   isAdmin: boolean;
-  signUp: (email: string, password: string, firstName: string, lastName: string) => Promise<{ error: any }>;
-  signIn: (email: string, password: string) => Promise<{ error: any }>;
+  signUp: (email: string, password: string, firstName: string, lastName: string, redirectTo?: string) => Promise<{ error: any }>;
+  signIn: (email: string, password: string, redirectTo?: string) => Promise<{ error: any }>;
   signOut: () => Promise<void>;
   resetPassword: (email: string) => Promise<{ error: any }>;
   updatePassword: (newPassword: string) => Promise<{ error: any }>;
@@ -64,7 +64,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setIsAdmin(!!data);
   };
 
-  const signUp = async (email: string, password: string, firstName: string, lastName: string) => {
+  const signUp = async (email: string, password: string, firstName: string, lastName: string, redirectTo?: string) => {
     const redirectUrl = `${window.location.origin}/`;
     
     const { error } = await supabase.auth.signUp({
@@ -80,19 +80,25 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     });
     
     if (!error) {
-      navigate('/');
+      navigate(redirectTo || '/');
     }
     
     return { error };
   };
 
-  const signIn = async (email: string, password: string) => {
+  const signIn = async (email: string, password: string, redirectTo?: string) => {
     const { data, error } = await supabase.auth.signInWithPassword({
       email,
       password,
     });
     
     if (!error && data.user) {
+      // Check for pending redirect (from application form)
+      if (redirectTo) {
+        navigate(redirectTo);
+        return { error };
+      }
+      
       // Check if user has admin or manager role
       const { data: roleData } = await supabase
         .from('user_roles')

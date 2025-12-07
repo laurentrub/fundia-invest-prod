@@ -27,9 +27,10 @@ export default function Auth() {
   // Redirect if already logged in
   useEffect(() => {
     if (user) {
-      navigate('/');
+      // Redirect to the original destination or home
+      navigate(redirectTo || '/');
     }
-  }, [user, navigate]);
+  }, [user, navigate, redirectTo]);
 
   const [loginData, setLoginData] = useState({
     email: '',
@@ -50,7 +51,7 @@ export default function Auth() {
     e.preventDefault();
     setLoading(true);
 
-    const { error } = await signIn(loginData.email, loginData.password);
+    const { error } = await signIn(loginData.email, loginData.password, redirectTo || undefined);
 
     if (error) {
       toast.error(error.message);
@@ -69,7 +70,8 @@ export default function Auth() {
       signupData.email,
       signupData.password,
       signupData.firstName,
-      signupData.lastName
+      signupData.lastName,
+      redirectTo || undefined
     );
 
     if (error) {
