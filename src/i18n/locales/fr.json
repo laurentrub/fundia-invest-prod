@@ -1485,7 +1485,27 @@
       "noteError": "Erreur lors de l'opération",
       "emailFeature": "Fonctionnalité email à venir",
       "requestDocumentsFeature": "Fonctionnalité demande de justificatif à venir",
-      "generateContractFeature": "Fonctionnalité génération de contrat à venir"
+      "generateContractFeature": "Fonctionnalité génération de contrat à venir",
+      "documentRequestSent": "Demande de justificatifs envoyée avec succès",
+      "documentRequestError": "Erreur lors de l'envoi de la demande"
+    },
+    "documentRequest": {
+      "title": "Demande de justificatifs",
+      "description": "Sélectionnez les documents à demander à {name}",
+      "selectDocuments": "Documents à demander",
+      "customMessage": "Message personnalisé (optionnel)",
+      "customMessagePlaceholder": "Ajoutez un message personnalisé pour le client...",
+      "send": "Envoyer la demande",
+      "documents": {
+        "idCard": "Pièce d'identité",
+        "proofOfIncome": "Justificatif de revenus",
+        "bankStatements": "Relevés bancaires (3 derniers mois)",
+        "taxReturn": "Avis d'imposition",
+        "proofOfAddress": "Justificatif de domicile",
+        "employmentContract": "Contrat de travail",
+        "businessRegistration": "Extrait Kbis / Immatriculation",
+        "other": "Autre document"
+      }
     }
   }
 }

@@ -7,6 +7,7 @@ import { StatusHistory } from '@/components/admin/StatusHistory';
 import { RequestNotes } from '@/components/admin/RequestNotes';
 import { QuickActions } from '@/components/admin/QuickActions';
 import { StatusChangeModal } from '@/components/admin/StatusChangeModal';
+import { DocumentRequestModal } from '@/components/admin/DocumentRequestModal';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -84,6 +85,7 @@ export default function RequestDetail() {
   const [notes, setNotes] = useState<Note[]>([]);
   const [loading, setLoading] = useState(true);
   const [statusModalOpen, setStatusModalOpen] = useState(false);
+  const [documentModalOpen, setDocumentModalOpen] = useState(false);
 
   useEffect(() => {
     if (id) {
@@ -260,6 +262,30 @@ export default function RequestDetail() {
     }
   };
 
+  const handleDocumentRequest = async (documents: string[], customMessage: string) => {
+    if (!request) return;
+
+    try {
+      const { error } = await supabase.functions.invoke('send-document-request', {
+        body: {
+          requestId: request.id,
+          clientEmail: request.email,
+          clientName: `${request.first_name} ${request.last_name}`,
+          documents,
+          customMessage,
+        },
+      });
+
+      if (error) throw error;
+
+      toast.success(t('admin.messages.documentRequestSent'));
+      fetchHistory();
+    } catch (error: any) {
+      console.error('Document request error:', error);
+      toast.error(t('admin.messages.documentRequestError'));
+    }
+  };
+
   const getLoanTypeLabel = (type: string) => {
     const types: Record<string, string> = {
       personal: t('dashboard.loanTypes.personal'),
@@ -428,9 +454,7 @@ export default function RequestDetail() {
             onSendEmail={() => {
               toast.info(t('admin.messages.emailFeature'));
             }}
-            onRequestDocuments={() => {
-              toast.info(t('admin.messages.requestDocumentsFeature'));
-            }}
+            onRequestDocuments={() => setDocumentModalOpen(true)}
             onGenerateContract={() => {
               toast.info(t('admin.messages.generateContractFeature'));
             }}
@@ -444,6 +468,14 @@ export default function RequestDetail() {
         onOpenChange={setStatusModalOpen}
         currentStatus={request.status}
         onSubmit={handleStatusChange}
+      />
+
+      {/* Document request modal */}
+      <DocumentRequestModal
+        open={documentModalOpen}
+        onOpenChange={setDocumentModalOpen}
+        onSubmit={handleDocumentRequest}
+        clientName={`${request.first_name} ${request.last_name}`}
       />
     </div>
   );
