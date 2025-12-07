@@ -281,10 +281,18 @@
   },
   "home": {
     "hero": {
-      "title": "Solutions de Crédit Sur Mesure",
-      "subtitle": "Réalisez vos projets avec nos solutions de financement adaptées à vos besoins. Simulation gratuite et réponse rapide.",
-      "simulateButton": "Simuler mon crédit",
-      "applyButton": "Faire une demande"
+      "title": "Obtenez votre financement en ligne",
+      "subtitle": "Crédits pour particuliers, entreprises et projets innovants. Des solutions rapides, transparentes et adaptées à vos besoins.",
+      "description": "Simulez votre prêt et recevez une réponse préliminaire en quelques minutes. Sans engagement, 100 % sécurisé.",
+      "applyButton": "Demander un crédit",
+      "projectButton": "Financer mon projet",
+      "simulateButton": "Simuler mon crédit"
+    },
+    "trustIndicators": {
+      "clients": "Clients satisfaits",
+      "loansGranted": "Prêts accordés",
+      "satisfactionRate": "Taux de satisfaction",
+      "approvalTime": "Temps d'approbation moyen"
     },
     "features": {
       "title": "Pourquoi nous choisir ?",
@@ -300,6 +308,10 @@
         "title": "100% sécurisé",
         "description": "Vos données sont protégées"
       }
+    },
+    "featuresSection": {
+      "title": "Pourquoi choisir Privat Equity ?",
+      "subtitle": "Nous combinons technologie de pointe et service personnalisé pour rendre l'emprunt simple, rapide et transparent."
     },
     "products": {
       "title": "Nos Solutions de Crédit",
@@ -320,25 +332,75 @@
         "description": "Simplifiez vos remboursements"
       }
     },
+    "productsSection": {
+      "title": "Nos produits de crédit",
+      "subtitle": "Quel que soit votre projet, nous avons une solution de financement adaptée à vos besoins.",
+      "learnMore": "En savoir plus & Simuler"
+    },
     "howItWorks": {
       "title": "Comment ça marche ?",
+      "subtitle": "Un processus simple et rapide en 4 étapes pour obtenir votre financement",
       "step1": {
-        "title": "1. Simulez",
-        "description": "Utilisez notre simulateur gratuit"
+        "title": "Simulez votre crédit",
+        "description": "Utilisez notre calculateur pour estimer vos mensualités en quelques secondes"
       },
       "step2": {
-        "title": "2. Déposez votre demande",
-        "description": "Complétez le formulaire en ligne"
+        "title": "Soumettez votre demande",
+        "description": "Remplissez notre formulaire en ligne sécurisé en moins de 5 minutes"
       },
       "step3": {
-        "title": "3. Recevez votre offre",
-        "description": "Réponse sous 48h maximum"
+        "title": "Recevez une réponse instantanée",
+        "description": "Notre système vous donne une réponse préliminaire immédiate"
+      },
+      "step4": {
+        "title": "Obtenez vos fonds",
+        "description": "Une fois approuvé, recevez votre argent sous 48h sur votre compte"
+      },
+      "startNow": "Commencer maintenant"
+    },
+    "mission": {
+      "title": "Notre mission",
+      "statement": "Rendre le financement simple, accessible et sécurisé pour tous.",
+      "accessibility": {
+        "title": "Accessibilité",
+        "description": "Des solutions de financement ouvertes à tous, avec des processus simplifiés et transparents."
+      },
+      "trust": {
+        "title": "Confiance",
+        "description": "Sécurité maximale de vos données et accompagnement personnalisé à chaque étape."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Technologie de pointe pour des décisions rapides et des taux compétitifs."
       }
     },
+    "successStories": {
+      "title": "Ils ont réalisé leurs projets avec nous",
+      "subtitle": "Des milliers de clients nous font confiance pour financer leurs projets de vie",
+      "story1": {
+        "type": "Crédit Auto",
+        "quote": "Nous avons obtenu notre crédit auto en 24h ! Le processus était simple et l'équipe très professionnelle. Nous recommandons vivement Privat Equity.",
+        "name": "Marie & Luc",
+        "location": "Lyon - Crédit de 22 000€"
+      },
+      "story2": {
+        "type": "Prêt Personnel",
+        "quote": "Service exceptionnel du début à la fin. Les conseillers ont pris le temps de comprendre mes besoins et m'ont proposé la meilleure solution. Merci !",
+        "name": "Ahmed K.",
+        "location": "Paris - Crédit de 15 000€"
+      }
+    },
+    "faqSection": {
+      "title": "Questions fréquemment posées",
+      "viewAll": "Voir la FAQ complète"
+    },
+    "partners": {
+      "title": "Approuvé par les principales institutions financières"
+    },
     "cta": {
-      "title": "Prêt à concrétiser votre projet ?",
-      "description": "Faites une simulation gratuite et sans engagement",
-      "button": "Commencer"
+      "title": "Prêt à commencer ?",
+      "description": "Rejoignez des milliers de clients satisfaits qui ont choisi Privat Equity pour leurs besoins de financement.",
+      "button": "Demander maintenant - Approbation instantanée"
     },
     "indexFeatures": {
       "fastApproval": "Approbation rapide",
@@ -471,16 +533,18 @@
     "subtitle": "Plus de 50 000 clients nous font confiance pour leurs projets de financement"
   },
   "simulator": {
-    "title": "Calculateur de prêt",
+    "title": "Simulateur de crédit",
     "amount": "Montant du prêt",
-    "duration": "Durée du prêt",
+    "duration": "Durée",
     "months": "mois",
     "monthly": "Mensualité",
+    "monthlyPayment": "Mensualité",
     "month": "mois",
     "totalCost": "Coût total",
     "rate": "Taux d'intérêt",
-    "getApproval": "Obtenir une approbation",
-    "disclaimer": "Exemple de calcul pour un taux de 4,5% TAEG. Le taux final dépend de votre profil."
+    "interestRate": "Taux d'intérêt (TAEG)",
+    "getApproval": "Obtenir votre accord",
+    "disclaimer": "Sans engagement • Accord préliminaire instantané • 100% sécurisé"
   },
   "apply": {
     "title": "Demande de Crédit",

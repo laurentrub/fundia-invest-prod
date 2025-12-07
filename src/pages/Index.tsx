@@ -23,94 +23,60 @@ const Index = () => {
   const features = [
     {
       icon: Clock,
-      title: "Approbation rapide",
-      description: "Obtenez votre accord préliminaire en moins de 5 minutes avec notre système de décision instantanée.",
+      title: t('home.indexFeatures.fastApproval'),
+      description: t('home.indexFeatures.fastApprovalDesc'),
     },
     {
       icon: Shield,
-      title: "100% sécurisé",
-      description: "Chiffrement bancaire et protection des données. Vos informations sont toujours en sécurité.",
+      title: t('home.indexFeatures.secure'),
+      description: t('home.indexFeatures.secureDesc'),
     },
     {
       icon: TrendingUp,
-      title: "Meilleurs taux",
-      description: "Taux d'intérêt compétitifs à partir de 2,9% TAEG. Comparez et choisissez la meilleure option.",
+      title: t('home.indexFeatures.bestRates'),
+      description: t('home.indexFeatures.bestRatesDesc'),
     },
     {
       icon: Users,
-      title: "Support expert",
-      description: "Conseillers dédiés disponibles pour vous guider à chaque étape du processus.",
+      title: t('home.indexFeatures.expertSupport'),
+      description: t('home.indexFeatures.expertSupportDesc'),
     },
   ];
 
   const loanProducts = [
     {
-      title: "Prêt personnel",
-      description: "De 1 000€ à 75 000€ pour tous vos projets personnels",
-      rate: "À partir de 2,9% TAEG",
+      title: t('home.loanProducts.personal'),
+      description: t('home.loanProducts.personalDesc'),
+      rate: t('home.loanProducts.personalRate'),
       href: "/personal-loan",
     },
     {
-      title: "Crédit auto",
-      description: "Financez la voiture de vos rêves avec des options de paiement flexibles",
-      rate: "À partir de 3,2% TAEG",
+      title: t('home.loanProducts.auto'),
+      description: t('home.loanProducts.autoDesc'),
+      rate: t('home.loanProducts.autoRate'),
       href: "/auto-loan",
     },
     {
-      title: "Crédit travaux",
-      description: "Transformez votre maison avec nos prêts rénovation",
-      rate: "À partir de 3,5% TAEG",
+      title: t('home.loanProducts.home'),
+      description: t('home.loanProducts.homeDesc'),
+      rate: t('home.loanProducts.homeRate'),
       href: "/home-improvement",
     },
     {
-      title: "Rachat de crédit",
-      description: "Simplifiez vos finances en regroupant plusieurs dettes",
-      rate: "À partir de 4,2% TAEG",
+      title: t('home.loanProducts.consolidation'),
+      description: t('home.loanProducts.consolidationDesc'),
+      rate: t('home.loanProducts.consolidationRate'),
       href: "/consolidation",
     },
   ];
 
   const faqs = [
-    {
-      question: "En combien de temps puis-je obtenir l'approbation de mon prêt ?",
-      answer: "Notre système de décision instantanée fournit une approbation préliminaire en moins de 5 minutes. L'approbation finale prend généralement 24 à 48 heures après vérification des documents.",
-    },
-    {
-      question: "Quel est le score de crédit minimum requis ?",
-      answer: "Nous acceptons les demandes de clients avec différents profils de crédit. Bien qu'un score supérieur à 650 améliore vos chances, nous évaluons chaque demande individuellement.",
-    },
-    {
-      question: "Puis-je rembourser mon prêt par anticipation sans pénalités ?",
-      answer: "Oui, tous nos prêts permettent le remboursement anticipé sans pénalités. Vous économiserez sur les intérêts en remboursant votre prêt plus tôt.",
-    },
-    {
-      question: "Quels documents dois-je fournir pour postuler ?",
-      answer: "Vous aurez besoin d'une pièce d'identité valide, d'une preuve de revenus (3 derniers bulletins de salaire), de relevés bancaires et d'un justificatif de domicile. Des documents supplémentaires peuvent être demandés selon votre situation.",
-    },
-    {
-      question: "Comment est calculée ma mensualité ?",
-      answer: "Votre mensualité dépend du montant du prêt, de la durée et de votre TAEG. Utilisez notre simulateur ci-dessus pour obtenir un calcul instantané adapté à vos besoins.",
-    },
-    {
-      question: "La vérification des taux affecte-t-elle mon score de crédit ?",
-      answer: "Non ! La vérification de votre taux utilise une enquête de crédit souple qui n'impacte pas votre score. Ce n'est que lorsque vous acceptez formellement une offre de prêt que nous effectuons une enquête approfondie.",
-    },
-    {
-      question: "Qu'est-ce qui distingue Privat Equity des banques ?",
-      answer: "Nous offrons des décisions plus rapides, un processus entièrement numérique, des taux compétitifs en comparant plusieurs prêteurs et un service personnalisé. De plus, vous pouvez tout faire en ligne sans visiter une agence.",
-    },
-    {
-      question: "Puis-je postuler avec un co-emprunteur ou un garant ?",
-      answer: "Oui ! Ajouter un co-emprunteur ou un garant avec un bon crédit peut améliorer vos chances d'approbation et potentiellement obtenir un taux d'intérêt plus bas.",
-    },
-    {
-      question: "Proposez-vous des prêts aux travailleurs indépendants ?",
-      answer: "Absolument ! Les professionnels indépendants, les freelances et les propriétaires d'entreprise peuvent postuler. Vous devrez fournir des déclarations fiscales et des relevés bancaires professionnels pour vérifier les revenus.",
-    },
-    {
-      question: "Que se passe-t-il si j'ai des dettes existantes ?",
-      answer: "Nous évaluons votre ratio d'endettement dans le cadre de la demande. Si vos dettes existantes sont gérables (généralement en dessous de 40% des revenus), vous pouvez toujours être éligible. Envisagez notre option de rachat de crédit pour simplifier les paiements.",
-    },
+    { question: t('home.faqs.q1'), answer: t('home.faqs.a1') },
+    { question: t('home.faqs.q2'), answer: t('home.faqs.a2') },
+    { question: t('home.faqs.q3'), answer: t('home.faqs.a3') },
+    { question: t('home.faqs.q4'), answer: t('home.faqs.a4') },
+    { question: t('home.faqs.q5'), answer: t('home.faqs.a5') },
+    { question: t('home.faqs.q6'), answer: t('home.faqs.a6') },
   ];
 
   return (
@@ -126,23 +92,23 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                Obtenez votre financement en ligne
+                {t('home.hero.title')}
               </h1>
               <h2 className="text-xl md:text-2xl font-semibold text-primary-foreground/95">
-                Crédits pour particuliers, entreprises et projets innovants. Des solutions rapides, transparentes et adaptées à vos besoins.
+                {t('home.hero.subtitle')}
               </h2>
               <p className="text-lg md:text-xl text-primary-foreground/90">
-                Simulez votre prêt et recevez une réponse préliminaire en quelques minutes. Sans engagement, 100 % sécurisé.
+                {t('home.hero.description')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
                 <Link to="/apply">
                   <Button variant="accent" size="xl" className="w-full sm:w-auto">
-                    Demander un crédit
+                    {t('home.hero.applyButton')}
                   </Button>
                 </Link>
                 <Link to="/apply">
                   <Button variant="outline" size="xl" className="w-full sm:w-auto border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                    Financer mon projet
+                    {t('home.hero.projectButton')}
                   </Button>
                 </Link>
               </div>
@@ -161,19 +127,19 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-3xl md:text-4xl font-bold text-accent mb-2">50K+</div>
-              <div className="text-sm text-muted-foreground">Clients satisfaits</div>
+              <div className="text-sm text-muted-foreground">{t('home.trustIndicators.clients')}</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-accent mb-2">€500M+</div>
-              <div className="text-sm text-muted-foreground">Prêts accordés</div>
+              <div className="text-sm text-muted-foreground">{t('home.trustIndicators.loansGranted')}</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-accent mb-2">95%</div>
-              <div className="text-sm text-muted-foreground">Taux de satisfaction</div>
+              <div className="text-sm text-muted-foreground">{t('home.trustIndicators.satisfactionRate')}</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-accent mb-2">5 min</div>
-              <div className="text-sm text-muted-foreground">Temps d'approbation moyen</div>
+              <div className="text-sm text-muted-foreground">{t('home.trustIndicators.approvalTime')}</div>
             </div>
           </div>
         </div>
@@ -184,10 +150,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Pourquoi choisir Privat Equity ?
+              {t('home.featuresSection.title')}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Nous combinons technologie de pointe et service personnalisé pour rendre l'emprunt simple, rapide et transparent.
+              {t('home.featuresSection.subtitle')}
             </p>
           </div>
 
@@ -210,10 +176,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Nos produits de crédit
+              {t('home.productsSection.title')}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Quel que soit votre projet, nous avons une solution de financement adaptée à vos besoins.
+              {t('home.productsSection.subtitle')}
             </p>
           </div>
 
@@ -225,7 +191,7 @@ const Index = () => {
                 <div className="text-accent font-semibold mb-6">{product.rate}</div>
                 <Link to={product.href}>
                   <Button variant="outline" className="w-full">
-                    En savoir plus & Simuler
+                    {t('home.productsSection.learnMore')}
                   </Button>
                 </Link>
               </Card>
@@ -241,16 +207,16 @@ const Index = () => {
             <div>
               <img 
                 src={teamMeeting} 
-                alt="Équipe de conseillers Privat Equity en réunion avec des clients"
+                alt={t('home.howItWorks.title')}
                 className="rounded-2xl shadow-2xl w-full object-cover"
               />
             </div>
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Comment ça marche ?
+                {t('home.howItWorks.title')}
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Un processus simple et rapide en 4 étapes pour obtenir votre financement
+                {t('home.howItWorks.subtitle')}
               </p>
               <div className="space-y-6">
                 <div className="flex gap-4">
@@ -258,8 +224,8 @@ const Index = () => {
                     1
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-2">Simulez votre crédit</h3>
-                    <p className="text-muted-foreground">Utilisez notre calculateur pour estimer vos mensualités en quelques secondes</p>
+                    <h3 className="text-xl font-semibold text-foreground mb-2">{t('home.howItWorks.step1.title')}</h3>
+                    <p className="text-muted-foreground">{t('home.howItWorks.step1.description')}</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -267,8 +233,8 @@ const Index = () => {
                     2
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-2">Soumettez votre demande</h3>
-                    <p className="text-muted-foreground">Remplissez notre formulaire en ligne sécurisé en moins de 5 minutes</p>
+                    <h3 className="text-xl font-semibold text-foreground mb-2">{t('home.howItWorks.step2.title')}</h3>
+                    <p className="text-muted-foreground">{t('home.howItWorks.step2.description')}</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -276,8 +242,8 @@ const Index = () => {
                     3
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-2">Recevez une réponse instantanée</h3>
-                    <p className="text-muted-foreground">Notre système vous donne une réponse préliminaire immédiate</p>
+                    <h3 className="text-xl font-semibold text-foreground mb-2">{t('home.howItWorks.step3.title')}</h3>
+                    <p className="text-muted-foreground">{t('home.howItWorks.step3.description')}</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -285,14 +251,14 @@ const Index = () => {
                     4
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-2">Obtenez vos fonds</h3>
-                    <p className="text-muted-foreground">Une fois approuvé, recevez votre argent sous 48h sur votre compte</p>
+                    <h3 className="text-xl font-semibold text-foreground mb-2">{t('home.howItWorks.step4.title')}</h3>
+                    <p className="text-muted-foreground">{t('home.howItWorks.step4.description')}</p>
                   </div>
                 </div>
               </div>
               <Link to="/apply" className="inline-block mt-8">
                 <Button size="lg" variant="accent">
-                  Commencer maintenant
+                  {t('home.howItWorks.startNow')}
                 </Button>
               </Link>
             </div>
@@ -305,10 +271,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Notre mission
+              {t('home.mission.title')}
             </h2>
             <p className="text-2xl md:text-3xl font-semibold text-foreground max-w-4xl mx-auto leading-relaxed">
-              Rendre le financement simple, accessible et sécurisé pour tous.
+              {t('home.mission.statement')}
             </p>
           </div>
 
@@ -317,9 +283,9 @@ const Index = () => {
               <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="h-8 w-8 text-accent-foreground" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Accessibilité</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-4">{t('home.mission.accessibility.title')}</h3>
               <p className="text-muted-foreground text-lg">
-                Des solutions de financement ouvertes à tous, avec des processus simplifiés et transparents.
+                {t('home.mission.accessibility.description')}
               </p>
             </Card>
 
@@ -327,9 +293,9 @@ const Index = () => {
               <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="h-8 w-8 text-accent-foreground" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Confiance</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-4">{t('home.mission.trust.title')}</h3>
               <p className="text-muted-foreground text-lg">
-                Sécurité maximale de vos données et accompagnement personnalisé à chaque étape.
+                {t('home.mission.trust.description')}
               </p>
             </Card>
 
@@ -337,9 +303,9 @@ const Index = () => {
               <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto mb-6">
                 <Award className="h-8 w-8 text-accent-foreground" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Innovation</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-4">{t('home.mission.innovation.title')}</h3>
               <p className="text-muted-foreground text-lg">
-                Technologie de pointe pour des décisions rapides et des taux compétitifs.
+                {t('home.mission.innovation.description')}
               </p>
             </Card>
           </div>
@@ -351,10 +317,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Ils ont réalisé leurs projets avec nous
+              {t('home.successStories.title')}
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Des milliers de clients nous font confiance pour financer leurs projets de vie
+              {t('home.successStories.subtitle')}
             </p>
           </div>
 
@@ -498,7 +464,7 @@ const Index = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12 text-center">
-            Questions fréquemment posées
+            {t('home.faqSection.title')}
           </h2>
 
           <div className="space-y-6">
@@ -513,7 +479,7 @@ const Index = () => {
           <div className="text-center mt-12">
             <Link to="/resources/faq">
               <Button variant="outline" size="lg">
-                Voir la FAQ complète
+                {t('home.faqSection.viewAll')}
               </Button>
             </Link>
           </div>
@@ -524,7 +490,7 @@ const Index = () => {
       <section className="py-12 border-y border-border">
         <div className="container mx-auto px-4">
           <h3 className="text-center text-sm font-semibold text-muted-foreground mb-8 uppercase tracking-wider">
-            Approuvé par les principales institutions financières
+            {t('home.partners.title')}
           </h3>
           <div className="flex flex-wrap justify-center items-center gap-12 opacity-50">
             <Award className="h-12 w-12" />
@@ -539,14 +505,14 @@ const Index = () => {
       <section className="py-20 bg-gradient-hero text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Prêt à commencer ?
+            {t('home.cta.title')}
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto text-primary-foreground/90">
-            Rejoignez des milliers de clients satisfaits qui ont choisi Privat Equity pour leurs besoins de financement.
+            {t('home.cta.description')}
           </p>
           <Link to="/apply">
             <Button variant="accent" size="xl">
-              Demander maintenant - Approbation instantanée
+              {t('home.cta.button')}
             </Button>
           </Link>
         </div>

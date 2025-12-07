@@ -26,64 +26,67 @@
   },
   "home": {
     "hero": {
-      "title": "Tailored Credit Solutions",
-      "subtitle": "Realize your projects with our financing solutions adapted to your needs. Free simulation and quick response.",
-      "simulateButton": "Simulate My Credit",
-      "applyButton": "Apply Now"
+      "title": "Get Your Financing Online",
+      "subtitle": "Credit for individuals, businesses and innovative projects. Fast, transparent solutions tailored to your needs.",
+      "description": "Simulate your loan and receive a preliminary response in minutes. No commitment, 100% secure.",
+      "applyButton": "Apply for Credit",
+      "projectButton": "Finance My Project",
+      "simulateButton": "Simulate My Credit"
+    },
+    "trustIndicators": {
+      "clients": "Satisfied clients",
+      "loansGranted": "Loans granted",
+      "satisfactionRate": "Satisfaction rate",
+      "approvalTime": "Average approval time"
     },
     "features": {
       "title": "Why Choose Us?",
-      "fast": {
-        "title": "Fast Response",
-        "description": "A preliminary answer within 48 hours maximum"
-      },
-      "personalized": {
-        "title": "Tailored Solution",
-        "description": "Offers adapted to your situation"
-      },
-      "secure": {
-        "title": "100% Secure",
-        "description": "Your data is protected"
-      }
+      "fast": { "title": "Fast Response", "description": "A preliminary answer within 48 hours maximum" },
+      "personalized": { "title": "Tailored Solution", "description": "Offers adapted to your situation" },
+      "secure": { "title": "100% Secure", "description": "Your data is protected" }
+    },
+    "featuresSection": {
+      "title": "Why Choose Privat Equity?",
+      "subtitle": "We combine cutting-edge technology and personalized service to make borrowing simple, fast, and transparent."
     },
     "products": {
       "title": "Our Credit Solutions",
-      "personal": {
-        "title": "Personal Loan",
-        "description": "For your personal projects"
-      },
-      "auto": {
-        "title": "Auto Loan",
-        "description": "Finance your vehicle"
-      },
-      "home": {
-        "title": "Home Improvement",
-        "description": "Renovate your home"
-      },
-      "consolidation": {
-        "title": "Debt Consolidation",
-        "description": "Simplify your repayments"
-      }
+      "personal": { "title": "Personal Loan", "description": "For your personal projects" },
+      "auto": { "title": "Auto Loan", "description": "Finance your vehicle" },
+      "home": { "title": "Home Improvement", "description": "Renovate your home" },
+      "consolidation": { "title": "Debt Consolidation", "description": "Simplify your repayments" }
+    },
+    "productsSection": {
+      "title": "Our Credit Products",
+      "subtitle": "Whatever your project, we have a financing solution tailored to your needs.",
+      "learnMore": "Learn More & Simulate"
     },
     "howItWorks": {
       "title": "How It Works?",
-      "step1": {
-        "title": "1. Simulate",
-        "description": "Use our free simulator"
-      },
-      "step2": {
-        "title": "2. Submit Your Application",
-        "description": "Complete the online form"
-      },
-      "step3": {
-        "title": "3. Receive Your Offer",
-        "description": "Response within 48 hours maximum"
-      }
+      "subtitle": "A simple and fast 4-step process to get your financing",
+      "step1": { "title": "Simulate your credit", "description": "Use our calculator to estimate your monthly payments in seconds" },
+      "step2": { "title": "Submit your application", "description": "Fill out our secure online form in less than 5 minutes" },
+      "step3": { "title": "Receive an instant response", "description": "Our system gives you an immediate preliminary response" },
+      "step4": { "title": "Get your funds", "description": "Once approved, receive your money within 48h in your account" },
+      "startNow": "Start Now"
     },
+    "mission": {
+      "title": "Our Mission",
+      "statement": "Making financing simple, accessible and secure for everyone.",
+      "accessibility": { "title": "Accessibility", "description": "Financing solutions open to all, with simplified and transparent processes." },
+      "trust": { "title": "Trust", "description": "Maximum security for your data and personalized support at every step." },
+      "innovation": { "title": "Innovation", "description": "Cutting-edge technology for fast decisions and competitive rates." }
+    },
+    "successStories": {
+      "title": "They achieved their projects with us",
+      "subtitle": "Thousands of clients trust us to finance their life projects"
+    },
+    "faqSection": { "title": "Frequently Asked Questions", "viewAll": "View Full FAQ" },
+    "partners": { "title": "Approved by leading financial institutions" },
     "cta": {
-      "title": "Ready to Make Your Project a Reality?",
-      "description": "Get a free simulation with no commitment",
-      "button": "Get Started"
+      "title": "Ready to Get Started?",
+      "description": "Join thousands of satisfied customers who chose Privat Equity for their financing needs.",
+      "button": "Apply Now - Instant Approval"
     },
     "indexFeatures": {
       "fastApproval": "Fast Approval",
@@ -96,32 +99,18 @@
       "expertSupportDesc": "Dedicated advisors available to guide you through every step of the process."
     },
     "loanProducts": {
-      "personal": "Personal Loan",
-      "personalDesc": "From €1,000 to €75,000 for all your personal projects",
-      "personalRate": "From 2.9% APR",
-      "auto": "Auto Loan",
-      "autoDesc": "Finance your dream car with flexible payment options",
-      "autoRate": "From 3.2% APR",
-      "home": "Home Improvement",
-      "homeDesc": "Transform your home with our renovation loans",
-      "homeRate": "From 3.5% APR",
-      "consolidation": "Debt Consolidation",
-      "consolidationDesc": "Simplify your finances by consolidating multiple debts",
-      "consolidationRate": "From 4.2% APR"
+      "personal": "Personal Loan", "personalDesc": "From €1,000 to €75,000 for all your personal projects", "personalRate": "From 2.9% APR",
+      "auto": "Auto Loan", "autoDesc": "Finance your dream car with flexible payment options", "autoRate": "From 3.2% APR",
+      "home": "Home Improvement", "homeDesc": "Transform your home with our renovation loans", "homeRate": "From 3.5% APR",
+      "consolidation": "Debt Consolidation", "consolidationDesc": "Simplify your finances by consolidating multiple debts", "consolidationRate": "From 4.2% APR"
     },
     "faqs": {
-      "q1": "How quickly can I get my loan approved?",
-      "a1": "Our instant decision system provides a preliminary approval in less than 5 minutes. Final approval typically takes 24 to 48 hours after document verification.",
-      "q2": "What is the minimum required credit score?",
-      "a2": "We accept applications from clients with various credit profiles. While a score above 650 improves your chances, we evaluate each application individually.",
-      "q3": "Can I pay off my loan early without penalties?",
-      "a3": "Yes, all our loans allow early repayment without penalties. You'll save on interest by paying off your loan sooner.",
-      "q4": "What documents do I need to provide to apply?",
-      "a4": "You'll need a valid ID, proof of income (last 3 pay stubs), bank statements, and proof of address. Additional documents may be requested based on your situation.",
-      "q5": "How is my monthly payment calculated?",
-      "a5": "Your monthly payment depends on the loan amount, duration, and your APR. Use our simulator above for an instant calculation tailored to your needs.",
-      "q6": "Does checking rates affect my credit score?",
-      "a6": "No, checking your eligibility does not affect your credit score. Only the formal credit application will be recorded in your credit history."
+      "q1": "How quickly can I get my loan approved?", "a1": "Our instant decision system provides a preliminary approval in less than 5 minutes. Final approval typically takes 24 to 48 hours after document verification.",
+      "q2": "What is the minimum required credit score?", "a2": "We accept applications from clients with various credit profiles. While a score above 650 improves your chances, we evaluate each application individually.",
+      "q3": "Can I pay off my loan early without penalties?", "a3": "Yes, all our loans allow early repayment without penalties. You'll save on interest by paying off your loan sooner.",
+      "q4": "What documents do I need to provide to apply?", "a4": "You'll need a valid ID, proof of income (last 3 pay stubs), bank statements, and proof of address. Additional documents may be requested based on your situation.",
+      "q5": "How is my monthly payment calculated?", "a5": "Your monthly payment depends on the loan amount, duration, and your APR. Use our simulator above for an instant calculation tailored to your needs.",
+      "q6": "Does checking rates affect my credit score?", "a6": "No, checking your eligibility does not affect your credit score. Only the formal credit application will be recorded in your credit history."
     }
   },
   "about": {
