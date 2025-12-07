@@ -623,12 +623,8 @@
     },
     "step3": {
       "title": "Informations Financières",
-      "employmentStatus": "Sélectionnez votre contrat",
+      "employmentStatus": "Type de contrat",
       "employmentPlaceholder": "Sélectionnez votre contrat",
-      "cdi": "CDI",
-      "cdd": "CDD",
-      "selfEmployed": "Travailleur Indépendant",
-      "retired": "Retraité",
       "contractStartDate": "Date de début du contrat",
       "contractEndDate": "Date de fin du contrat",
       "monthlyIncome": "Revenu mensuel net (€)",
@@ -637,13 +633,8 @@
       "bankPlaceholder": "Ex: BNP Paribas, Crédit Agricole...",
       "housingStatus": "Statut de logement",
       "housingPlaceholder": "Sélectionnez votre statut",
-      "owner": "Propriétaire",
-      "renter": "Locataire",
-      "other": "Autre",
       "leaseStartDate": "Date de début du bail",
       "hasMortgage": "Crédit immobilier en cours ?",
-      "yes": "Oui",
-      "no": "Non",
       "monthlyMortgage": "Mensualité du crédit immobilier (€)"
     },
     "step4": {
@@ -662,6 +653,27 @@
       "phoneLabel": "Téléphone :",
       "incomeLabel": "Revenu mensuel :",
       "disclaimer": "En soumettant ce formulaire, vous acceptez que vos données soient traitées dans le cadre de votre demande de crédit. Vos informations sont sécurisées et confidentielles."
+    },
+    "loanTypes": {
+      "personal": "Crédit Personnel",
+      "auto": "Crédit Auto",
+      "home": "Crédit Travaux",
+      "consolidation": "Regroupement de Crédits",
+      "business": "Crédit Professionnel"
+    },
+    "durations": {
+      "months": "{{count}} mois"
+    },
+    "employmentTypes": {
+      "cdi": "CDI",
+      "cdd": "CDD",
+      "selfEmployed": "Travailleur Indépendant",
+      "retired": "Retraité"
+    },
+    "housingTypes": {
+      "owner": "Propriétaire",
+      "renter": "Locataire",
+      "other": "Autre"
     },
     "navigation": {
       "previous": "Précédent",
@@ -707,6 +719,39 @@
       "error": "Erreur",
       "errorDesc": "Une erreur est survenue lors de l'envoi de votre demande"
     }
+  },
+  "confirmation": {
+    "title": "Demande Envoyée avec Succès !",
+    "thankYou": "Merci {{name}}, votre demande de crédit a bien été reçue.",
+    "summary": "Récapitulatif de votre demande",
+    "loanType": "Type de crédit",
+    "amount": "Montant demandé",
+    "duration": "Durée",
+    "submittedAt": "Date de soumission",
+    "reference": "Numéro de référence",
+    "nextSteps": {
+      "title": "Prochaines Étapes",
+      "step1": {
+        "title": "Vérification de votre demande",
+        "description": "Notre équipe va examiner votre demande dans les prochaines 24 heures."
+      },
+      "step2": {
+        "title": "Confirmation par e-mail",
+        "description": "Vous recevrez un e-mail de confirmation à {{email}} avec les détails de votre demande et les documents à fournir."
+      },
+      "step3": {
+        "title": "Contact de notre équipe",
+        "description": "Un conseiller vous contactera pour finaliser votre dossier et répondre à vos questions."
+      },
+      "step4": {
+        "title": "Décision finale",
+        "description": "Après étude complète de votre dossier, vous recevrez une réponse définitive sous 2-5 jours ouvrables."
+      }
+    },
+    "help": {
+      "title": "Besoin d'aide ?"
+    },
+    "backHome": "Retour à l'accueil"
   },
   "auth": {
     "welcome": "Bienvenue",
@@ -867,7 +912,11 @@
     "required": "Requis",
     "learnMore": "En savoir plus",
     "apply": "Faire une demande",
-    "perMonth": "/mois"
+    "perMonth": "/mois",
+    "validationError": "Erreur de validation",
+    "select": "Sélectionnez",
+    "yes": "Oui",
+    "no": "Non"
   },
   "products": {
     "personalLoan": {

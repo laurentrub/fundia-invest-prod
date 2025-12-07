@@ -119,7 +119,7 @@ const ApplyPage = () => {
           
           toast({
             title: t('apply.messages.dataRestored'),
-            description: t('apply.messages.canSubmitNow'),
+            description: t('apply.messages.dataRestoredDesc'),
           });
         } catch (error) {
           console.error('Error restoring form data:', error);
@@ -230,7 +230,7 @@ const ApplyPage = () => {
       
       toast({
         title: t('apply.messages.loginRequired'),
-        description: t('apply.messages.loginToSubmit'),
+        description: t('apply.messages.loginRequiredDesc'),
         variant: "default"
       });
       
@@ -258,8 +258,8 @@ const ApplyPage = () => {
       if (error) throw error;
       
       toast({
-        title: t('apply.messages.requestSent'),
-        description: t('apply.messages.requestSuccess'),
+        title: t('apply.messages.success'),
+        description: t('apply.messages.successDesc'),
       });
       
       navigate('/dashboard');
@@ -268,7 +268,7 @@ const ApplyPage = () => {
       toast({
         variant: "destructive",
         title: t('common.error'),
-        description: t('apply.messages.submitError'),
+        description: t('apply.messages.errorDesc'),
       });
     } finally {
       setIsSubmitting(false);
@@ -276,7 +276,7 @@ const ApplyPage = () => {
   };
 
   const steps = [
-    { number: 1, title: t('apply.steps.loanDetails') },
+    { number: 1, title: t('apply.steps.creditDetails') },
     { number: 2, title: t('apply.steps.personalInfo') },
     { number: 3, title: t('apply.steps.financialInfo') },
     { number: 4, title: t('apply.steps.addressReview') },
@@ -342,7 +342,7 @@ const ApplyPage = () => {
                     <Label htmlFor="loanType">{t('apply.step1.loanType')} *</Label>
                     <Select value={formData.loanType} onValueChange={(value) => updateFormData("loanType", value)}>
                       <SelectTrigger>
-                        <SelectValue placeholder={t('apply.step1.selectLoanType')} />
+                        <SelectValue placeholder={t('apply.step1.loanTypePlaceholder')} />
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="personal">{t('apply.loanTypes.personal')}</SelectItem>
@@ -366,14 +366,14 @@ const ApplyPage = () => {
                       onChange={(e) => updateFormData("amount", e.target.value)}
                       placeholder="10000"
                     />
-                    <p className="text-xs text-muted-foreground mt-1">{t('apply.step1.amountRange')}</p>
+                    <p className="text-xs text-muted-foreground mt-1">{t('apply.step1.amountHint')}</p>
                   </div>
 
                   <div>
                     <Label htmlFor="duration">{t('apply.step1.duration')} *</Label>
                     <Select value={formData.duration} onValueChange={(value) => updateFormData("duration", value)}>
                       <SelectTrigger>
-                        <SelectValue placeholder={t('apply.step1.selectDuration')} />
+                        <SelectValue placeholder={t('apply.step1.durationPlaceholder')} />
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="12">{t('apply.durations.months', { count: 12 })}</SelectItem>
@@ -472,10 +472,10 @@ const ApplyPage = () => {
                   <h2 className="text-2xl font-bold text-foreground mb-6">{t('apply.step3.title')}</h2>
                   
                   <div>
-                    <Label htmlFor="employmentStatus">{t('apply.step3.contractType')} *</Label>
+                    <Label htmlFor="employmentStatus">{t('apply.step3.employmentStatus')} *</Label>
                     <Select value={formData.employmentStatus} onValueChange={(value) => updateFormData("employmentStatus", value)}>
                       <SelectTrigger>
-                        <SelectValue placeholder={t('apply.step3.selectContract')} />
+                        <SelectValue placeholder={t('apply.step3.employmentPlaceholder')} />
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="cdi">{t('apply.employmentTypes.cdi')}</SelectItem>
@@ -560,7 +560,7 @@ const ApplyPage = () => {
 
                   {/* Banque */}
                   <div>
-                    <Label htmlFor="bankName">{t('apply.step3.bank')} *</Label>
+                    <Label htmlFor="bankName">{t('apply.step3.bankName')} *</Label>
                     <Input
                       id="bankName"
                       value={formData.bankName}
@@ -575,7 +575,7 @@ const ApplyPage = () => {
                     <Label htmlFor="housingStatus">{t('apply.step3.housingStatus')} *</Label>
                     <Select value={formData.housingStatus} onValueChange={(value) => updateFormData("housingStatus", value)}>
                       <SelectTrigger>
-                        <SelectValue placeholder={t('apply.step3.selectHousing')} />
+                        <SelectValue placeholder={t('apply.step3.housingPlaceholder')} />
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="owner">{t('apply.housingTypes.owner')}</SelectItem>
@@ -677,13 +677,13 @@ const ApplyPage = () => {
                   <div className="bg-muted/50 rounded-lg p-6 mt-8">
                     <h3 className="font-semibold mb-4 text-foreground">{t('apply.step4.summary')}</h3>
                     <div className="space-y-2 text-sm">
-                      <p><span className="text-muted-foreground">{t('apply.step4.summaryLoanType')}:</span> <span className="font-medium">{getLoanTypeLabel(formData.loanType)}</span></p>
-                      <p><span className="text-muted-foreground">{t('apply.step4.summaryAmount')}:</span> <span className="font-medium">{Number(formData.amount).toLocaleString('fr-FR')} €</span></p>
-                      <p><span className="text-muted-foreground">{t('apply.step4.summaryDuration')}:</span> <span className="font-medium">{formData.duration} {t('common.months')}</span></p>
-                      <p><span className="text-muted-foreground">{t('apply.step4.summaryName')}:</span> <span className="font-medium">{formData.firstName} {formData.lastName}</span></p>
-                      <p><span className="text-muted-foreground">{t('apply.step4.summaryEmail')}:</span> <span className="font-medium">{formData.email}</span></p>
-                      <p><span className="text-muted-foreground">{t('apply.step4.summaryPhone')}:</span> <span className="font-medium">{formData.phone}</span></p>
-                      <p><span className="text-muted-foreground">{t('apply.step4.summaryIncome')}:</span> <span className="font-medium">{Number(formData.monthlyIncome).toLocaleString('fr-FR')} €</span></p>
+                      <p><span className="text-muted-foreground">{t('apply.step4.loanTypeLabel')}</span> <span className="font-medium">{getLoanTypeLabel(formData.loanType)}</span></p>
+                      <p><span className="text-muted-foreground">{t('apply.step4.amountLabel')}</span> <span className="font-medium">{Number(formData.amount).toLocaleString('fr-FR')} €</span></p>
+                      <p><span className="text-muted-foreground">{t('apply.step4.durationLabel')}</span> <span className="font-medium">{formData.duration} {t('common.months')}</span></p>
+                      <p><span className="text-muted-foreground">{t('apply.step4.nameLabel')}</span> <span className="font-medium">{formData.firstName} {formData.lastName}</span></p>
+                      <p><span className="text-muted-foreground">{t('apply.step4.emailLabel')}</span> <span className="font-medium">{formData.email}</span></p>
+                      <p><span className="text-muted-foreground">{t('apply.step4.phoneLabel')}</span> <span className="font-medium">{formData.phone}</span></p>
+                      <p><span className="text-muted-foreground">{t('apply.step4.incomeLabel')}</span> <span className="font-medium">{Number(formData.monthlyIncome).toLocaleString('fr-FR')} €</span></p>
                     </div>
                   </div>
 
@@ -700,18 +700,18 @@ const ApplyPage = () => {
                 {step > 1 && (
                   <Button type="button" variant="outline" onClick={handlePrevious} disabled={isSubmitting}>
                     <ArrowLeft className="h-4 w-4 mr-2" />
-                    {t('common.previous')}
+                    {t('apply.navigation.previous')}
                   </Button>
                 )}
                 
                 {step < 4 ? (
                   <Button type="button" onClick={handleNext} className="ml-auto">
-                    {t('common.next')}
+                    {t('apply.navigation.next')}
                     <ArrowRight className="h-4 w-4 ml-2" />
                   </Button>
                 ) : (
                   <Button type="submit" className="ml-auto" disabled={isSubmitting}>
-                    {isSubmitting ? t('common.sending') : t('apply.submit')}
+                    {isSubmitting ? t('apply.navigation.submitting') : t('apply.navigation.submit')}
                   </Button>
                 )}
               </div>
