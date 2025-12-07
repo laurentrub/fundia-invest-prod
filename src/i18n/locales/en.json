@@ -226,5 +226,463 @@
     "rate": "Interest rate",
     "getApproval": "Get approval",
     "disclaimer": "Example calculation for a 4.5% APR rate. The final rate depends on your profile."
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "confirm": "Confirm",
+    "months": "months",
+    "years": "years",
+    "currency": "€",
+    "required": "Required",
+    "learnMore": "Learn more",
+    "apply": "Apply now",
+    "perMonth": "/month"
+  },
+  "products": {
+    "personalLoan": {
+      "title": "Personal Loan",
+      "subtitle": "From €1,000 to €75,000",
+      "description": "Finance your dreams with our flexible personal loans. Whether it's a wedding, vacation, medical expenses, or any personal project - we've got you covered.",
+      "approvalTime": "5 min approval",
+      "secure": "100% secure",
+      "fromRate": "From 2.9% APR",
+      "whyChoose": "Why choose our personal loan?",
+      "benefits": {
+        "noCollateral": "No collateral required",
+        "flexibleTerms": "Flexible repayment terms (12-84 months)",
+        "earlyRepayment": "Early repayment without penalties",
+        "fastFunds": "Funds available within 48 hours",
+        "onlineProcess": "100% online application process",
+        "transparentFees": "Transparent fees - no hidden costs"
+      },
+      "examplesTitle": "Loan examples",
+      "tableHeaders": {
+        "amount": "Amount",
+        "duration": "Duration",
+        "monthly": "Monthly",
+        "apr": "APR",
+        "totalCost": "Total cost"
+      },
+      "examplesDisclaimer": "*Examples are indicative. Your actual rates and payments may vary based on your credit profile.",
+      "guideTitle": "Complete guide to personal loans",
+      "guide": {
+        "whatIsTitle": "What is a personal loan?",
+        "whatIsP1": "A personal loan is an unsecured loan that provides you with a lump sum of money for personal use. Unlike mortgages or auto loans tied to specific purchases, personal loans offer maximum flexibility.",
+        "whatIsP2": "At Privat Equity, our personal loans range from €1,000 to €75,000 with repayment terms of 12 to 84 months. We offer competitive fixed interest rates starting from 2.9% APR.",
+        "usesTitle": "Common uses for personal loans",
+        "uses": {
+          "consolidation": "Debt consolidation: Combine multiple high-interest debts into one manageable monthly payment",
+          "renovation": "Home improvements: Renovate your kitchen, add a bathroom, or upgrade your property",
+          "purchases": "Major purchases: Buy furniture, appliances, or electronics without depleting your savings",
+          "medical": "Medical expenses: Cover unexpected healthcare costs or elective procedures",
+          "wedding": "Weddings: Finance your dream wedding without financial stress",
+          "education": "Education: Pay for courses, certifications, or continuing education",
+          "vacation": "Vacations: Create memorable experiences with your loved ones",
+          "emergency": "Emergency expenses: Handle unexpected costs like car repairs or urgent home repairs"
+        },
+        "qualifyTitle": "How to qualify",
+        "qualifyIntro": "While eligibility criteria vary by lender, at Privat Equity we generally require applicants to:",
+        "qualifyItems": {
+          "age": "Be at least 18 years old",
+          "residency": "Be a French resident or have a valid residence permit",
+          "income": "Have a stable source of income (employed, self-employed, or retired with pension)",
+          "debtRatio": "Have a debt-to-income ratio below 40%",
+          "documents": "Provide necessary documentation (ID, proof of income, bank statements)"
+        },
+        "aprTitle": "Understanding interest rates and APR",
+        "aprIntro": "The Annual Percentage Rate (APR) is the total annual cost of your loan expressed as a percentage. Your APR depends on several factors:",
+        "aprFactors": {
+          "creditScore": "Credit score: Higher scores typically qualify for lower rates",
+          "loanAmount": "Loan amount: Larger loans may have different rate structures",
+          "loanTerm": "Loan term: Shorter terms often have lower rates but higher monthly payments",
+          "debtRatio": "Debt-to-income ratio: Lower ratios demonstrate better repayment capacity",
+          "incomeStability": "Income stability: Consistent employment history improves your rate"
+        },
+        "processTitle": "The application process",
+        "processSteps": {
+          "step1": "Check your eligibility: Use our simulator to estimate your monthly payments",
+          "step2": "Gather documents: Prepare your ID, proof of income, and bank statements",
+          "step3": "Submit application: Complete our secure online form (takes about 5 minutes)",
+          "step4": "Get instant decision: Receive preliminary approval or denial within minutes",
+          "step5": "Verify information: Our team reviews your application and documents",
+          "step6": "Sign agreement: Review and e-sign your loan contract",
+          "step7": "Receive funds: Money is deposited directly into your bank account"
+        },
+        "tipsTitle": "Tips for getting the best rate",
+        "tips": {
+          "tip1": "Check and improve your credit score before applying",
+          "tip2": "Compare offers from multiple lenders",
+          "tip3": "Consider a shorter loan term if you can afford higher monthly payments",
+          "tip4": "Only borrow what you need - larger loans often have higher rates",
+          "tip5": "Set up automatic payments to never miss a due date",
+          "tip6": "Consider a co-borrower if your credit isn't ideal"
+        }
+      },
+      "faqTitle": "Personal Loan FAQ",
+      "faqs": {
+        "q1": "What can I use a personal loan for?",
+        "a1": "Personal loans are versatile and can be used for almost any legal purpose: weddings, vacations, medical expenses, debt consolidation, renovations, education, or unexpected expenses.",
+        "q2": "What is the minimum credit score required?",
+        "a2": "While we prefer applicants with a credit score above 650, we evaluate each application individually. A lower score doesn't automatically disqualify you.",
+        "q3": "How quickly can I get the money?",
+        "a3": "Once your application is approved and all documents verified, funds are typically transferred to your bank account within 24 to 48 hours.",
+        "q4": "Are there fees for early repayment?",
+        "a4": "No! All our personal loans have no early repayment penalties. You can pay off your loan early and save on interest.",
+        "q5": "What documents do I need to provide?",
+        "a5": "You'll need a valid ID, proof of income (last 3 payslips or tax returns if self-employed), recent bank statements (last 3 months), and proof of current address.",
+        "q6": "Can I apply if I'm self-employed?",
+        "a6": "Yes! Self-employed individuals are welcome. You'll need to provide additional documents such as tax returns and business bank statements.",
+        "q7": "What is APR and how does it affect my loan?",
+        "a7": "APR (Annual Percentage Rate) represents the total annual cost of your loan, including interest and fees. A lower APR means lower overall costs.",
+        "q8": "Can I change my monthly payment date?",
+        "a8": "Yes, we offer flexibility with payment dates. Contact our customer service to arrange a payment schedule that aligns with your income cycle.",
+        "q9": "What happens if I miss a payment?",
+        "a9": "We understand that unexpected things happen. If you're struggling to make a payment, contact us immediately. We may be able to arrange a payment plan or temporary deferment.",
+        "q10": "Is my personal information secure?",
+        "a10": "Absolutely. We use bank-grade 256-bit SSL encryption and are fully GDPR compliant. Your data is never shared with third parties without your explicit consent."
+      }
+    },
+    "autoLoan": {
+      "title": "Auto Loan",
+      "description": "Drive your dream car today with our flexible auto financing options. New or used, we've got you covered.",
+      "benefitsTitle": "Auto Loan Benefits",
+      "benefits": {
+        "newUsed": "Financing for new or used vehicles",
+        "competitiveRates": "Competitive rates from 3.2% APR",
+        "upTo": "Up to €50,000 financing",
+        "flexibleTerms": "Flexible terms: 12 to 72 months",
+        "noDownPayment": "No down payment required",
+        "fastApproval": "Fast approval process"
+      },
+      "guideTitle": "Complete Auto Loan Guide",
+      "guide": {
+        "whatIsTitle": "What is an Auto Loan?",
+        "whatIsP1": "An auto loan is a secured loan specifically designed to help you purchase a vehicle. The car itself serves as collateral, which typically results in lower interest rates compared to unsecured personal loans.",
+        "whatIsP2": "Our competitive rates start from 3.2% APR for qualified borrowers, and the application process is entirely online.",
+        "benefitsTitle": "Benefits of Auto Loans",
+        "benefitsIntro": "Financing your vehicle purchase offers several advantages over paying cash:",
+        "benefitsList": {
+          "savings": "Preserve Your Savings: Keep your emergency fund intact while getting the car you need",
+          "credit": "Build Credit History: Making on-time payments improves your credit score",
+          "betterCar": "Get a Better Car: Financing allows you to afford a more reliable and safer vehicle",
+          "fixedPayments": "Fixed Monthly Payments: Budget with confidence knowing your payment won't change",
+          "flexibleTerms": "Flexible Terms: Choose a repayment period that fits your financial situation",
+          "taxBenefits": "Tax Benefits: If you use the vehicle for business, loan interest may be tax-deductible"
+        }
+      },
+      "faqTitle": "Auto Loan FAQ",
+      "faqs": {
+        "q1": "What's the difference between your financing and dealer financing?",
+        "a1": "Getting pre-approved with Privat Equity gives you a guaranteed rate and amount before your search, putting you in a stronger negotiating position.",
+        "q2": "Can I finance a used car from a private seller?",
+        "a2": "Yes! We finance used vehicles from both dealerships and private sellers. For private sales, we'll need the vehicle's VIN, current mileage, and condition details.",
+        "q3": "What's the maximum age for a used car to be financed?",
+        "a3": "We typically finance used vehicles up to 8 years old at the time of purchase. Vehicle age, mileage, and condition all influence loan approval.",
+        "q4": "Do I need a down payment?",
+        "a4": "No down payment is required, though making one (typically 10-20%) can reduce your monthly payments and potentially qualify you for better rates.",
+        "q5": "What insurance do I need for a financed vehicle?",
+        "a5": "Comprehensive and collision insurance is required for financed vehicles to protect both you and the lender.",
+        "q6": "Can I trade in my current vehicle?",
+        "a6": "Absolutely! If you own your current vehicle outright, the trade-in value can serve as a down payment.",
+        "q7": "Can I refinance my auto loan later?",
+        "a7": "Yes! If interest rates drop or your credit improves significantly, you can refinance your auto loan for better terms.",
+        "q8": "What happens if my car is totaled or stolen?",
+        "a8": "Your comprehensive insurance should cover the vehicle's value. Any insurance payment first goes to pay off your loan balance.",
+        "q9": "Can I pay off my auto loan early?",
+        "a9": "Yes! There are no early repayment penalties on our auto loans. Paying off your loan early saves you money on interest.",
+        "q10": "What if the car I want costs less than my approved amount?",
+        "a10": "Perfect! You'll simply borrow the amount you need for the vehicle purchase plus associated costs. There's no obligation to borrow the full approved amount."
+      }
+    },
+    "businessLoan": {
+      "title": "Business Loan",
+      "description": "Flexible financing for entrepreneurs, SMEs, and growing businesses. Finance expansion, equipment, working capital, and more.",
+      "whyChoose": "Why Choose Our Business Loan?",
+      "benefits": {
+        "amounts": "Loans from €5,000 to €75,000",
+        "flexibleTerms": "Flexible terms: 12 to 84 months",
+        "fastApproval": "Fast approval for entrepreneurs",
+        "anyProject": "Usable for any business project",
+        "competitiveRates": "Competitive rates for SMEs",
+        "preserveCash": "Preserve your cash flow"
+      },
+      "useCasesTitle": "Common Business Loan Uses",
+      "useCases": {
+        "workingCapital": {
+          "title": "Working Capital",
+          "description": "Cover operational expenses, payroll, inventory, or seasonal cash flow gaps",
+          "typical": "€10,000 - €50,000"
+        },
+        "equipment": {
+          "title": "Equipment Purchase",
+          "description": "Buy machinery, vehicles, computers, or specialized tools",
+          "typical": "€15,000 - €75,000"
+        },
+        "expansion": {
+          "title": "Business Expansion",
+          "description": "Open new locations, hire staff, or enter new markets",
+          "typical": "€20,000 - €75,000"
+        },
+        "marketing": {
+          "title": "Marketing & Growth",
+          "description": "Finance advertising campaigns, web development, or sales initiatives",
+          "typical": "€5,000 - €30,000"
+        },
+        "inventory": {
+          "title": "Inventory Purchase",
+          "description": "Build up stock of products, materials, or supplies",
+          "typical": "€10,000 - €50,000"
+        },
+        "refinancing": {
+          "title": "Refinancing",
+          "description": "Consolidate business debts or refinance at better terms",
+          "typical": "€15,000 - €75,000"
+        }
+      },
+      "typicalAmount": "Typical amount",
+      "guideTitle": "Complete Business Loan Guide",
+      "faqTitle": "Business Loan FAQ"
+    },
+    "consolidation": {
+      "title": "Debt Consolidation",
+      "subtitle": "Simplify Your Finances",
+      "description": "Combine multiple debts into one manageable monthly payment with a potentially lower interest rate. Take back control of your finances today.",
+      "reducePayments": "Reduce your monthly payments and total interest",
+      "benefitsTitle": "Benefits of Debt Consolidation",
+      "benefits": {
+        "singlePayment": "Combine multiple debts into one payment",
+        "lowerRate": "Potentially lower overall interest rate",
+        "simplified": "Simplify financial management",
+        "fixedPayment": "Fixed monthly payment",
+        "improveCredit": "Can improve credit score over time",
+        "reduceStress": "Reduce financial stress and anxiety"
+      },
+      "whenToTitle": "When to Consider Consolidation?",
+      "scenarios": {
+        "highInterest": {
+          "title": "Multiple High-Interest Debts",
+          "description": "You have multiple credit cards or loans with rates above 10-15% APR"
+        },
+        "difficulty": {
+          "title": "Difficulty Tracking Payments",
+          "description": "Managing multiple due dates is overwhelming and you've missed payments"
+        },
+        "goodCredit": {
+          "title": "Good Credit Score",
+          "description": "Your credit score qualifies you for a rate lower than your current average"
+        },
+        "stableIncome": {
+          "title": "Stable Income",
+          "description": "You have regular income to maintain the consolidated payment"
+        }
+      },
+      "guideTitle": "Complete Debt Consolidation Guide",
+      "risksTitle": "Important Warnings",
+      "risks": {
+        "risk1": "May extend repayment period, increasing total interest paid",
+        "risk2": "Closing credit cards may temporarily reduce credit score",
+        "risk3": "Doesn't solve underlying spending habits",
+        "risk4": "Requires discipline to avoid accumulating new debt",
+        "risk5": "Some loans have origination fees that add to costs"
+      },
+      "faqTitle": "Debt Consolidation FAQ"
+    },
+    "homeImprovement": {
+      "title": "Home Improvement Loan",
+      "description": "Transform your home with our flexible renovation financing. From kitchen renovations to energy efficiency upgrades, we finance your ideal home projects.",
+      "whyChoose": "Why Choose Our Home Improvement Loan?",
+      "benefits": {
+        "amounts": "Financing from €3,000 to €75,000",
+        "rates": "Rates from 3.5% APR",
+        "terms": "Terms up to 15 years available",
+        "noCollateral": "No collateral required",
+        "allProjects": "Usable for all your renovation projects",
+        "fastApproval": "Fast approval and disbursement"
+      },
+      "projectsTitle": "Popular Project Examples",
+      "projects": {
+        "kitchen": {
+          "title": "Kitchen Renovation",
+          "description": "New cabinets, countertops, appliances, and flooring"
+        },
+        "bathroom": {
+          "title": "Bathroom Renovation",
+          "description": "New fixtures, tiling, vanity, and shower"
+        },
+        "extension": {
+          "title": "Home Extension",
+          "description": "Additional bedroom or expanded living space"
+        },
+        "energy": {
+          "title": "Energy Efficiency",
+          "description": "Solar panels, insulation, new windows"
+        }
+      },
+      "loanAmount": "Loan Amount",
+      "monthlyPayment": "Monthly Payment",
+      "durationAt": "Duration {duration} at ~{rate}% APR",
+      "projectsDisclaimer": "*Examples are illustrative. Your actual rate and payments depend on your credit profile and chosen terms.",
+      "guideTitle": "Complete Home Improvement Loan Guide",
+      "faqTitle": "Home Improvement Loan FAQ"
+    },
+    "projectFinancing": {
+      "title": "Project Financing Application",
+      "subtitle": "Complete this form to submit your financing project. Our team will analyze your application within 48 hours.",
+      "steps": {
+        "project": "Your Project",
+        "funding": "Funding",
+        "company": "Company",
+        "documents": "Documents"
+      },
+      "step1": {
+        "title": "Project Information",
+        "projectType": "Project type",
+        "projectTypePlaceholder": "Select project type",
+        "projectTypes": {
+          "startup": "Business creation (Startup)",
+          "development": "Business development",
+          "acquisition": "Business acquisition",
+          "realEstate": "Commercial real estate project",
+          "innovation": "Technological innovation",
+          "expansion": "International expansion",
+          "other": "Other"
+        },
+        "projectName": "Project name",
+        "projectNamePlaceholder": "Ex: Innovative e-commerce platform",
+        "projectDescription": "Detailed project description",
+        "projectDescriptionPlaceholder": "Describe your project, its objectives, innovation, and value proposition...",
+        "minChars": "Minimum 50 characters",
+        "projectSector": "Industry sector",
+        "projectSectorPlaceholder": "Select your sector",
+        "sectors": {
+          "tech": "Technology & Digital",
+          "retail": "Retail & Distribution",
+          "services": "Business Services",
+          "industry": "Industry & Manufacturing",
+          "health": "Health & Biotechnology",
+          "food": "Food & Beverage",
+          "realEstate": "Real Estate",
+          "energy": "Energy & Environment",
+          "education": "Education & Training",
+          "tourism": "Tourism & Hospitality",
+          "other": "Other"
+        },
+        "projectLocation": "Project location",
+        "projectLocationPlaceholder": "City, region, or country"
+      },
+      "step2": {
+        "title": "Project Financial Details",
+        "fundingAmount": "Funding amount sought",
+        "fundingPurpose": "Use of funds",
+        "fundingPurposePlaceholder": "Detail how you will use the funds (equipment, hiring, marketing, R&D...)",
+        "ownContribution": "Personal contribution / Equity",
+        "expectedRevenue": "Projected revenue (first year)",
+        "projectDuration": "Estimated project duration",
+        "durationOptions": {
+          "short": "Less than 6 months",
+          "medium": "6 to 12 months",
+          "long": "1 to 2 years",
+          "veryLong": "More than 2 years"
+        },
+        "breakEvenDate": "Expected break-even date",
+        "inEuros": "In euros (€)"
+      },
+      "step3": {
+        "title": "Company Information",
+        "companyName": "Company name",
+        "companyStatus": "Legal status",
+        "statusOptions": {
+          "ae": "Sole proprietor",
+          "sarl": "LLC (SARL)",
+          "sas": "SAS/SASU",
+          "sa": "Corporation (SA)",
+          "ei": "Sole trader",
+          "creation": "Being created"
+        },
+        "siret": "SIRET number (if existing)",
+        "creationDate": "Creation date",
+        "employeeCount": "Number of employees",
+        "employeeOptions": {
+          "solo": "Just me",
+          "small": "1-5 employees",
+          "medium": "6-20 employees",
+          "large": "21-50 employees",
+          "veryLarge": "More than 50 employees"
+        },
+        "annualRevenue": "Current annual revenue",
+        "revenueOptions": {
+          "preRevenue": "Pre-revenue / Startup",
+          "small": "Less than €50,000",
+          "medium": "€50,000 - €200,000",
+          "large": "€200,000 - €500,000",
+          "veryLarge": "€500,000 - €1,000,000",
+          "enterprise": "More than €1,000,000"
+        },
+        "founderInfo": "Founder / Representative information",
+        "firstName": "First name",
+        "lastName": "Last name",
+        "email": "Professional email",
+        "phone": "Phone"
+      },
+      "step4": {
+        "title": "Documents and Additional Information",
+        "documentsDescription": "Confirm that you have the following documents. They may be requested during the review of your application.",
+        "businessPlan": "Business Plan",
+        "businessPlanDesc": "A document detailing your project, market, and strategy",
+        "financialProjections": "Financial Projections",
+        "financialProjectionsDesc": "Projected income statement for at least 3 years",
+        "marketStudy": "Market Study",
+        "marketStudyDesc": "Analysis of your target market and competition",
+        "available": "Available",
+        "inProgress": "In preparation",
+        "notAvailable": "Not available",
+        "additionalInfo": "Additional information (optional)",
+        "additionalInfoPlaceholder": "Any additional information you wish to share..."
+      },
+      "navigation": {
+        "previous": "Previous",
+        "next": "Next",
+        "submit": "Submit application"
+      },
+      "validation": {
+        "projectTypeRequired": "Project type required",
+        "projectNameMin": "Name must be at least 3 characters",
+        "projectDescriptionMin": "Description must be at least 50 characters",
+        "projectSectorRequired": "Industry sector required",
+        "projectLocationRequired": "Location required",
+        "fundingAmountRequired": "Amount required",
+        "fundingPurposeRequired": "Use of funds required",
+        "expectedRevenueRequired": "Projected revenue required",
+        "projectDurationRequired": "Project duration required",
+        "breakEvenDateRequired": "Break-even date required",
+        "ownContributionRequired": "Personal contribution required",
+        "companyNameRequired": "Company name required",
+        "companyStatusRequired": "Legal status required",
+        "siretInvalid": "SIRET must be 14 digits",
+        "creationDateRequired": "Creation date required",
+        "employeeCountRequired": "Number of employees required",
+        "annualRevenueRequired": "Annual revenue required",
+        "firstNameRequired": "First name required",
+        "lastNameRequired": "Last name required",
+        "emailInvalid": "Invalid email",
+        "phoneInvalid": "Invalid phone number",
+        "businessPlanRequired": "You must confirm having a business plan",
+        "financialProjectionsRequired": "You must confirm having financial projections",
+        "marketStudyRequired": "You must confirm having a market study",
+        "validationError": "Validation error",
+        "correctErrors": "Please correct the errors before continuing."
+      },
+      "messages": {
+        "success": "Application submitted!",
+        "successDesc": "Your financing application has been successfully transmitted."
+      }
+    }
   }
 }
