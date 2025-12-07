@@ -241,7 +241,7 @@ const ApplyPage = () => {
     setIsSubmitting(true);
     
     try {
-      const { error } = await supabase
+      const { data: insertedData, error } = await supabase
         .from('loan_requests')
         .insert({
           user_id: user.id,
@@ -253,9 +253,26 @@ const ApplyPage = () => {
           email: formData.email,
           phone: formData.phone,
           status: 'pending',
-        });
+        })
+        .select()
+        .single();
 
       if (error) throw error;
+      
+      // Send application confirmation email
+      if (insertedData) {
+        try {
+          await supabase.functions.invoke('send-application-confirmation', {
+            body: { loanRequestId: insertedData.id }
+          });
+        } catch (emailError) {
+          console.error('Error sending confirmation email:', emailError);
+          // Don't block the flow if email fails
+        }
+      }
+      
+      // Clear saved application data
+      localStorage.removeItem('pendingLoanApplication');
       
       toast({
         title: t('apply.messages.success'),

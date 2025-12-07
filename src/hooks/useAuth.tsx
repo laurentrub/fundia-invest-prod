@@ -80,6 +80,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     });
     
     if (!error) {
+      // Send welcome email
+      try {
+        await supabase.functions.invoke('send-welcome-email', {
+          body: { email, firstName, lastName }
+        });
+      } catch (emailError) {
+        console.error('Error sending welcome email:', emailError);
+        // Don't block signup if email fails
+      }
+      
       navigate(redirectTo || '/');
     }
     

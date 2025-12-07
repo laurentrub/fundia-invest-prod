@@ -14,3 +14,9 @@ verify_jwt = true
 
 [functions.send-contract-notification]
 verify_jwt = true
+
+[functions.send-welcome-email]
+verify_jwt = false
+
+[functions.send-application-confirmation]
+verify_jwt = false
