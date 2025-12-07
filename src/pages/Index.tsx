@@ -106,7 +106,7 @@ const Index = () => {
                     {t('home.hero.applyButton')}
                   </Button>
                 </Link>
-                <Link to="/apply">
+                <Link to="/project-financing">
                   <Button variant="outline" size="xl" className="w-full sm:w-auto border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                     {t('home.hero.projectButton')}
                   </Button>
