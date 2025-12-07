@@ -220,7 +220,21 @@
     },
     "successStories": {
       "title": "Realizaram os seus projetos connosco",
-      "subtitle": "Milhares de clientes confiam em nós para financiar os seus projetos de vida"
+      "subtitle": "Milhares de clientes confiam em nós para financiar os seus projetos de vida",
+      "story1": {
+        "title": "Crédito Auto",
+        "imageAlt": "Casal feliz que obteve o seu crédito auto",
+        "quote": "Obtivemos o nosso crédito auto em 24 horas! O processo foi simples e a equipa muito profissional. Recomendamos vivamente a Privat Equity.",
+        "name": "Marie & Luc",
+        "location": "Lyon - Crédito de 22.000€"
+      },
+      "story2": {
+        "title": "Empréstimo Pessoal",
+        "imageAlt": "Clientes satisfeitos após obterem o seu crédito",
+        "quote": "Serviço excecional do início ao fim. Os consultores tiveram tempo para compreender as minhas necessidades e propuseram-me a melhor solução. Obrigado!",
+        "name": "Ahmed K.",
+        "location": "Paris - Crédito de 15.000€"
+      }
     },
     "faqSection": { "title": "Perguntas Frequentes", "viewAll": "Ver FAQ Completa" },
     "partners": { "title": "Aprovado pelas principais instituições financeiras" },

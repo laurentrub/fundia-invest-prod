@@ -378,13 +378,15 @@
       "title": "Ils ont réalisé leurs projets avec nous",
       "subtitle": "Des milliers de clients nous font confiance pour financer leurs projets de vie",
       "story1": {
-        "type": "Crédit Auto",
+        "title": "Crédit Auto",
+        "imageAlt": "Couple heureux ayant obtenu leur crédit auto",
         "quote": "Nous avons obtenu notre crédit auto en 24h ! Le processus était simple et l'équipe très professionnelle. Nous recommandons vivement Privat Equity.",
         "name": "Marie & Luc",
         "location": "Lyon - Crédit de 22 000€"
       },
       "story2": {
-        "type": "Prêt Personnel",
+        "title": "Prêt Personnel",
+        "imageAlt": "Clients satisfaits après obtention de leur crédit",
         "quote": "Service exceptionnel du début à la fin. Les conseillers ont pris le temps de comprendre mes besoins et m'ont proposé la meilleure solution. Merci !",
         "name": "Ahmed K.",
         "location": "Paris - Crédit de 15 000€"

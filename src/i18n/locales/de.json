@@ -334,7 +334,21 @@
     },
     "successStories": {
       "title": "Sie haben ihre Projekte mit uns verwirklicht",
-      "subtitle": "Tausende von Kunden vertrauen uns bei der Finanzierung ihrer Lebensprojekte"
+      "subtitle": "Tausende von Kunden vertrauen uns bei der Finanzierung ihrer Lebensprojekte",
+      "story1": {
+        "title": "Autokredit",
+        "imageAlt": "Glückliches Paar, das seinen Autokredit erhalten hat",
+        "quote": "Wir haben unseren Autokredit in 24 Stunden erhalten! Der Prozess war einfach und das Team sehr professionell. Wir empfehlen Privat Equity sehr.",
+        "name": "Marie & Luc",
+        "location": "Lyon - Kredit von 22.000€"
+      },
+      "story2": {
+        "title": "Privatkredit",
+        "imageAlt": "Zufriedene Kunden nach Erhalt ihres Kredits",
+        "quote": "Außergewöhnlicher Service von Anfang bis Ende. Die Berater haben sich Zeit genommen, meine Bedürfnisse zu verstehen und mir die beste Lösung vorgeschlagen. Danke!",
+        "name": "Ahmed K.",
+        "location": "Paris - Kredit von 15.000€"
+      }
     },
     "faqSection": { "title": "Häufig Gestellte Fragen", "viewAll": "Vollständige FAQ Anzeigen" },
     "partners": { "title": "Genehmigt von führenden Finanzinstituten" },

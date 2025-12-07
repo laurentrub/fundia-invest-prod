@@ -79,7 +79,21 @@
     },
     "successStories": {
       "title": "They achieved their projects with us",
-      "subtitle": "Thousands of clients trust us to finance their life projects"
+      "subtitle": "Thousands of clients trust us to finance their life projects",
+      "story1": {
+        "title": "Auto Loan",
+        "imageAlt": "Happy couple who got their auto loan",
+        "quote": "We got our auto loan in 24 hours! The process was simple and the team very professional. We highly recommend Privat Equity.",
+        "name": "Marie & Luc",
+        "location": "Lyon - €22,000 loan"
+      },
+      "story2": {
+        "title": "Personal Loan",
+        "imageAlt": "Satisfied clients after getting their loan",
+        "quote": "Exceptional service from start to finish. The advisors took the time to understand my needs and proposed the best solution. Thank you!",
+        "name": "Ahmed K.",
+        "location": "Paris - €15,000 loan"
+      }
     },
     "faqSection": { "title": "Frequently Asked Questions", "viewAll": "View Full FAQ" },
     "partners": { "title": "Approved by leading financial institutions" },

@@ -328,21 +328,21 @@ const Index = () => {
             <Card className="overflow-hidden hover:shadow-xl transition-shadow">
               <img 
                 src={carLoanSuccess} 
-                alt="Couple heureux ayant obtenu leur crédit auto"
+                alt={t('home.successStories.story1.imageAlt')}
                 className="w-full h-72 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-foreground mb-3">Crédit Auto</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-3">{t('home.successStories.story1.title')}</h3>
                 <p className="text-muted-foreground mb-4">
-                  "Nous avons obtenu notre crédit auto en 24h ! Le processus était simple et l'équipe très professionnelle. Nous recommandons vivement Privat Equity."
+                  "{t('home.successStories.story1.quote')}"
                 </p>
                 <div className="flex items-center gap-2">
                   <div className="w-10 h-10 bg-gradient-accent rounded-full flex items-center justify-center text-accent-foreground font-bold">
                     ML
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground">Marie & Luc</p>
-                    <p className="text-sm text-muted-foreground">Lyon - Crédit de 22 000€</p>
+                    <p className="font-semibold text-foreground">{t('home.successStories.story1.name')}</p>
+                    <p className="text-sm text-muted-foreground">{t('home.successStories.story1.location')}</p>
                   </div>
                 </div>
               </div>
@@ -351,21 +351,21 @@ const Index = () => {
             <Card className="overflow-hidden hover:shadow-xl transition-shadow">
               <img 
                 src={happyClients} 
-                alt="Clients satisfaits après obtention de leur crédit"
+                alt={t('home.successStories.story2.imageAlt')}
                 className="w-full h-72 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-foreground mb-3">Prêt Personnel</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-3">{t('home.successStories.story2.title')}</h3>
                 <p className="text-muted-foreground mb-4">
-                  "Service exceptionnel du début à la fin. Les conseillers ont pris le temps de comprendre mes besoins et m'ont proposé la meilleure solution. Merci !"
+                  "{t('home.successStories.story2.quote')}"
                 </p>
                 <div className="flex items-center gap-2">
                   <div className="w-10 h-10 bg-gradient-accent rounded-full flex items-center justify-center text-accent-foreground font-bold">
                     AK
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground">Ahmed K.</p>
-                    <p className="text-sm text-muted-foreground">Paris - Crédit de 15 000€</p>
+                    <p className="font-semibold text-foreground">{t('home.successStories.story2.name')}</p>
+                    <p className="text-sm text-muted-foreground">{t('home.successStories.story2.location')}</p>
                   </div>
                 </div>
               </div>

@@ -145,7 +145,21 @@
     },
     "successStories": {
       "title": "Zij realiseerden hun projecten met ons",
-      "subtitle": "Duizenden klanten vertrouwen ons om hun levensprojecten te financieren"
+      "subtitle": "Duizenden klanten vertrouwen ons om hun levensprojecten te financieren",
+      "story1": {
+        "title": "Autolening",
+        "imageAlt": "Gelukkig stel dat hun autolening heeft gekregen",
+        "quote": "We kregen onze autolening binnen 24 uur! Het proces was eenvoudig en het team zeer professioneel. We bevelen Privat Equity ten zeerste aan.",
+        "name": "Marie & Luc",
+        "location": "Lyon - Lening van €22.000"
+      },
+      "story2": {
+        "title": "Persoonlijke Lening",
+        "imageAlt": "Tevreden klanten na het krijgen van hun lening",
+        "quote": "Uitzonderlijke service van begin tot eind. De adviseurs namen de tijd om mijn behoeften te begrijpen en stelden de beste oplossing voor. Bedankt!",
+        "name": "Ahmed K.",
+        "location": "Parijs - Lening van €15.000"
+      }
     },
     "faqSection": { "title": "Veelgestelde Vragen", "viewAll": "Volledige FAQ Bekijken" },
     "partners": { "title": "Goedgekeurd door toonaangevende financiële instellingen" },

@@ -145,7 +145,21 @@
     },
     "successStories": {
       "title": "Ostvarili su svoje projekte s nama",
-      "subtitle": "Tisuće klijenata nam vjeruju za financiranje svojih životnih projekata"
+      "subtitle": "Tisuće klijenata nam vjeruju za financiranje svojih životnih projekata",
+      "story1": {
+        "title": "Auto Kredit",
+        "imageAlt": "Sretni par koji je dobio svoj auto kredit",
+        "quote": "Dobili smo naš auto kredit u 24 sata! Proces je bio jednostavan i tim vrlo profesionalan. Toplo preporučujemo Privat Equity.",
+        "name": "Marie & Luc",
+        "location": "Lyon - Kredit od 22.000€"
+      },
+      "story2": {
+        "title": "Osobni Zajam",
+        "imageAlt": "Zadovoljni klijenti nakon dobivanja kredita",
+        "quote": "Izniman servis od početka do kraja. Savjetnici su odvojili vrijeme da razumiju moje potrebe i predložili najbolje rješenje. Hvala!",
+        "name": "Ahmed K.",
+        "location": "Pariz - Kredit od 15.000€"
+      }
     },
     "faqSection": { "title": "Često Postavljana Pitanja", "viewAll": "Pogledaj Cijeli FAQ" },
     "partners": { "title": "Odobreno od vodećih financijskih institucija" },
