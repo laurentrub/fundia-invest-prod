@@ -414,7 +414,9 @@ export default function Profile() {
       <div className="flex-1 flex">
         <ProfileSidebar 
           activeSection={activeSection} 
-          onSectionChange={setActiveSection} 
+          onSectionChange={setActiveSection}
+          userName={`${firstName} ${lastName}`.trim() || undefined}
+          userEmail={email}
         />
         <main className="flex-1 p-8 bg-muted/30">
           <div className="max-w-4xl">
