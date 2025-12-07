@@ -89,6 +89,76 @@ export type Database = {
         }
         Relationships: []
       }
+      request_notes: {
+        Row: {
+          author_id: string
+          content: string
+          created_at: string
+          id: string
+          loan_request_id: string
+        }
+        Insert: {
+          author_id: string
+          content: string
+          created_at?: string
+          id?: string
+          loan_request_id: string
+        }
+        Update: {
+          author_id?: string
+          content?: string
+          created_at?: string
+          id?: string
+          loan_request_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "request_notes_loan_request_id_fkey"
+            columns: ["loan_request_id"]
+            isOneToOne: false
+            referencedRelation: "loan_requests"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      request_status_history: {
+        Row: {
+          changed_at: string
+          changed_by: string | null
+          comment: string | null
+          id: string
+          loan_request_id: string
+          new_status: string
+          old_status: string | null
+        }
+        Insert: {
+          changed_at?: string
+          changed_by?: string | null
+          comment?: string | null
+          id?: string
+          loan_request_id: string
+          new_status: string
+          old_status?: string | null
+        }
+        Update: {
+          changed_at?: string
+          changed_by?: string | null
+          comment?: string | null
+          id?: string
+          loan_request_id?: string
+          new_status?: string
+          old_status?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "request_status_history_loan_request_id_fkey"
+            columns: ["loan_request_id"]
+            isOneToOne: false
+            referencedRelation: "loan_requests"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       user_roles: {
         Row: {
           created_at: string
