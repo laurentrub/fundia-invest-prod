@@ -11,8 +11,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-lg font-bold mb-4">Privat Equity</h3>
-            <p className="text-sm text-primary-foreground/80">
-              {t('footer.company')}
+            <p className="text-sm text-primary-foreground/80 leading-relaxed">
+              {t('footer.description')}
             </p>
           </div>
 
