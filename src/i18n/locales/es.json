@@ -26,64 +26,67 @@
   },
   "home": {
     "hero": {
-      "title": "Soluciones de Crédito a Medida",
-      "subtitle": "Realice sus proyectos con nuestras soluciones de financiación adaptadas a sus necesidades. Simulación gratuita y respuesta rápida.",
-      "simulateButton": "Simular Mi Crédito",
-      "applyButton": "Solicitar Ahora"
+      "title": "Obtenga Su Financiación Online",
+      "subtitle": "Créditos para particulares, empresas y proyectos innovadores. Soluciones rápidas, transparentes y adaptadas a sus necesidades.",
+      "description": "Simule su préstamo y reciba una respuesta preliminar en minutos. Sin compromiso, 100% seguro.",
+      "applyButton": "Solicitar Crédito",
+      "projectButton": "Financiar Mi Proyecto",
+      "simulateButton": "Simular Mi Crédito"
+    },
+    "trustIndicators": {
+      "clients": "Clientes satisfechos",
+      "loansGranted": "Préstamos concedidos",
+      "satisfactionRate": "Tasa de satisfacción",
+      "approvalTime": "Tiempo medio de aprobación"
     },
     "features": {
       "title": "¿Por Qué Elegirnos?",
-      "fast": {
-        "title": "Respuesta Rápida",
-        "description": "Una respuesta preliminar en un máximo de 48 horas"
-      },
-      "personalized": {
-        "title": "Solución a Medida",
-        "description": "Ofertas adaptadas a su situación"
-      },
-      "secure": {
-        "title": "100% Seguro",
-        "description": "Sus datos están protegidos"
-      }
+      "fast": { "title": "Respuesta Rápida", "description": "Una respuesta preliminar en un máximo de 48 horas" },
+      "personalized": { "title": "Solución a Medida", "description": "Ofertas adaptadas a su situación" },
+      "secure": { "title": "100% Seguro", "description": "Sus datos están protegidos" }
+    },
+    "featuresSection": {
+      "title": "¿Por Qué Elegir Privat Equity?",
+      "subtitle": "Combinamos tecnología de vanguardia y servicio personalizado para hacer que el préstamo sea simple, rápido y transparente."
     },
     "products": {
       "title": "Nuestras Soluciones de Crédito",
-      "personal": {
-        "title": "Préstamo Personal",
-        "description": "Para sus proyectos personales"
-      },
-      "auto": {
-        "title": "Crédito Auto",
-        "description": "Financie su vehículo"
-      },
-      "home": {
-        "title": "Crédito Reformas",
-        "description": "Renueve su hogar"
-      },
-      "consolidation": {
-        "title": "Reunificación de Deudas",
-        "description": "Simplifique sus pagos"
-      }
+      "personal": { "title": "Préstamo Personal", "description": "Para sus proyectos personales" },
+      "auto": { "title": "Crédito Auto", "description": "Financie su vehículo" },
+      "home": { "title": "Crédito Reformas", "description": "Renueve su hogar" },
+      "consolidation": { "title": "Reunificación de Deudas", "description": "Simplifique sus pagos" }
+    },
+    "productsSection": {
+      "title": "Nuestros Productos de Crédito",
+      "subtitle": "Sea cual sea su proyecto, tenemos una solución de financiación adaptada a sus necesidades.",
+      "learnMore": "Más Información y Simular"
     },
     "howItWorks": {
       "title": "¿Cómo Funciona?",
-      "step1": {
-        "title": "1. Simule",
-        "description": "Use nuestro simulador gratuito"
-      },
-      "step2": {
-        "title": "2. Envíe Su Solicitud",
-        "description": "Complete el formulario en línea"
-      },
-      "step3": {
-        "title": "3. Reciba Su Oferta",
-        "description": "Respuesta en un máximo de 48 horas"
-      }
+      "subtitle": "Un proceso simple y rápido en 4 pasos para obtener su financiación",
+      "step1": { "title": "Simule su crédito", "description": "Use nuestra calculadora para estimar sus cuotas mensuales en segundos" },
+      "step2": { "title": "Envíe su solicitud", "description": "Complete nuestro formulario online seguro en menos de 5 minutos" },
+      "step3": { "title": "Reciba una respuesta instantánea", "description": "Nuestro sistema le da una respuesta preliminar inmediata" },
+      "step4": { "title": "Obtenga sus fondos", "description": "Una vez aprobado, reciba su dinero en 48h en su cuenta" },
+      "startNow": "Comenzar Ahora"
     },
+    "mission": {
+      "title": "Nuestra Misión",
+      "statement": "Hacer la financiación simple, accesible y segura para todos.",
+      "accessibility": { "title": "Accesibilidad", "description": "Soluciones de financiación abiertas a todos, con procesos simplificados y transparentes." },
+      "trust": { "title": "Confianza", "description": "Máxima seguridad para sus datos y acompañamiento personalizado en cada paso." },
+      "innovation": { "title": "Innovación", "description": "Tecnología de vanguardia para decisiones rápidas y tasas competitivas." }
+    },
+    "successStories": {
+      "title": "Realizaron sus proyectos con nosotros",
+      "subtitle": "Miles de clientes confían en nosotros para financiar sus proyectos de vida"
+    },
+    "faqSection": { "title": "Preguntas Frecuentes", "viewAll": "Ver FAQ Completa" },
+    "partners": { "title": "Aprobado por las principales instituciones financieras" },
     "cta": {
-      "title": "¿Listo para Hacer Realidad Su Proyecto?",
-      "description": "Obtenga una simulación gratuita sin compromiso",
-      "button": "Comenzar"
+      "title": "¿Listo para Comenzar?",
+      "description": "Únase a miles de clientes satisfechos que eligieron Privat Equity para sus necesidades de financiación.",
+      "button": "Solicitar Ahora - Aprobación Instantánea"
     },
     "indexFeatures": {
       "fastApproval": "Aprobación Rápida",
@@ -96,32 +99,18 @@
       "expertSupportDesc": "Asesores dedicados disponibles para guiarlo en cada paso del proceso."
     },
     "loanProducts": {
-      "personal": "Préstamo Personal",
-      "personalDesc": "De 1.000€ a 75.000€ para todos sus proyectos personales",
-      "personalRate": "Desde 2,9% TAE",
-      "auto": "Crédito Auto",
-      "autoDesc": "Financie el coche de sus sueños con opciones de pago flexibles",
-      "autoRate": "Desde 3,2% TAE",
-      "home": "Crédito Reformas",
-      "homeDesc": "Transforme su hogar con nuestros préstamos de renovación",
-      "homeRate": "Desde 3,5% TAE",
-      "consolidation": "Reunificación de Deudas",
-      "consolidationDesc": "Simplifique sus finanzas consolidando múltiples deudas",
-      "consolidationRate": "Desde 4,2% TAE"
+      "personal": "Préstamo Personal", "personalDesc": "De 1.000€ a 75.000€ para todos sus proyectos personales", "personalRate": "Desde 2,9% TAE",
+      "auto": "Crédito Auto", "autoDesc": "Financie el coche de sus sueños con opciones de pago flexibles", "autoRate": "Desde 3,2% TAE",
+      "home": "Crédito Reformas", "homeDesc": "Transforme su hogar con nuestros préstamos de renovación", "homeRate": "Desde 3,5% TAE",
+      "consolidation": "Reunificación de Deudas", "consolidationDesc": "Simplifique sus finanzas consolidando múltiples deudas", "consolidationRate": "Desde 4,2% TAE"
     },
     "faqs": {
-      "q1": "¿En cuánto tiempo puedo obtener la aprobación de mi préstamo?",
-      "a1": "Nuestro sistema de decisión instantánea proporciona una aprobación preliminar en menos de 5 minutos. La aprobación final generalmente toma de 24 a 48 horas después de la verificación de documentos.",
-      "q2": "¿Cuál es la puntuación de crédito mínima requerida?",
-      "a2": "Aceptamos solicitudes de clientes con varios perfiles de crédito. Aunque una puntuación superior a 650 mejora sus posibilidades, evaluamos cada solicitud individualmente.",
-      "q3": "¿Puedo pagar mi préstamo anticipadamente sin penalizaciones?",
-      "a3": "Sí, todos nuestros préstamos permiten el pago anticipado sin penalizaciones. Ahorrará en intereses al pagar su préstamo antes.",
-      "q4": "¿Qué documentos necesito proporcionar para solicitar?",
-      "a4": "Necesitará una identificación válida, comprobante de ingresos (últimos 3 recibos de sueldo), extractos bancarios y comprobante de domicilio. Se pueden solicitar documentos adicionales según su situación.",
-      "q5": "¿Cómo se calcula mi pago mensual?",
-      "a5": "Su pago mensual depende del monto del préstamo, la duración y su TAE. Use nuestro simulador arriba para un cálculo instantáneo adaptado a sus necesidades.",
-      "q6": "¿La verificación de tasas afecta mi puntuación de crédito?",
-      "a6": "No, verificar su elegibilidad no afecta su puntuación de crédito. Solo la solicitud formal de crédito se registrará en su historial crediticio."
+      "q1": "¿En cuánto tiempo puedo obtener la aprobación de mi préstamo?", "a1": "Nuestro sistema de decisión instantánea proporciona una aprobación preliminar en menos de 5 minutos. La aprobación final generalmente toma de 24 a 48 horas después de la verificación de documentos.",
+      "q2": "¿Cuál es la puntuación de crédito mínima requerida?", "a2": "Aceptamos solicitudes de clientes con varios perfiles de crédito. Aunque una puntuación superior a 650 mejora sus posibilidades, evaluamos cada solicitud individualmente.",
+      "q3": "¿Puedo pagar mi préstamo anticipadamente sin penalizaciones?", "a3": "Sí, todos nuestros préstamos permiten el pago anticipado sin penalizaciones. Ahorrará en intereses al pagar su préstamo antes.",
+      "q4": "¿Qué documentos necesito proporcionar para solicitar?", "a4": "Necesitará una identificación válida, comprobante de ingresos (últimos 3 recibos de sueldo), extractos bancarios y comprobante de domicilio. Se pueden solicitar documentos adicionales según su situación.",
+      "q5": "¿Cómo se calcula mi pago mensual?", "a5": "Su pago mensual depende del monto del préstamo, la duración y su TAE. Use nuestro simulador arriba para un cálculo instantáneo adaptado a sus necesidades.",
+      "q6": "¿La verificación de tasas afecta mi puntuación de crédito?", "a6": "No, verificar su elegibilidad no afecta su puntuación de crédito. Solo la solicitud formal de crédito se registrará en su historial crediticio."
     }
   },
   "about": {

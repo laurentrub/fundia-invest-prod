@@ -26,64 +26,67 @@
   },
   "home": {
     "hero": {
-      "title": "Op Maat Gemaakte Kredietoplossingen",
-      "subtitle": "Realiseer uw projecten met onze financieringsoplossingen aangepast aan uw behoeften. Gratis simulatie en snel antwoord.",
-      "simulateButton": "Simuleer Mijn Krediet",
-      "applyButton": "Nu Aanvragen"
+      "title": "Krijg Uw Financiering Online",
+      "subtitle": "Kredieten voor particulieren, bedrijven en innovatieve projecten. Snelle, transparante oplossingen op maat van uw behoeften.",
+      "description": "Simuleer uw lening en ontvang een voorlopig antwoord in minuten. Vrijblijvend, 100% veilig.",
+      "applyButton": "Krediet Aanvragen",
+      "projectButton": "Mijn Project Financieren",
+      "simulateButton": "Simuleer Mijn Krediet"
+    },
+    "trustIndicators": {
+      "clients": "Tevreden klanten",
+      "loansGranted": "Verstrekte leningen",
+      "satisfactionRate": "Tevredenheidspercentage",
+      "approvalTime": "Gemiddelde goedkeuringstijd"
     },
     "features": {
       "title": "Waarom Voor Ons Kiezen?",
-      "fast": {
-        "title": "Snel Antwoord",
-        "description": "Een voorlopig antwoord binnen maximaal 48 uur"
-      },
-      "personalized": {
-        "title": "Op Maat Gemaakte Oplossing",
-        "description": "Aanbiedingen aangepast aan uw situatie"
-      },
-      "secure": {
-        "title": "100% Veilig",
-        "description": "Uw gegevens zijn beschermd"
-      }
+      "fast": { "title": "Snel Antwoord", "description": "Een voorlopig antwoord binnen maximaal 48 uur" },
+      "personalized": { "title": "Op Maat Gemaakte Oplossing", "description": "Aanbiedingen aangepast aan uw situatie" },
+      "secure": { "title": "100% Veilig", "description": "Uw gegevens zijn beschermd" }
+    },
+    "featuresSection": {
+      "title": "Waarom Kiezen voor Privat Equity?",
+      "subtitle": "We combineren geavanceerde technologie en persoonlijke service om lenen eenvoudig, snel en transparant te maken."
     },
     "products": {
       "title": "Onze Kredietoplossingen",
-      "personal": {
-        "title": "Persoonlijke Lening",
-        "description": "Voor uw persoonlijke projecten"
-      },
-      "auto": {
-        "title": "Autolening",
-        "description": "Financier uw voertuig"
-      },
-      "home": {
-        "title": "Verbouwingskrediet",
-        "description": "Renoveer uw woning"
-      },
-      "consolidation": {
-        "title": "Schuldconsolidatie",
-        "description": "Vereenvoudig uw terugbetalingen"
-      }
+      "personal": { "title": "Persoonlijke Lening", "description": "Voor uw persoonlijke projecten" },
+      "auto": { "title": "Autolening", "description": "Financier uw voertuig" },
+      "home": { "title": "Verbouwingskrediet", "description": "Renoveer uw woning" },
+      "consolidation": { "title": "Schuldconsolidatie", "description": "Vereenvoudig uw terugbetalingen" }
+    },
+    "productsSection": {
+      "title": "Onze Kredietproducten",
+      "subtitle": "Wat uw project ook is, wij hebben een financieringsoplossing op maat van uw behoeften.",
+      "learnMore": "Meer Weten & Simuleren"
     },
     "howItWorks": {
       "title": "Hoe Werkt Het?",
-      "step1": {
-        "title": "1. Simuleer",
-        "description": "Gebruik onze gratis simulator"
-      },
-      "step2": {
-        "title": "2. Dien Uw Aanvraag In",
-        "description": "Vul het online formulier in"
-      },
-      "step3": {
-        "title": "3. Ontvang Uw Offerte",
-        "description": "Antwoord binnen maximaal 48 uur"
-      }
+      "subtitle": "Een eenvoudig en snel 4-stappen proces om uw financiering te krijgen",
+      "step1": { "title": "Simuleer uw krediet", "description": "Gebruik onze calculator om uw maandelijkse betalingen in seconden te berekenen" },
+      "step2": { "title": "Dien uw aanvraag in", "description": "Vul ons beveiligd online formulier in in minder dan 5 minuten" },
+      "step3": { "title": "Ontvang een direct antwoord", "description": "Ons systeem geeft u een onmiddellijk voorlopig antwoord" },
+      "step4": { "title": "Ontvang uw geld", "description": "Eenmaal goedgekeurd, ontvang uw geld binnen 48u op uw rekening" },
+      "startNow": "Nu Beginnen"
     },
+    "mission": {
+      "title": "Onze Missie",
+      "statement": "Financiering eenvoudig, toegankelijk en veilig maken voor iedereen.",
+      "accessibility": { "title": "Toegankelijkheid", "description": "Financieringsoplossingen open voor iedereen, met vereenvoudigde en transparante processen." },
+      "trust": { "title": "Vertrouwen", "description": "Maximale beveiliging voor uw gegevens en persoonlijke begeleiding bij elke stap." },
+      "innovation": { "title": "Innovatie", "description": "Geavanceerde technologie voor snelle beslissingen en concurrerende tarieven." }
+    },
+    "successStories": {
+      "title": "Zij realiseerden hun projecten met ons",
+      "subtitle": "Duizenden klanten vertrouwen ons om hun levensprojecten te financieren"
+    },
+    "faqSection": { "title": "Veelgestelde Vragen", "viewAll": "Volledige FAQ Bekijken" },
+    "partners": { "title": "Goedgekeurd door toonaangevende financiële instellingen" },
     "cta": {
-      "title": "Klaar om Uw Project te Realiseren?",
-      "description": "Krijg een gratis simulatie zonder verplichting",
-      "button": "Begin"
+      "title": "Klaar om te Beginnen?",
+      "description": "Sluit u aan bij duizenden tevreden klanten die kozen voor Privat Equity voor hun financieringsbehoeften.",
+      "button": "Nu Aanvragen - Directe Goedkeuring"
     },
     "indexFeatures": {
       "fastApproval": "Snelle Goedkeuring",
@@ -96,32 +99,18 @@
       "expertSupportDesc": "Toegewijde adviseurs beschikbaar om u bij elke stap van het proces te begeleiden."
     },
     "loanProducts": {
-      "personal": "Persoonlijke Lening",
-      "personalDesc": "Van €1.000 tot €75.000 voor al uw persoonlijke projecten",
-      "personalRate": "Vanaf 2,9% JKP",
-      "auto": "Autolening",
-      "autoDesc": "Financier uw dromauto met flexibele betalingsopties",
-      "autoRate": "Vanaf 3,2% JKP",
-      "home": "Verbouwingskrediet",
-      "homeDesc": "Transformeer uw huis met onze renovatieleningen",
-      "homeRate": "Vanaf 3,5% JKP",
-      "consolidation": "Schuldconsolidatie",
-      "consolidationDesc": "Vereenvoudig uw financiën door meerdere schulden samen te voegen",
-      "consolidationRate": "Vanaf 4,2% JKP"
+      "personal": "Persoonlijke Lening", "personalDesc": "Van €1.000 tot €75.000 voor al uw persoonlijke projecten", "personalRate": "Vanaf 2,9% JKP",
+      "auto": "Autolening", "autoDesc": "Financier uw droomauto met flexibele betalingsopties", "autoRate": "Vanaf 3,2% JKP",
+      "home": "Verbouwingskrediet", "homeDesc": "Transformeer uw huis met onze renovatieleningen", "homeRate": "Vanaf 3,5% JKP",
+      "consolidation": "Schuldconsolidatie", "consolidationDesc": "Vereenvoudig uw financiën door meerdere schulden samen te voegen", "consolidationRate": "Vanaf 4,2% JKP"
     },
     "faqs": {
-      "q1": "Hoe snel kan ik mijn lening goedgekeurd krijgen?",
-      "a1": "Ons instant beslissingssysteem biedt een voorlopige goedkeuring in minder dan 5 minuten. Definitieve goedkeuring duurt meestal 24 tot 48 uur na documentverificatie.",
-      "q2": "Wat is de minimaal vereiste kredietscore?",
-      "a2": "We accepteren aanvragen van klanten met verschillende kredietprofielen. Hoewel een score boven 650 uw kansen verbetert, beoordelen we elke aanvraag individueel.",
-      "q3": "Kan ik mijn lening vervroegd afbetalen zonder boetes?",
-      "a3": "Ja, al onze leningen staan vervroegde terugbetaling zonder boetes toe. U bespaart op rente door uw lening eerder af te betalen.",
-      "q4": "Welke documenten moet ik aanleveren om aan te vragen?",
-      "a4": "U heeft een geldig identiteitsbewijs, inkomstenbewijs (laatste 3 loonstroken), bankafschriften en adresbewijs nodig. Aanvullende documenten kunnen worden gevraagd op basis van uw situatie.",
-      "q5": "Hoe wordt mijn maandelijkse betaling berekend?",
-      "a5": "Uw maandelijkse betaling hangt af van het leningbedrag, de looptijd en uw JKP. Gebruik onze simulator hierboven voor een directe berekening op maat van uw behoeften.",
-      "q6": "Beïnvloedt het controleren van tarieven mijn kredietscore?",
-      "a6": "Nee, het controleren van uw geschiktheid heeft geen invloed op uw kredietscore. Alleen de formele kredietaanvraag wordt geregistreerd in uw kredietgeschiedenis."
+      "q1": "Hoe snel kan ik mijn lening goedgekeurd krijgen?", "a1": "Ons instant beslissingssysteem biedt een voorlopige goedkeuring in minder dan 5 minuten. Definitieve goedkeuring duurt meestal 24 tot 48 uur na documentverificatie.",
+      "q2": "Wat is de minimaal vereiste kredietscore?", "a2": "We accepteren aanvragen van klanten met verschillende kredietprofielen. Hoewel een score boven 650 uw kansen verbetert, beoordelen we elke aanvraag individueel.",
+      "q3": "Kan ik mijn lening vervroegd afbetalen zonder boetes?", "a3": "Ja, al onze leningen staan vervroegde terugbetaling zonder boetes toe. U bespaart op rente door uw lening eerder af te betalen.",
+      "q4": "Welke documenten moet ik aanleveren om aan te vragen?", "a4": "U heeft een geldig identiteitsbewijs, inkomstenbewijs (laatste 3 loonstroken), bankafschriften en adresbewijs nodig. Aanvullende documenten kunnen worden gevraagd op basis van uw situatie.",
+      "q5": "Hoe wordt mijn maandelijkse betaling berekend?", "a5": "Uw maandelijkse betaling hangt af van het leningbedrag, de looptijd en uw JKP. Gebruik onze simulator hierboven voor een directe berekening op maat van uw behoeften.",
+      "q6": "Beïnvloedt het controleren van tarieven mijn kredietscore?", "a6": "Nee, het controleren van uw geschiktheid heeft geen invloed op uw kredietscore. Alleen de formele kredietaanvraag wordt geregistreerd in uw kredietgeschiedenis."
     }
   },
   "about": {

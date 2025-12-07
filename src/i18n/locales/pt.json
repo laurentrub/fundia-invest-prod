@@ -26,64 +26,67 @@
   },
   "home": {
     "hero": {
-      "title": "Soluções de Crédito à Medida",
-      "subtitle": "Realize os seus projetos com as nossas soluções de financiamento adaptadas às suas necessidades. Simulação gratuita e resposta rápida.",
-      "simulateButton": "Simular Meu Crédito",
-      "applyButton": "Solicitar Agora"
+      "title": "Obtenha o Seu Financiamento Online",
+      "subtitle": "Créditos para particulares, empresas e projetos inovadores. Soluções rápidas, transparentes e adaptadas às suas necessidades.",
+      "description": "Simule o seu empréstimo e receba uma resposta preliminar em minutos. Sem compromisso, 100% seguro.",
+      "applyButton": "Solicitar Crédito",
+      "projectButton": "Financiar Meu Projeto",
+      "simulateButton": "Simular Meu Crédito"
+    },
+    "trustIndicators": {
+      "clients": "Clientes satisfeitos",
+      "loansGranted": "Empréstimos concedidos",
+      "satisfactionRate": "Taxa de satisfação",
+      "approvalTime": "Tempo médio de aprovação"
     },
     "features": {
       "title": "Por Que Nos Escolher?",
-      "fast": {
-        "title": "Resposta Rápida",
-        "description": "Uma resposta preliminar em 48 horas no máximo"
-      },
-      "personalized": {
-        "title": "Solução à Medida",
-        "description": "Ofertas adaptadas à sua situação"
-      },
-      "secure": {
-        "title": "100% Seguro",
-        "description": "Os seus dados estão protegidos"
-      }
+      "fast": { "title": "Resposta Rápida", "description": "Uma resposta preliminar em 48 horas no máximo" },
+      "personalized": { "title": "Solução à Medida", "description": "Ofertas adaptadas à sua situação" },
+      "secure": { "title": "100% Seguro", "description": "Os seus dados estão protegidos" }
+    },
+    "featuresSection": {
+      "title": "Por Que Escolher a Privat Equity?",
+      "subtitle": "Combinamos tecnologia de ponta e serviço personalizado para tornar o empréstimo simples, rápido e transparente."
     },
     "products": {
       "title": "As Nossas Soluções de Crédito",
-      "personal": {
-        "title": "Empréstimo Pessoal",
-        "description": "Para os seus projetos pessoais"
-      },
-      "auto": {
-        "title": "Crédito Auto",
-        "description": "Financie o seu veículo"
-      },
-      "home": {
-        "title": "Crédito Obras",
-        "description": "Renove a sua casa"
-      },
-      "consolidation": {
-        "title": "Consolidação de Crédito",
-        "description": "Simplifique os seus pagamentos"
-      }
+      "personal": { "title": "Empréstimo Pessoal", "description": "Para os seus projetos pessoais" },
+      "auto": { "title": "Crédito Auto", "description": "Financie o seu veículo" },
+      "home": { "title": "Crédito Obras", "description": "Renove a sua casa" },
+      "consolidation": { "title": "Consolidação de Crédito", "description": "Simplifique os seus pagamentos" }
+    },
+    "productsSection": {
+      "title": "Os Nossos Produtos de Crédito",
+      "subtitle": "Seja qual for o seu projeto, temos uma solução de financiamento adaptada às suas necessidades.",
+      "learnMore": "Saber Mais e Simular"
     },
     "howItWorks": {
       "title": "Como Funciona?",
-      "step1": {
-        "title": "1. Simule",
-        "description": "Use o nosso simulador gratuito"
-      },
-      "step2": {
-        "title": "2. Envie o Seu Pedido",
-        "description": "Complete o formulário online"
-      },
-      "step3": {
-        "title": "3. Receba a Sua Oferta",
-        "description": "Resposta em 48 horas no máximo"
-      }
+      "subtitle": "Um processo simples e rápido em 4 passos para obter o seu financiamento",
+      "step1": { "title": "Simule o seu crédito", "description": "Use a nossa calculadora para estimar as suas mensalidades em segundos" },
+      "step2": { "title": "Envie o seu pedido", "description": "Preencha o nosso formulário online seguro em menos de 5 minutos" },
+      "step3": { "title": "Receba uma resposta instantânea", "description": "O nosso sistema dá-lhe uma resposta preliminar imediata" },
+      "step4": { "title": "Receba os seus fundos", "description": "Uma vez aprovado, receba o seu dinheiro em 48h na sua conta" },
+      "startNow": "Começar Agora"
     },
+    "mission": {
+      "title": "A Nossa Missão",
+      "statement": "Tornar o financiamento simples, acessível e seguro para todos.",
+      "accessibility": { "title": "Acessibilidade", "description": "Soluções de financiamento abertas a todos, com processos simplificados e transparentes." },
+      "trust": { "title": "Confiança", "description": "Máxima segurança para os seus dados e acompanhamento personalizado em cada passo." },
+      "innovation": { "title": "Inovação", "description": "Tecnologia de ponta para decisões rápidas e taxas competitivas." }
+    },
+    "successStories": {
+      "title": "Realizaram os seus projetos connosco",
+      "subtitle": "Milhares de clientes confiam em nós para financiar os seus projetos de vida"
+    },
+    "faqSection": { "title": "Perguntas Frequentes", "viewAll": "Ver FAQ Completa" },
+    "partners": { "title": "Aprovado pelas principais instituições financeiras" },
     "cta": {
-      "title": "Pronto para Concretizar o Seu Projeto?",
-      "description": "Faça uma simulação gratuita e sem compromisso",
-      "button": "Começar"
+      "title": "Pronto para Começar?",
+      "description": "Junte-se a milhares de clientes satisfeitos que escolheram a Privat Equity para as suas necessidades de financiamento.",
+      "button": "Solicitar Agora - Aprovação Instantânea"
     },
     "indexFeatures": {
       "fastApproval": "Aprovação Rápida",
@@ -96,32 +99,18 @@
       "expertSupportDesc": "Consultores dedicados disponíveis para orientá-lo em cada etapa do processo."
     },
     "loanProducts": {
-      "personal": "Empréstimo Pessoal",
-      "personalDesc": "De 1.000€ a 75.000€ para todos os seus projetos pessoais",
-      "personalRate": "A partir de 2,9% TAEG",
-      "auto": "Crédito Auto",
-      "autoDesc": "Financie o carro dos seus sonhos com opções de pagamento flexíveis",
-      "autoRate": "A partir de 3,2% TAEG",
-      "home": "Crédito Obras",
-      "homeDesc": "Transforme a sua casa com os nossos empréstimos para renovação",
-      "homeRate": "A partir de 3,5% TAEG",
-      "consolidation": "Consolidação de Crédito",
-      "consolidationDesc": "Simplifique as suas finanças consolidando várias dívidas",
-      "consolidationRate": "A partir de 4,2% TAEG"
+      "personal": "Empréstimo Pessoal", "personalDesc": "De 1.000€ a 75.000€ para todos os seus projetos pessoais", "personalRate": "A partir de 2,9% TAEG",
+      "auto": "Crédito Auto", "autoDesc": "Financie o carro dos seus sonhos com opções de pagamento flexíveis", "autoRate": "A partir de 3,2% TAEG",
+      "home": "Crédito Obras", "homeDesc": "Transforme a sua casa com os nossos empréstimos para renovação", "homeRate": "A partir de 3,5% TAEG",
+      "consolidation": "Consolidação de Crédito", "consolidationDesc": "Simplifique as suas finanças consolidando várias dívidas", "consolidationRate": "A partir de 4,2% TAEG"
     },
     "faqs": {
-      "q1": "Quanto tempo demora para obter aprovação do meu empréstimo?",
-      "a1": "O nosso sistema de decisão instantânea fornece uma aprovação preliminar em menos de 5 minutos. A aprovação final geralmente leva de 24 a 48 horas após verificação dos documentos.",
-      "q2": "Qual é a pontuação de crédito mínima necessária?",
-      "a2": "Aceitamos pedidos de clientes com vários perfis de crédito. Embora uma pontuação acima de 650 melhore as suas chances, avaliamos cada pedido individualmente.",
-      "q3": "Posso pagar o meu empréstimo antecipadamente sem penalidades?",
-      "a3": "Sim, todos os nossos empréstimos permitem pagamento antecipado sem penalidades. Poupará em juros ao pagar o seu empréstimo mais cedo.",
-      "q4": "Que documentos preciso fornecer para solicitar?",
-      "a4": "Precisará de um documento de identificação válido, comprovativo de rendimentos (últimos 3 recibos de vencimento), extratos bancários e comprovativo de morada. Documentos adicionais podem ser solicitados conforme a sua situação.",
-      "q5": "Como é calculada a minha mensalidade?",
-      "a5": "A sua mensalidade depende do valor do empréstimo, duração e da sua TAEG. Use o nosso simulador acima para um cálculo instantâneo adaptado às suas necessidades.",
-      "q6": "A verificação de taxas afeta a minha pontuação de crédito?",
-      "a6": "Não, verificar a sua elegibilidade não afeta a sua pontuação de crédito. Apenas o pedido formal de crédito será registado no seu histórico de crédito."
+      "q1": "Quanto tempo demora para obter aprovação do meu empréstimo?", "a1": "O nosso sistema de decisão instantânea fornece uma aprovação preliminar em menos de 5 minutos. A aprovação final geralmente leva de 24 a 48 horas após verificação dos documentos.",
+      "q2": "Qual é a pontuação de crédito mínima necessária?", "a2": "Aceitamos pedidos de clientes com vários perfis de crédito. Embora uma pontuação acima de 650 melhore as suas chances, avaliamos cada pedido individualmente.",
+      "q3": "Posso pagar o meu empréstimo antecipadamente sem penalidades?", "a3": "Sim, todos os nossos empréstimos permitem pagamento antecipado sem penalidades. Poupará em juros ao pagar o seu empréstimo mais cedo.",
+      "q4": "Que documentos preciso fornecer para solicitar?", "a4": "Precisará de um documento de identificação válido, comprovativo de rendimentos (últimos 3 recibos de vencimento), extratos bancários e comprovativo de morada. Documentos adicionais podem ser solicitados conforme a sua situação.",
+      "q5": "Como é calculada a minha mensalidade?", "a5": "A sua mensalidade depende do valor do empréstimo, duração e da sua TAEG. Use o nosso simulador acima para um cálculo instantâneo adaptado às suas necessidades.",
+      "q6": "A verificação de taxas afeta a minha pontuação de crédito?", "a6": "Não, verificar a sua elegibilidade não afeta a sua pontuação de crédito. Apenas o pedido formal de crédito será registado no seu histórico de crédito."
     }
   },
   "about": {

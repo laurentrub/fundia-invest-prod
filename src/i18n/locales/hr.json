@@ -26,64 +26,67 @@
   },
   "home": {
     "hero": {
-      "title": "Prilagođena Kreditna Rješenja",
-      "subtitle": "Ostvarite svoje projekte s našim financijskim rješenjima prilagođenim vašim potrebama. Besplatna simulacija i brz odgovor.",
-      "simulateButton": "Simuliraj Moj Kredit",
-      "applyButton": "Prijavi Sada"
+      "title": "Dobijte Svoje Financiranje Online",
+      "subtitle": "Krediti za građane, tvrtke i inovativne projekte. Brza, transparentna rješenja prilagođena vašim potrebama.",
+      "description": "Simulirajte svoj zajam i primite preliminarni odgovor za nekoliko minuta. Bez obveze, 100% sigurno.",
+      "applyButton": "Zatražite Kredit",
+      "projectButton": "Financirajte Moj Projekt",
+      "simulateButton": "Simuliraj Moj Kredit"
+    },
+    "trustIndicators": {
+      "clients": "Zadovoljnih klijenata",
+      "loansGranted": "Odobrenih zajmova",
+      "satisfactionRate": "Stopa zadovoljstva",
+      "approvalTime": "Prosječno vrijeme odobrenja"
     },
     "features": {
       "title": "Zašto Odabrati Nas?",
-      "fast": {
-        "title": "Brz Odgovor",
-        "description": "Preliminarni odgovor u maksimalno 48 sati"
-      },
-      "personalized": {
-        "title": "Prilagođeno Rješenje",
-        "description": "Ponude prilagođene vašoj situaciji"
-      },
-      "secure": {
-        "title": "100% Sigurno",
-        "description": "Vaši podaci su zaštićeni"
-      }
+      "fast": { "title": "Brz Odgovor", "description": "Preliminarni odgovor u maksimalno 48 sati" },
+      "personalized": { "title": "Prilagođeno Rješenje", "description": "Ponude prilagođene vašoj situaciji" },
+      "secure": { "title": "100% Sigurno", "description": "Vaši podaci su zaštićeni" }
+    },
+    "featuresSection": {
+      "title": "Zašto Odabrati Privat Equity?",
+      "subtitle": "Kombiniramo najnoviju tehnologiju i personalizirani servis kako bismo posuđivanje učinili jednostavnim, brzim i transparentnim."
     },
     "products": {
       "title": "Naša Kreditna Rješenja",
-      "personal": {
-        "title": "Osobni Zajam",
-        "description": "Za vaše osobne projekte"
-      },
-      "auto": {
-        "title": "Auto Kredit",
-        "description": "Financirajte svoje vozilo"
-      },
-      "home": {
-        "title": "Kredit za Obnovu",
-        "description": "Obnovite svoj dom"
-      },
-      "consolidation": {
-        "title": "Konsolidacija Dugova",
-        "description": "Pojednostavite svoje otplate"
-      }
+      "personal": { "title": "Osobni Zajam", "description": "Za vaše osobne projekte" },
+      "auto": { "title": "Auto Kredit", "description": "Financirajte svoje vozilo" },
+      "home": { "title": "Kredit za Obnovu", "description": "Obnovite svoj dom" },
+      "consolidation": { "title": "Konsolidacija Dugova", "description": "Pojednostavite svoje otplate" }
+    },
+    "productsSection": {
+      "title": "Naši Kreditni Proizvodi",
+      "subtitle": "Bez obzira na vaš projekt, imamo rješenje financiranja prilagođeno vašim potrebama.",
+      "learnMore": "Saznaj Više i Simuliraj"
     },
     "howItWorks": {
       "title": "Kako Funkcionira?",
-      "step1": {
-        "title": "1. Simuliraj",
-        "description": "Koristite naš besplatni simulator"
-      },
-      "step2": {
-        "title": "2. Pošaljite Svoj Zahtjev",
-        "description": "Ispunite online obrazac"
-      },
-      "step3": {
-        "title": "3. Primite Svoju Ponudu",
-        "description": "Odgovor u maksimalno 48 sati"
-      }
+      "subtitle": "Jednostavan i brz proces u 4 koraka za dobivanje financiranja",
+      "step1": { "title": "Simulirajte svoj kredit", "description": "Koristite naš kalkulator za procjenu mjesečnih rata u sekundama" },
+      "step2": { "title": "Pošaljite svoj zahtjev", "description": "Ispunite naš siguran online obrazac za manje od 5 minuta" },
+      "step3": { "title": "Primite trenutni odgovor", "description": "Naš sustav daje vam neposredan preliminarni odgovor" },
+      "step4": { "title": "Primite svoja sredstva", "description": "Nakon odobrenja, primite novac u roku od 48h na svoj račun" },
+      "startNow": "Započni Sada"
     },
+    "mission": {
+      "title": "Naša Misija",
+      "statement": "Učiniti financiranje jednostavnim, pristupačnim i sigurnim za sve.",
+      "accessibility": { "title": "Pristupačnost", "description": "Rješenja financiranja otvorena za sve, s pojednostavljenim i transparentnim procesima." },
+      "trust": { "title": "Povjerenje", "description": "Maksimalna sigurnost vaših podataka i personalizirana podrška u svakom koraku." },
+      "innovation": { "title": "Inovacija", "description": "Napredna tehnologija za brze odluke i konkurentne stope." }
+    },
+    "successStories": {
+      "title": "Ostvarili su svoje projekte s nama",
+      "subtitle": "Tisuće klijenata nam vjeruju za financiranje svojih životnih projekata"
+    },
+    "faqSection": { "title": "Često Postavljana Pitanja", "viewAll": "Pogledaj Cijeli FAQ" },
+    "partners": { "title": "Odobreno od vodećih financijskih institucija" },
     "cta": {
-      "title": "Spremni Ostvariti Svoj Projekt?",
-      "description": "Dobijte besplatnu simulaciju bez obveze",
-      "button": "Počni"
+      "title": "Spremni za Početak?",
+      "description": "Pridružite se tisućama zadovoljnih klijenata koji su odabrali Privat Equity za svoje potrebe financiranja.",
+      "button": "Zatraži Sada - Trenutno Odobrenje"
     },
     "indexFeatures": {
       "fastApproval": "Brzo Odobrenje",
@@ -96,32 +99,18 @@
       "expertSupportDesc": "Posvećeni savjetnici dostupni da vas vode kroz svaki korak procesa."
     },
     "loanProducts": {
-      "personal": "Osobni Zajam",
-      "personalDesc": "Od 1.000€ do 75.000€ za sve vaše osobne projekte",
-      "personalRate": "Od 2,9% EKS",
-      "auto": "Auto Kredit",
-      "autoDesc": "Financirajte svoj automobil iz snova s fleksibilnim opcijama plaćanja",
-      "autoRate": "Od 3,2% EKS",
-      "home": "Kredit za Obnovu",
-      "homeDesc": "Transformirajte svoj dom s našim kreditima za obnovu",
-      "homeRate": "Od 3,5% EKS",
-      "consolidation": "Konsolidacija Dugova",
-      "consolidationDesc": "Pojednostavite svoje financije konsolidacijom više dugova",
-      "consolidationRate": "Od 4,2% EKS"
+      "personal": "Osobni Zajam", "personalDesc": "Od 1.000€ do 75.000€ za sve vaše osobne projekte", "personalRate": "Od 2,9% EKS",
+      "auto": "Auto Kredit", "autoDesc": "Financirajte svoj automobil iz snova s fleksibilnim opcijama plaćanja", "autoRate": "Od 3,2% EKS",
+      "home": "Kredit za Obnovu", "homeDesc": "Transformirajte svoj dom s našim kreditima za obnovu", "homeRate": "Od 3,5% EKS",
+      "consolidation": "Konsolidacija Dugova", "consolidationDesc": "Pojednostavite svoje financije konsolidacijom više dugova", "consolidationRate": "Od 4,2% EKS"
     },
     "faqs": {
-      "q1": "Koliko brzo mogu dobiti odobrenje svog zajma?",
-      "a1": "Naš sustav trenutne odluke pruža preliminarno odobrenje za manje od 5 minuta. Konačno odobrenje obično traje 24 do 48 sati nakon provjere dokumenata.",
-      "q2": "Koja je minimalna potrebna kreditna ocjena?",
-      "a2": "Prihvaćamo zahtjeve klijenata s različitim kreditnim profilima. Iako ocjena iznad 650 poboljšava vaše šanse, svaki zahtjev ocjenjujemo pojedinačno.",
-      "q3": "Mogu li otplatiti svoj zajam ranije bez kazni?",
-      "a3": "Da, svi naši zajmovi dopuštaju prijevremenu otplatu bez kazni. Uštedit ćete na kamatama otplativši svoj zajam ranije.",
-      "q4": "Koje dokumente moram dostaviti za prijavu?",
-      "a4": "Trebat će vam valjana osobna iskaznica, dokaz o prihodima (zadnje 3 platne liste), bankovni izvodi i dokaz o adresi. Dodatni dokumenti mogu biti zatraženi ovisno o vašoj situaciji.",
-      "q5": "Kako se izračunava moja mjesečna rata?",
-      "a5": "Vaša mjesečna rata ovisi o iznosu zajma, trajanju i vašem EKS-u. Koristite naš simulator iznad za trenutni izračun prilagođen vašim potrebama.",
-      "q6": "Utječe li provjera stopa na moju kreditnu ocjenu?",
-      "a6": "Ne, provjera vaše podobnosti ne utječe na vašu kreditnu ocjenu. Samo formalni zahtjev za kredit bit će evidentiran u vašoj kreditnoj povijesti."
+      "q1": "Koliko brzo mogu dobiti odobrenje svog zajma?", "a1": "Naš sustav trenutne odluke pruža preliminarno odobrenje za manje od 5 minuta. Konačno odobrenje obično traje 24 do 48 sati nakon provjere dokumenata.",
+      "q2": "Koja je minimalna potrebna kreditna ocjena?", "a2": "Prihvaćamo zahtjeve klijenata s različitim kreditnim profilima. Iako ocjena iznad 650 poboljšava vaše šanse, svaki zahtjev ocjenjujemo pojedinačno.",
+      "q3": "Mogu li otplatiti svoj zajam ranije bez kazni?", "a3": "Da, svi naši zajmovi dopuštaju prijevremenu otplatu bez kazni. Uštedit ćete na kamatama otplativši svoj zajam ranije.",
+      "q4": "Koje dokumente moram dostaviti za prijavu?", "a4": "Trebat će vam valjana osobna iskaznica, dokaz o prihodima (zadnje 3 platne liste), bankovni izvodi i dokaz o adresi. Dodatni dokumenti mogu biti zatraženi ovisno o vašoj situaciji.",
+      "q5": "Kako se izračunava moja mjesečna rata?", "a5": "Vaša mjesečna rata ovisi o iznosu zajma, trajanju i vašem EKS-u. Koristite naš simulator iznad za trenutni izračun prilagođen vašim potrebama.",
+      "q6": "Utječe li provjera stopa na moju kreditnu ocjenu?", "a6": "Ne, provjera vaše podobnosti ne utječe na vašu kreditnu ocjenu. Samo formalni zahtjev za kredit bit će evidentiran u vašoj kreditnoj povijesti."
     }
   },
   "about": {
