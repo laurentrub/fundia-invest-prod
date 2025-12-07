@@ -478,6 +478,92 @@
     "months": "meses",
     "years": "años",
     "currency": "€",
-    "required": "Requerido"
+    "required": "Requerido",
+    "learnMore": "Más información",
+    "apply": "Solicitar ahora",
+    "perMonth": "/mes"
+  },
+  "products": {
+    "personalLoan": {
+      "title": "Préstamo Personal",
+      "subtitle": "De 1.000€ a 75.000€",
+      "description": "Financia tus sueños con nuestros préstamos personales flexibles.",
+      "approvalTime": "Aprobación en 5 min",
+      "secure": "100% seguro",
+      "fromRate": "Desde 2,9% TAE",
+      "whyChoose": "¿Por qué elegir nuestro préstamo personal?",
+      "benefits": {
+        "noCollateral": "Sin garantía requerida",
+        "flexibleTerms": "Plazos flexibles (12-84 meses)",
+        "earlyRepayment": "Amortización anticipada sin penalizaciones",
+        "fastFunds": "Fondos disponibles en 48 horas",
+        "onlineProcess": "Proceso 100% online",
+        "transparentFees": "Comisiones transparentes"
+      },
+      "examplesTitle": "Ejemplos de préstamos",
+      "tableHeaders": { "amount": "Importe", "duration": "Duración", "monthly": "Mensualidad", "apr": "TAE", "totalCost": "Coste total" },
+      "examplesDisclaimer": "*Los ejemplos son orientativos.",
+      "guideTitle": "Guía completa de préstamos personales",
+      "faqTitle": "FAQ Préstamo Personal"
+    },
+    "autoLoan": {
+      "title": "Préstamo Auto",
+      "description": "Conduce el coche de tus sueños con nuestras opciones de financiación.",
+      "benefitsTitle": "Ventajas del Préstamo Auto",
+      "benefits": { "newUsed": "Financiación de vehículos nuevos o usados", "competitiveRates": "Tasas desde 3,2% TAE", "upTo": "Hasta 50.000€", "flexibleTerms": "Plazos: 12 a 72 meses", "noDownPayment": "Sin entrada", "fastApproval": "Aprobación rápida" },
+      "guideTitle": "Guía Completa del Préstamo Auto",
+      "faqTitle": "FAQ Préstamo Auto"
+    },
+    "businessLoan": {
+      "title": "Préstamo Empresarial",
+      "description": "Financiación flexible para emprendedores y PYMES.",
+      "whyChoose": "¿Por qué elegir nuestro Préstamo Empresarial?",
+      "benefits": { "amounts": "Préstamos de 5.000€ a 75.000€", "flexibleTerms": "Plazos: 12 a 84 meses", "fastApproval": "Aprobación rápida", "anyProject": "Para cualquier proyecto", "competitiveRates": "Tasas competitivas", "preserveCash": "Preserva tu liquidez" },
+      "useCasesTitle": "Usos Comunes",
+      "useCases": { "workingCapital": { "title": "Capital Circulante", "description": "Cubrir gastos operativos", "typical": "10.000€ - 50.000€" }, "equipment": { "title": "Compra de Equipos", "description": "Maquinaria, vehículos", "typical": "15.000€ - 75.000€" }, "expansion": { "title": "Expansión", "description": "Nuevas ubicaciones", "typical": "20.000€ - 75.000€" }, "marketing": { "title": "Marketing", "description": "Campañas publicitarias", "typical": "5.000€ - 30.000€" }, "inventory": { "title": "Inventario", "description": "Stock de productos", "typical": "10.000€ - 50.000€" }, "refinancing": { "title": "Refinanciación", "description": "Consolidar deudas", "typical": "15.000€ - 75.000€" } },
+      "typicalAmount": "Importe típico",
+      "guideTitle": "Guía Completa",
+      "faqTitle": "FAQ Préstamo Empresarial"
+    },
+    "consolidation": {
+      "title": "Reunificación de Deudas",
+      "subtitle": "Simplifica tus Finanzas",
+      "description": "Agrupa múltiples deudas en un solo pago mensual.",
+      "reducePayments": "Reduce tus pagos mensuales",
+      "benefitsTitle": "Ventajas",
+      "benefits": { "singlePayment": "Un solo pago", "lowerRate": "Tasa potencialmente menor", "simplified": "Gestión simplificada", "fixedPayment": "Cuota fija", "improveCredit": "Mejora el crédito", "reduceStress": "Reduce el estrés" },
+      "whenToTitle": "¿Cuándo Considerar la Reunificación?",
+      "scenarios": { "highInterest": { "title": "Múltiples Deudas", "description": "Tienes varias tarjetas o préstamos" }, "difficulty": { "title": "Dificultad de Seguimiento", "description": "Gestionar múltiples fechas es abrumador" }, "goodCredit": { "title": "Buen Historial", "description": "Calificas para mejor tasa" }, "stableIncome": { "title": "Ingresos Estables", "description": "Tienes ingresos regulares" } },
+      "guideTitle": "Guía Completa",
+      "risksTitle": "Advertencias",
+      "risks": { "risk1": "Puede extender el plazo", "risk2": "Cerrar tarjetas puede afectar crédito", "risk3": "No resuelve hábitos de gasto", "risk4": "Requiere disciplina", "risk5": "Puede tener comisiones" },
+      "faqTitle": "FAQ Reunificación"
+    },
+    "homeImprovement": {
+      "title": "Préstamo Reformas",
+      "description": "Transforma tu hogar con nuestra financiación flexible.",
+      "whyChoose": "¿Por qué elegir nuestro Préstamo Reformas?",
+      "benefits": { "amounts": "De 3.000€ a 75.000€", "rates": "Desde 3,5% TAE", "terms": "Hasta 15 años", "noCollateral": "Sin garantía", "allProjects": "Para todos los proyectos", "fastApproval": "Aprobación rápida" },
+      "projectsTitle": "Ejemplos de Proyectos",
+      "projects": { "kitchen": { "title": "Cocina", "description": "Muebles, electrodomésticos" }, "bathroom": { "title": "Baño", "description": "Sanitarios, azulejos" }, "extension": { "title": "Ampliación", "description": "Habitación adicional" }, "energy": { "title": "Eficiencia Energética", "description": "Paneles solares, aislamiento" } },
+      "loanAmount": "Importe",
+      "monthlyPayment": "Cuota Mensual",
+      "durationAt": "Duración {duration} al ~{rate}% TAE",
+      "projectsDisclaimer": "*Ejemplos ilustrativos.",
+      "guideTitle": "Guía Completa",
+      "faqTitle": "FAQ Reformas"
+    },
+    "projectFinancing": {
+      "title": "Solicitud de Financiación de Proyecto",
+      "subtitle": "Complete este formulario. Nuestro equipo analizará su solicitud en 48 horas.",
+      "steps": { "project": "Su Proyecto", "funding": "Financiación", "company": "Empresa", "documents": "Documentos" },
+      "step1": { "title": "Información del Proyecto", "projectType": "Tipo de proyecto", "projectTypePlaceholder": "Seleccione", "projectTypes": { "startup": "Creación de empresa", "development": "Desarrollo", "acquisition": "Adquisición", "realEstate": "Inmobiliario comercial", "innovation": "Innovación", "expansion": "Expansión internacional", "other": "Otro" }, "projectName": "Nombre del proyecto", "projectNamePlaceholder": "Ej: Plataforma e-commerce", "projectDescription": "Descripción detallada", "projectDescriptionPlaceholder": "Describa su proyecto...", "minChars": "Mínimo 50 caracteres", "projectSector": "Sector", "projectSectorPlaceholder": "Seleccione", "sectors": { "tech": "Tecnología", "retail": "Comercio", "services": "Servicios", "industry": "Industria", "health": "Salud", "food": "Alimentación", "realEstate": "Inmobiliario", "energy": "Energía", "education": "Educación", "tourism": "Turismo", "other": "Otro" }, "projectLocation": "Ubicación", "projectLocationPlaceholder": "Ciudad, región" },
+      "step2": { "title": "Detalles Financieros", "fundingAmount": "Importe solicitado", "fundingPurpose": "Uso de fondos", "fundingPurposePlaceholder": "Detalle el uso...", "ownContribution": "Aportación propia", "expectedRevenue": "Ingresos previstos (primer año)", "projectDuration": "Duración estimada", "durationOptions": { "short": "Menos de 6 meses", "medium": "6 a 12 meses", "long": "1 a 2 años", "veryLong": "Más de 2 años" }, "breakEvenDate": "Fecha de rentabilidad", "inEuros": "En euros (€)" },
+      "step3": { "title": "Información de la Empresa", "companyName": "Nombre", "companyStatus": "Forma jurídica", "statusOptions": { "ae": "Autónomo", "sarl": "S.L.", "sas": "S.A.S.", "sa": "S.A.", "ei": "Empresario individual", "creation": "En creación" }, "siret": "CIF (si existe)", "creationDate": "Fecha de creación", "employeeCount": "Número de empleados", "employeeOptions": { "solo": "Solo yo", "small": "1-5", "medium": "6-20", "large": "21-50", "veryLarge": "Más de 50" }, "annualRevenue": "Facturación anual", "revenueOptions": { "preRevenue": "Pre-ingresos", "small": "Menos de 50.000€", "medium": "50.000€ - 200.000€", "large": "200.000€ - 500.000€", "veryLong": "500.000€ - 1.000.000€", "enterprise": "Más de 1.000.000€" }, "founderInfo": "Información del fundador", "firstName": "Nombre", "lastName": "Apellido", "email": "Email", "phone": "Teléfono" },
+      "step4": { "title": "Documentos", "documentsDescription": "Confirme que dispone de los siguientes documentos.", "businessPlan": "Plan de Negocio", "businessPlanDesc": "Documento con proyecto, mercado, estrategia", "financialProjections": "Proyecciones Financieras", "financialProjectionsDesc": "Cuenta de resultados a 3 años", "marketStudy": "Estudio de Mercado", "marketStudyDesc": "Análisis de mercado y competencia", "available": "Disponible", "inProgress": "En preparación", "notAvailable": "No disponible", "additionalInfo": "Información adicional", "additionalInfoPlaceholder": "Información adicional..." },
+      "navigation": { "previous": "Anterior", "next": "Siguiente", "submit": "Enviar solicitud" },
+      "validation": { "projectTypeRequired": "Tipo requerido", "projectNameMin": "Mínimo 3 caracteres", "projectDescriptionMin": "Mínimo 50 caracteres", "projectSectorRequired": "Sector requerido", "projectLocationRequired": "Ubicación requerida", "fundingAmountRequired": "Importe requerido", "fundingPurposeRequired": "Uso requerido", "expectedRevenueRequired": "Ingresos requeridos", "projectDurationRequired": "Duración requerida", "breakEvenDateRequired": "Fecha requerida", "ownContributionRequired": "Aportación requerida", "companyNameRequired": "Nombre requerido", "companyStatusRequired": "Forma requerida", "siretInvalid": "CIF inválido", "creationDateRequired": "Fecha requerida", "employeeCountRequired": "Empleados requerido", "annualRevenueRequired": "Facturación requerida", "firstNameRequired": "Nombre requerido", "lastNameRequired": "Apellido requerido", "emailInvalid": "Email inválido", "phoneInvalid": "Teléfono inválido", "businessPlanRequired": "Confirme plan de negocio", "financialProjectionsRequired": "Confirme proyecciones", "marketStudyRequired": "Confirme estudio de mercado", "validationError": "Error de validación", "correctErrors": "Corrija los errores." },
+      "messages": { "success": "¡Solicitud enviada!", "successDesc": "Su solicitud ha sido enviada correctamente." }
+    }
   }
 }

@@ -478,6 +478,81 @@
     "months": "maanden",
     "years": "jaren",
     "currency": "€",
-    "required": "Vereist"
+    "required": "Vereist",
+    "learnMore": "Meer informatie",
+    "apply": "Nu aanvragen",
+    "perMonth": "/maand"
+  },
+  "products": {
+    "personalLoan": {
+      "title": "Persoonlijke Lening",
+      "subtitle": "Van €1.000 tot €75.000",
+      "description": "Financier uw dromen met onze flexibele persoonlijke leningen.",
+      "approvalTime": "Goedkeuring in 5 min",
+      "secure": "100% veilig",
+      "fromRate": "Vanaf 2,9% JKP",
+      "whyChoose": "Waarom onze persoonlijke lening kiezen?",
+      "benefits": { "noCollateral": "Geen onderpand vereist", "flexibleTerms": "Flexibele looptijden (12-84 maanden)", "earlyRepayment": "Vervroegde aflossing zonder boetes", "fastFunds": "Geld binnen 48 uur", "onlineProcess": "100% online proces", "transparentFees": "Transparante kosten" },
+      "examplesTitle": "Leningsvoorbeelden",
+      "tableHeaders": { "amount": "Bedrag", "duration": "Looptijd", "monthly": "Maandbedrag", "apr": "JKP", "totalCost": "Totale kosten" },
+      "examplesDisclaimer": "*Voorbeelden zijn indicatief.",
+      "guideTitle": "Complete gids voor persoonlijke leningen",
+      "faqTitle": "FAQ Persoonlijke Lening"
+    },
+    "autoLoan": {
+      "title": "Autolening",
+      "description": "Rijd vandaag nog uw droomauto met onze flexibele autofinanciering.",
+      "benefitsTitle": "Voordelen Autolening",
+      "benefits": { "newUsed": "Financiering nieuwe of gebruikte voertuigen", "competitiveRates": "Tarieven vanaf 3,2% JKP", "upTo": "Tot €50.000", "flexibleTerms": "Looptijden: 12 tot 72 maanden", "noDownPayment": "Geen aanbetaling", "fastApproval": "Snelle goedkeuring" },
+      "guideTitle": "Complete Autolening Gids",
+      "faqTitle": "FAQ Autolening"
+    },
+    "businessLoan": {
+      "title": "Zakelijke Lening",
+      "description": "Flexibele financiering voor ondernemers en MKB.",
+      "whyChoose": "Waarom onze Zakelijke Lening kiezen?",
+      "benefits": { "amounts": "Leningen van €5.000 tot €75.000", "flexibleTerms": "Looptijden: 12 tot 84 maanden", "fastApproval": "Snelle goedkeuring", "anyProject": "Voor elk project", "competitiveRates": "Concurrerende tarieven", "preserveCash": "Behoud uw cashflow" },
+      "useCasesTitle": "Veelvoorkomende Toepassingen",
+      "useCases": { "workingCapital": { "title": "Werkkapitaal", "description": "Operationele kosten dekken", "typical": "€10.000 - €50.000" }, "equipment": { "title": "Apparatuur", "description": "Machines, voertuigen", "typical": "€15.000 - €75.000" }, "expansion": { "title": "Uitbreiding", "description": "Nieuwe locaties", "typical": "€20.000 - €75.000" }, "marketing": { "title": "Marketing", "description": "Reclamecampagnes", "typical": "€5.000 - €30.000" }, "inventory": { "title": "Voorraad", "description": "Producten, materialen", "typical": "€10.000 - €50.000" }, "refinancing": { "title": "Herfinanciering", "description": "Schulden consolideren", "typical": "€15.000 - €75.000" } },
+      "typicalAmount": "Typisch bedrag",
+      "guideTitle": "Complete Gids",
+      "faqTitle": "FAQ Zakelijke Lening"
+    },
+    "consolidation": {
+      "title": "Schuldenconsolidatie",
+      "subtitle": "Vereenvoudig uw Financiën",
+      "description": "Combineer meerdere schulden in één maandelijkse betaling.",
+      "reducePayments": "Verlaag uw maandelijkse betalingen",
+      "benefitsTitle": "Voordelen",
+      "benefits": { "singlePayment": "Eén betaling", "lowerRate": "Mogelijk lagere rente", "simplified": "Vereenvoudigd beheer", "fixedPayment": "Vast maandbedrag", "improveCredit": "Verbetert krediet", "reduceStress": "Vermindert stress" },
+      "whenToTitle": "Wanneer Consolidatie Overwegen?",
+      "scenarios": { "highInterest": { "title": "Meerdere Schulden", "description": "U heeft meerdere kaarten of leningen" }, "difficulty": { "title": "Moeilijk bij te houden", "description": "Meerdere data beheren is overweldigend" }, "goodCredit": { "title": "Goede Score", "description": "Kwalificeert voor betere rente" }, "stableIncome": { "title": "Stabiel Inkomen", "description": "Regelmatig inkomen" } },
+      "guideTitle": "Complete Gids",
+      "risksTitle": "Waarschuwingen",
+      "risks": { "risk1": "Kan looptijd verlengen", "risk2": "Kaarten sluiten kan krediet beïnvloeden", "risk3": "Lost onderliggende gewoontes niet op", "risk4": "Vereist discipline", "risk5": "Kan kosten hebben" },
+      "faqTitle": "FAQ Consolidatie"
+    },
+    "homeImprovement": {
+      "title": "Verbouwingslening",
+      "description": "Transformeer uw huis met onze flexibele verbouwingsfinanciering.",
+      "whyChoose": "Waarom onze Verbouwingslening kiezen?",
+      "benefits": { "amounts": "Van €3.000 tot €75.000", "rates": "Vanaf 3,5% JKP", "terms": "Tot 15 jaar", "noCollateral": "Geen onderpand", "allProjects": "Voor alle projecten", "fastApproval": "Snelle goedkeuring" },
+      "projectsTitle": "Projectvoorbeelden",
+      "projects": { "kitchen": { "title": "Keuken", "description": "Kasten, apparaten" }, "bathroom": { "title": "Badkamer", "description": "Sanitair, tegels" }, "extension": { "title": "Uitbreiding", "description": "Extra kamer" }, "energy": { "title": "Energie-efficiëntie", "description": "Zonnepanelen, isolatie" } },
+      "loanAmount": "Bedrag",
+      "monthlyPayment": "Maandbedrag",
+      "durationAt": "Looptijd {duration} tegen ~{rate}% JKP",
+      "projectsDisclaimer": "*Illustratieve voorbeelden.",
+      "guideTitle": "Complete Gids",
+      "faqTitle": "FAQ Verbouwing"
+    },
+    "projectFinancing": {
+      "title": "Projectfinanciering Aanvraag",
+      "subtitle": "Vul dit formulier in. Ons team analyseert uw aanvraag binnen 48 uur.",
+      "steps": { "project": "Uw Project", "funding": "Financiering", "company": "Bedrijf", "documents": "Documenten" },
+      "navigation": { "previous": "Vorige", "next": "Volgende", "submit": "Aanvraag indienen" },
+      "validation": { "validationError": "Validatiefout", "correctErrors": "Corrigeer de fouten." },
+      "messages": { "success": "Aanvraag ingediend!", "successDesc": "Uw aanvraag is succesvol verzonden." }
+    }
   }
 }

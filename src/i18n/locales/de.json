@@ -478,6 +478,449 @@
     "months": "Monate",
     "years": "Jahre",
     "currency": "€",
-    "required": "Erforderlich"
+    "required": "Erforderlich",
+    "learnMore": "Mehr erfahren",
+    "apply": "Jetzt beantragen",
+    "perMonth": "/Monat"
+  },
+  "products": {
+    "personalLoan": {
+      "title": "Privatkredit",
+      "subtitle": "Von 1.000€ bis 75.000€",
+      "description": "Finanzieren Sie Ihre Träume mit unseren flexiblen Privatkrediten. Ob Hochzeit, Urlaub, medizinische Ausgaben oder jedes persönliche Projekt - wir haben die Lösung.",
+      "approvalTime": "Genehmigung in 5 Min",
+      "secure": "100% sicher",
+      "fromRate": "Ab 2,9% eff. Jahreszins",
+      "whyChoose": "Warum unseren Privatkredit wählen?",
+      "benefits": {
+        "noCollateral": "Keine Sicherheiten erforderlich",
+        "flexibleTerms": "Flexible Rückzahlungsfristen (12-84 Monate)",
+        "earlyRepayment": "Vorzeitige Rückzahlung ohne Gebühren",
+        "fastFunds": "Mittel innerhalb von 48 Stunden verfügbar",
+        "onlineProcess": "100% Online-Antragsprozess",
+        "transparentFees": "Transparente Gebühren - keine versteckten Kosten"
+      },
+      "examplesTitle": "Kreditbeispiele",
+      "tableHeaders": {
+        "amount": "Betrag",
+        "duration": "Laufzeit",
+        "monthly": "Monatlich",
+        "apr": "Eff. Jahreszins",
+        "totalCost": "Gesamtkosten"
+      },
+      "examplesDisclaimer": "*Beispiele sind unverbindlich. Ihre tatsächlichen Zinssätze können je nach Kreditprofil variieren.",
+      "guideTitle": "Vollständiger Leitfaden für Privatkredite",
+      "guide": {
+        "whatIsTitle": "Was ist ein Privatkredit?",
+        "whatIsP1": "Ein Privatkredit ist ein unbesicherter Kredit, der Ihnen einen Pauschalbetrag für den persönlichen Gebrauch zur Verfügung stellt.",
+        "whatIsP2": "Bei Privat Equity reichen unsere Privatkredite von 1.000€ bis 75.000€ mit Rückzahlungsfristen von 12 bis 84 Monaten.",
+        "usesTitle": "Häufige Verwendungszwecke",
+        "uses": {
+          "consolidation": "Schuldenkonsolidierung: Mehrere hochverzinsliche Schulden in einer monatlichen Zahlung zusammenfassen",
+          "renovation": "Renovierungen: Küche renovieren, Bad hinzufügen oder Immobilie verbessern",
+          "purchases": "Große Anschaffungen: Möbel, Geräte oder Elektronik kaufen",
+          "medical": "Medizinische Ausgaben: Unerwartete Gesundheitskosten abdecken",
+          "wedding": "Hochzeiten: Ihre Traumhochzeit finanzieren",
+          "education": "Bildung: Kurse, Zertifizierungen oder Weiterbildung bezahlen",
+          "vacation": "Urlaub: Unvergessliche Erlebnisse schaffen",
+          "emergency": "Notfallausgaben: Unerwartete Kosten bewältigen"
+        },
+        "qualifyTitle": "Wie Sie sich qualifizieren",
+        "qualifyIntro": "Bei Privat Equity verlangen wir in der Regel:",
+        "qualifyItems": {
+          "age": "Mindestens 18 Jahre alt sein",
+          "residency": "Französischer Wohnsitz oder gültige Aufenthaltserlaubnis",
+          "income": "Stabile Einkommensquelle",
+          "debtRatio": "Schulden-Einkommens-Verhältnis unter 40%",
+          "documents": "Erforderliche Dokumente bereitstellen"
+        },
+        "aprTitle": "Zinssätze und eff. Jahreszins verstehen",
+        "aprIntro": "Der effektive Jahreszins ist die jährlichen Gesamtkosten Ihres Kredits in Prozent.",
+        "aprFactors": {
+          "creditScore": "Kreditwürdigkeit: Höhere Scores qualifizieren für niedrigere Zinsen",
+          "loanAmount": "Kreditbetrag: Größere Kredite können andere Zinsstrukturen haben",
+          "loanTerm": "Kreditlaufzeit: Kürzere Laufzeiten haben oft niedrigere Zinsen",
+          "debtRatio": "Schulden-Einkommens-Verhältnis: Niedrigere Verhältnisse zeigen bessere Rückzahlungsfähigkeit",
+          "incomeStability": "Einkommensstabilität: Konsistente Beschäftigungshistorie verbessert Ihren Zinssatz"
+        },
+        "processTitle": "Der Antragsprozess",
+        "processSteps": {
+          "step1": "Berechtigung prüfen: Nutzen Sie unseren Simulator",
+          "step2": "Dokumente sammeln: Ausweis, Einkommensnachweis vorbereiten",
+          "step3": "Antrag einreichen: Online-Formular ausfüllen",
+          "step4": "Sofortige Entscheidung: Vorläufige Genehmigung erhalten",
+          "step5": "Informationen verifizieren: Unser Team prüft Ihren Antrag",
+          "step6": "Vertrag unterschreiben: Kreditvertrag elektronisch unterzeichnen",
+          "step7": "Mittel erhalten: Geld wird auf Ihr Konto überwiesen"
+        },
+        "tipsTitle": "Tipps für den besten Zinssatz",
+        "tips": {
+          "tip1": "Kreditwürdigkeit vor Antrag prüfen und verbessern",
+          "tip2": "Angebote verschiedener Kreditgeber vergleichen",
+          "tip3": "Kürzere Kreditlaufzeit in Betracht ziehen",
+          "tip4": "Nur das leihen, was Sie brauchen",
+          "tip5": "Automatische Zahlungen einrichten",
+          "tip6": "Mitantragsteller in Betracht ziehen"
+        }
+      },
+      "faqTitle": "Privatkredit FAQ",
+      "faqs": {
+        "q1": "Wofür kann ich einen Privatkredit verwenden?",
+        "a1": "Privatkredite sind vielseitig und können für fast jeden legalen Zweck verwendet werden.",
+        "q2": "Welche Mindestkreditwürdigkeit ist erforderlich?",
+        "a2": "Wir bevorzugen Antragsteller mit einer Kreditwürdigkeit über 650, bewerten aber jeden Antrag individuell.",
+        "q3": "Wie schnell kann ich das Geld bekommen?",
+        "a3": "Nach Genehmigung werden die Mittel in der Regel innerhalb von 24-48 Stunden überwiesen.",
+        "q4": "Gibt es Gebühren für vorzeitige Rückzahlung?",
+        "a4": "Nein! Alle unsere Privatkredite haben keine Vorfälligkeitsentschädigungen.",
+        "q5": "Welche Dokumente muss ich vorlegen?",
+        "a5": "Sie benötigen einen gültigen Ausweis, Einkommensnachweise und aktuelle Kontoauszüge.",
+        "q6": "Kann ich als Selbstständiger beantragen?",
+        "a6": "Ja! Selbstständige sind willkommen.",
+        "q7": "Was ist der eff. Jahreszins?",
+        "a7": "Der effektive Jahreszins repräsentiert die jährlichen Gesamtkosten Ihres Kredits.",
+        "q8": "Kann ich mein monatliches Zahlungsdatum ändern?",
+        "a8": "Ja, wir bieten Flexibilität bei Zahlungsterminen.",
+        "q9": "Was passiert, wenn ich eine Zahlung verpasse?",
+        "a9": "Kontaktieren Sie uns sofort. Wir können möglicherweise einen Zahlungsplan arrangieren.",
+        "q10": "Sind meine persönlichen Daten sicher?",
+        "a10": "Absolut. Wir verwenden bankübliche 256-Bit-SSL-Verschlüsselung."
+      }
+    },
+    "autoLoan": {
+      "title": "Autokredit",
+      "description": "Fahren Sie heute Ihr Traumauto mit unseren flexiblen Autofinanzierungsoptionen.",
+      "benefitsTitle": "Autokredit-Vorteile",
+      "benefits": {
+        "newUsed": "Finanzierung für neue oder gebrauchte Fahrzeuge",
+        "competitiveRates": "Wettbewerbsfähige Zinsen ab 3,2% eff. Jahreszins",
+        "upTo": "Bis zu 50.000€ Finanzierung",
+        "flexibleTerms": "Flexible Laufzeiten: 12 bis 72 Monate",
+        "noDownPayment": "Keine Anzahlung erforderlich",
+        "fastApproval": "Schneller Genehmigungsprozess"
+      },
+      "guideTitle": "Vollständiger Autokredit-Leitfaden",
+      "guide": {
+        "whatIsTitle": "Was ist ein Autokredit?",
+        "whatIsP1": "Ein Autokredit ist ein besicherter Kredit speziell für den Fahrzeugkauf.",
+        "whatIsP2": "Unsere wettbewerbsfähigen Zinsen beginnen ab 3,2% eff. Jahreszins.",
+        "benefitsTitle": "Vorteile von Autokrediten",
+        "benefitsIntro": "Die Finanzierung Ihres Fahrzeugs bietet mehrere Vorteile:",
+        "benefitsList": {
+          "savings": "Ersparnisse bewahren: Notgroschen intakt halten",
+          "credit": "Kredithistorie aufbauen: Pünktliche Zahlungen verbessern Kreditwürdigkeit",
+          "betterCar": "Besseres Auto: Finanzierung ermöglicht zuverlässigeres Fahrzeug",
+          "fixedPayments": "Feste Monatsraten: Mit Sicherheit budgetieren",
+          "flexibleTerms": "Flexible Laufzeiten: Passende Rückzahlungsperiode wählen",
+          "taxBenefits": "Steuervorteile: Bei geschäftlicher Nutzung steuerlich absetzbar"
+        }
+      },
+      "faqTitle": "Autokredit FAQ",
+      "faqs": {
+        "q1": "Was ist der Unterschied zu Händlerfinanzierung?",
+        "a1": "Vorabgenehmigung bei uns gibt Ihnen einen garantierten Zinssatz vor dem Kauf.",
+        "q2": "Kann ich einen Gebrauchtwagen von privat finanzieren?",
+        "a2": "Ja! Wir finanzieren Gebrauchtwagen von Händlern und Privatverkäufern.",
+        "q3": "Wie alt darf ein Gebrauchtwagen maximal sein?",
+        "a3": "Wir finanzieren in der Regel Fahrzeuge bis 8 Jahre alt.",
+        "q4": "Brauche ich eine Anzahlung?",
+        "a4": "Keine Anzahlung erforderlich, aber 10-20% können Ihre Raten senken.",
+        "q5": "Welche Versicherung brauche ich?",
+        "a5": "Vollkasko und Teilkasko sind für finanzierte Fahrzeuge erforderlich.",
+        "q6": "Kann ich mein aktuelles Fahrzeug in Zahlung geben?",
+        "a6": "Absolut! Der Inzahlungnahmewert kann als Anzahlung dienen.",
+        "q7": "Kann ich später umschulden?",
+        "a7": "Ja! Bei niedrigeren Zinsen oder besserer Kreditwürdigkeit können Sie umschulden.",
+        "q8": "Was passiert bei Totalschaden oder Diebstahl?",
+        "a8": "Ihre Versicherung sollte den Fahrzeugwert abdecken.",
+        "q9": "Kann ich vorzeitig zurückzahlen?",
+        "a9": "Ja! Keine Vorfälligkeitsentschädigung bei unseren Autokrediten.",
+        "q10": "Was wenn das Auto weniger kostet als genehmigt?",
+        "a10": "Sie leihen einfach den benötigten Betrag."
+      }
+    },
+    "businessLoan": {
+      "title": "Geschäftskredit",
+      "description": "Flexible Finanzierung für Unternehmer, KMU und wachsende Unternehmen.",
+      "whyChoose": "Warum unseren Geschäftskredit wählen?",
+      "benefits": {
+        "amounts": "Kredite von 5.000€ bis 75.000€",
+        "flexibleTerms": "Flexible Laufzeiten: 12 bis 84 Monate",
+        "fastApproval": "Schnelle Genehmigung für Unternehmer",
+        "anyProject": "Für jedes Geschäftsprojekt nutzbar",
+        "competitiveRates": "Wettbewerbsfähige Zinsen für KMU",
+        "preserveCash": "Cashflow erhalten"
+      },
+      "useCasesTitle": "Häufige Verwendungszwecke",
+      "useCases": {
+        "workingCapital": {
+          "title": "Betriebskapital",
+          "description": "Betriebskosten, Gehälter, Lagerbestand abdecken",
+          "typical": "10.000€ - 50.000€"
+        },
+        "equipment": {
+          "title": "Ausrüstungskauf",
+          "description": "Maschinen, Fahrzeuge, Computer kaufen",
+          "typical": "15.000€ - 75.000€"
+        },
+        "expansion": {
+          "title": "Geschäftserweiterung",
+          "description": "Neue Standorte eröffnen, Personal einstellen",
+          "typical": "20.000€ - 75.000€"
+        },
+        "marketing": {
+          "title": "Marketing & Wachstum",
+          "description": "Werbekampagnen, Webentwicklung finanzieren",
+          "typical": "5.000€ - 30.000€"
+        },
+        "inventory": {
+          "title": "Lagerbestandskauf",
+          "description": "Produkte, Materialien aufstocken",
+          "typical": "10.000€ - 50.000€"
+        },
+        "refinancing": {
+          "title": "Umschuldung",
+          "description": "Geschäftsschulden konsolidieren",
+          "typical": "15.000€ - 75.000€"
+        }
+      },
+      "typicalAmount": "Typischer Betrag",
+      "guideTitle": "Vollständiger Geschäftskredit-Leitfaden",
+      "faqTitle": "Geschäftskredit FAQ"
+    },
+    "consolidation": {
+      "title": "Schuldenkonsolidierung",
+      "subtitle": "Finanzen vereinfachen",
+      "description": "Mehrere Schulden in einer monatlichen Zahlung zusammenfassen mit potenziell niedrigerem Zinssatz.",
+      "reducePayments": "Monatliche Zahlungen und Gesamtzinsen reduzieren",
+      "benefitsTitle": "Vorteile der Schuldenkonsolidierung",
+      "benefits": {
+        "singlePayment": "Mehrere Schulden in einer Zahlung",
+        "lowerRate": "Potenziell niedrigerer Gesamtzinssatz",
+        "simplified": "Vereinfachte Finanzverwaltung",
+        "fixedPayment": "Feste Monatsrate",
+        "improveCredit": "Kann Kreditwürdigkeit verbessern",
+        "reduceStress": "Finanziellen Stress reduzieren"
+      },
+      "whenToTitle": "Wann Konsolidierung erwägen?",
+      "scenarios": {
+        "highInterest": {
+          "title": "Mehrere hochverzinsliche Schulden",
+          "description": "Sie haben mehrere Kredite mit Zinsen über 10-15%"
+        },
+        "difficulty": {
+          "title": "Schwierigkeiten bei der Zahlungsverfolgung",
+          "description": "Mehrere Fälligkeitstermine sind überwältigend"
+        },
+        "goodCredit": {
+          "title": "Gute Kreditwürdigkeit",
+          "description": "Ihre Kreditwürdigkeit qualifiziert für niedrigeren Zinssatz"
+        },
+        "stableIncome": {
+          "title": "Stabiles Einkommen",
+          "description": "Sie haben regelmäßiges Einkommen"
+        }
+      },
+      "guideTitle": "Vollständiger Konsolidierungs-Leitfaden",
+      "risksTitle": "Wichtige Warnungen",
+      "risks": {
+        "risk1": "Kann Rückzahlungszeitraum verlängern",
+        "risk2": "Schließen von Kreditkarten kann Kreditwürdigkeit temporär senken",
+        "risk3": "Löst nicht die zugrunde liegenden Ausgabengewohnheiten",
+        "risk4": "Erfordert Disziplin, um neue Schulden zu vermeiden",
+        "risk5": "Einige Kredite haben Bearbeitungsgebühren"
+      },
+      "faqTitle": "Konsolidierung FAQ"
+    },
+    "homeImprovement": {
+      "title": "Renovierungskredit",
+      "description": "Transformieren Sie Ihr Zuhause mit unserer flexiblen Renovierungsfinanzierung.",
+      "whyChoose": "Warum unseren Renovierungskredit wählen?",
+      "benefits": {
+        "amounts": "Finanzierung von 3.000€ bis 75.000€",
+        "rates": "Zinsen ab 3,5% eff. Jahreszins",
+        "terms": "Laufzeiten bis 15 Jahre",
+        "noCollateral": "Keine Sicherheiten erforderlich",
+        "allProjects": "Für alle Renovierungsprojekte nutzbar",
+        "fastApproval": "Schnelle Genehmigung und Auszahlung"
+      },
+      "projectsTitle": "Beliebte Projektbeispiele",
+      "projects": {
+        "kitchen": {
+          "title": "Küchenrenovierung",
+          "description": "Neue Schränke, Arbeitsplatten, Geräte und Boden"
+        },
+        "bathroom": {
+          "title": "Badrenovierung",
+          "description": "Neue Armaturen, Fliesen, Waschtisch und Dusche"
+        },
+        "extension": {
+          "title": "Hauserweiterung",
+          "description": "Zusätzliches Schlafzimmer oder erweiterter Wohnraum"
+        },
+        "energy": {
+          "title": "Energieeffizienz",
+          "description": "Solaranlagen, Dämmung, neue Fenster"
+        }
+      },
+      "loanAmount": "Kreditbetrag",
+      "monthlyPayment": "Monatliche Rate",
+      "durationAt": "Laufzeit {duration} bei ~{rate}% eff. Jahreszins",
+      "projectsDisclaimer": "*Beispiele sind illustrativ. Tatsächliche Zinsen hängen von Ihrem Profil ab.",
+      "guideTitle": "Vollständiger Renovierungskredit-Leitfaden",
+      "faqTitle": "Renovierungskredit FAQ"
+    },
+    "projectFinancing": {
+      "title": "Projektfinanzierungsantrag",
+      "subtitle": "Füllen Sie dieses Formular aus, um Ihr Finanzierungsprojekt einzureichen. Unser Team analysiert Ihren Antrag innerhalb von 48 Stunden.",
+      "steps": {
+        "project": "Ihr Projekt",
+        "funding": "Finanzierung",
+        "company": "Unternehmen",
+        "documents": "Dokumente"
+      },
+      "step1": {
+        "title": "Projektinformationen",
+        "projectType": "Projekttyp",
+        "projectTypePlaceholder": "Projekttyp auswählen",
+        "projectTypes": {
+          "startup": "Unternehmensgründung (Startup)",
+          "development": "Geschäftsentwicklung",
+          "acquisition": "Unternehmensübernahme",
+          "realEstate": "Gewerbliches Immobilienprojekt",
+          "innovation": "Technologische Innovation",
+          "expansion": "Internationale Expansion",
+          "other": "Andere"
+        },
+        "projectName": "Projektname",
+        "projectNamePlaceholder": "z.B.: Innovative E-Commerce-Plattform",
+        "projectDescription": "Detaillierte Projektbeschreibung",
+        "projectDescriptionPlaceholder": "Beschreiben Sie Ihr Projekt, Ziele, Innovation und Wertversprechen...",
+        "minChars": "Mindestens 50 Zeichen",
+        "projectSector": "Branche",
+        "projectSectorPlaceholder": "Branche auswählen",
+        "sectors": {
+          "tech": "Technologie & Digital",
+          "retail": "Handel & Vertrieb",
+          "services": "Unternehmensdienstleistungen",
+          "industry": "Industrie & Fertigung",
+          "health": "Gesundheit & Biotechnologie",
+          "food": "Lebensmittel & Gastronomie",
+          "realEstate": "Immobilien",
+          "energy": "Energie & Umwelt",
+          "education": "Bildung & Ausbildung",
+          "tourism": "Tourismus & Gastgewerbe",
+          "other": "Andere"
+        },
+        "projectLocation": "Projektstandort",
+        "projectLocationPlaceholder": "Stadt, Region oder Land"
+      },
+      "step2": {
+        "title": "Finanzielle Projektdetails",
+        "fundingAmount": "Gesuchter Finanzierungsbetrag",
+        "fundingPurpose": "Verwendung der Mittel",
+        "fundingPurposePlaceholder": "Detaillieren Sie die Mittelverwendung...",
+        "ownContribution": "Eigenkapital / Eigenmittel",
+        "expectedRevenue": "Prognostizierter Umsatz (erstes Jahr)",
+        "projectDuration": "Geschätzte Projektdauer",
+        "durationOptions": {
+          "short": "Weniger als 6 Monate",
+          "medium": "6 bis 12 Monate",
+          "long": "1 bis 2 Jahre",
+          "veryLong": "Mehr als 2 Jahre"
+        },
+        "breakEvenDate": "Erwartetes Break-Even-Datum",
+        "inEuros": "In Euro (€)"
+      },
+      "step3": {
+        "title": "Unternehmensinformationen",
+        "companyName": "Unternehmensname",
+        "companyStatus": "Rechtsform",
+        "statusOptions": {
+          "ae": "Einzelunternehmer",
+          "sarl": "GmbH",
+          "sas": "AG (vereinfacht)",
+          "sa": "Aktiengesellschaft",
+          "ei": "Einzelkaufmann",
+          "creation": "In Gründung"
+        },
+        "siret": "Registernummer (falls vorhanden)",
+        "creationDate": "Gründungsdatum",
+        "employeeCount": "Anzahl der Mitarbeiter",
+        "employeeOptions": {
+          "solo": "Nur ich",
+          "small": "1-5 Mitarbeiter",
+          "medium": "6-20 Mitarbeiter",
+          "large": "21-50 Mitarbeiter",
+          "veryLarge": "Mehr als 50 Mitarbeiter"
+        },
+        "annualRevenue": "Aktueller Jahresumsatz",
+        "revenueOptions": {
+          "preRevenue": "Vor Umsatz / Startup",
+          "small": "Weniger als 50.000€",
+          "medium": "50.000€ - 200.000€",
+          "large": "200.000€ - 500.000€",
+          "veryLarge": "500.000€ - 1.000.000€",
+          "enterprise": "Mehr als 1.000.000€"
+        },
+        "founderInfo": "Gründer- / Vertreterinformationen",
+        "firstName": "Vorname",
+        "lastName": "Nachname",
+        "email": "Geschäftliche E-Mail",
+        "phone": "Telefon"
+      },
+      "step4": {
+        "title": "Dokumente und zusätzliche Informationen",
+        "documentsDescription": "Bestätigen Sie, dass Sie die folgenden Dokumente haben.",
+        "businessPlan": "Businessplan",
+        "businessPlanDesc": "Ein Dokument mit Projekt, Markt und Strategie",
+        "financialProjections": "Finanzprognosen",
+        "financialProjectionsDesc": "Geplante Gewinn- und Verlustrechnung für mindestens 3 Jahre",
+        "marketStudy": "Marktstudie",
+        "marketStudyDesc": "Analyse Ihres Zielmarktes und der Konkurrenz",
+        "available": "Verfügbar",
+        "inProgress": "In Vorbereitung",
+        "notAvailable": "Nicht verfügbar",
+        "additionalInfo": "Zusätzliche Informationen (optional)",
+        "additionalInfoPlaceholder": "Weitere Informationen..."
+      },
+      "navigation": {
+        "previous": "Zurück",
+        "next": "Weiter",
+        "submit": "Antrag einreichen"
+      },
+      "validation": {
+        "projectTypeRequired": "Projekttyp erforderlich",
+        "projectNameMin": "Name muss mindestens 3 Zeichen haben",
+        "projectDescriptionMin": "Beschreibung muss mindestens 50 Zeichen haben",
+        "projectSectorRequired": "Branche erforderlich",
+        "projectLocationRequired": "Standort erforderlich",
+        "fundingAmountRequired": "Betrag erforderlich",
+        "fundingPurposeRequired": "Verwendungszweck erforderlich",
+        "expectedRevenueRequired": "Prognostizierter Umsatz erforderlich",
+        "projectDurationRequired": "Projektdauer erforderlich",
+        "breakEvenDateRequired": "Break-Even-Datum erforderlich",
+        "ownContributionRequired": "Eigenkapital erforderlich",
+        "companyNameRequired": "Unternehmensname erforderlich",
+        "companyStatusRequired": "Rechtsform erforderlich",
+        "siretInvalid": "Registernummer muss 14 Ziffern haben",
+        "creationDateRequired": "Gründungsdatum erforderlich",
+        "employeeCountRequired": "Mitarbeiteranzahl erforderlich",
+        "annualRevenueRequired": "Jahresumsatz erforderlich",
+        "firstNameRequired": "Vorname erforderlich",
+        "lastNameRequired": "Nachname erforderlich",
+        "emailInvalid": "Ungültige E-Mail",
+        "phoneInvalid": "Ungültige Telefonnummer",
+        "businessPlanRequired": "Sie müssen einen Businessplan bestätigen",
+        "financialProjectionsRequired": "Sie müssen Finanzprognosen bestätigen",
+        "marketStudyRequired": "Sie müssen eine Marktstudie bestätigen",
+        "validationError": "Validierungsfehler",
+        "correctErrors": "Bitte korrigieren Sie die Fehler."
+      },
+      "messages": {
+        "success": "Antrag eingereicht!",
+        "successDesc": "Ihr Finanzierungsantrag wurde erfolgreich übermittelt."
+      }
+    }
   }
 }

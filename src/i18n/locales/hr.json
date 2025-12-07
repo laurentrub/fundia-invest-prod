@@ -478,6 +478,81 @@
     "months": "mjeseci",
     "years": "godina",
     "currency": "€",
-    "required": "Obavezno"
+    "required": "Obavezno",
+    "learnMore": "Saznaj više",
+    "apply": "Podnesi zahtjev",
+    "perMonth": "/mjesec"
+  },
+  "products": {
+    "personalLoan": {
+      "title": "Osobni Kredit",
+      "subtitle": "Od 1.000€ do 75.000€",
+      "description": "Financirajte svoje snove s našim fleksibilnim osobnim kreditima.",
+      "approvalTime": "Odobrenje u 5 min",
+      "secure": "100% sigurno",
+      "fromRate": "Od 2,9% EKS",
+      "whyChoose": "Zašto izabrati naš osobni kredit?",
+      "benefits": { "noCollateral": "Bez jamstva", "flexibleTerms": "Fleksibilni rokovi (12-84 mjeseca)", "earlyRepayment": "Prijevremena otplata bez penala", "fastFunds": "Sredstva u 48 sati", "onlineProcess": "100% online proces", "transparentFees": "Transparentne naknade" },
+      "examplesTitle": "Primjeri kredita",
+      "tableHeaders": { "amount": "Iznos", "duration": "Trajanje", "monthly": "Mjesečna rata", "apr": "EKS", "totalCost": "Ukupni trošak" },
+      "examplesDisclaimer": "*Primjeri su indikativni.",
+      "guideTitle": "Potpuni vodič za osobne kredite",
+      "faqTitle": "FAQ Osobni Kredit"
+    },
+    "autoLoan": {
+      "title": "Auto Kredit",
+      "description": "Vozite auto svojih snova s našim fleksibilnim opcijama financiranja.",
+      "benefitsTitle": "Prednosti Auto Kredita",
+      "benefits": { "newUsed": "Financiranje novih ili rabljenih vozila", "competitiveRates": "Stope od 3,2% EKS", "upTo": "Do 50.000€", "flexibleTerms": "Rokovi: 12 do 72 mjeseca", "noDownPayment": "Bez predujma", "fastApproval": "Brzo odobrenje" },
+      "guideTitle": "Potpuni Vodič za Auto Kredit",
+      "faqTitle": "FAQ Auto Kredit"
+    },
+    "businessLoan": {
+      "title": "Poslovni Kredit",
+      "description": "Fleksibilno financiranje za poduzetnike i male tvrtke.",
+      "whyChoose": "Zašto izabrati naš Poslovni Kredit?",
+      "benefits": { "amounts": "Krediti od 5.000€ do 75.000€", "flexibleTerms": "Rokovi: 12 do 84 mjeseca", "fastApproval": "Brzo odobrenje", "anyProject": "Za bilo koji projekt", "competitiveRates": "Konkurentne stope", "preserveCash": "Očuvajte novčani tok" },
+      "useCasesTitle": "Česte Primjene",
+      "useCases": { "workingCapital": { "title": "Obrtni Kapital", "description": "Pokriti operativne troškove", "typical": "10.000€ - 50.000€" }, "equipment": { "title": "Oprema", "description": "Strojevi, vozila", "typical": "15.000€ - 75.000€" }, "expansion": { "title": "Ekspanzija", "description": "Nove lokacije", "typical": "20.000€ - 75.000€" }, "marketing": { "title": "Marketing", "description": "Reklamne kampanje", "typical": "5.000€ - 30.000€" }, "inventory": { "title": "Zalihe", "description": "Proizvodi, materijali", "typical": "10.000€ - 50.000€" }, "refinancing": { "title": "Refinanciranje", "description": "Konsolidacija dugova", "typical": "15.000€ - 75.000€" } },
+      "typicalAmount": "Tipični iznos",
+      "guideTitle": "Potpuni Vodič",
+      "faqTitle": "FAQ Poslovni Kredit"
+    },
+    "consolidation": {
+      "title": "Konsolidacija Dugova",
+      "subtitle": "Pojednostavite Svoje Financije",
+      "description": "Spojite više dugova u jednu mjesečnu uplatu.",
+      "reducePayments": "Smanjite svoje mjesečne uplate",
+      "benefitsTitle": "Prednosti",
+      "benefits": { "singlePayment": "Jedna uplata", "lowerRate": "Potencijalno niža stopa", "simplified": "Pojednostavljeno upravljanje", "fixedPayment": "Fiksna rata", "improveCredit": "Poboljšava kreditnu ocjenu", "reduceStress": "Smanjuje stres" },
+      "whenToTitle": "Kada Razmotriti Konsolidaciju?",
+      "scenarios": { "highInterest": { "title": "Više Dugova", "description": "Imate više kartica ili kredita" }, "difficulty": { "title": "Poteškoće s Praćenjem", "description": "Upravljanje više datuma je teško" }, "goodCredit": { "title": "Dobra Ocjena", "description": "Kvalificirate se za bolju stopu" }, "stableIncome": { "title": "Stabilni Prihodi", "description": "Imate redovite prihode" } },
+      "guideTitle": "Potpuni Vodič",
+      "risksTitle": "Upozorenja",
+      "risks": { "risk1": "Može produžiti rok otplate", "risk2": "Zatvaranje kartica može utjecati na kredit", "risk3": "Ne rješava navike potrošnje", "risk4": "Zahtijeva disciplinu", "risk5": "Može imati naknade" },
+      "faqTitle": "FAQ Konsolidacija"
+    },
+    "homeImprovement": {
+      "title": "Kredit za Renoviranje",
+      "description": "Transformirajte svoj dom s našim fleksibilnim financiranjem.",
+      "whyChoose": "Zašto izabrati naš Kredit za Renoviranje?",
+      "benefits": { "amounts": "Od 3.000€ do 75.000€", "rates": "Od 3,5% EKS", "terms": "Do 15 godina", "noCollateral": "Bez jamstva", "allProjects": "Za sve projekte", "fastApproval": "Brzo odobrenje" },
+      "projectsTitle": "Primjeri Projekata",
+      "projects": { "kitchen": { "title": "Kuhinja", "description": "Namještaj, aparati" }, "bathroom": { "title": "Kupaonica", "description": "Sanitarije, pločice" }, "extension": { "title": "Proširenje", "description": "Dodatna soba" }, "energy": { "title": "Energetska Učinkovitost", "description": "Solarne ploče, izolacija" } },
+      "loanAmount": "Iznos",
+      "monthlyPayment": "Mjesečna Rata",
+      "durationAt": "Trajanje {duration} uz ~{rate}% EKS",
+      "projectsDisclaimer": "*Ilustrativni primjeri.",
+      "guideTitle": "Potpuni Vodič",
+      "faqTitle": "FAQ Renoviranje"
+    },
+    "projectFinancing": {
+      "title": "Zahtjev za Financiranje Projekta",
+      "subtitle": "Ispunite ovaj obrazac. Naš tim će analizirati vaš zahtjev u 48 sati.",
+      "steps": { "project": "Vaš Projekt", "funding": "Financiranje", "company": "Tvrtka", "documents": "Dokumenti" },
+      "navigation": { "previous": "Prethodno", "next": "Sljedeće", "submit": "Podnesi zahtjev" },
+      "validation": { "validationError": "Greška validacije", "correctErrors": "Ispravite greške." },
+      "messages": { "success": "Zahtjev poslan!", "successDesc": "Vaš zahtjev je uspješno poslan." }
+    }
   }
 }

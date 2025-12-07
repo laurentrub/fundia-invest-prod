@@ -478,6 +478,81 @@
     "months": "meses",
     "years": "anos",
     "currency": "€",
-    "required": "Obrigatório"
+    "required": "Obrigatório",
+    "learnMore": "Saiba mais",
+    "apply": "Solicitar agora",
+    "perMonth": "/mês"
+  },
+  "products": {
+    "personalLoan": {
+      "title": "Crédito Pessoal",
+      "subtitle": "De 1.000€ a 75.000€",
+      "description": "Financie os seus sonhos com os nossos créditos pessoais flexíveis.",
+      "approvalTime": "Aprovação em 5 min",
+      "secure": "100% seguro",
+      "fromRate": "Desde 2,9% TAEG",
+      "whyChoose": "Porquê escolher o nosso crédito pessoal?",
+      "benefits": { "noCollateral": "Sem garantia", "flexibleTerms": "Prazos flexíveis (12-84 meses)", "earlyRepayment": "Reembolso antecipado sem penalizações", "fastFunds": "Fundos em 48 horas", "onlineProcess": "Processo 100% online", "transparentFees": "Taxas transparentes" },
+      "examplesTitle": "Exemplos de créditos",
+      "tableHeaders": { "amount": "Montante", "duration": "Duração", "monthly": "Mensalidade", "apr": "TAEG", "totalCost": "Custo total" },
+      "examplesDisclaimer": "*Exemplos indicativos.",
+      "guideTitle": "Guia completo de créditos pessoais",
+      "faqTitle": "FAQ Crédito Pessoal"
+    },
+    "autoLoan": {
+      "title": "Crédito Auto",
+      "description": "Conduza o carro dos seus sonhos com as nossas opções de financiamento.",
+      "benefitsTitle": "Vantagens do Crédito Auto",
+      "benefits": { "newUsed": "Financiamento de veículos novos ou usados", "competitiveRates": "Taxas desde 3,2% TAEG", "upTo": "Até 50.000€", "flexibleTerms": "Prazos: 12 a 72 meses", "noDownPayment": "Sem entrada", "fastApproval": "Aprovação rápida" },
+      "guideTitle": "Guia Completo do Crédito Auto",
+      "faqTitle": "FAQ Crédito Auto"
+    },
+    "businessLoan": {
+      "title": "Crédito Empresarial",
+      "description": "Financiamento flexível para empreendedores e PMEs.",
+      "whyChoose": "Porquê escolher o nosso Crédito Empresarial?",
+      "benefits": { "amounts": "Créditos de 5.000€ a 75.000€", "flexibleTerms": "Prazos: 12 a 84 meses", "fastApproval": "Aprovação rápida", "anyProject": "Para qualquer projeto", "competitiveRates": "Taxas competitivas", "preserveCash": "Preserve a liquidez" },
+      "useCasesTitle": "Usos Comuns",
+      "useCases": { "workingCapital": { "title": "Fundo de Maneio", "description": "Cobrir despesas operacionais", "typical": "10.000€ - 50.000€" }, "equipment": { "title": "Equipamentos", "description": "Máquinas, veículos", "typical": "15.000€ - 75.000€" }, "expansion": { "title": "Expansão", "description": "Novas instalações", "typical": "20.000€ - 75.000€" }, "marketing": { "title": "Marketing", "description": "Campanhas publicitárias", "typical": "5.000€ - 30.000€" }, "inventory": { "title": "Stock", "description": "Produtos, materiais", "typical": "10.000€ - 50.000€" }, "refinancing": { "title": "Refinanciamento", "description": "Consolidar dívidas", "typical": "15.000€ - 75.000€" } },
+      "typicalAmount": "Montante típico",
+      "guideTitle": "Guia Completo",
+      "faqTitle": "FAQ Crédito Empresarial"
+    },
+    "consolidation": {
+      "title": "Consolidação de Créditos",
+      "subtitle": "Simplifique as suas Finanças",
+      "description": "Agrupe múltiplas dívidas num único pagamento mensal.",
+      "reducePayments": "Reduza os seus pagamentos mensais",
+      "benefitsTitle": "Vantagens",
+      "benefits": { "singlePayment": "Um só pagamento", "lowerRate": "Taxa potencialmente menor", "simplified": "Gestão simplificada", "fixedPayment": "Prestação fixa", "improveCredit": "Melhora o crédito", "reduceStress": "Reduz o stress" },
+      "whenToTitle": "Quando Considerar a Consolidação?",
+      "scenarios": { "highInterest": { "title": "Múltiplas Dívidas", "description": "Tem vários cartões ou créditos" }, "difficulty": { "title": "Dificuldade de Gestão", "description": "Gerir múltiplas datas é difícil" }, "goodCredit": { "title": "Bom Historial", "description": "Qualifica para melhor taxa" }, "stableIncome": { "title": "Rendimentos Estáveis", "description": "Tem rendimentos regulares" } },
+      "guideTitle": "Guia Completo",
+      "risksTitle": "Avisos",
+      "risks": { "risk1": "Pode prolongar o prazo", "risk2": "Fechar cartões pode afetar crédito", "risk3": "Não resolve hábitos de consumo", "risk4": "Requer disciplina", "risk5": "Pode ter comissões" },
+      "faqTitle": "FAQ Consolidação"
+    },
+    "homeImprovement": {
+      "title": "Crédito Obras",
+      "description": "Transforme a sua casa com o nosso financiamento flexível.",
+      "whyChoose": "Porquê escolher o nosso Crédito Obras?",
+      "benefits": { "amounts": "De 3.000€ a 75.000€", "rates": "Desde 3,5% TAEG", "terms": "Até 15 anos", "noCollateral": "Sem garantia", "allProjects": "Para todos os projetos", "fastApproval": "Aprovação rápida" },
+      "projectsTitle": "Exemplos de Projetos",
+      "projects": { "kitchen": { "title": "Cozinha", "description": "Móveis, eletrodomésticos" }, "bathroom": { "title": "Casa de banho", "description": "Sanitários, azulejos" }, "extension": { "title": "Ampliação", "description": "Quarto adicional" }, "energy": { "title": "Eficiência Energética", "description": "Painéis solares, isolamento" } },
+      "loanAmount": "Montante",
+      "monthlyPayment": "Prestação Mensal",
+      "durationAt": "Prazo {duration} a ~{rate}% TAEG",
+      "projectsDisclaimer": "*Exemplos ilustrativos.",
+      "guideTitle": "Guia Completo",
+      "faqTitle": "FAQ Obras"
+    },
+    "projectFinancing": {
+      "title": "Pedido de Financiamento de Projeto",
+      "subtitle": "Complete este formulário. A nossa equipa analisará o seu pedido em 48 horas.",
+      "steps": { "project": "O Seu Projeto", "funding": "Financiamento", "company": "Empresa", "documents": "Documentos" },
+      "navigation": { "previous": "Anterior", "next": "Seguinte", "submit": "Enviar pedido" },
+      "validation": { "validationError": "Erro de validação", "correctErrors": "Corrija os erros." },
+      "messages": { "success": "Pedido enviado!", "successDesc": "O seu pedido foi enviado com sucesso." }
+    }
   }
 }
