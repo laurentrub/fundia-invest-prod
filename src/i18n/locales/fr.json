@@ -439,6 +439,33 @@
       "a5": "Votre mensualité dépend du montant du prêt, de la durée et de votre TAEG. Utilisez notre simulateur ci-dessus pour obtenir un calcul instantané adapté à vos besoins.",
       "q6": "La vérification des taux affecte-t-elle mon score de crédit ?",
       "a6": "Non, la vérification de votre éligibilité n'affecte pas votre score de crédit. Seule la demande formelle de crédit sera enregistrée dans votre historique."
+    },
+    "seoSection": {
+      "title": "À propos de Privat Equity : Votre partenaire crédit de confiance",
+      "intro": "est une plateforme de prêt en ligne leader qui a révolutionné la façon dont les particuliers et les entreprises accèdent au crédit en France. Fondée en 2015, nous avons aidé plus de 50 000 clients à atteindre leurs objectifs financiers grâce à des solutions de prêt transparentes, rapides et sécurisées.",
+      "missionTitle": "Notre mission",
+      "missionText": "Nous croyons que l'accès au crédit devrait être simple, transparent et sans stress. Notre mission est de démocratiser le prêt en tirant parti de la technologie pour offrir des taux compétitifs, des décisions instantanées et une expérience numérique fluide. Nous nous engageons pour l'inclusion financière et aidons nos clients à prendre des décisions d'emprunt éclairées.",
+      "differenceTitle": "Pourquoi nous sommes différents",
+      "speed": { "title": "Rapidité :", "text": "Nos algorithmes avancés fournissent une approbation préliminaire en moins de 5 minutes, avec des fonds généralement déboursés dans les 48 heures suivant l'approbation finale." },
+      "transparency": { "title": "Transparence :", "text": "Pas de frais cachés, pas de surprises. Tous les coûts, taux et conditions sont clairement affichés avant que vous ne vous engagiez." },
+      "security": { "title": "Sécurité :", "text": "Nous utilisons un chiffrement de niveau bancaire et sommes entièrement conformes au RGPD et aux réglementations bancaires françaises." },
+      "flexibility": { "title": "Flexibilité :", "text": "Options de remboursement anticipé sans pénalités, durées flexibles de 12 à 84 mois et montants de 1 000€ à 75 000€." },
+      "loanTypesTitle": "Types de prêts que nous proposons",
+      "loanTypesIntro": "Chez Privat Equity, nous comprenons que chaque besoin financier est unique. C'est pourquoi nous proposons une gamme complète de produits de prêt conçus pour correspondre à vos circonstances spécifiques :",
+      "personalLoan": { "title": "Prêts personnels", "text": "Parfait pour les mariages, les vacances, les frais médicaux ou tout projet personnel. Empruntez de 1 000€ à 75 000€ avec des taux à partir de 2,9% TAEG.", "example": "Exemple : 10 000€ sur 48 mois = 221€/mois (TAEG 4,9%, coût total : 10 608€)" },
+      "autoLoan": { "title": "Crédits auto", "text": "Financez des véhicules neufs ou d'occasion avec des taux compétitifs et des conditions flexibles. Taux à partir de 3,2% TAEG.", "example": "Exemple : 20 000€ sur 60 mois = 362€/mois (TAEG 3,9%, coût total : 21 720€)" },
+      "homeLoan": { "title": "Crédits travaux", "text": "Transformez votre espace de vie avec des prêts conçus pour les rénovations, extensions ou améliorations énergétiques.", "example": "Exemple : 15 000€ sur 72 mois = 238€/mois (TAEG 4,5%, coût total : 17 136€)" },
+      "consolidation": { "title": "Rachat de crédit", "text": "Simplifiez plusieurs dettes en un seul paiement mensuel facile, souvent à un taux global inférieur.", "example": "Exemple : Regrouper 25 000€ de dettes sur 84 mois = 351€/mois (TAEG 5,2%)" },
+      "processTitle": "Comment fonctionne notre processus",
+      "process": {
+        "step1": { "title": "Simulez votre prêt :", "text": "Utilisez notre calculatrice interactive pour voir les paiements mensuels estimés et les coûts totaux." },
+        "step2": { "title": "Soumettez votre demande :", "text": "Complétez notre simple formulaire en ligne en quelques minutes." },
+        "step3": { "title": "Obtenez une décision instantanée :", "text": "Notre système analyse votre demande et fournit une approbation préliminaire immédiatement." },
+        "step4": { "title": "Téléchargez les documents :", "text": "Soumettez les documents requis en toute sécurité via notre plateforme." },
+        "step5": { "title": "Recevez vos fonds :", "text": "Une fois approuvé, les fonds sont transférés directement sur votre compte bancaire dans les 48 heures." }
+      },
+      "responsibleTitle": "Notre engagement envers un prêt responsable",
+      "responsibleText": "Nous prenons le prêt responsable au sérieux. Avant d'approuver un prêt, nous évaluons soigneusement votre capacité de remboursement en fonction de vos revenus, dépenses et dettes existantes. Nous n'approuverons jamais un prêt qui pourrait vous mettre en difficulté financière. Nos conseillers sont toujours disponibles pour discuter d'alternatives si un prêt n'est pas la bonne solution pour votre situation."
     }
   },
   "about": {

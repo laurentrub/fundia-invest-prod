@@ -381,80 +381,80 @@ const Index = () => {
       <section className="py-20">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
-            À propos de Privat Equity : Votre partenaire crédit de confiance
+            {t('home.seoSection.title')}
           </h2>
           
           <div className="prose prose-lg max-w-none space-y-6 text-foreground">
             <p className="text-lg leading-relaxed">
-              <strong>Privat Equity</strong> est une plateforme de prêt en ligne leader qui a révolutionné la façon dont les particuliers et les entreprises accèdent au crédit en France. Fondée en 2015, nous avons aidé plus de 50 000 clients à atteindre leurs objectifs financiers grâce à des solutions de prêt transparentes, rapides et sécurisées.
+              <strong>Privat Equity</strong> {t('home.seoSection.intro')}
             </p>
 
-            <h3 className="text-2xl font-bold mt-8 mb-4">Notre mission</h3>
+            <h3 className="text-2xl font-bold mt-8 mb-4">{t('home.seoSection.missionTitle')}</h3>
             <p className="leading-relaxed">
-              Nous croyons que l'accès au crédit devrait être simple, transparent et sans stress. Notre mission est de démocratiser le prêt en tirant parti de la technologie pour offrir des taux compétitifs, des décisions instantanées et une expérience numérique fluide. Nous nous engageons pour l'inclusion financière et aidons nos clients à prendre des décisions d'emprunt éclairées.
+              {t('home.seoSection.missionText')}
             </p>
 
-            <h3 className="text-2xl font-bold mt-8 mb-4">Pourquoi nous sommes différents</h3>
+            <h3 className="text-2xl font-bold mt-8 mb-4">{t('home.seoSection.differenceTitle')}</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <CheckCircle className="h-6 w-6 text-success flex-shrink-0 mt-1" />
-                <span><strong>Rapidité :</strong> Nos algorithmes avancés fournissent une approbation préliminaire en moins de 5 minutes, avec des fonds généralement déboursés dans les 48 heures suivant l'approbation finale.</span>
+                <span><strong>{t('home.seoSection.speed.title')}</strong> {t('home.seoSection.speed.text')}</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="h-6 w-6 text-success flex-shrink-0 mt-1" />
-                <span><strong>Transparence :</strong> Pas de frais cachés, pas de surprises. Tous les coûts, taux et conditions sont clairement affichés avant que vous ne vous engagiez.</span>
+                <span><strong>{t('home.seoSection.transparency.title')}</strong> {t('home.seoSection.transparency.text')}</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="h-6 w-6 text-success flex-shrink-0 mt-1" />
-                <span><strong>Sécurité :</strong> Nous utilisons un chiffrement de niveau bancaire et sommes entièrement conformes au RGPD et aux réglementations bancaires françaises.</span>
+                <span><strong>{t('home.seoSection.security.title')}</strong> {t('home.seoSection.security.text')}</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="h-6 w-6 text-success flex-shrink-0 mt-1" />
-                <span><strong>Flexibilité :</strong> Options de remboursement anticipé sans pénalités, durées flexibles de 12 à 84 mois et montants de 1 000€ à 75 000€.</span>
+                <span><strong>{t('home.seoSection.flexibility.title')}</strong> {t('home.seoSection.flexibility.text')}</span>
               </li>
             </ul>
 
-            <h3 className="text-2xl font-bold mt-8 mb-4">Types de prêts que nous proposons</h3>
+            <h3 className="text-2xl font-bold mt-8 mb-4">{t('home.seoSection.loanTypesTitle')}</h3>
             <p className="leading-relaxed">
-              Chez Privat Equity, nous comprenons que chaque besoin financier est unique. C'est pourquoi nous proposons une gamme complète de produits de prêt conçus pour correspondre à vos circonstances spécifiques :
+              {t('home.seoSection.loanTypesIntro')}
             </p>
 
             <div className="bg-muted/50 p-6 rounded-lg my-6">
-              <h4 className="text-xl font-semibold mb-3">Prêts personnels</h4>
-              <p className="mb-2">Parfait pour les mariages, les vacances, les frais médicaux ou tout projet personnel. Empruntez de 1 000€ à 75 000€ avec des taux à partir de 2,9% TAEG.</p>
-              <p className="text-sm text-muted-foreground">Exemple : 10 000€ sur 48 mois = 221€/mois (TAEG 4,9%, coût total : 10 608€)</p>
+              <h4 className="text-xl font-semibold mb-3">{t('home.seoSection.personalLoan.title')}</h4>
+              <p className="mb-2">{t('home.seoSection.personalLoan.text')}</p>
+              <p className="text-sm text-muted-foreground">{t('home.seoSection.personalLoan.example')}</p>
             </div>
 
             <div className="bg-muted/50 p-6 rounded-lg my-6">
-              <h4 className="text-xl font-semibold mb-3">Crédits auto</h4>
-              <p className="mb-2">Financez des véhicules neufs ou d'occasion avec des taux compétitifs et des conditions flexibles. Taux à partir de 3,2% TAEG.</p>
-              <p className="text-sm text-muted-foreground">Exemple : 20 000€ sur 60 mois = 362€/mois (TAEG 3,9%, coût total : 21 720€)</p>
+              <h4 className="text-xl font-semibold mb-3">{t('home.seoSection.autoLoan.title')}</h4>
+              <p className="mb-2">{t('home.seoSection.autoLoan.text')}</p>
+              <p className="text-sm text-muted-foreground">{t('home.seoSection.autoLoan.example')}</p>
             </div>
 
             <div className="bg-muted/50 p-6 rounded-lg my-6">
-              <h4 className="text-xl font-semibold mb-3">Crédits travaux</h4>
-              <p className="mb-2">Transformez votre espace de vie avec des prêts conçus pour les rénovations, extensions ou améliorations énergétiques.</p>
-              <p className="text-sm text-muted-foreground">Exemple : 15 000€ sur 72 mois = 238€/mois (TAEG 4,5%, coût total : 17 136€)</p>
+              <h4 className="text-xl font-semibold mb-3">{t('home.seoSection.homeLoan.title')}</h4>
+              <p className="mb-2">{t('home.seoSection.homeLoan.text')}</p>
+              <p className="text-sm text-muted-foreground">{t('home.seoSection.homeLoan.example')}</p>
             </div>
 
             <div className="bg-muted/50 p-6 rounded-lg my-6">
-              <h4 className="text-xl font-semibold mb-3">Rachat de crédit</h4>
-              <p className="mb-2">Simplifiez plusieurs dettes en un seul paiement mensuel facile, souvent à un taux global inférieur.</p>
-              <p className="text-sm text-muted-foreground">Exemple : Regrouper 25 000€ de dettes sur 84 mois = 351€/mois (TAEG 5,2%)</p>
+              <h4 className="text-xl font-semibold mb-3">{t('home.seoSection.consolidation.title')}</h4>
+              <p className="mb-2">{t('home.seoSection.consolidation.text')}</p>
+              <p className="text-sm text-muted-foreground">{t('home.seoSection.consolidation.example')}</p>
             </div>
 
-            <h3 className="text-2xl font-bold mt-8 mb-4">Comment fonctionne notre processus</h3>
+            <h3 className="text-2xl font-bold mt-8 mb-4">{t('home.seoSection.processTitle')}</h3>
             <ol className="space-y-4 list-decimal list-inside">
-              <li className="leading-relaxed"><strong>Simulez votre prêt :</strong> Utilisez notre calculatrice interactive pour voir les paiements mensuels estimés et les coûts totaux.</li>
-              <li className="leading-relaxed"><strong>Soumettez votre demande :</strong> Complétez notre simple formulaire en ligne en quelques minutes.</li>
-              <li className="leading-relaxed"><strong>Obtenez une décision instantanée :</strong> Notre système analyse votre demande et fournit une approbation préliminaire immédiatement.</li>
-              <li className="leading-relaxed"><strong>Téléchargez les documents :</strong> Soumettez les documents requis en toute sécurité via notre plateforme.</li>
-              <li className="leading-relaxed"><strong>Recevez vos fonds :</strong> Une fois approuvé, les fonds sont transférés directement sur votre compte bancaire dans les 48 heures.</li>
+              <li className="leading-relaxed"><strong>{t('home.seoSection.process.step1.title')}</strong> {t('home.seoSection.process.step1.text')}</li>
+              <li className="leading-relaxed"><strong>{t('home.seoSection.process.step2.title')}</strong> {t('home.seoSection.process.step2.text')}</li>
+              <li className="leading-relaxed"><strong>{t('home.seoSection.process.step3.title')}</strong> {t('home.seoSection.process.step3.text')}</li>
+              <li className="leading-relaxed"><strong>{t('home.seoSection.process.step4.title')}</strong> {t('home.seoSection.process.step4.text')}</li>
+              <li className="leading-relaxed"><strong>{t('home.seoSection.process.step5.title')}</strong> {t('home.seoSection.process.step5.text')}</li>
             </ol>
 
-            <h3 className="text-2xl font-bold mt-8 mb-4">Notre engagement envers un prêt responsable</h3>
+            <h3 className="text-2xl font-bold mt-8 mb-4">{t('home.seoSection.responsibleTitle')}</h3>
             <p className="leading-relaxed">
-              Nous prenons le prêt responsable au sérieux. Avant d'approuver un prêt, nous évaluons soigneusement votre capacité de remboursement en fonction de vos revenus, dépenses et dettes existantes. Nous n'approuverons jamais un prêt qui pourrait vous mettre en difficulté financière. Nos conseillers sont toujours disponibles pour discuter d'alternatives si un prêt n'est pas la bonne solution pour votre situation.
+              {t('home.seoSection.responsibleText')}
             </p>
           </div>
         </div>

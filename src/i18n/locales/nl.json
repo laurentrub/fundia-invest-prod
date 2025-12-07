@@ -177,6 +177,33 @@
       "q4": "Welke documenten moet ik aanleveren om aan te vragen?", "a4": "U heeft een geldig identiteitsbewijs, inkomstenbewijs (laatste 3 loonstroken), bankafschriften en adresbewijs nodig. Aanvullende documenten kunnen worden gevraagd op basis van uw situatie.",
       "q5": "Hoe wordt mijn maandelijkse betaling berekend?", "a5": "Uw maandelijkse betaling hangt af van het leningbedrag, de looptijd en uw JKP. Gebruik onze simulator hierboven voor een directe berekening op maat van uw behoeften.",
       "q6": "Beïnvloedt het controleren van tarieven mijn kredietscore?", "a6": "Nee, het controleren van uw geschiktheid heeft geen invloed op uw kredietscore. Alleen de formele kredietaanvraag wordt geregistreerd in uw kredietgeschiedenis."
+    },
+    "seoSection": {
+      "title": "Over Privat Equity: Uw betrouwbare kredietpartner",
+      "intro": "is een toonaangevend online leenplatform dat de manier waarop particulieren en bedrijven toegang krijgen tot krediet in Frankrijk heeft gerevolutioneerd. Sinds onze oprichting in 2015 hebben we meer dan 50.000 klanten geholpen hun financiële doelen te bereiken door middel van transparante, snelle en veilige leenoplossingen.",
+      "missionTitle": "Onze missie",
+      "missionText": "Wij geloven dat toegang tot krediet eenvoudig, transparant en stressvrij moet zijn. Onze missie is om lenen te democratiseren door technologie in te zetten om concurrerende tarieven, directe beslissingen en een naadloze digitale ervaring te bieden. We zijn toegewijd aan financiële inclusie en helpen onze klanten weloverwogen leenbeslissingen te nemen.",
+      "differenceTitle": "Waarom wij anders zijn",
+      "speed": { "title": "Snelheid:", "text": "Onze geavanceerde algoritmen bieden een voorlopige goedkeuring in minder dan 5 minuten, met fondsen die doorgaans binnen 48 uur na definitieve goedkeuring worden uitbetaald." },
+      "transparency": { "title": "Transparantie:", "text": "Geen verborgen kosten, geen verrassingen. Alle kosten, tarieven en voorwaarden worden duidelijk weergegeven voordat u zich verbindt." },
+      "security": { "title": "Veiligheid:", "text": "Wij gebruiken bankversleuteling en voldoen volledig aan de AVG en Franse bankvoorschriften." },
+      "flexibility": { "title": "Flexibiliteit:", "text": "Vervroegde aflossingsopties zonder boetes, flexibele looptijden van 12 tot 84 maanden en bedragen van €1.000 tot €75.000." },
+      "loanTypesTitle": "Soorten leningen die wij aanbieden",
+      "loanTypesIntro": "Bij Privat Equity begrijpen we dat elke financiële behoefte uniek is. Daarom bieden we een uitgebreid aanbod van leenproducten die zijn ontworpen om aan uw specifieke omstandigheden te voldoen:",
+      "personalLoan": { "title": "Persoonlijke leningen", "text": "Perfect voor bruiloften, vakanties, medische kosten of elk persoonlijk project. Leen van €1.000 tot €75.000 met tarieven vanaf 2,9% JKP.", "example": "Voorbeeld: €10.000 over 48 maanden = €221/maand (4,9% JKP, totale kosten: €10.608)" },
+      "autoLoan": { "title": "Autoleningen", "text": "Financier nieuwe of gebruikte voertuigen met concurrerende tarieven en flexibele voorwaarden. Tarieven vanaf 3,2% JKP.", "example": "Voorbeeld: €20.000 over 60 maanden = €362/maand (3,9% JKP, totale kosten: €21.720)" },
+      "homeLoan": { "title": "Verbouwingsleningen", "text": "Transformeer uw leefruimte met leningen ontworpen voor renovaties, uitbreidingen of energieverbeteringen.", "example": "Voorbeeld: €15.000 over 72 maanden = €238/maand (4,5% JKP, totale kosten: €17.136)" },
+      "consolidation": { "title": "Schuldconsolidatie", "text": "Vereenvoudig meerdere schulden in één gemakkelijke maandelijkse betaling, vaak tegen een lager totaaltarief.", "example": "Voorbeeld: Consolideer €25.000 schuld over 84 maanden = €351/maand (5,2% JKP)" },
+      "processTitle": "Hoe ons proces werkt",
+      "process": {
+        "step1": { "title": "Simuleer uw lening:", "text": "Gebruik onze interactieve calculator om geschatte maandelijkse betalingen en totale kosten te zien." },
+        "step2": { "title": "Dien uw aanvraag in:", "text": "Vul ons eenvoudige online formulier in slechts enkele minuten in." },
+        "step3": { "title": "Ontvang een directe beslissing:", "text": "Ons systeem analyseert uw aanvraag en geeft onmiddellijk een voorlopige goedkeuring." },
+        "step4": { "title": "Upload uw documenten:", "text": "Dien vereiste documenten veilig in via ons platform." },
+        "step5": { "title": "Ontvang uw fondsen:", "text": "Na goedkeuring worden de fondsen binnen 48 uur rechtstreeks naar uw bankrekening overgemaakt." }
+      },
+      "responsibleTitle": "Onze toewijding aan verantwoord lenen",
+      "responsibleText": "Wij nemen verantwoord lenen serieus. Voordat we een lening goedkeuren, beoordelen we zorgvuldig uw terugbetalingscapaciteit op basis van uw inkomen, uitgaven en bestaande schulden. We zullen nooit een lening goedkeuren die u in financiële moeilijkheden zou kunnen brengen. Onze adviseurs staan altijd klaar om alternatieven te bespreken als een lening niet de juiste oplossing is voor uw situatie."
     }
   },
   "about": {

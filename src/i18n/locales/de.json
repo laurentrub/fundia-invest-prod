@@ -366,6 +366,33 @@
       "q4": "Welche Unterlagen muss ich vorlegen?", "a4": "Sie benötigen einen gültigen Ausweis, Einkommensnachweis (letzte 3 Gehaltsabrechnungen), Kontoauszüge und einen Wohnsitznachweis. Je nach Situation können zusätzliche Dokumente angefordert werden.",
       "q5": "Wie wird meine monatliche Rate berechnet?", "a5": "Ihre monatliche Rate hängt vom Kreditbetrag, der Laufzeit und Ihrem effektiven Jahreszins ab. Nutzen Sie unseren Simulator für eine sofortige Berechnung.",
       "q6": "Beeinflusst die Zinsüberprüfung meine Kreditwürdigkeit?", "a6": "Nein, die Überprüfung Ihrer Eignung beeinflusst Ihre Kreditwürdigkeit nicht. Nur der formelle Kreditantrag wird in Ihrer Kredithistorie erfasst."
+    },
+    "seoSection": {
+      "title": "Über Privat Equity: Ihr vertrauenswürdiger Kreditpartner",
+      "intro": "ist eine führende Online-Kreditplattform, die die Art und Weise revolutioniert hat, wie Privatpersonen und Unternehmen in Frankreich Zugang zu Krediten erhalten. Seit unserer Gründung 2015 haben wir über 50.000 Kunden dabei geholfen, ihre finanziellen Ziele durch transparente, schnelle und sichere Kreditlösungen zu erreichen.",
+      "missionTitle": "Unsere Mission",
+      "missionText": "Wir glauben, dass der Zugang zu Krediten einfach, transparent und stressfrei sein sollte. Unsere Mission ist es, Kredite zu demokratisieren, indem wir Technologie nutzen, um wettbewerbsfähige Zinsen, sofortige Entscheidungen und ein nahtloses digitales Erlebnis zu bieten. Wir setzen uns für finanzielle Inklusion ein und helfen unseren Kunden, fundierte Kreditentscheidungen zu treffen.",
+      "differenceTitle": "Warum wir anders sind",
+      "speed": { "title": "Geschwindigkeit:", "text": "Unsere fortschrittlichen Algorithmen liefern eine vorläufige Genehmigung in weniger als 5 Minuten, wobei die Mittel in der Regel innerhalb von 48 Stunden nach der endgültigen Genehmigung ausgezahlt werden." },
+      "transparency": { "title": "Transparenz:", "text": "Keine versteckten Gebühren, keine Überraschungen. Alle Kosten, Zinsen und Bedingungen werden klar angezeigt, bevor Sie sich verpflichten." },
+      "security": { "title": "Sicherheit:", "text": "Wir verwenden Verschlüsselung auf Bankniveau und sind vollständig DSGVO-konform sowie mit den französischen Bankenvorschriften." },
+      "flexibility": { "title": "Flexibilität:", "text": "Vorzeitige Rückzahlungsoptionen ohne Gebühren, flexible Laufzeiten von 12 bis 84 Monaten und Beträge von 1.000€ bis 75.000€." },
+      "loanTypesTitle": "Kreditarten, die wir anbieten",
+      "loanTypesIntro": "Bei Privat Equity verstehen wir, dass jeder finanzielle Bedarf einzigartig ist. Deshalb bieten wir eine umfassende Palette von Kreditprodukten an, die auf Ihre spezifischen Umstände zugeschnitten sind:",
+      "personalLoan": { "title": "Privatkredite", "text": "Perfekt für Hochzeiten, Urlaub, medizinische Ausgaben oder jedes persönliche Projekt. Leihen Sie von 1.000€ bis 75.000€ mit Zinsen ab 2,9% effektiver Jahreszins.", "example": "Beispiel: 10.000€ über 48 Monate = 221€/Monat (4,9% eff. Jahreszins, Gesamtkosten: 10.608€)" },
+      "autoLoan": { "title": "Autokredite", "text": "Finanzieren Sie Neu- oder Gebrauchtwagen mit wettbewerbsfähigen Zinsen und flexiblen Konditionen. Zinsen ab 3,2% effektiver Jahreszins.", "example": "Beispiel: 20.000€ über 60 Monate = 362€/Monat (3,9% eff. Jahreszins, Gesamtkosten: 21.720€)" },
+      "homeLoan": { "title": "Renovierungskredite", "text": "Verwandeln Sie Ihren Wohnraum mit Krediten für Renovierungen, Erweiterungen oder energetische Verbesserungen.", "example": "Beispiel: 15.000€ über 72 Monate = 238€/Monat (4,5% eff. Jahreszins, Gesamtkosten: 17.136€)" },
+      "consolidation": { "title": "Schuldenkonsolidierung", "text": "Vereinfachen Sie mehrere Schulden in einer einfachen monatlichen Zahlung, oft zu einem niedrigeren Gesamtzins.", "example": "Beispiel: Konsolidieren Sie 25.000€ Schulden über 84 Monate = 351€/Monat (5,2% eff. Jahreszins)" },
+      "processTitle": "Wie unser Prozess funktioniert",
+      "process": {
+        "step1": { "title": "Simulieren Sie Ihren Kredit:", "text": "Nutzen Sie unseren interaktiven Rechner, um geschätzte monatliche Raten und Gesamtkosten zu sehen." },
+        "step2": { "title": "Reichen Sie Ihren Antrag ein:", "text": "Füllen Sie unser einfaches Online-Formular in nur wenigen Minuten aus." },
+        "step3": { "title": "Erhalten Sie eine sofortige Entscheidung:", "text": "Unser System analysiert Ihren Antrag und erteilt sofort eine vorläufige Genehmigung." },
+        "step4": { "title": "Laden Sie Ihre Dokumente hoch:", "text": "Reichen Sie erforderliche Dokumente sicher über unsere Plattform ein." },
+        "step5": { "title": "Erhalten Sie Ihre Mittel:", "text": "Nach der Genehmigung werden die Mittel innerhalb von 48 Stunden direkt auf Ihr Bankkonto überwiesen." }
+      },
+      "responsibleTitle": "Unser Engagement für verantwortungsvolle Kreditvergabe",
+      "responsibleText": "Wir nehmen verantwortungsvolle Kreditvergabe ernst. Bevor wir einen Kredit genehmigen, bewerten wir sorgfältig Ihre Rückzahlungsfähigkeit basierend auf Ihrem Einkommen, Ihren Ausgaben und bestehenden Schulden. Wir werden niemals einen Kredit genehmigen, der Sie in finanzielle Schwierigkeiten bringen könnte. Unsere Berater stehen Ihnen jederzeit zur Verfügung, um Alternativen zu besprechen, wenn ein Kredit nicht die richtige Lösung für Ihre Situation ist."
     }
   },
   "about": {

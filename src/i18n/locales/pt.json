@@ -252,6 +252,33 @@
       "q4": "Que documentos preciso fornecer para solicitar?", "a4": "Precisará de um documento de identificação válido, comprovativo de rendimentos (últimos 3 recibos de vencimento), extratos bancários e comprovativo de morada. Documentos adicionais podem ser solicitados conforme a sua situação.",
       "q5": "Como é calculada a minha mensalidade?", "a5": "A sua mensalidade depende do valor do empréstimo, duração e da sua TAEG. Use o nosso simulador acima para um cálculo instantâneo adaptado às suas necessidades.",
       "q6": "A verificação de taxas afeta a minha pontuação de crédito?", "a6": "Não, verificar a sua elegibilidade não afeta a sua pontuação de crédito. Apenas o pedido formal de crédito será registado no seu histórico de crédito."
+    },
+    "seoSection": {
+      "title": "Sobre a Privat Equity: O seu parceiro de crédito de confiança",
+      "intro": "é uma plataforma de empréstimos online líder que revolucionou a forma como particulares e empresas acedem ao crédito em França. Fundada em 2015, ajudámos mais de 50.000 clientes a alcançar os seus objetivos financeiros através de soluções de empréstimo transparentes, rápidas e seguras.",
+      "missionTitle": "A nossa missão",
+      "missionText": "Acreditamos que o acesso ao crédito deve ser simples, transparente e sem stress. A nossa missão é democratizar o crédito através da tecnologia para oferecer taxas competitivas, decisões instantâneas e uma experiência digital fluida. Estamos comprometidos com a inclusão financeira e ajudamos os nossos clientes a tomar decisões de empréstimo informadas.",
+      "differenceTitle": "Porquê somos diferentes",
+      "speed": { "title": "Rapidez:", "text": "Os nossos algoritmos avançados fornecem uma aprovação preliminar em menos de 5 minutos, com fundos geralmente desembolsados dentro de 48 horas após a aprovação final." },
+      "transparency": { "title": "Transparência:", "text": "Sem taxas ocultas, sem surpresas. Todos os custos, taxas e condições são claramente apresentados antes de se comprometer." },
+      "security": { "title": "Segurança:", "text": "Utilizamos encriptação de nível bancário e estamos totalmente em conformidade com o RGPD e os regulamentos bancários franceses." },
+      "flexibility": { "title": "Flexibilidade:", "text": "Opções de pagamento antecipado sem penalizações, prazos flexíveis de 12 a 84 meses e montantes de 1.000€ a 75.000€." },
+      "loanTypesTitle": "Tipos de empréstimos que oferecemos",
+      "loanTypesIntro": "Na Privat Equity, compreendemos que cada necessidade financeira é única. Por isso, oferecemos uma gama completa de produtos de empréstimo concebidos para corresponder às suas circunstâncias específicas:",
+      "personalLoan": { "title": "Empréstimos pessoais", "text": "Perfeito para casamentos, férias, despesas médicas ou qualquer projeto pessoal. Empréstimos de 1.000€ a 75.000€ com taxas a partir de 2,9% TAEG.", "example": "Exemplo: 10.000€ em 48 meses = 221€/mês (TAEG 4,9%, custo total: 10.608€)" },
+      "autoLoan": { "title": "Créditos auto", "text": "Financie veículos novos ou usados com taxas competitivas e condições flexíveis. Taxas a partir de 3,2% TAEG.", "example": "Exemplo: 20.000€ em 60 meses = 362€/mês (TAEG 3,9%, custo total: 21.720€)" },
+      "homeLoan": { "title": "Créditos para obras", "text": "Transforme o seu espaço com empréstimos concebidos para renovações, extensões ou melhorias energéticas.", "example": "Exemplo: 15.000€ em 72 meses = 238€/mês (TAEG 4,5%, custo total: 17.136€)" },
+      "consolidation": { "title": "Consolidação de crédito", "text": "Simplifique várias dívidas num único pagamento mensal fácil, frequentemente a uma taxa global inferior.", "example": "Exemplo: Consolidar 25.000€ de dívidas em 84 meses = 351€/mês (TAEG 5,2%)" },
+      "processTitle": "Como funciona o nosso processo",
+      "process": {
+        "step1": { "title": "Simule o seu empréstimo:", "text": "Use a nossa calculadora interativa para ver os pagamentos mensais estimados e os custos totais." },
+        "step2": { "title": "Submeta o seu pedido:", "text": "Complete o nosso simples formulário online em apenas alguns minutos." },
+        "step3": { "title": "Obtenha uma decisão instantânea:", "text": "O nosso sistema analisa o seu pedido e fornece uma aprovação preliminar imediatamente." },
+        "step4": { "title": "Carregue os seus documentos:", "text": "Submeta os documentos necessários de forma segura através da nossa plataforma." },
+        "step5": { "title": "Receba os seus fundos:", "text": "Uma vez aprovado, os fundos são transferidos diretamente para a sua conta bancária em 48 horas." }
+      },
+      "responsibleTitle": "O nosso compromisso com o crédito responsável",
+      "responsibleText": "Levamos o crédito responsável a sério. Antes de aprovar qualquer empréstimo, avaliamos cuidadosamente a sua capacidade de pagamento com base nos seus rendimentos, despesas e dívidas existentes. Nunca aprovaremos um empréstimo que possa colocá-lo em dificuldades financeiras. Os nossos consultores estão sempre disponíveis para discutir alternativas se um empréstimo não for a solução certa para a sua situação."
     }
   },
   "about": {

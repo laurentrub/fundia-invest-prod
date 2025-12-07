@@ -177,6 +177,33 @@
       "q4": "Koje dokumente moram dostaviti za prijavu?", "a4": "Trebat će vam valjana osobna iskaznica, dokaz o prihodima (zadnje 3 platne liste), bankovni izvodi i dokaz o adresi. Dodatni dokumenti mogu biti zatraženi ovisno o vašoj situaciji.",
       "q5": "Kako se izračunava moja mjesečna rata?", "a5": "Vaša mjesečna rata ovisi o iznosu zajma, trajanju i vašem EKS-u. Koristite naš simulator iznad za trenutni izračun prilagođen vašim potrebama.",
       "q6": "Utječe li provjera stopa na moju kreditnu ocjenu?", "a6": "Ne, provjera vaše podobnosti ne utječe na vašu kreditnu ocjenu. Samo formalni zahtjev za kredit bit će evidentiran u vašoj kreditnoj povijesti."
+    },
+    "seoSection": {
+      "title": "O Privat Equity: Vaš pouzdani kreditni partner",
+      "intro": "je vodeća online platforma za zajmove koja je revolucionirala način na koji pojedinci i poduzeća pristupaju kreditu u Francuskoj. Osnovani 2015. godine, pomogli smo više od 50.000 klijenata da ostvare svoje financijske ciljeve kroz transparentna, brza i sigurna rješenja za zajmove.",
+      "missionTitle": "Naša misija",
+      "missionText": "Vjerujemo da pristup kreditu treba biti jednostavan, transparentan i bez stresa. Naša misija je demokratizirati zajmove korištenjem tehnologije za ponudu konkurentnih stopa, trenutnih odluka i besprijekornog digitalnog iskustva. Posvećeni smo financijskoj inkluziji i pomažemo našim klijentima donositi informirane odluke o zaduživanju.",
+      "differenceTitle": "Zašto smo drugačiji",
+      "speed": { "title": "Brzina:", "text": "Naši napredni algoritmi pružaju preliminarno odobrenje za manje od 5 minuta, s sredstvima koja se obično isplaćuju unutar 48 sati od konačnog odobrenja." },
+      "transparency": { "title": "Transparentnost:", "text": "Bez skrivenih naknada, bez iznenađenja. Svi troškovi, stope i uvjeti jasno su prikazani prije nego se obvežete." },
+      "security": { "title": "Sigurnost:", "text": "Koristimo enkripciju razine banke i u potpunosti smo usklađeni s GDPR-om i francuskim bankarskim propisima." },
+      "flexibility": { "title": "Fleksibilnost:", "text": "Opcije prijevremene otplate bez penala, fleksibilni rokovi od 12 do 84 mjeseca i iznosi od 1.000€ do 75.000€." },
+      "loanTypesTitle": "Vrste zajmova koje nudimo",
+      "loanTypesIntro": "U Privat Equity razumijemo da je svaka financijska potreba jedinstvena. Zato nudimo sveobuhvatnu paletu kreditnih proizvoda dizajniranih da odgovaraju vašim specifičnim okolnostima:",
+      "personalLoan": { "title": "Osobni zajmovi", "text": "Savršeno za vjenčanja, godišnje odmore, medicinske troškove ili bilo koji osobni projekt. Pozajmite od 1.000€ do 75.000€ sa stopama od 2,9% EKS.", "example": "Primjer: 10.000€ na 48 mjeseci = 221€/mjesec (4,9% EKS, ukupni trošak: 10.608€)" },
+      "autoLoan": { "title": "Auto krediti", "text": "Financirajte nova ili rabljena vozila s konkurentnim stopama i fleksibilnim uvjetima. Stope od 3,2% EKS.", "example": "Primjer: 20.000€ na 60 mjeseci = 362€/mjesec (3,9% EKS, ukupni trošak: 21.720€)" },
+      "homeLoan": { "title": "Krediti za obnovu", "text": "Transformirajte svoj životni prostor s kreditima dizajniranim za renovacije, proširenja ili energetska poboljšanja.", "example": "Primjer: 15.000€ na 72 mjeseca = 238€/mjesec (4,5% EKS, ukupni trošak: 17.136€)" },
+      "consolidation": { "title": "Konsolidacija dugova", "text": "Pojednostavite više dugova u jednu jednostavnu mjesečnu uplatu, često po nižoj ukupnoj stopi.", "example": "Primjer: Konsolidirajte 25.000€ duga na 84 mjeseca = 351€/mjesec (5,2% EKS)" },
+      "processTitle": "Kako funkcionira naš proces",
+      "process": {
+        "step1": { "title": "Simulirajte svoj zajam:", "text": "Koristite naš interaktivni kalkulator za pregled procijenjenih mjesečnih uplata i ukupnih troškova." },
+        "step2": { "title": "Podnesite svoju prijavu:", "text": "Ispunite naš jednostavan online obrazac za samo nekoliko minuta." },
+        "step3": { "title": "Dobijte trenutnu odluku:", "text": "Naš sustav analizira vašu prijavu i odmah pruža preliminarno odobrenje." },
+        "step4": { "title": "Prenesite svoje dokumente:", "text": "Sigurno pošaljite potrebne dokumente putem naše platforme." },
+        "step5": { "title": "Primite svoja sredstva:", "text": "Nakon odobrenja, sredstva se prenose izravno na vaš bankovni račun unutar 48 sati." }
+      },
+      "responsibleTitle": "Naša posvećenost odgovornom kreditiranju",
+      "responsibleText": "Odgovorno kreditiranje shvaćamo ozbiljno. Prije odobrenja bilo kojeg zajma, pažljivo procjenjujemo vašu sposobnost otplate na temelju vaših prihoda, rashoda i postojećih dugova. Nikada nećemo odobriti zajam koji bi vas mogao dovesti u financijske poteškoće. Naši savjetnici su uvijek dostupni za razgovor o alternativama ako zajam nije pravo rješenje za vašu situaciju."
     }
   },
   "about": {

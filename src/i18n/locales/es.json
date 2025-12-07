@@ -366,6 +366,33 @@
       "q4": "¿Qué documentos necesito proporcionar para solicitar?", "a4": "Necesitará una identificación válida, comprobante de ingresos (últimos 3 recibos de sueldo), extractos bancarios y comprobante de domicilio. Se pueden solicitar documentos adicionales según su situación.",
       "q5": "¿Cómo se calcula mi pago mensual?", "a5": "Su pago mensual depende del monto del préstamo, la duración y su TAE. Use nuestro simulador arriba para un cálculo instantáneo adaptado a sus necesidades.",
       "q6": "¿La verificación de tasas afecta mi puntuación de crédito?", "a6": "No, verificar su elegibilidad no afecta su puntuación de crédito. Solo la solicitud formal de crédito se registrará en su historial crediticio."
+    },
+    "seoSection": {
+      "title": "Acerca de Privat Equity: Su socio de crédito de confianza",
+      "intro": "es una plataforma de préstamos en línea líder que ha revolucionado la forma en que particulares y empresas acceden al crédito en Francia. Fundada en 2015, hemos ayudado a más de 50.000 clientes a alcanzar sus objetivos financieros a través de soluciones de préstamo transparentes, rápidas y seguras.",
+      "missionTitle": "Nuestra misión",
+      "missionText": "Creemos que el acceso al crédito debe ser simple, transparente y sin estrés. Nuestra misión es democratizar los préstamos aprovechando la tecnología para ofrecer tasas competitivas, decisiones instantáneas y una experiencia digital fluida. Estamos comprometidos con la inclusión financiera y ayudamos a nuestros clientes a tomar decisiones de préstamo informadas.",
+      "differenceTitle": "Por qué somos diferentes",
+      "speed": { "title": "Rapidez:", "text": "Nuestros algoritmos avanzados proporcionan una aprobación preliminar en menos de 5 minutos, con fondos generalmente desembolsados dentro de las 48 horas posteriores a la aprobación final." },
+      "transparency": { "title": "Transparencia:", "text": "Sin tarifas ocultas, sin sorpresas. Todos los costos, tasas y condiciones se muestran claramente antes de que se comprometa." },
+      "security": { "title": "Seguridad:", "text": "Utilizamos cifrado de nivel bancario y cumplimos completamente con el RGPD y las regulaciones bancarias francesas." },
+      "flexibility": { "title": "Flexibilidad:", "text": "Opciones de pago anticipado sin penalizaciones, plazos flexibles de 12 a 84 meses y montos de 1.000€ a 75.000€." },
+      "loanTypesTitle": "Tipos de préstamos que ofrecemos",
+      "loanTypesIntro": "En Privat Equity, entendemos que cada necesidad financiera es única. Por eso ofrecemos una gama completa de productos de préstamo diseñados para adaptarse a sus circunstancias específicas:",
+      "personalLoan": { "title": "Préstamos personales", "text": "Perfecto para bodas, vacaciones, gastos médicos o cualquier proyecto personal. Préstamos de 1.000€ a 75.000€ con tasas desde 2,9% TAE.", "example": "Ejemplo: 10.000€ en 48 meses = 221€/mes (TAE 4,9%, costo total: 10.608€)" },
+      "autoLoan": { "title": "Créditos auto", "text": "Financie vehículos nuevos o usados con tasas competitivas y condiciones flexibles. Tasas desde 3,2% TAE.", "example": "Ejemplo: 20.000€ en 60 meses = 362€/mes (TAE 3,9%, costo total: 21.720€)" },
+      "homeLoan": { "title": "Créditos para reformas", "text": "Transforme su espacio vital con préstamos diseñados para renovaciones, ampliaciones o mejoras energéticas.", "example": "Ejemplo: 15.000€ en 72 meses = 238€/mes (TAE 4,5%, costo total: 17.136€)" },
+      "consolidation": { "title": "Consolidación de deudas", "text": "Simplifique múltiples deudas en un solo pago mensual fácil, a menudo a una tasa global inferior.", "example": "Ejemplo: Consolidar 25.000€ de deuda en 84 meses = 351€/mes (TAE 5,2%)" },
+      "processTitle": "Cómo funciona nuestro proceso",
+      "process": {
+        "step1": { "title": "Simule su préstamo:", "text": "Use nuestra calculadora interactiva para ver los pagos mensuales estimados y los costos totales." },
+        "step2": { "title": "Envíe su solicitud:", "text": "Complete nuestro simple formulario en línea en solo unos minutos." },
+        "step3": { "title": "Obtenga una decisión instantánea:", "text": "Nuestro sistema analiza su solicitud y proporciona una aprobación preliminar inmediatamente." },
+        "step4": { "title": "Cargue sus documentos:", "text": "Envíe los documentos requeridos de forma segura a través de nuestra plataforma." },
+        "step5": { "title": "Reciba sus fondos:", "text": "Una vez aprobado, los fondos se transfieren directamente a su cuenta bancaria en 48 horas." }
+      },
+      "responsibleTitle": "Nuestro compromiso con los préstamos responsables",
+      "responsibleText": "Nos tomamos los préstamos responsables en serio. Antes de aprobar cualquier préstamo, evaluamos cuidadosamente su capacidad de pago en función de sus ingresos, gastos y deudas existentes. Nunca aprobaremos un préstamo que pueda ponerlo en dificultades financieras. Nuestros asesores siempre están disponibles para discutir alternativas si un préstamo no es la solución adecuada para su situación."
     }
   },
   "about": {

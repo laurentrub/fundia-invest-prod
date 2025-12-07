@@ -111,6 +111,33 @@
       "q4": "What documents do I need to provide to apply?", "a4": "You'll need a valid ID, proof of income (last 3 pay stubs), bank statements, and proof of address. Additional documents may be requested based on your situation.",
       "q5": "How is my monthly payment calculated?", "a5": "Your monthly payment depends on the loan amount, duration, and your APR. Use our simulator above for an instant calculation tailored to your needs.",
       "q6": "Does checking rates affect my credit score?", "a6": "No, checking your eligibility does not affect your credit score. Only the formal credit application will be recorded in your credit history."
+    },
+    "seoSection": {
+      "title": "About Privat Equity: Your Trusted Credit Partner",
+      "intro": "is a leading online lending platform that has revolutionized how individuals and businesses access credit in France. Founded in 2015, we have helped over 50,000 clients achieve their financial goals through transparent, fast, and secure lending solutions.",
+      "missionTitle": "Our Mission",
+      "missionText": "We believe that access to credit should be simple, transparent, and stress-free. Our mission is to democratize lending by leveraging technology to offer competitive rates, instant decisions, and a seamless digital experience. We are committed to financial inclusion and helping our clients make informed borrowing decisions.",
+      "differenceTitle": "Why We're Different",
+      "speed": { "title": "Speed:", "text": "Our advanced algorithms provide preliminary approval in less than 5 minutes, with funds typically disbursed within 48 hours of final approval." },
+      "transparency": { "title": "Transparency:", "text": "No hidden fees, no surprises. All costs, rates, and terms are clearly displayed before you commit." },
+      "security": { "title": "Security:", "text": "We use bank-level encryption and are fully compliant with GDPR and French banking regulations." },
+      "flexibility": { "title": "Flexibility:", "text": "Early repayment options without penalties, flexible terms from 12 to 84 months, and amounts from €1,000 to €75,000." },
+      "loanTypesTitle": "Types of Loans We Offer",
+      "loanTypesIntro": "At Privat Equity, we understand that every financial need is unique. That's why we offer a comprehensive range of loan products designed to match your specific circumstances:",
+      "personalLoan": { "title": "Personal Loans", "text": "Perfect for weddings, vacations, medical expenses, or any personal project. Borrow from €1,000 to €75,000 with rates starting at 2.9% APR.", "example": "Example: €10,000 over 48 months = €221/month (4.9% APR, total cost: €10,608)" },
+      "autoLoan": { "title": "Auto Loans", "text": "Finance new or used vehicles with competitive rates and flexible terms. Rates starting at 3.2% APR.", "example": "Example: €20,000 over 60 months = €362/month (3.9% APR, total cost: €21,720)" },
+      "homeLoan": { "title": "Home Improvement Loans", "text": "Transform your living space with loans designed for renovations, extensions, or energy improvements.", "example": "Example: €15,000 over 72 months = €238/month (4.5% APR, total cost: €17,136)" },
+      "consolidation": { "title": "Debt Consolidation", "text": "Simplify multiple debts into one easy monthly payment, often at a lower overall rate.", "example": "Example: Consolidate €25,000 of debt over 84 months = €351/month (5.2% APR)" },
+      "processTitle": "How Our Process Works",
+      "process": {
+        "step1": { "title": "Simulate your loan:", "text": "Use our interactive calculator to see estimated monthly payments and total costs." },
+        "step2": { "title": "Submit your application:", "text": "Complete our simple online form in just a few minutes." },
+        "step3": { "title": "Get an instant decision:", "text": "Our system analyzes your application and provides preliminary approval immediately." },
+        "step4": { "title": "Upload your documents:", "text": "Submit required documents securely through our platform." },
+        "step5": { "title": "Receive your funds:", "text": "Once approved, funds are transferred directly to your bank account within 48 hours." }
+      },
+      "responsibleTitle": "Our Commitment to Responsible Lending",
+      "responsibleText": "We take responsible lending seriously. Before approving any loan, we carefully assess your repayment capacity based on your income, expenses, and existing debts. We will never approve a loan that could put you in financial difficulty. Our advisors are always available to discuss alternatives if a loan isn't the right solution for your situation."
     }
   },
   "about": {
