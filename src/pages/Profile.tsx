@@ -15,15 +15,14 @@ import {
   User, 
   Lock, 
   FileText,
-  FileSignature,
   Clock, 
   CheckCircle, 
   XCircle,
   Euro,
   Calendar
 } from 'lucide-react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { UserContracts } from '@/components/profile/UserContracts';
+import { ProfileSidebar } from '@/components/profile/ProfileSidebar';
 
 interface LoanRequest {
   id: string;
@@ -40,6 +39,7 @@ export default function Profile() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [requests, setRequests] = useState<LoanRequest[]>([]);
+  const [activeSection, setActiveSection] = useState('info');
   
   // Profile form
   const [firstName, setFirstName] = useState('');
@@ -48,7 +48,6 @@ export default function Profile() {
   const [phone, setPhone] = useState('');
   
   // Password form
-  const [currentPassword, setCurrentPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
@@ -149,7 +148,6 @@ export default function Profile() {
       if (error) throw error;
 
       toast.success(t('profile.messages.passwordSuccess'));
-      setCurrentPassword('');
       setNewPassword('');
       setConfirmPassword('');
     } catch (error: any) {
@@ -201,206 +199,229 @@ export default function Profile() {
     );
   }
 
+  const renderContent = () => {
+    switch (activeSection) {
+      case 'info':
+        return (
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <User className="h-5 w-5" />
+                {t('profile.info.title')}
+              </CardTitle>
+              <CardDescription>
+                {t('profile.info.description')}
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <form onSubmit={handleProfileUpdate} className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="firstName">{t('profile.info.firstName')}</Label>
+                    <Input
+                      id="firstName"
+                      type="text"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="lastName">{t('profile.info.lastName')}</Label>
+                    <Input
+                      id="lastName"
+                      type="text"
+                      value={lastName}
+                      onChange={(e) => setLastName(e.target.value)}
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="email">{t('profile.info.email')}</Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    value={email}
+                    disabled
+                    className="bg-muted"
+                  />
+                  <p className="text-sm text-muted-foreground">
+                    {t('profile.info.emailDisabled')}
+                  </p>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="phone">{t('profile.info.phone')}</Label>
+                  <Input
+                    id="phone"
+                    type="tel"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                    placeholder="+33 6 12 34 56 78"
+                  />
+                </div>
+
+                <Button type="submit" disabled={loading}>
+                  {loading ? t('profile.info.updating') : t('profile.info.update')}
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        );
+
+      case 'password':
+        return (
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Lock className="h-5 w-5" />
+                {t('profile.password.title')}
+              </CardTitle>
+              <CardDescription>
+                {t('profile.password.description')}
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <form onSubmit={handlePasswordUpdate} className="space-y-4">
+                <div className="space-y-2">
+                  <Label htmlFor="newPassword">{t('profile.password.newPassword')}</Label>
+                  <Input
+                    id="newPassword"
+                    type="password"
+                    value={newPassword}
+                    onChange={(e) => setNewPassword(e.target.value)}
+                    required
+                    minLength={6}
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="confirmPassword">{t('profile.password.confirmPassword')}</Label>
+                  <Input
+                    id="confirmPassword"
+                    type="password"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    required
+                    minLength={6}
+                  />
+                </div>
+
+                <Button type="submit" disabled={loading}>
+                  {loading ? t('profile.password.changing') : t('profile.password.change')}
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        );
+
+      case 'requests':
+        return (
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold flex items-center gap-2">
+              <FileText className="h-6 w-6" />
+              Mes demandes de crédit
+            </h2>
+            {requests.length === 0 ? (
+              <Card>
+                <CardContent className="pt-6">
+                  <p className="text-center text-muted-foreground">
+                    {t('profile.requests.noRequests')}
+                  </p>
+                </CardContent>
+              </Card>
+            ) : (
+              requests.map((request) => (
+                <Card key={request.id}>
+                  <CardHeader>
+                    <div className="flex items-start justify-between">
+                      <div>
+                        <CardTitle className="flex items-center gap-2">
+                          <FileText className="h-5 w-5" />
+                          {getLoanTypeLabel(request.loan_type)}
+                        </CardTitle>
+                        <CardDescription className="mt-2">
+                          {getStatusBadge(request.status)}
+                        </CardDescription>
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                      <div className="flex items-center gap-2">
+                        <Euro className="h-4 w-4 text-muted-foreground" />
+                        <div>
+                          <p className="text-muted-foreground">{t('profile.requests.amount')}</p>
+                          <p className="font-medium">{request.amount.toLocaleString()} €</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Calendar className="h-4 w-4 text-muted-foreground" />
+                        <div>
+                          <p className="text-muted-foreground">{t('profile.requests.duration')}</p>
+                          <p className="font-medium">{request.duration} {t('common.months')}</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Clock className="h-4 w-4 text-muted-foreground" />
+                        <div>
+                          <p className="text-muted-foreground">{t('profile.requests.date')}</p>
+                          <p className="font-medium">
+                            {new Date(request.created_at).toLocaleDateString('fr-FR')}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))
+            )}
+          </div>
+        );
+
+      case 'contracts':
+        return (
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold">Mes contrats</h2>
+            <UserContracts />
+          </div>
+        );
+
+      case 'documents':
+        return (
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold">Mes documents</h2>
+            <Card>
+              <CardContent className="pt-6">
+                <p className="text-center text-muted-foreground">
+                  Aucun document disponible pour le moment.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        );
+
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl font-bold mb-8">{t('profile.title')}</h1>
-          
-          <Tabs defaultValue="info" className="w-full">
-            <TabsList className="grid w-full grid-cols-4">
-              <TabsTrigger value="info">
-                <User className="h-4 w-4 mr-2" />
-                {t('profile.tabs.info')}
-              </TabsTrigger>
-              <TabsTrigger value="password">
-                <Lock className="h-4 w-4 mr-2" />
-                {t('profile.tabs.password')}
-              </TabsTrigger>
-              <TabsTrigger value="requests">
-                <FileText className="h-4 w-4 mr-2" />
-                {t('profile.tabs.requests')}
-              </TabsTrigger>
-              <TabsTrigger value="contracts">
-                <FileSignature className="h-4 w-4 mr-2" />
-                {t('profile.tabs.contracts')}
-              </TabsTrigger>
-            </TabsList>
-
-            <TabsContent value="info" className="mt-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle>{t('profile.info.title')}</CardTitle>
-                  <CardDescription>
-                    {t('profile.info.description')}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <form onSubmit={handleProfileUpdate} className="space-y-4">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="firstName">{t('profile.info.firstName')}</Label>
-                        <Input
-                          id="firstName"
-                          type="text"
-                          value={firstName}
-                          onChange={(e) => setFirstName(e.target.value)}
-                          required
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="lastName">{t('profile.info.lastName')}</Label>
-                        <Input
-                          id="lastName"
-                          type="text"
-                          value={lastName}
-                          onChange={(e) => setLastName(e.target.value)}
-                          required
-                        />
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="email">{t('profile.info.email')}</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        value={email}
-                        disabled
-                        className="bg-muted"
-                      />
-                      <p className="text-sm text-muted-foreground">
-                        {t('profile.info.emailDisabled')}
-                      </p>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="phone">{t('profile.info.phone')}</Label>
-                      <Input
-                        id="phone"
-                        type="tel"
-                        value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
-                        placeholder="+33 6 12 34 56 78"
-                      />
-                    </div>
-
-                    <Button type="submit" disabled={loading}>
-                      {loading ? t('profile.info.updating') : t('profile.info.update')}
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-            </TabsContent>
-
-            <TabsContent value="password" className="mt-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle>{t('profile.password.title')}</CardTitle>
-                  <CardDescription>
-                    {t('profile.password.description')}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <form onSubmit={handlePasswordUpdate} className="space-y-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="newPassword">{t('profile.password.newPassword')}</Label>
-                      <Input
-                        id="newPassword"
-                        type="password"
-                        value={newPassword}
-                        onChange={(e) => setNewPassword(e.target.value)}
-                        required
-                        minLength={6}
-                      />
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="confirmPassword">{t('profile.password.confirmPassword')}</Label>
-                      <Input
-                        id="confirmPassword"
-                        type="password"
-                        value={confirmPassword}
-                        onChange={(e) => setConfirmPassword(e.target.value)}
-                        required
-                        minLength={6}
-                      />
-                    </div>
-
-                    <Button type="submit" disabled={loading}>
-                      {loading ? t('profile.password.changing') : t('profile.password.change')}
-                    </Button>
-                  </form>
-                </CardContent>
-              </Card>
-            </TabsContent>
-
-            <TabsContent value="requests" className="mt-6">
-              <div className="space-y-4">
-                {requests.length === 0 ? (
-                  <Card>
-                    <CardContent className="pt-6">
-                      <p className="text-center text-muted-foreground">
-                        {t('profile.requests.noRequests')}
-                      </p>
-                    </CardContent>
-                  </Card>
-                ) : (
-                  requests.map((request) => (
-                    <Card key={request.id}>
-                      <CardHeader>
-                        <div className="flex items-start justify-between">
-                          <div>
-                            <CardTitle className="flex items-center gap-2">
-                              <FileText className="h-5 w-5" />
-                              {getLoanTypeLabel(request.loan_type)}
-                            </CardTitle>
-                            <CardDescription className="mt-2">
-                              {getStatusBadge(request.status)}
-                            </CardDescription>
-                          </div>
-                        </div>
-                      </CardHeader>
-                      <CardContent>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                          <div className="flex items-center gap-2">
-                            <Euro className="h-4 w-4 text-muted-foreground" />
-                            <div>
-                              <p className="text-muted-foreground">{t('profile.requests.amount')}</p>
-                              <p className="font-medium">{request.amount.toLocaleString()} €</p>
-                            </div>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <Calendar className="h-4 w-4 text-muted-foreground" />
-                            <div>
-                              <p className="text-muted-foreground">{t('profile.requests.duration')}</p>
-                              <p className="font-medium">{request.duration} {t('common.months')}</p>
-                            </div>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <Clock className="h-4 w-4 text-muted-foreground" />
-                            <div>
-                              <p className="text-muted-foreground">{t('profile.requests.date')}</p>
-                              <p className="font-medium">
-                                {new Date(request.created_at).toLocaleDateString('fr-FR')}
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))
-                )}
-              </div>
-            </TabsContent>
-
-            <TabsContent value="contracts" className="mt-6">
-              <UserContracts />
-            </TabsContent>
-          </Tabs>
-        </div>
-      </main>
+      <div className="flex-1 flex">
+        <ProfileSidebar 
+          activeSection={activeSection} 
+          onSectionChange={setActiveSection} 
+        />
+        <main className="flex-1 p-8 bg-muted/30">
+          <div className="max-w-4xl">
+            {renderContent()}
+          </div>
+        </main>
+      </div>
       <Footer />
     </div>
   );
