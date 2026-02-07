@@ -260,7 +260,25 @@
   },
   "testimonials": {
     "title": "What our clients say",
-    "subtitle": "Over 50,000 clients trust us for their financing projects"
+    "subtitle": "Over 50,000 clients trust us for their financing projects",
+    "items": {
+      "marie": {
+        "text": "Excellent service! I got my personal loan in 48 hours to finance my home renovations. The process was simple and transparent, and the advisor was very professional.",
+        "project": "Home improvement loan - €15,000"
+      },
+      "pierre": {
+        "text": "After comparing several banks, Fundia Invest offered me the best rate for my car loan. The online simulator is very practical and the approval was fast.",
+        "project": "Auto loan - €22,000"
+      },
+      "sophie": {
+        "text": "Highly recommended! Consolidating my loans significantly reduced my monthly payments. The team was attentive and guided me well.",
+        "project": "Debt consolidation - €35,000"
+      },
+      "thomas": {
+        "text": "Impeccable service from start to finish. The online platform is intuitive, and I was able to complete all my steps without leaving home. My loan was approved in less than 24 hours.",
+        "project": "Personal loan - €8,000"
+      }
+    }
   },
   "simulator": {
     "title": "Loan Calculator",

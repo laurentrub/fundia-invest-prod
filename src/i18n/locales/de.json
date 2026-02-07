@@ -634,7 +634,25 @@
   },
   "testimonials": {
     "title": "Was unsere Kunden sagen",
-    "subtitle": "Über 50.000 Kunden vertrauen uns bei ihren Finanzierungsprojekten"
+    "subtitle": "Über 50.000 Kunden vertrauen uns bei ihren Finanzierungsprojekten",
+    "items": {
+      "marie": {
+        "text": "Ausgezeichneter Service! Ich habe meinen Privatkredit in 48 Stunden erhalten, um meine Hausrenovierung zu finanzieren. Der Prozess war einfach und transparent, und der Berater war sehr professionell.",
+        "project": "Renovierungskredit - 15.000€"
+      },
+      "pierre": {
+        "text": "Nach dem Vergleich mehrerer Banken hat mir Fundia Invest den besten Zinssatz für meinen Autokredit angeboten. Der Online-Simulator ist sehr praktisch und die Genehmigung war schnell.",
+        "project": "Autokredit - 22.000€"
+      },
+      "sophie": {
+        "text": "Sehr empfehlenswert! Die Zusammenlegung meiner Kredite hat meine monatlichen Raten erheblich reduziert. Das Team war aufmerksam und hat mich gut begleitet.",
+        "project": "Kreditumschuldung - 35.000€"
+      },
+      "thomas": {
+        "text": "Tadelloser Service von Anfang bis Ende. Die Online-Plattform ist intuitiv, und ich konnte alle Schritte bequem von zu Hause erledigen. Mein Kredit wurde in weniger als 24 Stunden genehmigt.",
+        "project": "Privatkredit - 8.000€"
+      }
+    }
   },
   "simulator": {
     "title": "Kreditrechner",

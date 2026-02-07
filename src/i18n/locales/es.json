@@ -515,7 +515,25 @@
   },
   "testimonials": {
     "title": "Lo que dicen nuestros clientes",
-    "subtitle": "Más de 50,000 clientes confían en nosotros para sus proyectos de financiación"
+    "subtitle": "Más de 50,000 clientes confían en nosotros para sus proyectos de financiación",
+    "items": {
+      "marie": {
+        "text": "¡Excelente servicio! Obtuve mi préstamo personal en 48 horas para financiar las reformas de mi casa. El proceso fue sencillo y transparente, y el asesor fue muy profesional.",
+        "project": "Crédito reformas - 15.000€"
+      },
+      "pierre": {
+        "text": "Después de comparar varios bancos, Fundia Invest me ofreció la mejor tasa para mi crédito de auto. El simulador en línea es muy práctico y la aprobación fue rápida.",
+        "project": "Crédito auto - 22.000€"
+      },
+      "sophie": {
+        "text": "¡Lo recomiendo mucho! La consolidación de mis créditos redujo considerablemente mis mensualidades. El equipo fue atento y me acompañó muy bien.",
+        "project": "Consolidación de deudas - 35.000€"
+      },
+      "thomas": {
+        "text": "Servicio impecable de principio a fin. La plataforma en línea es intuitiva y pude realizar todos mis trámites sin salir de casa. Mi préstamo fue aprobado en menos de 24 horas.",
+        "project": "Préstamo personal - 8.000€"
+      }
+    }
   },
   "simulator": {
     "title": "Calculadora de préstamos",

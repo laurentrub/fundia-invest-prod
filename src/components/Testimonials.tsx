@@ -11,8 +11,8 @@ const Testimonials = () => {
       name: "Marie Dubois",
       location: "Paris",
       rating: 5,
-      text: "Excellent service ! J'ai obtenu mon prêt personnel en 48h pour financer les travaux de ma maison. Le processus était simple et transparent, et le conseiller était très professionnel.",
-      project: "Crédit travaux - 15 000€",
+      textKey: "testimonials.items.marie.text",
+      projectKey: "testimonials.items.marie.project",
       initials: "MD",
       color: "bg-accent"
     },
@@ -20,8 +20,8 @@ const Testimonials = () => {
       name: "Pierre Martin",
       location: "Lyon",
       rating: 5,
-      text: "Après avoir comparé plusieurs banques, Fundia Invest m'a proposé le meilleur taux pour mon crédit auto. La simulation en ligne est très pratique et l'approbation a été rapide.",
-      project: "Crédit auto - 22 000€",
+      textKey: "testimonials.items.pierre.text",
+      projectKey: "testimonials.items.pierre.project",
       initials: "PM",
       color: "bg-primary"
     },
@@ -29,8 +29,8 @@ const Testimonials = () => {
       name: "Sophie Laurent",
       location: "Marseille",
       rating: 5,
-      text: "Je recommande vivement ! Le rachat de mes crédits m'a permis de réduire considérablement mes mensualités. L'équipe a été à l'écoute et m'a bien accompagnée.",
-      project: "Rachat de crédit - 35 000€",
+      textKey: "testimonials.items.sophie.text",
+      projectKey: "testimonials.items.sophie.project",
       initials: "SL",
       color: "bg-secondary"
     },
@@ -38,8 +38,8 @@ const Testimonials = () => {
       name: "Thomas Bernard",
       location: "Toulouse",
       rating: 5,
-      text: "Service impeccable du début à la fin. La plateforme en ligne est intuitive, et j'ai pu faire toutes mes démarches sans me déplacer. Mon prêt a été validé en moins de 24h.",
-      project: "Prêt personnel - 8 000€",
+      textKey: "testimonials.items.thomas.text",
+      projectKey: "testimonials.items.thomas.project",
       initials: "TB",
       color: "bg-accent"
     },
@@ -78,7 +78,7 @@ const Testimonials = () => {
               </div>
 
               <p className="text-foreground mb-4 leading-relaxed">
-                "{testimonial.text}"
+                "{t(testimonial.textKey)}"
               </p>
 
               <div className="border-t border-border pt-4 mt-4">
@@ -88,7 +88,7 @@ const Testimonials = () => {
                     <p className="text-sm text-muted-foreground">{testimonial.location}</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-sm font-medium text-accent">{testimonial.project}</p>
+                    <p className="text-sm font-medium text-accent">{t(testimonial.projectKey)}</p>
                   </div>
                 </div>
               </div>

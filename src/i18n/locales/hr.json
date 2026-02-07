@@ -326,7 +326,25 @@
   },
   "testimonials": {
     "title": "Što kažu naši klijenti",
-    "subtitle": "Više od 50.000 klijenata nam vjeruje za svoje projekte financiranja"
+    "subtitle": "Više od 50.000 klijenata nam vjeruje za svoje projekte financiranja",
+    "items": {
+      "marie": {
+        "text": "Izvrsna usluga! Osobni kredit sam dobila u roku od 48 sati za financiranje renovacije kuće. Proces je bio jednostavan i transparentan, a savjetnik je bio vrlo profesionalan.",
+        "project": "Kredit za renovaciju - 15.000€"
+      },
+      "pierre": {
+        "text": "Nakon usporedbe nekoliko banaka, Fundia Invest mi je ponudio najbolju kamatnu stopu za auto kredit. Online simulator je vrlo praktičan i odobrenje je bilo brzo.",
+        "project": "Auto kredit - 22.000€"
+      },
+      "sophie": {
+        "text": "Toplo preporučujem! Konsolidacija mojih kredita značajno je smanjila moje mjesečne rate. Tim je bio pažljiv i dobro me vodio.",
+        "project": "Konsolidacija dugova - 35.000€"
+      },
+      "thomas": {
+        "text": "Besprijekorna usluga od početka do kraja. Online platforma je intuitivna i mogao sam sve obaviti bez izlaska iz kuće. Moj kredit je odobren za manje od 24 sata.",
+        "project": "Osobni kredit - 8.000€"
+      }
+    }
   },
   "simulator": {
     "title": "Kalkulator kredita",

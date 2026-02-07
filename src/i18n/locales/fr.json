@@ -634,7 +634,25 @@
   },
   "testimonials": {
     "title": "Ce que disent nos clients",
-    "subtitle": "Plus de 50 000 clients nous font confiance pour leurs projets de financement"
+    "subtitle": "Plus de 50 000 clients nous font confiance pour leurs projets de financement",
+    "items": {
+      "marie": {
+        "text": "Excellent service ! J'ai obtenu mon prêt personnel en 48h pour financer les travaux de ma maison. Le processus était simple et transparent, et le conseiller était très professionnel.",
+        "project": "Crédit travaux - 15 000€"
+      },
+      "pierre": {
+        "text": "Après avoir comparé plusieurs banques, Fundia Invest m'a proposé le meilleur taux pour mon crédit auto. La simulation en ligne est très pratique et l'approbation a été rapide.",
+        "project": "Crédit auto - 22 000€"
+      },
+      "sophie": {
+        "text": "Je recommande vivement ! Le rachat de mes crédits m'a permis de réduire considérablement mes mensualités. L'équipe a été à l'écoute et m'a bien accompagnée.",
+        "project": "Rachat de crédit - 35 000€"
+      },
+      "thomas": {
+        "text": "Service impeccable du début à la fin. La plateforme en ligne est intuitive, et j'ai pu faire toutes mes démarches sans me déplacer. Mon prêt a été validé en moins de 24h.",
+        "project": "Prêt personnel - 8 000€"
+      }
+    }
   },
   "simulator": {
     "title": "Simulateur de crédit",

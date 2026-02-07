@@ -326,7 +326,25 @@
   },
   "testimonials": {
     "title": "Wat onze klanten zeggen",
-    "subtitle": "Meer dan 50.000 klanten vertrouwen ons voor hun financieringsprojecten"
+    "subtitle": "Meer dan 50.000 klanten vertrouwen ons voor hun financieringsprojecten",
+    "items": {
+      "marie": {
+        "text": "Uitstekende service! Ik kreeg mijn persoonlijke lening binnen 48 uur om mijn woningrenovatie te financieren. Het proces was eenvoudig en transparant, en de adviseur was zeer professioneel.",
+        "project": "Verbouwingslening - €15.000"
+      },
+      "pierre": {
+        "text": "Na het vergelijken van meerdere banken bood Fundia Invest mij de beste rente voor mijn autolening. De online simulator is zeer praktisch en de goedkeuring was snel.",
+        "project": "Autolening - €22.000"
+      },
+      "sophie": {
+        "text": "Sterk aanbevolen! Het samenvoegen van mijn leningen heeft mijn maandelijkse betalingen aanzienlijk verlaagd. Het team was attent en begeleidde mij goed.",
+        "project": "Schuldconsolidatie - €35.000"
+      },
+      "thomas": {
+        "text": "Onberispelijke service van begin tot eind. Het online platform is intuïtief en ik kon alle stappen vanuit huis voltooien. Mijn lening werd in minder dan 24 uur goedgekeurd.",
+        "project": "Persoonlijke lening - €8.000"
+      }
+    }
   },
   "simulator": {
     "title": "Leningcalculator",
