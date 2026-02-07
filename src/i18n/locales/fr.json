@@ -1000,6 +1000,213 @@
     "yes": "Oui",
     "no": "Non"
   },
+  "admin": {
+    "nav": {
+      "dashboard": "Tableau de bord",
+      "requests": "Demandes",
+      "documents": "Contrats",
+      "clientDocuments": "Documents clients",
+      "team": "Équipe",
+      "settings": "Paramètres",
+      "logout": "Déconnexion"
+    },
+    "dashboard": {
+      "title": "Tableau de bord",
+      "subtitle": "Vue d'ensemble de l'activité",
+      "recentRequests": "Demandes récentes",
+      "viewAll": "Voir tout",
+      "noRequests": "Aucune demande pour le moment"
+    },
+    "status": {
+      "pending": "En attente",
+      "in_progress": "En cours",
+      "approved": "Approuvé",
+      "refused": "Refusé"
+    },
+    "stats": {
+      "total": "Total",
+      "pending": "En attente",
+      "in_progress": "En cours",
+      "approved": "Approuvées",
+      "refused": "Refusées"
+    },
+    "requests": {
+      "title": "Gestion des demandes",
+      "subtitle": "Consultez et gérez toutes les demandes de crédit",
+      "searchPlaceholder": "Rechercher par nom ou email...",
+      "filterStatus": "Filtrer par statut",
+      "allStatuses": "Tous les statuts",
+      "columns": {
+        "client": "Client",
+        "type": "Type",
+        "amount": "Montant",
+        "duration": "Durée",
+        "status": "Statut",
+        "date": "Date",
+        "actions": "Actions"
+      },
+      "noResults": "Aucune demande trouvée",
+      "view": "Voir"
+    },
+    "request": {
+      "id": "Référence",
+      "clientInfo": "Informations client",
+      "name": "Nom",
+      "email": "Email",
+      "phone": "Téléphone",
+      "requestDetails": "Détails de la demande",
+      "type": "Type de prêt",
+      "amount": "Montant",
+      "duration": "Durée",
+      "date": "Date de demande",
+      "historyTab": "Historique",
+      "notesTab": "Notes internes"
+    },
+    "messages": {
+      "loadError": "Erreur lors du chargement des données",
+      "statusUpdated": "Statut mis à jour avec succès",
+      "updateError": "Erreur lors de la mise à jour",
+      "noteAdded": "Note ajoutée avec succès",
+      "noteError": "Erreur lors de l'opération sur la note",
+      "noteDeleted": "Note supprimée",
+      "emailFeature": "Fonctionnalité d'envoi d'email bientôt disponible",
+      "documentRequestSent": "Demande de documents envoyée avec succès",
+      "documentRequestError": "Erreur lors de l'envoi de la demande de documents",
+      "contractSent": "Contrat envoyé au client avec succès",
+      "contractError": "Erreur lors de l'envoi du contrat"
+    },
+    "history": {
+      "empty": "Aucun historique de changement de statut"
+    },
+    "notes": {
+      "placeholder": "Ajouter une note interne...",
+      "add": "Ajouter la note",
+      "empty": "Aucune note interne pour le moment",
+      "anonymous": "Anonyme"
+    },
+    "statusModal": {
+      "title": "Changer le statut",
+      "description": "Sélectionnez le nouveau statut de la demande et ajoutez un commentaire optionnel.",
+      "newStatus": "Nouveau statut",
+      "comment": "Commentaire (optionnel)",
+      "commentPlaceholder": "Ajoutez un commentaire sur ce changement de statut...",
+      "sendEmail": "Envoyer une notification par email au client",
+      "confirm": "Confirmer le changement"
+    },
+    "documentRequest": {
+      "title": "Demande de justificatifs",
+      "description": "Sélectionnez les documents à demander à {{name}}",
+      "selectDocuments": "Documents à demander",
+      "documents": {
+        "idCard": "Pièce d'identité",
+        "proofOfIncome": "Justificatif de revenus",
+        "bankStatements": "Relevés bancaires (3 derniers mois)",
+        "taxReturn": "Avis d'imposition",
+        "proofOfAddress": "Justificatif de domicile",
+        "employmentContract": "Contrat de travail",
+        "businessRegistration": "Extrait Kbis / Inscription au registre",
+        "other": "Autre document"
+      },
+      "customMessage": "Message personnalisé (optionnel)",
+      "customMessagePlaceholder": "Ajoutez un message personnalisé pour le client...",
+      "send": "Envoyer la demande"
+    },
+    "quickActions": {
+      "title": "Actions rapides",
+      "changeStatus": "Changer le statut",
+      "sendEmail": "Envoyer un email",
+      "requestDocuments": "Demande de justificatif",
+      "generateContract": "Générer un contrat",
+      "downloadPdf": "Télécharger en PDF"
+    },
+    "contract": {
+      "previewTitle": "Aperçu du contrat",
+      "previewDescription": "Vérifiez le contrat avant de l'envoyer à {{name}}",
+      "errorGenerating": "Erreur lors de la génération du contrat",
+      "download": "Télécharger",
+      "sendForSignature": "Envoyer pour signature"
+    },
+    "documents": {
+      "title": "Gestion des contrats",
+      "subtitle": "Suivez et validez les contrats signés par les clients",
+      "loadError": "Erreur lors du chargement des contrats",
+      "downloadError": "Erreur lors du téléchargement",
+      "viewError": "Erreur lors de la visualisation",
+      "verifySuccess": "Contrat vérifié avec succès",
+      "rejectSuccess": "Contrat refusé",
+      "actionError": "Erreur lors de l'opération",
+      "pendingSignature": "En attente de signature",
+      "awaitingValidation": "En attente de validation",
+      "verified": "Vérifiés",
+      "filters": "Filtres",
+      "searchPlaceholder": "Rechercher par nom ou email...",
+      "filterStatus": "Filtrer par statut",
+      "allStatuses": "Tous les statuts",
+      "statusPending": "En attente de signature",
+      "statusSigned": "Signé",
+      "statusVerified": "Vérifié",
+      "statusRejected": "Refusé",
+      "statusPendingsignature": "En attente de signature",
+      "contractsToValidate": "Contrats à valider",
+      "client": "Client",
+      "loanType": "Type de prêt",
+      "amount": "Montant",
+      "signedDate": "Date de signature",
+      "actions": "Actions",
+      "allContracts": "Tous les contrats",
+      "noContracts": "Aucun contrat trouvé",
+      "status": "Statut",
+      "date": "Date",
+      "validate": "Valider",
+      "reject": "Refuser",
+      "confirmValidation": "Confirmer la validation",
+      "confirmValidationDesc": "Êtes-vous sûr de vouloir valider ce contrat ?",
+      "confirmRejection": "Confirmer le refus",
+      "confirmRejectionDesc": "Indiquez la raison du refus de ce contrat.",
+      "rejectionReason": "Raison du refus",
+      "rejectionReasonPlaceholder": "Ex: Signature manquante, document incomplet..."
+    },
+    "team": {
+      "title": "Gestion de l'équipe",
+      "subtitle": "Gérez les membres de votre équipe et leurs rôles",
+      "loadError": "Erreur lors du chargement de l'équipe",
+      "userNotFound": "Aucun utilisateur trouvé avec cet email",
+      "alreadyMember": "Cet utilisateur est déjà membre de l'équipe",
+      "memberAdded": "Membre ajouté avec succès",
+      "addError": "Erreur lors de l'ajout du membre",
+      "cantRemoveSelf": "Vous ne pouvez pas vous retirer vous-même",
+      "memberRemoved": "Membre retiré de l'équipe",
+      "removeError": "Erreur lors du retrait du membre",
+      "cantChangeSelf": "Vous ne pouvez pas modifier votre propre rôle",
+      "roleUpdated": "Rôle mis à jour avec succès",
+      "updateError": "Erreur lors de la mise à jour du rôle",
+      "addMember": "Ajouter un membre",
+      "addMemberTitle": "Ajouter un membre à l'équipe",
+      "addMemberDesc": "Entrez l'email d'un utilisateur existant pour l'ajouter à l'équipe.",
+      "email": "Adresse email",
+      "emailPlaceholder": "exemple@email.com",
+      "role": "Rôle",
+      "roleManager": "Manager",
+      "roleAdmin": "Administrateur",
+      "addButton": "Ajouter",
+      "members": "Membres de l'équipe",
+      "membersCount": "{{count}} membre(s)",
+      "noMembers": "Aucun membre dans l'équipe",
+      "noName": "Sans nom",
+      "columns": {
+        "member": "Membre",
+        "role": "Rôle",
+        "since": "Depuis",
+        "actions": "Actions"
+      }
+    },
+    "settings": {
+      "title": "Paramètres",
+      "subtitle": "Configurez les paramètres de l'application",
+      "comingSoon": "Bientôt disponible",
+      "comingSoonDesc": "Les paramètres de l'application seront bientôt disponibles. Restez à l'écoute !"
+    }
+  },
   "products": {
     "personalLoan": {
       "title": "Prêt personnel",
