@@ -1203,8 +1203,68 @@
     "settings": {
       "title": "Paramètres",
       "subtitle": "Configurez les paramètres de l'application",
-      "comingSoon": "Bientôt disponible",
-      "comingSoonDesc": "Les paramètres de l'application seront bientôt disponibles. Restez à l'écoute !"
+      "save": "Enregistrer",
+      "saveSuccess": "Paramètres enregistrés avec succès",
+      "saveError": "Erreur lors de l'enregistrement",
+      "tabs": {
+        "company": "Entreprise",
+        "notifications": "Notifications",
+        "loans": "Crédits",
+        "display": "Affichage"
+      },
+      "company": {
+        "title": "Informations de l'entreprise",
+        "description": "Coordonnées et informations générales de votre entreprise",
+        "name": "Nom de l'entreprise",
+        "email": "Email de contact",
+        "phone": "Téléphone",
+        "address": "Adresse",
+        "website": "Site web",
+        "descriptionField": "Description",
+        "descriptionPlaceholder": "Décrivez brièvement votre activité..."
+      },
+      "notifications": {
+        "title": "Préférences de notifications",
+        "description": "Configurez les notifications email envoyées automatiquement",
+        "emailOnNewRequest": "Nouvelle demande de crédit",
+        "emailOnNewRequestDesc": "Recevoir un email à chaque nouvelle demande soumise",
+        "emailOnStatusChange": "Changement de statut",
+        "emailOnStatusChangeDesc": "Recevoir un email quand le statut d'une demande change",
+        "emailOnDocumentSubmit": "Document soumis",
+        "emailOnDocumentSubmitDesc": "Recevoir un email quand un client soumet un document",
+        "emailOnContractSigned": "Contrat signé",
+        "emailOnContractSignedDesc": "Recevoir un email quand un client signe un contrat",
+        "emailOnNewMessage": "Nouveau message",
+        "emailOnNewMessageDesc": "Recevoir un email à chaque nouveau message client",
+        "autoConfirmEmails": "Confirmation automatique",
+        "autoConfirmEmailsDesc": "Envoyer automatiquement un email de confirmation aux clients"
+      },
+      "loans": {
+        "title": "Configuration des crédits",
+        "description": "Définissez les paramètres par défaut pour les offres de crédit",
+        "amounts": "Montants",
+        "minAmount": "Montant minimum",
+        "maxAmount": "Montant maximum",
+        "durations": "Durées",
+        "minDuration": "Durée minimum",
+        "maxDuration": "Durée maximum",
+        "months": "mois",
+        "rates": "Taux d'intérêt (TAEG)",
+        "minRate": "Taux minimum",
+        "defaultRate": "Taux par défaut",
+        "maxRate": "Taux maximum",
+        "fees": "Frais",
+        "processingFee": "Frais de dossier"
+      },
+      "display": {
+        "title": "Préférences d'affichage",
+        "description": "Personnalisez l'apparence et le comportement de l'interface",
+        "language": "Langue de l'interface",
+        "itemsPerPage": "Éléments par page",
+        "items": "éléments",
+        "dateFormat": "Format de date",
+        "currency": "Devise"
+      }
     }
   },
   "products": {
