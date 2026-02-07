@@ -2,7 +2,7 @@
   "resources": {
     "faq": {
       "title": "Questions Fréquentes",
-      "subtitle": "Tout ce que vous devez savoir sur les prêts, les demandes et Privat Equity",
+      "subtitle": "Tout ce que vous devez savoir sur les prêts, les demandes et Fundia Invest",
       "categories": {
         "general": "Questions Générales",
         "application": "Processus de Demande",
@@ -13,12 +13,12 @@
         "special": "Situations Particulières"
       },
       "general": {
-        "q1": "Qu'est-ce que Privat Equity ?",
-        "a1": "Privat Equity est une plateforme de prêt en ligne qui connecte les emprunteurs avec des offres de crédit compétitives. Nous proposons des prêts personnels, des crédits auto, des crédits travaux, du rachat de crédit et des prêts entreprise.",
-        "q2": "Comment Privat Equity gagne-t-il de l'argent ?",
+        "q1": "Qu'est-ce que Fundia Invest ?",
+        "a1": "Fundia Invest est une plateforme de prêt en ligne qui connecte les emprunteurs avec des offres de crédit compétitives. Nous proposons des prêts personnels, des crédits auto, des crédits travaux, du rachat de crédit et des prêts entreprise.",
+        "q2": "Comment Fundia Invest gagne-t-il de l'argent ?",
         "a2": "Nous recevons une commission de nos partenaires financiers lorsque nous mettons en relation des emprunteurs avec des prêts. Ce service est gratuit pour les emprunteurs - nous ne facturons jamais de frais de dossier ou de coûts initiaux.",
-        "q3": "Privat Equity est-il sûr et légitime ?",
-        "a3": "Oui, Privat Equity est une plateforme de prêt agréée et réglementée. Nous utilisons un cryptage de niveau bancaire, sommes entièrement conformes au RGPD et ne travaillons qu'avec des institutions financières agréées."
+        "q3": "Fundia Invest est-il sûr et légitime ?",
+        "a3": "Oui, Fundia Invest est une plateforme de prêt agréée et réglementée. Nous utilisons un cryptage de niveau bancaire, sommes entièrement conformes au RGPD et ne travaillons qu'avec des institutions financières agréées."
       },
       "application": {
         "q1": "Combien de temps prend la demande ?",
@@ -26,7 +26,7 @@
         "q2": "Quels documents ai-je besoin ?",
         "a2": "Vous aurez besoin d'une pièce d'identité valide, d'une preuve de revenu (bulletins de salaire ou déclarations fiscales), de relevés bancaires des 3 derniers mois et d'un justificatif de domicile. Des documents supplémentaires peuvent être demandés selon votre demande.",
         "q3": "La vérification de mon taux affectera-t-elle mon score de crédit ?",
-        "a3": "Non ! Vérifier votre taux sur Privat Equity utilise une enquête de crédit douce qui n'affecte pas votre score. Une enquête approfondie ne sera effectuée que lorsque vous accepterez formellement une offre de prêt.",
+        "a3": "Non ! Vérifier votre taux sur Fundia Invest utilise une enquête de crédit douce qui n'affecte pas votre score. Une enquête approfondie ne sera effectuée que lorsque vous accepterez formellement une offre de prêt.",
         "q4": "Puis-je faire une demande si je suis travailleur indépendant ?",
         "a4": "Oui ! Les travailleurs indépendants sont les bienvenus. Vous devrez fournir des documents supplémentaires tels que des déclarations fiscales, des relevés bancaires professionnels et une preuve d'enregistrement de l'entreprise.",
         "q5": "Que se passe-t-il si ma demande est refusée ?",
@@ -72,7 +72,7 @@
         "q1": "Comment mes informations personnelles sont-elles protégées ?",
         "a1": "Nous utilisons un cryptage SSL 256 bits, la même sécurité utilisée par les banques. Vos données ne sont jamais vendues ou partagées sans votre consentement explicite, et nous sommes entièrement conformes au RGPD.",
         "q2": "Qui a accès à mes informations ?",
-        "a2": "Seul le personnel autorisé de Privat Equity et nos partenaires financiers (lorsque vous acceptez une offre) ont accès à vos informations. Nous ne vendons jamais vos données à des tiers.",
+        "a2": "Seul le personnel autorisé de Fundia Invest et nos partenaires financiers (lorsque vous acceptez une offre) ont accès à vos informations. Nous ne vendons jamais vos données à des tiers.",
         "q3": "Combien de temps conservez-vous mes informations ?",
         "a3": "Nous conservons vos informations conformément aux exigences légales et à notre politique de confidentialité. Vous pouvez demander la suppression de vos données à tout moment, sous réserve des obligations réglementaires."
       },
@@ -195,7 +195,7 @@
         },
         "prepaymentPenalty": {
           "term": "Pénalité de remboursement anticipé",
-          "definition": "Des frais facturés par certains prêteurs si vous remboursez votre prêt avant la fin de la durée prévue. Chez Privat Equity, nous n'avons pas de pénalités de remboursement anticipé."
+          "definition": "Des frais facturés par certains prêteurs si vous remboursez votre prêt avant la fin de la durée prévue. Chez Fundia Invest, nous n'avons pas de pénalités de remboursement anticipé."
         },
         "revolvingCredit": {
           "term": "Prêt renouvelable",
@@ -315,7 +315,7 @@
       }
     },
     "featuresSection": {
-      "title": "Pourquoi choisir Privat Equity ?",
+      "title": "Pourquoi choisir Fundia Invest ?",
       "subtitle": "Nous combinons technologie de pointe et service personnalisé pour rendre l'emprunt simple, rapide et transparent."
     },
     "products": {
@@ -385,7 +385,7 @@
       "story1": {
         "title": "Crédit Auto",
         "imageAlt": "Couple heureux ayant obtenu leur crédit auto",
-        "quote": "Nous avons obtenu notre crédit auto en 24h ! Le processus était simple et l'équipe très professionnelle. Nous recommandons vivement Privat Equity.",
+        "quote": "Nous avons obtenu notre crédit auto en 24h ! Le processus était simple et l'équipe très professionnelle. Nous recommandons vivement Fundia Invest.",
         "name": "Marie & Luc",
         "location": "Lyon - Crédit de 22 000€"
       },
@@ -406,7 +406,7 @@
     },
     "cta": {
       "title": "Prêt à commencer ?",
-      "description": "Rejoignez des milliers de clients satisfaits qui ont choisi Privat Equity pour leurs besoins de financement.",
+      "description": "Rejoignez des milliers de clients satisfaits qui ont choisi Fundia Invest pour leurs besoins de financement.",
       "button": "Demander maintenant - Approbation instantanée"
     },
     "indexFeatures": {
@@ -448,37 +448,80 @@
       "a6": "Non, la vérification de votre éligibilité n'affecte pas votre score de crédit. Seule la demande formelle de crédit sera enregistrée dans votre historique."
     },
     "seoSection": {
-      "title": "À propos de Privat Equity : Votre partenaire crédit de confiance",
+      "title": "À propos de Fundia Invest : Votre partenaire crédit de confiance",
       "intro": "est une plateforme de prêt en ligne leader qui a révolutionné la façon dont les particuliers et les entreprises accèdent au crédit en France. Fondée en 2015, nous avons aidé plus de 50 000 clients à atteindre leurs objectifs financiers grâce à des solutions de prêt transparentes, rapides et sécurisées.",
       "missionTitle": "Notre mission",
       "missionText": "Nous croyons que l'accès au crédit devrait être simple, transparent et sans stress. Notre mission est de démocratiser le prêt en tirant parti de la technologie pour offrir des taux compétitifs, des décisions instantanées et une expérience numérique fluide. Nous nous engageons pour l'inclusion financière et aidons nos clients à prendre des décisions d'emprunt éclairées.",
       "differenceTitle": "Pourquoi nous sommes différents",
-      "speed": { "title": "Rapidité :", "text": "Nos algorithmes avancés fournissent une approbation préliminaire en moins de 5 minutes, avec des fonds généralement déboursés dans les 48 heures suivant l'approbation finale." },
-      "transparency": { "title": "Transparence :", "text": "Pas de frais cachés, pas de surprises. Tous les coûts, taux et conditions sont clairement affichés avant que vous ne vous engagiez." },
-      "security": { "title": "Sécurité :", "text": "Nous utilisons un chiffrement de niveau bancaire et sommes entièrement conformes au RGPD et aux réglementations bancaires françaises." },
-      "flexibility": { "title": "Flexibilité :", "text": "Options de remboursement anticipé sans pénalités, durées flexibles de 12 à 84 mois et montants de 1 000€ à 75 000€." },
+      "speed": {
+        "title": "Rapidité :",
+        "text": "Nos algorithmes avancés fournissent une approbation préliminaire en moins de 5 minutes, avec des fonds généralement déboursés dans les 48 heures suivant l'approbation finale."
+      },
+      "transparency": {
+        "title": "Transparence :",
+        "text": "Pas de frais cachés, pas de surprises. Tous les coûts, taux et conditions sont clairement affichés avant que vous ne vous engagiez."
+      },
+      "security": {
+        "title": "Sécurité :",
+        "text": "Nous utilisons un chiffrement de niveau bancaire et sommes entièrement conformes au RGPD et aux réglementations bancaires françaises."
+      },
+      "flexibility": {
+        "title": "Flexibilité :",
+        "text": "Options de remboursement anticipé sans pénalités, durées flexibles de 12 à 84 mois et montants de 1 000€ à 75 000€."
+      },
       "loanTypesTitle": "Types de prêts que nous proposons",
-      "loanTypesIntro": "Chez Privat Equity, nous comprenons que chaque besoin financier est unique. C'est pourquoi nous proposons une gamme complète de produits de prêt conçus pour correspondre à vos circonstances spécifiques :",
-      "personalLoan": { "title": "Prêts personnels", "text": "Parfait pour les mariages, les vacances, les frais médicaux ou tout projet personnel. Empruntez de 1 000€ à 75 000€ avec des taux à partir de 2,9% TAEG.", "example": "Exemple : 10 000€ sur 48 mois = 221€/mois (TAEG 4,9%, coût total : 10 608€)" },
-      "autoLoan": { "title": "Crédits auto", "text": "Financez des véhicules neufs ou d'occasion avec des taux compétitifs et des conditions flexibles. Taux à partir de 3,2% TAEG.", "example": "Exemple : 20 000€ sur 60 mois = 362€/mois (TAEG 3,9%, coût total : 21 720€)" },
-      "homeLoan": { "title": "Crédits travaux", "text": "Transformez votre espace de vie avec des prêts conçus pour les rénovations, extensions ou améliorations énergétiques.", "example": "Exemple : 15 000€ sur 72 mois = 238€/mois (TAEG 4,5%, coût total : 17 136€)" },
-      "consolidation": { "title": "Rachat de crédit", "text": "Simplifiez plusieurs dettes en un seul paiement mensuel facile, souvent à un taux global inférieur.", "example": "Exemple : Regrouper 25 000€ de dettes sur 84 mois = 351€/mois (TAEG 5,2%)" },
+      "loanTypesIntro": "Chez Fundia Invest, nous comprenons que chaque besoin financier est unique. C'est pourquoi nous proposons une gamme complète de produits de prêt conçus pour correspondre à vos circonstances spécifiques :",
+      "personalLoan": {
+        "title": "Prêts personnels",
+        "text": "Parfait pour les mariages, les vacances, les frais médicaux ou tout projet personnel. Empruntez de 1 000€ à 75 000€ avec des taux à partir de 2,9% TAEG.",
+        "example": "Exemple : 10 000€ sur 48 mois = 221€/mois (TAEG 4,9%, coût total : 10 608€)"
+      },
+      "autoLoan": {
+        "title": "Crédits auto",
+        "text": "Financez des véhicules neufs ou d'occasion avec des taux compétitifs et des conditions flexibles. Taux à partir de 3,2% TAEG.",
+        "example": "Exemple : 20 000€ sur 60 mois = 362€/mois (TAEG 3,9%, coût total : 21 720€)"
+      },
+      "homeLoan": {
+        "title": "Crédits travaux",
+        "text": "Transformez votre espace de vie avec des prêts conçus pour les rénovations, extensions ou améliorations énergétiques.",
+        "example": "Exemple : 15 000€ sur 72 mois = 238€/mois (TAEG 4,5%, coût total : 17 136€)"
+      },
+      "consolidation": {
+        "title": "Rachat de crédit",
+        "text": "Simplifiez plusieurs dettes en un seul paiement mensuel facile, souvent à un taux global inférieur.",
+        "example": "Exemple : Regrouper 25 000€ de dettes sur 84 mois = 351€/mois (TAEG 5,2%)"
+      },
       "processTitle": "Comment fonctionne notre processus",
       "process": {
-        "step1": { "title": "Simulez votre prêt :", "text": "Utilisez notre calculatrice interactive pour voir les paiements mensuels estimés et les coûts totaux." },
-        "step2": { "title": "Soumettez votre demande :", "text": "Complétez notre simple formulaire en ligne en quelques minutes." },
-        "step3": { "title": "Obtenez une décision instantanée :", "text": "Notre système analyse votre demande et fournit une approbation préliminaire immédiatement." },
-        "step4": { "title": "Téléchargez les documents :", "text": "Soumettez les documents requis en toute sécurité via notre plateforme." },
-        "step5": { "title": "Recevez vos fonds :", "text": "Une fois approuvé, les fonds sont transférés directement sur votre compte bancaire dans les 48 heures." }
+        "step1": {
+          "title": "Simulez votre prêt :",
+          "text": "Utilisez notre calculatrice interactive pour voir les paiements mensuels estimés et les coûts totaux."
+        },
+        "step2": {
+          "title": "Soumettez votre demande :",
+          "text": "Complétez notre simple formulaire en ligne en quelques minutes."
+        },
+        "step3": {
+          "title": "Obtenez une décision instantanée :",
+          "text": "Notre système analyse votre demande et fournit une approbation préliminaire immédiatement."
+        },
+        "step4": {
+          "title": "Téléchargez les documents :",
+          "text": "Soumettez les documents requis en toute sécurité via notre plateforme."
+        },
+        "step5": {
+          "title": "Recevez vos fonds :",
+          "text": "Une fois approuvé, les fonds sont transférés directement sur votre compte bancaire dans les 48 heures."
+        }
       },
       "responsibleTitle": "Notre engagement envers un prêt responsable",
       "responsibleText": "Nous prenons le prêt responsable au sérieux. Avant d'approuver un prêt, nous évaluons soigneusement votre capacité de remboursement en fonction de vos revenus, dépenses et dettes existantes. Nous n'approuverons jamais un prêt qui pourrait vous mettre en difficulté financière. Nos conseillers sont toujours disponibles pour discuter d'alternatives si un prêt n'est pas la bonne solution pour votre situation."
     }
   },
   "about": {
-    "title": "À Propos de Privat Equity",
+    "title": "À Propos de Fundia Invest",
     "subtitle": "Votre partenaire de confiance pour des solutions de crédit transparentes et personnalisées",
-    "intro1": "Privat Equity est une plateforme de prêt en ligne innovante qui révolutionne l'accès au crédit en France. Fondée avec la mission de rendre le financement personnel plus transparent, accessible et équitable, nous connectons des milliers d'emprunteurs avec les meilleures offres de crédit du marché.",
+    "intro1": "Fundia Invest est une plateforme de prêt en ligne innovante qui révolutionne l'accès au crédit en France. Fondée avec la mission de rendre le financement personnel plus transparent, accessible et équitable, nous connectons des milliers d'emprunteurs avec les meilleures offres de crédit du marché.",
     "intro2": "Notre plateforme utilise une technologie de pointe pour analyser votre profil financier et vous proposer des offres personnalisées en quelques minutes. Nous travaillons avec un réseau de partenaires financiers soigneusement sélectionnés pour garantir que vous obtenez toujours les meilleures conditions possibles.",
     "mission": {
       "title": "Notre Mission",
@@ -497,12 +540,27 @@
       "description": "Avec plus de 15 ans d'expérience combinée dans le secteur financier, notre équipe comprend les défis auxquels font face les emprunteurs. Nous utilisons cette expertise pour créer une expérience de prêt qui est simple, rapide et adaptée à vos besoins."
     },
     "whyChoose": {
-      "title": "Pourquoi choisir Privat Equity ?",
-      "online": { "title": "Processus 100% en ligne :", "description": "Demande rapide et décision instantanée depuis chez vous" },
-      "comparison": { "title": "Comparaison intelligente :", "description": "Nous analysons des dizaines d'offres pour trouver la meilleure pour vous" },
-      "noCommitment": { "title": "Sans engagement :", "description": "Vérifiez votre éligibilité sans impact sur votre score de crédit" },
-      "transparency": { "title": "Transparence totale :", "description": "Pas de frais cachés, toutes les conditions clairement affichées" },
-      "support": { "title": "Support dédié :", "description": "Une équipe d'experts à votre écoute du lundi au samedi" }
+      "title": "Pourquoi choisir Fundia Invest ?",
+      "online": {
+        "title": "Processus 100% en ligne :",
+        "description": "Demande rapide et décision instantanée depuis chez vous"
+      },
+      "comparison": {
+        "title": "Comparaison intelligente :",
+        "description": "Nous analysons des dizaines d'offres pour trouver la meilleure pour vous"
+      },
+      "noCommitment": {
+        "title": "Sans engagement :",
+        "description": "Vérifiez votre éligibilité sans impact sur votre score de crédit"
+      },
+      "transparency": {
+        "title": "Transparence totale :",
+        "description": "Pas de frais cachés, toutes les conditions clairement affichées"
+      },
+      "support": {
+        "title": "Support dédié :",
+        "description": "Une équipe d'experts à votre écoute du lundi au samedi"
+      }
     }
   },
   "contact": {
@@ -954,7 +1012,7 @@
       "guide": {
         "whatIsTitle": "Qu'est-ce qu'un prêt personnel ?",
         "whatIsP1": "Un prêt personnel est un prêt non garanti qui vous fournit une somme d'argent forfaitaire pour usage personnel. Contrairement aux hypothèques ou crédits auto liés à des achats spécifiques, les prêts personnels offrent une flexibilité maximale. Vous pouvez utiliser les fonds pour pratiquement toute fin légale - du regroupement de dettes au financement d'un mariage, en passant par les frais médicaux ou les rénovations domiciliaires.",
-        "whatIsP2": "Chez Privat Equity, nos prêts personnels vont de 1 000€ à 75 000€ avec des durées de remboursement de 12 à 84 mois. Nous proposons des taux d'intérêt fixes compétitifs à partir de 2,9% TAEG, selon votre solvabilité et les conditions du prêt. Parce que les prêts personnels sont non garantis, vous n'avez pas besoin de fournir de garantie, ce qui les rend accessibles et simples.",
+        "whatIsP2": "Chez Fundia Invest, nos prêts personnels vont de 1 000€ à 75 000€ avec des durées de remboursement de 12 à 84 mois. Nous proposons des taux d'intérêt fixes compétitifs à partir de 2,9% TAEG, selon votre solvabilité et les conditions du prêt. Parce que les prêts personnels sont non garantis, vous n'avez pas besoin de fournir de garantie, ce qui les rend accessibles et simples.",
         "usesTitle": "Utilisations courantes des prêts personnels",
         "uses": {
           "consolidation": "Regroupement de dettes : Combinez plusieurs dettes à taux d'intérêt élevés en un seul paiement mensuel gérable",
@@ -967,7 +1025,7 @@
           "emergency": "Dépenses d'urgence : Gérez les coûts imprévus comme les réparations automobiles ou les réparations urgentes de la maison"
         },
         "qualifyTitle": "Comment se qualifier",
-        "qualifyIntro": "Bien que les critères d'éligibilité varient selon le prêteur, chez Privat Equity nous exigeons généralement que les demandeurs :",
+        "qualifyIntro": "Bien que les critères d'éligibilité varient selon le prêteur, chez Fundia Invest nous exigeons généralement que les demandeurs :",
         "qualifyItems": {
           "age": "Aient au moins 18 ans",
           "residency": "Soient résidents français ou aient un permis de résidence valide",
@@ -1043,8 +1101,8 @@
       "guideTitle": "Guide Complet du Crédit Auto",
       "guide": {
         "whatIsTitle": "Qu'est-ce qu'un Crédit Auto ?",
-        "whatIsP1": "Un crédit auto est un prêt garanti spécialement conçu pour vous aider à acheter un véhicule. La voiture elle-même sert de garantie, ce qui entraîne généralement des taux d'intérêt plus bas par rapport aux prêts personnels non garantis. Chez Privat Equity, nous offrons un financement automobile pour les véhicules neufs et d'occasion, avec des montants de prêt de 5 000 € à 50 000 € et des durées de remboursement flexibles de 12 à 72 mois.",
-        "whatIsP2": "Nos taux compétitifs commencent à partir de 3,2% TAEG pour les emprunteurs qualifiés, et le processus de demande est entièrement en ligne. Contrairement au financement traditionnel par concessionnaire, obtenir une pré-approbation avec Privat Equity vous donne un pouvoir de négociation chez le concessionnaire, car vous saurez exactement combien vous pouvez dépenser avant de commencer vos recherches.",
+        "whatIsP1": "Un crédit auto est un prêt garanti spécialement conçu pour vous aider à acheter un véhicule. La voiture elle-même sert de garantie, ce qui entraîne généralement des taux d'intérêt plus bas par rapport aux prêts personnels non garantis. Chez Fundia Invest, nous offrons un financement automobile pour les véhicules neufs et d'occasion, avec des montants de prêt de 5 000 € à 50 000 € et des durées de remboursement flexibles de 12 à 72 mois.",
+        "whatIsP2": "Nos taux compétitifs commencent à partir de 3,2% TAEG pour les emprunteurs qualifiés, et le processus de demande est entièrement en ligne. Contrairement au financement traditionnel par concessionnaire, obtenir une pré-approbation avec Fundia Invest vous donne un pouvoir de négociation chez le concessionnaire, car vous saurez exactement combien vous pouvez dépenser avant de commencer vos recherches.",
         "benefitsTitle": "Avantages des Crédits Auto",
         "benefitsIntro": "Financer l'achat de votre véhicule offre plusieurs avantages par rapport au paiement en espèces :",
         "benefitsList": {
@@ -1059,7 +1117,7 @@
       "faqTitle": "FAQ Crédit Auto",
       "faqs": {
         "q1": "Quelle est la différence entre votre financement et celui d'un concessionnaire ?",
-        "a1": "Obtenir une pré-approbation avec Privat Equity vous donne un taux et un montant garantis avant vos recherches, vous plaçant dans une position de négociation plus forte. Le financement par concessionnaire est déterminé après avoir choisi une voiture, et les taux peuvent être moins compétitifs.",
+        "a1": "Obtenir une pré-approbation avec Fundia Invest vous donne un taux et un montant garantis avant vos recherches, vous plaçant dans une position de négociation plus forte. Le financement par concessionnaire est déterminé après avoir choisi une voiture, et les taux peuvent être moins compétitifs.",
         "q2": "Puis-je financer une voiture d'occasion auprès d'un vendeur particulier ?",
         "a2": "Oui ! Nous finançons les véhicules d'occasion provenant de concessionnaires et de vendeurs particuliers. Pour les ventes entre particuliers, nous aurons besoin du numéro VIN du véhicule, du kilométrage actuel et des détails sur l'état pour déterminer la valeur et finaliser votre prêt.",
         "q3": "Quel âge maximum peut avoir une voiture d'occasion pour être financée ?",
@@ -1067,7 +1125,7 @@
         "q4": "Ai-je besoin d'un acompte ?",
         "a4": "Aucun acompte n'est requis, bien qu'en verser un (généralement 10-20%) puisse réduire vos mensualités, diminuer les coûts d'intérêt et potentiellement vous qualifier pour de meilleurs taux.",
         "q5": "Quelle assurance dois-je avoir pour un véhicule financé ?",
-        "a5": "Une assurance tous risques et collision est requise pour les véhicules financés afin de vous protéger ainsi que le prêteur. Vous devrez nommer Privat Equity comme créancier hypothécaire sur votre police d'assurance.",
+        "a5": "Une assurance tous risques et collision est requise pour les véhicules financés afin de vous protéger ainsi que le prêteur. Vous devrez nommer Fundia Invest comme créancier hypothécaire sur votre police d'assurance.",
         "q6": "Puis-je reprendre mon véhicule actuel ?",
         "a6": "Absolument ! Si vous possédez votre véhicule actuel en totalité, la valeur de reprise peut servir d'acompte. Si vous devez encore de l'argent dessus, nous travaillerons avec vous pour intégrer le solde restant.",
         "q7": "Puis-je refinancer mon prêt auto plus tard ?",
@@ -1130,7 +1188,7 @@
       "guide": {
         "introTitle": "Qu'est-ce qu'un crédit professionnel ?",
         "introP1": "Le crédit professionnel est un financement spécialement conçu pour répondre aux besoins des entreprises, des artisans, des commerçants et des professions libérales. Contrairement aux prêts personnels, il est destiné à financer des projets liés à votre activité professionnelle : acquisition d'équipements, développement commercial, fonds de roulement ou expansion.",
-        "introP2": "Chez Privat Equity, nous proposons des crédits professionnels de 5 000 € à 75 000 € avec des durées de remboursement de 12 à 84 mois. Nos taux compétitifs à partir de 6,5% TAEG sont adaptés aux réalités économiques des PME et des entrepreneurs.",
+        "introP2": "Chez Fundia Invest, nous proposons des crédits professionnels de 5 000 € à 75 000 € avec des durées de remboursement de 12 à 84 mois. Nos taux compétitifs à partir de 6,5% TAEG sont adaptés aux réalités économiques des PME et des entrepreneurs.",
         "typesTitle": "Types de crédits professionnels",
         "types": {
           "shortTerm": "Crédit court terme : Financement de 3 à 12 mois pour les besoins de trésorerie immédiat, idéal pour gérer les décalages de trésorerie ou financer un stock saisonnier.",
@@ -1139,7 +1197,7 @@
           "creditLine": "Ligne de crédit : Facilité de caisse renouvelable pour gérer les fluctuations de trésorerie au quotidien."
         },
         "eligibilityTitle": "Critères d'éligibilité",
-        "eligibilityIntro": "Pour obtenir un crédit professionnel chez Privat Equity, vous devez généralement :",
+        "eligibilityIntro": "Pour obtenir un crédit professionnel chez Fundia Invest, vous devez généralement :",
         "eligibility": {
           "registered": "Avoir une entreprise enregistrée (auto-entrepreneur, SARL, SAS, etc.)",
           "activity": "Justifier d'une activité économique d'au moins 6 à 12 mois",
@@ -1173,7 +1231,7 @@
         "q2": "Puis-je obtenir un crédit professionnel en tant qu'auto-entrepreneur ?",
         "a2": "Oui, les auto-entrepreneurs peuvent tout à fait demander un crédit professionnel. Vous devrez fournir vos déclarations de chiffre d'affaires, vos relevés bancaires et justifier d'une activité d'au moins 6 à 12 mois. Les montants accordés dépendent de votre niveau d'activité.",
         "q3": "Combien de temps faut-il pour obtenir une réponse ?",
-        "a3": "Chez Privat Equity, vous recevez une réponse de principe sous 24 à 48 heures. Le déblocage des fonds intervient généralement sous 5 à 10 jours ouvrés après validation complète du dossier et signature des documents.",
+        "a3": "Chez Fundia Invest, vous recevez une réponse de principe sous 24 à 48 heures. Le déblocage des fonds intervient généralement sous 5 à 10 jours ouvrés après validation complète du dossier et signature des documents.",
         "q4": "Ai-je besoin d'une garantie pour mon crédit professionnel ?",
         "a4": "Pour les petits montants (jusqu'à 25 000 €), aucune garantie n'est généralement requise. Pour les montants supérieurs, une caution personnelle du dirigeant ou une garantie sur les actifs de l'entreprise peut être demandée selon le profil de risque.",
         "q5": "Puis-je rembourser mon crédit professionnel par anticipation ?",
@@ -1246,31 +1304,31 @@
       "projects": {
         "kitchen": {
           "title": "Rénovation de Cuisine",
-          "description": "Nouveaux meubles, plans de travail, électroménager et sol"
+          "description": "Nouveaux placards, comptoirs, appareils électroménagers et revêtements de sol"
         },
         "bathroom": {
           "title": "Rénovation de Salle de Bain",
-          "description": "Nouveaux équipements, carrelage, meuble-vasque et douche"
+          "description": "Nouveaux sanitaires, carrelage, meuble vasque et douche"
         },
         "extension": {
-          "title": "Extension de Maison",
-          "description": "Chambre supplémentaire ou espace de vie agrandi"
+          "title": "Agrandissement de Maison",
+          "description": "Ajout d'une chambre supplémentaire ou d'un espace de vie étendu"
         },
         "energy": {
           "title": "Efficacité Énergétique",
-          "description": "Panneaux solaires, isolation, nouvelles fenêtres"
+          "description": "Panneaux solaires, isolation, nouvelles fenêtres ou pompes à chaleur"
         }
       },
       "loanAmount": "Montant du Prêt",
       "monthlyPayment": "Mensualité",
       "durationAt": "Durée {duration} à ~{rate}% TAEG",
-      "projectsDisclaimer": "*Les exemples sont illustratifs. Votre taux et vos paiements réels dépendent de votre profil de crédit et des conditions choisies.",
+      "projectsDisclaimer": "*Les exemples sont illustratifs. Les taux réels dépendent de votre profil de crédit.",
       "guideTitle": "Guide Complet du Crédit Travaux",
       "faqTitle": "FAQ Crédit Travaux"
     },
     "projectFinancing": {
-      "title": "Demande de financement de projet",
-      "subtitle": "Complétez ce formulaire pour soumettre votre projet de financement. Notre équipe analysera votre demande sous 48h.",
+      "title": "Demande de Financement de Projet",
+      "subtitle": "Remplissez ce formulaire pour soumettre votre projet de financement. Notre équipe analyse votre demande sous 48h.",
       "steps": {
         "project": "Votre Projet",
         "funding": "Financement",
@@ -1278,48 +1336,48 @@
         "documents": "Documents"
       },
       "step1": {
-        "title": "Informations sur votre projet",
+        "title": "Informations sur le projet",
         "projectType": "Type de projet",
         "projectTypePlaceholder": "Sélectionnez le type de projet",
         "projectTypes": {
           "startup": "Création d'entreprise (Startup)",
-          "development": "Développement d'activité",
-          "acquisition": "Acquisition d'entreprise",
-          "realEstate": "Projet immobilier commercial",
+          "development": "Développement commercial",
+          "acquisition": "Reprise d'entreprise",
+          "realEstate": "Projet immobilier professionnel",
           "innovation": "Innovation technologique",
           "expansion": "Expansion internationale",
           "other": "Autre"
         },
         "projectName": "Nom du projet",
-        "projectNamePlaceholder": "Ex: Plateforme de e-commerce innovante",
+        "projectNamePlaceholder": "Ex: Plateforme E-commerce Innovante",
         "projectDescription": "Description détaillée du projet",
-        "projectDescriptionPlaceholder": "Décrivez votre projet, ses objectifs, son innovation, et sa proposition de valeur...",
+        "projectDescriptionPlaceholder": "Décrivez votre projet, ses objectifs, son innovation et sa proposition de valeur...",
         "minChars": "Minimum 50 caractères",
         "projectSector": "Secteur d'activité",
-        "projectSectorPlaceholder": "Sélectionnez votre secteur",
+        "projectSectorPlaceholder": "Sélectionnez le secteur",
         "sectors": {
-          "tech": "Technologies & Digital",
+          "tech": "Technologie & Numérique",
           "retail": "Commerce & Distribution",
           "services": "Services aux entreprises",
-          "industry": "Industrie & Manufacturing",
-          "health": "Santé & Biotechnologie",
+          "industry": "Industrie & Fabrication",
+          "health": "Santé & Biotechnologies",
           "food": "Agroalimentaire & Restauration",
-          "realEstate": "Immobilier",
+          "realEstate": "Immobilier & BTP",
           "energy": "Énergie & Environnement",
           "education": "Éducation & Formation",
-          "tourism": "Tourisme & Hôtellerie",
+          "tourism": "Tourisme & Loisirs",
           "other": "Autre"
         },
         "projectLocation": "Localisation du projet",
-        "projectLocationPlaceholder": "Ville, région ou pays"
+        "projectLocationPlaceholder": "Ville, Région ou Pays"
       },
       "step2": {
-        "title": "Détails financiers du projet",
+        "title": "Détails Financiers du Projet",
         "fundingAmount": "Montant du financement recherché",
         "fundingPurpose": "Utilisation des fonds",
-        "fundingPurposePlaceholder": "Détaillez comment vous utiliserez les fonds (équipements, recrutement, marketing, R&D...)",
+        "fundingPurposePlaceholder": "Détaillez l'utilisation des fonds...",
         "ownContribution": "Apport personnel / Fonds propres",
-        "expectedRevenue": "Chiffre d'affaires prévisionnel (première année)",
+        "expectedRevenue": "Chiffre d'affaires prévisionnel (Année 1)",
         "projectDuration": "Durée estimée du projet",
         "durationOptions": {
           "short": "Moins de 6 mois",
@@ -1327,17 +1385,17 @@
           "long": "1 à 2 ans",
           "veryLong": "Plus de 2 ans"
         },
-        "breakEvenDate": "Date prévisionnelle de rentabilité",
+        "breakEvenDate": "Date prévue de rentabilité",
         "inEuros": "En euros (€)"
       },
       "step3": {
-        "title": "Informations sur l'entreprise",
+        "title": "Informations sur l'Entreprise",
         "companyName": "Nom de l'entreprise",
         "companyStatus": "Statut juridique",
         "statusOptions": {
           "ae": "Auto-entrepreneur",
-          "sarl": "SARL",
-          "sas": "SAS/SASU",
+          "sarl": "SARL / EURL",
+          "sas": "SAS / SASU",
           "sa": "SA",
           "ei": "Entreprise Individuelle",
           "creation": "En cours de création"
@@ -1346,7 +1404,7 @@
         "creationDate": "Date de création",
         "employeeCount": "Nombre d'employés",
         "employeeOptions": {
-          "solo": "Juste moi",
+          "solo": "Moi uniquement",
           "small": "1-5 employés",
           "medium": "6-20 employés",
           "large": "21-50 employés",
@@ -1354,285 +1412,72 @@
         },
         "annualRevenue": "Chiffre d'affaires annuel actuel",
         "revenueOptions": {
-          "preRevenue": "Pré-revenu / Startup",
-          "small": "Moins de 50 000 €",
-          "medium": "50 000 € - 200 000 €",
-          "large": "200 000 € - 500 000 €",
-          "veryLarge": "500 000 € - 1 000 000 €",
-          "enterprise": "Plus de 1 000 000 €"
+          "preRevenue": "Pré-revenu / Démarrage",
+          "small": "Moins de 50 000€",
+          "medium": "50 000€ - 200 000€",
+          "large": "200 000€ - 500 000€",
+          "veryLarge": "500 000€ - 1 000 000€",
+          "enterprise": "Plus de 1 000 000€"
         },
-        "founderInfo": "Informations du fondateur / représentant",
+        "founderInfo": "Informations du fondateur / porteur de projet",
         "firstName": "Prénom",
         "lastName": "Nom",
         "email": "Email professionnel",
         "phone": "Téléphone"
       },
       "step4": {
-        "title": "Documents et informations complémentaires",
-        "documentsDescription": "Confirmez que vous disposez des documents suivants. Ils pourront être demandés lors de l'étude de votre dossier.",
+        "title": "Documents et Informations Complémentaires",
+        "documentsDescription": "Veuillez confirmer que vous disposez des documents suivants. Ils pourront être demandés ultérieurement.",
         "businessPlan": "Business Plan",
-        "businessPlanDesc": "Un document détaillant votre projet, votre marché, votre stratégie",
+        "businessPlanDesc": "Document détaillant le projet, le marché et la stratégie",
         "financialProjections": "Prévisions Financières",
         "financialProjectionsDesc": "Compte de résultat prévisionnel sur 3 ans minimum",
         "marketStudy": "Étude de Marché",
         "marketStudyDesc": "Analyse de votre marché cible et de la concurrence",
         "available": "Disponible",
-        "inProgress": "En cours de préparation",
+        "inProgress": "En cours de réalisation",
         "notAvailable": "Non disponible",
         "additionalInfo": "Informations complémentaires (optionnel)",
-        "additionalInfoPlaceholder": "Toute information supplémentaire que vous souhaitez partager..."
+        "additionalInfoPlaceholder": "Toute autre information pertinente pour votre dossier...",
+        "dropFilesHere": "Glissez vos fichiers ici ou cliquez pour télécharger"
       },
       "navigation": {
         "previous": "Précédent",
         "next": "Suivant",
-        "submit": "Soumettre la demande"
+        "submit": "Soumettre le projet"
       },
       "validation": {
-        "projectTypeRequired": "Type de projet requis",
+        "projectTypeRequired": "Le type de projet est requis",
         "projectNameMin": "Le nom doit contenir au moins 3 caractères",
-        "projectDescriptionMin": "Description d'au moins 50 caractères requise",
-        "projectSectorRequired": "Secteur d'activité requis",
-        "projectLocationRequired": "Localisation requise",
-        "fundingAmountRequired": "Montant requis",
-        "fundingPurposeRequired": "Utilisation des fonds requise",
-        "expectedRevenueRequired": "Chiffre d'affaires prévisionnel requis",
-        "projectDurationRequired": "Durée du projet requise",
-        "breakEvenDateRequired": "Date de rentabilité requise",
-        "ownContributionRequired": "Apport personnel requis",
-        "companyNameRequired": "Nom de l'entreprise requis",
-        "companyStatusRequired": "Statut juridique requis",
-        "siretInvalid": "SIRET doit contenir 14 chiffres",
-        "creationDateRequired": "Date de création requise",
-        "employeeCountRequired": "Nombre d'employés requis",
-        "annualRevenueRequired": "Chiffre d'affaires requis",
-        "firstNameRequired": "Prénom requis",
-        "lastNameRequired": "Nom requis",
-        "emailInvalid": "Email invalide",
-        "phoneInvalid": "Numéro de téléphone invalide",
-        "businessPlanRequired": "Vous devez confirmer avoir un business plan",
-        "financialProjectionsRequired": "Vous devez confirmer avoir des prévisions financières",
-        "marketStudyRequired": "Vous devez confirmer avoir une étude de marché",
+        "projectDescriptionMin": "La description doit contenir au moins 50 caractères",
+        "projectSectorRequired": "Le secteur est requis",
+        "projectLocationRequired": "La localisation est requise",
+        "fundingAmountRequired": "Le montant est requis",
+        "fundingPurposeRequired": "L'utilisation des fonds est requise",
+        "expectedRevenueRequired": "Le CA prévisionnel est requis",
+        "projectDurationRequired": "La durée est requise",
+        "breakEvenDateRequired": "La date de rentabilité est requise",
+        "ownContributionRequired": "L'apport personnel est requis",
+        "companyNameRequired": "Le nom de l'entreprise est requis",
+        "companyStatusRequired": "Le statut juridique est requis",
+        "siretInvalid": "Le numéro SIRET doit contenir 14 chiffres",
+        "creationDateRequired": "La date de création est requise",
+        "employeeCountRequired": "Le nombre d'employés est requis",
+        "annualRevenueRequired": "Le CA annuel est requis",
+        "firstNameRequired": "Le prénom est requis",
+        "lastNameRequired": "Le nom est requis",
+        "emailInvalid": "L'email est invalide",
+        "phoneInvalid": "Le numéro de téléphone est invalide",
+        "businessPlanRequired": "Vous devez indiquer le statut du Business Plan",
+        "financialProjectionsRequired": "Vous devez indiquer le statut des prévisions financières",
+        "marketStudyRequired": "Vous devez indiquer le statut de l'étude de marché",
         "validationError": "Erreur de validation",
-        "correctErrors": "Veuillez corriger les erreurs avant de continuer."
+        "correctErrors": "Veuillez corriger les erreurs dans le formulaire."
       },
       "messages": {
-        "success": "Demande envoyée !",
-        "successDesc": "Votre demande de financement a été transmise avec succès."
+        "success": "Projet soumis !",
+        "successDesc": "Votre demande de financement a été transmise avec succès à notre équipe."
       }
-    }
-  },
-  "admin": {
-    "nav": {
-      "dashboard": "Tableau de bord",
-      "requests": "Demandes",
-      "documents": "Contrats",
-      "clientDocuments": "Documents clients",
-      "team": "Équipe",
-      "settings": "Paramètres",
-      "logout": "Déconnexion"
-    },
-    "stats": {
-      "total": "Total",
-      "pending": "En attente",
-      "in_progress": "En cours",
-      "approved": "Approuvées",
-      "refused": "Refusées"
-    },
-    "status": {
-      "pending": "En attente",
-      "in_progress": "En cours",
-      "approved": "Approuvée",
-      "refused": "Refusée"
-    },
-    "dashboard": {
-      "title": "Tableau de bord",
-      "subtitle": "Vue d'ensemble de toutes les demandes",
-      "recentRequests": "Demandes récentes",
-      "viewAll": "Voir tout",
-      "noRequests": "Aucune demande pour le moment"
-    },
-    "requests": {
-      "title": "Demandes",
-      "subtitle": "Gérez toutes les demandes de crédit",
-      "searchPlaceholder": "Rechercher par nom ou email...",
-      "filterStatus": "Filtrer par statut",
-      "allStatuses": "Tous les statuts",
-      "noResults": "Aucune demande trouvée",
-      "view": "Voir",
-      "columns": {
-        "client": "Client",
-        "type": "Type",
-        "amount": "Montant",
-        "duration": "Durée",
-        "status": "Statut",
-        "date": "Date",
-        "actions": "Actions"
-      }
-    },
-    "request": {
-      "id": "Réf.",
-      "clientInfo": "Informations client",
-      "requestDetails": "Détails de la demande",
-      "name": "Nom",
-      "email": "Email",
-      "phone": "Téléphone",
-      "type": "Type de prêt",
-      "amount": "Montant",
-      "duration": "Durée",
-      "date": "Date de demande",
-      "historyTab": "Historique",
-      "notesTab": "Notes internes"
-    },
-    "history": {
-      "empty": "Aucun historique disponible"
-    },
-    "notes": {
-      "placeholder": "Ajouter une note interne...",
-      "add": "Ajouter",
-      "empty": "Aucune note pour cette demande",
-      "anonymous": "Anonyme"
-    },
-    "quickActions": {
-      "title": "Actions rapides",
-      "changeStatus": "Changer le statut",
-      "sendEmail": "Envoyer un email",
-      "downloadPdf": "Télécharger PDF",
-      "requestDocuments": "Demande de justificatif",
-      "generateContract": "Générer un contrat"
-    },
-    "statusModal": {
-      "title": "Changer le statut",
-      "description": "Sélectionnez le nouveau statut et ajoutez un commentaire optionnel.",
-      "newStatus": "Nouveau statut",
-      "comment": "Commentaire (optionnel)",
-      "commentPlaceholder": "Ajouter un commentaire sur ce changement...",
-      "sendEmail": "Envoyer un email de notification au client",
-      "confirm": "Confirmer"
-    },
-    "documents": {
-      "title": "Contrats et Documents",
-      "subtitle": "Gérez les contrats signés par les clients",
-      "loadError": "Erreur lors du chargement des contrats",
-      "downloadError": "Erreur lors du téléchargement",
-      "viewError": "Erreur lors de l'ouverture du document",
-      "actionError": "Erreur lors de l'action",
-      "verifySuccess": "Contrat validé avec succès",
-      "rejectSuccess": "Contrat refusé",
-      "pendingSignature": "En attente de signature",
-      "awaitingValidation": "À valider",
-      "verified": "Validés",
-      "filters": "Filtres",
-      "searchPlaceholder": "Rechercher par nom ou email...",
-      "filterStatus": "Filtrer par statut",
-      "allStatuses": "Tous les statuts",
-      "statusPending": "En attente",
-      "statusSigned": "Signé",
-      "statusVerified": "Vérifié",
-      "statusRejected": "Refusé",
-      "statuspending_signature": "En attente",
-      "statussigned": "Signé",
-      "statusverified": "Vérifié",
-      "statusrejected": "Refusé",
-      "contractsToValidate": "Contrats à valider",
-      "allContracts": "Tous les contrats",
-      "noContracts": "Aucun contrat trouvé",
-      "client": "Client",
-      "loanType": "Type de prêt",
-      "amount": "Montant",
-      "status": "Statut",
-      "date": "Date",
-      "signedDate": "Date de signature",
-      "actions": "Actions",
-      "validate": "Valider",
-      "reject": "Refuser",
-      "confirmValidation": "Confirmer la validation",
-      "confirmValidationDesc": "Confirmez-vous que le contrat signé est conforme et valide ?",
-      "confirmRejection": "Refuser le contrat",
-      "confirmRejectionDesc": "Veuillez indiquer la raison du refus du contrat.",
-      "rejectionReason": "Raison du refus",
-      "rejectionReasonPlaceholder": "Expliquez pourquoi le contrat est refusé..."
-    },
-    "settings": {
-      "title": "Paramètres",
-      "subtitle": "Configuration de l'espace admin",
-      "comingSoon": "Fonctionnalité à venir",
-      "comingSoonDesc": "Les paramètres seront bientôt disponibles."
-    },
-    "team": {
-      "title": "Gestion de l'équipe",
-      "subtitle": "Gérez les administrateurs et gestionnaires",
-      "addMember": "Ajouter un membre",
-      "addMemberTitle": "Ajouter un collaborateur",
-      "addMemberDesc": "Entrez l'email d'un utilisateur existant pour lui attribuer un rôle.",
-      "email": "Email",
-      "emailPlaceholder": "email@exemple.com",
-      "role": "Rôle",
-      "roleManager": "Gestionnaire",
-      "roleAdmin": "Administrateur",
-      "addButton": "Ajouter",
-      "members": "Membres de l'équipe",
-      "membersCount": "{{count}} membre(s)",
-      "noMembers": "Aucun membre dans l'équipe",
-      "noName": "Sans nom",
-      "columns": {
-        "member": "Membre",
-        "role": "Rôle",
-        "since": "Depuis",
-        "actions": "Actions"
-      },
-      "loadError": "Erreur lors du chargement de l'équipe",
-      "userNotFound": "Utilisateur non trouvé",
-      "alreadyMember": "Cet utilisateur est déjà membre de l'équipe",
-      "memberAdded": "Membre ajouté avec succès",
-      "addError": "Erreur lors de l'ajout du membre",
-      "memberRemoved": "Membre retiré avec succès",
-      "removeError": "Erreur lors de la suppression du membre",
-      "roleUpdated": "Rôle mis à jour",
-      "updateError": "Erreur lors de la mise à jour",
-      "cantRemoveSelf": "Vous ne pouvez pas vous retirer vous-même",
-      "cantChangeSelf": "Vous ne pouvez pas modifier votre propre rôle",
-      "accessDenied": "Accès refusé",
-      "accessDeniedDesc": "Seuls les administrateurs peuvent gérer l'équipe."
-    },
-    "messages": {
-      "loadError": "Erreur lors du chargement des données",
-      "statusUpdated": "Statut mis à jour avec succès",
-      "updateError": "Erreur lors de la mise à jour",
-      "noteAdded": "Note ajoutée",
-      "noteDeleted": "Note supprimée",
-      "noteError": "Erreur lors de l'opération",
-      "emailFeature": "Fonctionnalité email à venir",
-      "requestDocumentsFeature": "Fonctionnalité demande de justificatif à venir",
-      "generateContractFeature": "Fonctionnalité génération de contrat à venir",
-      "documentRequestSent": "Demande de justificatifs envoyée avec succès",
-      "documentRequestError": "Erreur lors de l'envoi de la demande",
-      "contractSent": "Contrat envoyé avec succès au client",
-      "contractError": "Erreur lors de l'envoi du contrat"
-    },
-    "documentRequest": {
-      "title": "Demande de justificatifs",
-      "description": "Sélectionnez les documents à demander à {name}",
-      "selectDocuments": "Documents à demander",
-      "customMessage": "Message personnalisé (optionnel)",
-      "customMessagePlaceholder": "Ajoutez un message personnalisé pour le client...",
-      "send": "Envoyer la demande",
-      "documents": {
-        "idCard": "Pièce d'identité",
-        "proofOfIncome": "Justificatif de revenus",
-        "bankStatements": "Relevés bancaires (3 derniers mois)",
-        "taxReturn": "Avis d'imposition",
-        "proofOfAddress": "Justificatif de domicile",
-        "employmentContract": "Contrat de travail",
-        "businessRegistration": "Extrait Kbis / Immatriculation",
-        "other": "Autre document"
-      }
-    },
-    "contract": {
-      "previewTitle": "Aperçu du contrat",
-      "previewDescription": "Vérifiez le contrat avant de l'envoyer à {name} pour signature",
-      "download": "Télécharger",
-      "sendForSignature": "Envoyer pour signature",
-      "errorGenerating": "Erreur lors de la génération du contrat"
     }
   }
 }

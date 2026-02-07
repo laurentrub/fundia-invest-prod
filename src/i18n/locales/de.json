@@ -2,7 +2,7 @@
   "resources": {
     "faq": {
       "title": "Häufig gestellte Fragen",
-      "subtitle": "Alles, was Sie über Kredite, Anträge und Privat Equity wissen müssen",
+      "subtitle": "Alles, was Sie über Kredite, Anträge und Fundia Invest wissen müssen",
       "categories": {
         "general": "Allgemeine Fragen",
         "application": "Antragsprozess",
@@ -13,12 +13,12 @@
         "special": "Besondere Situationen"
       },
       "general": {
-        "q1": "Was ist Privat Equity?",
-        "a1": "Privat Equity ist eine Online-Kreditplattform, die Kreditnehmer mit wettbewerbsfähigen Kreditangeboten verbindet. Wir bieten Privatkredite, Autokredite, Renovierungskredite, Umschuldungen und Geschäftskredite an.",
-        "q2": "Wie verdient Privat Equity Geld?",
+        "q1": "Was ist Fundia Invest?",
+        "a1": "Fundia Invest ist eine Online-Kreditplattform, die Kreditnehmer mit wettbewerbsfähigen Kreditangeboten verbindet. Wir bieten Privatkredite, Autokredite, Renovierungskredite, Umschuldungen und Geschäftskredite an.",
+        "q2": "Wie verdient Fundia Invest Geld?",
         "a2": "Wir erhalten eine Provision von unseren Finanzpartnern, wenn wir Kreditnehmer mit Krediten zusammenbringen. Dieser Service ist für Kreditnehmer kostenlos - wir berechnen niemals Bearbeitungsgebühren oder Vorabkosten.",
-        "q3": "Ist Privat Equity sicher und seriös?",
-        "a3": "Ja, Privat Equity ist eine lizenzierte und regulierte Kreditplattform. Wir verwenden bankübliche Verschlüsselung, sind vollständig DSGVO-konform und arbeiten nur mit zugelassenen Finanzinstituten zusammen."
+        "q3": "Ist Fundia Invest sicher und seriös?",
+        "a3": "Ja, Fundia Invest ist eine lizenzierte und regulierte Kreditplattform. Wir verwenden bankübliche Verschlüsselung, sind vollständig DSGVO-konform und arbeiten nur mit zugelassenen Finanzinstituten zusammen."
       },
       "application": {
         "q1": "Wie lange dauert der Antrag?",
@@ -26,7 +26,7 @@
         "q2": "Welche Dokumente benötige ich?",
         "a2": "Sie benötigen einen gültigen Ausweis, einen Einkommensnachweis (Gehaltsabrechnungen oder Steuererklärungen), Kontoauszüge der letzten 3 Monate und einen Wohnsitznachweis. Je nach Antrag können zusätzliche Dokumente angefordert werden.",
         "q3": "Beeinflusst die Zinsabfrage meinen Kreditscore?",
-        "a3": "Nein! Die Überprüfung Ihres Zinssatzes bei Privat Equity verwendet eine weiche Kreditanfrage, die Ihren Score nicht beeinflusst. Eine harte Anfrage erfolgt erst, wenn Sie ein Kreditangebot formell annehmen.",
+        "a3": "Nein! Die Überprüfung Ihres Zinssatzes bei Fundia Invest verwendet eine weiche Kreditanfrage, die Ihren Score nicht beeinflusst. Eine harte Anfrage erfolgt erst, wenn Sie ein Kreditangebot formell annehmen.",
         "q4": "Kann ich als Selbstständiger einen Antrag stellen?",
         "a4": "Ja! Selbstständige sind willkommen. Sie müssen zusätzliche Dokumente wie Steuererklärungen, Geschäftskontoauszüge und einen Nachweis der Gewerbeanmeldung vorlegen.",
         "q5": "Was passiert, wenn mein Antrag abgelehnt wird?",
@@ -72,7 +72,7 @@
         "q1": "Wie werden meine persönlichen Daten geschützt?",
         "a1": "Wir verwenden 256-Bit-SSL-Verschlüsselung, dieselbe Sicherheit wie Banken. Ihre Daten werden nie ohne Ihre ausdrückliche Zustimmung verkauft oder weitergegeben, und wir sind vollständig DSGVO-konform.",
         "q2": "Wer hat Zugang zu meinen Daten?",
-        "a2": "Nur autorisiertes Personal von Privat Equity und unsere Finanzpartner (wenn Sie ein Angebot annehmen) haben Zugang zu Ihren Daten. Wir verkaufen Ihre Daten nie an Dritte.",
+        "a2": "Nur autorisiertes Personal von Fundia Invest und unsere Finanzpartner (wenn Sie ein Angebot annehmen) haben Zugang zu Ihren Daten. Wir verkaufen Ihre Daten nie an Dritte.",
         "q3": "Wie lange bewahren Sie meine Daten auf?",
         "a3": "Wir bewahren Ihre Daten gemäß den gesetzlichen Anforderungen und unserer Datenschutzrichtlinie auf. Sie können jederzeit die Löschung Ihrer Daten beantragen, vorbehaltlich regulatorischer Verpflichtungen."
       },
@@ -195,7 +195,7 @@
         },
         "prepaymentPenalty": {
           "term": "Vorfälligkeitsentschädigung",
-          "definition": "Eine Gebühr, die einige Kreditgeber erheben, wenn Sie Ihren Kredit vor Ende der geplanten Laufzeit zurückzahlen. Bei Privat Equity haben wir keine Vorfälligkeitsentschädigungen."
+          "definition": "Eine Gebühr, die einige Kreditgeber erheben, wenn Sie Ihren Kredit vor Ende der geplanten Laufzeit zurückzahlen. Bei Fundia Invest haben wir keine Vorfälligkeitsentschädigungen."
         },
         "revolvingCredit": {
           "term": "Revolving-Kredit",
@@ -301,20 +301,41 @@
     },
     "features": {
       "title": "Warum Uns Wählen?",
-      "fast": { "title": "Schnelle Antwort", "description": "Eine vorläufige Antwort innerhalb von maximal 48 Stunden" },
-      "personalized": { "title": "Maßgeschneiderte Lösung", "description": "Angebote an Ihre Situation angepasst" },
-      "secure": { "title": "100% Sicher", "description": "Ihre Daten sind geschützt" }
+      "fast": {
+        "title": "Schnelle Antwort",
+        "description": "Eine vorläufige Antwort innerhalb von maximal 48 Stunden"
+      },
+      "personalized": {
+        "title": "Maßgeschneiderte Lösung",
+        "description": "Angebote an Ihre Situation angepasst"
+      },
+      "secure": {
+        "title": "100% Sicher",
+        "description": "Ihre Daten sind geschützt"
+      }
     },
     "featuresSection": {
-      "title": "Warum Privat Equity Wählen?",
+      "title": "Warum Fundia Invest Wählen?",
       "subtitle": "Wir kombinieren modernste Technologie und persönlichen Service, um das Ausleihen einfach, schnell und transparent zu gestalten."
     },
     "products": {
       "title": "Unsere Kreditlösungen",
-      "personal": { "title": "Privatkredit", "description": "Für Ihre persönlichen Projekte" },
-      "auto": { "title": "Autokredit", "description": "Finanzieren Sie Ihr Fahrzeug" },
-      "home": { "title": "Renovierungskredit", "description": "Renovieren Sie Ihr Zuhause" },
-      "consolidation": { "title": "Kreditumschuldung", "description": "Vereinfachen Sie Ihre Rückzahlungen" }
+      "personal": {
+        "title": "Privatkredit",
+        "description": "Für Ihre persönlichen Projekte"
+      },
+      "auto": {
+        "title": "Autokredit",
+        "description": "Finanzieren Sie Ihr Fahrzeug"
+      },
+      "home": {
+        "title": "Renovierungskredit",
+        "description": "Renovieren Sie Ihr Zuhause"
+      },
+      "consolidation": {
+        "title": "Kreditumschuldung",
+        "description": "Vereinfachen Sie Ihre Rückzahlungen"
+      }
     },
     "productsSection": {
       "title": "Unsere Kreditprodukte",
@@ -324,18 +345,39 @@
     "howItWorks": {
       "title": "Wie Funktioniert Es?",
       "subtitle": "Ein einfacher und schneller 4-Schritte-Prozess für Ihre Finanzierung",
-      "step1": { "title": "Simulieren Sie Ihren Kredit", "description": "Nutzen Sie unseren Rechner, um Ihre monatlichen Raten in Sekunden zu berechnen" },
-      "step2": { "title": "Reichen Sie Ihren Antrag ein", "description": "Füllen Sie unser sicheres Online-Formular in weniger als 5 Minuten aus" },
-      "step3": { "title": "Erhalten Sie eine sofortige Antwort", "description": "Unser System gibt Ihnen eine sofortige vorläufige Antwort" },
-      "step4": { "title": "Erhalten Sie Ihr Geld", "description": "Nach der Genehmigung erhalten Sie Ihr Geld innerhalb von 48h auf Ihrem Konto" },
+      "step1": {
+        "title": "Simulieren Sie Ihren Kredit",
+        "description": "Nutzen Sie unseren Rechner, um Ihre monatlichen Raten in Sekunden zu berechnen"
+      },
+      "step2": {
+        "title": "Reichen Sie Ihren Antrag ein",
+        "description": "Füllen Sie unser sicheres Online-Formular in weniger als 5 Minuten aus"
+      },
+      "step3": {
+        "title": "Erhalten Sie eine sofortige Antwort",
+        "description": "Unser System gibt Ihnen eine sofortige vorläufige Antwort"
+      },
+      "step4": {
+        "title": "Erhalten Sie Ihr Geld",
+        "description": "Nach der Genehmigung erhalten Sie Ihr Geld innerhalb von 48h auf Ihrem Konto"
+      },
       "startNow": "Jetzt Starten"
     },
     "mission": {
       "title": "Unsere Mission",
       "statement": "Finanzierung für alle einfach, zugänglich und sicher machen.",
-      "accessibility": { "title": "Zugänglichkeit", "description": "Finanzierungslösungen für alle, mit vereinfachten und transparenten Prozessen." },
-      "trust": { "title": "Vertrauen", "description": "Maximale Sicherheit für Ihre Daten und persönliche Betreuung bei jedem Schritt." },
-      "innovation": { "title": "Innovation", "description": "Modernste Technologie für schnelle Entscheidungen und wettbewerbsfähige Zinsen." }
+      "accessibility": {
+        "title": "Zugänglichkeit",
+        "description": "Finanzierungslösungen für alle, mit vereinfachten und transparenten Prozessen."
+      },
+      "trust": {
+        "title": "Vertrauen",
+        "description": "Maximale Sicherheit für Ihre Daten und persönliche Betreuung bei jedem Schritt."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Modernste Technologie für schnelle Entscheidungen und wettbewerbsfähige Zinsen."
+      }
     },
     "successStories": {
       "title": "Sie haben ihre Projekte mit uns verwirklicht",
@@ -343,7 +385,7 @@
       "story1": {
         "title": "Autokredit",
         "imageAlt": "Glückliches Paar, das seinen Autokredit erhalten hat",
-        "quote": "Wir haben unseren Autokredit in 24 Stunden erhalten! Der Prozess war einfach und das Team sehr professionell. Wir empfehlen Privat Equity sehr.",
+        "quote": "Wir haben unseren Autokredit in 24 Stunden erhalten! Der Prozess war einfach und das Team sehr professionell. Wir empfehlen Fundia Invest sehr.",
         "name": "Marie & Luc",
         "location": "Lyon - Kredit von 22.000€"
       },
@@ -355,11 +397,16 @@
         "location": "Paris - Kredit von 15.000€"
       }
     },
-    "faqSection": { "title": "Häufig Gestellte Fragen", "viewAll": "Vollständige FAQ Anzeigen" },
-    "partners": { "title": "Genehmigt von führenden Finanzinstituten" },
+    "faqSection": {
+      "title": "Häufig Gestellte Fragen",
+      "viewAll": "Vollständige FAQ Anzeigen"
+    },
+    "partners": {
+      "title": "Genehmigt von führenden Finanzinstituten"
+    },
     "cta": {
       "title": "Bereit Loszulegen?",
-      "description": "Schließen Sie sich Tausenden zufriedener Kunden an, die sich für Privat Equity entschieden haben.",
+      "description": "Schließen Sie sich Tausenden zufriedener Kunden an, die sich für Fundia Invest entschieden haben.",
       "button": "Jetzt Beantragen - Sofortige Genehmigung"
     },
     "indexFeatures": {
@@ -373,51 +420,108 @@
       "expertSupportDesc": "Engagierte Berater stehen Ihnen bei jedem Schritt des Prozesses zur Verfügung."
     },
     "loanProducts": {
-      "personal": "Privatkredit", "personalDesc": "Von 1.000€ bis 75.000€ für alle Ihre persönlichen Projekte", "personalRate": "Ab 2,9% effektiver Jahreszins",
-      "auto": "Autokredit", "autoDesc": "Finanzieren Sie Ihr Traumauto mit flexiblen Zahlungsoptionen", "autoRate": "Ab 3,2% effektiver Jahreszins",
-      "home": "Renovierungskredit", "homeDesc": "Verwandeln Sie Ihr Zuhause mit unseren Renovierungsdarlehen", "homeRate": "Ab 3,5% effektiver Jahreszins",
-      "consolidation": "Kreditumschuldung", "consolidationDesc": "Vereinfachen Sie Ihre Finanzen durch Zusammenführung mehrerer Schulden", "consolidationRate": "Ab 4,2% effektiver Jahreszins"
+      "personal": "Privatkredit",
+      "personalDesc": "Von 1.000€ bis 75.000€ für alle Ihre persönlichen Projekte",
+      "personalRate": "Ab 2,9% effektiver Jahreszins",
+      "auto": "Autokredit",
+      "autoDesc": "Finanzieren Sie Ihr Traumauto mit flexiblen Zahlungsoptionen",
+      "autoRate": "Ab 3,2% effektiver Jahreszins",
+      "home": "Renovierungskredit",
+      "homeDesc": "Verwandeln Sie Ihr Zuhause mit unseren Renovierungsdarlehen",
+      "homeRate": "Ab 3,5% effektiver Jahreszins",
+      "consolidation": "Kreditumschuldung",
+      "consolidationDesc": "Vereinfachen Sie Ihre Finanzen durch Zusammenführung mehrerer Schulden",
+      "consolidationRate": "Ab 4,2% effektiver Jahreszins"
     },
     "faqs": {
-      "q1": "Wie schnell kann ich meinen Kredit genehmigt bekommen?", "a1": "Unser sofortiges Entscheidungssystem bietet eine vorläufige Genehmigung in weniger als 5 Minuten. Die endgültige Genehmigung dauert in der Regel 24 bis 48 Stunden nach Dokumentenprüfung.",
-      "q2": "Was ist die erforderliche Mindest-Kreditwürdigkeit?", "a2": "Wir akzeptieren Anträge von Kunden mit verschiedenen Kreditprofilen. Während ein Wert über 650 Ihre Chancen verbessert, bewerten wir jeden Antrag individuell.",
-      "q3": "Kann ich meinen Kredit vorzeitig ohne Strafen zurückzahlen?", "a3": "Ja, alle unsere Kredite erlauben vorzeitige Rückzahlung ohne Strafen. Sie sparen Zinsen, indem Sie Ihren Kredit früher zurückzahlen.",
-      "q4": "Welche Unterlagen muss ich vorlegen?", "a4": "Sie benötigen einen gültigen Ausweis, Einkommensnachweis (letzte 3 Gehaltsabrechnungen), Kontoauszüge und einen Wohnsitznachweis. Je nach Situation können zusätzliche Dokumente angefordert werden.",
-      "q5": "Wie wird meine monatliche Rate berechnet?", "a5": "Ihre monatliche Rate hängt vom Kreditbetrag, der Laufzeit und Ihrem effektiven Jahreszins ab. Nutzen Sie unseren Simulator für eine sofortige Berechnung.",
-      "q6": "Beeinflusst die Zinsüberprüfung meine Kreditwürdigkeit?", "a6": "Nein, die Überprüfung Ihrer Eignung beeinflusst Ihre Kreditwürdigkeit nicht. Nur der formelle Kreditantrag wird in Ihrer Kredithistorie erfasst."
+      "q1": "Wie schnell kann ich meinen Kredit genehmigt bekommen?",
+      "a1": "Unser sofortiges Entscheidungssystem bietet eine vorläufige Genehmigung in weniger als 5 Minuten. Die endgültige Genehmigung dauert in der Regel 24 bis 48 Stunden nach Dokumentenprüfung.",
+      "q2": "Was ist die erforderliche Mindest-Kreditwürdigkeit?",
+      "a2": "Wir akzeptieren Anträge von Kunden mit verschiedenen Kreditprofilen. Während ein Wert über 650 Ihre Chancen verbessert, bewerten wir jeden Antrag individuell.",
+      "q3": "Kann ich meinen Kredit vorzeitig ohne Strafen zurückzahlen?",
+      "a3": "Ja, alle unsere Kredite erlauben vorzeitige Rückzahlung ohne Strafen. Sie sparen Zinsen, indem Sie Ihren Kredit früher zurückzahlen.",
+      "q4": "Welche Unterlagen muss ich vorlegen?",
+      "a4": "Sie benötigen einen gültigen Ausweis, Einkommensnachweis (letzte 3 Gehaltsabrechnungen), Kontoauszüge und einen Wohnsitznachweis. Je nach Situation können zusätzliche Dokumente angefordert werden.",
+      "q5": "Wie wird meine monatliche Rate berechnet?",
+      "a5": "Ihre monatliche Rate hängt vom Kreditbetrag, der Laufzeit und Ihrem effektiven Jahreszins ab. Nutzen Sie unseren Simulator für eine sofortige Berechnung.",
+      "q6": "Beeinflusst die Zinsüberprüfung meine Kreditwürdigkeit?",
+      "a6": "Nein, die Überprüfung Ihrer Eignung beeinflusst Ihre Kreditwürdigkeit nicht. Nur der formelle Kreditantrag wird in Ihrer Kredithistorie erfasst."
     },
     "seoSection": {
-      "title": "Über Privat Equity: Ihr vertrauenswürdiger Kreditpartner",
+      "title": "Über Fundia Invest: Ihr vertrauenswürdiger Kreditpartner",
       "intro": "ist eine führende Online-Kreditplattform, die die Art und Weise revolutioniert hat, wie Privatpersonen und Unternehmen in Frankreich Zugang zu Krediten erhalten. Seit unserer Gründung 2015 haben wir über 50.000 Kunden dabei geholfen, ihre finanziellen Ziele durch transparente, schnelle und sichere Kreditlösungen zu erreichen.",
       "missionTitle": "Unsere Mission",
       "missionText": "Wir glauben, dass der Zugang zu Krediten einfach, transparent und stressfrei sein sollte. Unsere Mission ist es, Kredite zu demokratisieren, indem wir Technologie nutzen, um wettbewerbsfähige Zinsen, sofortige Entscheidungen und ein nahtloses digitales Erlebnis zu bieten. Wir setzen uns für finanzielle Inklusion ein und helfen unseren Kunden, fundierte Kreditentscheidungen zu treffen.",
       "differenceTitle": "Warum wir anders sind",
-      "speed": { "title": "Geschwindigkeit:", "text": "Unsere fortschrittlichen Algorithmen liefern eine vorläufige Genehmigung in weniger als 5 Minuten, wobei die Mittel in der Regel innerhalb von 48 Stunden nach der endgültigen Genehmigung ausgezahlt werden." },
-      "transparency": { "title": "Transparenz:", "text": "Keine versteckten Gebühren, keine Überraschungen. Alle Kosten, Zinsen und Bedingungen werden klar angezeigt, bevor Sie sich verpflichten." },
-      "security": { "title": "Sicherheit:", "text": "Wir verwenden Verschlüsselung auf Bankniveau und sind vollständig DSGVO-konform sowie mit den französischen Bankenvorschriften." },
-      "flexibility": { "title": "Flexibilität:", "text": "Vorzeitige Rückzahlungsoptionen ohne Gebühren, flexible Laufzeiten von 12 bis 84 Monaten und Beträge von 1.000€ bis 75.000€." },
+      "speed": {
+        "title": "Geschwindigkeit:",
+        "text": "Unsere fortschrittlichen Algorithmen liefern eine vorläufige Genehmigung in weniger als 5 Minuten, wobei die Mittel in der Regel innerhalb von 48 Stunden nach der endgültigen Genehmigung ausgezahlt werden."
+      },
+      "transparency": {
+        "title": "Transparenz:",
+        "text": "Keine versteckten Gebühren, keine Überraschungen. Alle Kosten, Zinsen und Bedingungen werden klar angezeigt, bevor Sie sich verpflichten."
+      },
+      "security": {
+        "title": "Sicherheit:",
+        "text": "Wir verwenden Verschlüsselung auf Bankniveau und sind vollständig DSGVO-konform sowie mit den französischen Bankenvorschriften."
+      },
+      "flexibility": {
+        "title": "Flexibilität:",
+        "text": "Vorzeitige Rückzahlungsoptionen ohne Gebühren, flexible Laufzeiten von 12 bis 84 Monaten und Beträge von 1.000€ bis 75.000€."
+      },
       "loanTypesTitle": "Kreditarten, die wir anbieten",
-      "loanTypesIntro": "Bei Privat Equity verstehen wir, dass jeder finanzielle Bedarf einzigartig ist. Deshalb bieten wir eine umfassende Palette von Kreditprodukten an, die auf Ihre spezifischen Umstände zugeschnitten sind:",
-      "personalLoan": { "title": "Privatkredite", "text": "Perfekt für Hochzeiten, Urlaub, medizinische Ausgaben oder jedes persönliche Projekt. Leihen Sie von 1.000€ bis 75.000€ mit Zinsen ab 2,9% effektiver Jahreszins.", "example": "Beispiel: 10.000€ über 48 Monate = 221€/Monat (4,9% eff. Jahreszins, Gesamtkosten: 10.608€)" },
-      "autoLoan": { "title": "Autokredite", "text": "Finanzieren Sie Neu- oder Gebrauchtwagen mit wettbewerbsfähigen Zinsen und flexiblen Konditionen. Zinsen ab 3,2% effektiver Jahreszins.", "example": "Beispiel: 20.000€ über 60 Monate = 362€/Monat (3,9% eff. Jahreszins, Gesamtkosten: 21.720€)" },
-      "homeLoan": { "title": "Renovierungskredite", "text": "Verwandeln Sie Ihren Wohnraum mit Krediten für Renovierungen, Erweiterungen oder energetische Verbesserungen.", "example": "Beispiel: 15.000€ über 72 Monate = 238€/Monat (4,5% eff. Jahreszins, Gesamtkosten: 17.136€)" },
-      "consolidation": { "title": "Schuldenkonsolidierung", "text": "Vereinfachen Sie mehrere Schulden in einer einfachen monatlichen Zahlung, oft zu einem niedrigeren Gesamtzins.", "example": "Beispiel: Konsolidieren Sie 25.000€ Schulden über 84 Monate = 351€/Monat (5,2% eff. Jahreszins)" },
+      "loanTypesIntro": "Bei Fundia Invest verstehen wir, dass jeder finanzielle Bedarf einzigartig ist. Deshalb bieten wir eine umfassende Palette von Kreditprodukten an, die auf Ihre spezifischen Umstände zugeschnitten sind:",
+      "personalLoan": {
+        "title": "Privatkredite",
+        "text": "Perfekt für Hochzeiten, Urlaub, medizinische Ausgaben oder jedes persönliche Projekt. Leihen Sie von 1.000€ bis 75.000€ mit Zinsen ab 2,9% effektiver Jahreszins.",
+        "example": "Beispiel: 10.000€ über 48 Monate = 221€/Monat (4,9% eff. Jahreszins, Gesamtkosten: 10.608€)"
+      },
+      "autoLoan": {
+        "title": "Autokredite",
+        "text": "Finanzieren Sie Neu- oder Gebrauchtwagen mit wettbewerbsfähigen Zinsen und flexiblen Konditionen. Zinsen ab 3,2% effektiver Jahreszins.",
+        "example": "Beispiel: 20.000€ über 60 Monate = 362€/Monat (3,9% eff. Jahreszins, Gesamtkosten: 21.720€)"
+      },
+      "homeLoan": {
+        "title": "Renovierungskredite",
+        "text": "Verwandeln Sie Ihren Wohnraum mit Krediten für Renovierungen, Erweiterungen oder energetische Verbesserungen.",
+        "example": "Beispiel: 15.000€ über 72 Monate = 238€/Monat (4,5% eff. Jahreszins, Gesamtkosten: 17.136€)"
+      },
+      "consolidation": {
+        "title": "Schuldenkonsolidierung",
+        "text": "Vereinfachen Sie mehrere Schulden in einer einfachen monatlichen Zahlung, oft zu einem niedrigeren Gesamtzins.",
+        "example": "Beispiel: Konsolidieren Sie 25.000€ Schulden über 84 Monate = 351€/Monat (5,2% eff. Jahreszins)"
+      },
       "processTitle": "Wie unser Prozess funktioniert",
       "process": {
-        "step1": { "title": "Simulieren Sie Ihren Kredit:", "text": "Nutzen Sie unseren interaktiven Rechner, um geschätzte monatliche Raten und Gesamtkosten zu sehen." },
-        "step2": { "title": "Reichen Sie Ihren Antrag ein:", "text": "Füllen Sie unser einfaches Online-Formular in nur wenigen Minuten aus." },
-        "step3": { "title": "Erhalten Sie eine sofortige Entscheidung:", "text": "Unser System analysiert Ihren Antrag und erteilt sofort eine vorläufige Genehmigung." },
-        "step4": { "title": "Laden Sie Ihre Dokumente hoch:", "text": "Reichen Sie erforderliche Dokumente sicher über unsere Plattform ein." },
-        "step5": { "title": "Erhalten Sie Ihre Mittel:", "text": "Nach der Genehmigung werden die Mittel innerhalb von 48 Stunden direkt auf Ihr Bankkonto überwiesen." }
+        "step1": {
+          "title": "Simulieren Sie Ihren Kredit:",
+          "text": "Nutzen Sie unseren interaktiven Rechner, um geschätzte monatliche Raten und Gesamtkosten zu sehen."
+        },
+        "step2": {
+          "title": "Reichen Sie Ihren Antrag ein:",
+          "text": "Füllen Sie unser einfaches Online-Formular in nur wenigen Minuten aus."
+        },
+        "step3": {
+          "title": "Erhalten Sie eine sofortige Entscheidung:",
+          "text": "Unser System analysiert Ihren Antrag und erteilt sofort eine vorläufige Genehmigung."
+        },
+        "step4": {
+          "title": "Laden Sie Ihre Dokumente hoch:",
+          "text": "Reichen Sie erforderliche Dokumente sicher über unsere Plattform ein."
+        },
+        "step5": {
+          "title": "Erhalten Sie Ihre Mittel:",
+          "text": "Nach der Genehmigung werden die Mittel innerhalb von 48 Stunden direkt auf Ihr Bankkonto überwiesen."
+        }
       },
       "responsibleTitle": "Unser Engagement für verantwortungsvolle Kreditvergabe",
       "responsibleText": "Wir nehmen verantwortungsvolle Kreditvergabe ernst. Bevor wir einen Kredit genehmigen, bewerten wir sorgfältig Ihre Rückzahlungsfähigkeit basierend auf Ihrem Einkommen, Ihren Ausgaben und bestehenden Schulden. Wir werden niemals einen Kredit genehmigen, der Sie in finanzielle Schwierigkeiten bringen könnte. Unsere Berater stehen Ihnen jederzeit zur Verfügung, um Alternativen zu besprechen, wenn ein Kredit nicht die richtige Lösung für Ihre Situation ist."
     }
   },
   "about": {
-    "title": "Über Privat Equity",
+    "title": "Über Fundia Invest",
     "subtitle": "Ihr vertrauenswürdiger Partner für transparente und personalisierte Kreditlösungen",
-    "intro1": "Privat Equity ist eine innovative Online-Kreditplattform, die den Zugang zu Krediten in Frankreich revolutioniert. Mit der Mission gegründet, die persönliche Finanzierung transparenter, zugänglicher und fairer zu machen, verbinden wir Tausende von Kreditnehmern mit den besten Kreditangeboten auf dem Markt.",
+    "intro1": "Fundia Invest ist eine innovative Online-Kreditplattform, die den Zugang zu Krediten in Frankreich revolutioniert. Mit der Mission gegründet, die persönliche Finanzierung transparenter, zugänglicher und fairer zu machen, verbinden wir Tausende von Kreditnehmern mit den besten Kreditangeboten auf dem Markt.",
     "intro2": "Unsere Plattform nutzt modernste Technologie, um Ihr Finanzprofil zu analysieren und Ihnen in wenigen Minuten personalisierte Angebote zu unterbreiten. Wir arbeiten mit einem sorgfältig ausgewählten Netzwerk von Finanzpartnern zusammen, um sicherzustellen, dass Sie immer die bestmöglichen Konditionen erhalten.",
     "mission": {
       "title": "Unsere Mission",
@@ -436,12 +540,27 @@
       "description": "Mit über 15 Jahren kombinierter Erfahrung im Finanzsektor versteht unser Team die Herausforderungen, mit denen Kreditnehmer konfrontiert sind. Wir nutzen diese Expertise, um ein Krediterlebnis zu schaffen, das einfach, schnell und auf Ihre Bedürfnisse zugeschnitten ist."
     },
     "whyChoose": {
-      "title": "Warum Privat Equity wählen?",
-      "online": { "title": "100% Online-Prozess:", "description": "Schnelle Antragstellung und sofortige Entscheidung von zu Hause aus" },
-      "comparison": { "title": "Intelligenter Vergleich:", "description": "Wir analysieren Dutzende von Angeboten, um das beste für Sie zu finden" },
-      "noCommitment": { "title": "Keine Verpflichtung:", "description": "Prüfen Sie Ihre Eignung ohne Auswirkung auf Ihre Kreditwürdigkeit" },
-      "transparency": { "title": "Volle Transparenz:", "description": "Keine versteckten Gebühren, alle Bedingungen klar angezeigt" },
-      "support": { "title": "Dedizierter Support:", "description": "Ein Expertenteam für Sie von Montag bis Samstag" }
+      "title": "Warum Fundia Invest wählen?",
+      "online": {
+        "title": "100% Online-Prozess:",
+        "description": "Schnelle Antragstellung und sofortige Entscheidung von zu Hause aus"
+      },
+      "comparison": {
+        "title": "Intelligenter Vergleich:",
+        "description": "Wir analysieren Dutzende von Angeboten, um das beste für Sie zu finden"
+      },
+      "noCommitment": {
+        "title": "Keine Verpflichtung:",
+        "description": "Prüfen Sie Ihre Eignung ohne Auswirkung auf Ihre Kreditwürdigkeit"
+      },
+      "transparency": {
+        "title": "Volle Transparenz:",
+        "description": "Keine versteckten Gebühren, alle Bedingungen klar angezeigt"
+      },
+      "support": {
+        "title": "Dedizierter Support:",
+        "description": "Ein Expertenteam für Sie von Montag bis Samstag"
+      }
     }
   },
   "contact": {
@@ -817,7 +936,7 @@
       "guide": {
         "whatIsTitle": "Was ist ein Privatkredit?",
         "whatIsP1": "Ein Privatkredit ist ein unbesicherter Kredit, der Ihnen einen Pauschalbetrag für den persönlichen Gebrauch zur Verfügung stellt.",
-        "whatIsP2": "Bei Privat Equity reichen unsere Privatkredite von 1.000€ bis 75.000€ mit Rückzahlungsfristen von 12 bis 84 Monaten.",
+        "whatIsP2": "Bei Fundia Invest reichen unsere Privatkredite von 1.000€ bis 75.000€ mit Rückzahlungsfristen von 12 bis 84 Monaten.",
         "usesTitle": "Häufige Verwendungszwecke",
         "uses": {
           "consolidation": "Schuldenkonsolidierung: Mehrere hochverzinsliche Schulden in einer monatlichen Zahlung zusammenfassen",
@@ -830,7 +949,7 @@
           "emergency": "Notfallausgaben: Unerwartete Kosten bewältigen"
         },
         "qualifyTitle": "Wie Sie sich qualifizieren",
-        "qualifyIntro": "Bei Privat Equity verlangen wir in der Regel:",
+        "qualifyIntro": "Bei Fundia Invest verlangen wir in der Regel:",
         "qualifyItems": {
           "age": "Mindestens 18 Jahre alt sein",
           "residency": "Französischer Wohnsitz oder gültige Aufenthaltserlaubnis",
@@ -993,7 +1112,7 @@
       "guide": {
         "introTitle": "Was ist ein Geschäftskredit?",
         "introP1": "Ein Geschäftskredit ist eine Finanzierung, die speziell auf die Bedürfnisse von Unternehmen, Handwerkern, Händlern und Freiberuflern zugeschnitten ist. Im Gegensatz zu Privatkrediten dient er zur Finanzierung von Projekten im Zusammenhang mit Ihrer beruflichen Tätigkeit: Anschaffung von Ausrüstung, Geschäftsentwicklung, Betriebskapital oder Expansion.",
-        "introP2": "Bei Privat Equity bieten wir Geschäftskredite von 5.000 € bis 75.000 € mit Laufzeiten von 12 bis 84 Monaten an. Unsere wettbewerbsfähigen Zinssätze ab 6,5% effektivem Jahreszins sind an die wirtschaftlichen Realitäten von KMU und Unternehmern angepasst.",
+        "introP2": "Bei Fundia Invest bieten wir Geschäftskredite von 5.000 € bis 75.000 € mit Laufzeiten von 12 bis 84 Monaten an. Unsere wettbewerbsfähigen Zinssätze ab 6,5% effektivem Jahreszins sind an die wirtschaftlichen Realitäten von KMU und Unternehmern angepasst.",
         "typesTitle": "Arten von Geschäftskrediten",
         "types": {
           "shortTerm": "Kurzfristkredit: 3- bis 12-monatige Finanzierung für sofortigen Liquiditätsbedarf, ideal zur Überbrückung von Liquiditätsengpässen oder zur Finanzierung von Saisonware.",
@@ -1002,7 +1121,7 @@
           "creditLine": "Kreditlinie: Erneuerbare Kreditfazilität zur Bewältigung täglicher Liquiditätsschwankungen."
         },
         "eligibilityTitle": "Zulassungskriterien",
-        "eligibilityIntro": "Um einen Geschäftskredit bei Privat Equity zu erhalten, müssen Sie in der Regel:",
+        "eligibilityIntro": "Um einen Geschäftskredit bei Fundia Invest zu erhalten, müssen Sie in der Regel:",
         "eligibility": {
           "registered": "Ein eingetragenes Unternehmen haben (Einzelunternehmer, GmbH, AG usw.)",
           "activity": "Eine Geschäftstätigkeit von mindestens 6 bis 12 Monaten nachweisen",
@@ -1036,7 +1155,7 @@
         "q2": "Kann ich als Freiberufler/Einzelunternehmer einen Geschäftskredit bekommen?",
         "a2": "Ja, Freiberufler und Einzelunternehmer können selbstverständlich einen Geschäftskredit beantragen. Sie müssen Ihre Umsatzerklärungen, Kontoauszüge und eine Geschäftstätigkeit von mindestens 6 bis 12 Monaten nachweisen. Die gewährten Beträge hängen von Ihrer Geschäftstätigkeit ab.",
         "q3": "Wie lange dauert es, eine Antwort zu erhalten?",
-        "a3": "Bei Privat Equity erhalten Sie innerhalb von 24 bis 48 Stunden eine Vorabentscheidung. Die Auszahlung der Mittel erfolgt in der Regel innerhalb von 5 bis 10 Werktagen nach vollständiger Prüfung und Unterzeichnung der Dokumente.",
+        "a3": "Bei Fundia Invest erhalten Sie innerhalb von 24 bis 48 Stunden eine Vorabentscheidung. Die Auszahlung der Mittel erfolgt in der Regel innerhalb von 5 bis 10 Werktagen nach vollständiger Prüfung und Unterzeichnung der Dokumente.",
         "q4": "Brauche ich Sicherheiten für meinen Geschäftskredit?",
         "a4": "Für kleinere Beträge (bis zu 25.000 €) sind in der Regel keine Sicherheiten erforderlich. Für höhere Beträge kann je nach Risikoprofil eine persönliche Bürgschaft des Geschäftsführers oder eine Sicherheit auf Unternehmensvermögen verlangt werden.",
         "q5": "Kann ich meinen Geschäftskredit vorzeitig zurückzahlen?",
