@@ -2,7 +2,7 @@
   "resources": {
     "faq": {
       "title": "Perguntas Frequentes",
-      "subtitle": "Tudo o que precisa saber sobre empréstimos, pedidos e Privat Equity",
+      "subtitle": "Tudo o que precisa saber sobre empréstimos, pedidos e Fundia Invest",
       "categories": {
         "general": "Perguntas Gerais",
         "application": "Processo de Pedido",
@@ -13,12 +13,12 @@
         "special": "Situações Especiais"
       },
       "general": {
-        "q1": "O que é a Privat Equity?",
-        "a1": "A Privat Equity é uma plataforma de empréstimos online que conecta mutuários com ofertas de crédito competitivas. Oferecemos empréstimos pessoais, créditos auto, créditos para obras, consolidação de crédito e empréstimos empresariais.",
-        "q2": "Como é que a Privat Equity ganha dinheiro?",
+        "q1": "O que é a Fundia Invest?",
+        "a1": "A Fundia Invest é uma plataforma de empréstimos online que conecta mutuários com ofertas de crédito competitivas. Oferecemos empréstimos pessoais, créditos auto, créditos para obras, consolidação de crédito e empréstimos empresariais.",
+        "q2": "Como é que a Fundia Invest ganha dinheiro?",
         "a2": "Recebemos uma comissão dos nossos parceiros financeiros quando conectamos mutuários com empréstimos. Este serviço é gratuito para os mutuários - nunca cobramos taxas de processamento ou custos iniciais.",
-        "q3": "A Privat Equity é segura e legítima?",
-        "a3": "Sim, a Privat Equity é uma plataforma de empréstimos licenciada e regulamentada. Usamos encriptação de nível bancário, somos totalmente conformes com o RGPD e só trabalhamos com instituições financeiras autorizadas."
+        "q3": "A Fundia Invest é segura e legítima?",
+        "a3": "Sim, a Fundia Invest é uma plataforma de empréstimos licenciada e regulamentada. Usamos encriptação de nível bancário, somos totalmente conformes com o RGPD e só trabalhamos com instituições financeiras autorizadas."
       },
       "application": {
         "q1": "Quanto tempo demora o pedido?",
@@ -26,7 +26,7 @@
         "q2": "Que documentos preciso?",
         "a2": "Precisará de um documento de identificação válido, comprovativo de rendimentos, extratos bancários dos últimos 3 meses e comprovativo de morada. Documentos adicionais podem ser solicitados.",
         "q3": "Verificar a taxa afeta a minha pontuação de crédito?",
-        "a3": "Não! Verificar a sua taxa na Privat Equity usa uma consulta de crédito suave que não afeta a sua pontuação.",
+        "a3": "Não! Verificar a sua taxa na Fundia Invest usa uma consulta de crédito suave que não afeta a sua pontuação.",
         "q4": "Posso pedir se sou trabalhador independente?",
         "a4": "Sim! Trabalhadores independentes são bem-vindos. Precisará fornecer documentos adicionais como declarações fiscais e extratos bancários comerciais.",
         "q5": "O que acontece se o meu pedido for recusado?",
@@ -72,7 +72,7 @@
         "q1": "Como são protegidos os meus dados?",
         "a1": "Usamos encriptação SSL de 256 bits e somos totalmente conformes com o RGPD.",
         "q2": "Quem tem acesso às minhas informações?",
-        "a2": "Apenas pessoal autorizado da Privat Equity e os nossos parceiros financeiros quando aceita uma oferta.",
+        "a2": "Apenas pessoal autorizado da Fundia Invest e os nossos parceiros financeiros quando aceita uma oferta.",
         "q3": "Quanto tempo guardam as minhas informações?",
         "a3": "Guardamos de acordo com requisitos legais. Pode solicitar eliminação a qualquer momento."
       },
@@ -118,7 +118,7 @@
         "borrowingCapacity": { "term": "Capacidade de Endividamento", "definition": "O montante máximo que pode razoavelmente pedir emprestado." },
         "coBorrower": { "term": "Co-mutuário", "definition": "Uma pessoa que pede um empréstimo consigo e partilha igual responsabilidade." },
         "borrowerInsurance": { "term": "Seguro de Mutuário", "definition": "Um seguro que cobre pagamentos do empréstimo em caso de morte, invalidez ou perda de emprego." },
-        "prepaymentPenalty": { "term": "Penalização por Reembolso Antecipado", "definition": "Uma taxa cobrada se pagar o empréstimo antes do prazo. Na Privat Equity não temos penalizações." },
+        "prepaymentPenalty": { "term": "Penalização por Reembolso Antecipado", "definition": "Uma taxa cobrada se pagar o empréstimo antes do prazo. Na Fundia Invest não temos penalizações." },
         "revolvingCredit": { "term": "Crédito Rotativo", "definition": "Um tipo de crédito onde pode pedir, pagar e voltar a pedir até um limite aprovado." },
         "amortizationSchedule": { "term": "Plano de Amortização", "definition": "Um calendário detalhado mostrando cada pagamento do empréstimo." },
         "nominalRate": { "term": "Taxa Nominal", "definition": "A taxa de juro base sem incluir comissões adicionais." },
@@ -192,7 +192,7 @@
       "secure": { "title": "100% Seguro", "description": "Os seus dados estão protegidos" }
     },
     "featuresSection": {
-      "title": "Por Que Escolher a Privat Equity?",
+      "title": "Por Que Escolher a Fundia Invest?",
       "subtitle": "Combinamos tecnologia de ponta e serviço personalizado para tornar o empréstimo simples, rápido e transparente."
     },
     "products": {
@@ -229,7 +229,7 @@
       "story1": {
         "title": "Crédito Auto",
         "imageAlt": "Casal feliz que obteve o seu crédito auto",
-        "quote": "Obtivemos o nosso crédito auto em 24 horas! O processo foi simples e a equipa muito profissional. Recomendamos vivamente a Privat Equity.",
+        "quote": "Obtivemos o nosso crédito auto em 24 horas! O processo foi simples e a equipa muito profissional. Recomendamos vivamente a Fundia Invest.",
         "name": "Marie & Luc",
         "location": "Lyon - Crédito de 22.000€"
       },
@@ -245,7 +245,7 @@
     "partners": { "title": "Aprovado pelas principais instituições financeiras" },
     "cta": {
       "title": "Pronto para Começar?",
-      "description": "Junte-se a milhares de clientes satisfeitos que escolheram a Privat Equity para as suas necessidades de financiamento.",
+      "description": "Junte-se a milhares de clientes satisfeitos que escolheram a Fundia Invest para as suas necessidades de financiamento.",
       "button": "Solicitar Agora - Aprovação Instantânea"
     },
     "indexFeatures": {
@@ -273,7 +273,7 @@
       "q6": "A verificação de taxas afeta a minha pontuação de crédito?", "a6": "Não, verificar a sua elegibilidade não afeta a sua pontuação de crédito. Apenas o pedido formal de crédito será registado no seu histórico de crédito."
     },
     "seoSection": {
-      "title": "Sobre a Privat Equity: O seu parceiro de crédito de confiança",
+      "title": "Sobre a Fundia Invest: O seu parceiro de crédito de confiança",
       "intro": "é uma plataforma de empréstimos online líder que revolucionou a forma como particulares e empresas acedem ao crédito em França. Fundada em 2015, ajudámos mais de 50.000 clientes a alcançar os seus objetivos financeiros através de soluções de empréstimo transparentes, rápidas e seguras.",
       "missionTitle": "A nossa missão",
       "missionText": "Acreditamos que o acesso ao crédito deve ser simples, transparente e sem stress. A nossa missão é democratizar o crédito através da tecnologia para oferecer taxas competitivas, decisões instantâneas e uma experiência digital fluida. Estamos comprometidos com a inclusão financeira e ajudamos os nossos clientes a tomar decisões de empréstimo informadas.",
@@ -283,7 +283,7 @@
       "security": { "title": "Segurança:", "text": "Utilizamos encriptação de nível bancário e estamos totalmente em conformidade com o RGPD e os regulamentos bancários franceses." },
       "flexibility": { "title": "Flexibilidade:", "text": "Opções de pagamento antecipado sem penalizações, prazos flexíveis de 12 a 84 meses e montantes de 1.000€ a 75.000€." },
       "loanTypesTitle": "Tipos de empréstimos que oferecemos",
-      "loanTypesIntro": "Na Privat Equity, compreendemos que cada necessidade financeira é única. Por isso, oferecemos uma gama completa de produtos de empréstimo concebidos para corresponder às suas circunstâncias específicas:",
+      "loanTypesIntro": "Na Fundia Invest, compreendemos que cada necessidade financeira é única. Por isso, oferecemos uma gama completa de produtos de empréstimo concebidos para corresponder às suas circunstâncias específicas:",
       "personalLoan": { "title": "Empréstimos pessoais", "text": "Perfeito para casamentos, férias, despesas médicas ou qualquer projeto pessoal. Empréstimos de 1.000€ a 75.000€ com taxas a partir de 2,9% TAEG.", "example": "Exemplo: 10.000€ em 48 meses = 221€/mês (TAEG 4,9%, custo total: 10.608€)" },
       "autoLoan": { "title": "Créditos auto", "text": "Financie veículos novos ou usados com taxas competitivas e condições flexíveis. Taxas a partir de 3,2% TAEG.", "example": "Exemplo: 20.000€ em 60 meses = 362€/mês (TAEG 3,9%, custo total: 21.720€)" },
       "homeLoan": { "title": "Créditos para obras", "text": "Transforme o seu espaço com empréstimos concebidos para renovações, extensões ou melhorias energéticas.", "example": "Exemplo: 15.000€ em 72 meses = 238€/mês (TAEG 4,5%, custo total: 17.136€)" },
@@ -301,9 +301,9 @@
     }
   },
   "about": {
-    "title": "Sobre a Privat Equity",
+    "title": "Sobre a Fundia Invest",
     "subtitle": "O seu parceiro de confiança para soluções de crédito transparentes e personalizadas",
-    "intro1": "A Privat Equity é uma plataforma de empréstimos online inovadora que revoluciona o acesso ao crédito em França. Fundada com a missão de tornar o financiamento pessoal mais transparente, acessível e justo, conectamos milhares de mutuários com as melhores ofertas de crédito do mercado.",
+    "intro1": "A Fundia Invest é uma plataforma de empréstimos online inovadora que revoluciona o acesso ao crédito em França. Fundada com a missão de tornar o financiamento pessoal mais transparente, acessível e justo, conectamos milhares de mutuários com as melhores ofertas de crédito do mercado.",
     "intro2": "A nossa plataforma utiliza tecnologia de ponta para analisar o seu perfil financeiro e oferecer-lhe ofertas personalizadas em minutos. Trabalhamos com uma rede de parceiros financeiros cuidadosamente selecionados para garantir que obtém sempre as melhores condições possíveis.",
     "mission": {
       "title": "A Nossa Missão",
@@ -322,7 +322,7 @@
       "description": "Com mais de 15 anos de experiência combinada no setor financeiro, a nossa equipa compreende os desafios que os mutuários enfrentam. Usamos esta experiência para criar uma experiência de empréstimo que é simples, rápida e adaptada às suas necessidades."
     },
     "whyChoose": {
-      "title": "Porquê escolher a Privat Equity?",
+      "title": "Porquê escolher a Fundia Invest?",
       "online": { "title": "Processo 100% online:", "description": "Pedido rápido e decisão instantânea a partir do conforto de sua casa" },
       "comparison": { "title": "Comparação inteligente:", "description": "Analisamos dezenas de ofertas para encontrar a melhor para si" },
       "noCommitment": { "title": "Sem compromisso:", "description": "Verifique a sua elegibilidade sem impactar a sua pontuação de crédito" },
@@ -709,7 +709,7 @@
       "guide": {
         "introTitle": "O que é um crédito empresarial?",
         "introP1": "O crédito empresarial é um financiamento especialmente concebido para responder às necessidades das empresas, artesãos, comerciantes e profissionais liberais. Ao contrário dos empréstimos pessoais, destina-se a financiar projetos relacionados com a sua atividade profissional: aquisição de equipamentos, desenvolvimento comercial, fundo de maneio ou expansão.",
-        "introP2": "Na Privat Equity, oferecemos créditos empresariais de 5.000 € a 75.000 € com prazos de 12 a 84 meses. As nossas taxas competitivas a partir de 6,5% TAEG estão adaptadas às realidades económicas das PME e empreendedores.",
+        "introP2": "Na Fundia Invest, oferecemos créditos empresariais de 5.000 € a 75.000 € com prazos de 12 a 84 meses. As nossas taxas competitivas a partir de 6,5% TAEG estão adaptadas às realidades económicas das PME e empreendedores.",
         "typesTitle": "Tipos de créditos empresariais",
         "types": {
           "shortTerm": "Crédito de curto prazo: Financiamento de 3 a 12 meses para necessidades de tesouraria imediatas, ideal para gerir desfasamentos de tesouraria ou financiar stock sazonal.",
@@ -718,7 +718,7 @@
           "creditLine": "Linha de crédito: Facilidade de tesouraria renovável para gerir as flutuações de tesouraria diárias."
         },
         "eligibilityTitle": "Critérios de elegibilidade",
-        "eligibilityIntro": "Para obter um crédito empresarial na Privat Equity, geralmente deve:",
+        "eligibilityIntro": "Para obter um crédito empresarial na Fundia Invest, geralmente deve:",
         "eligibility": {
           "registered": "Ter uma empresa registada (empresário em nome individual, Lda., SA, etc.)",
           "activity": "Justificar uma atividade económica de pelo menos 6 a 12 meses",
@@ -752,7 +752,7 @@
         "q2": "Posso obter um crédito empresarial como empresário em nome individual?",
         "a2": "Sim, os empresários em nome individual podem perfeitamente solicitar um crédito empresarial. Terá de fornecer as suas declarações de faturação, extratos bancários e justificar uma atividade de pelo menos 6 a 12 meses. Os montantes concedidos dependem do seu nível de atividade.",
         "q3": "Quanto tempo demora a obter uma resposta?",
-        "a3": "Na Privat Equity, recebe uma resposta de princípio em 24 a 48 horas. A libertação dos fundos ocorre geralmente em 5 a 10 dias úteis após a validação completa do dossiê e assinatura dos documentos.",
+        "a3": "Na Fundia Invest, recebe uma resposta de princípio em 24 a 48 horas. A libertação dos fundos ocorre geralmente em 5 a 10 dias úteis após a validação completa do dossiê e assinatura dos documentos.",
         "q4": "Preciso de garantias para o meu crédito empresarial?",
         "a4": "Para montantes pequenos (até 25.000 €), geralmente não são necessárias garantias. Para montantes superiores, pode ser solicitada uma garantia pessoal do gerente ou uma garantia sobre os ativos da empresa, dependendo do perfil de risco.",
         "q5": "Posso reembolsar o meu crédito empresarial antecipadamente?",

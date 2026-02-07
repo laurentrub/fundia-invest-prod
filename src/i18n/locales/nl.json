@@ -2,9 +2,9 @@
   "resources": {
     "faq": {
       "title": "Veelgestelde Vragen",
-      "subtitle": "Alles wat u moet weten over leningen, aanvragen en Privat Equity",
+      "subtitle": "Alles wat u moet weten over leningen, aanvragen en Fundia Invest",
       "categories": { "general": "Algemene Vragen", "application": "Aanvraagproces", "rates": "Tarieven en Voorwaarden", "repayment": "Terugbetaling en Beheer", "credit": "Krediet en Geschiktheid", "security": "Veiligheid en Privacy", "special": "Bijzondere Situaties" },
-      "general": { "q1": "Wat is Privat Equity?", "a1": "Privat Equity is een online leenplatform dat leners verbindt met concurrerende kredietaanbiedingen.", "q2": "Hoe verdient Privat Equity geld?", "a2": "We ontvangen een commissie van onze financiële partners. Deze dienst is gratis voor leners.", "q3": "Is Privat Equity veilig?", "a3": "Ja, we zijn volledig AVG-conform en gebruiken bankversleuteling." },
+      "general": { "q1": "Wat is Fundia Invest?", "a1": "Fundia Invest is een online leenplatform dat leners verbindt met concurrerende kredietaanbiedingen.", "q2": "Hoe verdient Fundia Invest geld?", "a2": "We ontvangen een commissie van onze financiële partners. Deze dienst is gratis voor leners.", "q3": "Is Fundia Invest veilig?", "a3": "Ja, we zijn volledig AVG-conform en gebruiken bankversleuteling." },
       "application": { "q1": "Hoe lang duurt de aanvraag?", "a1": "Ongeveer 5 tot 10 minuten online.", "q2": "Welke documenten heb ik nodig?", "a2": "Geldig ID, inkomstenbewijs, bankafschriften en adresbewijs.", "q3": "Beïnvloedt de tariefscontrole mijn kredietscore?", "a3": "Nee, we gebruiken een zachte kredietcontrole.", "q4": "Kan ik aanvragen als zelfstandige?", "a4": "Ja! Zelfstandigen zijn welkom.", "q5": "Wat als mijn aanvraag wordt afgewezen?", "a5": "We leggen uit waarom en kunnen alternatieven voorstellen." },
       "rates": { "q1": "Welke rentetarieven bieden jullie?", "a1": "Vanaf 2,9% JKP voor gekwalificeerde leners.", "q2": "Hoe wordt mijn rente bepaald?", "a2": "Op basis van kredietscore, inkomen en leningbedrag.", "q3": "Zijn de tarieven vast of variabel?", "a3": "Al onze leningen hebben vaste tarieven.", "q4": "Welke bedragen zijn beschikbaar?", "a4": "Van €1.000 tot €75.000.", "q5": "Welke looptijden zijn beschikbaar?", "a5": "Van 12 tot 84 maanden.", "q6": "Zijn er kosten?", "a6": "We rekenen geen verwerkingskosten." },
       "repayment": { "q1": "Hoe doe ik betalingen?", "a1": "Automatische afschrijving van uw bankrekening.", "q2": "Kan ik mijn betaaldatum wijzigen?", "a2": "Ja, neem contact op met onze klantenservice.", "q3": "Kan ik vervroegd aflossen?", "a3": "Ja, zonder boetes.", "q4": "Wat als ik een betaling mis?", "a4": "Neem onmiddellijk contact met ons op.", "q5": "Kan ik het bedrag later verhogen?", "a5": "Niet eenmaal actief, maar herfinanciering is mogelijk." },
@@ -117,7 +117,7 @@
       "secure": { "title": "100% Veilig", "description": "Uw gegevens zijn beschermd" }
     },
     "featuresSection": {
-      "title": "Waarom Kiezen voor Privat Equity?",
+      "title": "Waarom Kiezen voor Fundia Invest?",
       "subtitle": "We combineren geavanceerde technologie en persoonlijke service om lenen eenvoudig, snel en transparant te maken."
     },
     "products": {
@@ -154,7 +154,7 @@
       "story1": {
         "title": "Autolening",
         "imageAlt": "Gelukkig stel dat hun autolening heeft gekregen",
-        "quote": "We kregen onze autolening binnen 24 uur! Het proces was eenvoudig en het team zeer professioneel. We bevelen Privat Equity ten zeerste aan.",
+        "quote": "We kregen onze autolening binnen 24 uur! Het proces was eenvoudig en het team zeer professioneel. We bevelen Fundia Invest ten zeerste aan.",
         "name": "Marie & Luc",
         "location": "Lyon - Lening van €22.000"
       },
@@ -170,7 +170,7 @@
     "partners": { "title": "Goedgekeurd door toonaangevende financiële instellingen" },
     "cta": {
       "title": "Klaar om te Beginnen?",
-      "description": "Sluit u aan bij duizenden tevreden klanten die kozen voor Privat Equity voor hun financieringsbehoeften.",
+      "description": "Sluit u aan bij duizenden tevreden klanten die kozen voor Fundia Invest voor hun financieringsbehoeften.",
       "button": "Nu Aanvragen - Directe Goedkeuring"
     },
     "indexFeatures": {
@@ -198,7 +198,7 @@
       "q6": "Beïnvloedt het controleren van tarieven mijn kredietscore?", "a6": "Nee, het controleren van uw geschiktheid heeft geen invloed op uw kredietscore. Alleen de formele kredietaanvraag wordt geregistreerd in uw kredietgeschiedenis."
     },
     "seoSection": {
-      "title": "Over Privat Equity: Uw betrouwbare kredietpartner",
+      "title": "Over Fundia Invest: Uw betrouwbare kredietpartner",
       "intro": "is een toonaangevend online leenplatform dat de manier waarop particulieren en bedrijven toegang krijgen tot krediet in Frankrijk heeft gerevolutioneerd. Sinds onze oprichting in 2015 hebben we meer dan 50.000 klanten geholpen hun financiële doelen te bereiken door middel van transparante, snelle en veilige leenoplossingen.",
       "missionTitle": "Onze missie",
       "missionText": "Wij geloven dat toegang tot krediet eenvoudig, transparant en stressvrij moet zijn. Onze missie is om lenen te democratiseren door technologie in te zetten om concurrerende tarieven, directe beslissingen en een naadloze digitale ervaring te bieden. We zijn toegewijd aan financiële inclusie en helpen onze klanten weloverwogen leenbeslissingen te nemen.",
@@ -208,7 +208,7 @@
       "security": { "title": "Veiligheid:", "text": "Wij gebruiken bankversleuteling en voldoen volledig aan de AVG en Franse bankvoorschriften." },
       "flexibility": { "title": "Flexibiliteit:", "text": "Vervroegde aflossingsopties zonder boetes, flexibele looptijden van 12 tot 84 maanden en bedragen van €1.000 tot €75.000." },
       "loanTypesTitle": "Soorten leningen die wij aanbieden",
-      "loanTypesIntro": "Bij Privat Equity begrijpen we dat elke financiële behoefte uniek is. Daarom bieden we een uitgebreid aanbod van leenproducten die zijn ontworpen om aan uw specifieke omstandigheden te voldoen:",
+      "loanTypesIntro": "Bij Fundia Invest begrijpen we dat elke financiële behoefte uniek is. Daarom bieden we een uitgebreid aanbod van leenproducten die zijn ontworpen om aan uw specifieke omstandigheden te voldoen:",
       "personalLoan": { "title": "Persoonlijke leningen", "text": "Perfect voor bruiloften, vakanties, medische kosten of elk persoonlijk project. Leen van €1.000 tot €75.000 met tarieven vanaf 2,9% JKP.", "example": "Voorbeeld: €10.000 over 48 maanden = €221/maand (4,9% JKP, totale kosten: €10.608)" },
       "autoLoan": { "title": "Autoleningen", "text": "Financier nieuwe of gebruikte voertuigen met concurrerende tarieven en flexibele voorwaarden. Tarieven vanaf 3,2% JKP.", "example": "Voorbeeld: €20.000 over 60 maanden = €362/maand (3,9% JKP, totale kosten: €21.720)" },
       "homeLoan": { "title": "Verbouwingsleningen", "text": "Transformeer uw leefruimte met leningen ontworpen voor renovaties, uitbreidingen of energieverbeteringen.", "example": "Voorbeeld: €15.000 over 72 maanden = €238/maand (4,5% JKP, totale kosten: €17.136)" },
@@ -226,9 +226,9 @@
     }
   },
   "about": {
-    "title": "Over Privat Equity",
+    "title": "Over Fundia Invest",
     "subtitle": "Uw vertrouwde partner voor transparante en gepersonaliseerde kredietoplossingen",
-    "intro1": "Privat Equity is een innovatief online leenplatform dat de toegang tot krediet in Frankrijk revolutioneert. Opgericht met de missie om persoonlijke financiering transparanter, toegankelijker en eerlijker te maken, verbinden we duizenden leners met de beste kredietaanbiedingen op de markt.",
+    "intro1": "Fundia Invest is een innovatief online leenplatform dat de toegang tot krediet in Frankrijk revolutioneert. Opgericht met de missie om persoonlijke financiering transparanter, toegankelijker en eerlijker te maken, verbinden we duizenden leners met de beste kredietaanbiedingen op de markt.",
     "intro2": "Ons platform maakt gebruik van geavanceerde technologie om uw financiële profiel te analyseren en u in enkele minuten gepersonaliseerde aanbiedingen te doen. We werken met een zorgvuldig geselecteerd netwerk van financiële partners om ervoor te zorgen dat u altijd de best mogelijke voorwaarden krijgt.",
     "mission": {
       "title": "Onze Missie",
@@ -247,7 +247,7 @@
       "description": "Met meer dan 15 jaar gecombineerde ervaring in de financiële sector begrijpt ons team de uitdagingen waarmee leners te maken hebben. We gebruiken deze expertise om een leenervaring te creëren die eenvoudig, snel en op maat is van uw behoeften."
     },
     "whyChoose": {
-      "title": "Waarom kiezen voor Privat Equity?",
+      "title": "Waarom kiezen voor Fundia Invest?",
       "online": { "title": "100% online proces:", "description": "Snelle aanvraag en directe beslissing vanuit het comfort van uw huis" },
       "comparison": { "title": "Slimme vergelijking:", "description": "We analyseren tientallen aanbiedingen om de beste voor u te vinden" },
       "noCommitment": { "title": "Geen verplichting:", "description": "Controleer uw geschiktheid zonder invloed op uw kredietscore" },
@@ -634,7 +634,7 @@
       "guide": {
         "introTitle": "Wat is een zakelijke lening?",
         "introP1": "Een zakelijke lening is financiering die speciaal is ontworpen om te voldoen aan de behoeften van bedrijven, ambachtslieden, handelaren en vrije beroepen. In tegenstelling tot persoonlijke leningen is deze bedoeld om projecten te financieren die verband houden met uw professionele activiteit: aanschaf van apparatuur, commerciële ontwikkeling, werkkapitaal of uitbreiding.",
-        "introP2": "Bij Privat Equity bieden wij zakelijke leningen van € 5.000 tot € 75.000 met looptijden van 12 tot 84 maanden. Onze concurrerende tarieven vanaf 6,5% JKP zijn aangepast aan de economische realiteiten van MKB en ondernemers.",
+        "introP2": "Bij Fundia Invest bieden wij zakelijke leningen van € 5.000 tot € 75.000 met looptijden van 12 tot 84 maanden. Onze concurrerende tarieven vanaf 6,5% JKP zijn aangepast aan de economische realiteiten van MKB en ondernemers.",
         "typesTitle": "Soorten zakelijke leningen",
         "types": {
           "shortTerm": "Kortlopend krediet: 3 tot 12 maanden financiering voor directe liquiditeitsbehoeften, ideaal voor het beheren van kasstroomproblemen of het financieren van seizoensvoorraad.",
@@ -643,7 +643,7 @@
           "creditLine": "Kredietlijn: Hernieuwbare kasfaciliteit om dagelijkse kasstroomfluctuaties te beheren."
         },
         "eligibilityTitle": "Toelatingscriteria",
-        "eligibilityIntro": "Om een zakelijke lening bij Privat Equity te verkrijgen, moet u over het algemeen:",
+        "eligibilityIntro": "Om een zakelijke lening bij Fundia Invest te verkrijgen, moet u over het algemeen:",
         "eligibility": {
           "registered": "Een geregistreerd bedrijf hebben (zzp'er, BV, NV, enz.)",
           "activity": "Een economische activiteit van minimaal 6 tot 12 maanden aantonen",
@@ -677,7 +677,7 @@
         "q2": "Kan ik als zzp'er/freelancer een zakelijke lening krijgen?",
         "a2": "Ja, zzp'ers en freelancers kunnen absoluut een zakelijke lening aanvragen. U moet uw omzetaangiften, bankafschriften verstrekken en minimaal 6 tot 12 maanden activiteit aantonen. De toegekende bedragen zijn afhankelijk van uw activiteitsniveau.",
         "q3": "Hoe lang duurt het om een antwoord te krijgen?",
-        "a3": "Bij Privat Equity ontvangt u binnen 24 tot 48 uur een voorlopig antwoord. De vrijgave van fondsen vindt over het algemeen plaats binnen 5 tot 10 werkdagen na volledige validatie van het dossier en ondertekening van de documenten.",
+        "a3": "Bij Fundia Invest ontvangt u binnen 24 tot 48 uur een voorlopig antwoord. De vrijgave van fondsen vindt over het algemeen plaats binnen 5 tot 10 werkdagen na volledige validatie van het dossier en ondertekening van de documenten.",
         "q4": "Heb ik onderpand nodig voor mijn zakelijke lening?",
         "a4": "Voor kleine bedragen (tot € 25.000) is over het algemeen geen onderpand vereist. Voor hogere bedragen kan een persoonlijke garantie van de directeur of een pandrecht op bedrijfsactiva worden gevraagd, afhankelijk van het risicoprofiel.",
         "q5": "Kan ik mijn zakelijke lening vervroegd aflossen?",
