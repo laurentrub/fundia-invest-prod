@@ -523,9 +523,11 @@
     "duration": "Duración del préstamo",
     "months": "meses",
     "monthly": "Pago mensual",
+    "monthlyPayment": "Cuota mensual",
     "month": "mes",
     "totalCost": "Costo total",
     "rate": "Tasa de interés",
+    "interestRate": "Tasa de interés (TAE)",
     "getApproval": "Obtener aprobación",
     "disclaimer": "Cálculo de ejemplo para una tasa TAE del 4,5%. La tasa final depende de su perfil."
   },

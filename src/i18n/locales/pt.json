@@ -409,9 +409,11 @@
     "duration": "Duração do empréstimo",
     "months": "meses",
     "monthly": "Pagamento mensal",
+    "monthlyPayment": "Prestação mensal",
     "month": "mês",
     "totalCost": "Custo total",
     "rate": "Taxa de juros",
+    "interestRate": "Taxa de juros (TAEG)",
     "getApproval": "Obter aprovação",
     "disclaimer": "Exemplo de cálculo para uma taxa TAEG de 4,5%. A taxa final depende do seu perfil."
   },

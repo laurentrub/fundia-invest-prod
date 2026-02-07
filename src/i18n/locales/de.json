@@ -642,9 +642,11 @@
     "duration": "Kreditlaufzeit",
     "months": "Monate",
     "monthly": "Monatliche Rate",
+    "monthlyPayment": "Monatliche Rate",
     "month": "Monat",
     "totalCost": "Gesamtkosten",
     "rate": "Zinssatz",
+    "interestRate": "Zinssatz (eff. Jahreszins)",
     "getApproval": "Genehmigung erhalten",
     "disclaimer": "Beispielrechnung für einen effektiven Jahreszins von 4,5%. Der endgültige Zinssatz hängt von Ihrem Profil ab."
   },

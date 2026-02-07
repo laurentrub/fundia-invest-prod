@@ -268,9 +268,11 @@
     "duration": "Loan duration",
     "months": "months",
     "monthly": "Monthly payment",
+    "monthlyPayment": "Monthly payment",
     "month": "month",
     "totalCost": "Total cost",
     "rate": "Interest rate",
+    "interestRate": "Interest rate (APR)",
     "getApproval": "Get approval",
     "disclaimer": "Example calculation for a 4.5% APR rate. The final rate depends on your profile."
   },

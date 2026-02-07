@@ -334,9 +334,11 @@
     "duration": "Looptijd lening",
     "months": "maanden",
     "monthly": "Maandelijkse betaling",
+    "monthlyPayment": "Maandelijkse betaling",
     "month": "maand",
     "totalCost": "Totale kosten",
     "rate": "Rentetarief",
+    "interestRate": "Rentetarief (JKP)",
     "getApproval": "Goedkeuring verkrijgen",
     "disclaimer": "Voorbeeldberekening voor een JKP van 4,5%. Het uiteindelijke tarief is afhankelijk van uw profiel."
   },

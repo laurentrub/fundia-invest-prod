@@ -334,9 +334,11 @@
     "duration": "Trajanje kredita",
     "months": "mjeseci",
     "monthly": "Mjesečna rata",
+    "monthlyPayment": "Mjesečna rata",
     "month": "mjesec",
     "totalCost": "Ukupni trošak",
     "rate": "Kamatna stopa",
+    "interestRate": "Kamatna stopa (EKS)",
     "getApproval": "Dobiti odobrenje",
     "disclaimer": "Primjer izračuna za stopu od 4,5% EKS. Konačna stopa ovisi o vašem profilu."
   },
