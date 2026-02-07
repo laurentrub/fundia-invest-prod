@@ -808,5 +808,12 @@
       "validation": { "validationError": "Validatiefout", "correctErrors": "Corrigeer de fouten." },
       "messages": { "success": "Aanvraag ingediend!", "successDesc": "Uw aanvraag is succesvol verzonden." }
     }
+  },
+  "seo": {
+    "title": "Fundia Invest - Snelle Online Leningen | Persoonlijke, Auto- & Zakelijke Financiering",
+    "description": "Directe goedkeuring van € 1.000 tot € 75.000. Persoonlijke leningen, autofinanciering, woningverbetering & schuldconsolidatie. Rente vanaf 2,9 % JKP. Aanvragen in 5 minuten.",
+    "author": "Fundia Invest",
+    "ogTitle": "Fundia Invest - Snelle Online Leningen & Kredietoplossingen",
+    "ogDescription": "Directe goedkeuring, concurrerende rente vanaf 2,9 % JKP, flexibele voorwaarden. Uw betrouwbare kredietpartner."
   }
 }

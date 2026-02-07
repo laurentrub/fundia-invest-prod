@@ -1008,5 +1008,12 @@
       "validation": { "projectTypeRequired": "Tipo requerido", "projectNameMin": "Mínimo 3 caracteres", "projectDescriptionMin": "Mínimo 50 caracteres", "projectSectorRequired": "Sector requerido", "projectLocationRequired": "Ubicación requerida", "fundingAmountRequired": "Importe requerido", "fundingPurposeRequired": "Uso requerido", "expectedRevenueRequired": "Ingresos requeridos", "projectDurationRequired": "Duración requerida", "breakEvenDateRequired": "Fecha requerida", "ownContributionRequired": "Aportación requerida", "companyNameRequired": "Nombre requerido", "companyStatusRequired": "Forma requerida", "siretInvalid": "CIF inválido", "creationDateRequired": "Fecha requerida", "employeeCountRequired": "Empleados requerido", "annualRevenueRequired": "Facturación requerida", "firstNameRequired": "Nombre requerido", "lastNameRequired": "Apellido requerido", "emailInvalid": "Email inválido", "phoneInvalid": "Teléfono inválido", "businessPlanRequired": "Confirme plan de negocio", "financialProjectionsRequired": "Confirme proyecciones", "marketStudyRequired": "Confirme estudio de mercado", "validationError": "Error de validación", "correctErrors": "Corrija los errores." },
       "messages": { "success": "¡Solicitud enviada!", "successDesc": "Su solicitud ha sido enviada correctamente." }
     }
+  },
+  "seo": {
+    "title": "Fundia Invest - Préstamos Online Rápidos | Financiación Personal, Auto y Empresas",
+    "description": "Aprobación instantánea de 1.000 € a 75.000 €. Préstamos personales, financiación de autos, reformas y reunificación de deudas. Desde 2,9 % TAE. Solicita en 5 minutos.",
+    "author": "Fundia Invest",
+    "ogTitle": "Fundia Invest - Préstamos Online Rápidos y Soluciones de Crédito",
+    "ogDescription": "Aprobación instantánea, tasas competitivas desde 2,9 % TAE, condiciones flexibles. Su socio de crédito de confianza."
   }
 }

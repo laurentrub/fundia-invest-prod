@@ -883,5 +883,12 @@
       "validation": { "validationError": "Erro de validação", "correctErrors": "Corrija os erros." },
       "messages": { "success": "Pedido enviado!", "successDesc": "O seu pedido foi enviado com sucesso." }
     }
+  },
+  "seo": {
+    "title": "Fundia Invest - Empréstimos Online Rápidos | Financiamento Pessoal, Auto e Empresas",
+    "description": "Aprovação instantânea de 1.000 € a 75.000 €. Empréstimos pessoais, financiamento auto, obras e consolidação de dívidas. Taxas a partir de 2,9 % TAEG. Solicite em 5 minutos.",
+    "author": "Fundia Invest",
+    "ogTitle": "Fundia Invest - Empréstimos Online Rápidos e Soluções de Crédito",
+    "ogDescription": "Aprovação instantânea, taxas competitivas a partir de 2,9 % TAEG, condições flexíveis. O seu parceiro de crédito de confiança."
   }
 }

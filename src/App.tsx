@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ScrollToTop } from "./components/ScrollToTop";
 import { AuthProvider } from "@/hooks/useAuth";
 import ErrorBoundary from "./components/ErrorBoundary";
+import DynamicHead from "./components/DynamicHead";
 import Index from "./pages/Index";
 import PersonalLoan from "./pages/PersonalLoan";
 import AutoLoan from "./pages/AutoLoan";
@@ -49,6 +50,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <AuthProvider>
+          <DynamicHead />
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />

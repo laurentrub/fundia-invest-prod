@@ -746,5 +746,12 @@
       "validation": { "validationError": "Greška validacije", "correctErrors": "Ispravite greške." },
       "messages": { "success": "Zahtjev poslan!", "successDesc": "Vaš zahtjev je uspješno poslan." }
     }
+  },
+  "seo": {
+    "title": "Fundia Invest - Brzi Online Zajmovi | Osobno, Auto i Poslovno Financiranje",
+    "description": "Trenutno odobrenje od 1.000 € do 75.000 €. Osobni zajmovi, auto financiranje, renoviranje i konsolidacija dugova. Kamatne stope od 2,9 % EKS. Prijavite se za 5 minuta.",
+    "author": "Fundia Invest",
+    "ogTitle": "Fundia Invest - Brzi Online Zajmovi i Kreditna Rješenja",
+    "ogDescription": "Trenutno odobrenje, konkurentne kamatne stope od 2,9 % EKS, fleksibilni uvjeti. Vaš pouzdani kreditni partner."
   }
 }
