@@ -1021,7 +1021,8 @@
       "pending": "En attente",
       "in_progress": "En cours",
       "approved": "Approuvé",
-      "refused": "Refusé"
+      "refused": "Refusé",
+      "rejected": "Rejeté"
     },
     "stats": {
       "total": "Total",
