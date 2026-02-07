@@ -80,7 +80,7 @@ export function ContractPreviewModal({
       doc.setTextColor(255, 255, 255);
       doc.setFontSize(24);
       doc.setFont('helvetica', 'bold');
-      doc.text('PRIVAT EQUITY', pageWidth / 2, 20, { align: 'center' });
+      doc.text('FUNDIA INVEST', pageWidth / 2, 20, { align: 'center' });
       
       doc.setFontSize(14);
       doc.setFont('helvetica', 'normal');
@@ -116,7 +116,7 @@ export function ContractPreviewModal({
       
       doc.text('Le Prêteur:', margin, yPos);
       yPos += 5;
-      doc.text('Privat Equity', margin + 5, yPos);
+      doc.text('Fundia Invest', margin + 5, yPos);
       yPos += 5;
       doc.text('5588 Rue Frontenac, Montréal, QC H2H 2L9, Canada', margin + 5, yPos);
       yPos += 10;
@@ -204,7 +204,7 @@ export function ContractPreviewModal({
       // Left signature box
       doc.rect(margin, yPos, 75, 40);
       doc.text('Le Prêteur', margin + 5, yPos + 8);
-      doc.text('Privat Equity', margin + 5, yPos + 16);
+      doc.text('Fundia Invest', margin + 5, yPos + 16);
       doc.text('Date: _______________', margin + 5, yPos + 32);
 
       // Right signature box
@@ -217,8 +217,8 @@ export function ContractPreviewModal({
       const footerY = doc.internal.pageSize.getHeight() - 15;
       doc.setFontSize(8);
       doc.setTextColor(128, 128, 128);
-      doc.text('Privat Equity - 5588 Rue Frontenac, Montréal, QC H2H 2L9, Canada', pageWidth / 2, footerY, { align: 'center' });
-      doc.text('www.privat-equity.com', pageWidth / 2, footerY + 5, { align: 'center' });
+      doc.text('Fundia Invest - 5588 Rue Frontenac, Montréal, QC H2H 2L9, Canada', pageWidth / 2, footerY, { align: 'center' });
+      doc.text('www.fundia-invest.com', pageWidth / 2, footerY + 5, { align: 'center' });
 
       // Generate blob and URL
       const blob = doc.output('blob');

@@ -26,14 +26,14 @@ const Terms = () => {
             <div className="prose prose-lg max-w-none">
               <h2 className="text-2xl font-bold text-foreground mb-4">1. Acceptation des conditions</h2>
               <p className="text-foreground leading-relaxed mb-6">
-                En accédant et en utilisant le site web de Privat Equity (le "Site") et nos services, vous acceptez 
+                En accédant et en utilisant le site web de Fundia Invest (le "Site") et nos services, vous acceptez 
                 d'être lié par ces conditions d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas 
                 utiliser notre Site ou nos services.
               </p>
 
               <h2 className="text-2xl font-bold text-foreground mb-4">2. Description du service</h2>
               <p className="text-foreground leading-relaxed mb-6">
-                Privat Equity est une plateforme de mise en relation qui connecte les emprunteurs potentiels avec 
+                Fundia Invest est une plateforme de mise en relation qui connecte les emprunteurs potentiels avec 
                 des partenaires financiers agréés. Nous ne sommes pas nous-mêmes un prêteur et ne prenons pas de 
                 décisions de crédit. Notre rôle est de faciliter la mise en relation et de présenter des offres 
                 adaptées à votre profil.
@@ -86,15 +86,15 @@ const Terms = () => {
 
               <h2 className="text-2xl font-bold text-foreground mb-4">7. Propriété intellectuelle</h2>
               <p className="text-foreground leading-relaxed mb-6">
-                Tous les contenus du Site (textes, images, logos, design, code source) sont la propriété de Privat 
-                Equity ou de ses concédants de licence et sont protégés par les lois sur la propriété intellectuelle. 
+                Tous les contenus du Site (textes, images, logos, design, code source) sont la propriété de Fundia 
+                Invest ou de ses concédants de licence et sont protégés par les lois sur la propriété intellectuelle.
                 Vous ne pouvez pas reproduire, distribuer, modifier ou utiliser ces contenus sans notre autorisation 
                 écrite préalable.
               </p>
 
               <h2 className="text-2xl font-bold text-foreground mb-4">8. Limitations de responsabilité</h2>
               <p className="text-foreground leading-relaxed mb-3">
-                Privat Equity ne peut être tenu responsable de :
+                Fundia Invest ne peut être tenu responsable de :
               </p>
               <ul className="list-disc pl-6 space-y-2 text-foreground mb-6">
                 <li>Les décisions de crédit prises par les établissements prêteurs</li>
@@ -163,8 +163,8 @@ const Terms = () => {
                 Pour toute question concernant ces conditions d'utilisation :
               </p>
               <ul className="list-none space-y-2 text-foreground">
-                <li><strong>Email :</strong> legal@privatequity.fr</li>
-                <li><strong>Adresse :</strong> Privat Equity, 123 Avenue des Champs-Élysées, 75008 Paris, France</li>
+                <li><strong>Email :</strong> legal@fundia-invest.com</li>
+                <li><strong>Adresse :</strong> Fundia Invest, 5588 Rue Frontenac, Montréal, QC H2H 2L9, Canada</li>
                 <li><strong>Téléphone :</strong> 01 23 45 67 89</li>
               </ul>
             </div>

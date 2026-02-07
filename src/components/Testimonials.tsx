@@ -20,7 +20,7 @@ const Testimonials = () => {
       name: "Pierre Martin",
       location: "Lyon",
       rating: 5,
-      text: "Après avoir comparé plusieurs banques, Privat Equity m'a proposé le meilleur taux pour mon crédit auto. La simulation en ligne est très pratique et l'approbation a été rapide.",
+      text: "Après avoir comparé plusieurs banques, Fundia Invest m'a proposé le meilleur taux pour mon crédit auto. La simulation en ligne est très pratique et l'approbation a été rapide.",
       project: "Crédit auto - 22 000€",
       initials: "PM",
       color: "bg-primary"

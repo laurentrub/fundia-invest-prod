@@ -51,7 +51,7 @@
       "secure": { "title": "100% Secure", "description": "Your data is protected" }
     },
     "featuresSection": {
-      "title": "Why Choose Privat Equity?",
+      "title": "Why Choose Fundia Invest?",
       "subtitle": "We combine cutting-edge technology and personalized service to make borrowing simple, fast, and transparent."
     },
     "products": {
@@ -88,7 +88,7 @@
       "story1": {
         "title": "Auto Loan",
         "imageAlt": "Happy couple who got their auto loan",
-        "quote": "We got our auto loan in 24 hours! The process was simple and the team very professional. We highly recommend Privat Equity.",
+        "quote": "We got our auto loan in 24 hours! The process was simple and the team very professional. We highly recommend Fundia Invest.",
         "name": "Marie & Luc",
         "location": "Lyon - €22,000 loan"
       },
@@ -104,7 +104,7 @@
     "partners": { "title": "Approved by leading financial institutions" },
     "cta": {
       "title": "Ready to Get Started?",
-      "description": "Join thousands of satisfied customers who chose Privat Equity for their financing needs.",
+      "description": "Join thousands of satisfied customers who chose Fundia Invest for their financing needs.",
       "button": "Apply Now - Instant Approval"
     },
     "indexFeatures": {
@@ -132,7 +132,7 @@
       "q6": "Does checking rates affect my credit score?", "a6": "No, checking your eligibility does not affect your credit score. Only the formal credit application will be recorded in your credit history."
     },
     "seoSection": {
-      "title": "About Privat Equity: Your Trusted Credit Partner",
+      "title": "About Fundia Invest: Your Trusted Credit Partner",
       "intro": "is a leading online lending platform that has revolutionized how individuals and businesses access credit in France. Founded in 2015, we have helped over 50,000 clients achieve their financial goals through transparent, fast, and secure lending solutions.",
       "missionTitle": "Our Mission",
       "missionText": "We believe that access to credit should be simple, transparent, and stress-free. Our mission is to democratize lending by leveraging technology to offer competitive rates, instant decisions, and a seamless digital experience. We are committed to financial inclusion and helping our clients make informed borrowing decisions.",
@@ -142,7 +142,7 @@
       "security": { "title": "Security:", "text": "We use bank-level encryption and are fully compliant with GDPR and French banking regulations." },
       "flexibility": { "title": "Flexibility:", "text": "Early repayment options without penalties, flexible terms from 12 to 84 months, and amounts from €1,000 to €75,000." },
       "loanTypesTitle": "Types of Loans We Offer",
-      "loanTypesIntro": "At Privat Equity, we understand that every financial need is unique. That's why we offer a comprehensive range of loan products designed to match your specific circumstances:",
+      "loanTypesIntro": "At Fundia Invest, we understand that every financial need is unique. That's why we offer a comprehensive range of loan products designed to match your specific circumstances:",
       "personalLoan": { "title": "Personal Loans", "text": "Perfect for weddings, vacations, medical expenses, or any personal project. Borrow from €1,000 to €75,000 with rates starting at 2.9% APR.", "example": "Example: €10,000 over 48 months = €221/month (4.9% APR, total cost: €10,608)" },
       "autoLoan": { "title": "Auto Loans", "text": "Finance new or used vehicles with competitive rates and flexible terms. Rates starting at 3.2% APR.", "example": "Example: €20,000 over 60 months = €362/month (3.9% APR, total cost: €21,720)" },
       "homeLoan": { "title": "Home Improvement Loans", "text": "Transform your living space with loans designed for renovations, extensions, or energy improvements.", "example": "Example: €15,000 over 72 months = €238/month (4.5% APR, total cost: €17,136)" },
@@ -160,9 +160,9 @@
     }
   },
   "about": {
-    "title": "About Privat Equity",
+    "title": "About Fundia Invest",
     "subtitle": "Your trusted partner for transparent and personalized credit solutions",
-    "intro1": "Privat Equity is an innovative online lending platform revolutionizing credit access in France. Founded with the mission of making personal financing more transparent, accessible, and fair, we connect thousands of borrowers with the best credit offers on the market.",
+    "intro1": "Fundia Invest is an innovative online lending platform revolutionizing credit access in France. Founded with the mission of making personal financing more transparent, accessible, and fair, we connect thousands of borrowers with the best credit offers on the market.",
     "intro2": "Our platform uses cutting-edge technology to analyze your financial profile and offer you personalized offers in minutes. We work with a carefully selected network of financial partners to ensure you always get the best possible conditions.",
     "mission": {
       "title": "Our Mission",
@@ -181,7 +181,7 @@
       "description": "With over 15 years of combined experience in the financial sector, our team understands the challenges borrowers face. We use this expertise to create a lending experience that is simple, fast, and tailored to your needs."
     },
     "whyChoose": {
-      "title": "Why Choose Privat Equity?",
+      "title": "Why Choose Fundia Invest?",
       "online": { "title": "100% Online Process:", "description": "Quick application and instant decision from the comfort of your home" },
       "comparison": { "title": "Smart Comparison:", "description": "We analyze dozens of offers to find the best one for you" },
       "noCommitment": { "title": "No Commitment:", "description": "Check your eligibility without impacting your credit score" },
@@ -196,7 +196,7 @@
     "phoneNumber": "01 23 45 67 89",
     "phoneHours": "Mon-Sat: 9am-6pm",
     "email": "Email",
-    "emailAddress": "contact@privatequity.fr",
+    "emailAddress": "contact@fundia-invest.com",
     "emailResponse": "Response within 24h",
     "address": "Address",
     "addressLine1": "5588 Rue Frontenac",
@@ -229,7 +229,7 @@
   },
   "footer": {
     "company": "Company",
-    "description": "Privat Equity has been supporting individuals and businesses in their financing projects for over 10 years. Our mission: to make credit accessible, transparent, and tailored to every situation.",
+    "description": "Fundia Invest has been supporting individuals and businesses in their financing projects for over 10 years. Our mission: to make credit accessible, transparent, and tailored to every situation.",
     "addressLabel": "Address",
     "addressLine1": "5588 Rue Frontenac",
     "addressLine2": "Montréal, QC H2H 2L9, Canada",
@@ -244,7 +244,7 @@
     "glossary": "Glossary",
     "creditGuide": "Credit Guide",
     "newsletter": "Newsletter",
-    "copyright": "© 2024 Privat Equity. All rights reserved."
+    "copyright": "© 2026 Fundia Invest. All rights reserved."
   },
   "newsletter": {
     "title": "Stay informed about the best offers",
@@ -322,7 +322,7 @@
       "guide": {
         "whatIsTitle": "What is a personal loan?",
         "whatIsP1": "A personal loan is an unsecured loan that provides you with a lump sum of money for personal use. Unlike mortgages or auto loans tied to specific purchases, personal loans offer maximum flexibility.",
-        "whatIsP2": "At Privat Equity, our personal loans range from €1,000 to €75,000 with repayment terms of 12 to 84 months. We offer competitive fixed interest rates starting from 2.9% APR.",
+        "whatIsP2": "At Fundia Invest, our personal loans range from €1,000 to €75,000 with repayment terms of 12 to 84 months. We offer competitive fixed interest rates starting from 2.9% APR.",
         "usesTitle": "Common uses for personal loans",
         "uses": {
           "consolidation": "Debt consolidation: Combine multiple high-interest debts into one manageable monthly payment",
@@ -335,7 +335,7 @@
           "emergency": "Emergency expenses: Handle unexpected costs like car repairs or urgent home repairs"
         },
         "qualifyTitle": "How to qualify",
-        "qualifyIntro": "While eligibility criteria vary by lender, at Privat Equity we generally require applicants to:",
+        "qualifyIntro": "While eligibility criteria vary by lender, at Fundia Invest we generally require applicants to:",
         "qualifyItems": {
           "age": "Be at least 18 years old",
           "residency": "Be a French resident or have a valid residence permit",
@@ -427,7 +427,7 @@
       "faqTitle": "Auto Loan FAQ",
       "faqs": {
         "q1": "What's the difference between your financing and dealer financing?",
-        "a1": "Getting pre-approved with Privat Equity gives you a guaranteed rate and amount before your search, putting you in a stronger negotiating position.",
+        "a1": "Getting pre-approved with Fundia Invest gives you a guaranteed rate and amount before your search, putting you in a stronger negotiating position.",
         "q2": "Can I finance a used car from a private seller?",
         "a2": "Yes! We finance used vehicles from both dealerships and private sellers. For private sales, we'll need the vehicle's VIN, current mileage, and condition details.",
         "q3": "What's the maximum age for a used car to be financed?",
@@ -498,7 +498,7 @@
       "guide": {
         "introTitle": "What is a Business Loan?",
         "introP1": "A business loan is financing specifically designed to meet the needs of businesses, craftsmen, merchants, and professionals. Unlike personal loans, it is intended to finance projects related to your professional activity: equipment acquisition, commercial development, working capital, or expansion.",
-        "introP2": "At Privat Equity, we offer business loans from €5,000 to €75,000 with repayment terms of 12 to 84 months. Our competitive rates starting from 6.5% APR are adapted to the economic realities of SMEs and entrepreneurs.",
+        "introP2": "At Fundia Invest, we offer business loans from €5,000 to €75,000 with repayment terms of 12 to 84 months. Our competitive rates starting from 6.5% APR are adapted to the economic realities of SMEs and entrepreneurs.",
         "typesTitle": "Types of Business Loans",
         "types": {
           "shortTerm": "Short-term credit: 3 to 12-month financing for immediate cash needs, ideal for managing cash flow gaps or financing seasonal stock.",
@@ -507,7 +507,7 @@
           "creditLine": "Credit line: Renewable cash facility to manage daily cash flow fluctuations."
         },
         "eligibilityTitle": "Eligibility Criteria",
-        "eligibilityIntro": "To obtain a business loan at Privat Equity, you generally must:",
+        "eligibilityIntro": "To obtain a business loan at Fundia Invest, you generally must:",
         "eligibility": {
           "registered": "Have a registered business (sole trader, LLC, SAS, etc.)",
           "activity": "Demonstrate economic activity of at least 6 to 12 months",
@@ -541,7 +541,7 @@
         "q2": "Can I get a business loan as a sole trader/freelancer?",
         "a2": "Yes, sole traders and freelancers can absolutely apply for a business loan. You'll need to provide your turnover declarations, bank statements, and demonstrate at least 6 to 12 months of activity. Amounts granted depend on your activity level.",
         "q3": "How long does it take to get a response?",
-        "a3": "At Privat Equity, you receive a preliminary response within 24 to 48 hours. Fund release generally occurs within 5 to 10 business days after complete file validation and document signing.",
+        "a3": "At Fundia Invest, you receive a preliminary response within 24 to 48 hours. Fund release generally occurs within 5 to 10 business days after complete file validation and document signing.",
         "q4": "Do I need collateral for my business loan?",
         "a4": "For small amounts (up to €25,000), no collateral is generally required. For higher amounts, a personal guarantee from the director or a lien on business assets may be requested depending on the risk profile.",
         "q5": "Can I repay my business loan early?",

@@ -63,9 +63,9 @@ const Header = () => {
       <nav className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link to="/" className="flex items-center space-x-2">
           <div className="flex items-center justify-center w-10 h-10 bg-gradient-hero rounded-lg">
-            <span className="text-lg font-bold text-primary-foreground">PE</span>
+            <span className="text-lg font-bold text-primary-foreground">FI</span>
           </div>
-          <span className="text-xl font-bold text-foreground">Privat Equity</span>
+          <span className="text-xl font-bold text-foreground">Fundia Invest</span>
         </Link>
 
         {/* Desktop Navigation */}

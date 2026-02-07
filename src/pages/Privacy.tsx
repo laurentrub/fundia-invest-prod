@@ -26,7 +26,7 @@ const Privacy = () => {
             <div className="prose prose-lg max-w-none">
               <h2 className="text-2xl font-bold text-foreground mb-4">1. Introduction</h2>
               <p className="text-foreground leading-relaxed mb-6">
-                Privat Equity ("nous", "notre" ou "nos") s'engage à protéger et à respecter votre vie privée. 
+                Fundia Invest ("nous", "notre" ou "nos") s'engage à protéger et à respecter votre vie privée. 
                 Cette politique de confidentialité explique comment nous collectons, utilisons, partageons et 
                 protégeons vos informations personnelles lorsque vous utilisez notre site web et nos services.
               </p>
@@ -90,7 +90,7 @@ const Privacy = () => {
                 <li><strong>Droit de retrait du consentement :</strong> Retirer votre consentement à tout moment</li>
               </ul>
               <p className="text-foreground leading-relaxed mb-6">
-                Pour exercer ces droits, contactez-nous à : privacy@privatequity.fr
+                Pour exercer ces droits, contactez-nous à : privacy@fundia-invest.com
               </p>
 
               <h2 className="text-2xl font-bold text-foreground mb-4">7. Cookies et technologies similaires</h2>
@@ -126,8 +126,8 @@ const Privacy = () => {
                 Pour toute question concernant cette politique de confidentialité ou le traitement de vos données personnelles :
               </p>
               <ul className="list-none space-y-2 text-foreground mb-6">
-                <li><strong>Email :</strong> privacy@privatequity.fr</li>
-                <li><strong>Adresse :</strong> Privat Equity, 123 Avenue des Champs-Élysées, 75008 Paris, France</li>
+                <li><strong>Email :</strong> privacy@fundia-invest.com</li>
+                <li><strong>Adresse :</strong> Fundia Invest, 5588 Rue Frontenac, Montréal, QC H2H 2L9, Canada</li>
                 <li><strong>Téléphone :</strong> 01 23 45 67 89</li>
               </ul>
               <p className="text-foreground leading-relaxed">

@@ -439,7 +439,7 @@ const Index = () => {
           
           <div className="prose prose-lg max-w-none space-y-6 text-foreground">
             <p className="text-lg leading-relaxed">
-              <strong>Privat Equity</strong> {t('home.seoSection.intro')}
+              <strong>Fundia Invest</strong> {t('home.seoSection.intro')}
             </p>
 
             <h3 className="text-2xl font-bold mt-8 mb-4">{t('home.seoSection.missionTitle')}</h3>

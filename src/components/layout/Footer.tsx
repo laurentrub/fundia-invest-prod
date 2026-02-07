@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="container mx-auto px-6 md:px-12 lg:px-16 py-12 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-lg font-bold mb-4">Privat Equity</h3>
+            <h3 className="text-lg font-bold mb-4">Fundia Invest</h3>
             <p className="text-sm text-primary-foreground/80 leading-relaxed mb-4">
               {t('footer.description')}
             </p>
