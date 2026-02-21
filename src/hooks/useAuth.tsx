@@ -67,7 +67,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const signUp = async (email: string, password: string, firstName: string, lastName: string, redirectTo?: string) => {
     const redirectUrl = `${window.location.origin}/`;
     
-    const { error } = await supabase.auth.signUp({
+    const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: {
@@ -80,14 +80,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     });
     
     if (!error) {
-      // Send welcome email
-      try {
-        await supabase.functions.invoke('send-welcome-email', {
-          body: { email, firstName, lastName }
-        });
-      } catch (emailError) {
-        console.error('Error sending welcome email:', emailError);
-        // Don't block signup if email fails
+      // Send welcome email only when a user session exists (JWT required by function)
+      if (data.session) {
+        try {
+          await supabase.functions.invoke('send-welcome-email', {
+            body: { firstName, lastName }
+          });
+        } catch (emailError) {
+          console.error('Error sending welcome email:', emailError);
+          // Don't block signup if email fails
+        }
       }
       
       navigate(redirectTo || '/');

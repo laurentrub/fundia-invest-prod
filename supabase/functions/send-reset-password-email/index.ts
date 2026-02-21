@@ -1,4 +1,3 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "https://esm.sh/resend@4.0.0";
 import { Webhook } from "https://esm.sh/standardwebhooks@1.0.0";
 
@@ -22,6 +21,21 @@ interface RecoveryEmailData {
   };
 }
 
+const isRecoveryEmailData = (value: unknown): value is RecoveryEmailData => {
+  if (!value || typeof value !== "object") return false;
+  const data = value as Record<string, unknown>;
+  const user = data.user as Record<string, unknown> | undefined;
+  const emailData = data.email_data as Record<string, unknown> | undefined;
+
+  return Boolean(
+    user &&
+    emailData &&
+    typeof user.email === "string" &&
+    typeof emailData.token_hash === "string" &&
+    typeof emailData.redirect_to === "string",
+  );
+};
+
 const handler = async (req: Request): Promise<Response> => {
   console.log("🔐 Reset password email function called");
 
@@ -31,7 +45,7 @@ const handler = async (req: Request): Promise<Response> => {
 
   try {
     const payload = await req.text();
-    const headers = Object.fromEntries(req.headers);
+    const headers = Object.fromEntries(req.headers.entries());
     
     console.log("📧 Processing reset password request");
 
@@ -44,7 +58,11 @@ const handler = async (req: Request): Promise<Response> => {
     let emailData: RecoveryEmailData;
 
     try {
-      emailData = wh.verify(payload, headers) as RecoveryEmailData;
+      const verifiedPayload = await wh.verify(payload, headers);
+      if (!isRecoveryEmailData(verifiedPayload)) {
+        throw new Error("Invalid recovery payload shape");
+      }
+      emailData = verifiedPayload;
       console.log("✅ Webhook verified successfully");
     } catch (error) {
       console.error("❌ Webhook verification failed:", error);
@@ -53,10 +71,14 @@ const handler = async (req: Request): Promise<Response> => {
 
     const { user, email_data } = emailData;
     const { token_hash, redirect_to } = email_data;
+    const supabaseUrl = Deno.env.get("SUPABASE_URL");
+    if (!supabaseUrl) {
+      throw new Error("SUPABASE_URL not configured");
+    }
     
-    const resetUrl = `${Deno.env.get('SUPABASE_URL')}/auth/v1/verify?token=${token_hash}&type=recovery&redirect_to=${redirect_to}`;
+    const resetUrl = `${supabaseUrl}/auth/v1/verify?token=${encodeURIComponent(token_hash)}&type=recovery&redirect_to=${encodeURIComponent(redirect_to)}`;
     
-    console.log(`📨 Sending reset email to: ${user.email}`);
+    console.log(`Sending reset email to: ${user.email}`);
 
     const html = `
 <!DOCTYPE html>
@@ -76,7 +98,7 @@ const handler = async (req: Request): Promise<Response> => {
           <tr>
             <td style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px 30px; text-align: center;">
               <h1 style="color: #ffffff; margin: 0; font-size: 28px; font-weight: 600;">
-                🔐 FinanceExpert
+                Fundia Invest - Réinitialisation de votre mot de passe
               </h1>
             </td>
           </tr>
@@ -146,7 +168,7 @@ const handler = async (req: Request): Promise<Response> => {
           <tr>
             <td style="background-color: #f7fafc; padding: 30px; text-align: center; border-top: 1px solid #e2e8f0;">
               <p style="color: #718096; font-size: 14px; margin: 0 0 10px 0;">
-                Cet email a été envoyé par <strong>FinanceExpert</strong>
+                Cet email a été envoyé par <strong>Fundia Invest</strong>
               </p>
               <p style="color: #a0aec0; font-size: 12px; margin: 0;">
                 Si vous avez des questions, n'hésitez pas à nous contacter.
@@ -161,7 +183,7 @@ const handler = async (req: Request): Promise<Response> => {
             <td style="text-align: center; padding: 0 30px;">
               <p style="color: #a0aec0; font-size: 12px; line-height: 1.5; margin: 0;">
                 Pour votre sécurité, ne partagez jamais ce lien avec qui que ce soit.<br>
-                FinanceExpert ne vous demandera jamais votre mot de passe par email.
+                Fundia Invest ne vous demandera jamais votre mot de passe par email.
               </p>
             </td>
           </tr>
@@ -174,9 +196,9 @@ const handler = async (req: Request): Promise<Response> => {
     `;
 
     const emailResponse = await resend.emails.send({
-      from: "FinanceExpert <noreply@privât-equity.com>",
+      from: "FUNDIA INVEST <noreply@fundia-invest.com>",
       to: [user.email],
-      subject: "Réinitialisation de votre mot de passe - FinanceExpert",
+      subject: "Réinitialisation de votre mot de passe - Fundia Invest",
       html: html,
     });
 
@@ -192,11 +214,12 @@ const handler = async (req: Request): Promise<Response> => {
         },
       }
     );
-  } catch (error: any) {
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : "Unknown error";
     console.error("❌ Error in send-reset-password-email function:", error);
     return new Response(
       JSON.stringify({ 
-        error: error.message,
+        error: message,
         details: "Failed to send reset password email"
       }),
       {
@@ -210,4 +233,4 @@ const handler = async (req: Request): Promise<Response> => {
   }
 };
 
-serve(handler);
+Deno.serve(handler);

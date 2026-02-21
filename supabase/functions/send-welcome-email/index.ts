@@ -1,4 +1,5 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.1";
 import { Resend } from "https://esm.sh/resend@4.0.0";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
@@ -9,7 +10,6 @@ const corsHeaders = {
 };
 
 interface WelcomeEmailRequest {
-  email: string;
   firstName: string;
   lastName: string;
 }
@@ -32,7 +32,31 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { email, firstName, lastName }: WelcomeEmailRequest = await req.json();
+    const authHeader = req.headers.get("Authorization");
+    if (!authHeader?.startsWith("Bearer ")) {
+      return new Response(JSON.stringify({ error: "Unauthorized" }), {
+        status: 401,
+        headers: { "Content-Type": "application/json", ...corsHeaders },
+      });
+    }
+
+    const token = authHeader.replace("Bearer ", "");
+    const supabaseUser = createClient(
+      Deno.env.get("SUPABASE_URL") ?? "",
+      Deno.env.get("SUPABASE_ANON_KEY") ?? "",
+      { global: { headers: { Authorization: `Bearer ${token}` } } },
+    );
+
+    const { data: { user }, error: authError } = await supabaseUser.auth.getUser();
+    if (authError || !user?.email) {
+      return new Response(JSON.stringify({ error: "Unauthorized" }), {
+        status: 401,
+        headers: { "Content-Type": "application/json", ...corsHeaders },
+      });
+    }
+
+    const { firstName, lastName }: WelcomeEmailRequest = await req.json();
+    const email = user.email;
 
     console.log("Sending welcome email to:", email);
 
@@ -148,10 +172,11 @@ const handler = async (req: Request): Promise<Response> => {
         headers: { "Content-Type": "application/json", ...corsHeaders },
       }
     );
-  } catch (error: any) {
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : "Unknown error";
     console.error("Error in send-welcome-email function:", error);
     return new Response(
-      JSON.stringify({ error: error.message }),
+      JSON.stringify({ error: message }),
       {
         status: 500,
         headers: { "Content-Type": "application/json", ...corsHeaders },

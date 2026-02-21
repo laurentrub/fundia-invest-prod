@@ -166,7 +166,7 @@ const handler = async (req: Request): Promise<Response> => {
                 <p>Vous pouvez consulter l'état de votre demande à tout moment sur votre tableau de bord.</p>
                 
                 <center>
-                  <a href="${Deno.env.get("VITE_SUPABASE_URL")?.replace('.supabase.co', '.lovable.app') || '#'}/dashboard" class="button">
+                  <a href="${Deno.env.get("FRONTEND_URL") || "https://fundia-invest.com"}/dashboard" class="button">
                     Voir mon tableau de bord
                   </a>
                 </center>

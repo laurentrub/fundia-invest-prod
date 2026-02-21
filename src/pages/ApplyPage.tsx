@@ -262,12 +262,19 @@ const ApplyPage = () => {
       // Send application confirmation email
       if (insertedData) {
         try {
-          await supabase.functions.invoke('send-application-confirmation', {
+          const { error: emailError } = await supabase.functions.invoke('send-application-confirmation', {
             body: { loanRequestId: insertedData.id }
           });
+          if (emailError) {
+            throw emailError;
+          }
         } catch (emailError) {
           console.error('Error sending confirmation email:', emailError);
-          // Don't block the flow if email fails
+          toast({
+            variant: "destructive",
+            title: t('common.error'),
+            description: "La demande a été enregistrée, mais l'envoi de l'email de confirmation a échoué.",
+          });
         }
       }
       

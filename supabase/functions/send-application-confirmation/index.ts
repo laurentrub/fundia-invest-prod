@@ -3,6 +3,13 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
 import { Resend } from "https://esm.sh/resend@4.0.0";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+const frontendUrl = Deno.env.get("FRONTEND_URL") || "https://fundia-invest.com";
+const fromEmail = Deno.env.get("RESEND_FROM_EMAIL") || "onboarding@resend.dev";
+const fromName = Deno.env.get("RESEND_FROM_NAME") || "Fundia Invest";
+const adminNotificationEmails = (Deno.env.get("APPLICATION_NOTIFICATION_EMAILS") || "")
+  .split(",")
+  .map((email) => email.trim())
+  .filter(Boolean);
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -39,6 +46,29 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
+    const authHeader = req.headers.get("Authorization");
+    if (!authHeader?.startsWith("Bearer ")) {
+      return new Response(JSON.stringify({ error: "Unauthorized" }), {
+        status: 401,
+        headers: { "Content-Type": "application/json", ...corsHeaders },
+      });
+    }
+
+    const token = authHeader.replace("Bearer ", "");
+    const supabaseUser = createClient(
+      Deno.env.get("SUPABASE_URL") ?? "",
+      Deno.env.get("SUPABASE_ANON_KEY") ?? "",
+      { global: { headers: { Authorization: `Bearer ${token}` } } }
+    );
+
+    const { data: { user }, error: authError } = await supabaseUser.auth.getUser();
+    if (authError || !user) {
+      return new Response(JSON.stringify({ error: "Unauthorized" }), {
+        status: 401,
+        headers: { "Content-Type": "application/json", ...corsHeaders },
+      });
+    }
+
     const supabaseAdmin = createClient(
       Deno.env.get("SUPABASE_URL") ?? "",
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
@@ -52,6 +82,15 @@ const handler = async (req: Request): Promise<Response> => {
       throw new Error("loanRequestId is required");
     }
 
+    // Allow only request owner or admin/manager to trigger email for a request
+    const { data: roleData } = await supabaseAdmin
+      .from("user_roles")
+      .select("role")
+      .eq("user_id", user.id)
+      .in("role", ["admin", "manager"])
+      .maybeSingle();
+    const isAdminOrManager = !!roleData;
+
     // Fetch the loan request details
     const { data: loanRequest, error: loanError } = await supabaseAdmin
       .from("loan_requests")
@@ -62,6 +101,13 @@ const handler = async (req: Request): Promise<Response> => {
     if (loanError || !loanRequest) {
       console.error("Error fetching loan request:", loanError);
       throw new Error("Demande introuvable");
+    }
+
+    if (!isAdminOrManager && loanRequest.user_id !== user.id) {
+      return new Response(JSON.stringify({ error: "Forbidden" }), {
+        status: 403,
+        headers: { "Content-Type": "application/json", ...corsHeaders },
+      });
     }
 
     const loanTypeLabel = loanTypeLabels[loanRequest.loan_type] || loanRequest.loan_type;
@@ -75,7 +121,7 @@ const handler = async (req: Request): Promise<Response> => {
     });
 
     const emailResponse = await resend.emails.send({
-      from: "Privat Equity <noreply@privat-equity.com>",
+      from: `${fromName} <${fromEmail}>`,
       to: [loanRequest.email],
       subject: "Votre demande de crédit a bien été reçue ✓",
       html: `
@@ -182,7 +228,7 @@ const handler = async (req: Request): Promise<Response> => {
                 </div>
 
                 <center>
-                  <a href="https://privat-equity.com/profile" class="button">
+                  <a href="${frontendUrl}/profile" class="button">
                     Suivre ma demande
                   </a>
                 </center>
@@ -207,6 +253,38 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
+    const emailResponseError = (emailResponse as { error?: { message?: string } }).error;
+    if (emailResponseError) {
+      throw new Error(emailResponseError.message || "Failed to send applicant confirmation email");
+    }
+
+    if (adminNotificationEmails.length > 0) {
+      const adminEmailHtml = `
+        <p>Nouvelle demande de credit recue:</p>
+        <ul>
+          <li>Reference: ${escapeHtml(loanRequest.id.substring(0, 8).toUpperCase())}</li>
+          <li>Client: ${escapeHtml(loanRequest.first_name)} ${escapeHtml(loanRequest.last_name)}</li>
+          <li>Email: ${escapeHtml(loanRequest.email)}</li>
+          <li>Type: ${escapeHtml(loanTypeLabel)}</li>
+          <li>Montant: ${formattedAmount}</li>
+          <li>Duree: ${loanRequest.duration} mois</li>
+        </ul>
+        <p><a href="${frontendUrl}/admin/requests/${loanRequest.id}">Voir la demande dans l'admin</a></p>
+      `;
+
+      const adminEmailResponse = await resend.emails.send({
+        from: `${fromName} <${fromEmail}>`,
+        to: adminNotificationEmails,
+        subject: `Nouvelle demande de credit - ${loanRequest.first_name} ${loanRequest.last_name}`,
+        html: adminEmailHtml,
+      });
+
+      const adminEmailResponseError = (adminEmailResponse as { error?: { message?: string } }).error;
+      if (adminEmailResponseError) {
+        console.error("Admin notification email failed:", adminEmailResponseError.message);
+      }
+    }
+
     console.log("Application confirmation email sent successfully:", emailResponse);
 
     return new Response(
@@ -216,10 +294,11 @@ const handler = async (req: Request): Promise<Response> => {
         headers: { "Content-Type": "application/json", ...corsHeaders },
       }
     );
-  } catch (error: any) {
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : "Unknown error";
     console.error("Error in send-application-confirmation function:", error);
     return new Response(
-      JSON.stringify({ error: error.message }),
+      JSON.stringify({ error: message }),
       {
         status: 500,
         headers: { "Content-Type": "application/json", ...corsHeaders },
