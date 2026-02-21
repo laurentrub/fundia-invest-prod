@@ -4,6 +4,8 @@ import { Resend } from "https://esm.sh/resend@4.0.0";
 import { decode } from "https://deno.land/std@0.190.0/encoding/base64.ts";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+const fromEmail = Deno.env.get("RESEND_FROM_EMAIL") || "onboarding@resend.dev";
+const fromName = Deno.env.get("RESEND_FROM_NAME") || "Fundia Invest";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -90,9 +92,9 @@ const handler = async (req: Request): Promise<Response> => {
     const pdfBuffer = decode(pdfBase64);
 
     const emailResponse = await resend.emails.send({
-      from: "Privat Equity <noreply@privat-equity.com>",
+      from: `${fromName} <${fromEmail}>`,
       to: [clientEmail],
-      subject: "Votre contrat de prêt - Privat Equity",
+      subject: "Votre contrat de prêt - Fundia Invest",
       html: `
         <!DOCTYPE html>
         <html>
@@ -102,7 +104,7 @@ const handler = async (req: Request): Promise<Response> => {
         </head>
         <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
           <div style="background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); padding: 30px; text-align: center; border-radius: 8px 8px 0 0;">
-            <h1 style="color: white; margin: 0; font-size: 24px;">Privat Equity</h1>
+            <h1 style="color: white; margin: 0; font-size: 24px;">Fundia Invest</h1>
           </div>
           
           <div style="background: #ffffff; padding: 30px; border: 1px solid #e5e5e5; border-top: none; border-radius: 0 0 8px 8px;">
@@ -125,12 +127,12 @@ const handler = async (req: Request): Promise<Response> => {
             
             <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e5e5;">
               <p style="margin: 0; color: #666;">Cordialement,</p>
-              <p style="margin: 5px 0 0 0; font-weight: bold; color: #1e3a5f;">L'équipe Privat Equity</p>
+              <p style="margin: 5px 0 0 0; font-weight: bold; color: #1e3a5f;">L'équipe Fundia Invest</p>
             </div>
           </div>
           
           <div style="text-align: center; padding: 20px; color: #999; font-size: 12px;">
-            <p style="margin: 0;">© 2024 Privat Equity. Tous droits réservés.</p>
+            <p style="margin: 0;">© 2024 Fundia Invest. Tous droits réservés.</p>
             <p style="margin: 5px 0 0 0;">5588 Rue Frontenac, Montréal, QC H2H 2L9, Canada</p>
           </div>
         </body>
@@ -143,6 +145,11 @@ const handler = async (req: Request): Promise<Response> => {
         },
       ],
     });
+
+    const emailResponseError = (emailResponse as { error?: { message?: string } }).error;
+    if (emailResponseError) {
+      throw new Error(emailResponseError.message || "Failed to send contract email");
+    }
 
     console.log("Contract email sent successfully:", emailResponse);
 

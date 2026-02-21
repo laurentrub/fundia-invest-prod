@@ -240,10 +240,10 @@ const handler = async (req: Request): Promise<Response> => {
                   Notre équipe est disponible pour répondre à vos questions. N'hésitez pas à nous contacter.
                 </p>
                 
-                <p>Cordialement,<br><strong>L'équipe Privat Equity</strong></p>
+                <p>Cordialement,<br><strong>L'équipe Fundia Invest</strong></p>
               </div>
               <div class="footer">
-                <p>© 2024 Privat Equity - Tous droits réservés</p>
+                <p>© 2024 Fundia Invest - Tous droits réservés</p>
                 <p>5588 Rue Frontenac, Montréal, QC H2H 2L9, Canada</p>
                 <p style="margin-top: 15px; color: #999;">Cet email a été envoyé automatiquement suite à votre demande de crédit.</p>
               </div>

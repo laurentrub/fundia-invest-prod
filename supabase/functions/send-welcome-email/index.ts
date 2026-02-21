@@ -3,6 +3,9 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.1";
 import { Resend } from "https://esm.sh/resend@4.0.0";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+const fromEmail = Deno.env.get("RESEND_FROM_EMAIL") || "onboarding@resend.dev";
+const fromName = Deno.env.get("RESEND_FROM_NAME") || "Fundia Invest";
+const frontendUrl = (Deno.env.get("FRONTEND_URL") || "https://fundia-invest.com").replace(/\/+$/, "");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -66,9 +69,9 @@ const handler = async (req: Request): Promise<Response> => {
     }
 
     const emailResponse = await resend.emails.send({
-      from: "Privat Equity <noreply@privat-equity.com>",
+      from: `${fromName} <${fromEmail}>`,
       to: [email],
-      subject: "Bienvenue chez Privat Equity ! 🎉",
+      subject: "Bienvenue chez Fundia Invest ! 🎉",
       html: `
         <!DOCTYPE html>
         <html>
@@ -96,13 +99,13 @@ const handler = async (req: Request): Promise<Response> => {
           <body>
             <div class="container">
               <div class="header">
-                <h1>Bienvenue chez Privat Equity</h1>
+                <h1>Bienvenue chez Fundia Invest</h1>
                 <p>Votre partenaire de confiance pour vos projets de financement</p>
               </div>
               <div class="content">
                 <p>Bonjour <strong>${escapeHtml(firstName)} ${escapeHtml(lastName)}</strong>,</p>
                 
-                <p>Nous sommes ravis de vous accueillir sur Privat Equity ! Votre compte a été créé avec succès.</p>
+                <p>Nous sommes ravis de vous accueillir sur Fundia Invest ! Votre compte a été créé avec succès.</p>
                 
                 <div class="welcome-box">
                   <h3 style="margin: 0 0 15px; color: #1e3a5f;">Ce que vous pouvez faire maintenant :</h3>
@@ -141,7 +144,7 @@ const handler = async (req: Request): Promise<Response> => {
                 </div>
 
                 <center>
-                  <a href="https://privat-equity.com" class="button">
+                  <a href="${frontendUrl}" class="button">
                     Accéder à mon espace
                   </a>
                 </center>
@@ -150,10 +153,10 @@ const handler = async (req: Request): Promise<Response> => {
 
                 <p>Si vous avez des questions, notre équipe est à votre disposition pour vous accompagner dans vos projets.</p>
                 
-                <p>À très bientôt,<br><strong>L'équipe Privat Equity</strong></p>
+                <p>À très bientôt,<br><strong>L'équipe Fundia Invest</strong></p>
               </div>
               <div class="footer">
-                <p>© 2024 Privat Equity - Tous droits réservés</p>
+                <p>© 2024 Fundia Invest - Tous droits réservés</p>
                 <p>5588 Rue Frontenac, Montréal, QC H2H 2L9, Canada</p>
                 <p style="margin-top: 15px; color: #999;">Cet email a été envoyé automatiquement suite à la création de votre compte.</p>
               </div>
@@ -162,6 +165,11 @@ const handler = async (req: Request): Promise<Response> => {
         </html>
       `,
     });
+
+    const emailResponseError = (emailResponse as { error?: { message?: string } }).error;
+    if (emailResponseError) {
+      throw new Error(emailResponseError.message || "Failed to send welcome email");
+    }
 
     console.log("Welcome email sent successfully:", emailResponse);
 

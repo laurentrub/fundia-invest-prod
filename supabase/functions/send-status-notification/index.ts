@@ -3,6 +3,9 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
 import { Resend } from "https://esm.sh/resend@4.0.0";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+const fromEmail = Deno.env.get("RESEND_FROM_EMAIL") || "onboarding@resend.dev";
+const fromName = Deno.env.get("RESEND_FROM_NAME") || "Fundia Invest";
+const frontendUrl = (Deno.env.get("FRONTEND_URL") || "https://fundia-invest.com").replace(/\/+$/, "");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -10,7 +13,8 @@ const corsHeaders = {
 };
 
 interface NotificationRequest {
-  loanRequestId: string;
+  loanRequestId?: string;
+  requestId?: string;
   newStatus: string;
 }
 
@@ -38,6 +42,11 @@ const statusMessages = {
     message: "Nous sommes heureux de vous informer que votre demande de crédit a été approuvée. Un conseiller vous contactera sous peu pour finaliser le dossier.",
   },
   rejected: {
+    subject: "Mise à jour de votre demande de crédit",
+    title: "Réponse concernant votre demande",
+    message: "Après étude de votre dossier, nous ne sommes malheureusement pas en mesure de donner une suite favorable à votre demande pour le moment. N'hésitez pas à nous recontacter.",
+  },
+  refused: {
     subject: "Mise à jour de votre demande de crédit",
     title: "Réponse concernant votre demande",
     message: "Après étude de votre dossier, nous ne sommes malheureusement pas en mesure de donner une suite favorable à votre demande pour le moment. N'hésitez pas à nous recontacter.",
@@ -108,15 +117,19 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Admin/manager user verified:", user.id);
 
-    const { loanRequestId, newStatus }: NotificationRequest = await req.json();
+    const { loanRequestId, requestId, newStatus }: NotificationRequest = await req.json();
+    const finalLoanRequestId = loanRequestId || requestId;
+    if (!finalLoanRequestId) {
+      throw new Error("loanRequestId is required");
+    }
 
-    console.log("Sending notification for loan request:", loanRequestId, "with status:", newStatus);
+    console.log("Sending notification for loan request:", finalLoanRequestId, "with status:", newStatus);
 
     // Récupérer les détails de la demande
     const { data: loanRequest, error: loanError } = await supabaseAdmin
       .from("loan_requests")
       .select("*")
-      .eq("id", loanRequestId)
+      .eq("id", finalLoanRequestId)
       .single();
 
     if (loanError || !loanRequest) {
@@ -128,7 +141,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Envoyer l'email
     const emailResponse = await resend.emails.send({
-      from: "FinanceExpert <onboarding@resend.dev>",
+      from: `${fromName} <${fromEmail}>`,
       to: [loanRequest.email],
       subject: statusInfo.subject,
       html: `
@@ -166,7 +179,7 @@ const handler = async (req: Request): Promise<Response> => {
                 <p>Vous pouvez consulter l'état de votre demande à tout moment sur votre tableau de bord.</p>
                 
                 <center>
-                  <a href="${Deno.env.get("FRONTEND_URL") || "https://fundia-invest.com"}/dashboard" class="button">
+                  <a href="${frontendUrl}/dashboard" class="button">
                     Voir mon tableau de bord
                   </a>
                 </center>
@@ -181,6 +194,11 @@ const handler = async (req: Request): Promise<Response> => {
         </html>
       `,
     });
+
+    const emailResponseError = (emailResponse as { error?: { message?: string } }).error;
+    if (emailResponseError) {
+      throw new Error(emailResponseError.message || "Failed to send status notification email");
+    }
 
     console.log("Email sent successfully:", emailResponse);
 

@@ -1,8 +1,11 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
-import { Resend } from "https://esm.sh/resend@2.0.0";
+import { Resend } from "https://esm.sh/resend@4.0.0";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+const fromEmail = Deno.env.get("RESEND_FROM_EMAIL") || "onboarding@resend.dev";
+const fromName = Deno.env.get("RESEND_FROM_NAME") || "Fundia Invest";
+const frontendUrl = (Deno.env.get("FRONTEND_URL") || "https://fundia-invest.com").replace(/\/+$/, "");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -195,7 +198,7 @@ const handler = async (req: Request): Promise<Response> => {
                 ` : ''}
                 
                 <div style="text-align: center; margin-top: 32px;">
-                  <a href="https://privat-equity.com/profile" 
+                  <a href="${frontendUrl}/profile" 
                      style="display: inline-block; background-color: #0d3b66; color: #ffffff; text-decoration: none; padding: 14px 28px; border-radius: 8px; font-weight: 600; font-size: 16px;">
                     Accéder à mon espace
                   </a>
@@ -204,7 +207,7 @@ const handler = async (req: Request): Promise<Response> => {
               
               <div style="background-color: #f9fafb; padding: 24px; text-align: center; border-top: 1px solid #e5e7eb;">
                 <p style="color: #9ca3af; font-size: 14px; margin: 0;">
-                  © 2024 Privat Equity. Tous droits réservés.
+                  © 2024 Fundia Invest. Tous droits réservés.
                 </p>
                 <p style="color: #9ca3af; font-size: 12px; margin: 8px 0 0 0;">
                   5588 Rue Frontenac, Montréal, QC H2H 2L9, Canada
@@ -219,11 +222,16 @@ const handler = async (req: Request): Promise<Response> => {
     console.log("Sending email to:", clientEmail);
 
     const emailResponse = await resend.emails.send({
-      from: "Privat Equity <noreply@privat-equity.com>",
+      from: `${fromName} <${fromEmail}>`,
       to: [clientEmail],
       subject: `Document ${statusLabel} - ${docRequest.document_type}`,
       html: emailHtml,
     });
+
+    const emailResponseError = (emailResponse as { error?: { message?: string } }).error;
+    if (emailResponseError) {
+      throw new Error(emailResponseError.message || "Failed to send document validation email");
+    }
 
     console.log("Email sent successfully:", emailResponse);
 

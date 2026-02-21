@@ -212,10 +212,8 @@ export default function RequestDetail() {
         try {
           await supabase.functions.invoke('send-status-notification', {
             body: {
-              requestId: request.id,
+              loanRequestId: request.id,
               newStatus,
-              email: request.email,
-              firstName: request.first_name,
             },
           });
         } catch (emailError) {

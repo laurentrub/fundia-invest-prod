@@ -2,9 +2,9 @@
   "resources": {
     "faq": {
       "title": "Često Postavljana Pitanja",
-      "subtitle": "Sve što trebate znati o zajmovima, zahtjevima i Privat Equity",
+      "subtitle": "Sve što trebate znati o zajmovima, zahtjevima i Fundia Invest",
       "categories": { "general": "Opća Pitanja", "application": "Proces Zahtjeva", "rates": "Stope i Uvjeti", "repayment": "Otplata i Upravljanje", "credit": "Kredit i Podobnost", "security": "Sigurnost i Privatnost", "special": "Posebne Situacije" },
-      "general": { "q1": "Što je Privat Equity?", "a1": "Privat Equity je online platforma za zajmove koja povezuje zajmoprimce s konkurentnim ponudama kredita.", "q2": "Kako Privat Equity zarađuje?", "a2": "Primamo proviziju od financijskih partnera. Usluga je besplatna za zajmoprimce.", "q3": "Je li Privat Equity siguran?", "a3": "Da, koristimo bankovnu enkripciju i u potpunosti smo usklađeni s GDPR-om." },
+      "general": { "q1": "Što je Fundia Invest?", "a1": "Fundia Invest je online platforma za zajmove koja povezuje zajmoprimce s konkurentnim ponudama kredita.", "q2": "Kako Fundia Invest zarađuje?", "a2": "Primamo proviziju od financijskih partnera. Usluga je besplatna za zajmoprimce.", "q3": "Je li Fundia Invest siguran?", "a3": "Da, koristimo bankovnu enkripciju i u potpunosti smo usklađeni s GDPR-om." },
       "application": { "q1": "Koliko dugo traje zahtjev?", "a1": "Oko 5 do 10 minuta online.", "q2": "Koji dokumenti su potrebni?", "a2": "Valjana osobna iskaznica, dokaz o prihodima, bankovni izvodi i dokaz o adresi.", "q3": "Utječe li provjera stope na moju kreditnu ocjenu?", "a3": "Ne, koristimo meku kreditnu provjeru.", "q4": "Mogu li podnijeti zahtjev kao samostalni radnik?", "a4": "Da! Samostalni radnici su dobrodošli.", "q5": "Što ako je moj zahtjev odbijen?", "a5": "Objasnit ćemo zašto i predložiti alternative." },
       "rates": { "q1": "Koje kamatne stope nudite?", "a1": "Od 2,9% EKS za kvalificirane zajmoprimce.", "q2": "Kako se određuje moja kamatna stopa?", "a2": "Na temelju kreditne ocjene, prihoda i iznosa zajma.", "q3": "Jesu li stope fiksne ili varijabilne?", "a3": "Svi naši zajmovi imaju fiksne stope.", "q4": "Koji iznosi su dostupni?", "a4": "Od 1.000€ do 75.000€.", "q5": "Koja trajanja su dostupna?", "a5": "Od 12 do 84 mjeseca.", "q6": "Ima li naknada?", "a6": "Ne naplaćujemo naknade za obradu." },
       "repayment": { "q1": "Kako vršim plaćanja?", "a1": "Automatska naplata s vašeg bankovnog računa.", "q2": "Mogu li promijeniti datum plaćanja?", "a2": "Da, kontaktirajte korisničku službu.", "q3": "Mogu li prijevremeno otplatiti?", "a3": "Da, bez kazni.", "q4": "Što ako propustim plaćanje?", "a4": "Odmah nas kontaktirajte.", "q5": "Mogu li kasnije povećati iznos?", "a5": "Ne jednom kada je aktivan, ali refinanciranje je moguće." },
@@ -117,7 +117,7 @@
       "secure": { "title": "100% Sigurno", "description": "Vaši podaci su zaštićeni" }
     },
     "featuresSection": {
-      "title": "Zašto Odabrati Privat Equity?",
+      "title": "Zašto Odabrati Fundia Invest?",
       "subtitle": "Kombiniramo najnoviju tehnologiju i personalizirani servis kako bismo posuđivanje učinili jednostavnim, brzim i transparentnim."
     },
     "products": {
@@ -154,7 +154,7 @@
       "story1": {
         "title": "Auto Kredit",
         "imageAlt": "Sretni par koji je dobio svoj auto kredit",
-        "quote": "Dobili smo naš auto kredit u 24 sata! Proces je bio jednostavan i tim vrlo profesionalan. Toplo preporučujemo Privat Equity.",
+        "quote": "Dobili smo naš auto kredit u 24 sata! Proces je bio jednostavan i tim vrlo profesionalan. Toplo preporučujemo Fundia Invest.",
         "name": "Marie & Luc",
         "location": "Lyon - Kredit od 22.000€"
       },
@@ -170,7 +170,7 @@
     "partners": { "title": "Odobreno od vodećih financijskih institucija" },
     "cta": {
       "title": "Spremni za Početak?",
-      "description": "Pridružite se tisućama zadovoljnih klijenata koji su odabrali Privat Equity za svoje potrebe financiranja.",
+      "description": "Pridružite se tisućama zadovoljnih klijenata koji su odabrali Fundia Invest za svoje potrebe financiranja.",
       "button": "Zatraži Sada - Trenutno Odobrenje"
     },
     "indexFeatures": {
@@ -198,7 +198,7 @@
       "q6": "Utječe li provjera stopa na moju kreditnu ocjenu?", "a6": "Ne, provjera vaše podobnosti ne utječe na vašu kreditnu ocjenu. Samo formalni zahtjev za kredit bit će evidentiran u vašoj kreditnoj povijesti."
     },
     "seoSection": {
-      "title": "O Privat Equity: Vaš pouzdani kreditni partner",
+      "title": "O Fundia Invest: Vaš pouzdani kreditni partner",
       "intro": "je vodeća online platforma za zajmove koja je revolucionirala način na koji pojedinci i poduzeća pristupaju kreditu u Francuskoj. Osnovani 2015. godine, pomogli smo više od 50.000 klijenata da ostvare svoje financijske ciljeve kroz transparentna, brza i sigurna rješenja za zajmove.",
       "missionTitle": "Naša misija",
       "missionText": "Vjerujemo da pristup kreditu treba biti jednostavan, transparentan i bez stresa. Naša misija je demokratizirati zajmove korištenjem tehnologije za ponudu konkurentnih stopa, trenutnih odluka i besprijekornog digitalnog iskustva. Posvećeni smo financijskoj inkluziji i pomažemo našim klijentima donositi informirane odluke o zaduživanju.",
@@ -208,7 +208,7 @@
       "security": { "title": "Sigurnost:", "text": "Koristimo enkripciju razine banke i u potpunosti smo usklađeni s GDPR-om i francuskim bankarskim propisima." },
       "flexibility": { "title": "Fleksibilnost:", "text": "Opcije prijevremene otplate bez penala, fleksibilni rokovi od 12 do 84 mjeseca i iznosi od 1.000€ do 75.000€." },
       "loanTypesTitle": "Vrste zajmova koje nudimo",
-      "loanTypesIntro": "U Privat Equity razumijemo da je svaka financijska potreba jedinstvena. Zato nudimo sveobuhvatnu paletu kreditnih proizvoda dizajniranih da odgovaraju vašim specifičnim okolnostima:",
+      "loanTypesIntro": "U Fundia Invest razumijemo da je svaka financijska potreba jedinstvena. Zato nudimo sveobuhvatnu paletu kreditnih proizvoda dizajniranih da odgovaraju vašim specifičnim okolnostima:",
       "personalLoan": { "title": "Osobni zajmovi", "text": "Savršeno za vjenčanja, godišnje odmore, medicinske troškove ili bilo koji osobni projekt. Pozajmite od 1.000€ do 75.000€ sa stopama od 2,9% EKS.", "example": "Primjer: 10.000€ na 48 mjeseci = 221€/mjesec (4,9% EKS, ukupni trošak: 10.608€)" },
       "autoLoan": { "title": "Auto krediti", "text": "Financirajte nova ili rabljena vozila s konkurentnim stopama i fleksibilnim uvjetima. Stope od 3,2% EKS.", "example": "Primjer: 20.000€ na 60 mjeseci = 362€/mjesec (3,9% EKS, ukupni trošak: 21.720€)" },
       "homeLoan": { "title": "Krediti za obnovu", "text": "Transformirajte svoj životni prostor s kreditima dizajniranim za renovacije, proširenja ili energetska poboljšanja.", "example": "Primjer: 15.000€ na 72 mjeseca = 238€/mjesec (4,5% EKS, ukupni trošak: 17.136€)" },
@@ -226,9 +226,9 @@
     }
   },
   "about": {
-    "title": "O Privat Equity",
+    "title": "O Fundia Invest",
     "subtitle": "Vaš pouzdani partner za transparentna i personalizirana kreditna rješenja",
-    "intro1": "Privat Equity je inovativna online platforma za zajmove koja revolucionira pristup kreditu u Francuskoj. Osnovana s misijom činjenja osobnog financiranja transparentnijim, dostupnijim i pravednijim, povezujemo tisuće zajmoprimaca s najboljim kreditnim ponudama na tržištu.",
+    "intro1": "Fundia Invest je inovativna online platforma za zajmove koja revolucionira pristup kreditu u Francuskoj. Osnovana s misijom činjenja osobnog financiranja transparentnijim, dostupnijim i pravednijim, povezujemo tisuće zajmoprimaca s najboljim kreditnim ponudama na tržištu.",
     "intro2": "Naša platforma koristi najsuvremeniju tehnologiju za analizu vašeg financijskog profila i nudi vam personalizirane ponude za nekoliko minuta. Radimo s pažljivo odabranom mrežom financijskih partnera kako bismo osigurali da uvijek dobijete najbolje moguće uvjete.",
     "mission": {
       "title": "Naša Misija",
@@ -247,7 +247,7 @@
       "description": "S više od 15 godina kombiniranog iskustva u financijskom sektoru, naš tim razumije izazove s kojima se zajmoprimci susreću. Koristimo ovu ekspertizu za stvaranje iskustva zajma koje je jednostavno, brzo i prilagođeno vašim potrebama."
     },
     "whyChoose": {
-      "title": "Zašto odabrati Privat Equity?",
+      "title": "Zašto odabrati Fundia Invest?",
       "online": { "title": "100% online proces:", "description": "Brza prijava i trenutna odluka iz udobnosti vašeg doma" },
       "comparison": { "title": "Pametna usporedba:", "description": "Analiziramo desetke ponuda kako bismo pronašli najbolju za vas" },
       "noCommitment": { "title": "Bez obveze:", "description": "Provjerite svoju podobnost bez utjecaja na vašu kreditnu ocjenu" },
@@ -654,7 +654,7 @@
       "guide": {
         "introTitle": "Što je poslovni kredit?",
         "introP1": "Poslovni kredit je financiranje posebno osmišljeno za potrebe poduzeća, obrtnika, trgovaca i slobodnih profesija. Za razliku od osobnih zajmova, namijenjen je financiranju projekata povezanih s vašom profesionalnom djelatnošću: nabava opreme, komercijalni razvoj, obrtni kapital ili proširenje.",
-        "introP2": "U Privat Equity nudimo poslovne kredite od 5.000 € do 75.000 € s rokovima od 12 do 84 mjeseca. Naše konkurentne stope od 6,5% EKS prilagođene su ekonomskim realnostima malih i srednjih poduzeća te poduzetnika.",
+        "introP2": "U Fundia Invest nudimo poslovne kredite od 5.000 € do 75.000 € s rokovima od 12 do 84 mjeseca. Naše konkurentne stope od 6,5% EKS prilagođene su ekonomskim realnostima malih i srednjih poduzeća te poduzetnika.",
         "typesTitle": "Vrste poslovnih kredita",
         "types": {
           "shortTerm": "Kratkoročni kredit: 3 do 12 mjeseci financiranja za neposredne potrebe likvidnosti, idealno za upravljanje prazninama u novčanom toku ili financiranje sezonskih zaliha.",
@@ -663,7 +663,7 @@
           "creditLine": "Kreditna linija: Obnovljiva gotovinska olakšica za upravljanje dnevnim fluktuacijama novčanog toka."
         },
         "eligibilityTitle": "Kriteriji prihvatljivosti",
-        "eligibilityIntro": "Za dobivanje poslovnog kredita u Privat Equity, općenito morate:",
+        "eligibilityIntro": "Za dobivanje poslovnog kredita u Fundia Invest, općenito morate:",
         "eligibility": {
           "registered": "Imati registrirano poduzeće (obrt, d.o.o., d.d., itd.)",
           "activity": "Dokazati gospodarsku aktivnost od najmanje 6 do 12 mjeseci",
@@ -697,7 +697,7 @@
         "q2": "Mogu li dobiti poslovni kredit kao obrtnik/freelancer?",
         "a2": "Da, obrtnici i freelanceri svakako mogu podnijeti zahtjev za poslovni kredit. Trebat ćete dostaviti svoje izjave o prometu, bankovne izvode i dokazati aktivnost od najmanje 6 do 12 mjeseci. Odobreni iznosi ovise o vašoj razini aktivnosti.",
         "q3": "Koliko dugo treba da se dobije odgovor?",
-        "a3": "U Privat Equity primit ćete preliminarni odgovor unutar 24 do 48 sati. Isplata sredstava općenito se događa unutar 5 do 10 radnih dana nakon potpune validacije dokumentacije i potpisivanja dokumenata.",
+        "a3": "U Fundia Invest primit ćete preliminarni odgovor unutar 24 do 48 sati. Isplata sredstava općenito se događa unutar 5 do 10 radnih dana nakon potpune validacije dokumentacije i potpisivanja dokumenata.",
         "q4": "Trebam li jamstvo za svoj poslovni kredit?",
         "a4": "Za male iznose (do 25.000 €) općenito nije potrebno jamstvo. Za veće iznose može se zatražiti osobno jamstvo direktora ili zalog na imovinu poduzeća, ovisno o profilu rizika.",
         "q5": "Mogu li otplatiti svoj poslovni kredit ranije?",
