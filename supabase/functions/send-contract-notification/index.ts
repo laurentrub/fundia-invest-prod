@@ -8,8 +8,7 @@ const fromName = Deno.env.get("RESEND_FROM_NAME") || "Fundia Invest";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers":
-    "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
 interface ContractNotificationPayload {
@@ -53,18 +52,21 @@ const handler = async (req: Request): Promise<Response> => {
 
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
     const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY")!;
+    const token = authHeader.replace("Bearer ", "");
     const supabase = createClient(supabaseUrl, supabaseAnonKey, {
       global: { headers: { Authorization: authHeader } },
     });
 
-    const { data: { user }, error: userError } = await supabase.auth.getUser();
-    if (userError || !user) {
-      console.error("User authentication failed:", userError);
+    const { data: claimsData, error: claimsError } = await supabase.auth.getClaims(token);
+    if (claimsError || !claimsData?.claims) {
+      console.error("JWT verification failed:", claimsError);
       return new Response(JSON.stringify({ error: "Unauthorized" }), {
         status: 401,
         headers: { "Content-Type": "application/json", ...corsHeaders },
       });
     }
+
+    const userId = claimsData.claims.sub as string;
 
     const supabaseAdmin = createClient(
       supabaseUrl,
@@ -74,7 +76,7 @@ const handler = async (req: Request): Promise<Response> => {
     const { data: roleData, error: roleError } = await supabaseAdmin
       .from("user_roles")
       .select("role")
-      .eq("user_id", user.id)
+      .eq("user_id", userId)
       .in("role", ["admin", "manager"])
       .maybeSingle();
 
@@ -106,7 +108,7 @@ const handler = async (req: Request): Promise<Response> => {
     let contentHtml: string;
 
     if (action === "verified") {
-      subject = "Votre contrat a été validé - Fundia Invest";
+      subject = "Votre contrat a été validé - Privat Equity";
       contentHtml = `
         <!DOCTYPE html>
         <html>
@@ -116,7 +118,7 @@ const handler = async (req: Request): Promise<Response> => {
         </head>
         <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
           <div style="background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); padding: 30px; text-align: center; border-radius: 8px 8px 0 0;">
-            <h1 style="color: white; margin: 0; font-size: 24px;">Fundia Invest</h1>
+            <h1 style="color: white; margin: 0; font-size: 24px;">Privat Equity</h1>
           </div>
           
           <div style="background: #ffffff; padding: 30px; border: 1px solid #e5e5e5; border-top: none; border-radius: 0 0 8px 8px;">
@@ -148,19 +150,19 @@ const handler = async (req: Request): Promise<Response> => {
             
             <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e5e5;">
               <p style="margin: 0; color: #666;">Cordialement,</p>
-              <p style="margin: 5px 0 0 0; font-weight: bold; color: #1e3a5f;">L'équipe Fundia Invest</p>
+              <p style="margin: 5px 0 0 0; font-weight: bold; color: #1e3a5f;">L'équipe Privat Equity</p>
             </div>
           </div>
           
           <div style="text-align: center; padding: 20px; color: #999; font-size: 12px;">
-            <p style="margin: 0;">© 2024 Fundia Invest. Tous droits réservés.</p>
+            <p style="margin: 0;">© 2024 Privat Equity. Tous droits réservés.</p>
             <p style="margin: 5px 0 0 0;">5588 Rue Frontenac, Montréal, QC H2H 2L9, Canada</p>
           </div>
         </body>
         </html>
       `;
     } else {
-      subject = "Information concernant votre contrat - Fundia Invest";
+      subject = "Information concernant votre contrat - Privat Equity";
       contentHtml = `
         <!DOCTYPE html>
         <html>
@@ -170,7 +172,7 @@ const handler = async (req: Request): Promise<Response> => {
         </head>
         <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
           <div style="background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); padding: 30px; text-align: center; border-radius: 8px 8px 0 0;">
-            <h1 style="color: white; margin: 0; font-size: 24px;">Fundia Invest</h1>
+            <h1 style="color: white; margin: 0; font-size: 24px;">Privat Equity</h1>
           </div>
           
           <div style="background: #ffffff; padding: 30px; border: 1px solid #e5e5e5; border-top: none; border-radius: 0 0 8px 8px;">
@@ -197,12 +199,12 @@ const handler = async (req: Request): Promise<Response> => {
             
             <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e5e5;">
               <p style="margin: 0; color: #666;">Cordialement,</p>
-              <p style="margin: 5px 0 0 0; font-weight: bold; color: #1e3a5f;">L'équipe Fundia Invest</p>
+              <p style="margin: 5px 0 0 0; font-weight: bold; color: #1e3a5f;">L'équipe Privat Equity</p>
             </div>
           </div>
           
           <div style="text-align: center; padding: 20px; color: #999; font-size: 12px;">
-            <p style="margin: 0;">© 2024 Fundia Invest. Tous droits réservés.</p>
+            <p style="margin: 0;">© 2024 Privat Equity. Tous droits réservés.</p>
             <p style="margin: 5px 0 0 0;">5588 Rue Frontenac, Montréal, QC H2H 2L9, Canada</p>
           </div>
         </body>
@@ -216,11 +218,6 @@ const handler = async (req: Request): Promise<Response> => {
       subject,
       html: contentHtml,
     });
-
-    const emailResponseError = (emailResponse as { error?: { message?: string } }).error;
-    if (emailResponseError) {
-      throw new Error(emailResponseError.message || "Failed to send contract notification email");
-    }
 
     console.log("Contract notification email sent successfully:", emailResponse);
 

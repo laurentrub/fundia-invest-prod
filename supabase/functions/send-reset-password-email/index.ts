@@ -2,6 +2,8 @@ import { Resend } from "https://esm.sh/resend@4.0.0";
 import { Webhook } from "https://esm.sh/standardwebhooks@1.0.0";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+const fromEmail = Deno.env.get("RESEND_FROM_EMAIL") || "onboarding@resend.dev";
+const fromName = Deno.env.get("RESEND_FROM_NAME") || "Fundia Invest";
 const hookSecret = Deno.env.get("SEND_EMAIL_HOOK_SECRET");
 
 const corsHeaders = {
@@ -196,7 +198,7 @@ const handler = async (req: Request): Promise<Response> => {
     `;
 
     const emailResponse = await resend.emails.send({
-      from: "FUNDIA INVEST <noreply@fundia-invest.com>",
+      from: `${fromName} <${fromEmail}>`,
       to: [user.email],
       subject: "Réinitialisation de votre mot de passe - Fundia Invest",
       html: html,

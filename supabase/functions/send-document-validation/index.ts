@@ -1,15 +1,14 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
-import { Resend } from "https://esm.sh/resend@4.0.0";
+import { Resend } from "https://esm.sh/resend@2.0.0";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const fromEmail = Deno.env.get("RESEND_FROM_EMAIL") || "onboarding@resend.dev";
 const fromName = Deno.env.get("RESEND_FROM_NAME") || "Fundia Invest";
-const frontendUrl = (Deno.env.get("FRONTEND_URL") || "https://fundia-invest.com").replace(/\/+$/, "");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
 interface DocumentValidationRequest {
@@ -53,23 +52,30 @@ const handler = async (req: Request): Promise<Response> => {
       { auth: { autoRefreshToken: false, persistSession: false } }
     );
 
-    // Verify the user making the request
+    // Verify JWT claims
     const token = authHeader.replace("Bearer ", "");
-    const { data: { user }, error: userError } = await supabaseAdmin.auth.getUser(token);
+    const supabaseUser = createClient(
+      Deno.env.get("SUPABASE_URL") ?? "",
+      Deno.env.get("SUPABASE_ANON_KEY") ?? "",
+      { global: { headers: { Authorization: `Bearer ${token}` } } }
+    );
 
-    if (userError || !user) {
-      console.error("User verification failed:", userError);
+    const { data: claimsData, error: claimsError } = await supabaseUser.auth.getClaims(token);
+    if (claimsError || !claimsData?.claims) {
+      console.error("JWT verification failed:", claimsError);
       return new Response(JSON.stringify({ error: "Non autorisé" }), {
         status: 401,
         headers: { "Content-Type": "application/json", ...corsHeaders },
       });
     }
 
+    const userId = claimsData.claims.sub as string;
+
     // Check if user has admin or manager role
     const { data: roleData, error: roleError } = await supabaseAdmin
       .from("user_roles")
       .select("role")
-      .eq("user_id", user.id)
+      .eq("user_id", userId)
       .in("role", ["admin", "manager"]);
 
     if (roleError || !roleData || roleData.length === 0) {
@@ -198,7 +204,7 @@ const handler = async (req: Request): Promise<Response> => {
                 ` : ''}
                 
                 <div style="text-align: center; margin-top: 32px;">
-                  <a href="${frontendUrl}/profile" 
+                  <a href="https://privat-equity.com/profile" 
                      style="display: inline-block; background-color: #0d3b66; color: #ffffff; text-decoration: none; padding: 14px 28px; border-radius: 8px; font-weight: 600; font-size: 16px;">
                     Accéder à mon espace
                   </a>
@@ -207,7 +213,7 @@ const handler = async (req: Request): Promise<Response> => {
               
               <div style="background-color: #f9fafb; padding: 24px; text-align: center; border-top: 1px solid #e5e7eb;">
                 <p style="color: #9ca3af; font-size: 14px; margin: 0;">
-                  © 2024 Fundia Invest. Tous droits réservés.
+                  © 2024 Privat Equity. Tous droits réservés.
                 </p>
                 <p style="color: #9ca3af; font-size: 12px; margin: 8px 0 0 0;">
                   5588 Rue Frontenac, Montréal, QC H2H 2L9, Canada
@@ -227,11 +233,6 @@ const handler = async (req: Request): Promise<Response> => {
       subject: `Document ${statusLabel} - ${docRequest.document_type}`,
       html: emailHtml,
     });
-
-    const emailResponseError = (emailResponse as { error?: { message?: string } }).error;
-    if (emailResponseError) {
-      throw new Error(emailResponseError.message || "Failed to send document validation email");
-    }
 
     console.log("Email sent successfully:", emailResponse);
 

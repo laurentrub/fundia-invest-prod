@@ -5,16 +5,14 @@ import { Resend } from "https://esm.sh/resend@4.0.0";
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const fromEmail = Deno.env.get("RESEND_FROM_EMAIL") || "onboarding@resend.dev";
 const fromName = Deno.env.get("RESEND_FROM_NAME") || "Fundia Invest";
-const frontendUrl = (Deno.env.get("FRONTEND_URL") || "https://fundia-invest.com").replace(/\/+$/, "");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
 interface NotificationRequest {
-  loanRequestId?: string;
-  requestId?: string;
+  loanRequestId: string;
   newStatus: string;
 }
 
@@ -42,11 +40,6 @@ const statusMessages = {
     message: "Nous sommes heureux de vous informer que votre demande de crédit a été approuvée. Un conseiller vous contactera sous peu pour finaliser le dossier.",
   },
   rejected: {
-    subject: "Mise à jour de votre demande de crédit",
-    title: "Réponse concernant votre demande",
-    message: "Après étude de votre dossier, nous ne sommes malheureusement pas en mesure de donner une suite favorable à votre demande pour le moment. N'hésitez pas à nous recontacter.",
-  },
-  refused: {
     subject: "Mise à jour de votre demande de crédit",
     title: "Réponse concernant votre demande",
     message: "Après étude de votre dossier, nous ne sommes malheureusement pas en mesure de donner une suite favorable à votre demande pour le moment. N'hésitez pas à nous recontacter.",
@@ -89,47 +82,45 @@ const handler = async (req: Request): Promise<Response> => {
       { global: { headers: { Authorization: `Bearer ${token}` } } }
     );
 
-    // Get the authenticated user
-    const { data: { user }, error: authError } = await supabaseUser.auth.getUser();
-    if (authError || !user) {
-      console.error("Failed to authenticate user:", authError);
+    // Verify the JWT claims
+    const { data: claimsData, error: claimsError } = await supabaseUser.auth.getClaims(token);
+    if (claimsError || !claimsData?.claims) {
+      console.error("Failed to verify JWT claims:", claimsError);
       return new Response(
         JSON.stringify({ error: "Unauthorized: Invalid authentication token" }),
         { status: 401, headers: { "Content-Type": "application/json", ...corsHeaders } }
       );
     }
 
+    const userId = claimsData.claims.sub as string;
+
     // Verify the user has admin or manager role using the service role client
     const { data: roleData, error: roleError } = await supabaseAdmin
       .from("user_roles")
       .select("role")
-      .eq("user_id", user.id)
+      .eq("user_id", userId)
       .in("role", ["admin", "manager"])
       .maybeSingle();
 
     if (roleError || !roleData) {
-      console.error("User is not an admin or manager:", user.id);
+      console.error("User is not an admin or manager:", userId);
       return new Response(
         JSON.stringify({ error: "Forbidden: Admin or manager access required" }),
         { status: 403, headers: { "Content-Type": "application/json", ...corsHeaders } }
       );
     }
 
-    console.log("Admin/manager user verified:", user.id);
+    console.log("Admin/manager user verified:", userId);
 
-    const { loanRequestId, requestId, newStatus }: NotificationRequest = await req.json();
-    const finalLoanRequestId = loanRequestId || requestId;
-    if (!finalLoanRequestId) {
-      throw new Error("loanRequestId is required");
-    }
+    const { loanRequestId, newStatus }: NotificationRequest = await req.json();
 
-    console.log("Sending notification for loan request:", finalLoanRequestId, "with status:", newStatus);
+    console.log("Sending notification for loan request:", loanRequestId, "with status:", newStatus);
 
     // Récupérer les détails de la demande
     const { data: loanRequest, error: loanError } = await supabaseAdmin
       .from("loan_requests")
       .select("*")
-      .eq("id", finalLoanRequestId)
+      .eq("id", loanRequestId)
       .single();
 
     if (loanError || !loanRequest) {
@@ -179,7 +170,7 @@ const handler = async (req: Request): Promise<Response> => {
                 <p>Vous pouvez consulter l'état de votre demande à tout moment sur votre tableau de bord.</p>
                 
                 <center>
-                  <a href="${frontendUrl}/dashboard" class="button">
+                  <a href="${Deno.env.get("VITE_SUPABASE_URL")?.replace('.supabase.co', '.lovable.app') || '#'}/dashboard" class="button">
                     Voir mon tableau de bord
                   </a>
                 </center>
@@ -194,11 +185,6 @@ const handler = async (req: Request): Promise<Response> => {
         </html>
       `,
     });
-
-    const emailResponseError = (emailResponse as { error?: { message?: string } }).error;
-    if (emailResponseError) {
-      throw new Error(emailResponseError.message || "Failed to send status notification email");
-    }
 
     console.log("Email sent successfully:", emailResponse);
 

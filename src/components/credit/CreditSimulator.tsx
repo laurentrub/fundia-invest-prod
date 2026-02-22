@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
@@ -18,6 +19,7 @@ interface CreditSimulatorProps {
 
 const CreditSimulator = (props: CreditSimulatorProps) => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   // Read admin loan settings from localStorage, fallback to props then defaults
   const adminSettings = (() => {
@@ -128,7 +130,12 @@ const CreditSimulator = (props: CreditSimulatorProps) => {
           </div>
         </div>
 
-        <Button variant="accent" size="lg" className="w-full mt-6">
+        <Button
+          variant="accent"
+          size="lg"
+          className="w-full mt-6"
+          onClick={() => navigate('/apply')}
+        >
           {t('simulator.getApproval')}
         </Button>
         <p className="text-xs text-center text-muted-foreground mt-2">

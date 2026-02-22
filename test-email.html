@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test API Email - Fundia Invest</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            color: #1e3a5f;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        input, select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: #2d5a87;
+        }
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #2d5a87 0%, #1e3a5f 100%);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(45, 90, 135, 0.3);
+        }
+        button:active {
+            transform: translateY(0);
+        }
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 6px;
+            display: none;
+        }
+        .result.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+        .result.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            display: block;
+        }
+        .loading {
+            display: none;
+            margin-top: 10px;
+            text-align: center;
+            color: #666;
+        }
+        .loading.active {
+            display: block;
+        }
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #2d5a87;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 10px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .info {
+            background: #e7f3ff;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            color: #004085;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📧 Test API Email</h1>
+        <p class="subtitle">Fundia Invest - Testeur d'envoi d'emails</p>
+
+        <div class="info">
+            ℹ️ Ce formulaire teste l'endpoint <code>/api/send</code> de votre application.
+        </div>
+
+        <form id="emailForm">
+            <div class="form-group">
+                <label for="environment">Environnement</label>
+                <select id="environment" required>
+                    <option value="https://fundia-invest.com/api/send">Production</option>
+                    <option value="http://localhost:3000/api/send">Local (Vercel CLI)</option>
+                    <option value="custom">URL personnalisée</option>
+                </select>
+            </div>
+
+            <div class="form-group" id="customUrlGroup" style="display: none;">
+                <label for="customUrl">URL personnalisée</label>
+                <input type="url" id="customUrl" placeholder="https://your-domain.vercel.app/api/send">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email destinataire *</label>
+                <input type="email" id="email" placeholder="test@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="firstName">Prénom</label>
+                <input type="text" id="firstName" placeholder="John" value="John">
+            </div>
+
+            <button type="submit" id="submitBtn">
+                🚀 Envoyer l'email de test
+            </button>
+        </form>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Envoi en cours...</p>
+        </div>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        const form = document.getElementById('emailForm');
+        const envSelect = document.getElementById('environment');
+        const customUrlGroup = document.getElementById('customUrlGroup');
+        const customUrlInput = document.getElementById('customUrl');
+        const loading = document.getElementById('loading');
+        const result = document.getElementById('result');
+        const submitBtn = document.getElementById('submitBtn');
+
+        // Afficher/masquer le champ URL personnalisée
+        envSelect.addEventListener('change', () => {
+            if (envSelect.value === 'custom') {
+                customUrlGroup.style.display = 'block';
+                customUrlInput.required = true;
+            } else {
+                customUrlGroup.style.display = 'none';
+                customUrlInput.required = false;
+            }
+        });
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Reset
+            result.className = 'result';
+            result.style.display = 'none';
+            loading.classList.add('active');
+            submitBtn.disabled = true;
+
+            // Récupérer l'URL
+            let apiUrl = envSelect.value;
+            if (apiUrl === 'custom') {
+                apiUrl = customUrlInput.value;
+            }
+
+            // Données
+            const data = {
+                to: document.getElementById('email').value,
+                firstName: document.getElementById('firstName').value || 'Client'
+            };
+
+            try {
+                console.log('🚀 Envoi à:', apiUrl);
+                console.log('📦 Données:', data);
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const responseData = await response.json();
+
+                loading.classList.remove('active');
+                submitBtn.disabled = false;
+
+                if (response.ok) {
+                    result.className = 'result success';
+                    result.innerHTML = `
+                        <strong>✅ Email envoyé avec succès !</strong><br><br>
+                        <strong>Détails :</strong><br>
+                        - Email ID: ${responseData.data?.id || 'N/A'}<br>
+                        - Destinataire: ${data.to}<br>
+                        - Statut HTTP: ${response.status}
+                    `;
+                    console.log('✅ Réponse:', responseData);
+                } else {
+                    throw new Error(responseData.error || 'Erreur inconnue');
+                }
+
+            } catch (error) {
+                loading.classList.remove('active');
+                submitBtn.disabled = false;
+                result.className = 'result error';
+                result.innerHTML = `
+                    <strong>❌ Erreur d'envoi</strong><br><br>
+                    ${error.message}<br><br>
+                    <small>Vérifiez la console pour plus de détails.</small>
+                `;
+                console.error('❌ Erreur:', error);
+            }
+        });
+    </script>
+</body>
+</html>

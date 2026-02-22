@@ -95,10 +95,17 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/mentions-legales" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  Mentions Légales
+                </Link>
+              </li>
+              {/* Temporairement caché - Ne pas supprimer
+              <li>
                 <Link to="/contact" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   {t('footer.contact')}
                 </Link>
               </li>
+              */}
             </ul>
           </div>
         </div>
