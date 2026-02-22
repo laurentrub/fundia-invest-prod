@@ -840,8 +840,11 @@
     "reject": "Ablehnen",
     "status": {
       "pending": "Ausstehend",
+      "in_progress": "In Bearbeitung",
       "approved": "Genehmigt",
-      "rejected": "Abgelehnt"
+      "refused": "Abgewiesen",
+      "rejected": "Abgelehnt",
+      "document_requested": "Dokumente angefordert"
     },
     "loanTypes": {
       "personal": "Privatkredit",

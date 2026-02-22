@@ -565,8 +565,11 @@
     "reject": "Afwijzen",
     "status": {
       "pending": "In behandeling",
+      "in_progress": "Wordt verwerkt",
       "approved": "Goedgekeurd",
-      "rejected": "Afgewezen"
+      "refused": "Geweigerd",
+      "rejected": "Afgewezen",
+      "document_requested": "Documenten aangevraagd"
     },
     "loanTypes": {
       "personal": "Persoonlijke lening",

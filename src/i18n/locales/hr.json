@@ -532,8 +532,11 @@
     "reject": "Odbij",
     "status": {
       "pending": "Na čekanju",
+      "in_progress": "U obradi",
       "approved": "Odobreno",
-      "rejected": "Odbijeno"
+      "refused": "Odbačeno",
+      "rejected": "Odbijeno",
+      "document_requested": "Dokumenti zatraženi"
     },
     "loanTypes": {
       "personal": "Osobni zajam",

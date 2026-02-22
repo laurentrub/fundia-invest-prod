@@ -163,8 +163,11 @@ export default function Profile() {
   const getStatusBadge = (status: string) => {
     const config = {
       pending: { label: t('dashboard.status.pending'), variant: 'secondary' as const, icon: Clock },
+      in_progress: { label: t('dashboard.status.in_progress'), variant: 'default' as const, icon: Clock },
       approved: { label: t('dashboard.status.approved'), variant: 'default' as const, icon: CheckCircle },
+      refused: { label: t('dashboard.status.refused'), variant: 'destructive' as const, icon: XCircle },
       rejected: { label: t('dashboard.status.rejected'), variant: 'destructive' as const, icon: XCircle },
+      document_requested: { label: t('dashboard.status.document_requested'), variant: 'secondary' as const, icon: FileText },
     };
 
     const { label, variant, icon: Icon } = config[status as keyof typeof config] || config.pending;

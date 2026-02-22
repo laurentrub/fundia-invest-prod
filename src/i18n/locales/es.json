@@ -754,8 +754,11 @@
     "reject": "Rechazar",
     "status": {
       "pending": "Pendiente",
+      "in_progress": "En progreso",
       "approved": "Aprobado",
-      "rejected": "Rechazado"
+      "refused": "Denegado",
+      "rejected": "Rechazado",
+      "document_requested": "Documentos solicitados"
     },
     "loanTypes": {
       "personal": "Préstamo personal",

@@ -86,14 +86,23 @@ export default function Dashboard() {
       
       // Envoyer la notification par email
       try {
-        const { error: emailError } = await supabase.functions.invoke('send-status-notification', {
-          body: { loanRequestId: id, newStatus },
-        });
-        
-        if (emailError) {
-          console.error('Erreur lors de l\'envoi de l\'email:', emailError);
+        const { data: { session } } = await supabase.auth.getSession();
+
+        if (session?.access_token) {
+          const { error: emailError } = await supabase.functions.invoke('send-status-notification', {
+            body: { loanRequestId: id, newStatus },
+            headers: {
+              Authorization: `Bearer ${session.access_token}`
+            }
+          });
+
+          if (emailError) {
+            console.error('Erreur lors de l\'envoi de l\'email:', emailError);
+          } else {
+            toast.success(t('dashboard.messages.emailSent'));
+          }
         } else {
-          toast.success(t('dashboard.messages.emailSent'));
+          console.error('Pas de token d\'authentification disponible');
         }
       } catch (emailError) {
         console.error('Erreur lors de l\'envoi de l\'email:', emailError);
@@ -109,8 +118,11 @@ export default function Dashboard() {
   const getStatusBadge = (status: string) => {
     const config = {
       pending: { label: t('dashboard.status.pending'), variant: 'secondary' as const, icon: Clock },
+      in_progress: { label: t('dashboard.status.in_progress'), variant: 'default' as const, icon: Clock },
       approved: { label: t('dashboard.status.approved'), variant: 'default' as const, icon: CheckCircle },
+      refused: { label: t('dashboard.status.refused'), variant: 'destructive' as const, icon: XCircle },
       rejected: { label: t('dashboard.status.rejected'), variant: 'destructive' as const, icon: XCircle },
+      document_requested: { label: t('dashboard.status.document_requested'), variant: 'secondary' as const, icon: FileText },
     };
 
     const { label, variant, icon: Icon } = config[status as keyof typeof config] || config.pending;
