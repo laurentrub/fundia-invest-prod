@@ -3,7 +3,7 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
 import { Resend } from "https://esm.sh/resend@4.0.0";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
-const frontendUrl = Deno.env.get("FRONTEND_URL") || "https://fundia-invest.com";
+const frontendUrl = Deno.env.get("FRONTEND_URL") || "https://www.fundia-invest.com";
 const fromEmail = Deno.env.get("RESEND_FROM_EMAIL") || "onboarding@resend.dev";
 const fromName = Deno.env.get("RESEND_FROM_NAME") || "Fundia Invest";
 const adminNotificationEmails = (Deno.env.get("APPLICATION_NOTIFICATION_EMAILS") || "")

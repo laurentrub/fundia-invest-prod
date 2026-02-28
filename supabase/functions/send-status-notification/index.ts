@@ -374,7 +374,7 @@ const handler = async (req: Request): Promise<Response> => {
 
                 <!-- CTA Section -->
                 <div class="cta-section">
-                  <a href="${Deno.env.get("VITE_SUPABASE_URL")?.replace('.supabase.co', '.lovable.app') || '#'}/dashboard" class="cta-button">
+                  <a href="https://www.fundia-invest.com/profile" class="cta-button">
                     📊 Voir mon tableau de bord
                   </a>
                 </div>

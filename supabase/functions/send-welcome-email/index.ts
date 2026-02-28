@@ -5,7 +5,7 @@ import { Resend } from "https://esm.sh/resend@4.0.0";
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const fromEmail = Deno.env.get("RESEND_FROM_EMAIL") || "onboarding@resend.dev";
 const fromName = Deno.env.get("RESEND_FROM_NAME") || "Fundia Invest";
-const frontendUrl = (Deno.env.get("FRONTEND_URL") || "https://fundia-invest.com").replace(/\/+$/, "");
+const frontendUrl = (Deno.env.get("FRONTEND_URL") || "https://www.fundia-invest.com").replace(/\/+$/, "");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
