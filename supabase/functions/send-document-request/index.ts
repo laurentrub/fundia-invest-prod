@@ -412,11 +412,7 @@ const handler = async (req: Request): Promise<Response> => {
 
                 <div class="info-box">
                   <p><strong>📤 Comment nous transmettre vos documents ?</strong></p>
-                  <p>Vous pouvez :</p>
-                  <ul style="margin: 12px 0 0 20px; color: #4a5568;">
-                    <li>Répondre directement à cet email en joignant vos documents</li>
-                    <li>Vous connecter à votre espace client pour les télécharger</li>
-                  </ul>
+                  <p style="margin-top: 12px;">Pour nous envoyer vos documents, veuillez vous connecter à votre espace membre en cliquant sur le bouton ci-dessous. Vous pourrez ensuite téléverser vos justificatifs de manière sécurisée.</p>
                 </div>
 
                 <div class="message">
@@ -426,8 +422,11 @@ const handler = async (req: Request): Promise<Response> => {
                 <!-- CTA Section -->
                 <div class="cta-section">
                   <a href="${Deno.env.get("VITE_SUPABASE_URL")?.replace('.supabase.co', '.lovable.app') || '#'}/profile" class="cta-button">
-                    📊 Accéder à mon espace
+                    📤 Envoyer mes documents
                   </a>
+                  <p style="margin-top: 16px; font-size: 13px; color: #718096;">
+                    Si vous n'êtes pas encore connecté, vous serez redirigé vers la page de connexion.
+                  </p>
                 </div>
 
                 <!-- Signature -->
