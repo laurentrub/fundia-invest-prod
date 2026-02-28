@@ -93,8 +93,14 @@ const handler = async (req: Request): Promise<Response> => {
     const payload: DocumentRequestPayload = await req.json();
     const { requestId, clientEmail, clientName, documents, customMessage } = payload;
 
-    console.log("Sending document request email to:", clientEmail);
+    console.log("=== Document Request Debug Info ===");
+    console.log("Request ID:", requestId);
+    console.log("Client Email:", clientEmail);
+    console.log("Client Name:", clientName);
     console.log("Documents requested:", documents);
+    console.log("Custom Message:", customMessage);
+    console.log("User ID (admin):", userId);
+    console.log("Has SUPABASE_SERVICE_ROLE_KEY:", !!Deno.env.get("SUPABASE_SERVICE_ROLE_KEY"));
 
     // Get the loan request to get user_id
     const { data: loanRequest, error: loanError } = await supabaseAdmin
@@ -105,11 +111,15 @@ const handler = async (req: Request): Promise<Response> => {
 
     if (loanError || !loanRequest) {
       console.error("Loan request not found:", loanError);
-      return new Response(JSON.stringify({ error: "Loan request not found" }), {
+      console.error("Full error details:", JSON.stringify(loanError));
+      console.error("Request ID searched:", requestId);
+      return new Response(JSON.stringify({ error: "Loan request not found", details: loanError }), {
         status: 404,
         headers: { "Content-Type": "application/json", ...corsHeaders },
       });
     }
+
+    console.log("Loan request found, user_id:", loanRequest.user_id);
 
     // Create document request records in the database
     const documentRequestRecords = documents.map((doc: string) => ({
@@ -121,13 +131,18 @@ const handler = async (req: Request): Promise<Response> => {
       custom_message: customMessage || null,
     }));
 
+    console.log("Creating document request records:", documentRequestRecords.length, "records");
+
     const { error: insertError } = await supabaseAdmin
       .from("document_requests")
       .insert(documentRequestRecords);
 
     if (insertError) {
       console.error("Error creating document requests:", insertError);
+      console.error("Insert error details:", JSON.stringify(insertError));
       // Continue with email even if DB insert fails
+    } else {
+      console.log("Document requests created successfully");
     }
 
     const emailResponse = await resend.emails.send({
@@ -447,10 +462,12 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
-    console.log("Email sent successfully:", emailResponse);
+    console.log("Email sent successfully");
+    console.log("Email response:", JSON.stringify(emailResponse));
 
     // Log this action in status history
-    await supabaseAdmin.from("request_status_history").insert({
+    console.log("Inserting status history...");
+    const { error: historyError } = await supabaseAdmin.from("request_status_history").insert({
       loan_request_id: requestId,
       changed_by: userId,
       old_status: null,
@@ -458,6 +475,14 @@ const handler = async (req: Request): Promise<Response> => {
       comment: `Demande de justificatifs envoyée: ${documents.join(", ")}`,
     });
 
+    if (historyError) {
+      console.error("Error inserting status history:", historyError);
+      console.error("History error details:", JSON.stringify(historyError));
+    } else {
+      console.log("Status history inserted successfully");
+    }
+
+    console.log("Document request function completed successfully");
     return new Response(JSON.stringify({ success: true, emailResponse }), {
       status: 200,
       headers: { "Content-Type": "application/json", ...corsHeaders },
