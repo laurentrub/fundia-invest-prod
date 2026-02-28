@@ -116,6 +116,8 @@ const handler = async (req: Request): Promise<Response> => {
     const { loanRequestId, newStatus }: NotificationRequest = await req.json();
 
     console.log("Sending notification for loan request:", loanRequestId, "with status:", newStatus);
+    console.log("Supabase URL:", Deno.env.get("SUPABASE_URL"));
+    console.log("Has service role key:", !!Deno.env.get("SUPABASE_SERVICE_ROLE_KEY"));
 
     // Récupérer les détails de la demande
     const { data: loanRequest, error: loanError } = await supabaseAdmin
@@ -126,6 +128,9 @@ const handler = async (req: Request): Promise<Response> => {
 
     if (loanError || !loanRequest) {
       console.error("Error fetching loan request:", loanError);
+      console.error("Full error details:", JSON.stringify(loanError));
+      console.error("Loan request ID searched:", loanRequestId);
+      console.error("Data returned:", loanRequest);
       throw new Error("Demande introuvable");
     }
 
