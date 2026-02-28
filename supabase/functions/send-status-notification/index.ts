@@ -31,24 +31,24 @@ const escapeHtml = (str: string): string => {
 
 const statusMessages = {
   pending: {
-    subject: "Demande de crédit reçue",
-    title: "Votre demande est en cours d'examen",
-    message: "Nous avons bien reçu votre demande de crédit. Notre équipe l'examine actuellement et vous contactera très prochainement.",
+    subject: "Votre dossier est en attente d'examen",
+    title: "Dossier en attente",
+    message: "Votre demande de crédit est actuellement en attente d'examen. Notre équipe va prochainement étudier votre dossier et vous contactera très rapidement.",
   },
   approved: {
     subject: "Demande de crédit approuvée ✅",
     title: "Félicitations ! Votre demande est approuvée",
-    message: "Nous sommes heureux de vous informer que votre demande de crédit a été approuvée. Un conseiller vous contactera sous peu pour finaliser le dossier.",
+    message: "Nous sommes heureux de vous informer que votre demande de crédit a été approuvée. Un conseiller vous contactera sous peu pour finaliser le dossier et mettre en place votre financement.",
   },
   rejected: {
     subject: "Mise à jour de votre demande de crédit",
     title: "Réponse concernant votre demande",
-    message: "Après étude de votre dossier, nous ne sommes malheureusement pas en mesure de donner une suite favorable à votre demande pour le moment. N'hésitez pas à nous recontacter.",
+    message: "Après étude approfondie de votre dossier, nous ne sommes malheureusement pas en mesure de donner une suite favorable à votre demande pour le moment. N'hésitez pas à nous recontacter ultérieurement si votre situation évolue.",
   },
   in_progress: {
-    subject: "Votre dossier est en cours de traitement",
-    title: "Traitement en cours",
-    message: "Votre demande de crédit est actuellement en cours de traitement par nos services. Nous vous tiendrons informé de son avancement.",
+    subject: "Votre dossier est en cours d'analyse 🔍",
+    title: "Analyse en cours",
+    message: "Bonne nouvelle ! Notre équipe a commencé l'analyse détaillée de votre demande de crédit. Nous étudions actuellement tous les éléments de votre dossier pour vous proposer la meilleure solution de financement. Vous recevrez une réponse définitive très prochainement.",
   },
 };
 

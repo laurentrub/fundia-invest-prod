@@ -117,7 +117,7 @@ const handler = async (req: Request): Promise<Response> => {
       user_id: loanRequest.user_id,
       document_type: doc,
       status: "pending",
-      requested_by: user.id,
+      requested_by: userId,
       custom_message: customMessage || null,
     }));
 
@@ -130,59 +130,319 @@ const handler = async (req: Request): Promise<Response> => {
       // Continue with email even if DB insert fails
     }
 
-    // Build document list HTML with escaped content
-    const documentListHtml = documents
-      .map((doc: string) => `<li style="margin-bottom: 8px;">${escapeHtml(doc)}</li>`)
-      .join("");
-
-    const customMessageHtml = customMessage
-      ? `<p style="margin: 20px 0; color: #333;">${escapeHtml(customMessage)}</p>`
-      : "";
-
     const emailResponse = await resend.emails.send({
       from: `${fromName} <${fromEmail}>`,
       to: [clientEmail],
-      subject: "Demande de justificatifs - Privat Equity",
+      subject: "Documents requis pour votre dossier 📄",
       html: `
         <!DOCTYPE html>
-        <html>
-        <head>
-          <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        </head>
-        <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <div style="background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); padding: 30px; text-align: center; border-radius: 8px 8px 0 0;">
-            <h1 style="color: white; margin: 0; font-size: 24px;">Privat Equity</h1>
-          </div>
-          
-          <div style="background: #ffffff; padding: 30px; border: 1px solid #e5e5e5; border-top: none; border-radius: 0 0 8px 8px;">
-            <h2 style="color: #1e3a5f; margin-top: 0;">Demande de justificatifs</h2>
-            
-            <p>Bonjour ${escapeHtml(clientName)},</p>
-            
-            <p>Dans le cadre de l'étude de votre demande de financement (référence: ${requestId.slice(0, 8)}), nous avons besoin des documents suivants :</p>
-            
-            <ul style="background: #f8f9fa; padding: 20px 20px 20px 40px; border-radius: 8px; border-left: 4px solid #1e3a5f;">
-              ${documentListHtml}
-            </ul>
-            
-            ${customMessageHtml}
-            
-            <p>Merci de nous transmettre ces documents dans les meilleurs délais afin que nous puissions poursuivre l'étude de votre dossier.</p>
-            
-            <p>Vous pouvez répondre directement à cet email ou vous connecter à votre espace client pour télécharger vos documents.</p>
-            
-            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e5e5;">
-              <p style="margin: 0; color: #666;">Cordialement,</p>
-              <p style="margin: 5px 0 0 0; font-weight: bold; color: #1e3a5f;">L'équipe Privat Equity</p>
+        <html lang="fr">
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>Demande de justificatifs</title>
+            <style>
+              * { margin: 0; padding: 0; box-sizing: border-box; }
+              body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+                line-height: 1.6;
+                color: #1a202c;
+                background-color: #f7fafc;
+                padding: 20px;
+              }
+              .email-wrapper {
+                max-width: 600px;
+                margin: 0 auto;
+                background: #ffffff;
+                border-radius: 16px;
+                overflow: hidden;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+              }
+              .header {
+                background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+                color: white;
+                padding: 48px 40px;
+                text-align: center;
+              }
+              .header-icon {
+                font-size: 56px;
+                margin-bottom: 16px;
+                display: block;
+              }
+              .header h1 {
+                font-size: 28px;
+                font-weight: 700;
+                margin: 0 0 8px 0;
+                letter-spacing: -0.5px;
+              }
+              .header p {
+                font-size: 16px;
+                opacity: 0.95;
+                margin: 0;
+              }
+              .content {
+                padding: 40px;
+                background: #ffffff;
+              }
+              .greeting {
+                font-size: 18px;
+                font-weight: 600;
+                color: #2d3748;
+                margin-bottom: 16px;
+              }
+              .message {
+                font-size: 16px;
+                color: #4a5568;
+                margin-bottom: 24px;
+                line-height: 1.7;
+              }
+              .reference-box {
+                background: linear-gradient(to right, #eff6ff 0%, #dbeafe 100%);
+                padding: 16px 20px;
+                border-radius: 12px;
+                margin: 24px 0;
+                border-left: 4px solid #3b82f6;
+              }
+              .reference-label {
+                font-size: 12px;
+                color: #64748b;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                margin-bottom: 4px;
+              }
+              .reference-code {
+                font-size: 18px;
+                font-weight: 700;
+                color: #1e40af;
+                font-family: 'Courier New', monospace;
+                letter-spacing: 1px;
+              }
+              .documents-card {
+                background: linear-gradient(to right, #fef3c7 0%, #fde68a 100%);
+                padding: 24px;
+                border-radius: 12px;
+                margin: 32px 0;
+                border-left: 4px solid #f59e0b;
+              }
+              .documents-card h3 {
+                font-size: 16px;
+                font-weight: 700;
+                color: #92400e;
+                margin-bottom: 16px;
+                display: flex;
+                align-items: center;
+              }
+              .documents-card ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+              }
+              .documents-card li {
+                background: #fffbeb;
+                padding: 12px 16px;
+                margin-bottom: 8px;
+                border-radius: 8px;
+                color: #78350f;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+              }
+              .documents-card li:last-child {
+                margin-bottom: 0;
+              }
+              .documents-card li:before {
+                content: "📄";
+                margin-right: 12px;
+                font-size: 18px;
+              }
+              .custom-message {
+                background: #f0f9ff;
+                border: 1px solid #bae6fd;
+                border-radius: 12px;
+                padding: 20px;
+                margin: 24px 0;
+                color: #0c4a6e;
+              }
+              .custom-message strong {
+                display: block;
+                margin-bottom: 8px;
+                font-size: 15px;
+              }
+              .info-box {
+                background: #f7fafc;
+                border: 1px solid #e2e8f0;
+                border-radius: 12px;
+                padding: 20px;
+                margin: 32px 0;
+              }
+              .info-box p {
+                color: #4a5568;
+                font-size: 14px;
+                margin: 8px 0;
+              }
+              .info-box strong {
+                color: #2d3748;
+              }
+              .cta-section {
+                text-align: center;
+                margin: 32px 0;
+              }
+              .cta-button {
+                display: inline-block;
+                padding: 16px 40px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white !important;
+                text-decoration: none;
+                border-radius: 8px;
+                font-size: 16px;
+                font-weight: 600;
+                box-shadow: 0 4px 14px rgba(102, 126, 234, 0.4);
+              }
+              .signature {
+                margin-top: 40px;
+                padding-top: 32px;
+                border-top: 2px solid #e2e8f0;
+                font-size: 15px;
+                color: #4a5568;
+              }
+              .signature strong {
+                color: #2d3748;
+                display: block;
+                margin-top: 8px;
+              }
+              .footer {
+                background: #2d3748;
+                color: #a0aec0;
+                padding: 32px 40px;
+                text-align: center;
+              }
+              .footer-content {
+                font-size: 13px;
+                line-height: 1.8;
+              }
+              .footer-brand {
+                font-size: 18px;
+                font-weight: 700;
+                color: #ffffff;
+                margin-bottom: 12px;
+                display: block;
+              }
+              .footer-address {
+                margin: 16px 0 8px 0;
+              }
+              .footer-links {
+                margin-top: 20px;
+                padding-top: 20px;
+                border-top: 1px solid #4a5568;
+              }
+              .footer-link {
+                color: #a0aec0;
+                text-decoration: none;
+                margin: 0 12px;
+                font-size: 13px;
+              }
+              @media only screen and (max-width: 600px) {
+                body { padding: 0; }
+                .email-wrapper { border-radius: 0; }
+                .header { padding: 32px 24px; }
+                .header h1 { font-size: 24px; }
+                .content { padding: 24px; }
+                .documents-card, .info-box { padding: 20px; }
+                .footer { padding: 24px 20px; }
+              }
+            </style>
+          </head>
+          <body>
+            <div class="email-wrapper">
+              <!-- Header -->
+              <div class="header">
+                <span class="header-icon">📄</span>
+                <h1>Fundia Invest</h1>
+                <p>Demande de justificatifs</p>
+              </div>
+
+              <!-- Content -->
+              <div class="content">
+                <div class="greeting">
+                  Bonjour ${escapeHtml(clientName)},
+                </div>
+
+                <div class="message">
+                  Nous progressons dans l'étude de votre demande de financement ! Pour finaliser l'analyse de votre dossier, nous aurions besoin de quelques documents complémentaires.
+                </div>
+
+                <!-- Reference Box -->
+                <div class="reference-box">
+                  <div class="reference-label">Référence de votre dossier</div>
+                  <div class="reference-code">${escapeHtml(requestId.substring(0, 8).toUpperCase())}</div>
+                </div>
+
+                <!-- Documents Card -->
+                <div class="documents-card">
+                  <h3>📋 Documents requis</h3>
+                  <ul>
+                    ${documents.map((doc: string) => `<li>${escapeHtml(doc)}</li>`).join('')}
+                  </ul>
+                </div>
+
+                ${customMessage ? `
+                <div class="custom-message">
+                  <strong>💬 Message de notre équipe</strong>
+                  <p>${escapeHtml(customMessage)}</p>
+                </div>
+                ` : ''}
+
+                <div class="info-box">
+                  <p><strong>📤 Comment nous transmettre vos documents ?</strong></p>
+                  <p>Vous pouvez :</p>
+                  <ul style="margin: 12px 0 0 20px; color: #4a5568;">
+                    <li>Répondre directement à cet email en joignant vos documents</li>
+                    <li>Vous connecter à votre espace client pour les télécharger</li>
+                  </ul>
+                </div>
+
+                <div class="message">
+                  Ces documents nous permettront de finaliser l'analyse de votre dossier et de vous proposer la meilleure solution de financement adaptée à votre situation.
+                </div>
+
+                <!-- CTA Section -->
+                <div class="cta-section">
+                  <a href="${Deno.env.get("VITE_SUPABASE_URL")?.replace('.supabase.co', '.lovable.app') || '#'}/profile" class="cta-button">
+                    📊 Accéder à mon espace
+                  </a>
+                </div>
+
+                <!-- Signature -->
+                <div class="signature">
+                  Nous restons à votre disposition pour toute question.<br>
+                  Cordialement,
+                  <strong>L'équipe Fundia Invest</strong>
+                </div>
+              </div>
+
+              <!-- Footer -->
+              <div class="footer">
+                <span class="footer-brand">Fundia Invest</span>
+                <div class="footer-content">
+                  <div class="footer-address">
+                    5588 Rue Frontenac, Montréal, QC H2H 2L9, Canada
+                  </div>
+                  <div style="margin-top: 12px;">
+                    📞 Support client : contact@fundia-invest.com
+                  </div>
+                  <div class="footer-links">
+                    <a href="https://www.fundia-invest.com" class="footer-link">Site web</a>
+                    <a href="https://www.fundia-invest.com/terms" class="footer-link">CGU</a>
+                    <a href="https://www.fundia-invest.com/privacy" class="footer-link">Confidentialité</a>
+                  </div>
+                  <div style="margin-top: 20px; font-size: 12px; opacity: 0.7;">
+                    Cet email a été envoyé automatiquement concernant votre demande de financement.
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          
-          <div style="text-align: center; padding: 20px; color: #999; font-size: 12px;">
-            <p style="margin: 0;">© 2024 Privat Equity. Tous droits réservés.</p>
-            <p style="margin: 5px 0 0 0;">5588 Rue Frontenac, Montréal, QC H2H 2L9, Canada</p>
-          </div>
-        </body>
+          </body>
         </html>
       `,
     });
@@ -192,7 +452,7 @@ const handler = async (req: Request): Promise<Response> => {
     // Log this action in status history
     await supabaseAdmin.from("request_status_history").insert({
       loan_request_id: requestId,
-      changed_by: user.id,
+      changed_by: userId,
       old_status: null,
       new_status: "document_requested",
       comment: `Demande de justificatifs envoyée: ${documents.join(", ")}`,

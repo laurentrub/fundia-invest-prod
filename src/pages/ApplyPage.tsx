@@ -66,30 +66,80 @@ const ApplyPage = () => {
     leaseStartDate: z.string().optional(),
     hasMortgage: z.string().optional(),
     monthlyMortgage: z.string().optional(),
-  }).refine((data) => {
-    if (data.employmentStatus === "cdd" && (!data.contractStartDate || !data.contractEndDate)) {
-      return false;
+  }).superRefine((data, ctx) => {
+    // Validation pour CDD
+    if (data.employmentStatus === "cdd") {
+      if (!data.contractStartDate) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: t('apply.validation.contractStartDateRequired'),
+          path: ['contractStartDate'],
+        });
+      }
+      if (!data.contractEndDate) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: t('apply.validation.contractEndDateRequired'),
+          path: ['contractEndDate'],
+        });
+      }
     }
+
+    // Validation pour CDI
     if (data.employmentStatus === "cdi" && !data.contractStartDate) {
-      return false;
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: t('apply.validation.contractStartDateRequired'),
+        path: ['contractStartDate'],
+      });
     }
+
+    // Validation du revenu mensuel pour salariés et retraités
     if ((data.employmentStatus === "cdd" || data.employmentStatus === "cdi" || data.employmentStatus === "retired") && !data.monthlyIncome) {
-      return false;
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: t('apply.validation.monthlyIncomeRequired'),
+        path: ['monthlyIncome'],
+      });
     }
+
+    // Validation du chiffre d'affaires pour travailleur indépendant
     if (data.employmentStatus === "self-employed" && !data.annualRevenue) {
-      return false;
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: t('apply.validation.annualRevenueRequired'),
+        path: ['annualRevenue'],
+      });
     }
+
+    // Validation pour locataire
     if (data.housingStatus === "renter" && !data.leaseStartDate) {
-      return false;
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: t('apply.validation.leaseStartDateRequired'),
+        path: ['leaseStartDate'],
+      });
     }
-    if (data.housingStatus === "owner" && !data.hasMortgage) {
-      return false;
+
+    // Validation pour propriétaire
+    if (data.housingStatus === "owner") {
+      if (!data.hasMortgage) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: t('apply.validation.mortgageStatusRequired'),
+          path: ['hasMortgage'],
+        });
+      }
+
+      if (data.hasMortgage === "yes" && !data.monthlyMortgage) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          message: t('apply.validation.monthlyMortgageRequired'),
+          path: ['monthlyMortgage'],
+        });
+      }
     }
-    if (data.housingStatus === "owner" && data.hasMortgage === "yes" && !data.monthlyMortgage) {
-      return false;
-    }
-    return true;
-  }, { message: t('apply.validation.fillRequiredFields') });
+  });
 
   const step4Schema = z.object({
     address: z.string()
@@ -116,18 +166,22 @@ const ApplyPage = () => {
           const parsedData = JSON.parse(savedData);
           setFormData(parsedData);
           localStorage.removeItem('pendingLoanApplication');
-          
+
           toast({
             title: t('apply.messages.dataRestored'),
             description: t('apply.messages.dataRestoredDesc'),
           });
+
+          // Scroll to top to show the restored form
+          window.scrollTo({ top: 0, behavior: 'smooth' });
         } catch (error) {
           console.error('Error restoring form data:', error);
           localStorage.removeItem('pendingLoanApplication');
         }
       }
     }
-  }, [user, authLoading, toast, t]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user, authLoading]); // Only depend on user and authLoading to avoid multiple triggers
   
   const [formData, setFormData] = useState({
     loanType: "",
@@ -696,6 +750,22 @@ const ApplyPage = () => {
                         maxLength={10}
                       />
                     </div>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="country">{t('apply.step4.country')} *</Label>
+                    <Select value={formData.country} onValueChange={(value) => updateFormData("country", value)}>
+                      <SelectTrigger>
+                        <SelectValue placeholder={t('apply.step4.country')} />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="France">France</SelectItem>
+                        <SelectItem value="Belgique">Belgique</SelectItem>
+                        <SelectItem value="Suisse">Suisse</SelectItem>
+                        <SelectItem value="Canada">Canada</SelectItem>
+                        <SelectItem value="Luxembourg">Luxembourg</SelectItem>
+                      </SelectContent>
+                    </Select>
                   </div>
 
                   <div className="bg-muted/50 rounded-lg p-6 mt-8">
