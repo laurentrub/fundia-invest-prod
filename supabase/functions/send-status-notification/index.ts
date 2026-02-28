@@ -83,17 +83,17 @@ const handler = async (req: Request): Promise<Response> => {
       { global: { headers: { Authorization: `Bearer ${token}` } } }
     );
 
-    // Verify the JWT claims
-    const { data: claimsData, error: claimsError } = await supabaseUser.auth.getClaims(token);
-    if (claimsError || !claimsData?.claims) {
-      console.error("Failed to verify JWT claims:", claimsError);
+    // Verify the user
+    const { data: userData, error: userError } = await supabaseUser.auth.getUser();
+    if (userError || !userData?.user) {
+      console.error("Failed to verify user:", userError);
       return new Response(
         JSON.stringify({ error: "Unauthorized: Invalid authentication token" }),
         { status: 401, headers: { "Content-Type": "application/json", ...corsHeaders } }
       );
     }
 
-    const userId = claimsData.claims.sub as string;
+    const userId = userData.user.id;
 
     // Verify the user has admin or manager role using the service role client
     const { data: roleData, error: roleError } = await supabaseAdmin
