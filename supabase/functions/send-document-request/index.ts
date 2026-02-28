@@ -411,7 +411,7 @@ const handler = async (req: Request): Promise<Response> => {
                 ` : ''}
 
                 <div class="info-box">
-                  <p><strong>📤 Comment nous transmettre vos documents ?</strong></p>
+                  <p><strong>Comment nous transmettre vos documents ?</strong></p>
                   <p style="margin-top: 12px;">Pour nous envoyer vos documents, veuillez vous connecter à votre espace membre en cliquant sur le bouton ci-dessous. Vous pourrez ensuite téléverser vos justificatifs de manière sécurisée.</p>
                 </div>
 
@@ -422,7 +422,7 @@ const handler = async (req: Request): Promise<Response> => {
                 <!-- CTA Section -->
                 <div class="cta-section">
                   <a href="${Deno.env.get("VITE_SUPABASE_URL")?.replace('.supabase.co', '.lovable.app') || '#'}/profile" class="cta-button">
-                    📤 Envoyer mes documents
+                    Envoyer mes documents
                   </a>
                   <p style="margin-top: 16px; font-size: 13px; color: #718096;">
                     Si vous n'êtes pas encore connecté, vous serez redirigé vers la page de connexion.
