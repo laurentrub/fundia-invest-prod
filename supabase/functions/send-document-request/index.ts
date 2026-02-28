@@ -32,7 +32,7 @@ const escapeHtml = (str: string): string => {
 };
 
 const handler = async (req: Request): Promise<Response> => {
-  console.log("send-document-request function called");
+  console.log("send-document-request function called - v2.0");
 
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
