@@ -60,16 +60,16 @@ const handler = async (req: Request): Promise<Response> => {
       { global: { headers: { Authorization: `Bearer ${token}` } } }
     );
 
-    const { data: claimsData, error: claimsError } = await supabaseUser.auth.getClaims(token);
-    if (claimsError || !claimsData?.claims) {
-      console.error("JWT verification failed:", claimsError);
+    const { data: userData, error: userError } = await supabaseUser.auth.getUser();
+    if (userError || !userData?.user) {
+      console.error("JWT verification failed:", userError);
       return new Response(JSON.stringify({ error: "Non autorisé" }), {
         status: 401,
         headers: { "Content-Type": "application/json", ...corsHeaders },
       });
     }
 
-    const userId = claimsData.claims.sub as string;
+    const userId = userData.user.id;
 
     // Check if user has admin or manager role
     const { data: roleData, error: roleError } = await supabaseAdmin
