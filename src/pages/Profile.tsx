@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '@/hooks/useAuth';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -39,6 +39,7 @@ export default function Profile() {
   const { t } = useTranslation();
   const { user, updatePassword, loading: authLoading } = useAuth();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const [loading, setLoading] = useState(false);
   const [requests, setRequests] = useState<LoanRequest[]>([]);
   const [activeSection, setActiveSection] = useState('info');
@@ -65,6 +66,14 @@ export default function Profile() {
       fetchRequests();
     }
   }, [user]);
+
+  // Handle section parameter from URL
+  useEffect(() => {
+    const section = searchParams.get('section');
+    if (section && ['info', 'password', 'requests', 'documents', 'requested-docs', 'contracts'].includes(section)) {
+      setActiveSection(section);
+    }
+  }, [searchParams]);
 
   const fetchProfile = async () => {
     try {

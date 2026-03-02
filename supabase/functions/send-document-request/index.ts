@@ -421,7 +421,7 @@ const handler = async (req: Request): Promise<Response> => {
 
                 <!-- CTA Section -->
                 <div class="cta-section">
-                  <a href="https://www.fundia-invest.com/profile" class="cta-button">
+                  <a href="https://www.fundia-invest.com/profile?section=requested-docs" class="cta-button">
                     Envoyer mes documents
                   </a>
                   <p style="margin-top: 16px; font-size: 13px; color: #718096;">
