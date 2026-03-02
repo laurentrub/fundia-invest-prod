@@ -1013,6 +1013,7 @@
   "admin": {
     "nav": {
       "dashboard": "Tableau de bord",
+      "analytics": "Analytiques",
       "requests": "Demandes",
       "documents": "Contrats",
       "clientDocuments": "Documents clients",

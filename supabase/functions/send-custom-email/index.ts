@@ -2,6 +2,7 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
 import { Resend } from "https://esm.sh/resend@4.0.0";
+import { checkRateLimit, createRateLimitResponse, getClientIdentifier, getRateLimitHeaders } from "../_shared/rateLimiter.ts";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const fromEmail = Deno.env.get("RESEND_FROM_EMAIL") || "onboarding@resend.dev";
@@ -67,6 +68,15 @@ const handler = async (req: Request): Promise<Response> => {
     }
 
     const userId = userData.user.id;
+    const userEmail = userData.user.email || '';
+
+    // Rate limiting - 10 emails per minute per user
+    const clientId = getClientIdentifier(req, userEmail);
+    const rateLimitResult = checkRateLimit(clientId, { maxRequests: 10, windowMs: 60000 });
+
+    if (!rateLimitResult.allowed) {
+      return createRateLimitResponse(rateLimitResult, corsHeaders);
+    }
 
     // Verify admin/manager role
     const { data: roleData, error: roleError } = await supabaseAdmin
@@ -261,7 +271,14 @@ const handler = async (req: Request): Promise<Response> => {
 
     return new Response(
       JSON.stringify({ success: true }),
-      { status: 200, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      {
+        status: 200,
+        headers: {
+          "Content-Type": "application/json",
+          ...corsHeaders,
+          ...getRateLimitHeaders(rateLimitResult)
+        }
+      }
     );
   } catch (error: any) {
     console.error("Error sending custom email:", error);

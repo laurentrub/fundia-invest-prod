@@ -24,6 +24,7 @@ import {
   Lock,
   Save,
   Loader2,
+  BarChart3,
 } from 'lucide-react';
 import {
   Collapsible,
@@ -38,6 +39,7 @@ interface ManagerProfileSidebarProps {
 
 const menuItems = [
   { key: 'dashboard', path: '/admin', icon: LayoutDashboard },
+  { key: 'analytics', path: '/admin/analytics', icon: BarChart3 },
   { key: 'requests', path: '/admin/requests', icon: FileText },
   { key: 'documents', path: '/admin/documents', icon: FileCheck },
   { key: 'clientDocuments', path: '/admin/client-documents', icon: FolderOpen },
