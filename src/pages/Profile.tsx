@@ -193,6 +193,7 @@ export default function Profile() {
     const types: Record<string, string> = {
       personal: t('dashboard.loanTypes.personal'),
       auto: t('dashboard.loanTypes.auto'),
+      home: t('dashboard.loanTypes.home_improvement'),
       home_improvement: t('dashboard.loanTypes.home_improvement'),
       business: t('dashboard.loanTypes.business'),
       consolidation: t('dashboard.loanTypes.consolidation'),

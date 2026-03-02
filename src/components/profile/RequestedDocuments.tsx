@@ -184,6 +184,7 @@ export function RequestedDocuments() {
       personal: 'Prêt personnel',
       auto: 'Crédit auto',
       home_improvement: 'Crédit travaux',
+      home: 'Crédit travaux',
       business: 'Prêt entreprise',
       consolidation: 'Rachat de crédit',
       project: 'Financement de projet',
