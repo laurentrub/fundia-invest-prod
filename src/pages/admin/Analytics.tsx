@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { supabase } from '@/integrations/supabase/client';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { Loader2, TrendingUp, TrendingDown, Users, Euro, Calendar, FileCheck, Download, FileSpreadsheet } from 'lucide-react';
 import { toast } from 'sonner';
 import { downloadCSV, downloadExcel, formatDateForExport, formatCurrencyForExport } from '@/lib/exportUtils';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import {
   LineChart,
   Line,
@@ -20,7 +22,6 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 interface LoanRequest {
   id: string;
