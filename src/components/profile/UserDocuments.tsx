@@ -55,6 +55,13 @@ const documentCategories = [
   { value: 'other', label: 'Autre' },
 ];
 
+const identityTypes = [
+  { value: 'id_card', label: 'Carte d\'identité' },
+  { value: 'passport', label: 'Passeport' },
+  { value: 'driving_license', label: 'Permis de conduire' },
+  { value: 'residence_permit', label: 'Titre de séjour' },
+];
+
 const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
 
 export function UserDocuments() {
@@ -63,10 +70,13 @@ export function UserDocuments() {
   const [loading, setLoading] = useState(true);
   const [uploading, setUploading] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('other');
+  const [selectedIdentityType, setSelectedIdentityType] = useState('id_card');
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [documentToDelete, setDocumentToDelete] = useState<UserDocument | null>(null);
   const [dragActive, setDragActive] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const fileInputRectoRef = useRef<HTMLInputElement>(null);
+  const fileInputVersoRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (user) {
@@ -92,6 +102,36 @@ export function UserDocuments() {
     }
   };
 
+  const uploadSingleFile = async (file: File, suffix: string = '') => {
+    if (!user) return null;
+
+    const fileExt = file.name.split('.').pop();
+    const fileName = `${Date.now()}-${Math.random().toString(36).substring(7)}${suffix}.${fileExt}`;
+    const filePath = `${user.id}/${fileName}`;
+
+    // Upload to storage
+    const { error: uploadError } = await supabase.storage
+      .from('user-documents')
+      .upload(filePath, file);
+
+    if (uploadError) throw uploadError;
+
+    // Save metadata to database
+    const { error: dbError } = await supabase
+      .from('user_documents')
+      .insert({
+        user_id: user.id,
+        file_name: file.name,
+        file_path: filePath,
+        file_size: file.size,
+        file_type: file.type,
+        category: selectedCategory === 'identity' ? `identity_${selectedIdentityType}${suffix}` : selectedCategory,
+      });
+
+    if (dbError) throw dbError;
+    return true;
+  };
+
   const handleFileUpload = async (files: FileList | null) => {
     if (!files || files.length === 0 || !user) return;
 
@@ -105,34 +145,10 @@ export function UserDocuments() {
     setUploading(true);
 
     try {
-      const fileExt = file.name.split('.').pop();
-      const fileName = `${Date.now()}-${Math.random().toString(36).substring(7)}.${fileExt}`;
-      const filePath = `${user.id}/${fileName}`;
-
-      // Upload to storage
-      const { error: uploadError } = await supabase.storage
-        .from('user-documents')
-        .upload(filePath, file);
-
-      if (uploadError) throw uploadError;
-
-      // Save metadata to database
-      const { error: dbError } = await supabase
-        .from('user_documents')
-        .insert({
-          user_id: user.id,
-          file_name: file.name,
-          file_path: filePath,
-          file_size: file.size,
-          file_type: file.type,
-          category: selectedCategory,
-        });
-
-      if (dbError) throw dbError;
-
+      await uploadSingleFile(file);
       toast.success('Document uploadé avec succès');
       fetchDocuments();
-      
+
       // Reset file input
       if (fileInputRef.current) {
         fileInputRef.current.value = '';
@@ -140,6 +156,42 @@ export function UserDocuments() {
     } catch (error: any) {
       console.error('Upload error:', error);
       toast.error("Erreur lors de l'upload du document");
+    } finally {
+      setUploading(false);
+    }
+  };
+
+  const handleIDCardUpload = async (rectoFiles: FileList | null, versoFiles: FileList | null) => {
+    if (!user) return;
+
+    const recto = rectoFiles?.[0];
+    const verso = versoFiles?.[0];
+
+    if (!recto || !verso) {
+      toast.error('Veuillez sélectionner les deux faces de la carte');
+      return;
+    }
+
+    if (recto.size > MAX_FILE_SIZE || verso.size > MAX_FILE_SIZE) {
+      toast.error('Un fichier est trop volumineux (max 10MB)');
+      return;
+    }
+
+    setUploading(true);
+
+    try {
+      await uploadSingleFile(recto, '_recto');
+      await uploadSingleFile(verso, '_verso');
+
+      toast.success('Carte d\'identité uploadée avec succès (recto + verso)');
+      fetchDocuments();
+
+      // Reset file inputs
+      if (fileInputRectoRef.current) fileInputRectoRef.current.value = '';
+      if (fileInputVersoRef.current) fileInputVersoRef.current.value = '';
+    } catch (error: any) {
+      console.error('Upload error:', error);
+      toast.error("Erreur lors de l'upload de la carte d'identité");
     } finally {
       setUploading(false);
     }
@@ -279,48 +331,147 @@ export function UserDocuments() {
                 </SelectContent>
               </Select>
             </div>
+
+            {selectedCategory === 'identity' && (
+              <div className="space-y-2">
+                <Label>Type de pièce d'identité</Label>
+                <Select value={selectedIdentityType} onValueChange={setSelectedIdentityType}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Sélectionner un type" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {identityTypes.map((type) => (
+                      <SelectItem key={type.value} value={type.value}>
+                        {type.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+            )}
           </div>
 
-          <div
-            onDragEnter={handleDrag}
-            onDragLeave={handleDrag}
-            onDragOver={handleDrag}
-            onDrop={handleDrop}
-            className={cn(
-              'relative border-2 border-dashed rounded-xl p-8 transition-all duration-200 text-center',
-              dragActive 
-                ? 'border-primary bg-primary/5 scale-[1.02]' 
-                : 'border-border hover:border-primary/50 hover:bg-muted/50',
-              uploading && 'opacity-50 pointer-events-none'
-            )}
-          >
-            <input
-              ref={fileInputRef}
-              type="file"
-              className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-              onChange={(e) => handleFileUpload(e.target.files)}
-              accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png,.gif"
-              disabled={uploading}
-            />
-            
-            <div className="flex flex-col items-center gap-3">
-              {uploading ? (
-                <Loader2 className="h-10 w-10 animate-spin text-primary" />
-              ) : (
-                <div className="p-4 rounded-full bg-primary/10">
-                  <Upload className="h-8 w-8 text-primary" />
+          {/* Upload zone - Conditionnel selon le type d'identité */}
+          {selectedCategory === 'identity' && selectedIdentityType === 'id_card' ? (
+            // Upload Recto/Verso pour carte d'identité
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* Recto */}
+              <div className="space-y-2">
+                <Label>Face avant (Recto)</Label>
+                <div className={cn(
+                  'relative border-2 border-dashed rounded-xl p-6 transition-all duration-200 text-center',
+                  'border-border hover:border-primary/50 hover:bg-muted/50',
+                  uploading && 'opacity-50 pointer-events-none'
+                )}>
+                  <input
+                    ref={fileInputRectoRef}
+                    type="file"
+                    className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                    accept=".jpg,.jpeg,.png,.pdf"
+                    disabled={uploading}
+                  />
+                  <div className="flex flex-col items-center gap-2">
+                    <div className="p-3 rounded-full bg-primary/10">
+                      <Upload className="h-6 w-6 text-primary" />
+                    </div>
+                    <p className="text-sm font-medium">Recto</p>
+                    <p className="text-xs text-muted-foreground">Cliquez pour sélectionner</p>
+                  </div>
                 </div>
-              )}
-              <div>
-                <p className="font-medium">
-                  {uploading ? 'Upload en cours...' : 'Glissez-déposez un fichier ici'}
-                </p>
-                <p className="text-sm text-muted-foreground mt-1">
-                  ou cliquez pour sélectionner
-                </p>
+              </div>
+
+              {/* Verso */}
+              <div className="space-y-2">
+                <Label>Face arrière (Verso)</Label>
+                <div className={cn(
+                  'relative border-2 border-dashed rounded-xl p-6 transition-all duration-200 text-center',
+                  'border-border hover:border-primary/50 hover:bg-muted/50',
+                  uploading && 'opacity-50 pointer-events-none'
+                )}>
+                  <input
+                    ref={fileInputVersoRef}
+                    type="file"
+                    className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                    accept=".jpg,.jpeg,.png,.pdf"
+                    disabled={uploading}
+                  />
+                  <div className="flex flex-col items-center gap-2">
+                    <div className="p-3 rounded-full bg-primary/10">
+                      <Upload className="h-6 w-6 text-primary" />
+                    </div>
+                    <p className="text-sm font-medium">Verso</p>
+                    <p className="text-xs text-muted-foreground">Cliquez pour sélectionner</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bouton Upload */}
+              <div className="md:col-span-2">
+                <Button
+                  onClick={() => handleIDCardUpload(
+                    fileInputRectoRef.current?.files || null,
+                    fileInputVersoRef.current?.files || null
+                  )}
+                  disabled={uploading}
+                  className="w-full"
+                >
+                  {uploading ? (
+                    <>
+                      <Loader2 className="h-4 w-4 animate-spin mr-2" />
+                      Upload en cours...
+                    </>
+                  ) : (
+                    <>
+                      <Upload className="h-4 w-4 mr-2" />
+                      Uploader la carte (Recto + Verso)
+                    </>
+                  )}
+                </Button>
               </div>
             </div>
-          </div>
+          ) : (
+            // Upload normal pour les autres documents
+            <div
+              onDragEnter={handleDrag}
+              onDragLeave={handleDrag}
+              onDragOver={handleDrag}
+              onDrop={handleDrop}
+              className={cn(
+                'relative border-2 border-dashed rounded-xl p-8 transition-all duration-200 text-center',
+                dragActive
+                  ? 'border-primary bg-primary/5 scale-[1.02]'
+                  : 'border-border hover:border-primary/50 hover:bg-muted/50',
+                uploading && 'opacity-50 pointer-events-none'
+              )}
+            >
+              <input
+                ref={fileInputRef}
+                type="file"
+                className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                onChange={(e) => handleFileUpload(e.target.files)}
+                accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png,.gif"
+                disabled={uploading}
+              />
+
+              <div className="flex flex-col items-center gap-3">
+                {uploading ? (
+                  <Loader2 className="h-10 w-10 animate-spin text-primary" />
+                ) : (
+                  <div className="p-4 rounded-full bg-primary/10">
+                    <Upload className="h-8 w-8 text-primary" />
+                  </div>
+                )}
+                <div>
+                  <p className="font-medium">
+                    {uploading ? 'Upload en cours...' : 'Glissez-déposez un fichier ici'}
+                  </p>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    ou cliquez pour sélectionner
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
         </CardContent>
       </Card>
 
