@@ -118,6 +118,7 @@ export default function RequestDetail() {
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [deleting, setDeleting] = useState(false);
   const [blockUser, setBlockUser] = useState(false);
+  const [isUserBlocked, setIsUserBlocked] = useState(false);
 
   useEffect(() => {
     if (id) {
@@ -142,6 +143,14 @@ export default function RequestDetail() {
         return;
       }
       setRequest(data);
+
+      // Check if the user is blocked
+      const { data: profile } = await supabase
+        .from('profiles')
+        .select('is_blocked')
+        .eq('id', data.user_id)
+        .maybeSingle();
+      setIsUserBlocked(profile?.is_blocked ?? false);
     } catch (error: any) {
       toast.error(t('admin.messages.loadError'));
       console.error(error);
@@ -434,6 +443,23 @@ export default function RequestDetail() {
     }
   };
 
+  const handleUnblockUser = async () => {
+    if (!request) return;
+    try {
+      const { error } = await supabase
+        .from('profiles')
+        .update({ is_blocked: false })
+        .eq('id', request.user_id);
+
+      if (error) throw error;
+      setIsUserBlocked(false);
+      toast.success('Demandeur débloqué avec succès');
+    } catch (error: any) {
+      toast.error('Erreur lors du déblocage');
+      console.error(error);
+    }
+  };
+
   const handleDeleteRequest = async () => {
     if (!request) return;
     setDeleting(true);
@@ -637,6 +663,8 @@ export default function RequestDetail() {
             onRequestDocuments={() => setDocumentModalOpen(true)}
             onGenerateContract={() => setContractModalOpen(true)}
             onDeleteRequest={() => setDeleteDialogOpen(true)}
+            isUserBlocked={isUserBlocked}
+            onUnblockUser={handleUnblockUser}
           />
         </div>
       </div>

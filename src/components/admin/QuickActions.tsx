@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Mail, RefreshCw, Download, FileText, FileSignature, Trash2 } from 'lucide-react';
+import { Mail, RefreshCw, Download, FileText, FileSignature, Trash2, ShieldOff } from 'lucide-react';
 
 interface QuickActionsProps {
   onChangeStatus: () => void;
@@ -10,6 +10,8 @@ interface QuickActionsProps {
   onRequestDocuments?: () => void;
   onGenerateContract?: () => void;
   onDeleteRequest?: () => void;
+  isUserBlocked?: boolean;
+  onUnblockUser?: () => void;
   status: string;
 }
 
@@ -20,6 +22,8 @@ export function QuickActions({
   onRequestDocuments,
   onGenerateContract,
   onDeleteRequest,
+  isUserBlocked,
+  onUnblockUser,
 }: QuickActionsProps) {
   const { t } = useTranslation();
 
@@ -76,10 +80,21 @@ export function QuickActions({
           </Button>
         )}
 
+        {isUserBlocked && onUnblockUser && (
+          <Button
+            variant="outline"
+            className="w-full justify-start gap-2 text-orange-600 hover:text-orange-700 hover:bg-orange-50 border-orange-200 hover:border-orange-300 dark:text-orange-400 dark:hover:bg-orange-950/30 dark:border-orange-900 mt-4"
+            onClick={onUnblockUser}
+          >
+            <ShieldOff className="h-4 w-4" />
+            Débloquer le demandeur
+          </Button>
+        )}
+
         {onDeleteRequest && (
           <Button
             variant="outline"
-            className="w-full justify-start gap-2 text-red-600 hover:text-red-700 hover:bg-red-50 border-red-200 hover:border-red-300 dark:text-red-400 dark:hover:bg-red-950/30 dark:border-red-900 mt-4"
+            className="w-full justify-start gap-2 text-red-600 hover:text-red-700 hover:bg-red-50 border-red-200 hover:border-red-300 dark:text-red-400 dark:hover:bg-red-950/30 dark:border-red-900"
             onClick={onDeleteRequest}
           >
             <Trash2 className="h-4 w-4" />
