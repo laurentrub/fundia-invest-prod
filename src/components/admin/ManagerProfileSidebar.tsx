@@ -25,6 +25,7 @@ import {
   Save,
   Loader2,
   BarChart3,
+  ShieldOff,
 } from 'lucide-react';
 import {
   Collapsible,
@@ -38,20 +39,21 @@ interface ManagerProfileSidebarProps {
 }
 
 const menuItems = [
-  { key: 'dashboard', path: '/admin', icon: LayoutDashboard },
-  { key: 'analytics', path: '/admin/analytics', icon: BarChart3 },
-  { key: 'requests', path: '/admin/requests', icon: FileText },
-  { key: 'documents', path: '/admin/documents', icon: FileCheck },
-  { key: 'clientDocuments', path: '/admin/client-documents', icon: FolderOpen },
-  { key: 'team', path: '/admin/team', icon: Users },
-  { key: 'settings', path: '/admin/settings', icon: Settings },
+  { key: 'dashboard', path: '/admin', icon: LayoutDashboard, adminOnly: false },
+  { key: 'analytics', path: '/admin/analytics', icon: BarChart3, adminOnly: false },
+  { key: 'requests', path: '/admin/requests', icon: FileText, adminOnly: false },
+  { key: 'documents', path: '/admin/documents', icon: FileCheck, adminOnly: false },
+  { key: 'clientDocuments', path: '/admin/client-documents', icon: FolderOpen, adminOnly: false },
+  { key: 'team', path: '/admin/team', icon: Users, adminOnly: true },
+  { key: 'blockedUsers', path: '/admin/blocked-users', icon: ShieldOff, adminOnly: true },
+  { key: 'settings', path: '/admin/settings', icon: Settings, adminOnly: false },
 ];
 
 export function ManagerProfileSidebar({ collapsed, onToggle }: ManagerProfileSidebarProps) {
   const { t } = useTranslation();
   const location = useLocation();
-  const { user, signOut, updatePassword } = useAuth();
-  
+  const { user, signOut, updatePassword, isAdmin } = useAuth();
+
   const [profileOpen, setProfileOpen] = useState(false);
   const [passwordOpen, setPasswordOpen] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -314,7 +316,7 @@ export function ManagerProfileSidebar({ collapsed, onToggle }: ManagerProfileSid
 
       {/* Navigation */}
       <nav className="flex-1 p-2 space-y-1">
-        {menuItems.map((item) => {
+        {menuItems.filter(item => !item.adminOnly || isAdmin).map((item) => {
           const Icon = item.icon;
           const active = isActive(item.path);
 
