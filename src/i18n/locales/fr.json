@@ -1020,6 +1020,7 @@
       "documents": "Contrats",
       "clientDocuments": "Documents clients",
       "team": "Équipe",
+      "blockedUsers": "Bloqués",
       "settings": "Paramètres",
       "logout": "Déconnexion"
     },

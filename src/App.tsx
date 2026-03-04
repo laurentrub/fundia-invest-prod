@@ -41,6 +41,7 @@ import Documents from "./pages/admin/Documents";
 import ClientDocuments from "./pages/admin/ClientDocuments";
 import Settings from "./pages/admin/Settings";
 import TeamManagement from "./pages/admin/TeamManagement";
+import BlockedUsers from "./pages/admin/BlockedUsers";
 
 const queryClient = new QueryClient();
 
@@ -74,6 +75,7 @@ const App = () => (
               <Route path="documents" element={<Documents />} />
               <Route path="client-documents" element={<ClientDocuments />} />
               <Route path="team" element={<TeamManagement />} />
+              <Route path="blocked-users" element={<BlockedUsers />} />
               <Route path="settings" element={<Settings />} />
             </Route>
             

@@ -10,6 +10,7 @@ import {
   ChevronLeft,
   ChevronRight,
   LogOut,
+  ShieldOff,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
@@ -26,6 +27,7 @@ const menuItems = [
   { key: 'requests', path: '/admin/requests', icon: FileText, adminOnly: false },
   { key: 'documents', path: '/admin/documents', icon: FileCheck, adminOnly: false },
   { key: 'team', path: '/admin/team', icon: Users, adminOnly: true },
+  { key: 'blockedUsers', path: '/admin/blocked-users', icon: ShieldOff, adminOnly: true },
   { key: 'settings', path: '/admin/settings', icon: Settings, adminOnly: false },
 ];
 
