@@ -32,12 +32,15 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Label } from '@/components/ui/label';
 import { cn } from '@/lib/utils';
 import { toast } from 'sonner';
 import { downloadCSV, downloadExcel, formatDateForExport, formatCurrencyForExport } from '@/lib/exportUtils';
 
 interface LoanRequest {
   id: string;
+  user_id: string;
   first_name: string;
   last_name: string;
   email: string;
@@ -70,6 +73,7 @@ export default function RequestsList() {
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [requestToDelete, setRequestToDelete] = useState<LoanRequest | null>(null);
   const [deleting, setDeleting] = useState(false);
+  const [blockUser, setBlockUser] = useState(false);
   const [search, setSearch] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
   const [loanTypeFilter, setLoanTypeFilter] = useState('all');
@@ -135,6 +139,13 @@ export default function RequestsList() {
     if (!requestToDelete) return;
     setDeleting(true);
     try {
+      if (blockUser) {
+        await supabase
+          .from('profiles')
+          .update({ is_blocked: true })
+          .eq('id', requestToDelete.user_id);
+      }
+
       const { error } = await supabase
         .from('loan_requests')
         .delete()
@@ -150,6 +161,7 @@ export default function RequestsList() {
       setDeleting(false);
       setDeleteDialogOpen(false);
       setRequestToDelete(null);
+      setBlockUser(false);
     }
   };
 
@@ -390,7 +402,7 @@ export default function RequestsList() {
       </Card>
 
       {/* Delete confirmation dialog */}
-      <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
+      <AlertDialog open={deleteDialogOpen} onOpenChange={(open) => { setDeleteDialogOpen(open); if (!open) setBlockUser(false); }}>
         <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle className="flex items-center gap-2 text-red-600">
@@ -403,6 +415,16 @@ export default function RequestsList() {
               Cette action est irréversible et supprimera toutes les données associées.
             </AlertDialogDescription>
           </AlertDialogHeader>
+          <div className="flex items-center gap-2 py-2">
+            <Checkbox
+              id="blockUserList"
+              checked={blockUser}
+              onCheckedChange={(checked) => setBlockUser(checked as boolean)}
+            />
+            <Label htmlFor="blockUserList" className="text-sm font-normal cursor-pointer">
+              Bloquer également ce demandeur (empêcher toute nouvelle demande)
+            </Label>
+          </div>
           <AlertDialogFooter>
             <AlertDialogCancel disabled={deleting}>Annuler</AlertDialogCancel>
             <AlertDialogAction

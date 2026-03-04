@@ -281,17 +281,33 @@ const ApplyPage = () => {
     
     if (!user) {
       localStorage.setItem('pendingLoanApplication', JSON.stringify(formData));
-      
+
       toast({
         title: t('apply.messages.loginRequired'),
         description: t('apply.messages.loginRequiredDesc'),
         variant: "default"
       });
-      
+
       navigate('/auth?redirect=/apply');
       return;
     }
-    
+
+    // Check if user is blocked from submitting new requests
+    const { data: profile } = await supabase
+      .from('profiles')
+      .select('is_blocked')
+      .eq('id', user.id)
+      .maybeSingle();
+
+    if (profile?.is_blocked) {
+      toast({
+        variant: "destructive",
+        title: t('apply.messages.blockedTitle'),
+        description: t('apply.messages.blockedDesc'),
+      });
+      return;
+    }
+
     setIsSubmitting(true);
     
     try {

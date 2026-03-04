@@ -14,6 +14,8 @@ import { SendEmailModal } from '@/components/admin/SendEmailModal';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Label } from '@/components/ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
   ArrowLeft,
@@ -115,6 +117,7 @@ export default function RequestDetail() {
   const [emailModalOpen, setEmailModalOpen] = useState(false);
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [deleting, setDeleting] = useState(false);
+  const [blockUser, setBlockUser] = useState(false);
 
   useEffect(() => {
     if (id) {
@@ -435,6 +438,13 @@ export default function RequestDetail() {
     if (!request) return;
     setDeleting(true);
     try {
+      if (blockUser) {
+        await supabase
+          .from('profiles')
+          .update({ is_blocked: true })
+          .eq('id', request.user_id);
+      }
+
       const { error } = await supabase
         .from('loan_requests')
         .delete()
@@ -449,6 +459,7 @@ export default function RequestDetail() {
     } finally {
       setDeleting(false);
       setDeleteDialogOpen(false);
+      setBlockUser(false);
     }
   };
 
@@ -663,7 +674,7 @@ export default function RequestDetail() {
       />
 
       {/* Delete confirmation dialog */}
-      <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
+      <AlertDialog open={deleteDialogOpen} onOpenChange={(open) => { setDeleteDialogOpen(open); if (!open) setBlockUser(false); }}>
         <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle className="flex items-center gap-2 text-red-600">
@@ -676,6 +687,16 @@ export default function RequestDetail() {
               })}
             </AlertDialogDescription>
           </AlertDialogHeader>
+          <div className="flex items-center gap-2 py-2">
+            <Checkbox
+              id="blockUserDetail"
+              checked={blockUser}
+              onCheckedChange={(checked) => setBlockUser(checked as boolean)}
+            />
+            <Label htmlFor="blockUserDetail" className="text-sm font-normal cursor-pointer">
+              {t('admin.deleteDialog.blockUser')}
+            </Label>
+          </div>
           <AlertDialogFooter>
             <AlertDialogCancel disabled={deleting}>
               {t('admin.deleteDialog.cancel')}

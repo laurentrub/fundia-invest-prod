@@ -19,9 +19,12 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Label } from '@/components/ui/label';
 
 interface LoanRequest {
   id: string;
+  user_id: string;
   first_name: string;
   last_name: string;
   email: string;
@@ -53,6 +56,7 @@ export default function AdminDashboard() {
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [requestToDelete, setRequestToDelete] = useState<LoanRequest | null>(null);
   const [deleting, setDeleting] = useState(false);
+  const [blockUser, setBlockUser] = useState(false);
   const [stats, setStats] = useState({
     total: 0,
     pending: 0,
@@ -104,6 +108,13 @@ export default function AdminDashboard() {
     if (!requestToDelete) return;
     setDeleting(true);
     try {
+      if (blockUser) {
+        await supabase
+          .from('profiles')
+          .update({ is_blocked: true })
+          .eq('id', requestToDelete.user_id);
+      }
+
       const { error } = await supabase
         .from('loan_requests')
         .delete()
@@ -124,6 +135,7 @@ export default function AdminDashboard() {
       setDeleting(false);
       setDeleteDialogOpen(false);
       setRequestToDelete(null);
+      setBlockUser(false);
     }
   };
 
@@ -227,7 +239,7 @@ export default function AdminDashboard() {
         </CardContent>
       </Card>
       {/* Delete confirmation dialog */}
-      <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
+      <AlertDialog open={deleteDialogOpen} onOpenChange={(open) => { setDeleteDialogOpen(open); if (!open) setBlockUser(false); }}>
         <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle className="flex items-center gap-2 text-red-600">
@@ -240,6 +252,16 @@ export default function AdminDashboard() {
               Cette action est irréversible et supprimera toutes les données associées.
             </AlertDialogDescription>
           </AlertDialogHeader>
+          <div className="flex items-center gap-2 py-2">
+            <Checkbox
+              id="blockUserDashboard"
+              checked={blockUser}
+              onCheckedChange={(checked) => setBlockUser(checked as boolean)}
+            />
+            <Label htmlFor="blockUserDashboard" className="text-sm font-normal cursor-pointer">
+              Bloquer également ce demandeur (empêcher toute nouvelle demande)
+            </Label>
+          </div>
           <AlertDialogFooter>
             <AlertDialogCancel disabled={deleting}>Annuler</AlertDialogCancel>
             <AlertDialogAction

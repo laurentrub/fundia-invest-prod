@@ -804,7 +804,9 @@
       "success": "Demande envoyée !",
       "successDesc": "Votre demande de crédit a été soumise avec succès",
       "error": "Erreur",
-      "errorDesc": "Une erreur est survenue lors de l'envoi de votre demande"
+      "errorDesc": "Une erreur est survenue lors de l'envoi de votre demande",
+      "blockedTitle": "Demande impossible",
+      "blockedDesc": "Votre compte ne permet plus de soumettre de nouvelles demandes de crédit. Veuillez contacter notre service client pour plus d'informations."
     }
   },
   "confirmation": {
@@ -1139,7 +1141,8 @@
       "title": "Supprimer la demande",
       "description": "Êtes-vous sûr de vouloir supprimer la demande de {{name}} ? Cette action est irréversible et supprimera toutes les données associées (notes, historique, emails).",
       "confirm": "Supprimer définitivement",
-      "cancel": "Annuler"
+      "cancel": "Annuler",
+      "blockUser": "Bloquer également ce demandeur (empêcher toute nouvelle demande)"
     },
     "contract": {
       "previewTitle": "Aperçu du contrat",
