@@ -1086,7 +1086,9 @@
       "documentRequestSent": "Demande de documents envoyée avec succès",
       "documentRequestError": "Erreur lors de l'envoi de la demande de documents",
       "contractSent": "Contrat envoyé au client avec succès",
-      "contractError": "Erreur lors de l'envoi du contrat"
+      "contractError": "Erreur lors de l'envoi du contrat",
+      "deleteSuccess": "Demande supprimée avec succès",
+      "deleteError": "Erreur lors de la suppression de la demande"
     },
     "history": {
       "empty": "Aucun historique de changement de statut"
@@ -1130,7 +1132,14 @@
       "sendEmail": "Envoyer un email",
       "requestDocuments": "Demande de justificatif",
       "generateContract": "Générer un contrat",
-      "downloadPdf": "Télécharger en PDF"
+      "downloadPdf": "Télécharger en PDF",
+      "deleteRequest": "Supprimer la demande"
+    },
+    "deleteDialog": {
+      "title": "Supprimer la demande",
+      "description": "Êtes-vous sûr de vouloir supprimer la demande de {{name}} ? Cette action est irréversible et supprimera toutes les données associées (notes, historique, emails).",
+      "confirm": "Supprimer définitivement",
+      "cancel": "Annuler"
     },
     "contract": {
       "previewTitle": "Aperçu du contrat",

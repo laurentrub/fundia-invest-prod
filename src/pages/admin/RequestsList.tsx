@@ -21,7 +21,17 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import { Clock, CheckCircle, XCircle, Loader2, Eye, Search, Download, FileSpreadsheet } from 'lucide-react';
+import { Clock, CheckCircle, XCircle, Loader2, Eye, Search, Download, FileSpreadsheet, Trash2 } from 'lucide-react';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from '@/components/ui/alert-dialog';
 import { cn } from '@/lib/utils';
 import { toast } from 'sonner';
 import { downloadCSV, downloadExcel, formatDateForExport, formatCurrencyForExport } from '@/lib/exportUtils';
@@ -57,6 +67,9 @@ export default function RequestsList() {
   const { t } = useTranslation();
   const [requests, setRequests] = useState<LoanRequest[]>([]);
   const [loading, setLoading] = useState(true);
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+  const [requestToDelete, setRequestToDelete] = useState<LoanRequest | null>(null);
+  const [deleting, setDeleting] = useState(false);
   const [search, setSearch] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
   const [loanTypeFilter, setLoanTypeFilter] = useState('all');
@@ -117,6 +130,28 @@ export default function RequestsList() {
 
     return matchesSearch && matchesStatus && matchesLoanType && matchesMinAmount && matchesMaxAmount && matchesStartDate && matchesEndDate;
   });
+
+  const handleDeleteRequest = async () => {
+    if (!requestToDelete) return;
+    setDeleting(true);
+    try {
+      const { error } = await supabase
+        .from('loan_requests')
+        .delete()
+        .eq('id', requestToDelete.id);
+
+      if (error) throw error;
+      toast.success('Demande supprimée avec succès');
+      setRequests((prev) => prev.filter((r) => r.id !== requestToDelete.id));
+    } catch (error: any) {
+      toast.error('Erreur lors de la suppression de la demande');
+      console.error(error);
+    } finally {
+      setDeleting(false);
+      setDeleteDialogOpen(false);
+      setRequestToDelete(null);
+    }
+  };
 
   const handleExportCSV = () => {
     const exportData = filteredRequests.map(request => ({
@@ -325,12 +360,25 @@ export default function RequestsList() {
                         {new Date(request.created_at).toLocaleDateString('fr-FR')}
                       </TableCell>
                       <TableCell className="text-right">
-                        <Button variant="ghost" size="sm" asChild>
-                          <Link to={`/admin/requests/${request.id}`} className="gap-2">
-                            <Eye className="h-4 w-4" />
-                            {t('admin.requests.view')}
-                          </Link>
-                        </Button>
+                        <div className="flex items-center justify-end gap-1">
+                          <Button variant="ghost" size="sm" asChild>
+                            <Link to={`/admin/requests/${request.id}`} className="gap-2">
+                              <Eye className="h-4 w-4" />
+                              {t('admin.requests.view')}
+                            </Link>
+                          </Button>
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            className="text-red-600 hover:text-red-700 hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-950/30"
+                            onClick={() => {
+                              setRequestToDelete(request);
+                              setDeleteDialogOpen(true);
+                            }}
+                          >
+                            <Trash2 className="h-4 w-4" />
+                          </Button>
+                        </div>
                       </TableCell>
                     </TableRow>
                   );
@@ -340,6 +388,38 @@ export default function RequestsList() {
           </Table>
         </CardContent>
       </Card>
+
+      {/* Delete confirmation dialog */}
+      <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle className="flex items-center gap-2 text-red-600">
+              <Trash2 className="h-5 w-5" />
+              Supprimer la demande
+            </AlertDialogTitle>
+            <AlertDialogDescription>
+              Êtes-vous sûr de vouloir supprimer la demande de{' '}
+              <strong>{requestToDelete?.first_name} {requestToDelete?.last_name}</strong> ?{' '}
+              Cette action est irréversible et supprimera toutes les données associées.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel disabled={deleting}>Annuler</AlertDialogCancel>
+            <AlertDialogAction
+              onClick={handleDeleteRequest}
+              disabled={deleting}
+              className="bg-red-600 hover:bg-red-700 focus:ring-red-600"
+            >
+              {deleting ? (
+                <Loader2 className="h-4 w-4 animate-spin mr-2" />
+              ) : (
+                <Trash2 className="h-4 w-4 mr-2" />
+              )}
+              Supprimer définitivement
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }

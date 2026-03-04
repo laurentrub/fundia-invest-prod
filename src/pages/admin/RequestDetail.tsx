@@ -27,7 +27,18 @@ import {
   XCircle,
   Loader2,
   FileText,
+  Trash2,
 } from 'lucide-react';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from '@/components/ui/alert-dialog';
 import { cn } from '@/lib/utils';
 import { toast } from 'sonner';
 
@@ -102,6 +113,8 @@ export default function RequestDetail() {
   const [documentModalOpen, setDocumentModalOpen] = useState(false);
   const [contractModalOpen, setContractModalOpen] = useState(false);
   const [emailModalOpen, setEmailModalOpen] = useState(false);
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+  const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
     if (id) {
@@ -418,6 +431,27 @@ export default function RequestDetail() {
     }
   };
 
+  const handleDeleteRequest = async () => {
+    if (!request) return;
+    setDeleting(true);
+    try {
+      const { error } = await supabase
+        .from('loan_requests')
+        .delete()
+        .eq('id', request.id);
+
+      if (error) throw error;
+      toast.success(t('admin.messages.deleteSuccess'));
+      navigate('/admin/requests');
+    } catch (error: any) {
+      toast.error(t('admin.messages.deleteError'));
+      console.error(error);
+    } finally {
+      setDeleting(false);
+      setDeleteDialogOpen(false);
+    }
+  };
+
   const getLoanTypeLabel = (type: string) => {
     const types: Record<string, string> = {
       personal: t('dashboard.loanTypes.personal'),
@@ -591,6 +625,7 @@ export default function RequestDetail() {
             onSendEmail={() => setEmailModalOpen(true)}
             onRequestDocuments={() => setDocumentModalOpen(true)}
             onGenerateContract={() => setContractModalOpen(true)}
+            onDeleteRequest={() => setDeleteDialogOpen(true)}
           />
         </div>
       </div>
@@ -626,6 +661,40 @@ export default function RequestDetail() {
         request={request}
         onEmailSent={fetchEmails}
       />
+
+      {/* Delete confirmation dialog */}
+      <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle className="flex items-center gap-2 text-red-600">
+              <Trash2 className="h-5 w-5" />
+              {t('admin.deleteDialog.title')}
+            </AlertDialogTitle>
+            <AlertDialogDescription>
+              {t('admin.deleteDialog.description', {
+                name: `${request.first_name} ${request.last_name}`,
+              })}
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel disabled={deleting}>
+              {t('admin.deleteDialog.cancel')}
+            </AlertDialogCancel>
+            <AlertDialogAction
+              onClick={handleDeleteRequest}
+              disabled={deleting}
+              className="bg-red-600 hover:bg-red-700 focus:ring-red-600"
+            >
+              {deleting ? (
+                <Loader2 className="h-4 w-4 animate-spin mr-2" />
+              ) : (
+                <Trash2 className="h-4 w-4 mr-2" />
+              )}
+              {t('admin.deleteDialog.confirm')}
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }
