@@ -59,8 +59,8 @@ export default function BlockedUsers() {
 
       setUsers(usersWithRequest);
     } catch (error: any) {
-      toast.error('Erreur lors du chargement des utilisateurs bloqués');
-      console.error(error);
+      toast.error(`Erreur: ${error?.message || JSON.stringify(error)}`);
+      console.error('BlockedUsers error:', error);
     } finally {
       setLoading(false);
     }
