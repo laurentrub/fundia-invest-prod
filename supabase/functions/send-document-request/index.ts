@@ -1,10 +1,12 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.3";
 import { Resend } from "https://esm.sh/resend@4.0.0";
+import { buildEmail, escapeHtml, referenceBox, BRAND } from "../_shared/emailTemplate.ts";
 
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+const resend    = new Resend(Deno.env.get("RESEND_API_KEY"));
 const fromEmail = Deno.env.get("RESEND_FROM_EMAIL") || "onboarding@resend.dev";
-const fromName = Deno.env.get("RESEND_FROM_NAME") || "Fundia Invest";
+const fromName  = Deno.env.get("RESEND_FROM_NAME")  || BRAND.name;
+const frontendUrl = (Deno.env.get("FRONTEND_URL") || BRAND.website).replace(/\/+$/, "");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -19,112 +21,59 @@ interface DocumentRequestPayload {
   customMessage?: string;
 }
 
-// HTML escape function to prevent injection attacks
-const escapeHtml = (str: string): string => {
-  const htmlEscapes: Record<string, string> = {
-    '&': '&amp;',
-    '<': '&lt;',
-    '>': '&gt;',
-    '"': '&quot;',
-    "'": '&#39;'
-  };
-  return str.replace(/[&<>"']/g, char => htmlEscapes[char]);
-};
-
 const handler = async (req: Request): Promise<Response> => {
-  console.log("send-document-request function called - v2.0");
-
-  // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders });
-  }
+  if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
   try {
-    // Verify authentication
     const authHeader = req.headers.get("Authorization");
     if (!authHeader) {
-      console.error("No authorization header provided");
       return new Response(JSON.stringify({ error: "Unauthorized" }), {
-        status: 401,
-        headers: { "Content-Type": "application/json", ...corsHeaders },
+        status: 401, headers: { "Content-Type": "application/json", ...corsHeaders },
       });
     }
 
     const token = authHeader.replace("Bearer ", "");
-
-    // Create a client with the user's token to verify their identity
     const supabaseUser = createClient(
       Deno.env.get("SUPABASE_URL") ?? "",
       Deno.env.get("SUPABASE_ANON_KEY") ?? "",
       { global: { headers: { Authorization: `Bearer ${token}` } } }
     );
 
-    // Verify the user
     const { data: userData, error: userError } = await supabaseUser.auth.getUser();
     if (userError || !userData?.user) {
-      console.error("JWT verification failed:", userError);
       return new Response(JSON.stringify({ error: "Unauthorized" }), {
-        status: 401,
-        headers: { "Content-Type": "application/json", ...corsHeaders },
+        status: 401, headers: { "Content-Type": "application/json", ...corsHeaders },
       });
     }
 
     const userId = userData.user.id;
-
-    // Check admin or manager role using service role client
     const supabaseAdmin = createClient(
       Deno.env.get("SUPABASE_URL") ?? "",
       Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
     );
 
     const { data: roleData, error: roleError } = await supabaseAdmin
-      .from("user_roles")
-      .select("role")
-      .eq("user_id", userId)
-      .in("role", ["admin", "manager"])
-      .maybeSingle();
-
+      .from("user_roles").select("role").eq("user_id", userId)
+      .in("role", ["admin", "manager"]).maybeSingle();
     if (roleError || !roleData) {
-      console.error("User does not have admin/manager role:", roleError);
       return new Response(JSON.stringify({ error: "Forbidden" }), {
-        status: 403,
-        headers: { "Content-Type": "application/json", ...corsHeaders },
+        status: 403, headers: { "Content-Type": "application/json", ...corsHeaders },
       });
     }
 
-    const payload: DocumentRequestPayload = await req.json();
-    const { requestId, clientEmail, clientName, documents, customMessage } = payload;
+    const { requestId, clientEmail, clientName, documents, customMessage }: DocumentRequestPayload = await req.json();
 
-    console.log("=== Document Request Debug Info ===");
-    console.log("Request ID:", requestId);
-    console.log("Client Email:", clientEmail);
-    console.log("Client Name:", clientName);
-    console.log("Documents requested:", documents);
-    console.log("Custom Message:", customMessage);
-    console.log("User ID (admin):", userId);
-    console.log("Has SUPABASE_SERVICE_ROLE_KEY:", !!Deno.env.get("SUPABASE_SERVICE_ROLE_KEY"));
-
-    // Get the loan request to get user_id
+    // Get loan request user_id
     const { data: loanRequest, error: loanError } = await supabaseAdmin
-      .from("loan_requests")
-      .select("user_id")
-      .eq("id", requestId)
-      .single();
-
+      .from("loan_requests").select("user_id").eq("id", requestId).single();
     if (loanError || !loanRequest) {
-      console.error("Loan request not found:", loanError);
-      console.error("Full error details:", JSON.stringify(loanError));
-      console.error("Request ID searched:", requestId);
-      return new Response(JSON.stringify({ error: "Loan request not found", details: loanError }), {
-        status: 404,
-        headers: { "Content-Type": "application/json", ...corsHeaders },
+      return new Response(JSON.stringify({ error: "Loan request not found" }), {
+        status: 404, headers: { "Content-Type": "application/json", ...corsHeaders },
       });
     }
 
-    console.log("Loan request found, user_id:", loanRequest.user_id);
-
-    // Create document request records in the database
-    const documentRequestRecords = documents.map((doc: string) => ({
+    // Create document_requests records
+    const records = documents.map((doc: string) => ({
       loan_request_id: requestId,
       user_id: loanRequest.user_id,
       document_type: doc,
@@ -133,368 +82,83 @@ const handler = async (req: Request): Promise<Response> => {
       custom_message: customMessage || null,
     }));
 
-    console.log("Creating document request records:", documentRequestRecords.length, "records");
+    const { error: insertError } = await supabaseAdmin.from("document_requests").insert(records);
+    if (insertError) console.error("Error creating document requests:", insertError);
 
-    const { error: insertError } = await supabaseAdmin
-      .from("document_requests")
-      .insert(documentRequestRecords);
+    const docsListHtml = documents
+      .map((doc: string) => `
+        <div style="background:#F0F7FF;border:1px solid #BFDBFE;border-radius:8px;padding:12px 16px;margin-bottom:8px;display:flex;align-items:center;color:#1B4F8C;font-weight:500;font-size:14px;">
+          <span style="margin-right:10px;font-size:16px;">📄</span>
+          ${escapeHtml(doc)}
+        </div>`)
+      .join("");
 
-    if (insertError) {
-      console.error("Error creating document requests:", insertError);
-      console.error("Insert error details:", JSON.stringify(insertError));
-      // Continue with email even if DB insert fails
-    } else {
-      console.log("Document requests created successfully");
-    }
+    const body = `
+      <p class="greeting">Bonjour ${escapeHtml(clientName)},</p>
+
+      <p class="message">
+        Nous progressons dans l'étude de votre demande de financement !
+        Pour finaliser l'analyse de votre dossier, nous aurions besoin de quelques documents complémentaires.
+      </p>
+
+      ${referenceBox(requestId.substring(0, 8).toUpperCase())}
+
+      <div class="info-card" style="border-left-color:#F59E0B;">
+        <div class="info-card-title" style="color:#92400E;">📋 Documents requis (${documents.length})</div>
+        ${docsListHtml}
+      </div>
+
+      ${customMessage ? `
+      <div class="alert-box">
+        <strong>💬 Message de notre équipe</strong>
+        <p>${escapeHtml(customMessage)}</p>
+      </div>` : ""}
+
+      <div class="info-card">
+        <div class="info-card-title">📤 Comment nous transmettre vos documents</div>
+        <div style="font-size:14px;color:#4a5568;line-height:1.7;">
+          Connectez-vous à votre espace personnel et téléversez vos justificatifs de manière sécurisée.
+          Ces documents nous permettront de finaliser l'analyse de votre dossier.
+        </div>
+      </div>
+    `;
+
+    const html = buildEmail({
+      headerIcon: "📄",
+      headerTitle: "Documents requis",
+      headerSubtitle: "Pour finaliser l'analyse de votre dossier",
+      body,
+      ctaLabel: "Envoyer mes documents",
+      ctaUrl: `${frontendUrl}/profile?section=requested-docs`,
+      footerNote: "Cet email a été envoyé concernant votre demande de financement.",
+    });
 
     const emailResponse = await resend.emails.send({
       from: `${fromName} <${fromEmail}>`,
       to: [clientEmail],
       subject: "Documents requis pour votre dossier 📄",
-      html: `
-        <!DOCTYPE html>
-        <html lang="fr">
-          <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <title>Demande de justificatifs</title>
-            <style>
-              * { margin: 0; padding: 0; box-sizing: border-box; }
-              body {
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-                line-height: 1.6;
-                color: #1a202c;
-                background-color: #f7fafc;
-                padding: 20px;
-              }
-              .email-wrapper {
-                max-width: 600px;
-                margin: 0 auto;
-                background: #ffffff;
-                border-radius: 16px;
-                overflow: hidden;
-                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-              }
-              .header {
-                background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-                color: white;
-                padding: 48px 40px;
-                text-align: center;
-              }
-              .header-icon {
-                font-size: 56px;
-                margin-bottom: 16px;
-                display: block;
-              }
-              .header h1 {
-                font-size: 28px;
-                font-weight: 700;
-                margin: 0 0 8px 0;
-                letter-spacing: -0.5px;
-              }
-              .header p {
-                font-size: 16px;
-                opacity: 0.95;
-                margin: 0;
-              }
-              .content {
-                padding: 40px;
-                background: #ffffff;
-              }
-              .greeting {
-                font-size: 18px;
-                font-weight: 600;
-                color: #2d3748;
-                margin-bottom: 16px;
-              }
-              .message {
-                font-size: 16px;
-                color: #4a5568;
-                margin-bottom: 24px;
-                line-height: 1.7;
-              }
-              .reference-box {
-                background: linear-gradient(to right, #eff6ff 0%, #dbeafe 100%);
-                padding: 16px 20px;
-                border-radius: 12px;
-                margin: 24px 0;
-                border-left: 4px solid #3b82f6;
-              }
-              .reference-label {
-                font-size: 12px;
-                color: #64748b;
-                text-transform: uppercase;
-                letter-spacing: 0.5px;
-                margin-bottom: 4px;
-              }
-              .reference-code {
-                font-size: 18px;
-                font-weight: 700;
-                color: #1e40af;
-                font-family: 'Courier New', monospace;
-                letter-spacing: 1px;
-              }
-              .documents-card {
-                background: linear-gradient(to right, #fef3c7 0%, #fde68a 100%);
-                padding: 24px;
-                border-radius: 12px;
-                margin: 32px 0;
-                border-left: 4px solid #f59e0b;
-              }
-              .documents-card h3 {
-                font-size: 16px;
-                font-weight: 700;
-                color: #92400e;
-                margin-bottom: 16px;
-                display: flex;
-                align-items: center;
-              }
-              .documents-card ul {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-              }
-              .documents-card li {
-                background: #fffbeb;
-                padding: 12px 16px;
-                margin-bottom: 8px;
-                border-radius: 8px;
-                color: #78350f;
-                font-weight: 500;
-                display: flex;
-                align-items: center;
-              }
-              .documents-card li:last-child {
-                margin-bottom: 0;
-              }
-              .documents-card li:before {
-                content: "📄";
-                margin-right: 12px;
-                font-size: 18px;
-              }
-              .custom-message {
-                background: #f0f9ff;
-                border: 1px solid #bae6fd;
-                border-radius: 12px;
-                padding: 20px;
-                margin: 24px 0;
-                color: #0c4a6e;
-              }
-              .custom-message strong {
-                display: block;
-                margin-bottom: 8px;
-                font-size: 15px;
-              }
-              .info-box {
-                background: #f7fafc;
-                border: 1px solid #e2e8f0;
-                border-radius: 12px;
-                padding: 20px;
-                margin: 32px 0;
-              }
-              .info-box p {
-                color: #4a5568;
-                font-size: 14px;
-                margin: 8px 0;
-              }
-              .info-box strong {
-                color: #2d3748;
-              }
-              .cta-section {
-                text-align: center;
-                margin: 32px 0;
-              }
-              .cta-button {
-                display: inline-block;
-                padding: 16px 40px;
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                color: white !important;
-                text-decoration: none;
-                border-radius: 8px;
-                font-size: 16px;
-                font-weight: 600;
-                box-shadow: 0 4px 14px rgba(102, 126, 234, 0.4);
-              }
-              .signature {
-                margin-top: 40px;
-                padding-top: 32px;
-                border-top: 2px solid #e2e8f0;
-                font-size: 15px;
-                color: #4a5568;
-              }
-              .signature strong {
-                color: #2d3748;
-                display: block;
-                margin-top: 8px;
-              }
-              .footer {
-                background: #2d3748;
-                color: #a0aec0;
-                padding: 32px 40px;
-                text-align: center;
-              }
-              .footer-content {
-                font-size: 13px;
-                line-height: 1.8;
-              }
-              .footer-brand {
-                font-size: 18px;
-                font-weight: 700;
-                color: #ffffff;
-                margin-bottom: 12px;
-                display: block;
-              }
-              .footer-address {
-                margin: 16px 0 8px 0;
-              }
-              .footer-links {
-                margin-top: 20px;
-                padding-top: 20px;
-                border-top: 1px solid #4a5568;
-              }
-              .footer-link {
-                color: #a0aec0;
-                text-decoration: none;
-                margin: 0 12px;
-                font-size: 13px;
-              }
-              @media only screen and (max-width: 600px) {
-                body { padding: 0; }
-                .email-wrapper { border-radius: 0; }
-                .header { padding: 32px 24px; }
-                .header h1 { font-size: 24px; }
-                .content { padding: 24px; }
-                .documents-card, .info-box { padding: 20px; }
-                .footer { padding: 24px 20px; }
-              }
-            </style>
-          </head>
-          <body>
-            <div class="email-wrapper">
-              <!-- Header -->
-              <div class="header">
-                <span class="header-icon">📄</span>
-                <h1>Fundia Invest</h1>
-                <p>Demande de justificatifs</p>
-              </div>
-
-              <!-- Content -->
-              <div class="content">
-                <div class="greeting">
-                  Bonjour ${escapeHtml(clientName)},
-                </div>
-
-                <div class="message">
-                  Nous progressons dans l'étude de votre demande de financement ! Pour finaliser l'analyse de votre dossier, nous aurions besoin de quelques documents complémentaires.
-                </div>
-
-                <!-- Reference Box -->
-                <div class="reference-box">
-                  <div class="reference-label">Référence de votre dossier</div>
-                  <div class="reference-code">${escapeHtml(requestId.substring(0, 8).toUpperCase())}</div>
-                </div>
-
-                <!-- Documents Card -->
-                <div class="documents-card">
-                  <h3>📋 Documents requis</h3>
-                  <ul>
-                    ${documents.map((doc: string) => `<li>${escapeHtml(doc)}</li>`).join('')}
-                  </ul>
-                </div>
-
-                ${customMessage ? `
-                <div class="custom-message">
-                  <strong>💬 Message de notre équipe</strong>
-                  <p>${escapeHtml(customMessage)}</p>
-                </div>
-                ` : ''}
-
-                <div class="info-box">
-                  <p><strong>Comment nous transmettre vos documents ?</strong></p>
-                  <p style="margin-top: 12px;">Pour nous envoyer vos documents, veuillez vous connecter à votre espace membre en cliquant sur le bouton ci-dessous. Vous pourrez ensuite téléverser vos justificatifs de manière sécurisée.</p>
-                </div>
-
-                <div class="message">
-                  Ces documents nous permettront de finaliser l'analyse de votre dossier et de vous proposer la meilleure solution de financement adaptée à votre situation.
-                </div>
-
-                <!-- CTA Section -->
-                <div class="cta-section">
-                  <a href="https://www.fundia-invest.com/profile?section=requested-docs" class="cta-button">
-                    Envoyer mes documents
-                  </a>
-                  <p style="margin-top: 16px; font-size: 13px; color: #718096;">
-                    Si vous n'êtes pas encore connecté, vous serez redirigé vers la page de connexion.
-                  </p>
-                </div>
-
-                <!-- Signature -->
-                <div class="signature">
-                  Nous restons à votre disposition pour toute question.<br>
-                  Cordialement,
-                  <strong>L'équipe Fundia Invest</strong>
-                </div>
-              </div>
-
-              <!-- Footer -->
-              <div class="footer">
-                <span class="footer-brand">Fundia Invest</span>
-                <div class="footer-content">
-                  <div class="footer-address">
-                    5588 Rue Frontenac, Montréal, QC H2H 2L9, Canada
-                  </div>
-                  <div style="margin-top: 12px;">
-                    📞 Support client : contact@fundia-invest.com
-                  </div>
-                  <div class="footer-links">
-                    <a href="https://www.fundia-invest.com" class="footer-link">Site web</a>
-                    <a href="https://www.fundia-invest.com/terms" class="footer-link">CGU</a>
-                    <a href="https://www.fundia-invest.com/privacy" class="footer-link">Confidentialité</a>
-                  </div>
-                  <div style="margin-top: 20px; font-size: 12px; opacity: 0.7;">
-                    Cet email a été envoyé automatiquement concernant votre demande de financement.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </body>
-        </html>
-      `,
+      html,
     });
 
-    console.log("Email sent successfully");
-    console.log("Email response:", JSON.stringify(emailResponse));
+    const err = (emailResponse as any).error;
+    if (err) throw new Error(err.message || "Failed to send document request email");
 
-    // Log this action in status history
-    console.log("Inserting status history...");
-    const { error: historyError } = await supabaseAdmin.from("request_status_history").insert({
+    // Log in status history
+    await supabaseAdmin.from("request_status_history").insert({
       loan_request_id: requestId,
       changed_by: userId,
       old_status: null,
       new_status: "document_requested",
-      comment: `Demande de justificatifs envoyée: ${documents.join(", ")}`,
+      comment: `Demande de justificatifs envoyée : ${documents.join(", ")}`,
     });
 
-    if (historyError) {
-      console.error("Error inserting status history:", historyError);
-      console.error("History error details:", JSON.stringify(historyError));
-    } else {
-      console.log("Status history inserted successfully");
-    }
-
-    console.log("Document request function completed successfully");
-    return new Response(JSON.stringify({ success: true, emailResponse }), {
-      status: 200,
-      headers: { "Content-Type": "application/json", ...corsHeaders },
+    return new Response(JSON.stringify({ success: true }), {
+      status: 200, headers: { "Content-Type": "application/json", ...corsHeaders },
     });
   } catch (error: any) {
-    console.error("Error in send-document-request function:", error);
-    console.error("Error stack:", error.stack);
-    const errorMessage = error.message || "Une erreur s'est produite lors de l'envoi de la demande";
-    return new Response(JSON.stringify({ error: errorMessage, details: error.stack }), {
-      status: 500,
-      headers: { "Content-Type": "application/json", ...corsHeaders },
+    console.error("send-document-request error:", error);
+    return new Response(JSON.stringify({ error: error.message }), {
+      status: 500, headers: { "Content-Type": "application/json", ...corsHeaders },
     });
   }
 };

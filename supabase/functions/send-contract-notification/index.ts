@@ -1,10 +1,12 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.1";
 import { Resend } from "https://esm.sh/resend@4.0.0";
+import { buildEmail, escapeHtml, infoCard, BRAND, LOAN_TYPE_LABELS, formatCurrency } from "../_shared/emailTemplate.ts";
 
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+const resend    = new Resend(Deno.env.get("RESEND_API_KEY"));
 const fromEmail = Deno.env.get("RESEND_FROM_EMAIL") || "onboarding@resend.dev";
-const fromName = Deno.env.get("RESEND_FROM_NAME") || "Fundia Invest";
+const fromName  = Deno.env.get("RESEND_FROM_NAME")  || BRAND.name;
+const frontendUrl = (Deno.env.get("FRONTEND_URL") || BRAND.website).replace(/\/+$/, "");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -21,215 +23,107 @@ interface ContractNotificationPayload {
   amount: number;
 }
 
-// HTML escape function to prevent injection attacks
-const escapeHtml = (str: string): string => {
-  const htmlEscapes: Record<string, string> = {
-    '&': '&amp;',
-    '<': '&lt;',
-    '>': '&gt;',
-    '"': '&quot;',
-    "'": '&#39;'
-  };
-  return str.replace(/[&<>"']/g, char => htmlEscapes[char]);
-};
-
 const handler = async (req: Request): Promise<Response> => {
-  console.log("send-contract-notification function called");
-
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders });
-  }
+  if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
   try {
     const authHeader = req.headers.get("Authorization");
     if (!authHeader) {
-      console.error("No authorization header provided");
       return new Response(JSON.stringify({ error: "Unauthorized" }), {
-        status: 401,
-        headers: { "Content-Type": "application/json", ...corsHeaders },
+        status: 401, headers: { "Content-Type": "application/json", ...corsHeaders },
       });
     }
 
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-    const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY")!;
     const token = authHeader.replace("Bearer ", "");
-    const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+    const supabase = createClient(supabaseUrl, Deno.env.get("SUPABASE_ANON_KEY")!, {
       global: { headers: { Authorization: authHeader } },
     });
 
     const { data: userData, error: userError } = await supabase.auth.getUser();
     if (userError || !userData?.user) {
-      console.error("JWT verification failed:", userError);
       return new Response(JSON.stringify({ error: "Unauthorized" }), {
-        status: 401,
-        headers: { "Content-Type": "application/json", ...corsHeaders },
+        status: 401, headers: { "Content-Type": "application/json", ...corsHeaders },
       });
     }
 
-    const userId = userData.user.id;
-
-    const supabaseAdmin = createClient(
-      supabaseUrl,
-      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
-    );
+    const supabaseAdmin = createClient(supabaseUrl, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!);
 
     const { data: roleData, error: roleError } = await supabaseAdmin
-      .from("user_roles")
-      .select("role")
-      .eq("user_id", userId)
-      .in("role", ["admin", "manager"])
-      .maybeSingle();
-
+      .from("user_roles").select("role").eq("user_id", userData.user.id)
+      .in("role", ["admin", "manager"]).maybeSingle();
     if (roleError || !roleData) {
-      console.error("User does not have admin/manager role:", roleError);
       return new Response(JSON.stringify({ error: "Forbidden" }), {
-        status: 403,
-        headers: { "Content-Type": "application/json", ...corsHeaders },
+        status: 403, headers: { "Content-Type": "application/json", ...corsHeaders },
       });
     }
 
-    const payload: ContractNotificationPayload = await req.json();
-    const { contractId, clientEmail, clientName, action, rejectionReason, loanType, amount } = payload;
+    const { contractId, clientEmail, clientName, action, rejectionReason, loanType, amount }: ContractNotificationPayload = await req.json();
 
-    console.log(`Sending contract ${action} notification to:`, clientEmail);
+    const isVerified = action === "verified";
+    const loanTypeLabel = LOAN_TYPE_LABELS[loanType] || loanType;
 
-    const loanTypeLabels: Record<string, string> = {
-      personal: "Prêt personnel",
-      auto: "Crédit auto",
-      home_improvement: "Crédit travaux",
-      business: "Crédit professionnel",
-      consolidation: "Rachat de crédit",
-      project: "Financement de projet",
-    };
+    const body = `
+      <p class="greeting">Bonjour ${escapeHtml(clientName)},</p>
 
-    const loanTypeLabel = loanTypeLabels[loanType] || loanType;
+      <p class="message">
+        ${isVerified
+          ? "Nous avons le plaisir de vous informer que votre contrat de prêt a été <strong>validé</strong> par nos services."
+          : "Après examen de votre contrat signé, nous ne sommes malheureusement pas en mesure de valider votre dossier en l'état."}
+      </p>
 
-    let subject: string;
-    let contentHtml: string;
+      ${infoCard("📋 Détails du contrat", [
+        { label: "Type de prêt", value: escapeHtml(loanTypeLabel) },
+        { label: "Montant",      value: formatCurrency(amount) },
+        ...((!isVerified && rejectionReason) ? [{ label: "Motif", value: escapeHtml(rejectionReason) }] : []),
+      ])}
 
-    if (action === "verified") {
-      subject = "Votre contrat a été validé - Privat Equity";
-      contentHtml = `
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        </head>
-        <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <div style="background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); padding: 30px; text-align: center; border-radius: 8px 8px 0 0;">
-            <h1 style="color: white; margin: 0; font-size: 24px;">Privat Equity</h1>
-          </div>
-          
-          <div style="background: #ffffff; padding: 30px; border: 1px solid #e5e5e5; border-top: none; border-radius: 0 0 8px 8px;">
-            <div style="text-align: center; margin-bottom: 20px;">
-              <div style="display: inline-block; background: #10b981; border-radius: 50%; padding: 15px;">
-                <span style="color: white; font-size: 32px;">✓</span>
-              </div>
-            </div>
-            
-            <h2 style="color: #10b981; margin-top: 0; text-align: center;">Contrat validé !</h2>
-            
-            <p>Bonjour ${escapeHtml(clientName)},</p>
-            
-            <p>Nous avons le plaisir de vous informer que votre contrat de prêt a été <strong>validé</strong> par nos services.</p>
-            
-            <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; border-left: 4px solid #10b981; margin: 20px 0;">
-              <p style="margin: 0;"><strong>Type de prêt :</strong> ${loanTypeLabel}</p>
-              <p style="margin: 10px 0 0 0;"><strong>Montant :</strong> ${amount.toLocaleString("fr-FR")} €</p>
-            </div>
-            
-            <h3 style="color: #1e3a5f;">Prochaines étapes</h3>
-            <ul style="padding-left: 20px;">
-              <li>Les fonds seront versés sur votre compte bancaire dans les 48 heures ouvrées</li>
-              <li>Vous recevrez un email de confirmation du virement</li>
-              <li>Votre première mensualité sera prélevée le mois suivant</li>
-            </ul>
-            
-            <p>Nous vous remercions de votre confiance.</p>
-            
-            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e5e5;">
-              <p style="margin: 0; color: #666;">Cordialement,</p>
-              <p style="margin: 5px 0 0 0; font-weight: bold; color: #1e3a5f;">L'équipe Privat Equity</p>
-            </div>
-          </div>
-          
-          <div style="text-align: center; padding: 20px; color: #999; font-size: 12px;">
-            <p style="margin: 0;">© 2024 Privat Equity. Tous droits réservés.</p>
-            <p style="margin: 5px 0 0 0;">5588 Rue Frontenac, Montréal, QC H2H 2L9, Canada</p>
-          </div>
-        </body>
-        </html>
-      `;
-    } else {
-      subject = "Information concernant votre contrat - Privat Equity";
-      contentHtml = `
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        </head>
-        <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <div style="background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); padding: 30px; text-align: center; border-radius: 8px 8px 0 0;">
-            <h1 style="color: white; margin: 0; font-size: 24px;">Privat Equity</h1>
-          </div>
-          
-          <div style="background: #ffffff; padding: 30px; border: 1px solid #e5e5e5; border-top: none; border-radius: 0 0 8px 8px;">
-            <h2 style="color: #1e3a5f; margin-top: 0;">Information importante concernant votre contrat</h2>
-            
-            <p>Bonjour ${escapeHtml(clientName)},</p>
-            
-            <p>Après examen de votre contrat signé, nous ne sommes malheureusement pas en mesure de valider votre dossier en l'état.</p>
-            
-            <div style="background: #fef2f2; padding: 20px; border-radius: 8px; border-left: 4px solid #ef4444; margin: 20px 0;">
-              <p style="margin: 0;"><strong>Type de prêt :</strong> ${loanTypeLabel}</p>
-              <p style="margin: 10px 0 0 0;"><strong>Montant :</strong> ${amount.toLocaleString("fr-FR")} €</p>
-              ${rejectionReason ? `<p style="margin: 10px 0 0 0;"><strong>Motif :</strong> ${escapeHtml(rejectionReason)}</p>` : ""}
-            </div>
-            
-            <h3 style="color: #1e3a5f;">Que faire maintenant ?</h3>
-            <p>Vous pouvez nous contacter pour discuter de votre situation et des éventuelles solutions possibles :</p>
-            <ul style="padding-left: 20px;">
-              <li>Par email en répondant à ce message</li>
-              <li>Via votre espace client sur notre site</li>
-            </ul>
-            
-            <p>Notre équipe reste à votre disposition pour vous accompagner.</p>
-            
-            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e5e5;">
-              <p style="margin: 0; color: #666;">Cordialement,</p>
-              <p style="margin: 5px 0 0 0; font-weight: bold; color: #1e3a5f;">L'équipe Privat Equity</p>
-            </div>
-          </div>
-          
-          <div style="text-align: center; padding: 20px; color: #999; font-size: 12px;">
-            <p style="margin: 0;">© 2024 Privat Equity. Tous droits réservés.</p>
-            <p style="margin: 5px 0 0 0;">5588 Rue Frontenac, Montréal, QC H2H 2L9, Canada</p>
-          </div>
-        </body>
-        </html>
-      `;
-    }
+      ${isVerified ? `
+      <div class="info-card">
+        <div class="info-card-title">📅 Prochaines étapes</div>
+        <div style="font-size:14px;color:#4a5568;line-height:1.7;">
+          <p style="margin:0 0 8px;">• Les fonds seront versés sur votre compte bancaire dans les 48 heures ouvrées</p>
+          <p style="margin:0 0 8px;">• Vous recevrez un email de confirmation du virement</p>
+          <p style="margin:0;">• Votre première mensualité sera prélevée le mois suivant</p>
+        </div>
+      </div>` : `
+      <div class="alert-box">
+        <strong>📞 Que faire maintenant ?</strong>
+        <p>Notre équipe reste à votre disposition pour vous accompagner : <strong>${BRAND.email}</strong></p>
+      </div>`}
+    `;
+
+    const html = buildEmail({
+      headerIcon: isVerified ? "✅" : "📋",
+      headerTitle: isVerified ? "Contrat validé" : "Information contrat",
+      headerSubtitle: isVerified
+        ? "Votre contrat a été accepté"
+        : "Une action de votre part peut être requise",
+      body,
+      ctaLabel: "Accéder à mon espace",
+      ctaUrl: `${frontendUrl}/profile`,
+      footerNote: "Cet email a été envoyé concernant votre contrat de financement.",
+    });
 
     const emailResponse = await resend.emails.send({
       from: `${fromName} <${fromEmail}>`,
       to: [clientEmail],
-      subject,
-      html: contentHtml,
+      subject: isVerified
+        ? `Contrat validé ✅ — ${loanTypeLabel}`
+        : `Information concernant votre contrat — ${loanTypeLabel}`,
+      html,
     });
 
-    console.log("Contract notification email sent successfully:", emailResponse);
+    const err = (emailResponse as any).error;
+    if (err) throw new Error(err.message || "Failed to send contract notification");
 
-    return new Response(JSON.stringify({ success: true, emailResponse }), {
-      status: 200,
-      headers: { "Content-Type": "application/json", ...corsHeaders },
+    return new Response(JSON.stringify({ success: true }), {
+      status: 200, headers: { "Content-Type": "application/json", ...corsHeaders },
     });
   } catch (error: any) {
-    console.error("Error in send-contract-notification function:", error);
+    console.error("send-contract-notification error:", error);
     return new Response(JSON.stringify({ error: error.message }), {
-      status: 500,
-      headers: { "Content-Type": "application/json", ...corsHeaders },
+      status: 500, headers: { "Content-Type": "application/json", ...corsHeaders },
     });
   }
 };

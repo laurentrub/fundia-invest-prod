@@ -1,45 +1,26 @@
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.49.1";
 import { Resend } from "https://esm.sh/resend@4.0.0";
+import { buildEmail, escapeHtml, BRAND } from "../_shared/emailTemplate.ts";
 
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+const resend    = new Resend(Deno.env.get("RESEND_API_KEY"));
 const fromEmail = Deno.env.get("RESEND_FROM_EMAIL") || "onboarding@resend.dev";
-const fromName = Deno.env.get("RESEND_FROM_NAME") || "Fundia Invest";
-const frontendUrl = (Deno.env.get("FRONTEND_URL") || "https://www.fundia-invest.com").replace(/\/+$/, "");
+const fromName  = Deno.env.get("RESEND_FROM_NAME")  || BRAND.name;
+const frontendUrl = (Deno.env.get("FRONTEND_URL") || BRAND.website).replace(/\/+$/, "");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-interface WelcomeEmailRequest {
-  firstName: string;
-  lastName: string;
-}
-
-// HTML escape function to prevent injection attacks
-const escapeHtml = (str: string): string => {
-  const htmlEscapes: Record<string, string> = {
-    '&': '&amp;',
-    '<': '&lt;',
-    '>': '&gt;',
-    '"': '&quot;',
-    "'": '&#39;'
-  };
-  return str.replace(/[&<>"']/g, char => htmlEscapes[char]);
-};
-
 const handler = async (req: Request): Promise<Response> => {
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders });
-  }
+  if (req.method === "OPTIONS") return new Response(null, { headers: corsHeaders });
 
   try {
     const authHeader = req.headers.get("Authorization");
     if (!authHeader?.startsWith("Bearer ")) {
       return new Response(JSON.stringify({ error: "Unauthorized" }), {
-        status: 401,
-        headers: { "Content-Type": "application/json", ...corsHeaders },
+        status: 401, headers: { "Content-Type": "application/json", ...corsHeaders },
       });
     }
 
@@ -47,149 +28,82 @@ const handler = async (req: Request): Promise<Response> => {
     const supabaseUser = createClient(
       Deno.env.get("SUPABASE_URL") ?? "",
       Deno.env.get("SUPABASE_ANON_KEY") ?? "",
-      { global: { headers: { Authorization: `Bearer ${token}` } } },
+      { global: { headers: { Authorization: `Bearer ${token}` } } }
     );
 
     const { data: { user }, error: authError } = await supabaseUser.auth.getUser();
     if (authError || !user?.email) {
       return new Response(JSON.stringify({ error: "Unauthorized" }), {
-        status: 401,
-        headers: { "Content-Type": "application/json", ...corsHeaders },
+        status: 401, headers: { "Content-Type": "application/json", ...corsHeaders },
       });
     }
 
-    const { firstName, lastName }: WelcomeEmailRequest = await req.json();
-    const email = user.email;
+    const { firstName, lastName } = await req.json();
+    if (!firstName) throw new Error("firstName is required");
 
-    console.log("Sending welcome email to:", email);
+    const body = `
+      <p class="greeting">Bonjour ${escapeHtml(firstName)} ${escapeHtml(lastName || "")},</p>
 
-    // Validate inputs
-    if (!email || !firstName) {
-      throw new Error("Email and firstName are required");
-    }
+      <p class="message">
+        Nous sommes ravis de vous accueillir sur <strong>${BRAND.name}</strong> !
+        Votre compte a été créé avec succès et vous pouvez dès maintenant accéder à votre espace personnel.
+      </p>
+
+      <div class="info-card">
+        <div class="info-card-title">🚀 Ce que vous pouvez faire</div>
+        <div class="info-row">
+          <span class="info-label">💰 Demander un crédit</span>
+          <span class="info-value">Prêt personnel, auto, travaux…</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">🏢 Financer votre projet</span>
+          <span class="info-value">Solutions entreprise sur mesure</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">📊 Suivre vos demandes</span>
+          <span class="info-value">Espace personnel dédié</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">📋 Gérer vos documents</span>
+          <span class="info-value">Upload sécurisé en ligne</span>
+        </div>
+      </div>
+
+      <div class="alert-box">
+        <strong>💡 Conseil</strong>
+        <p>Complétez votre profil pour accélérer le traitement de vos futures demandes.</p>
+      </div>
+    `;
+
+    const html = buildEmail({
+      headerIcon: "👋",
+      headerTitle: "Bienvenue chez Fundia Invest",
+      headerSubtitle: "Votre compte a été créé avec succès",
+      body,
+      ctaLabel: "Accéder à mon espace",
+      ctaUrl: frontendUrl,
+      footerNote: "Cet email a été envoyé suite à la création de votre compte.",
+    });
 
     const emailResponse = await resend.emails.send({
       from: `${fromName} <${fromEmail}>`,
-      to: [email],
-      subject: "Bienvenue chez Fundia Invest ! 🎉",
-      html: `
-        <!DOCTYPE html>
-        <html>
-          <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <style>
-              body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #333; margin: 0; padding: 0; background-color: #f5f5f5; }
-              .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-              .header { background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%); color: white; padding: 40px 30px; text-align: center; border-radius: 10px 10px 0 0; }
-              .header h1 { margin: 0; font-size: 28px; }
-              .header p { margin: 10px 0 0; opacity: 0.9; }
-              .content { background: white; padding: 40px 30px; border-radius: 0 0 10px 10px; }
-              .welcome-box { background: linear-gradient(135deg, #f0f7ff 0%, #e8f4fd 100%); padding: 25px; border-radius: 8px; margin: 25px 0; border-left: 4px solid #2d5a87; }
-              .feature { display: flex; align-items: flex-start; margin: 15px 0; }
-              .feature-icon { background: #2d5a87; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0; font-size: 14px; }
-              .feature-text { flex: 1; }
-              .feature-text strong { color: #1e3a5f; }
-              .button { display: inline-block; padding: 14px 35px; background: linear-gradient(135deg, #2d5a87 0%, #1e3a5f 100%); color: white; text-decoration: none; border-radius: 6px; margin-top: 25px; font-weight: 600; }
-              .button:hover { opacity: 0.9; }
-              .footer { text-align: center; margin-top: 30px; color: #666; font-size: 12px; padding: 20px; }
-              .divider { height: 1px; background: #eee; margin: 25px 0; }
-            </style>
-          </head>
-          <body>
-            <div class="container">
-              <div class="header">
-                <h1>Bienvenue chez Fundia Invest</h1>
-                <p>Votre partenaire de confiance pour vos projets de financement</p>
-              </div>
-              <div class="content">
-                <p>Bonjour <strong>${escapeHtml(firstName)} ${escapeHtml(lastName)}</strong>,</p>
-                
-                <p>Nous sommes ravis de vous accueillir sur Fundia Invest ! Votre compte a été créé avec succès.</p>
-                
-                <div class="welcome-box">
-                  <h3 style="margin: 0 0 15px; color: #1e3a5f;">Ce que vous pouvez faire maintenant :</h3>
-                  
-                  <div class="feature">
-                    <div class="feature-icon">💰</div>
-                    <div class="feature-text">
-                      <strong>Demander un crédit</strong><br>
-                      Prêt personnel, auto, travaux ou rachat de crédits
-                    </div>
-                  </div>
-                  
-                  <div class="feature">
-                    <div class="feature-icon">🏢</div>
-                    <div class="feature-text">
-                      <strong>Financer votre projet</strong><br>
-                      Solutions sur mesure pour entrepreneurs et entreprises
-                    </div>
-                  </div>
-                  
-                  <div class="feature">
-                    <div class="feature-icon">📊</div>
-                    <div class="feature-text">
-                      <strong>Simuler votre prêt</strong><br>
-                      Calculez vos mensualités en quelques clics
-                    </div>
-                  </div>
-                  
-                  <div class="feature">
-                    <div class="feature-icon">📋</div>
-                    <div class="feature-text">
-                      <strong>Suivre vos demandes</strong><br>
-                      Accédez à l'historique de toutes vos demandes
-                    </div>
-                  </div>
-                </div>
-
-                <center>
-                  <a href="${frontendUrl}" class="button">
-                    Accéder à mon espace
-                  </a>
-                </center>
-
-                <div class="divider"></div>
-
-                <p>Si vous avez des questions, notre équipe est à votre disposition pour vous accompagner dans vos projets.</p>
-                
-                <p>À très bientôt,<br><strong>L'équipe Fundia Invest</strong></p>
-              </div>
-              <div class="footer">
-                <p>© 2024 Fundia Invest - Tous droits réservés</p>
-                <p>5588 Rue Frontenac, Montréal, QC H2H 2L9, Canada</p>
-                <p style="margin-top: 15px; color: #999;">Cet email a été envoyé automatiquement suite à la création de votre compte.</p>
-              </div>
-            </div>
-          </body>
-        </html>
-      `,
+      to: [user.email],
+      subject: `Bienvenue chez ${BRAND.name} !`,
+      html,
     });
 
-    const emailResponseError = (emailResponse as { error?: { message?: string } }).error;
-    if (emailResponseError) {
-      throw new Error(emailResponseError.message || "Failed to send welcome email");
-    }
+    const err = (emailResponse as any).error;
+    if (err) throw new Error(err.message || "Failed to send welcome email");
 
-    console.log("Welcome email sent successfully:", emailResponse);
-
-    return new Response(
-      JSON.stringify({ success: true, emailResponse }),
-      {
-        status: 200,
-        headers: { "Content-Type": "application/json", ...corsHeaders },
-      }
-    );
+    return new Response(JSON.stringify({ success: true }), {
+      status: 200, headers: { "Content-Type": "application/json", ...corsHeaders },
+    });
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : "Unknown error";
-    console.error("Error in send-welcome-email function:", error);
-    return new Response(
-      JSON.stringify({ error: message }),
-      {
-        status: 500,
-        headers: { "Content-Type": "application/json", ...corsHeaders },
-      }
-    );
+    console.error("send-welcome-email error:", error);
+    return new Response(JSON.stringify({ error: message }), {
+      status: 500, headers: { "Content-Type": "application/json", ...corsHeaders },
+    });
   }
 };
 
