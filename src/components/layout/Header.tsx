@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, LogOut, Shield } from "lucide-react";
+import { Menu, X, ChevronDown, LogOut, Shield, Network } from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
@@ -53,6 +53,11 @@ const Header = () => {
       { name: t('nav.businessLoan'), href: "/business-loan" },
       { name: t('nav.cashFlow'), href: "/business-loan" },
       { name: t('nav.equipment'), href: "/business-loan" },
+    ],
+    network: [
+      { name: t('nav.networkMenu.explore'), href: "/network", description: "240+ financeurs qualifiés" },
+      { name: t('nav.networkMenu.howItWorks'), href: "/network#how-it-works", description: "Découvrez le processus" },
+      { name: t('nav.networkMenu.becomePartner'), href: "/network#become-partner", description: "Rejoignez notre réseau" },
     ],
   };
 
@@ -114,6 +119,55 @@ const Header = () => {
                       </li>
                     ))}
                   </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="gap-1.5">
+                  <Network className="h-3.5 w-3.5 text-accent" />
+                  {t('nav.network')}
+                  <span className="ml-1 rounded-full bg-accent px-1.5 py-0.5 text-[10px] font-bold text-accent-foreground leading-none">
+                    {t('network.nav.badge')}
+                  </span>
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="w-[480px] p-4">
+                    <div className="mb-3 rounded-lg bg-gradient-to-r from-primary/5 to-accent/10 p-4 border border-accent/20">
+                      <div className="flex items-center gap-2 mb-1">
+                        <Network className="h-4 w-4 text-accent" />
+                        <span className="text-sm font-bold text-foreground">{t('nav.networkMenu.title')}</span>
+                      </div>
+                      <p className="text-xs text-muted-foreground">
+                        {t('network.teaser.subtitle')}
+                      </p>
+                    </div>
+                    <ul className="grid gap-2">
+                      {navigation.network.map((item) => (
+                        <li key={item.name}>
+                          <NavigationMenuLink asChild>
+                            <Link
+                              to={item.href}
+                              className="flex select-none items-center gap-3 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent/10 hover:text-accent-foreground focus:bg-accent/10"
+                            >
+                              <div className="h-1.5 w-1.5 rounded-full bg-accent flex-shrink-0" />
+                              <div>
+                                <div className="text-sm font-medium leading-none">{item.name}</div>
+                                <div className="mt-1 text-xs text-muted-foreground">{item.description}</div>
+                              </div>
+                            </Link>
+                          </NavigationMenuLink>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="mt-3 pt-3 border-t border-border">
+                      <Link to="/network">
+                        <Button variant="accent" size="sm" className="w-full gap-2 text-xs">
+                          <Network className="h-3.5 w-3.5" />
+                          {t('network.landing.cta')} — 19,90€/an
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
@@ -196,6 +250,26 @@ const Header = () => {
         <div className="md:hidden border-t border-border">
           <div className="space-y-1 px-4 pb-3 pt-2">
             <div className="space-y-4">
+              <div className="rounded-lg bg-gradient-to-r from-primary/5 to-accent/10 border border-accent/20 p-3">
+                <div className="flex items-center gap-2 mb-2">
+                  <Network className="h-4 w-4 text-accent" />
+                  <span className="text-sm font-bold text-foreground">{t('nav.networkMenu.title')}</span>
+                  <span className="rounded-full bg-accent px-1.5 py-0.5 text-[10px] font-bold text-accent-foreground leading-none">
+                    {t('network.nav.badge')}
+                  </span>
+                </div>
+                {navigation.network.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="block px-3 py-1.5 text-sm text-muted-foreground hover:text-foreground rounded-md"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+
               <div>
                 <div className="px-3 py-2 text-sm font-semibold text-foreground">{t('nav.particuliers')}</div>
                 {navigation.particuliers.map((item) => (

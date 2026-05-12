@@ -8,7 +8,7 @@ import Testimonials from "@/components/Testimonials";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Shield, Clock, TrendingUp, Users, Award, ArrowRight, X } from "lucide-react";
+import { CheckCircle, Shield, Clock, TrendingUp, Users, Award, ArrowRight, X, Network, BadgeCheck, Zap } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import heroImage from "@/assets/hero-finance.jpg";
 import teamMeeting from "@/assets/team-meeting.jpg";
@@ -193,6 +193,82 @@ const Index = () => {
             <div>
               <div className="text-3xl md:text-4xl font-bold text-accent mb-2">5 min</div>
               <div className="text-sm text-muted-foreground">{t('home.trustIndicators.approvalTime')}</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Fundia Network Teaser */}
+      <section className="py-16 bg-gradient-to-br from-primary/5 via-background to-accent/5 border-b border-border">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="flex flex-col lg:flex-row items-center gap-10">
+              <div className="flex-1 space-y-5">
+                <div className="flex items-center gap-2">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/15 border border-accent/30 px-3 py-1 text-xs font-bold text-accent uppercase tracking-wider">
+                    <Network className="h-3 w-3" />
+                    {t('network.teaser.badge')}
+                  </span>
+                </div>
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground leading-tight">
+                  {t('network.teaser.title')}
+                </h2>
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  {t('network.teaser.subtitle')}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                  <Link to="/network">
+                    <Button variant="accent" size="lg" className="gap-2 w-full sm:w-auto">
+                      <Network className="h-4 w-4" />
+                      {t('network.teaser.cta')}
+                    </Button>
+                  </Link>
+                  <div className="flex items-center gap-2 text-sm text-muted-foreground self-center">
+                    <BadgeCheck className="h-4 w-4 text-success" />
+                    <span>{t('network.teaser.verified')} · {t('network.teaser.responseTime')}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex-shrink-0 w-full lg:w-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-3 lg:min-w-[240px]">
+                  <div className="flex items-center gap-3 rounded-xl border border-border bg-card p-4 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="h-10 w-10 rounded-lg bg-gradient-accent flex items-center justify-center flex-shrink-0">
+                      <Users className="h-5 w-5 text-accent-foreground" />
+                    </div>
+                    <div>
+                      <div className="text-sm font-semibold text-foreground">{t('network.teaser.types.lenders')}</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3 rounded-xl border border-border bg-card p-4 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="h-10 w-10 rounded-lg bg-gradient-accent flex items-center justify-center flex-shrink-0">
+                      <TrendingUp className="h-5 w-5 text-accent-foreground" />
+                    </div>
+                    <div>
+                      <div className="text-sm font-semibold text-foreground">{t('network.teaser.types.angels')}</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3 rounded-xl border border-border bg-card p-4 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="h-10 w-10 rounded-lg bg-gradient-accent flex items-center justify-center flex-shrink-0">
+                      <Zap className="h-5 w-5 text-accent-foreground" />
+                    </div>
+                    <div>
+                      <div className="text-sm font-semibold text-foreground">{t('network.teaser.types.partners')}</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-3 flex items-center justify-center gap-4 text-center">
+                  <div>
+                    <div className="text-2xl font-bold text-accent">240+</div>
+                    <div className="text-xs text-muted-foreground">{t('network.teaser.funders')}</div>
+                  </div>
+                  <div className="h-8 w-px bg-border" />
+                  <div>
+                    <div className="text-2xl font-bold text-accent">48h</div>
+                    <div className="text-xs text-muted-foreground">{t('network.landing.stats.responseTime')}</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

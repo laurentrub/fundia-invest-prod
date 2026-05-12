@@ -29,6 +29,7 @@ import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
 import ResetPassword from "./pages/ResetPassword";
+import NetworkPage from "./pages/NetworkPage";
 import NotFound from "./pages/NotFound";
 
 // Admin pages
@@ -62,6 +63,7 @@ const App = () => (
             <Route path="/home-improvement" element={<HomeImprovement />} />
             <Route path="/consolidation" element={<Consolidation />} />
             <Route path="/business-loan" element={<BusinessLoan />} />
+            <Route path="/network" element={<NetworkPage />} />
             <Route path="/apply" element={<ApplyPage />} />
             <Route path="/project-financing" element={<ProjectFinancing />} />
             <Route path="/apply/confirmation" element={<ApplyConfirmation />} />

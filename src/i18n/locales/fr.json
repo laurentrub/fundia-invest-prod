@@ -269,7 +269,14 @@
     "myProfile": "Mon profil",
     "login": "Connexion",
     "logout": "Déconnexion",
-    "admin": "Administration"
+    "admin": "Administration",
+    "network": "Réseau",
+    "networkMenu": {
+      "title": "Fundia Network",
+      "explore": "Explorer les financeurs",
+      "howItWorks": "Comment ça marche",
+      "becomePartner": "Devenir financeur partenaire"
+    }
   },
   "languages": {
     "fr": "Français",
@@ -1797,5 +1804,133 @@
     "author": "Fundia Invest",
     "ogTitle": "Fundia Invest - Prêts en Ligne Rapides & Solutions de Crédit",
     "ogDescription": "Approbation instantanée, taux compétitifs à partir de 2,9 % TAEG, conditions flexibles. Votre partenaire crédit de confiance."
+  },
+  "network": {
+    "nav": {
+      "badge": "NOUVEAU"
+    },
+    "landing": {
+      "badge": "Accès Privé",
+      "title": "Votre projet mérite d'être vu par les bonnes personnes.",
+      "subtitle": "Accédez directement aux prêteurs, investisseurs et partenaires financiers qui étudient votre type de dossier.",
+      "cta": "Accéder au Réseau",
+      "ctaSecondary": "Découvrir les financeurs",
+      "disclaimer": "Fundia Network ne garantit pas l'obtention d'un financement. Nous facilitons uniquement la mise en relation avec des partenaires susceptibles d'étudier votre dossier.",
+      "stats": {
+        "funders": "financeurs qualifiés",
+        "responseTime": "Réponse moyenne",
+        "responseValue": "48h",
+        "successRate": "Taux de mise en relation",
+        "members": "membres actifs"
+      }
+    },
+    "teaser": {
+      "badge": "NOUVEAU — FUNDIA NETWORK",
+      "title": "Accédez directement aux financeurs qui étudient votre type de dossier.",
+      "subtitle": "Notre réseau privé de prêteurs, investisseurs et partenaires financiers vérifiés vous attend.",
+      "funders": "financeurs qualifiés",
+      "verified": "Vérifiés Fundia",
+      "responseTime": "Réponse moyenne en 48h",
+      "cta": "Découvrir Fundia Network",
+      "types": {
+        "lenders": "Prêteurs privés & particuliers",
+        "angels": "Business Angels & fonds",
+        "partners": "Partenaires financiers spécialisés"
+      }
+    },
+    "howItWorks": {
+      "title": "Comment ça marche",
+      "step1": {
+        "title": "Complétez votre profil",
+        "description": "Renseignez votre projet, votre situation et le financement recherché."
+      },
+      "step2": {
+        "title": "Explorez le réseau",
+        "description": "Filtrez les financeurs par spécialité, ticket, zone géographique et disponibilité."
+      },
+      "step3": {
+        "title": "Contactez directement",
+        "description": "Envoyez votre dossier en un clic. Suivez vos demandes en temps réel."
+      }
+    },
+    "funderTypes": {
+      "private": "Prêteurs Privés",
+      "investors": "Investisseurs",
+      "angels": "Business Angels",
+      "funds": "Fonds Spécialisés"
+    },
+    "badges": {
+      "verified": "Vérifié Fundia",
+      "active": "Très actif",
+      "topResponder": "Top Répondeur",
+      "new": "Nouveau"
+    },
+    "pricing": {
+      "title": "Un accès. Un tarif simple.",
+      "subtitle": "Rejoignez Fundia Network et accédez à l'ensemble du réseau de financeurs qualifiés.",
+      "price": "19,90",
+      "period": "/ an",
+      "monthly": "soit 1,66€ / mois",
+      "cta": "Commencer maintenant",
+      "guarantee": "Satisfait ou remboursé 30 jours",
+      "features": [
+        "Accès illimité aux 240+ profils de financeurs",
+        "Filtres avancés par spécialité et ticket",
+        "Prise de contact directe et illimitée",
+        "Suivi en temps réel de vos demandes",
+        "Badge Membre Vérifié sur votre profil",
+        "Support prioritaire Fundia"
+      ],
+      "secure": "Paiement sécurisé · Annulation à tout moment · RGPD"
+    },
+    "trust": {
+      "noGuarantee": "Nous ne garantissons pas le financement",
+      "noGuaranteeDesc": "Fundia Network facilite la mise en relation. L'étude et la décision appartiennent aux financeurs.",
+      "verified": "Financeurs vérifiés",
+      "verifiedDesc": "Chaque financeur a été contrôlé par nos équipes avant d'intégrer le réseau.",
+      "privacy": "Vos données protégées",
+      "privacyDesc": "Votre profil n'est jamais partagé sans votre accord explicite. Conformité RGPD totale."
+    },
+    "preview": {
+      "title": "Aperçu du réseau",
+      "subtitle": "Voici un extrait des financeurs disponibles dans Fundia Network.",
+      "locked": "Profil déverrouillé avec l'accès Premium",
+      "specialties": {
+        "real_estate": "Immobilier",
+        "startup": "Startup",
+        "personal": "Personnel",
+        "professional": "Professionnel",
+        "auto": "Auto",
+        "green": "Projet écologique"
+      },
+      "ticketFrom": "Ticket à partir de",
+      "ticketTo": "jusqu'à",
+      "contact": "Contacter",
+      "viewProfile": "Voir le profil"
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "q1": "Fundia Network garantit-il un financement ?",
+      "a1": "Non. Fundia Network est un service de mise en relation. Nous vous donnons accès à des financeurs qui peuvent étudier votre dossier, mais la décision finale leur appartient entièrement.",
+      "q2": "Qui sont les financeurs du réseau ?",
+      "a2": "Notre réseau comprend des prêteurs privés, des investisseurs particuliers, des business angels et des fonds spécialisés. Chaque financeur est vérifié par nos équipes avant d'intégrer le réseau.",
+      "q3": "Mes données sont-elles partagées avec les financeurs ?",
+      "a3": "Uniquement si vous décidez de les contacter. Votre profil reste privé jusqu'à ce que vous envoyiez une demande de mise en relation.",
+      "q4": "Puis-je annuler à tout moment ?",
+      "a4": "Oui. Vous pouvez annuler votre abonnement à tout moment depuis votre espace membre. La garantie satisfait ou remboursé est valable 30 jours.",
+      "q5": "Combien de financeurs puis-je contacter ?",
+      "a5": "L'accès est illimité. Nous recommandons cependant de cibler les financeurs qui correspondent réellement à votre projet pour maximiser vos chances de réponse."
+    },
+    "dashboard": {
+      "upgradeTitle": "Fundia Network",
+      "upgradeSubtitle": "Accédez à 240+ financeurs qualifiés pour votre dossier.",
+      "upgradeFeature1": "Prêteurs privés & particuliers",
+      "upgradeFeature2": "Investisseurs en capital",
+      "upgradeFeature3": "Fonds spécialisés vérifiés",
+      "upgradeCta": "Activer l'accès — 19,90€/an",
+      "activeTitle": "Fundia Network — Actif",
+      "activeSubtitle": "Votre accès au réseau est actif.",
+      "exploreCta": "Explorer le réseau"
+    }
   }
 }

@@ -269,7 +269,14 @@
     "myProfile": "Mein Profil",
     "login": "Anmelden",
     "logout": "Abmelden",
-    "admin": "Administration"
+    "admin": "Administration",
+    "network": "Netzwerk",
+    "networkMenu": {
+      "title": "Fundia Network",
+      "explore": "Geldgeber erkunden",
+      "howItWorks": "So funktioniert es",
+      "becomePartner": "Finanzierungspartner werden"
+    }
   },
   "languages": {
     "fr": "Français",
@@ -1432,5 +1439,133 @@
     "author": "Fundia Invest",
     "ogTitle": "Fundia Invest - Schnelle Online-Kredite & Kreditlösungen",
     "ogDescription": "Sofortige Genehmigung, wettbewerbsfähige Zinsen ab 2,9 % eff. Jahreszins, flexible Konditionen. Ihr vertrauenswürdiger Kreditpartner."
+  },
+  "network": {
+    "nav": {
+      "badge": "NEU"
+    },
+    "landing": {
+      "badge": "Privater Zugang",
+      "title": "Ihr Projekt verdient die richtigen Ansprechpartner.",
+      "subtitle": "Treten Sie direkt mit Kreditgebern, Investoren und Finanzpartnern in Kontakt, die Ihre Art von Antrag prüfen.",
+      "cta": "Zum Netzwerk",
+      "ctaSecondary": "Geldgeber entdecken",
+      "disclaimer": "Fundia Network garantiert keine Finanzierung. Wir vermitteln lediglich Kontakte zu Partnern, die Ihren Antrag prüfen könnten.",
+      "stats": {
+        "funders": "qualifizierte Geldgeber",
+        "responseTime": "Durchschnittliche Antwort",
+        "responseValue": "48h",
+        "successRate": "Vermittlungsquote",
+        "members": "aktive Mitglieder"
+      }
+    },
+    "teaser": {
+      "badge": "NEU — FUNDIA NETWORK",
+      "title": "Direkter Zugang zu Geldgebern, die Ihre Anfrage prüfen.",
+      "subtitle": "Unser privates Netzwerk geprüfter Kreditgeber, Investoren und Finanzpartner wartet auf Sie.",
+      "funders": "qualifizierte Geldgeber",
+      "verified": "Von Fundia verifiziert",
+      "responseTime": "Antwort im Schnitt in 48h",
+      "cta": "Fundia Network entdecken",
+      "types": {
+        "lenders": "Private Kreditgeber",
+        "angels": "Business Angels & Fonds",
+        "partners": "Spezialisierte Finanzpartner"
+      }
+    },
+    "howItWorks": {
+      "title": "So funktioniert es",
+      "step1": {
+        "title": "Profil ausfüllen",
+        "description": "Beschreiben Sie Ihr Projekt und die gewünschte Finanzierung."
+      },
+      "step2": {
+        "title": "Netzwerk erkunden",
+        "description": "Filtern Sie Geldgeber nach Spezialgebiet, Ticket und Region."
+      },
+      "step3": {
+        "title": "Direkt kontaktieren",
+        "description": "Senden Sie Ihren Antrag mit einem Klick und verfolgen Sie Ihre Anfragen."
+      }
+    },
+    "funderTypes": {
+      "private": "Private Kreditgeber",
+      "investors": "Investoren",
+      "angels": "Business Angels",
+      "funds": "Spezialisierte Fonds"
+    },
+    "badges": {
+      "verified": "Von Fundia verifiziert",
+      "active": "Sehr aktiv",
+      "topResponder": "Top-Antworter",
+      "new": "Neu"
+    },
+    "pricing": {
+      "title": "Ein Zugang. Ein einfacher Preis.",
+      "subtitle": "Treten Sie Fundia Network bei und erhalten Sie Zugang zum gesamten Netzwerk.",
+      "price": "19,90",
+      "period": "/ Jahr",
+      "monthly": "das sind 1,66 € / Monat",
+      "cta": "Jetzt starten",
+      "guarantee": "Zufrieden oder 30 Tage Rückerstattung",
+      "features": [
+        "Unbegrenzter Zugang zu 240+ Geldgeberprofilen",
+        "Erweiterte Filter nach Spezialgebiet und Ticket",
+        "Direkter und unbegrenzter Kontakt",
+        "Echtzeit-Verfolgung Ihrer Anfragen",
+        "Verifiziertes Mitglieder-Badge",
+        "Prioritäts-Support"
+      ],
+      "secure": "Sichere Zahlung · Jederzeit kündbar · DSGVO-konform"
+    },
+    "trust": {
+      "noGuarantee": "Keine Finanzierungsgarantie",
+      "noGuaranteeDesc": "Fundia Network vermittelt Kontakte. Die Entscheidung liegt bei den Geldgebern.",
+      "verified": "Verifizierte Geldgeber",
+      "verifiedDesc": "Jeder Geldgeber wurde von unserem Team geprüft.",
+      "privacy": "Ihre Daten geschützt",
+      "privacyDesc": "Ihr Profil wird niemals ohne Ihre ausdrückliche Zustimmung geteilt."
+    },
+    "preview": {
+      "title": "Netzwerkvorschau",
+      "subtitle": "Hier ist ein Auszug der verfügbaren Geldgeber.",
+      "locked": "Profil mit Premium-Zugang freigeschaltet",
+      "specialties": {
+        "real_estate": "Immobilien",
+        "startup": "Startup",
+        "personal": "Privat",
+        "professional": "Gewerblich",
+        "auto": "Auto",
+        "green": "Grünes Projekt"
+      },
+      "ticketFrom": "Ticket ab",
+      "ticketTo": "bis zu",
+      "contact": "Kontaktieren",
+      "viewProfile": "Profil ansehen"
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "q1": "Garantiert Fundia Network eine Finanzierung?",
+      "a1": "Nein. Die Entscheidung liegt bei den Geldgebern.",
+      "q2": "Wer sind die Netzwerkgeldgeber?",
+      "a2": "Unser Netzwerk umfasst private Kreditgeber, Investoren, Business Angels und spezialisierte Fonds.",
+      "q3": "Werden meine Daten geteilt?",
+      "a3": "Nur wenn Sie sich entscheiden, einen Geldgeber zu kontaktieren.",
+      "q4": "Kann ich jederzeit kündigen?",
+      "a4": "Ja, jederzeit. 30 Tage Geld-zurück-Garantie.",
+      "q5": "Wie viele Geldgeber kann ich kontaktieren?",
+      "a5": "Unbegrenzt. Wir empfehlen, gezielt vorzugehen."
+    },
+    "dashboard": {
+      "upgradeTitle": "Fundia Network",
+      "upgradeSubtitle": "Zugang zu 240+ qualifizierten Geldgebern.",
+      "upgradeFeature1": "Private Kreditgeber",
+      "upgradeFeature2": "Kapitalinvestoren",
+      "upgradeFeature3": "Spezialisierte Fonds",
+      "upgradeCta": "Zugang aktivieren — 19,90 €/Jahr",
+      "activeTitle": "Fundia Network — Aktiv",
+      "activeSubtitle": "Ihr Netzwerkzugang ist aktiv.",
+      "exploreCta": "Netzwerk erkunden"
+    }
   }
 }
