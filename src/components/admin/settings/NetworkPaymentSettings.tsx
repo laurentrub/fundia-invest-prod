@@ -6,9 +6,19 @@ import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
 import { Separator } from '@/components/ui/separator';
 import { Badge } from '@/components/ui/badge';
-import { Network, CreditCard, Building2, Save, Loader2, AlertCircle, CheckCircle } from 'lucide-react';
+import { Network, CreditCard, Building2, Save, Loader2, AlertCircle, CheckCircle, Eye, ExternalLink } from 'lucide-react';
 import { toast } from 'sonner';
 import { supabase } from '@/integrations/supabase/client';
+
+interface PendingSubscription {
+  id: string;
+  user_id: string;
+  amount: number;
+  bank_transfer_reference: string | null;
+  proof_of_payment_path: string | null;
+  proof_of_payment_uploaded_at: string | null;
+  created_at: string;
+}
 
 interface PaymentSettings {
   card_enabled: boolean;
@@ -36,6 +46,8 @@ export function NetworkPaymentSettings() {
   const [loading, setLoading] = useState(false);
   const [settings, setSettings] = useState<PaymentSettings>(DEFAULT_SETTINGS);
   const [pendingCount, setPendingCount] = useState(0);
+  const [pendingSubs, setPendingSubs] = useState<PendingSubscription[]>([]);
+  const [confirmingId, setConfirmingId] = useState<string | null>(null);
 
   useEffect(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
@@ -48,12 +60,49 @@ export function NetworkPaymentSettings() {
   }, []);
 
   const fetchPendingTransfers = async () => {
-    const { count } = await supabase
+    const { data, count } = await supabase
       .from('network_subscriptions')
-      .select('*', { count: 'exact', head: true })
+      .select('id, user_id, amount, bank_transfer_reference, proof_of_payment_path, proof_of_payment_uploaded_at, created_at', { count: 'exact' })
       .eq('status', 'pending')
-      .eq('payment_method', 'bank_transfer');
+      .eq('payment_method', 'bank_transfer')
+      .order('created_at', { ascending: false });
     setPendingCount(count ?? 0);
+    setPendingSubs(data ?? []);
+  };
+
+  const handleConfirmPayment = async (subId: string) => {
+    setConfirmingId(subId);
+    try {
+      const now = new Date();
+      const expiresAt = new Date(now);
+      expiresAt.setFullYear(expiresAt.getFullYear() + 1);
+
+      const { error } = await supabase
+        .from('network_subscriptions')
+        .update({
+          status: 'active',
+          started_at: now.toISOString(),
+          expires_at: expiresAt.toISOString(),
+          bank_transfer_confirmed_at: now.toISOString(),
+        })
+        .eq('id', subId);
+
+      if (error) throw error;
+      toast.success('Abonnement activé. L\'utilisateur a maintenant accès au réseau.');
+      fetchPendingTransfers();
+    } catch {
+      toast.error('Erreur lors de la confirmation.');
+    } finally {
+      setConfirmingId(null);
+    }
+  };
+
+  const handleViewProof = async (path: string) => {
+    const { data } = await supabase.storage
+      .from('network-payment-proofs')
+      .createSignedUrl(path, 60);
+    if (data?.signedUrl) window.open(data.signedUrl, '_blank');
+    else toast.error('Impossible d\'ouvrir le fichier.');
   };
 
   const handleSave = async () => {
@@ -111,6 +160,75 @@ export function NetworkPaymentSettings() {
           </div>
         </CardContent>
       </Card>
+
+      {/* Virements en attente */}
+      {pendingSubs.length > 0 && (
+        <Card className="border-accent/30">
+          <CardHeader>
+            <CardTitle className="text-base flex items-center gap-2">
+              <Building2 className="h-4 w-4 text-accent" />
+              Virements en attente de confirmation
+              <Badge className="bg-accent text-accent-foreground ml-1">{pendingSubs.length}</Badge>
+            </CardTitle>
+            <CardDescription>
+              Vérifiez la réception du virement et confirmez pour activer l'accès de l'utilisateur.
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-3">
+            {pendingSubs.map((s) => (
+              <div key={s.id} className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 rounded-lg border border-border p-4">
+                <div className="space-y-1 min-w-0">
+                  <div className="flex items-center gap-2 text-sm">
+                    <code className="font-bold text-foreground">{s.bank_transfer_reference ?? '—'}</code>
+                    <span className="text-muted-foreground">·</span>
+                    <span className="text-muted-foreground">{s.amount.toFixed(2)} €</span>
+                    <span className="text-muted-foreground">·</span>
+                    <span className="text-xs text-muted-foreground">
+                      {new Date(s.created_at).toLocaleDateString('fr-FR')}
+                    </span>
+                  </div>
+                  {s.proof_of_payment_path ? (
+                    <div className="flex items-center gap-1.5 text-xs text-success">
+                      <CheckCircle className="h-3.5 w-3.5" />
+                      Preuve uploadée le {new Date(s.proof_of_payment_uploaded_at!).toLocaleDateString('fr-FR')}
+                    </div>
+                  ) : (
+                    <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                      <AlertCircle className="h-3.5 w-3.5" />
+                      Aucune preuve uploadée
+                    </div>
+                  )}
+                </div>
+                <div className="flex items-center gap-2 flex-shrink-0">
+                  {s.proof_of_payment_path && (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="gap-1.5 text-xs"
+                      onClick={() => handleViewProof(s.proof_of_payment_path!)}
+                    >
+                      <Eye className="h-3.5 w-3.5" />
+                      Voir
+                    </Button>
+                  )}
+                  <Button
+                    size="sm"
+                    className="gap-1.5 text-xs"
+                    onClick={() => handleConfirmPayment(s.id)}
+                    disabled={confirmingId === s.id}
+                  >
+                    {confirmingId === s.id
+                      ? <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                      : <CheckCircle className="h-3.5 w-3.5" />
+                    }
+                    Confirmer le paiement
+                  </Button>
+                </div>
+              </div>
+            ))}
+          </CardContent>
+        </Card>
+      )}
 
       {/* Prix */}
       <Card>
