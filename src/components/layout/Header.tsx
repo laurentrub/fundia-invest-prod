@@ -60,6 +60,11 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="w-full bg-primary/10 border-b border-primary/20 py-1 px-4 text-center">
+        <p className="text-xs text-primary italic">
+          Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.
+        </p>
+      </div>
       <nav className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link to="/" className="flex items-center space-x-2">
           <div className="flex items-center justify-center w-10 h-10 bg-gradient-hero rounded-lg">
