@@ -454,7 +454,7 @@ export default function NetworkPage() {
                 )}
               </ul>
 
-              <Link to="/auth">
+              <Link to="/network/checkout">
                 <Button variant="accent" size="lg" className="w-full gap-2 text-base">
                   <Network className="h-4 w-4" />
                   {t("network.pricing.cta")}

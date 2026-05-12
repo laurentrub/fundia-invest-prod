@@ -1,10 +1,11 @@
 import { useTranslation } from 'react-i18next';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Building2, Bell, Banknote, Monitor } from 'lucide-react';
+import { Building2, Bell, Banknote, Monitor, Network } from 'lucide-react';
 import { CompanySettings } from '@/components/admin/settings/CompanySettings';
 import { NotificationSettings } from '@/components/admin/settings/NotificationSettings';
 import { LoanSettings } from '@/components/admin/settings/LoanSettings';
 import { DisplaySettings } from '@/components/admin/settings/DisplaySettings';
+import { NetworkPaymentSettings } from '@/components/admin/settings/NetworkPaymentSettings';
 
 export default function Settings() {
   const { t } = useTranslation();
@@ -17,7 +18,7 @@ export default function Settings() {
       </div>
 
       <Tabs defaultValue="company" className="space-y-6">
-        <TabsList className="grid w-full grid-cols-4">
+        <TabsList className="grid w-full grid-cols-5">
           <TabsTrigger value="company" className="gap-2">
             <Building2 className="h-4 w-4 hidden sm:inline" />
             {t('admin.settings.tabs.company')}
@@ -34,6 +35,10 @@ export default function Settings() {
             <Monitor className="h-4 w-4 hidden sm:inline" />
             {t('admin.settings.tabs.display')}
           </TabsTrigger>
+          <TabsTrigger value="network" className="gap-2">
+            <Network className="h-4 w-4 hidden sm:inline" />
+            Réseau
+          </TabsTrigger>
         </TabsList>
 
         <TabsContent value="company">
@@ -47,6 +52,9 @@ export default function Settings() {
         </TabsContent>
         <TabsContent value="display">
           <DisplaySettings />
+        </TabsContent>
+        <TabsContent value="network">
+          <NetworkPaymentSettings />
         </TabsContent>
       </Tabs>
     </div>
