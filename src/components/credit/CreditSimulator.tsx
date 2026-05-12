@@ -141,6 +141,9 @@ const CreditSimulator = (props: CreditSimulatorProps) => {
         <p className="text-xs text-center text-muted-foreground mt-2">
           {t('simulator.disclaimer')}
         </p>
+        <p className="text-xs text-center text-muted-foreground/80 italic mt-1">
+          Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.
+        </p>
       </div>
     </Card>
   );

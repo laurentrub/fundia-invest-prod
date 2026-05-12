@@ -110,8 +110,11 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-primary-foreground/20 text-center text-sm text-primary-foreground/60">
-          <p>{t('footer.copyright')}</p>
+        <div className="mt-8 pt-8 border-t border-primary-foreground/20 text-center space-y-2">
+          <p className="text-xs text-primary-foreground/80 italic">
+            Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.
+          </p>
+          <p className="text-sm text-primary-foreground/60">{t('footer.copyright')}</p>
         </div>
       </div>
     </footer>

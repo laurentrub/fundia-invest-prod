@@ -113,6 +113,9 @@ const PersonalLoan = () => {
           <p className="text-sm text-muted-foreground mt-4 text-center">
             {t("products.personalLoan.examplesDisclaimer")}
           </p>
+          <p className="text-xs text-muted-foreground italic mt-2 text-center">
+            Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.
+          </p>
         </div>
       </section>
 

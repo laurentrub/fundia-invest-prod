@@ -801,6 +801,9 @@ const ApplyPage = () => {
                     <p className="text-xs text-muted-foreground">
                       {t('apply.step4.disclaimer')}
                     </p>
+                    <p className="text-xs text-muted-foreground italic mt-2">
+                      Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.
+                    </p>
                   </div>
                 </div>
               )}

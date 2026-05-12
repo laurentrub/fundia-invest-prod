@@ -196,6 +196,10 @@ const ApplyConfirmation = () => {
             </div>
           </Card>
 
+          <p className="text-xs text-center text-primary-foreground/70 italic mt-6">
+            Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.
+          </p>
+
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
             <Button asChild className="flex-1">
               <Link to="/">
