@@ -147,17 +147,24 @@ export default function NetworkCheckout() {
   const handleBankTransfer = async () => {
     setSubmitting(true);
     try {
+      const now = new Date();
+      const expiresAt = new Date(now);
+      expiresAt.setFullYear(expiresAt.getFullYear() + 1);
+
       const { error } = await supabase.from("network_subscriptions").insert({
         user_id: user!.id,
-        status: "pending",
+        status: "active",
         payment_method: "bank_transfer",
         amount: settings.price,
         currency: "EUR",
         bank_transfer_reference: transferRef,
+        started_at: now.toISOString(),
+        expires_at: expiresAt.toISOString(),
+        bank_transfer_confirmed_at: now.toISOString(),
       });
       if (error) throw error;
       setSubmitted(true);
-      toast.success("Votre demande d'abonnement a été enregistrée.");
+      toast.success("Votre accès Fundia Network est activé !");
     } catch (err: any) {
       toast.error("Une erreur est survenue. Veuillez réessayer.");
     } finally {
@@ -202,38 +209,40 @@ export default function NetworkCheckout() {
       <div className="min-h-screen bg-background">
         <Header />
         <div className="container mx-auto px-4 py-20 max-w-lg text-center space-y-6">
-          <div className="h-20 w-20 rounded-full bg-accent/15 flex items-center justify-center mx-auto">
-            <Building2 className="h-10 w-10 text-accent" />
+          <div className="h-20 w-20 rounded-full bg-success/10 flex items-center justify-center mx-auto">
+            <CheckCircle className="h-10 w-10 text-success" />
           </div>
-          <h1 className="text-2xl font-bold text-foreground">Demande enregistrée</h1>
+          <h1 className="text-2xl font-bold text-foreground">Accès activé — Bienvenue dans Fundia Network !</h1>
           <p className="text-muted-foreground leading-relaxed">
-            Votre demande d'abonnement est bien enregistrée. Effectuez votre virement avec la référence ci-dessous.
-            Votre accès sera activé sous <strong>48h ouvrées</strong> après réception du paiement.
+            Votre accès est <strong>immédiatement actif</strong>. Effectuez votre virement avec la référence ci-dessous pour régulariser votre paiement.
           </p>
           <Card className="text-left border-accent/30">
             <CardContent className="pt-6 space-y-3">
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-muted-foreground">Référence obligatoire</span>
-                <div className="flex items-center gap-2">
-                  <code className="font-bold text-foreground text-sm">{transferRef}</code>
-                  <button onClick={() => handleCopy(transferRef, "ref")} className="text-muted-foreground hover:text-foreground">
-                    <Copy className="h-3.5 w-3.5" />
-                  </button>
+              {[
+                { label: "Bénéficiaire", value: settings.bank_beneficiary, key: "beneficiary" },
+                { label: "IBAN", value: settings.bank_iban, key: "iban" },
+                { label: "BIC / SWIFT", value: settings.bank_bic, key: "bic" },
+                { label: "Montant", value: `${settings.price.toFixed(2)} €`, key: "amount" },
+                { label: "Référence obligatoire", value: transferRef, key: "ref", highlight: true },
+              ].map(({ label, value, key, highlight }) => (
+                <div key={key} className={`flex items-center justify-between gap-4 ${highlight ? "rounded-lg bg-accent/10 border border-accent/20 px-3 py-2" : ""}`}>
+                  <span className={`text-sm ${highlight ? "font-semibold text-foreground" : "text-muted-foreground"}`}>{label}</span>
+                  <div className="flex items-center gap-2">
+                    <span className={`text-sm font-mono ${highlight ? "font-bold text-accent" : "text-foreground"}`}>{value}</span>
+                    <button onClick={() => handleCopy(value, key)} className="text-muted-foreground hover:text-foreground">
+                      {copied === key ? <CheckCircle className="h-3.5 w-3.5 text-success" /> : <Copy className="h-3.5 w-3.5" />}
+                    </button>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-muted-foreground">Montant</span>
-                <span className="font-bold text-foreground">{settings.price.toFixed(2)} €</span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-muted-foreground">Bénéficiaire</span>
-                <span className="text-sm font-medium text-foreground">{settings.bank_beneficiary}</span>
-              </div>
+              ))}
             </CardContent>
           </Card>
-          <p className="text-xs text-muted-foreground">
-            Un email de confirmation vous sera envoyé dès l'activation de votre accès.
-          </p>
+          <Link to="/network/explore">
+            <Button variant="accent" size="lg" className="gap-2 w-full">
+              <Network className="h-4 w-4" />
+              Explorer le réseau maintenant
+            </Button>
+          </Link>
           <Link to="/">
             <Button variant="outline" className="gap-2">
               <ArrowLeft className="h-4 w-4" />
@@ -309,7 +318,7 @@ export default function NetworkCheckout() {
                       >
                         <Building2 className={`h-6 w-6 ${selectedMethod === "bank_transfer" ? "text-accent" : "text-muted-foreground"}`} />
                         <span className="text-sm font-medium text-foreground">Virement bancaire</span>
-                        <span className="text-xs text-muted-foreground">Activation sous 48h</span>
+                        <span className="text-xs text-muted-foreground">Accès immédiat</span>
                       </button>
                     </div>
                   </div>
@@ -403,7 +412,7 @@ export default function NetworkCheckout() {
                         <AlertCircle className="h-4 w-4 flex-shrink-0 mt-0.5" />
                         <p>
                           <strong>Important :</strong> indiquez impérativement la référence <strong>{transferRef}</strong> dans le libellé de votre virement.
-                          Votre accès sera activé sous <strong>48h ouvrées</strong> après réception du paiement.
+                          Votre accès est activé <strong>immédiatement</strong> dès confirmation de votre intention.
                         </p>
                       </div>
 

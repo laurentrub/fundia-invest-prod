@@ -185,7 +185,7 @@ export function NetworkPaymentSettings() {
           </CardTitle>
           <CardDescription>
             Affiche les coordonnées bancaires et génère une référence unique par utilisateur.
-            L'activation de l'abonnement est manuelle (confirmée par l'admin).
+            L'accès est activé immédiatement. Le virement sert à régulariser le paiement.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -241,8 +241,7 @@ export function NetworkPaymentSettings() {
 
           {settings.bank_transfer_enabled && (
             <div className="rounded-lg bg-muted/40 border border-border p-3 text-xs text-muted-foreground">
-              <p>Les abonnements par virement apparaissent avec le statut <strong>En attente</strong> dans la liste des abonnements.
-              Vous devrez les confirmer manuellement après réception du paiement.</p>
+              <p>L'accès utilisateur est activé <strong>immédiatement</strong> à la confirmation. Le virement apparaît dans la liste des abonnements avec la référence unique pour vérification a posteriori.</p>
             </div>
           )}
         </CardContent>
