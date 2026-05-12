@@ -59,6 +59,9 @@ const HomeImprovement = () => {
               <p className="text-xl mb-6 text-primary-foreground/90">
                 {t("products.homeImprovement.description")}
               </p>
+              <p className="text-xs text-primary-foreground/70 italic">
+                Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.
+              </p>
             </div>
             <div>
               <CreditSimulator 
@@ -119,6 +122,9 @@ const HomeImprovement = () => {
           </div>
           <p className="text-sm text-muted-foreground mt-6 text-center">
             {t("products.homeImprovement.projectsDisclaimer")}
+          </p>
+          <p className="text-xs text-muted-foreground italic mt-2 text-center">
+            Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.
           </p>
         </div>
       </section>

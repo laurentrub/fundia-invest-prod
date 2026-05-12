@@ -91,7 +91,17 @@ const MentionsLegales = () => {
                 Les présentes mentions légales sont soumises au <strong>droit français</strong>. En cas de litige, et à défaut de résolution amiable, les tribunaux français seront seuls compétents.
               </p>
 
-              <h2 className="text-2xl font-bold text-foreground mb-4">9. Contact</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-4">9. Avertissement relatif au crédit</h2>
+              <div className="bg-muted/50 border-l-4 border-primary rounded-r-lg p-4 mb-6">
+                <p className="text-foreground font-medium">
+                  Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.
+                </p>
+              </div>
+              <p className="text-foreground leading-relaxed mb-6">
+                Tout crédit est soumis à l'accord de l'établissement prêteur. Fundia Invest est une plateforme de mise en relation entre demandeurs de financement et organismes de crédit. Les simulations présentées sur le site sont données à titre indicatif et ne constituent pas une offre de crédit ferme. Le taux effectif global (TEG) final dépend des conditions accordées par l'établissement prêteur après examen du dossier.
+              </p>
+
+              <h2 className="text-2xl font-bold text-foreground mb-4">10. Contact</h2>
               <p className="text-foreground leading-relaxed">
                 Pour toute question relative aux présentes mentions légales, vous pouvez nous contacter à l'adresse suivante : <strong>contact@fundia-invest.com</strong>.
               </p>

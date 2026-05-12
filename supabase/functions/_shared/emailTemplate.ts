@@ -334,6 +334,9 @@ export function buildEmail(opts: EmailOptions): string {
           <a href="${BRAND.website}/privacy" class="footer-link">Confidentialité</a>
         </div>
         <div style="margin-top:16px; opacity:0.6;">${footerNote}</div>
+        <div style="margin-top:16px; padding-top:16px; border-top:1px solid #1e3a5f; font-size:11px; color:#64748b; font-style:italic;">
+          Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.
+        </div>
       </div>
     </div>
 

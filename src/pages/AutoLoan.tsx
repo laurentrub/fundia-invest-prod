@@ -34,6 +34,9 @@ const AutoLoan = () => {
               <p className="text-xl mb-6 text-primary-foreground/90">
                 {t("products.autoLoan.description")}
               </p>
+              <p className="text-xs text-primary-foreground/70 italic">
+                Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.
+              </p>
             </div>
             <div>
               <CreditSimulator minAmount={5000} maxAmount={50000} defaultAmount={20000} minDuration={12} maxDuration={72} defaultDuration={60} interestRate={3.9} />

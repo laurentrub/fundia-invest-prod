@@ -43,6 +43,9 @@ const PersonalLoan = () => {
               <p className="text-xl mb-6 text-primary-foreground/90">
                 {t("products.personalLoan.description")}
               </p>
+              <p className="text-xs text-primary-foreground/70 italic mb-6">
+                Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.
+              </p>
               <div className="flex items-center gap-6 mb-8">
                 <div className="flex items-center gap-2">
                   <Clock className="h-5 w-5" />
