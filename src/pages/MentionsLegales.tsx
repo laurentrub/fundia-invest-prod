@@ -23,13 +23,13 @@ const MentionsLegales = () => {
 
               <h2 className="text-2xl font-bold text-foreground mb-4">1. Éditeur du site</h2>
               <p className="text-foreground leading-relaxed mb-3">
-                Le site <strong>fundia-invest.com</strong> (ci-après le « Site ») est édité par :
+                Le site <strong>fundia-invest.com</strong> (ci-après le « Site ») est la propriété de :
               </p>
               <ul className="list-none space-y-2 text-foreground mb-6">
-                <li><strong>Nom / Raison sociale :</strong> Fundia Invest</li>
-                <li><strong>Propriétaire :</strong> Martin Pablo</li>
-                <li><strong>SIREN :</strong> 990 555 997</li>
-                <li><strong>Adresse :</strong> 5588 Rue Frontenac, Montréal, QC H2H 2L9, Canada</li>
+                <li><strong>Raison sociale :</strong> HEDGE FUNDS INVESTMENT MANAGEMENT LIMITED</li>
+                <li><strong>Numéro d'entreprise :</strong> 03591241</li>
+                <li><strong>FRN :</strong> 449528</li>
+                <li><strong>Adresse du siège social :</strong> C/O WAYSTONE MANAGEMENT (UK) LIMITED, 3rd Floor, Central Square, 29 Wellington Street, Leeds, LS1 4DL, Royaume-Uni</li>
                 <li><strong>Email :</strong> contact@fundia-invest.com</li>
               </ul>
 

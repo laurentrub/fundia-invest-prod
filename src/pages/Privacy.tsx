@@ -25,9 +25,12 @@ const Privacy = () => {
 
             <div className="prose prose-lg max-w-none">
               <h2 className="text-2xl font-bold text-foreground mb-4">1. Introduction</h2>
+              <p className="text-foreground leading-relaxed mb-4">
+                Le site <strong>fundia-invest.com</strong> est la propriété de <strong>HEDGE FUNDS INVESTMENT MANAGEMENT LIMITED</strong> (numéro d'entreprise 03591241, FRN 449528), dont le siège social est situé C/O WAYSTONE MANAGEMENT (UK) LIMITED, 3rd Floor, Central Square, 29 Wellington Street, Leeds, LS1 4DL, Royaume-Uni.
+              </p>
               <p className="text-foreground leading-relaxed mb-6">
-                Fundia Invest ("nous", "notre" ou "nos") s'engage à protéger et à respecter votre vie privée. 
-                Cette politique de confidentialité explique comment nous collectons, utilisons, partageons et 
+                HEDGE FUNDS INVESTMENT MANAGEMENT LIMITED ("nous", "notre" ou "nos") s'engage à protéger et à respecter votre vie privée.
+                Cette politique de confidentialité explique comment nous collectons, utilisons, partageons et
                 protégeons vos informations personnelles lorsque vous utilisez notre site web et nos services.
               </p>
 

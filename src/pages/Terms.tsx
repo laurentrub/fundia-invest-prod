@@ -23,7 +23,18 @@ const Terms = () => {
             <div className="prose prose-lg max-w-none">
               <h2 className="text-2xl font-bold text-foreground mb-6 border-b pb-3">CGU Générales</h2>
 
-              <h3 className="text-xl font-bold text-foreground mb-4">1. Objet</h3>
+              <h3 className="text-xl font-bold text-foreground mb-4">1. Éditeur</h3>
+              <p className="text-foreground leading-relaxed mb-3">
+                Le site <strong>fundia-invest.com</strong> et la plateforme <strong>Fundia Invest</strong> sont la propriété de :
+              </p>
+              <ul className="list-none space-y-2 text-foreground mb-6">
+                <li><strong>Raison sociale :</strong> HEDGE FUNDS INVESTMENT MANAGEMENT LIMITED</li>
+                <li><strong>Numéro d'entreprise :</strong> 03591241</li>
+                <li><strong>FRN :</strong> 449528</li>
+                <li><strong>Adresse :</strong> C/O WAYSTONE MANAGEMENT (UK) LIMITED, 3rd Floor, Central Square, 29 Wellington Street, Leeds, LS1 4DL, Royaume-Uni</li>
+              </ul>
+
+              <h3 className="text-xl font-bold text-foreground mb-4">2. Objet</h3>
               <p className="text-foreground leading-relaxed mb-6">
                 Les présentes Conditions Générales d'Utilisation (ci-après les « CGU ») définissent les modalités d'accès et d'utilisation de la plateforme <strong>Fundia Invest</strong>.
               </p>
@@ -31,7 +42,7 @@ const Terms = () => {
                 Fundia Invest propose des services de mise en relation, de structuration juridique et d'accompagnement documentaire relatifs à des opérations de financement civil et professionnel, ainsi qu'un service d'orientation en matière de rachat de crédit.
               </p>
 
-              <h3 className="text-xl font-bold text-foreground mb-4">2. Positionnement de Fundia Invest</h3>
+              <h3 className="text-xl font-bold text-foreground mb-4">3. Positionnement de Fundia Invest</h3>
               <p className="text-foreground leading-relaxed mb-3">
                 Fundia Invest agit selon les cas comme :
               </p>
@@ -52,12 +63,12 @@ const Terms = () => {
                 <li>un assureur.</li>
               </ul>
 
-              <h3 className="text-xl font-bold text-foreground mb-4">3. Absence de détention des fonds</h3>
+              <h3 className="text-xl font-bold text-foreground mb-4">4. Absence de détention des fonds</h3>
               <p className="text-foreground leading-relaxed mb-6">
                 Les fonds relatifs aux opérations de financement ne transitent pas par Fundia Invest, sauf évolution réglementaire ultérieure et obtention des agréments requis.
               </p>
 
-              <h3 className="text-xl font-bold text-foreground mb-4">4. Responsabilité</h3>
+              <h3 className="text-xl font-bold text-foreground mb-4">5. Responsabilité</h3>
               <p className="text-foreground leading-relaxed mb-3">
                 Fundia Invest n'assume aucune responsabilité quant :
               </p>
@@ -67,7 +78,7 @@ const Terms = () => {
                 <li>à l'issue des opérations de rachat ou de financement.</li>
               </ul>
 
-              <h3 className="text-xl font-bold text-foreground mb-4">5. Droit applicable</h3>
+              <h3 className="text-xl font-bold text-foreground mb-4">6. Droit applicable</h3>
               <p className="text-foreground leading-relaxed mb-6">
                 Les présentes CGU sont soumises au <strong>droit français</strong>.
               </p>
