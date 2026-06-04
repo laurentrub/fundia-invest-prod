@@ -19,10 +19,6 @@ const Privacy = () => {
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-4xl">
           <Card className="p-8 mb-6">
-            <p className="text-sm text-muted-foreground mb-6">
-              Dernière mise à jour : {new Date().toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' })}
-            </p>
-
             <div className="prose prose-lg max-w-none">
               <h2 className="text-2xl font-bold text-foreground mb-4">1. Introduction</h2>
               <p className="text-foreground leading-relaxed mb-4">
