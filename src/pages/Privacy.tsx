@@ -125,8 +125,7 @@ const Privacy = () => {
                 Pour toute question concernant cette politique de confidentialité ou le traitement de vos données personnelles, contactez-nous via ce <a href="/contact" className="text-primary hover:underline font-medium">formulaire</a>.
               </p>
               <p className="text-foreground leading-relaxed">
-                Vous avez également le droit de déposer une plainte auprès de la Commission Nationale de l'Informatique
-                et des Libertés (CNIL) si vous estimez que vos droits n'ont pas été respectés.
+                Vous avez également le droit de déposer une plainte auprès de l'autorité de contrôle compétente. Au Royaume-Uni, il s'agit de l'<strong>Information Commissioner's Office (ICO)</strong> — ico.org.uk.
               </p>
             </div>
           </Card>
