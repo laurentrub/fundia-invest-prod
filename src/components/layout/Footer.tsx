@@ -15,13 +15,6 @@ const Footer = () => {
             <p className="text-sm text-primary-foreground/80 leading-relaxed mb-4">
               {t('footer.description')}
             </p>
-            <div className="flex items-start gap-2 text-sm text-primary-foreground/80">
-              <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-              <div>
-                <p>{t('footer.addressLine1')}</p>
-                <p>{t('footer.addressLine2')}</p>
-              </div>
-            </div>
           </div>
 
           <div>
