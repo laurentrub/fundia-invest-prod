@@ -153,11 +153,13 @@ export default function NetworkPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
-              <Button variant="accent" size="xl" className="gap-2">
-                <Network className="h-5 w-5" />
-                {t("network.pricing.cta")} — {t("network.pricing.price")}€
-                {t("network.pricing.period")}
-              </Button>
+              <Link to="/network/checkout">
+                <Button variant="accent" size="xl" className="gap-2">
+                  <Network className="h-5 w-5" />
+                  {t("network.pricing.cta")} — {t("network.pricing.price")}€
+                  {t("network.pricing.period")}
+                </Button>
+              </Link>
               <Button
                 variant="hero"
                 size="xl"
