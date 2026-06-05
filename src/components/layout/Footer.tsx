@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { MapPin } from "lucide-react";
+import { MapPin, Clock } from "lucide-react";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -110,11 +110,24 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-primary-foreground/20 text-center space-y-2">
-          <p className="text-xs text-primary-foreground/80 italic">
-            Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.
-          </p>
-          <p className="text-sm text-primary-foreground/60">{t('footer.copyright')}</p>
+        <div className="mt-8 pt-8 border-t border-primary-foreground/20 space-y-3">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-primary-foreground/70">
+            <span className="flex items-center gap-2">
+              <MapPin className="h-4 w-4 flex-shrink-0" />
+              C/O WAYSTONE MANAGEMENT (UK) LIMITED — 29 Wellington Street, Leeds, LS1 4DL, Royaume-Uni
+            </span>
+            <span className="hidden sm:block text-primary-foreground/30">·</span>
+            <span className="flex items-center gap-2">
+              <Clock className="h-4 w-4 flex-shrink-0" />
+              Lun–Ven : 9h–12h / 14h–18h30
+            </span>
+          </div>
+          <div className="text-center space-y-2">
+            <p className="text-xs text-primary-foreground/80 italic">
+              Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.
+            </p>
+            <p className="text-sm text-primary-foreground/60">{t('footer.copyright')}</p>
+          </div>
         </div>
       </div>
     </footer>
