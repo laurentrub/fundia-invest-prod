@@ -89,7 +89,7 @@ const Privacy = () => {
                 <li><strong>Droit de retrait du consentement :</strong> Retirer votre consentement à tout moment</li>
               </ul>
               <p className="text-foreground leading-relaxed mb-6">
-                Pour exercer ces droits, contactez-nous à : privacy@fundia-invest.com
+                Pour exercer ces droits, contactez-nous via ce <a href="/contact" className="text-primary hover:underline font-medium">formulaire</a>.
               </p>
 
               <h2 className="text-2xl font-bold text-foreground mb-4">7. Cookies et technologies similaires</h2>
@@ -121,16 +121,11 @@ const Privacy = () => {
               </p>
 
               <h2 className="text-2xl font-bold text-foreground mb-4">11. Contact</h2>
-              <p className="text-foreground leading-relaxed mb-3">
-                Pour toute question concernant cette politique de confidentialité ou le traitement de vos données personnelles :
+              <p className="text-foreground leading-relaxed mb-6">
+                Pour toute question concernant cette politique de confidentialité ou le traitement de vos données personnelles, contactez-nous via ce <a href="/contact" className="text-primary hover:underline font-medium">formulaire</a>.
               </p>
-              <ul className="list-none space-y-2 text-foreground mb-6">
-                <li><strong>Email :</strong> privacy@fundia-invest.com</li>
-                <li><strong>Adresse :</strong> Fundia Invest, 5588 Rue Frontenac, Montréal, QC H2H 2L9, Canada</li>
-                <li><strong>Téléphone :</strong> 01 23 45 67 89</li>
-              </ul>
               <p className="text-foreground leading-relaxed">
-                Vous avez également le droit de déposer une plainte auprès de la Commission Nationale de l'Informatique 
+                Vous avez également le droit de déposer une plainte auprès de la Commission Nationale de l'Informatique
                 et des Libertés (CNIL) si vous estimez que vos droits n'ont pas été respectés.
               </p>
             </div>
