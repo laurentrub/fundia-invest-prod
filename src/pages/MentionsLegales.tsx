@@ -85,7 +85,7 @@ const MentionsLegales = () => {
 
               <h2 className="text-2xl font-bold text-foreground mb-4">8. Droit applicable et juridiction compétente</h2>
               <p className="text-foreground leading-relaxed mb-6">
-                Les présentes mentions légales sont soumises au <strong>droit français</strong>. En cas de litige, et à défaut de résolution amiable, les tribunaux français seront seuls compétents.
+                Les présentes mentions légales sont soumises au <strong>droit anglais et gallois</strong>. En cas de litige, et à défaut de résolution amiable, les tribunaux d'Angleterre et du Pays de Galles seront seuls compétents.
               </p>
 
               <h2 className="text-2xl font-bold text-foreground mb-4">9. Avertissement relatif au crédit</h2>
