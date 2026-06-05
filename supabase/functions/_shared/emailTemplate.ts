@@ -9,7 +9,7 @@ export const BRAND = {
   secondaryColor: "#2B7FD4",     // bleu clair
   accentColor: "#F59E0B",        // doré accent
   darkBg: "#0F2D52",             // footer
-  address: "5588 Rue Frontenac, Montréal, QC H2H 2L9, Canada",
+  address: "C/O WAYSTONE MANAGEMENT (UK) LIMITED — 29 Wellington Street, Leeds, LS1 4DL, Royaume-Uni",
   email: "contact@fundia-invest.com",
   website: "https://www.fundia-invest.com",
 };
