@@ -29,6 +29,12 @@ import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
 import ResetPassword from "./pages/ResetPassword";
+import NetworkPage from "./pages/NetworkPage";
+import NetworkCheckout from "./pages/NetworkCheckout";
+import NetworkDashboard from "./pages/NetworkDashboard";
+import NetworkExplore from "./pages/NetworkExplore";
+import NetworkFunderProfile from "./pages/NetworkFunderProfile";
+import NetworkAdmin from "./pages/admin/NetworkAdmin";
 import NotFound from "./pages/NotFound";
 
 // Admin pages
@@ -62,6 +68,11 @@ const App = () => (
             <Route path="/home-improvement" element={<HomeImprovement />} />
             <Route path="/consolidation" element={<Consolidation />} />
             <Route path="/business-loan" element={<BusinessLoan />} />
+            <Route path="/network" element={<NetworkPage />} />
+            <Route path="/network/checkout" element={<NetworkCheckout />} />
+            <Route path="/network/dashboard" element={<NetworkDashboard />} />
+            <Route path="/network/explore" element={<NetworkExplore />} />
+            <Route path="/network/explore/:id" element={<NetworkFunderProfile />} />
             <Route path="/apply" element={<ApplyPage />} />
             <Route path="/project-financing" element={<ProjectFinancing />} />
             <Route path="/apply/confirmation" element={<ApplyConfirmation />} />
@@ -77,6 +88,7 @@ const App = () => (
               <Route path="team" element={<TeamManagement />} />
               <Route path="blocked-users" element={<BlockedUsers />} />
               <Route path="settings" element={<Settings />} />
+              <Route path="network" element={<NetworkAdmin />} />
             </Route>
             
             <Route path="/auth" element={<Auth />} />

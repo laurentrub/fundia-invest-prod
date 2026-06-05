@@ -269,7 +269,14 @@
     "myProfile": "Mi Perfil",
     "login": "Iniciar Sesión",
     "logout": "Cerrar Sesión",
-    "admin": "Administración"
+    "admin": "Administración",
+    "network": "Red",
+    "networkMenu": {
+      "title": "Fundia Network",
+      "explore": "Explorar financiadores",
+      "howItWorks": "Cómo funciona",
+      "becomePartner": "Convertirse en socio financiador"
+    }
   },
   "languages": {
     "fr": "Français",
@@ -301,9 +308,18 @@
     },
     "features": {
       "title": "¿Por Qué Elegirnos?",
-      "fast": { "title": "Respuesta Rápida", "description": "Una respuesta preliminar en un máximo de 48 horas" },
-      "personalized": { "title": "Solución a Medida", "description": "Ofertas adaptadas a su situación" },
-      "secure": { "title": "100% Seguro", "description": "Sus datos están protegidos" }
+      "fast": {
+        "title": "Respuesta Rápida",
+        "description": "Una respuesta preliminar en un máximo de 48 horas"
+      },
+      "personalized": {
+        "title": "Solución a Medida",
+        "description": "Ofertas adaptadas a su situación"
+      },
+      "secure": {
+        "title": "100% Seguro",
+        "description": "Sus datos están protegidos"
+      }
     },
     "featuresSection": {
       "title": "¿Por Qué Elegir Fundia Invest?",
@@ -311,10 +327,22 @@
     },
     "products": {
       "title": "Nuestras Soluciones de Crédito",
-      "personal": { "title": "Préstamo Personal", "description": "Para sus proyectos personales" },
-      "auto": { "title": "Crédito Auto", "description": "Financie su vehículo" },
-      "home": { "title": "Crédito Reformas", "description": "Renueve su hogar" },
-      "consolidation": { "title": "Reunificación de Deudas", "description": "Simplifique sus pagos" }
+      "personal": {
+        "title": "Préstamo Personal",
+        "description": "Para sus proyectos personales"
+      },
+      "auto": {
+        "title": "Crédito Auto",
+        "description": "Financie su vehículo"
+      },
+      "home": {
+        "title": "Crédito Reformas",
+        "description": "Renueve su hogar"
+      },
+      "consolidation": {
+        "title": "Reunificación de Deudas",
+        "description": "Simplifique sus pagos"
+      }
     },
     "productsSection": {
       "title": "Nuestros Productos de Crédito",
@@ -324,18 +352,39 @@
     "howItWorks": {
       "title": "¿Cómo Funciona?",
       "subtitle": "Un proceso simple y rápido en 4 pasos para obtener su financiación",
-      "step1": { "title": "Simule su crédito", "description": "Use nuestra calculadora para estimar sus cuotas mensuales en segundos" },
-      "step2": { "title": "Envíe su solicitud", "description": "Complete nuestro formulario online seguro en menos de 5 minutos" },
-      "step3": { "title": "Reciba una respuesta instantánea", "description": "Nuestro sistema le da una respuesta preliminar inmediata" },
-      "step4": { "title": "Obtenga sus fondos", "description": "Una vez aprobado, reciba su dinero en 48h en su cuenta" },
+      "step1": {
+        "title": "Simule su crédito",
+        "description": "Use nuestra calculadora para estimar sus cuotas mensuales en segundos"
+      },
+      "step2": {
+        "title": "Envíe su solicitud",
+        "description": "Complete nuestro formulario online seguro en menos de 5 minutos"
+      },
+      "step3": {
+        "title": "Reciba una respuesta instantánea",
+        "description": "Nuestro sistema le da una respuesta preliminar inmediata"
+      },
+      "step4": {
+        "title": "Obtenga sus fondos",
+        "description": "Una vez aprobado, reciba su dinero en 48h en su cuenta"
+      },
       "startNow": "Comenzar Ahora"
     },
     "mission": {
       "title": "Nuestra Misión",
       "statement": "Hacer la financiación simple, accesible y segura para todos.",
-      "accessibility": { "title": "Accesibilidad", "description": "Soluciones de financiación abiertas a todos, con procesos simplificados y transparentes." },
-      "trust": { "title": "Confianza", "description": "Máxima seguridad para sus datos y acompañamiento personalizado en cada paso." },
-      "innovation": { "title": "Innovación", "description": "Tecnología de vanguardia para decisiones rápidas y tasas competitivas." }
+      "accessibility": {
+        "title": "Accesibilidad",
+        "description": "Soluciones de financiación abiertas a todos, con procesos simplificados y transparentes."
+      },
+      "trust": {
+        "title": "Confianza",
+        "description": "Máxima seguridad para sus datos y acompañamiento personalizado en cada paso."
+      },
+      "innovation": {
+        "title": "Innovación",
+        "description": "Tecnología de vanguardia para decisiones rápidas y tasas competitivas."
+      }
     },
     "successStories": {
       "title": "Realizaron sus proyectos con nosotros",
@@ -355,8 +404,13 @@
         "location": "París - Crédito de 15.000€"
       }
     },
-    "faqSection": { "title": "Preguntas Frecuentes", "viewAll": "Ver FAQ Completa" },
-    "partners": { "title": "Aprobado por las principales instituciones financieras" },
+    "faqSection": {
+      "title": "Preguntas Frecuentes",
+      "viewAll": "Ver FAQ Completa"
+    },
+    "partners": {
+      "title": "Aprobado por las principales instituciones financieras"
+    },
     "cta": {
       "title": "¿Listo para Comenzar?",
       "description": "Únase a miles de clientes satisfechos que eligieron Fundia Invest para sus necesidades de financiación.",
@@ -373,18 +427,32 @@
       "expertSupportDesc": "Asesores dedicados disponibles para guiarlo en cada paso del proceso."
     },
     "loanProducts": {
-      "personal": "Préstamo Personal", "personalDesc": "De 1.000€ a 75.000€ para todos sus proyectos personales", "personalRate": "Desde 2,9% TAE",
-      "auto": "Crédito Auto", "autoDesc": "Financie el coche de sus sueños con opciones de pago flexibles", "autoRate": "Desde 3,2% TAE",
-      "home": "Crédito Reformas", "homeDesc": "Transforme su hogar con nuestros préstamos de renovación", "homeRate": "Desde 3,5% TAE",
-      "consolidation": "Reunificación de Deudas", "consolidationDesc": "Simplifique sus finanzas consolidando múltiples deudas", "consolidationRate": "Desde 4,2% TAE"
+      "personal": "Préstamo Personal",
+      "personalDesc": "De 1.000€ a 75.000€ para todos sus proyectos personales",
+      "personalRate": "Desde 2,9% TAE",
+      "auto": "Crédito Auto",
+      "autoDesc": "Financie el coche de sus sueños con opciones de pago flexibles",
+      "autoRate": "Desde 3,2% TAE",
+      "home": "Crédito Reformas",
+      "homeDesc": "Transforme su hogar con nuestros préstamos de renovación",
+      "homeRate": "Desde 3,5% TAE",
+      "consolidation": "Reunificación de Deudas",
+      "consolidationDesc": "Simplifique sus finanzas consolidando múltiples deudas",
+      "consolidationRate": "Desde 4,2% TAE"
     },
     "faqs": {
-      "q1": "¿En cuánto tiempo puedo obtener la aprobación de mi préstamo?", "a1": "Nuestro sistema de decisión instantánea proporciona una aprobación preliminar en menos de 5 minutos. La aprobación final generalmente toma de 24 a 48 horas después de la verificación de documentos.",
-      "q2": "¿Cuál es la puntuación de crédito mínima requerida?", "a2": "Aceptamos solicitudes de clientes con varios perfiles de crédito. Aunque una puntuación superior a 650 mejora sus posibilidades, evaluamos cada solicitud individualmente.",
-      "q3": "¿Puedo pagar mi préstamo anticipadamente sin penalizaciones?", "a3": "Sí, todos nuestros préstamos permiten el pago anticipado sin penalizaciones. Ahorrará en intereses al pagar su préstamo antes.",
-      "q4": "¿Qué documentos necesito proporcionar para solicitar?", "a4": "Necesitará una identificación válida, comprobante de ingresos (últimos 3 recibos de sueldo), extractos bancarios y comprobante de domicilio. Se pueden solicitar documentos adicionales según su situación.",
-      "q5": "¿Cómo se calcula mi pago mensual?", "a5": "Su pago mensual depende del monto del préstamo, la duración y su TAE. Use nuestro simulador arriba para un cálculo instantáneo adaptado a sus necesidades.",
-      "q6": "¿La verificación de tasas afecta mi puntuación de crédito?", "a6": "No, verificar su elegibilidad no afecta su puntuación de crédito. Solo la solicitud formal de crédito se registrará en su historial crediticio."
+      "q1": "¿En cuánto tiempo puedo obtener la aprobación de mi préstamo?",
+      "a1": "Nuestro sistema de decisión instantánea proporciona una aprobación preliminar en menos de 5 minutos. La aprobación final generalmente toma de 24 a 48 horas después de la verificación de documentos.",
+      "q2": "¿Cuál es la puntuación de crédito mínima requerida?",
+      "a2": "Aceptamos solicitudes de clientes con varios perfiles de crédito. Aunque una puntuación superior a 650 mejora sus posibilidades, evaluamos cada solicitud individualmente.",
+      "q3": "¿Puedo pagar mi préstamo anticipadamente sin penalizaciones?",
+      "a3": "Sí, todos nuestros préstamos permiten el pago anticipado sin penalizaciones. Ahorrará en intereses al pagar su préstamo antes.",
+      "q4": "¿Qué documentos necesito proporcionar para solicitar?",
+      "a4": "Necesitará una identificación válida, comprobante de ingresos (últimos 3 recibos de sueldo), extractos bancarios y comprobante de domicilio. Se pueden solicitar documentos adicionales según su situación.",
+      "q5": "¿Cómo se calcula mi pago mensual?",
+      "a5": "Su pago mensual depende del monto del préstamo, la duración y su TAE. Use nuestro simulador arriba para un cálculo instantáneo adaptado a sus necesidades.",
+      "q6": "¿La verificación de tasas afecta mi puntuación de crédito?",
+      "a6": "No, verificar su elegibilidad no afecta su puntuación de crédito. Solo la solicitud formal de crédito se registrará en su historial crediticio."
     },
     "seoSection": {
       "title": "Acerca de Fundia Invest: Su socio de crédito de confianza",
@@ -392,23 +460,66 @@
       "missionTitle": "Nuestra misión",
       "missionText": "Creemos que el acceso al crédito debe ser simple, transparente y sin estrés. Nuestra misión es democratizar los préstamos aprovechando la tecnología para ofrecer tasas competitivas, decisiones instantáneas y una experiencia digital fluida. Estamos comprometidos con la inclusión financiera y ayudamos a nuestros clientes a tomar decisiones de préstamo informadas.",
       "differenceTitle": "Por qué somos diferentes",
-      "speed": { "title": "Rapidez:", "text": "Nuestros algoritmos avanzados proporcionan una aprobación preliminar en menos de 5 minutos, con fondos generalmente desembolsados dentro de las 48 horas posteriores a la aprobación final." },
-      "transparency": { "title": "Transparencia:", "text": "Sin tarifas ocultas, sin sorpresas. Todos los costos, tasas y condiciones se muestran claramente antes de que se comprometa." },
-      "security": { "title": "Seguridad:", "text": "Utilizamos cifrado de nivel bancario y cumplimos completamente con el RGPD y las regulaciones bancarias francesas." },
-      "flexibility": { "title": "Flexibilidad:", "text": "Opciones de pago anticipado sin penalizaciones, plazos flexibles de 12 a 84 meses y montos de 1.000€ a 75.000€." },
+      "speed": {
+        "title": "Rapidez:",
+        "text": "Nuestros algoritmos avanzados proporcionan una aprobación preliminar en menos de 5 minutos, con fondos generalmente desembolsados dentro de las 48 horas posteriores a la aprobación final."
+      },
+      "transparency": {
+        "title": "Transparencia:",
+        "text": "Sin tarifas ocultas, sin sorpresas. Todos los costos, tasas y condiciones se muestran claramente antes de que se comprometa."
+      },
+      "security": {
+        "title": "Seguridad:",
+        "text": "Utilizamos cifrado de nivel bancario y cumplimos completamente con el RGPD y las regulaciones bancarias francesas."
+      },
+      "flexibility": {
+        "title": "Flexibilidad:",
+        "text": "Opciones de pago anticipado sin penalizaciones, plazos flexibles de 12 a 84 meses y montos de 1.000€ a 75.000€."
+      },
       "loanTypesTitle": "Tipos de préstamos que ofrecemos",
       "loanTypesIntro": "En Fundia Invest, entendemos que cada necesidad financiera es única. Por eso ofrecemos una gama completa de productos de préstamo diseñados para adaptarse a sus circunstancias específicas:",
-      "personalLoan": { "title": "Préstamos personales", "text": "Perfecto para bodas, vacaciones, gastos médicos o cualquier proyecto personal. Préstamos de 1.000€ a 75.000€ con tasas desde 2,9% TAE.", "example": "Ejemplo: 10.000€ en 48 meses = 221€/mes (TAE 4,9%, costo total: 10.608€)" },
-      "autoLoan": { "title": "Créditos auto", "text": "Financie vehículos nuevos o usados con tasas competitivas y condiciones flexibles. Tasas desde 3,2% TAE.", "example": "Ejemplo: 20.000€ en 60 meses = 362€/mes (TAE 3,9%, costo total: 21.720€)" },
-      "homeLoan": { "title": "Créditos para reformas", "text": "Transforme su espacio vital con préstamos diseñados para renovaciones, ampliaciones o mejoras energéticas.", "example": "Ejemplo: 15.000€ en 72 meses = 238€/mes (TAE 4,5%, costo total: 17.136€)" },
-      "consolidation": { "title": "Consolidación de deudas", "text": "Simplifique múltiples deudas en un solo pago mensual fácil, a menudo a una tasa global inferior.", "example": "Ejemplo: Consolidar 25.000€ de deuda en 84 meses = 351€/mes (TAE 5,2%)" },
+      "personalLoan": {
+        "title": "Préstamos personales",
+        "text": "Perfecto para bodas, vacaciones, gastos médicos o cualquier proyecto personal. Préstamos de 1.000€ a 75.000€ con tasas desde 2,9% TAE.",
+        "example": "Ejemplo: 10.000€ en 48 meses = 221€/mes (TAE 4,9%, costo total: 10.608€)"
+      },
+      "autoLoan": {
+        "title": "Créditos auto",
+        "text": "Financie vehículos nuevos o usados con tasas competitivas y condiciones flexibles. Tasas desde 3,2% TAE.",
+        "example": "Ejemplo: 20.000€ en 60 meses = 362€/mes (TAE 3,9%, costo total: 21.720€)"
+      },
+      "homeLoan": {
+        "title": "Créditos para reformas",
+        "text": "Transforme su espacio vital con préstamos diseñados para renovaciones, ampliaciones o mejoras energéticas.",
+        "example": "Ejemplo: 15.000€ en 72 meses = 238€/mes (TAE 4,5%, costo total: 17.136€)"
+      },
+      "consolidation": {
+        "title": "Consolidación de deudas",
+        "text": "Simplifique múltiples deudas en un solo pago mensual fácil, a menudo a una tasa global inferior.",
+        "example": "Ejemplo: Consolidar 25.000€ de deuda en 84 meses = 351€/mes (TAE 5,2%)"
+      },
       "processTitle": "Cómo funciona nuestro proceso",
       "process": {
-        "step1": { "title": "Simule su préstamo:", "text": "Use nuestra calculadora interactiva para ver los pagos mensuales estimados y los costos totales." },
-        "step2": { "title": "Envíe su solicitud:", "text": "Complete nuestro simple formulario en línea en solo unos minutos." },
-        "step3": { "title": "Obtenga una decisión instantánea:", "text": "Nuestro sistema analiza su solicitud y proporciona una aprobación preliminar inmediatamente." },
-        "step4": { "title": "Cargue sus documentos:", "text": "Envíe los documentos requeridos de forma segura a través de nuestra plataforma." },
-        "step5": { "title": "Reciba sus fondos:", "text": "Una vez aprobado, los fondos se transfieren directamente a su cuenta bancaria en 48 horas." }
+        "step1": {
+          "title": "Simule su préstamo:",
+          "text": "Use nuestra calculadora interactiva para ver los pagos mensuales estimados y los costos totales."
+        },
+        "step2": {
+          "title": "Envíe su solicitud:",
+          "text": "Complete nuestro simple formulario en línea en solo unos minutos."
+        },
+        "step3": {
+          "title": "Obtenga una decisión instantánea:",
+          "text": "Nuestro sistema analiza su solicitud y proporciona una aprobación preliminar inmediatamente."
+        },
+        "step4": {
+          "title": "Cargue sus documentos:",
+          "text": "Envíe los documentos requeridos de forma segura a través de nuestra plataforma."
+        },
+        "step5": {
+          "title": "Reciba sus fondos:",
+          "text": "Una vez aprobado, los fondos se transfieren directamente a su cuenta bancaria en 48 horas."
+        }
       },
       "responsibleTitle": "Nuestro compromiso con los préstamos responsables",
       "responsibleText": "Nos tomamos los préstamos responsables en serio. Antes de aprobar cualquier préstamo, evaluamos cuidadosamente su capacidad de pago en función de sus ingresos, gastos y deudas existentes. Nunca aprobaremos un préstamo que pueda ponerlo en dificultades financieras. Nuestros asesores siempre están disponibles para discutir alternativas si un préstamo no es la solución adecuada para su situación."
@@ -437,11 +548,26 @@
     },
     "whyChoose": {
       "title": "¿Por qué elegir Fundia Invest?",
-      "online": { "title": "Proceso 100% en línea:", "description": "Solicitud rápida y decisión instantánea desde la comodidad de su hogar" },
-      "comparison": { "title": "Comparación inteligente:", "description": "Analizamos docenas de ofertas para encontrar la mejor para usted" },
-      "noCommitment": { "title": "Sin compromiso:", "description": "Verifique su elegibilidad sin impactar su puntuación de crédito" },
-      "transparency": { "title": "Transparencia total:", "description": "Sin tarifas ocultas, todas las condiciones claramente mostradas" },
-      "support": { "title": "Soporte dedicado:", "description": "Un equipo de expertos a su servicio de lunes a sábado" }
+      "online": {
+        "title": "Proceso 100% en línea:",
+        "description": "Solicitud rápida y decisión instantánea desde la comodidad de su hogar"
+      },
+      "comparison": {
+        "title": "Comparación inteligente:",
+        "description": "Analizamos docenas de ofertas para encontrar la mejor para usted"
+      },
+      "noCommitment": {
+        "title": "Sin compromiso:",
+        "description": "Verifique su elegibilidad sin impactar su puntuación de crédito"
+      },
+      "transparency": {
+        "title": "Transparencia total:",
+        "description": "Sin tarifas ocultas, todas las condiciones claramente mostradas"
+      },
+      "support": {
+        "title": "Soporte dedicado:",
+        "description": "Un equipo de expertos a su servicio de lunes a sábado"
+      }
     }
   },
   "contact": {
@@ -890,7 +1016,13 @@
         "transparentFees": "Comisiones transparentes"
       },
       "examplesTitle": "Ejemplos de préstamos",
-      "tableHeaders": { "amount": "Importe", "duration": "Duración", "monthly": "Mensualidad", "apr": "TAE", "totalCost": "Coste total" },
+      "tableHeaders": {
+        "amount": "Importe",
+        "duration": "Duración",
+        "monthly": "Mensualidad",
+        "apr": "TAE",
+        "totalCost": "Coste total"
+      },
       "examplesDisclaimer": "*Los ejemplos son orientativos.",
       "guideTitle": "Guía completa de préstamos personales",
       "faqTitle": "FAQ Préstamo Personal"
@@ -899,7 +1031,14 @@
       "title": "Préstamo Auto",
       "description": "Conduce el coche de tus sueños con nuestras opciones de financiación.",
       "benefitsTitle": "Ventajas del Préstamo Auto",
-      "benefits": { "newUsed": "Financiación de vehículos nuevos o usados", "competitiveRates": "Tasas desde 3,2% TAE", "upTo": "Hasta 50.000€", "flexibleTerms": "Plazos: 12 a 72 meses", "noDownPayment": "Sin entrada", "fastApproval": "Aprobación rápida" },
+      "benefits": {
+        "newUsed": "Financiación de vehículos nuevos o usados",
+        "competitiveRates": "Tasas desde 3,2% TAE",
+        "upTo": "Hasta 50.000€",
+        "flexibleTerms": "Plazos: 12 a 72 meses",
+        "noDownPayment": "Sin entrada",
+        "fastApproval": "Aprobación rápida"
+      },
       "guideTitle": "Guía Completa del Préstamo Auto",
       "faqTitle": "FAQ Préstamo Auto"
     },
@@ -907,9 +1046,47 @@
       "title": "Préstamo Empresarial",
       "description": "Financiación flexible para emprendedores y PYMES.",
       "whyChoose": "¿Por qué elegir nuestro Préstamo Empresarial?",
-      "benefits": { "amounts": "Préstamos de 5.000€ a 75.000€", "flexibleTerms": "Plazos: 12 a 84 meses", "fastApproval": "Aprobación rápida", "anyProject": "Para cualquier proyecto", "competitiveRates": "Tasas competitivas", "preserveCash": "Preserva tu liquidez" },
+      "benefits": {
+        "amounts": "Préstamos de 5.000€ a 75.000€",
+        "flexibleTerms": "Plazos: 12 a 84 meses",
+        "fastApproval": "Aprobación rápida",
+        "anyProject": "Para cualquier proyecto",
+        "competitiveRates": "Tasas competitivas",
+        "preserveCash": "Preserva tu liquidez"
+      },
       "useCasesTitle": "Usos Comunes",
-      "useCases": { "workingCapital": { "title": "Capital Circulante", "description": "Cubrir gastos operativos", "typical": "10.000€ - 50.000€" }, "equipment": { "title": "Compra de Equipos", "description": "Maquinaria, vehículos", "typical": "15.000€ - 75.000€" }, "expansion": { "title": "Expansión", "description": "Nuevas ubicaciones", "typical": "20.000€ - 75.000€" }, "marketing": { "title": "Marketing", "description": "Campañas publicitarias", "typical": "5.000€ - 30.000€" }, "inventory": { "title": "Inventario", "description": "Stock de productos", "typical": "10.000€ - 50.000€" }, "refinancing": { "title": "Refinanciación", "description": "Consolidar deudas", "typical": "15.000€ - 75.000€" } },
+      "useCases": {
+        "workingCapital": {
+          "title": "Capital Circulante",
+          "description": "Cubrir gastos operativos",
+          "typical": "10.000€ - 50.000€"
+        },
+        "equipment": {
+          "title": "Compra de Equipos",
+          "description": "Maquinaria, vehículos",
+          "typical": "15.000€ - 75.000€"
+        },
+        "expansion": {
+          "title": "Expansión",
+          "description": "Nuevas ubicaciones",
+          "typical": "20.000€ - 75.000€"
+        },
+        "marketing": {
+          "title": "Marketing",
+          "description": "Campañas publicitarias",
+          "typical": "5.000€ - 30.000€"
+        },
+        "inventory": {
+          "title": "Inventario",
+          "description": "Stock de productos",
+          "typical": "10.000€ - 50.000€"
+        },
+        "refinancing": {
+          "title": "Refinanciación",
+          "description": "Consolidar deudas",
+          "typical": "15.000€ - 75.000€"
+        }
+      },
       "typicalAmount": "Importe típico",
       "guideTitle": "Guía Completa del Préstamo Empresarial",
       "guide": {
@@ -977,21 +1154,75 @@
       "description": "Agrupa múltiples deudas en un solo pago mensual.",
       "reducePayments": "Reduce tus pagos mensuales",
       "benefitsTitle": "Ventajas",
-      "benefits": { "singlePayment": "Un solo pago", "lowerRate": "Tasa potencialmente menor", "simplified": "Gestión simplificada", "fixedPayment": "Cuota fija", "improveCredit": "Mejora el crédito", "reduceStress": "Reduce el estrés" },
+      "benefits": {
+        "singlePayment": "Un solo pago",
+        "lowerRate": "Tasa potencialmente menor",
+        "simplified": "Gestión simplificada",
+        "fixedPayment": "Cuota fija",
+        "improveCredit": "Mejora el crédito",
+        "reduceStress": "Reduce el estrés"
+      },
       "whenToTitle": "¿Cuándo Considerar la Reunificación?",
-      "scenarios": { "highInterest": { "title": "Múltiples Deudas", "description": "Tienes varias tarjetas o préstamos" }, "difficulty": { "title": "Dificultad de Seguimiento", "description": "Gestionar múltiples fechas es abrumador" }, "goodCredit": { "title": "Buen Historial", "description": "Calificas para mejor tasa" }, "stableIncome": { "title": "Ingresos Estables", "description": "Tienes ingresos regulares" } },
+      "scenarios": {
+        "highInterest": {
+          "title": "Múltiples Deudas",
+          "description": "Tienes varias tarjetas o préstamos"
+        },
+        "difficulty": {
+          "title": "Dificultad de Seguimiento",
+          "description": "Gestionar múltiples fechas es abrumador"
+        },
+        "goodCredit": {
+          "title": "Buen Historial",
+          "description": "Calificas para mejor tasa"
+        },
+        "stableIncome": {
+          "title": "Ingresos Estables",
+          "description": "Tienes ingresos regulares"
+        }
+      },
       "guideTitle": "Guía Completa",
       "risksTitle": "Advertencias",
-      "risks": { "risk1": "Puede extender el plazo", "risk2": "Cerrar tarjetas puede afectar crédito", "risk3": "No resuelve hábitos de gasto", "risk4": "Requiere disciplina", "risk5": "Puede tener comisiones" },
+      "risks": {
+        "risk1": "Puede extender el plazo",
+        "risk2": "Cerrar tarjetas puede afectar crédito",
+        "risk3": "No resuelve hábitos de gasto",
+        "risk4": "Requiere disciplina",
+        "risk5": "Puede tener comisiones"
+      },
       "faqTitle": "FAQ Reunificación"
     },
     "homeImprovement": {
       "title": "Préstamo Reformas",
       "description": "Transforma tu hogar con nuestra financiación flexible.",
       "whyChoose": "¿Por qué elegir nuestro Préstamo Reformas?",
-      "benefits": { "amounts": "De 3.000€ a 75.000€", "rates": "Desde 3,5% TAE", "terms": "Hasta 15 años", "noCollateral": "Sin garantía", "allProjects": "Para todos los proyectos", "fastApproval": "Aprobación rápida" },
+      "benefits": {
+        "amounts": "De 3.000€ a 75.000€",
+        "rates": "Desde 3,5% TAE",
+        "terms": "Hasta 15 años",
+        "noCollateral": "Sin garantía",
+        "allProjects": "Para todos los proyectos",
+        "fastApproval": "Aprobación rápida"
+      },
       "projectsTitle": "Ejemplos de Proyectos",
-      "projects": { "kitchen": { "title": "Cocina", "description": "Muebles, electrodomésticos" }, "bathroom": { "title": "Baño", "description": "Sanitarios, azulejos" }, "extension": { "title": "Ampliación", "description": "Habitación adicional" }, "energy": { "title": "Eficiencia Energética", "description": "Paneles solares, aislamiento" } },
+      "projects": {
+        "kitchen": {
+          "title": "Cocina",
+          "description": "Muebles, electrodomésticos"
+        },
+        "bathroom": {
+          "title": "Baño",
+          "description": "Sanitarios, azulejos"
+        },
+        "extension": {
+          "title": "Ampliación",
+          "description": "Habitación adicional"
+        },
+        "energy": {
+          "title": "Eficiencia Energética",
+          "description": "Paneles solares, aislamiento"
+        }
+      },
       "loanAmount": "Importe",
       "monthlyPayment": "Cuota Mensual",
       "durationAt": "Duración {duration} al ~{rate}% TAE",
@@ -1002,14 +1233,154 @@
     "projectFinancing": {
       "title": "Solicitud de Financiación de Proyecto",
       "subtitle": "Complete este formulario. Nuestro equipo analizará su solicitud en 48 horas.",
-      "steps": { "project": "Su Proyecto", "funding": "Financiación", "company": "Empresa", "documents": "Documentos" },
-      "step1": { "title": "Información del Proyecto", "projectType": "Tipo de proyecto", "projectTypePlaceholder": "Seleccione", "projectTypes": { "startup": "Creación de empresa", "development": "Desarrollo", "acquisition": "Adquisición", "realEstate": "Inmobiliario comercial", "innovation": "Innovación", "expansion": "Expansión internacional", "other": "Otro" }, "projectName": "Nombre del proyecto", "projectNamePlaceholder": "Ej: Plataforma e-commerce", "projectDescription": "Descripción detallada", "projectDescriptionPlaceholder": "Describa su proyecto...", "minChars": "Mínimo 50 caracteres", "projectSector": "Sector", "projectSectorPlaceholder": "Seleccione", "sectors": { "tech": "Tecnología", "retail": "Comercio", "services": "Servicios", "industry": "Industria", "health": "Salud", "food": "Alimentación", "realEstate": "Inmobiliario", "energy": "Energía", "education": "Educación", "tourism": "Turismo", "other": "Otro" }, "projectLocation": "Ubicación", "projectLocationPlaceholder": "Ciudad, región" },
-      "step2": { "title": "Detalles Financieros", "fundingAmount": "Importe solicitado", "fundingPurpose": "Uso de fondos", "fundingPurposePlaceholder": "Detalle el uso...", "ownContribution": "Aportación propia", "expectedRevenue": "Ingresos previstos (primer año)", "projectDuration": "Duración estimada", "durationOptions": { "short": "Menos de 6 meses", "medium": "6 a 12 meses", "long": "1 a 2 años", "veryLong": "Más de 2 años" }, "breakEvenDate": "Fecha de rentabilidad", "inEuros": "En euros (€)" },
-      "step3": { "title": "Información de la Empresa", "companyName": "Nombre", "companyStatus": "Forma jurídica", "statusOptions": { "ae": "Autónomo", "sarl": "S.L.", "sas": "S.A.S.", "sa": "S.A.", "ei": "Empresario individual", "creation": "En creación" }, "siret": "CIF (si existe)", "creationDate": "Fecha de creación", "employeeCount": "Número de empleados", "employeeOptions": { "solo": "Solo yo", "small": "1-5", "medium": "6-20", "large": "21-50", "veryLarge": "Más de 50" }, "annualRevenue": "Facturación anual", "revenueOptions": { "preRevenue": "Pre-ingresos", "small": "Menos de 50.000€", "medium": "50.000€ - 200.000€", "large": "200.000€ - 500.000€", "veryLong": "500.000€ - 1.000.000€", "enterprise": "Más de 1.000.000€" }, "founderInfo": "Información del fundador", "firstName": "Nombre", "lastName": "Apellido", "email": "Email", "phone": "Teléfono" },
-      "step4": { "title": "Documentos", "documentsDescription": "Confirme que dispone de los siguientes documentos.", "businessPlan": "Plan de Negocio", "businessPlanDesc": "Documento con proyecto, mercado, estrategia", "financialProjections": "Proyecciones Financieras", "financialProjectionsDesc": "Cuenta de resultados a 3 años", "marketStudy": "Estudio de Mercado", "marketStudyDesc": "Análisis de mercado y competencia", "available": "Disponible", "inProgress": "En preparación", "notAvailable": "No disponible", "additionalInfo": "Información adicional", "additionalInfoPlaceholder": "Información adicional..." },
-      "navigation": { "previous": "Anterior", "next": "Siguiente", "submit": "Enviar solicitud" },
-      "validation": { "projectTypeRequired": "Tipo requerido", "projectNameMin": "Mínimo 3 caracteres", "projectDescriptionMin": "Mínimo 50 caracteres", "projectSectorRequired": "Sector requerido", "projectLocationRequired": "Ubicación requerida", "fundingAmountRequired": "Importe requerido", "fundingPurposeRequired": "Uso requerido", "expectedRevenueRequired": "Ingresos requeridos", "projectDurationRequired": "Duración requerida", "breakEvenDateRequired": "Fecha requerida", "ownContributionRequired": "Aportación requerida", "companyNameRequired": "Nombre requerido", "companyStatusRequired": "Forma requerida", "siretInvalid": "CIF inválido", "creationDateRequired": "Fecha requerida", "employeeCountRequired": "Empleados requerido", "annualRevenueRequired": "Facturación requerida", "firstNameRequired": "Nombre requerido", "lastNameRequired": "Apellido requerido", "emailInvalid": "Email inválido", "phoneInvalid": "Teléfono inválido", "businessPlanRequired": "Confirme plan de negocio", "financialProjectionsRequired": "Confirme proyecciones", "marketStudyRequired": "Confirme estudio de mercado", "validationError": "Error de validación", "correctErrors": "Corrija los errores." },
-      "messages": { "success": "¡Solicitud enviada!", "successDesc": "Su solicitud ha sido enviada correctamente." }
+      "steps": {
+        "project": "Su Proyecto",
+        "funding": "Financiación",
+        "company": "Empresa",
+        "documents": "Documentos"
+      },
+      "step1": {
+        "title": "Información del Proyecto",
+        "projectType": "Tipo de proyecto",
+        "projectTypePlaceholder": "Seleccione",
+        "projectTypes": {
+          "startup": "Creación de empresa",
+          "development": "Desarrollo",
+          "acquisition": "Adquisición",
+          "realEstate": "Inmobiliario comercial",
+          "innovation": "Innovación",
+          "expansion": "Expansión internacional",
+          "other": "Otro"
+        },
+        "projectName": "Nombre del proyecto",
+        "projectNamePlaceholder": "Ej: Plataforma e-commerce",
+        "projectDescription": "Descripción detallada",
+        "projectDescriptionPlaceholder": "Describa su proyecto...",
+        "minChars": "Mínimo 50 caracteres",
+        "projectSector": "Sector",
+        "projectSectorPlaceholder": "Seleccione",
+        "sectors": {
+          "tech": "Tecnología",
+          "retail": "Comercio",
+          "services": "Servicios",
+          "industry": "Industria",
+          "health": "Salud",
+          "food": "Alimentación",
+          "realEstate": "Inmobiliario",
+          "energy": "Energía",
+          "education": "Educación",
+          "tourism": "Turismo",
+          "other": "Otro"
+        },
+        "projectLocation": "Ubicación",
+        "projectLocationPlaceholder": "Ciudad, región"
+      },
+      "step2": {
+        "title": "Detalles Financieros",
+        "fundingAmount": "Importe solicitado",
+        "fundingPurpose": "Uso de fondos",
+        "fundingPurposePlaceholder": "Detalle el uso...",
+        "ownContribution": "Aportación propia",
+        "expectedRevenue": "Ingresos previstos (primer año)",
+        "projectDuration": "Duración estimada",
+        "durationOptions": {
+          "short": "Menos de 6 meses",
+          "medium": "6 a 12 meses",
+          "long": "1 a 2 años",
+          "veryLong": "Más de 2 años"
+        },
+        "breakEvenDate": "Fecha de rentabilidad",
+        "inEuros": "En euros (€)"
+      },
+      "step3": {
+        "title": "Información de la Empresa",
+        "companyName": "Nombre",
+        "companyStatus": "Forma jurídica",
+        "statusOptions": {
+          "ae": "Autónomo",
+          "sarl": "S.L.",
+          "sas": "S.A.S.",
+          "sa": "S.A.",
+          "ei": "Empresario individual",
+          "creation": "En creación"
+        },
+        "siret": "CIF (si existe)",
+        "creationDate": "Fecha de creación",
+        "employeeCount": "Número de empleados",
+        "employeeOptions": {
+          "solo": "Solo yo",
+          "small": "1-5",
+          "medium": "6-20",
+          "large": "21-50",
+          "veryLarge": "Más de 50"
+        },
+        "annualRevenue": "Facturación anual",
+        "revenueOptions": {
+          "preRevenue": "Pre-ingresos",
+          "small": "Menos de 50.000€",
+          "medium": "50.000€ - 200.000€",
+          "large": "200.000€ - 500.000€",
+          "veryLong": "500.000€ - 1.000.000€",
+          "enterprise": "Más de 1.000.000€"
+        },
+        "founderInfo": "Información del fundador",
+        "firstName": "Nombre",
+        "lastName": "Apellido",
+        "email": "Email",
+        "phone": "Teléfono"
+      },
+      "step4": {
+        "title": "Documentos",
+        "documentsDescription": "Confirme que dispone de los siguientes documentos.",
+        "businessPlan": "Plan de Negocio",
+        "businessPlanDesc": "Documento con proyecto, mercado, estrategia",
+        "financialProjections": "Proyecciones Financieras",
+        "financialProjectionsDesc": "Cuenta de resultados a 3 años",
+        "marketStudy": "Estudio de Mercado",
+        "marketStudyDesc": "Análisis de mercado y competencia",
+        "available": "Disponible",
+        "inProgress": "En preparación",
+        "notAvailable": "No disponible",
+        "additionalInfo": "Información adicional",
+        "additionalInfoPlaceholder": "Información adicional..."
+      },
+      "navigation": {
+        "previous": "Anterior",
+        "next": "Siguiente",
+        "submit": "Enviar solicitud"
+      },
+      "validation": {
+        "projectTypeRequired": "Tipo requerido",
+        "projectNameMin": "Mínimo 3 caracteres",
+        "projectDescriptionMin": "Mínimo 50 caracteres",
+        "projectSectorRequired": "Sector requerido",
+        "projectLocationRequired": "Ubicación requerida",
+        "fundingAmountRequired": "Importe requerido",
+        "fundingPurposeRequired": "Uso requerido",
+        "expectedRevenueRequired": "Ingresos requeridos",
+        "projectDurationRequired": "Duración requerida",
+        "breakEvenDateRequired": "Fecha requerida",
+        "ownContributionRequired": "Aportación requerida",
+        "companyNameRequired": "Nombre requerido",
+        "companyStatusRequired": "Forma requerida",
+        "siretInvalid": "CIF inválido",
+        "creationDateRequired": "Fecha requerida",
+        "employeeCountRequired": "Empleados requerido",
+        "annualRevenueRequired": "Facturación requerida",
+        "firstNameRequired": "Nombre requerido",
+        "lastNameRequired": "Apellido requerido",
+        "emailInvalid": "Email inválido",
+        "phoneInvalid": "Teléfono inválido",
+        "businessPlanRequired": "Confirme plan de negocio",
+        "financialProjectionsRequired": "Confirme proyecciones",
+        "marketStudyRequired": "Confirme estudio de mercado",
+        "validationError": "Error de validación",
+        "correctErrors": "Corrija los errores."
+      },
+      "messages": {
+        "success": "¡Solicitud enviada!",
+        "successDesc": "Su solicitud ha sido enviada correctamente."
+      }
     }
   },
   "seo": {
@@ -1018,5 +1389,133 @@
     "author": "Fundia Invest",
     "ogTitle": "Fundia Invest - Préstamos Online Rápidos y Soluciones de Crédito",
     "ogDescription": "Aprobación instantánea, tasas competitivas desde 2,9 % TAE, condiciones flexibles. Su socio de crédito de confianza."
+  },
+  "network": {
+    "nav": {
+      "badge": "NUEVO"
+    },
+    "landing": {
+      "badge": "Acceso Privado",
+      "title": "Su proyecto merece ser visto por las personas adecuadas.",
+      "subtitle": "Conéctese directamente con prestamistas, inversores y socios financieros que estudian su tipo de solicitud.",
+      "cta": "Acceder a la Red",
+      "ctaSecondary": "Explorar financiadores",
+      "disclaimer": "Fundia Network no garantiza la financiación. Solo facilitamos la presentación con socios que pueden estudiar su solicitud.",
+      "stats": {
+        "funders": "financiadores cualificados",
+        "responseTime": "Respuesta promedio",
+        "responseValue": "48h",
+        "successRate": "Tasa de presentación",
+        "members": "miembros activos"
+      }
+    },
+    "teaser": {
+      "badge": "NUEVO — FUNDIA NETWORK",
+      "title": "Acceso directo a financiadores que estudian su tipo de solicitud.",
+      "subtitle": "Nuestra red privada de prestamistas, inversores y socios financieros verificados le espera.",
+      "funders": "financiadores cualificados",
+      "verified": "Verificado por Fundia",
+      "responseTime": "Respuesta promedio en 48h",
+      "cta": "Descubrir Fundia Network",
+      "types": {
+        "lenders": "Prestamistas privados",
+        "angels": "Business Angels y fondos",
+        "partners": "Socios financieros especializados"
+      }
+    },
+    "howItWorks": {
+      "title": "Cómo funciona",
+      "step1": {
+        "title": "Complete su perfil",
+        "description": "Describa su proyecto y la financiación buscada."
+      },
+      "step2": {
+        "title": "Explore la red",
+        "description": "Filtre financiadores por especialidad, ticket y zona."
+      },
+      "step3": {
+        "title": "Contacte directamente",
+        "description": "Envíe su solicitud con un clic y siga sus peticiones en tiempo real."
+      }
+    },
+    "funderTypes": {
+      "private": "Prestamistas Privados",
+      "investors": "Inversores",
+      "angels": "Business Angels",
+      "funds": "Fondos Especializados"
+    },
+    "badges": {
+      "verified": "Verificado por Fundia",
+      "active": "Muy activo",
+      "topResponder": "Top Respondedor",
+      "new": "Nuevo"
+    },
+    "pricing": {
+      "title": "Un acceso. Un precio simple.",
+      "subtitle": "Únase a Fundia Network y acceda a toda la red de financiadores cualificados.",
+      "price": "19,90",
+      "period": "/ año",
+      "monthly": "es decir 1,66 € / mes",
+      "cta": "Empezar ahora",
+      "guarantee": "Satisfecho o reembolsado en 30 días",
+      "features": [
+        "Acceso ilimitado a 240+ perfiles",
+        "Filtros avanzados por especialidad y ticket",
+        "Contacto directo e ilimitado",
+        "Seguimiento en tiempo real",
+        "Badge de Miembro Verificado",
+        "Soporte prioritario"
+      ],
+      "secure": "Pago seguro · Cancelación en cualquier momento · RGPD"
+    },
+    "trust": {
+      "noGuarantee": "No garantizamos la financiación",
+      "noGuaranteeDesc": "Fundia Network facilita las presentaciones. La decisión pertenece a los financiadores.",
+      "verified": "Financiadores verificados",
+      "verifiedDesc": "Cada financiador ha sido verificado por nuestro equipo.",
+      "privacy": "Sus datos protegidos",
+      "privacyDesc": "Su perfil nunca se comparte sin su consentimiento explícito."
+    },
+    "preview": {
+      "title": "Vista previa de la red",
+      "subtitle": "Aquí hay una muestra de los financiadores disponibles.",
+      "locked": "Perfil desbloqueado con acceso Premium",
+      "specialties": {
+        "real_estate": "Inmobiliario",
+        "startup": "Startup",
+        "personal": "Personal",
+        "professional": "Profesional",
+        "auto": "Auto",
+        "green": "Proyecto verde"
+      },
+      "ticketFrom": "Ticket desde",
+      "ticketTo": "hasta",
+      "contact": "Contactar",
+      "viewProfile": "Ver perfil"
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "q1": "¿Fundia Network garantiza financiación?",
+      "a1": "No. La decisión final pertenece a los financiadores.",
+      "q2": "¿Quiénes son los financiadores?",
+      "a2": "Prestamistas privados, inversores, business angels y fondos especializados.",
+      "q3": "¿Se comparten mis datos?",
+      "a3": "Solo si decide contactar a un financiador.",
+      "q4": "¿Puedo cancelar en cualquier momento?",
+      "a4": "Sí, con garantía de reembolso de 30 días.",
+      "q5": "¿Cuántos financiadores puedo contactar?",
+      "a5": "Acceso ilimitado. Le recomendamos ser selectivo."
+    },
+    "dashboard": {
+      "upgradeTitle": "Fundia Network",
+      "upgradeSubtitle": "Acceda a 240+ financiadores cualificados.",
+      "upgradeFeature1": "Prestamistas privados",
+      "upgradeFeature2": "Inversores de capital",
+      "upgradeFeature3": "Fondos especializados verificados",
+      "upgradeCta": "Activar acceso — 19,90 €/año",
+      "activeTitle": "Fundia Network — Activo",
+      "activeSubtitle": "Su acceso a la red está activo.",
+      "exploreCta": "Explorar la red"
+    }
   }
 }

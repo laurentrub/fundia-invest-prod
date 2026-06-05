@@ -14,7 +14,14 @@
     "myProfile": "My Profile",
     "login": "Login",
     "logout": "Logout",
-    "admin": "Administration"
+    "admin": "Administration",
+    "network": "Network",
+    "networkMenu": {
+      "title": "Fundia Network",
+      "explore": "Explore funders",
+      "howItWorks": "How it works",
+      "becomePartner": "Become a funding partner"
+    }
   },
   "languages": {
     "fr": "Français",
@@ -46,9 +53,18 @@
     },
     "features": {
       "title": "Why Choose Us?",
-      "fast": { "title": "Fast Response", "description": "A preliminary answer within 48 hours maximum" },
-      "personalized": { "title": "Tailored Solution", "description": "Offers adapted to your situation" },
-      "secure": { "title": "100% Secure", "description": "Your data is protected" }
+      "fast": {
+        "title": "Fast Response",
+        "description": "A preliminary answer within 48 hours maximum"
+      },
+      "personalized": {
+        "title": "Tailored Solution",
+        "description": "Offers adapted to your situation"
+      },
+      "secure": {
+        "title": "100% Secure",
+        "description": "Your data is protected"
+      }
     },
     "featuresSection": {
       "title": "Why Choose Fundia Invest?",
@@ -56,10 +72,22 @@
     },
     "products": {
       "title": "Our Credit Solutions",
-      "personal": { "title": "Personal Loan", "description": "For your personal projects" },
-      "auto": { "title": "Auto Loan", "description": "Finance your vehicle" },
-      "home": { "title": "Home Improvement", "description": "Renovate your home" },
-      "consolidation": { "title": "Debt Consolidation", "description": "Simplify your repayments" }
+      "personal": {
+        "title": "Personal Loan",
+        "description": "For your personal projects"
+      },
+      "auto": {
+        "title": "Auto Loan",
+        "description": "Finance your vehicle"
+      },
+      "home": {
+        "title": "Home Improvement",
+        "description": "Renovate your home"
+      },
+      "consolidation": {
+        "title": "Debt Consolidation",
+        "description": "Simplify your repayments"
+      }
     },
     "productsSection": {
       "title": "Our Credit Products",
@@ -69,18 +97,39 @@
     "howItWorks": {
       "title": "How It Works?",
       "subtitle": "A simple and fast 4-step process to get your financing",
-      "step1": { "title": "Simulate your credit", "description": "Use our calculator to estimate your monthly payments in seconds" },
-      "step2": { "title": "Submit your application", "description": "Fill out our secure online form in less than 5 minutes" },
-      "step3": { "title": "Receive an instant response", "description": "Our system gives you an immediate preliminary response" },
-      "step4": { "title": "Get your funds", "description": "Once approved, receive your money within 48h in your account" },
+      "step1": {
+        "title": "Simulate your credit",
+        "description": "Use our calculator to estimate your monthly payments in seconds"
+      },
+      "step2": {
+        "title": "Submit your application",
+        "description": "Fill out our secure online form in less than 5 minutes"
+      },
+      "step3": {
+        "title": "Receive an instant response",
+        "description": "Our system gives you an immediate preliminary response"
+      },
+      "step4": {
+        "title": "Get your funds",
+        "description": "Once approved, receive your money within 48h in your account"
+      },
       "startNow": "Start Now"
     },
     "mission": {
       "title": "Our Mission",
       "statement": "Making financing simple, accessible and secure for everyone.",
-      "accessibility": { "title": "Accessibility", "description": "Financing solutions open to all, with simplified and transparent processes." },
-      "trust": { "title": "Trust", "description": "Maximum security for your data and personalized support at every step." },
-      "innovation": { "title": "Innovation", "description": "Cutting-edge technology for fast decisions and competitive rates." }
+      "accessibility": {
+        "title": "Accessibility",
+        "description": "Financing solutions open to all, with simplified and transparent processes."
+      },
+      "trust": {
+        "title": "Trust",
+        "description": "Maximum security for your data and personalized support at every step."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Cutting-edge technology for fast decisions and competitive rates."
+      }
     },
     "successStories": {
       "title": "They achieved their projects with us",
@@ -100,8 +149,13 @@
         "location": "Paris - €15,000 loan"
       }
     },
-    "faqSection": { "title": "Frequently Asked Questions", "viewAll": "View Full FAQ" },
-    "partners": { "title": "Approved by leading financial institutions" },
+    "faqSection": {
+      "title": "Frequently Asked Questions",
+      "viewAll": "View Full FAQ"
+    },
+    "partners": {
+      "title": "Approved by leading financial institutions"
+    },
     "cta": {
       "title": "Ready to Get Started?",
       "description": "Join thousands of satisfied customers who chose Fundia Invest for their financing needs.",
@@ -118,18 +172,32 @@
       "expertSupportDesc": "Dedicated advisors available to guide you through every step of the process."
     },
     "loanProducts": {
-      "personal": "Personal Loan", "personalDesc": "From €1,000 to €75,000 for all your personal projects", "personalRate": "From 2.9% APR",
-      "auto": "Auto Loan", "autoDesc": "Finance your dream car with flexible payment options", "autoRate": "From 3.2% APR",
-      "home": "Home Improvement", "homeDesc": "Transform your home with our renovation loans", "homeRate": "From 3.5% APR",
-      "consolidation": "Debt Consolidation", "consolidationDesc": "Simplify your finances by consolidating multiple debts", "consolidationRate": "From 4.2% APR"
+      "personal": "Personal Loan",
+      "personalDesc": "From €1,000 to €75,000 for all your personal projects",
+      "personalRate": "From 2.9% APR",
+      "auto": "Auto Loan",
+      "autoDesc": "Finance your dream car with flexible payment options",
+      "autoRate": "From 3.2% APR",
+      "home": "Home Improvement",
+      "homeDesc": "Transform your home with our renovation loans",
+      "homeRate": "From 3.5% APR",
+      "consolidation": "Debt Consolidation",
+      "consolidationDesc": "Simplify your finances by consolidating multiple debts",
+      "consolidationRate": "From 4.2% APR"
     },
     "faqs": {
-      "q1": "How quickly can I get my loan approved?", "a1": "Our instant decision system provides a preliminary approval in less than 5 minutes. Final approval typically takes 24 to 48 hours after document verification.",
-      "q2": "What is the minimum required credit score?", "a2": "We accept applications from clients with various credit profiles. While a score above 650 improves your chances, we evaluate each application individually.",
-      "q3": "Can I pay off my loan early without penalties?", "a3": "Yes, all our loans allow early repayment without penalties. You'll save on interest by paying off your loan sooner.",
-      "q4": "What documents do I need to provide to apply?", "a4": "You'll need a valid ID, proof of income (last 3 pay stubs), bank statements, and proof of address. Additional documents may be requested based on your situation.",
-      "q5": "How is my monthly payment calculated?", "a5": "Your monthly payment depends on the loan amount, duration, and your APR. Use our simulator above for an instant calculation tailored to your needs.",
-      "q6": "Does checking rates affect my credit score?", "a6": "No, checking your eligibility does not affect your credit score. Only the formal credit application will be recorded in your credit history."
+      "q1": "How quickly can I get my loan approved?",
+      "a1": "Our instant decision system provides a preliminary approval in less than 5 minutes. Final approval typically takes 24 to 48 hours after document verification.",
+      "q2": "What is the minimum required credit score?",
+      "a2": "We accept applications from clients with various credit profiles. While a score above 650 improves your chances, we evaluate each application individually.",
+      "q3": "Can I pay off my loan early without penalties?",
+      "a3": "Yes, all our loans allow early repayment without penalties. You'll save on interest by paying off your loan sooner.",
+      "q4": "What documents do I need to provide to apply?",
+      "a4": "You'll need a valid ID, proof of income (last 3 pay stubs), bank statements, and proof of address. Additional documents may be requested based on your situation.",
+      "q5": "How is my monthly payment calculated?",
+      "a5": "Your monthly payment depends on the loan amount, duration, and your APR. Use our simulator above for an instant calculation tailored to your needs.",
+      "q6": "Does checking rates affect my credit score?",
+      "a6": "No, checking your eligibility does not affect your credit score. Only the formal credit application will be recorded in your credit history."
     },
     "seoSection": {
       "title": "About Fundia Invest: Your Trusted Credit Partner",
@@ -137,23 +205,66 @@
       "missionTitle": "Our Mission",
       "missionText": "We believe that access to credit should be simple, transparent, and stress-free. Our mission is to democratize lending by leveraging technology to offer competitive rates, instant decisions, and a seamless digital experience. We are committed to financial inclusion and helping our clients make informed borrowing decisions.",
       "differenceTitle": "Why We're Different",
-      "speed": { "title": "Speed:", "text": "Our advanced algorithms provide preliminary approval in less than 5 minutes, with funds typically disbursed within 48 hours of final approval." },
-      "transparency": { "title": "Transparency:", "text": "No hidden fees, no surprises. All costs, rates, and terms are clearly displayed before you commit." },
-      "security": { "title": "Security:", "text": "We use bank-level encryption and are fully compliant with GDPR and French banking regulations." },
-      "flexibility": { "title": "Flexibility:", "text": "Early repayment options without penalties, flexible terms from 12 to 84 months, and amounts from €1,000 to €75,000." },
+      "speed": {
+        "title": "Speed:",
+        "text": "Our advanced algorithms provide preliminary approval in less than 5 minutes, with funds typically disbursed within 48 hours of final approval."
+      },
+      "transparency": {
+        "title": "Transparency:",
+        "text": "No hidden fees, no surprises. All costs, rates, and terms are clearly displayed before you commit."
+      },
+      "security": {
+        "title": "Security:",
+        "text": "We use bank-level encryption and are fully compliant with GDPR and French banking regulations."
+      },
+      "flexibility": {
+        "title": "Flexibility:",
+        "text": "Early repayment options without penalties, flexible terms from 12 to 84 months, and amounts from €1,000 to €75,000."
+      },
       "loanTypesTitle": "Types of Loans We Offer",
       "loanTypesIntro": "At Fundia Invest, we understand that every financial need is unique. That's why we offer a comprehensive range of loan products designed to match your specific circumstances:",
-      "personalLoan": { "title": "Personal Loans", "text": "Perfect for weddings, vacations, medical expenses, or any personal project. Borrow from €1,000 to €75,000 with rates starting at 2.9% APR.", "example": "Example: €10,000 over 48 months = €221/month (4.9% APR, total cost: €10,608)" },
-      "autoLoan": { "title": "Auto Loans", "text": "Finance new or used vehicles with competitive rates and flexible terms. Rates starting at 3.2% APR.", "example": "Example: €20,000 over 60 months = €362/month (3.9% APR, total cost: €21,720)" },
-      "homeLoan": { "title": "Home Improvement Loans", "text": "Transform your living space with loans designed for renovations, extensions, or energy improvements.", "example": "Example: €15,000 over 72 months = €238/month (4.5% APR, total cost: €17,136)" },
-      "consolidation": { "title": "Debt Consolidation", "text": "Simplify multiple debts into one easy monthly payment, often at a lower overall rate.", "example": "Example: Consolidate €25,000 of debt over 84 months = €351/month (5.2% APR)" },
+      "personalLoan": {
+        "title": "Personal Loans",
+        "text": "Perfect for weddings, vacations, medical expenses, or any personal project. Borrow from €1,000 to €75,000 with rates starting at 2.9% APR.",
+        "example": "Example: €10,000 over 48 months = €221/month (4.9% APR, total cost: €10,608)"
+      },
+      "autoLoan": {
+        "title": "Auto Loans",
+        "text": "Finance new or used vehicles with competitive rates and flexible terms. Rates starting at 3.2% APR.",
+        "example": "Example: €20,000 over 60 months = €362/month (3.9% APR, total cost: €21,720)"
+      },
+      "homeLoan": {
+        "title": "Home Improvement Loans",
+        "text": "Transform your living space with loans designed for renovations, extensions, or energy improvements.",
+        "example": "Example: €15,000 over 72 months = €238/month (4.5% APR, total cost: €17,136)"
+      },
+      "consolidation": {
+        "title": "Debt Consolidation",
+        "text": "Simplify multiple debts into one easy monthly payment, often at a lower overall rate.",
+        "example": "Example: Consolidate €25,000 of debt over 84 months = €351/month (5.2% APR)"
+      },
       "processTitle": "How Our Process Works",
       "process": {
-        "step1": { "title": "Simulate your loan:", "text": "Use our interactive calculator to see estimated monthly payments and total costs." },
-        "step2": { "title": "Submit your application:", "text": "Complete our simple online form in just a few minutes." },
-        "step3": { "title": "Get an instant decision:", "text": "Our system analyzes your application and provides preliminary approval immediately." },
-        "step4": { "title": "Upload your documents:", "text": "Submit required documents securely through our platform." },
-        "step5": { "title": "Receive your funds:", "text": "Once approved, funds are transferred directly to your bank account within 48 hours." }
+        "step1": {
+          "title": "Simulate your loan:",
+          "text": "Use our interactive calculator to see estimated monthly payments and total costs."
+        },
+        "step2": {
+          "title": "Submit your application:",
+          "text": "Complete our simple online form in just a few minutes."
+        },
+        "step3": {
+          "title": "Get an instant decision:",
+          "text": "Our system analyzes your application and provides preliminary approval immediately."
+        },
+        "step4": {
+          "title": "Upload your documents:",
+          "text": "Submit required documents securely through our platform."
+        },
+        "step5": {
+          "title": "Receive your funds:",
+          "text": "Once approved, funds are transferred directly to your bank account within 48 hours."
+        }
       },
       "responsibleTitle": "Our Commitment to Responsible Lending",
       "responsibleText": "We take responsible lending seriously. Before approving any loan, we carefully assess your repayment capacity based on your income, expenses, and existing debts. We will never approve a loan that could put you in financial difficulty. Our advisors are always available to discuss alternatives if a loan isn't the right solution for your situation."
@@ -182,11 +293,26 @@
     },
     "whyChoose": {
       "title": "Why Choose Fundia Invest?",
-      "online": { "title": "100% Online Process:", "description": "Quick application and instant decision from the comfort of your home" },
-      "comparison": { "title": "Smart Comparison:", "description": "We analyze dozens of offers to find the best one for you" },
-      "noCommitment": { "title": "No Commitment:", "description": "Check your eligibility without impacting your credit score" },
-      "transparency": { "title": "Full Transparency:", "description": "No hidden fees, all conditions clearly displayed" },
-      "support": { "title": "Dedicated Support:", "description": "A team of experts at your service Monday to Saturday" }
+      "online": {
+        "title": "100% Online Process:",
+        "description": "Quick application and instant decision from the comfort of your home"
+      },
+      "comparison": {
+        "title": "Smart Comparison:",
+        "description": "We analyze dozens of offers to find the best one for you"
+      },
+      "noCommitment": {
+        "title": "No Commitment:",
+        "description": "Check your eligibility without impacting your credit score"
+      },
+      "transparency": {
+        "title": "Full Transparency:",
+        "description": "No hidden fees, all conditions clearly displayed"
+      },
+      "support": {
+        "title": "Dedicated Support:",
+        "description": "A team of experts at your service Monday to Saturday"
+      }
     }
   },
   "contact": {
@@ -895,5 +1021,133 @@
     "author": "Fundia Invest",
     "ogTitle": "Fundia Invest - Fast Online Loans & Credit Solutions",
     "ogDescription": "Instant approval, competitive rates from 2.9% APR, flexible terms. Your trusted credit partner."
+  },
+  "network": {
+    "nav": {
+      "badge": "NEW"
+    },
+    "landing": {
+      "badge": "Private Access",
+      "title": "Your project deserves to be seen by the right people.",
+      "subtitle": "Connect directly with lenders, investors and financial partners who study your type of application.",
+      "cta": "Access the Network",
+      "ctaSecondary": "Explore funders",
+      "disclaimer": "Fundia Network does not guarantee financing. We only facilitate introductions with partners likely to review your application.",
+      "stats": {
+        "funders": "qualified funders",
+        "responseTime": "Average response",
+        "responseValue": "48h",
+        "successRate": "Introduction rate",
+        "members": "active members"
+      }
+    },
+    "teaser": {
+      "badge": "NEW — FUNDIA NETWORK",
+      "title": "Connect directly with funders who study your type of application.",
+      "subtitle": "Our private network of verified lenders, investors and financial partners is ready for you.",
+      "funders": "qualified funders",
+      "verified": "Verified by Fundia",
+      "responseTime": "Average response within 48h",
+      "cta": "Discover Fundia Network",
+      "types": {
+        "lenders": "Private lenders & individuals",
+        "angels": "Business Angels & funds",
+        "partners": "Specialized financial partners"
+      }
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "step1": {
+        "title": "Complete your profile",
+        "description": "Tell us about your project, your situation and the financing you need."
+      },
+      "step2": {
+        "title": "Explore the network",
+        "description": "Filter funders by specialty, ticket size, geography and availability."
+      },
+      "step3": {
+        "title": "Contact directly",
+        "description": "Send your application in one click. Track your requests in real time."
+      }
+    },
+    "funderTypes": {
+      "private": "Private Lenders",
+      "investors": "Investors",
+      "angels": "Business Angels",
+      "funds": "Specialized Funds"
+    },
+    "badges": {
+      "verified": "Verified by Fundia",
+      "active": "Very active",
+      "topResponder": "Top Responder",
+      "new": "New"
+    },
+    "pricing": {
+      "title": "One access. One simple price.",
+      "subtitle": "Join Fundia Network and access the full network of qualified funders.",
+      "price": "19.90",
+      "period": "/ year",
+      "monthly": "that's €1.66 / month",
+      "cta": "Get started now",
+      "guarantee": "Satisfied or refunded within 30 days",
+      "features": [
+        "Unlimited access to 240+ funder profiles",
+        "Advanced filters by specialty and ticket",
+        "Direct and unlimited contact",
+        "Real-time tracking of your requests",
+        "Verified Member badge on your profile",
+        "Priority Fundia support"
+      ],
+      "secure": "Secure payment · Cancel anytime · GDPR compliant"
+    },
+    "trust": {
+      "noGuarantee": "We do not guarantee financing",
+      "noGuaranteeDesc": "Fundia Network facilitates introductions. The review and decision belong to the funders.",
+      "verified": "Verified funders",
+      "verifiedDesc": "Each funder has been vetted by our team before joining the network.",
+      "privacy": "Your data protected",
+      "privacyDesc": "Your profile is never shared without your explicit consent. Full GDPR compliance."
+    },
+    "preview": {
+      "title": "Network preview",
+      "subtitle": "Here is a sample of the funders available in Fundia Network.",
+      "locked": "Profile unlocked with Premium access",
+      "specialties": {
+        "real_estate": "Real estate",
+        "startup": "Startup",
+        "personal": "Personal",
+        "professional": "Professional",
+        "auto": "Auto",
+        "green": "Green project"
+      },
+      "ticketFrom": "Ticket from",
+      "ticketTo": "up to",
+      "contact": "Contact",
+      "viewProfile": "View profile"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "q1": "Does Fundia Network guarantee financing?",
+      "a1": "No. Fundia Network is an introduction service. We give you access to funders who can review your application, but the final decision is entirely theirs.",
+      "q2": "Who are the network funders?",
+      "a2": "Our network includes private lenders, individual investors, business angels and specialized funds. Each funder is vetted by our team before joining.",
+      "q3": "Is my data shared with funders?",
+      "a3": "Only if you choose to contact them. Your profile remains private until you send an introduction request.",
+      "q4": "Can I cancel at any time?",
+      "a4": "Yes. You can cancel your subscription at any time from your member area. The 30-day money-back guarantee applies.",
+      "q5": "How many funders can I contact?",
+      "a5": "Access is unlimited. We recommend targeting funders that genuinely match your project to maximize your response rate."
+    },
+    "dashboard": {
+      "upgradeTitle": "Fundia Network",
+      "upgradeSubtitle": "Access 240+ qualified funders for your application.",
+      "upgradeFeature1": "Private lenders & individuals",
+      "upgradeFeature2": "Capital investors",
+      "upgradeFeature3": "Verified specialized funds",
+      "upgradeCta": "Activate access — €19.90/year",
+      "activeTitle": "Fundia Network — Active",
+      "activeSubtitle": "Your network access is active.",
+      "exploreCta": "Explore the network"
+    }
   }
 }

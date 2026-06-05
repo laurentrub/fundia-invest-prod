@@ -3,14 +3,89 @@
     "faq": {
       "title": "Veelgestelde Vragen",
       "subtitle": "Alles wat u moet weten over leningen, aanvragen en Fundia Invest",
-      "categories": { "general": "Algemene Vragen", "application": "Aanvraagproces", "rates": "Tarieven en Voorwaarden", "repayment": "Terugbetaling en Beheer", "credit": "Krediet en Geschiktheid", "security": "Veiligheid en Privacy", "special": "Bijzondere Situaties" },
-      "general": { "q1": "Wat is Fundia Invest?", "a1": "Fundia Invest is een online leenplatform dat leners verbindt met concurrerende kredietaanbiedingen.", "q2": "Hoe verdient Fundia Invest geld?", "a2": "We ontvangen een commissie van onze financiële partners. Deze dienst is gratis voor leners.", "q3": "Is Fundia Invest veilig?", "a3": "Ja, we zijn volledig AVG-conform en gebruiken bankversleuteling." },
-      "application": { "q1": "Hoe lang duurt de aanvraag?", "a1": "Ongeveer 5 tot 10 minuten online.", "q2": "Welke documenten heb ik nodig?", "a2": "Geldig ID, inkomstenbewijs, bankafschriften en adresbewijs.", "q3": "Beïnvloedt de tariefscontrole mijn kredietscore?", "a3": "Nee, we gebruiken een zachte kredietcontrole.", "q4": "Kan ik aanvragen als zelfstandige?", "a4": "Ja! Zelfstandigen zijn welkom.", "q5": "Wat als mijn aanvraag wordt afgewezen?", "a5": "We leggen uit waarom en kunnen alternatieven voorstellen." },
-      "rates": { "q1": "Welke rentetarieven bieden jullie?", "a1": "Vanaf 2,9% JKP voor gekwalificeerde leners.", "q2": "Hoe wordt mijn rente bepaald?", "a2": "Op basis van kredietscore, inkomen en leningbedrag.", "q3": "Zijn de tarieven vast of variabel?", "a3": "Al onze leningen hebben vaste tarieven.", "q4": "Welke bedragen zijn beschikbaar?", "a4": "Van €1.000 tot €75.000.", "q5": "Welke looptijden zijn beschikbaar?", "a5": "Van 12 tot 84 maanden.", "q6": "Zijn er kosten?", "a6": "We rekenen geen verwerkingskosten." },
-      "repayment": { "q1": "Hoe doe ik betalingen?", "a1": "Automatische afschrijving van uw bankrekening.", "q2": "Kan ik mijn betaaldatum wijzigen?", "a2": "Ja, neem contact op met onze klantenservice.", "q3": "Kan ik vervroegd aflossen?", "a3": "Ja, zonder boetes.", "q4": "Wat als ik een betaling mis?", "a4": "Neem onmiddellijk contact met ons op.", "q5": "Kan ik het bedrag later verhogen?", "a5": "Niet eenmaal actief, maar herfinanciering is mogelijk." },
-      "credit": { "q1": "Welke kredietscore heb ik nodig?", "a1": "We verkiezen scores boven 650.", "q2": "Kan ik aanvragen met een slechte kredietscore?", "a2": "Ja, we werken met alle kredietprofielen.", "q3": "Accepteren jullie co-leners?", "a3": "Ja, dit kan uw kansen verbeteren.", "q4": "Wat is het minimuminkomen?", "a4": "U moet voldoende inkomen aantonen." },
-      "security": { "q1": "Hoe worden mijn gegevens beschermd?", "a1": "256-bit SSL-versleuteling en AVG-conform.", "q2": "Wie heeft toegang tot mijn informatie?", "a2": "Alleen geautoriseerd personeel.", "q3": "Hoe lang bewaren jullie mijn gegevens?", "a3": "Volgens wettelijke vereisten." },
-      "special": { "q1": "Kan ik aanvragen als gepensioneerde?", "a1": "Ja!", "q2": "Bieden jullie leningen voor studenten?", "a2": "Studenten met inkomen kunnen aanvragen.", "q3": "Kan ik een lening gebruiken voor een bedrijf?", "a3": "We raden ons Zakelijke Lening product aan.", "q4": "Wat als ik in scheiding lig?", "a4": "U kunt aanvragen met individuele inkomsten." }
+      "categories": {
+        "general": "Algemene Vragen",
+        "application": "Aanvraagproces",
+        "rates": "Tarieven en Voorwaarden",
+        "repayment": "Terugbetaling en Beheer",
+        "credit": "Krediet en Geschiktheid",
+        "security": "Veiligheid en Privacy",
+        "special": "Bijzondere Situaties"
+      },
+      "general": {
+        "q1": "Wat is Fundia Invest?",
+        "a1": "Fundia Invest is een online leenplatform dat leners verbindt met concurrerende kredietaanbiedingen.",
+        "q2": "Hoe verdient Fundia Invest geld?",
+        "a2": "We ontvangen een commissie van onze financiële partners. Deze dienst is gratis voor leners.",
+        "q3": "Is Fundia Invest veilig?",
+        "a3": "Ja, we zijn volledig AVG-conform en gebruiken bankversleuteling."
+      },
+      "application": {
+        "q1": "Hoe lang duurt de aanvraag?",
+        "a1": "Ongeveer 5 tot 10 minuten online.",
+        "q2": "Welke documenten heb ik nodig?",
+        "a2": "Geldig ID, inkomstenbewijs, bankafschriften en adresbewijs.",
+        "q3": "Beïnvloedt de tariefscontrole mijn kredietscore?",
+        "a3": "Nee, we gebruiken een zachte kredietcontrole.",
+        "q4": "Kan ik aanvragen als zelfstandige?",
+        "a4": "Ja! Zelfstandigen zijn welkom.",
+        "q5": "Wat als mijn aanvraag wordt afgewezen?",
+        "a5": "We leggen uit waarom en kunnen alternatieven voorstellen."
+      },
+      "rates": {
+        "q1": "Welke rentetarieven bieden jullie?",
+        "a1": "Vanaf 2,9% JKP voor gekwalificeerde leners.",
+        "q2": "Hoe wordt mijn rente bepaald?",
+        "a2": "Op basis van kredietscore, inkomen en leningbedrag.",
+        "q3": "Zijn de tarieven vast of variabel?",
+        "a3": "Al onze leningen hebben vaste tarieven.",
+        "q4": "Welke bedragen zijn beschikbaar?",
+        "a4": "Van €1.000 tot €75.000.",
+        "q5": "Welke looptijden zijn beschikbaar?",
+        "a5": "Van 12 tot 84 maanden.",
+        "q6": "Zijn er kosten?",
+        "a6": "We rekenen geen verwerkingskosten."
+      },
+      "repayment": {
+        "q1": "Hoe doe ik betalingen?",
+        "a1": "Automatische afschrijving van uw bankrekening.",
+        "q2": "Kan ik mijn betaaldatum wijzigen?",
+        "a2": "Ja, neem contact op met onze klantenservice.",
+        "q3": "Kan ik vervroegd aflossen?",
+        "a3": "Ja, zonder boetes.",
+        "q4": "Wat als ik een betaling mis?",
+        "a4": "Neem onmiddellijk contact met ons op.",
+        "q5": "Kan ik het bedrag later verhogen?",
+        "a5": "Niet eenmaal actief, maar herfinanciering is mogelijk."
+      },
+      "credit": {
+        "q1": "Welke kredietscore heb ik nodig?",
+        "a1": "We verkiezen scores boven 650.",
+        "q2": "Kan ik aanvragen met een slechte kredietscore?",
+        "a2": "Ja, we werken met alle kredietprofielen.",
+        "q3": "Accepteren jullie co-leners?",
+        "a3": "Ja, dit kan uw kansen verbeteren.",
+        "q4": "Wat is het minimuminkomen?",
+        "a4": "U moet voldoende inkomen aantonen."
+      },
+      "security": {
+        "q1": "Hoe worden mijn gegevens beschermd?",
+        "a1": "256-bit SSL-versleuteling en AVG-conform.",
+        "q2": "Wie heeft toegang tot mijn informatie?",
+        "a2": "Alleen geautoriseerd personeel.",
+        "q3": "Hoe lang bewaren jullie mijn gegevens?",
+        "a3": "Volgens wettelijke vereisten."
+      },
+      "special": {
+        "q1": "Kan ik aanvragen als gepensioneerde?",
+        "a1": "Ja!",
+        "q2": "Bieden jullie leningen voor studenten?",
+        "a2": "Studenten met inkomen kunnen aanvragen.",
+        "q3": "Kan ik een lening gebruiken voor een bedrijf?",
+        "a3": "We raden ons Zakelijke Lening product aan.",
+        "q4": "Wat als ik in scheiding lig?",
+        "a4": "U kunt aanvragen met individuele inkomsten."
+      }
     },
     "glossary": {
       "title": "Krediet Woordenlijst",
@@ -18,50 +93,164 @@
       "searchPlaceholder": "Zoek termen...",
       "noResults": "Geen termen gevonden.",
       "terms": {
-        "apr": { "term": "JKP", "definition": "De jaarlijkse kosten van een lening in percentage." },
-        "amortization": { "term": "Aflossing", "definition": "Het proces van schuld afbetalen via regelmatige betalingen." },
-        "collateral": { "term": "Onderpand", "definition": "Een bezit verpand als zekerheid." },
-        "creditScore": { "term": "Kredietscore", "definition": "Een numerieke weergave van uw kredietwaardigheid." },
-        "consolidation": { "term": "Schuldconsolidatie", "definition": "Meerdere schulden combineren in één lening." },
-        "dti": { "term": "Schuld-inkomen ratio", "definition": "Percentage van inkomen voor schuldbetalingen." },
-        "default": { "term": "Wanbetaling", "definition": "Falen om een lening terug te betalen." },
-        "deferment": { "term": "Uitstel", "definition": "Mogelijkheid om betalingen uit te stellen." },
-        "fixedRate": { "term": "Vaste rente", "definition": "Rente die constant blijft." },
-        "gracePeriod": { "term": "Respijtperiode", "definition": "Periode na vervaldatum zonder boete." },
-        "guarantor": { "term": "Borg", "definition": "Iemand die garandeert te betalen als u niet kunt." },
-        "hardInquiry": { "term": "Harde kredietopvraging", "definition": "Kredietcontrole bij aanvraag." },
-        "interestRate": { "term": "Rentetarief", "definition": "Percentage dat wordt berekend over de hoofdsom." },
-        "loanTerm": { "term": "Looptijd", "definition": "Periode voor terugbetaling." },
-        "originationFee": { "term": "Opstartkosten", "definition": "Vergoeding voor verwerking aanvraag." },
-        "preApproval": { "term": "Voorlopige goedkeuring", "definition": "Voorlopige beoordeling van leenbedrag." },
-        "principal": { "term": "Hoofdsom", "definition": "Het oorspronkelijk geleende bedrag." },
-        "refinancing": { "term": "Herfinanciering", "definition": "Een bestaande lening vervangen door een nieuwe." },
-        "securedLoan": { "term": "Gedekte lening", "definition": "Lening met onderpand." },
-        "softInquiry": { "term": "Zachte kredietopvraging", "definition": "Controle zonder invloed op score." },
-        "unsecuredLoan": { "term": "Ongedekte lening", "definition": "Lening zonder onderpand." },
-        "variableRate": { "term": "Variabele rente", "definition": "Rente die kan veranderen." },
-        "borrowingCapacity": { "term": "Leencapaciteit", "definition": "Maximaal leenbedrag." },
-        "coBorrower": { "term": "Mede-lener", "definition": "Iemand die mee leent." },
-        "borrowerInsurance": { "term": "Leningverzekering", "definition": "Verzekering voor betalingen." },
-        "prepaymentPenalty": { "term": "Boete vervroegde aflossing", "definition": "Kosten bij vroege terugbetaling. Wij hebben geen boetes." },
-        "revolvingCredit": { "term": "Doorlopend krediet", "definition": "Krediet dat u kunt hergebruiken." },
-        "amortizationSchedule": { "term": "Aflossingsschema", "definition": "Gedetailleerd betalingsoverzicht." },
-        "nominalRate": { "term": "Nominale rente", "definition": "Basisrente zonder kosten." },
-        "interestOnly": { "term": "Aflossingsvrije periode", "definition": "Periode waarin alleen rente wordt betaald." },
-        "debtRestructuring": { "term": "Schuldherstructurering", "definition": "Wijziging van leningvoorwaarden." },
-        "affectedCredit": { "term": "Doelgebonden krediet", "definition": "Lening gekoppeld aan een specifieke aankoop." },
-        "unaffectedCredit": { "term": "Niet-doelgebonden krediet", "definition": "Lening voor vrij gebruik." }
+        "apr": {
+          "term": "JKP",
+          "definition": "De jaarlijkse kosten van een lening in percentage."
+        },
+        "amortization": {
+          "term": "Aflossing",
+          "definition": "Het proces van schuld afbetalen via regelmatige betalingen."
+        },
+        "collateral": {
+          "term": "Onderpand",
+          "definition": "Een bezit verpand als zekerheid."
+        },
+        "creditScore": {
+          "term": "Kredietscore",
+          "definition": "Een numerieke weergave van uw kredietwaardigheid."
+        },
+        "consolidation": {
+          "term": "Schuldconsolidatie",
+          "definition": "Meerdere schulden combineren in één lening."
+        },
+        "dti": {
+          "term": "Schuld-inkomen ratio",
+          "definition": "Percentage van inkomen voor schuldbetalingen."
+        },
+        "default": {
+          "term": "Wanbetaling",
+          "definition": "Falen om een lening terug te betalen."
+        },
+        "deferment": {
+          "term": "Uitstel",
+          "definition": "Mogelijkheid om betalingen uit te stellen."
+        },
+        "fixedRate": {
+          "term": "Vaste rente",
+          "definition": "Rente die constant blijft."
+        },
+        "gracePeriod": {
+          "term": "Respijtperiode",
+          "definition": "Periode na vervaldatum zonder boete."
+        },
+        "guarantor": {
+          "term": "Borg",
+          "definition": "Iemand die garandeert te betalen als u niet kunt."
+        },
+        "hardInquiry": {
+          "term": "Harde kredietopvraging",
+          "definition": "Kredietcontrole bij aanvraag."
+        },
+        "interestRate": {
+          "term": "Rentetarief",
+          "definition": "Percentage dat wordt berekend over de hoofdsom."
+        },
+        "loanTerm": {
+          "term": "Looptijd",
+          "definition": "Periode voor terugbetaling."
+        },
+        "originationFee": {
+          "term": "Opstartkosten",
+          "definition": "Vergoeding voor verwerking aanvraag."
+        },
+        "preApproval": {
+          "term": "Voorlopige goedkeuring",
+          "definition": "Voorlopige beoordeling van leenbedrag."
+        },
+        "principal": {
+          "term": "Hoofdsom",
+          "definition": "Het oorspronkelijk geleende bedrag."
+        },
+        "refinancing": {
+          "term": "Herfinanciering",
+          "definition": "Een bestaande lening vervangen door een nieuwe."
+        },
+        "securedLoan": {
+          "term": "Gedekte lening",
+          "definition": "Lening met onderpand."
+        },
+        "softInquiry": {
+          "term": "Zachte kredietopvraging",
+          "definition": "Controle zonder invloed op score."
+        },
+        "unsecuredLoan": {
+          "term": "Ongedekte lening",
+          "definition": "Lening zonder onderpand."
+        },
+        "variableRate": {
+          "term": "Variabele rente",
+          "definition": "Rente die kan veranderen."
+        },
+        "borrowingCapacity": {
+          "term": "Leencapaciteit",
+          "definition": "Maximaal leenbedrag."
+        },
+        "coBorrower": {
+          "term": "Mede-lener",
+          "definition": "Iemand die mee leent."
+        },
+        "borrowerInsurance": {
+          "term": "Leningverzekering",
+          "definition": "Verzekering voor betalingen."
+        },
+        "prepaymentPenalty": {
+          "term": "Boete vervroegde aflossing",
+          "definition": "Kosten bij vroege terugbetaling. Wij hebben geen boetes."
+        },
+        "revolvingCredit": {
+          "term": "Doorlopend krediet",
+          "definition": "Krediet dat u kunt hergebruiken."
+        },
+        "amortizationSchedule": {
+          "term": "Aflossingsschema",
+          "definition": "Gedetailleerd betalingsoverzicht."
+        },
+        "nominalRate": {
+          "term": "Nominale rente",
+          "definition": "Basisrente zonder kosten."
+        },
+        "interestOnly": {
+          "term": "Aflossingsvrije periode",
+          "definition": "Periode waarin alleen rente wordt betaald."
+        },
+        "debtRestructuring": {
+          "term": "Schuldherstructurering",
+          "definition": "Wijziging van leningvoorwaarden."
+        },
+        "affectedCredit": {
+          "term": "Doelgebonden krediet",
+          "definition": "Lening gekoppeld aan een specifieke aankoop."
+        },
+        "unaffectedCredit": {
+          "term": "Niet-doelgebonden krediet",
+          "definition": "Lening voor vrij gebruik."
+        }
       }
     },
     "creditGuide": {
       "title": "Kredietgids",
       "subtitle": "Educatieve bronnen voor geïnformeerde leningbeslissingen",
       "articles": {
-        "choosingLoan": { "title": "De juiste lening kiezen", "content": "Kies de juiste lening door uw financiële situatie en doelen te overwegen. Vergelijk JKP-tarieven en controleer alle kosten." },
-        "debtRatio": { "title": "Uw schuld-inkomen ratio begrijpen", "content": "Uw schuld-inkomen ratio is cruciaal voor kredietverstrekkers. Houd deze onder 36% voor betere voorwaarden." },
-        "comparingOffers": { "title": "Leningaanbiedingen vergelijken", "content": "Focus op JKP, totale kosten en flexibiliteit bij het vergelijken van aanbiedingen." },
-        "earlyRepayment": { "title": "Vervroegd aflossen", "content": "Vervroegd aflossen bespaart rente, maar controleer eerst op boetes." },
-        "buildingCredit": { "title": "Goede krediet opbouwen", "content": "Betaalgeschiedenis is 35% van uw score. Mis nooit een betaling." }
+        "choosingLoan": {
+          "title": "De juiste lening kiezen",
+          "content": "Kies de juiste lening door uw financiële situatie en doelen te overwegen. Vergelijk JKP-tarieven en controleer alle kosten."
+        },
+        "debtRatio": {
+          "title": "Uw schuld-inkomen ratio begrijpen",
+          "content": "Uw schuld-inkomen ratio is cruciaal voor kredietverstrekkers. Houd deze onder 36% voor betere voorwaarden."
+        },
+        "comparingOffers": {
+          "title": "Leningaanbiedingen vergelijken",
+          "content": "Focus op JKP, totale kosten en flexibiliteit bij het vergelijken van aanbiedingen."
+        },
+        "earlyRepayment": {
+          "title": "Vervroegd aflossen",
+          "content": "Vervroegd aflossen bespaart rente, maar controleer eerst op boetes."
+        },
+        "buildingCredit": {
+          "title": "Goede krediet opbouwen",
+          "content": "Betaalgeschiedenis is 35% van uw score. Mis nooit een betaling."
+        }
       }
     }
   },
@@ -80,7 +269,14 @@
     "myProfile": "Mijn Profiel",
     "login": "Inloggen",
     "logout": "Uitloggen",
-    "admin": "Administratie"
+    "admin": "Administratie",
+    "network": "Netwerk",
+    "networkMenu": {
+      "title": "Fundia Network",
+      "explore": "Financiers verkennen",
+      "howItWorks": "Hoe het werkt",
+      "becomePartner": "Word financieringspartner"
+    }
   },
   "languages": {
     "fr": "Français",
@@ -112,9 +308,18 @@
     },
     "features": {
       "title": "Waarom Voor Ons Kiezen?",
-      "fast": { "title": "Snel Antwoord", "description": "Een voorlopig antwoord binnen maximaal 48 uur" },
-      "personalized": { "title": "Op Maat Gemaakte Oplossing", "description": "Aanbiedingen aangepast aan uw situatie" },
-      "secure": { "title": "100% Veilig", "description": "Uw gegevens zijn beschermd" }
+      "fast": {
+        "title": "Snel Antwoord",
+        "description": "Een voorlopig antwoord binnen maximaal 48 uur"
+      },
+      "personalized": {
+        "title": "Op Maat Gemaakte Oplossing",
+        "description": "Aanbiedingen aangepast aan uw situatie"
+      },
+      "secure": {
+        "title": "100% Veilig",
+        "description": "Uw gegevens zijn beschermd"
+      }
     },
     "featuresSection": {
       "title": "Waarom Kiezen voor Fundia Invest?",
@@ -122,10 +327,22 @@
     },
     "products": {
       "title": "Onze Kredietoplossingen",
-      "personal": { "title": "Persoonlijke Lening", "description": "Voor uw persoonlijke projecten" },
-      "auto": { "title": "Autolening", "description": "Financier uw voertuig" },
-      "home": { "title": "Verbouwingskrediet", "description": "Renoveer uw woning" },
-      "consolidation": { "title": "Schuldconsolidatie", "description": "Vereenvoudig uw terugbetalingen" }
+      "personal": {
+        "title": "Persoonlijke Lening",
+        "description": "Voor uw persoonlijke projecten"
+      },
+      "auto": {
+        "title": "Autolening",
+        "description": "Financier uw voertuig"
+      },
+      "home": {
+        "title": "Verbouwingskrediet",
+        "description": "Renoveer uw woning"
+      },
+      "consolidation": {
+        "title": "Schuldconsolidatie",
+        "description": "Vereenvoudig uw terugbetalingen"
+      }
     },
     "productsSection": {
       "title": "Onze Kredietproducten",
@@ -135,18 +352,39 @@
     "howItWorks": {
       "title": "Hoe Werkt Het?",
       "subtitle": "Een eenvoudig en snel 4-stappen proces om uw financiering te krijgen",
-      "step1": { "title": "Simuleer uw krediet", "description": "Gebruik onze calculator om uw maandelijkse betalingen in seconden te berekenen" },
-      "step2": { "title": "Dien uw aanvraag in", "description": "Vul ons beveiligd online formulier in in minder dan 5 minuten" },
-      "step3": { "title": "Ontvang een direct antwoord", "description": "Ons systeem geeft u een onmiddellijk voorlopig antwoord" },
-      "step4": { "title": "Ontvang uw geld", "description": "Eenmaal goedgekeurd, ontvang uw geld binnen 48u op uw rekening" },
+      "step1": {
+        "title": "Simuleer uw krediet",
+        "description": "Gebruik onze calculator om uw maandelijkse betalingen in seconden te berekenen"
+      },
+      "step2": {
+        "title": "Dien uw aanvraag in",
+        "description": "Vul ons beveiligd online formulier in in minder dan 5 minuten"
+      },
+      "step3": {
+        "title": "Ontvang een direct antwoord",
+        "description": "Ons systeem geeft u een onmiddellijk voorlopig antwoord"
+      },
+      "step4": {
+        "title": "Ontvang uw geld",
+        "description": "Eenmaal goedgekeurd, ontvang uw geld binnen 48u op uw rekening"
+      },
       "startNow": "Nu Beginnen"
     },
     "mission": {
       "title": "Onze Missie",
       "statement": "Financiering eenvoudig, toegankelijk en veilig maken voor iedereen.",
-      "accessibility": { "title": "Toegankelijkheid", "description": "Financieringsoplossingen open voor iedereen, met vereenvoudigde en transparante processen." },
-      "trust": { "title": "Vertrouwen", "description": "Maximale beveiliging voor uw gegevens en persoonlijke begeleiding bij elke stap." },
-      "innovation": { "title": "Innovatie", "description": "Geavanceerde technologie voor snelle beslissingen en concurrerende tarieven." }
+      "accessibility": {
+        "title": "Toegankelijkheid",
+        "description": "Financieringsoplossingen open voor iedereen, met vereenvoudigde en transparante processen."
+      },
+      "trust": {
+        "title": "Vertrouwen",
+        "description": "Maximale beveiliging voor uw gegevens en persoonlijke begeleiding bij elke stap."
+      },
+      "innovation": {
+        "title": "Innovatie",
+        "description": "Geavanceerde technologie voor snelle beslissingen en concurrerende tarieven."
+      }
     },
     "successStories": {
       "title": "Zij realiseerden hun projecten met ons",
@@ -166,8 +404,13 @@
         "location": "Parijs - Lening van €15.000"
       }
     },
-    "faqSection": { "title": "Veelgestelde Vragen", "viewAll": "Volledige FAQ Bekijken" },
-    "partners": { "title": "Goedgekeurd door toonaangevende financiële instellingen" },
+    "faqSection": {
+      "title": "Veelgestelde Vragen",
+      "viewAll": "Volledige FAQ Bekijken"
+    },
+    "partners": {
+      "title": "Goedgekeurd door toonaangevende financiële instellingen"
+    },
     "cta": {
       "title": "Klaar om te Beginnen?",
       "description": "Sluit u aan bij duizenden tevreden klanten die kozen voor Fundia Invest voor hun financieringsbehoeften.",
@@ -184,18 +427,32 @@
       "expertSupportDesc": "Toegewijde adviseurs beschikbaar om u bij elke stap van het proces te begeleiden."
     },
     "loanProducts": {
-      "personal": "Persoonlijke Lening", "personalDesc": "Van €1.000 tot €75.000 voor al uw persoonlijke projecten", "personalRate": "Vanaf 2,9% JKP",
-      "auto": "Autolening", "autoDesc": "Financier uw droomauto met flexibele betalingsopties", "autoRate": "Vanaf 3,2% JKP",
-      "home": "Verbouwingskrediet", "homeDesc": "Transformeer uw huis met onze renovatieleningen", "homeRate": "Vanaf 3,5% JKP",
-      "consolidation": "Schuldconsolidatie", "consolidationDesc": "Vereenvoudig uw financiën door meerdere schulden samen te voegen", "consolidationRate": "Vanaf 4,2% JKP"
+      "personal": "Persoonlijke Lening",
+      "personalDesc": "Van €1.000 tot €75.000 voor al uw persoonlijke projecten",
+      "personalRate": "Vanaf 2,9% JKP",
+      "auto": "Autolening",
+      "autoDesc": "Financier uw droomauto met flexibele betalingsopties",
+      "autoRate": "Vanaf 3,2% JKP",
+      "home": "Verbouwingskrediet",
+      "homeDesc": "Transformeer uw huis met onze renovatieleningen",
+      "homeRate": "Vanaf 3,5% JKP",
+      "consolidation": "Schuldconsolidatie",
+      "consolidationDesc": "Vereenvoudig uw financiën door meerdere schulden samen te voegen",
+      "consolidationRate": "Vanaf 4,2% JKP"
     },
     "faqs": {
-      "q1": "Hoe snel kan ik mijn lening goedgekeurd krijgen?", "a1": "Ons instant beslissingssysteem biedt een voorlopige goedkeuring in minder dan 5 minuten. Definitieve goedkeuring duurt meestal 24 tot 48 uur na documentverificatie.",
-      "q2": "Wat is de minimaal vereiste kredietscore?", "a2": "We accepteren aanvragen van klanten met verschillende kredietprofielen. Hoewel een score boven 650 uw kansen verbetert, beoordelen we elke aanvraag individueel.",
-      "q3": "Kan ik mijn lening vervroegd afbetalen zonder boetes?", "a3": "Ja, al onze leningen staan vervroegde terugbetaling zonder boetes toe. U bespaart op rente door uw lening eerder af te betalen.",
-      "q4": "Welke documenten moet ik aanleveren om aan te vragen?", "a4": "U heeft een geldig identiteitsbewijs, inkomstenbewijs (laatste 3 loonstroken), bankafschriften en adresbewijs nodig. Aanvullende documenten kunnen worden gevraagd op basis van uw situatie.",
-      "q5": "Hoe wordt mijn maandelijkse betaling berekend?", "a5": "Uw maandelijkse betaling hangt af van het leningbedrag, de looptijd en uw JKP. Gebruik onze simulator hierboven voor een directe berekening op maat van uw behoeften.",
-      "q6": "Beïnvloedt het controleren van tarieven mijn kredietscore?", "a6": "Nee, het controleren van uw geschiktheid heeft geen invloed op uw kredietscore. Alleen de formele kredietaanvraag wordt geregistreerd in uw kredietgeschiedenis."
+      "q1": "Hoe snel kan ik mijn lening goedgekeurd krijgen?",
+      "a1": "Ons instant beslissingssysteem biedt een voorlopige goedkeuring in minder dan 5 minuten. Definitieve goedkeuring duurt meestal 24 tot 48 uur na documentverificatie.",
+      "q2": "Wat is de minimaal vereiste kredietscore?",
+      "a2": "We accepteren aanvragen van klanten met verschillende kredietprofielen. Hoewel een score boven 650 uw kansen verbetert, beoordelen we elke aanvraag individueel.",
+      "q3": "Kan ik mijn lening vervroegd afbetalen zonder boetes?",
+      "a3": "Ja, al onze leningen staan vervroegde terugbetaling zonder boetes toe. U bespaart op rente door uw lening eerder af te betalen.",
+      "q4": "Welke documenten moet ik aanleveren om aan te vragen?",
+      "a4": "U heeft een geldig identiteitsbewijs, inkomstenbewijs (laatste 3 loonstroken), bankafschriften en adresbewijs nodig. Aanvullende documenten kunnen worden gevraagd op basis van uw situatie.",
+      "q5": "Hoe wordt mijn maandelijkse betaling berekend?",
+      "a5": "Uw maandelijkse betaling hangt af van het leningbedrag, de looptijd en uw JKP. Gebruik onze simulator hierboven voor een directe berekening op maat van uw behoeften.",
+      "q6": "Beïnvloedt het controleren van tarieven mijn kredietscore?",
+      "a6": "Nee, het controleren van uw geschiktheid heeft geen invloed op uw kredietscore. Alleen de formele kredietaanvraag wordt geregistreerd in uw kredietgeschiedenis."
     },
     "seoSection": {
       "title": "Over Fundia Invest: Uw betrouwbare kredietpartner",
@@ -203,23 +460,66 @@
       "missionTitle": "Onze missie",
       "missionText": "Wij geloven dat toegang tot krediet eenvoudig, transparant en stressvrij moet zijn. Onze missie is om lenen te democratiseren door technologie in te zetten om concurrerende tarieven, directe beslissingen en een naadloze digitale ervaring te bieden. We zijn toegewijd aan financiële inclusie en helpen onze klanten weloverwogen leenbeslissingen te nemen.",
       "differenceTitle": "Waarom wij anders zijn",
-      "speed": { "title": "Snelheid:", "text": "Onze geavanceerde algoritmen bieden een voorlopige goedkeuring in minder dan 5 minuten, met fondsen die doorgaans binnen 48 uur na definitieve goedkeuring worden uitbetaald." },
-      "transparency": { "title": "Transparantie:", "text": "Geen verborgen kosten, geen verrassingen. Alle kosten, tarieven en voorwaarden worden duidelijk weergegeven voordat u zich verbindt." },
-      "security": { "title": "Veiligheid:", "text": "Wij gebruiken bankversleuteling en voldoen volledig aan de AVG en Franse bankvoorschriften." },
-      "flexibility": { "title": "Flexibiliteit:", "text": "Vervroegde aflossingsopties zonder boetes, flexibele looptijden van 12 tot 84 maanden en bedragen van €1.000 tot €75.000." },
+      "speed": {
+        "title": "Snelheid:",
+        "text": "Onze geavanceerde algoritmen bieden een voorlopige goedkeuring in minder dan 5 minuten, met fondsen die doorgaans binnen 48 uur na definitieve goedkeuring worden uitbetaald."
+      },
+      "transparency": {
+        "title": "Transparantie:",
+        "text": "Geen verborgen kosten, geen verrassingen. Alle kosten, tarieven en voorwaarden worden duidelijk weergegeven voordat u zich verbindt."
+      },
+      "security": {
+        "title": "Veiligheid:",
+        "text": "Wij gebruiken bankversleuteling en voldoen volledig aan de AVG en Franse bankvoorschriften."
+      },
+      "flexibility": {
+        "title": "Flexibiliteit:",
+        "text": "Vervroegde aflossingsopties zonder boetes, flexibele looptijden van 12 tot 84 maanden en bedragen van €1.000 tot €75.000."
+      },
       "loanTypesTitle": "Soorten leningen die wij aanbieden",
       "loanTypesIntro": "Bij Fundia Invest begrijpen we dat elke financiële behoefte uniek is. Daarom bieden we een uitgebreid aanbod van leenproducten die zijn ontworpen om aan uw specifieke omstandigheden te voldoen:",
-      "personalLoan": { "title": "Persoonlijke leningen", "text": "Perfect voor bruiloften, vakanties, medische kosten of elk persoonlijk project. Leen van €1.000 tot €75.000 met tarieven vanaf 2,9% JKP.", "example": "Voorbeeld: €10.000 over 48 maanden = €221/maand (4,9% JKP, totale kosten: €10.608)" },
-      "autoLoan": { "title": "Autoleningen", "text": "Financier nieuwe of gebruikte voertuigen met concurrerende tarieven en flexibele voorwaarden. Tarieven vanaf 3,2% JKP.", "example": "Voorbeeld: €20.000 over 60 maanden = €362/maand (3,9% JKP, totale kosten: €21.720)" },
-      "homeLoan": { "title": "Verbouwingsleningen", "text": "Transformeer uw leefruimte met leningen ontworpen voor renovaties, uitbreidingen of energieverbeteringen.", "example": "Voorbeeld: €15.000 over 72 maanden = €238/maand (4,5% JKP, totale kosten: €17.136)" },
-      "consolidation": { "title": "Schuldconsolidatie", "text": "Vereenvoudig meerdere schulden in één gemakkelijke maandelijkse betaling, vaak tegen een lager totaaltarief.", "example": "Voorbeeld: Consolideer €25.000 schuld over 84 maanden = €351/maand (5,2% JKP)" },
+      "personalLoan": {
+        "title": "Persoonlijke leningen",
+        "text": "Perfect voor bruiloften, vakanties, medische kosten of elk persoonlijk project. Leen van €1.000 tot €75.000 met tarieven vanaf 2,9% JKP.",
+        "example": "Voorbeeld: €10.000 over 48 maanden = €221/maand (4,9% JKP, totale kosten: €10.608)"
+      },
+      "autoLoan": {
+        "title": "Autoleningen",
+        "text": "Financier nieuwe of gebruikte voertuigen met concurrerende tarieven en flexibele voorwaarden. Tarieven vanaf 3,2% JKP.",
+        "example": "Voorbeeld: €20.000 over 60 maanden = €362/maand (3,9% JKP, totale kosten: €21.720)"
+      },
+      "homeLoan": {
+        "title": "Verbouwingsleningen",
+        "text": "Transformeer uw leefruimte met leningen ontworpen voor renovaties, uitbreidingen of energieverbeteringen.",
+        "example": "Voorbeeld: €15.000 over 72 maanden = €238/maand (4,5% JKP, totale kosten: €17.136)"
+      },
+      "consolidation": {
+        "title": "Schuldconsolidatie",
+        "text": "Vereenvoudig meerdere schulden in één gemakkelijke maandelijkse betaling, vaak tegen een lager totaaltarief.",
+        "example": "Voorbeeld: Consolideer €25.000 schuld over 84 maanden = €351/maand (5,2% JKP)"
+      },
       "processTitle": "Hoe ons proces werkt",
       "process": {
-        "step1": { "title": "Simuleer uw lening:", "text": "Gebruik onze interactieve calculator om geschatte maandelijkse betalingen en totale kosten te zien." },
-        "step2": { "title": "Dien uw aanvraag in:", "text": "Vul ons eenvoudige online formulier in slechts enkele minuten in." },
-        "step3": { "title": "Ontvang een directe beslissing:", "text": "Ons systeem analyseert uw aanvraag en geeft onmiddellijk een voorlopige goedkeuring." },
-        "step4": { "title": "Upload uw documenten:", "text": "Dien vereiste documenten veilig in via ons platform." },
-        "step5": { "title": "Ontvang uw fondsen:", "text": "Na goedkeuring worden de fondsen binnen 48 uur rechtstreeks naar uw bankrekening overgemaakt." }
+        "step1": {
+          "title": "Simuleer uw lening:",
+          "text": "Gebruik onze interactieve calculator om geschatte maandelijkse betalingen en totale kosten te zien."
+        },
+        "step2": {
+          "title": "Dien uw aanvraag in:",
+          "text": "Vul ons eenvoudige online formulier in slechts enkele minuten in."
+        },
+        "step3": {
+          "title": "Ontvang een directe beslissing:",
+          "text": "Ons systeem analyseert uw aanvraag en geeft onmiddellijk een voorlopige goedkeuring."
+        },
+        "step4": {
+          "title": "Upload uw documenten:",
+          "text": "Dien vereiste documenten veilig in via ons platform."
+        },
+        "step5": {
+          "title": "Ontvang uw fondsen:",
+          "text": "Na goedkeuring worden de fondsen binnen 48 uur rechtstreeks naar uw bankrekening overgemaakt."
+        }
       },
       "responsibleTitle": "Onze toewijding aan verantwoord lenen",
       "responsibleText": "Wij nemen verantwoord lenen serieus. Voordat we een lening goedkeuren, beoordelen we zorgvuldig uw terugbetalingscapaciteit op basis van uw inkomen, uitgaven en bestaande schulden. We zullen nooit een lening goedkeuren die u in financiële moeilijkheden zou kunnen brengen. Onze adviseurs staan altijd klaar om alternatieven te bespreken als een lening niet de juiste oplossing is voor uw situatie."
@@ -248,11 +548,26 @@
     },
     "whyChoose": {
       "title": "Waarom kiezen voor Fundia Invest?",
-      "online": { "title": "100% online proces:", "description": "Snelle aanvraag en directe beslissing vanuit het comfort van uw huis" },
-      "comparison": { "title": "Slimme vergelijking:", "description": "We analyseren tientallen aanbiedingen om de beste voor u te vinden" },
-      "noCommitment": { "title": "Geen verplichting:", "description": "Controleer uw geschiktheid zonder invloed op uw kredietscore" },
-      "transparency": { "title": "Volledige transparantie:", "description": "Geen verborgen kosten, alle voorwaarden duidelijk weergegeven" },
-      "support": { "title": "Toegewijde ondersteuning:", "description": "Een team van experts tot uw dienst van maandag tot zaterdag" }
+      "online": {
+        "title": "100% online proces:",
+        "description": "Snelle aanvraag en directe beslissing vanuit het comfort van uw huis"
+      },
+      "comparison": {
+        "title": "Slimme vergelijking:",
+        "description": "We analyseren tientallen aanbiedingen om de beste voor u te vinden"
+      },
+      "noCommitment": {
+        "title": "Geen verplichting:",
+        "description": "Controleer uw geschiktheid zonder invloed op uw kredietscore"
+      },
+      "transparency": {
+        "title": "Volledige transparantie:",
+        "description": "Geen verborgen kosten, alle voorwaarden duidelijk weergegeven"
+      },
+      "support": {
+        "title": "Toegewijde ondersteuning:",
+        "description": "Een team van experts tot uw dienst van maandag tot zaterdag"
+      }
     }
   },
   "contact": {
@@ -692,9 +1007,22 @@
       "secure": "100% veilig",
       "fromRate": "Vanaf 2,9% JKP",
       "whyChoose": "Waarom onze persoonlijke lening kiezen?",
-      "benefits": { "noCollateral": "Geen onderpand vereist", "flexibleTerms": "Flexibele looptijden (12-84 maanden)", "earlyRepayment": "Vervroegde aflossing zonder boetes", "fastFunds": "Geld binnen 48 uur", "onlineProcess": "100% online proces", "transparentFees": "Transparante kosten" },
+      "benefits": {
+        "noCollateral": "Geen onderpand vereist",
+        "flexibleTerms": "Flexibele looptijden (12-84 maanden)",
+        "earlyRepayment": "Vervroegde aflossing zonder boetes",
+        "fastFunds": "Geld binnen 48 uur",
+        "onlineProcess": "100% online proces",
+        "transparentFees": "Transparante kosten"
+      },
       "examplesTitle": "Leningsvoorbeelden",
-      "tableHeaders": { "amount": "Bedrag", "duration": "Looptijd", "monthly": "Maandbedrag", "apr": "JKP", "totalCost": "Totale kosten" },
+      "tableHeaders": {
+        "amount": "Bedrag",
+        "duration": "Looptijd",
+        "monthly": "Maandbedrag",
+        "apr": "JKP",
+        "totalCost": "Totale kosten"
+      },
       "examplesDisclaimer": "*Voorbeelden zijn indicatief.",
       "guideTitle": "Complete gids voor persoonlijke leningen",
       "faqTitle": "FAQ Persoonlijke Lening"
@@ -703,7 +1031,14 @@
       "title": "Autolening",
       "description": "Rijd vandaag nog uw droomauto met onze flexibele autofinanciering.",
       "benefitsTitle": "Voordelen Autolening",
-      "benefits": { "newUsed": "Financiering nieuwe of gebruikte voertuigen", "competitiveRates": "Tarieven vanaf 3,2% JKP", "upTo": "Tot €50.000", "flexibleTerms": "Looptijden: 12 tot 72 maanden", "noDownPayment": "Geen aanbetaling", "fastApproval": "Snelle goedkeuring" },
+      "benefits": {
+        "newUsed": "Financiering nieuwe of gebruikte voertuigen",
+        "competitiveRates": "Tarieven vanaf 3,2% JKP",
+        "upTo": "Tot €50.000",
+        "flexibleTerms": "Looptijden: 12 tot 72 maanden",
+        "noDownPayment": "Geen aanbetaling",
+        "fastApproval": "Snelle goedkeuring"
+      },
       "guideTitle": "Complete Autolening Gids",
       "faqTitle": "FAQ Autolening"
     },
@@ -711,9 +1046,47 @@
       "title": "Zakelijke Lening",
       "description": "Flexibele financiering voor ondernemers en MKB.",
       "whyChoose": "Waarom onze Zakelijke Lening kiezen?",
-      "benefits": { "amounts": "Leningen van €5.000 tot €75.000", "flexibleTerms": "Looptijden: 12 tot 84 maanden", "fastApproval": "Snelle goedkeuring", "anyProject": "Voor elk project", "competitiveRates": "Concurrerende tarieven", "preserveCash": "Behoud uw cashflow" },
+      "benefits": {
+        "amounts": "Leningen van €5.000 tot €75.000",
+        "flexibleTerms": "Looptijden: 12 tot 84 maanden",
+        "fastApproval": "Snelle goedkeuring",
+        "anyProject": "Voor elk project",
+        "competitiveRates": "Concurrerende tarieven",
+        "preserveCash": "Behoud uw cashflow"
+      },
       "useCasesTitle": "Veelvoorkomende Toepassingen",
-      "useCases": { "workingCapital": { "title": "Werkkapitaal", "description": "Operationele kosten dekken", "typical": "€10.000 - €50.000" }, "equipment": { "title": "Apparatuur", "description": "Machines, voertuigen", "typical": "€15.000 - €75.000" }, "expansion": { "title": "Uitbreiding", "description": "Nieuwe locaties", "typical": "€20.000 - €75.000" }, "marketing": { "title": "Marketing", "description": "Reclamecampagnes", "typical": "€5.000 - €30.000" }, "inventory": { "title": "Voorraad", "description": "Producten, materialen", "typical": "€10.000 - €50.000" }, "refinancing": { "title": "Herfinanciering", "description": "Schulden consolideren", "typical": "€15.000 - €75.000" } },
+      "useCases": {
+        "workingCapital": {
+          "title": "Werkkapitaal",
+          "description": "Operationele kosten dekken",
+          "typical": "€10.000 - €50.000"
+        },
+        "equipment": {
+          "title": "Apparatuur",
+          "description": "Machines, voertuigen",
+          "typical": "€15.000 - €75.000"
+        },
+        "expansion": {
+          "title": "Uitbreiding",
+          "description": "Nieuwe locaties",
+          "typical": "€20.000 - €75.000"
+        },
+        "marketing": {
+          "title": "Marketing",
+          "description": "Reclamecampagnes",
+          "typical": "€5.000 - €30.000"
+        },
+        "inventory": {
+          "title": "Voorraad",
+          "description": "Producten, materialen",
+          "typical": "€10.000 - €50.000"
+        },
+        "refinancing": {
+          "title": "Herfinanciering",
+          "description": "Schulden consolideren",
+          "typical": "€15.000 - €75.000"
+        }
+      },
       "typicalAmount": "Typisch bedrag",
       "guideTitle": "Complete Gids Zakelijke Lening",
       "guide": {
@@ -781,21 +1154,75 @@
       "description": "Combineer meerdere schulden in één maandelijkse betaling.",
       "reducePayments": "Verlaag uw maandelijkse betalingen",
       "benefitsTitle": "Voordelen",
-      "benefits": { "singlePayment": "Eén betaling", "lowerRate": "Mogelijk lagere rente", "simplified": "Vereenvoudigd beheer", "fixedPayment": "Vast maandbedrag", "improveCredit": "Verbetert krediet", "reduceStress": "Vermindert stress" },
+      "benefits": {
+        "singlePayment": "Eén betaling",
+        "lowerRate": "Mogelijk lagere rente",
+        "simplified": "Vereenvoudigd beheer",
+        "fixedPayment": "Vast maandbedrag",
+        "improveCredit": "Verbetert krediet",
+        "reduceStress": "Vermindert stress"
+      },
       "whenToTitle": "Wanneer Consolidatie Overwegen?",
-      "scenarios": { "highInterest": { "title": "Meerdere Schulden", "description": "U heeft meerdere kaarten of leningen" }, "difficulty": { "title": "Moeilijk bij te houden", "description": "Meerdere data beheren is overweldigend" }, "goodCredit": { "title": "Goede Score", "description": "Kwalificeert voor betere rente" }, "stableIncome": { "title": "Stabiel Inkomen", "description": "Regelmatig inkomen" } },
+      "scenarios": {
+        "highInterest": {
+          "title": "Meerdere Schulden",
+          "description": "U heeft meerdere kaarten of leningen"
+        },
+        "difficulty": {
+          "title": "Moeilijk bij te houden",
+          "description": "Meerdere data beheren is overweldigend"
+        },
+        "goodCredit": {
+          "title": "Goede Score",
+          "description": "Kwalificeert voor betere rente"
+        },
+        "stableIncome": {
+          "title": "Stabiel Inkomen",
+          "description": "Regelmatig inkomen"
+        }
+      },
       "guideTitle": "Complete Gids",
       "risksTitle": "Waarschuwingen",
-      "risks": { "risk1": "Kan looptijd verlengen", "risk2": "Kaarten sluiten kan krediet beïnvloeden", "risk3": "Lost onderliggende gewoontes niet op", "risk4": "Vereist discipline", "risk5": "Kan kosten hebben" },
+      "risks": {
+        "risk1": "Kan looptijd verlengen",
+        "risk2": "Kaarten sluiten kan krediet beïnvloeden",
+        "risk3": "Lost onderliggende gewoontes niet op",
+        "risk4": "Vereist discipline",
+        "risk5": "Kan kosten hebben"
+      },
       "faqTitle": "FAQ Consolidatie"
     },
     "homeImprovement": {
       "title": "Verbouwingslening",
       "description": "Transformeer uw huis met onze flexibele verbouwingsfinanciering.",
       "whyChoose": "Waarom onze Verbouwingslening kiezen?",
-      "benefits": { "amounts": "Van €3.000 tot €75.000", "rates": "Vanaf 3,5% JKP", "terms": "Tot 15 jaar", "noCollateral": "Geen onderpand", "allProjects": "Voor alle projecten", "fastApproval": "Snelle goedkeuring" },
+      "benefits": {
+        "amounts": "Van €3.000 tot €75.000",
+        "rates": "Vanaf 3,5% JKP",
+        "terms": "Tot 15 jaar",
+        "noCollateral": "Geen onderpand",
+        "allProjects": "Voor alle projecten",
+        "fastApproval": "Snelle goedkeuring"
+      },
       "projectsTitle": "Projectvoorbeelden",
-      "projects": { "kitchen": { "title": "Keuken", "description": "Kasten, apparaten" }, "bathroom": { "title": "Badkamer", "description": "Sanitair, tegels" }, "extension": { "title": "Uitbreiding", "description": "Extra kamer" }, "energy": { "title": "Energie-efficiëntie", "description": "Zonnepanelen, isolatie" } },
+      "projects": {
+        "kitchen": {
+          "title": "Keuken",
+          "description": "Kasten, apparaten"
+        },
+        "bathroom": {
+          "title": "Badkamer",
+          "description": "Sanitair, tegels"
+        },
+        "extension": {
+          "title": "Uitbreiding",
+          "description": "Extra kamer"
+        },
+        "energy": {
+          "title": "Energie-efficiëntie",
+          "description": "Zonnepanelen, isolatie"
+        }
+      },
       "loanAmount": "Bedrag",
       "monthlyPayment": "Maandbedrag",
       "durationAt": "Looptijd {duration} tegen ~{rate}% JKP",
@@ -806,10 +1233,25 @@
     "projectFinancing": {
       "title": "Projectfinanciering Aanvraag",
       "subtitle": "Vul dit formulier in. Ons team analyseert uw aanvraag binnen 48 uur.",
-      "steps": { "project": "Uw Project", "funding": "Financiering", "company": "Bedrijf", "documents": "Documenten" },
-      "navigation": { "previous": "Vorige", "next": "Volgende", "submit": "Aanvraag indienen" },
-      "validation": { "validationError": "Validatiefout", "correctErrors": "Corrigeer de fouten." },
-      "messages": { "success": "Aanvraag ingediend!", "successDesc": "Uw aanvraag is succesvol verzonden." }
+      "steps": {
+        "project": "Uw Project",
+        "funding": "Financiering",
+        "company": "Bedrijf",
+        "documents": "Documenten"
+      },
+      "navigation": {
+        "previous": "Vorige",
+        "next": "Volgende",
+        "submit": "Aanvraag indienen"
+      },
+      "validation": {
+        "validationError": "Validatiefout",
+        "correctErrors": "Corrigeer de fouten."
+      },
+      "messages": {
+        "success": "Aanvraag ingediend!",
+        "successDesc": "Uw aanvraag is succesvol verzonden."
+      }
     }
   },
   "seo": {
@@ -818,5 +1260,133 @@
     "author": "Fundia Invest",
     "ogTitle": "Fundia Invest - Snelle Online Leningen & Kredietoplossingen",
     "ogDescription": "Directe goedkeuring, concurrerende rente vanaf 2,9 % JKP, flexibele voorwaarden. Uw betrouwbare kredietpartner."
+  },
+  "network": {
+    "nav": {
+      "badge": "NIEUW"
+    },
+    "landing": {
+      "badge": "Privétoegang",
+      "title": "Uw project verdient de juiste mensen.",
+      "subtitle": "Maak direct contact met kredietverstrekkers, investeerders en financiële partners die uw type aanvraag bestuderen.",
+      "cta": "Toegang tot het Netwerk",
+      "ctaSecondary": "Financiers verkennen",
+      "disclaimer": "Fundia Network garandeert geen financiering. Wij faciliteren alleen introducties bij partners die uw aanvraag kunnen beoordelen.",
+      "stats": {
+        "funders": "gekwalificeerde financiers",
+        "responseTime": "Gemiddelde reactie",
+        "responseValue": "48u",
+        "successRate": "Introductiepercentage",
+        "members": "actieve leden"
+      }
+    },
+    "teaser": {
+      "badge": "NIEUW — FUNDIA NETWORK",
+      "title": "Directe toegang tot financiers die uw aanvraag bestuderen.",
+      "subtitle": "Ons privénetwerk van geverifieerde kredietverstrekkers, investeerders en financiële partners staat klaar.",
+      "funders": "gekwalificeerde financiers",
+      "verified": "Geverifieerd door Fundia",
+      "responseTime": "Gemiddelde reactie binnen 48u",
+      "cta": "Fundia Network ontdekken",
+      "types": {
+        "lenders": "Private kredietverstrekkers",
+        "angels": "Business Angels & fondsen",
+        "partners": "Gespecialiseerde financiële partners"
+      }
+    },
+    "howItWorks": {
+      "title": "Hoe het werkt",
+      "step1": {
+        "title": "Vul uw profiel in",
+        "description": "Beschrijf uw project en de gewenste financiering."
+      },
+      "step2": {
+        "title": "Verken het netwerk",
+        "description": "Filter financiers op specialiteit, ticket en regio."
+      },
+      "step3": {
+        "title": "Neem direct contact op",
+        "description": "Stuur uw aanvraag met één klik en volg uw verzoeken in realtime."
+      }
+    },
+    "funderTypes": {
+      "private": "Private Kredietverstrekkers",
+      "investors": "Investeerders",
+      "angels": "Business Angels",
+      "funds": "Gespecialiseerde Fondsen"
+    },
+    "badges": {
+      "verified": "Geverifieerd door Fundia",
+      "active": "Zeer actief",
+      "topResponder": "Top Reageerder",
+      "new": "Nieuw"
+    },
+    "pricing": {
+      "title": "Één toegang. Één eenvoudige prijs.",
+      "subtitle": "Word lid van Fundia Network en krijg toegang tot het volledige netwerk.",
+      "price": "19,90",
+      "period": "/ jaar",
+      "monthly": "dat is €1,66 / maand",
+      "cta": "Nu beginnen",
+      "guarantee": "Tevreden of 30 dagen terugbetaald",
+      "features": [
+        "Onbeperkte toegang tot 240+ profielen",
+        "Geavanceerde filters op specialiteit en ticket",
+        "Direct en onbeperkt contact",
+        "Realtime tracking van uw verzoeken",
+        "Geverifieerd Lid-badge",
+        "Prioritaire ondersteuning"
+      ],
+      "secure": "Veilige betaling · Op elk moment annuleren · AVG-conform"
+    },
+    "trust": {
+      "noGuarantee": "Wij garanderen geen financiering",
+      "noGuaranteeDesc": "Fundia Network faciliteert introducties. De beslissing behoort toe aan de financiers.",
+      "verified": "Geverifieerde financiers",
+      "verifiedDesc": "Elke financier is gecontroleerd door ons team.",
+      "privacy": "Uw gegevens beschermd",
+      "privacyDesc": "Uw profiel wordt nooit gedeeld zonder uw uitdrukkelijke toestemming."
+    },
+    "preview": {
+      "title": "Netwerkpreview",
+      "subtitle": "Hier is een voorbeeld van de beschikbare financiers.",
+      "locked": "Profiel ontgrendeld met Premium toegang",
+      "specialties": {
+        "real_estate": "Vastgoed",
+        "startup": "Startup",
+        "personal": "Persoonlijk",
+        "professional": "Professioneel",
+        "auto": "Auto",
+        "green": "Groen project"
+      },
+      "ticketFrom": "Ticket vanaf",
+      "ticketTo": "tot",
+      "contact": "Contact opnemen",
+      "viewProfile": "Profiel bekijken"
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "q1": "Garandeert Fundia Network financiering?",
+      "a1": "Nee. De beslissing behoort toe aan de financiers.",
+      "q2": "Wie zijn de netwerk financiers?",
+      "a2": "Private kredietverstrekkers, investeerders, business angels en gespecialiseerde fondsen.",
+      "q3": "Worden mijn gegevens gedeeld?",
+      "a3": "Alleen als u besluit een financier te contacteren.",
+      "q4": "Kan ik op elk moment annuleren?",
+      "a4": "Ja, met 30 dagen terugbetalingsgarantie.",
+      "q5": "Hoeveel financiers kan ik contacteren?",
+      "a5": "Onbeperkt. We raden aan selectief te zijn."
+    },
+    "dashboard": {
+      "upgradeTitle": "Fundia Network",
+      "upgradeSubtitle": "Toegang tot 240+ gekwalificeerde financiers.",
+      "upgradeFeature1": "Private kredietverstrekkers",
+      "upgradeFeature2": "Kapitaalinvesteerders",
+      "upgradeFeature3": "Geverifieerde gespecialiseerde fondsen",
+      "upgradeCta": "Toegang activeren — €19,90/jaar",
+      "activeTitle": "Fundia Network — Actief",
+      "activeSubtitle": "Uw netwerktoegang is actief.",
+      "exploreCta": "Netwerk verkennen"
+    }
   }
 }

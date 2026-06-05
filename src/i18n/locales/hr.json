@@ -3,14 +3,89 @@
     "faq": {
       "title": "Često Postavljana Pitanja",
       "subtitle": "Sve što trebate znati o zajmovima, zahtjevima i Fundia Invest",
-      "categories": { "general": "Opća Pitanja", "application": "Proces Zahtjeva", "rates": "Stope i Uvjeti", "repayment": "Otplata i Upravljanje", "credit": "Kredit i Podobnost", "security": "Sigurnost i Privatnost", "special": "Posebne Situacije" },
-      "general": { "q1": "Što je Fundia Invest?", "a1": "Fundia Invest je online platforma za zajmove koja povezuje zajmoprimce s konkurentnim ponudama kredita.", "q2": "Kako Fundia Invest zarađuje?", "a2": "Primamo proviziju od financijskih partnera. Usluga je besplatna za zajmoprimce.", "q3": "Je li Fundia Invest siguran?", "a3": "Da, koristimo bankovnu enkripciju i u potpunosti smo usklađeni s GDPR-om." },
-      "application": { "q1": "Koliko dugo traje zahtjev?", "a1": "Oko 5 do 10 minuta online.", "q2": "Koji dokumenti su potrebni?", "a2": "Valjana osobna iskaznica, dokaz o prihodima, bankovni izvodi i dokaz o adresi.", "q3": "Utječe li provjera stope na moju kreditnu ocjenu?", "a3": "Ne, koristimo meku kreditnu provjeru.", "q4": "Mogu li podnijeti zahtjev kao samostalni radnik?", "a4": "Da! Samostalni radnici su dobrodošli.", "q5": "Što ako je moj zahtjev odbijen?", "a5": "Objasnit ćemo zašto i predložiti alternative." },
-      "rates": { "q1": "Koje kamatne stope nudite?", "a1": "Od 2,9% EKS za kvalificirane zajmoprimce.", "q2": "Kako se određuje moja kamatna stopa?", "a2": "Na temelju kreditne ocjene, prihoda i iznosa zajma.", "q3": "Jesu li stope fiksne ili varijabilne?", "a3": "Svi naši zajmovi imaju fiksne stope.", "q4": "Koji iznosi su dostupni?", "a4": "Od 1.000€ do 75.000€.", "q5": "Koja trajanja su dostupna?", "a5": "Od 12 do 84 mjeseca.", "q6": "Ima li naknada?", "a6": "Ne naplaćujemo naknade za obradu." },
-      "repayment": { "q1": "Kako vršim plaćanja?", "a1": "Automatska naplata s vašeg bankovnog računa.", "q2": "Mogu li promijeniti datum plaćanja?", "a2": "Da, kontaktirajte korisničku službu.", "q3": "Mogu li prijevremeno otplatiti?", "a3": "Da, bez kazni.", "q4": "Što ako propustim plaćanje?", "a4": "Odmah nas kontaktirajte.", "q5": "Mogu li kasnije povećati iznos?", "a5": "Ne jednom kada je aktivan, ali refinanciranje je moguće." },
-      "credit": { "q1": "Koja kreditna ocjena je potrebna?", "a1": "Preferiramo ocjene iznad 650.", "q2": "Mogu li podnijeti zahtjev s lošim kreditom?", "a2": "Da, radimo sa svim kreditnim profilima.", "q3": "Prihvaćate li suvozače?", "a3": "Da, to može poboljšati vaše šanse.", "q4": "Koji je minimalni prihod?", "a4": "Morate dokazati dovoljan prihod." },
-      "security": { "q1": "Kako su moji podaci zaštićeni?", "a1": "256-bitna SSL enkripcija i GDPR usklađenost.", "q2": "Tko ima pristup mojim podacima?", "a2": "Samo ovlašteno osoblje.", "q3": "Koliko dugo čuvate moje podatke?", "a3": "Prema zakonskim zahtjevima." },
-      "special": { "q1": "Mogu li podnijeti zahtjev kao umirovljenik?", "a1": "Da!", "q2": "Nudite li zajmove za studente?", "a2": "Studenti s prihodima mogu podnijeti zahtjev.", "q3": "Mogu li koristiti zajam za osnivanje tvrtke?", "a3": "Preporučujemo naš Poslovni zajam.", "q4": "Što ako sam u razvodu?", "a4": "Možete podnijeti zahtjev s individualnim prihodima." }
+      "categories": {
+        "general": "Opća Pitanja",
+        "application": "Proces Zahtjeva",
+        "rates": "Stope i Uvjeti",
+        "repayment": "Otplata i Upravljanje",
+        "credit": "Kredit i Podobnost",
+        "security": "Sigurnost i Privatnost",
+        "special": "Posebne Situacije"
+      },
+      "general": {
+        "q1": "Što je Fundia Invest?",
+        "a1": "Fundia Invest je online platforma za zajmove koja povezuje zajmoprimce s konkurentnim ponudama kredita.",
+        "q2": "Kako Fundia Invest zarađuje?",
+        "a2": "Primamo proviziju od financijskih partnera. Usluga je besplatna za zajmoprimce.",
+        "q3": "Je li Fundia Invest siguran?",
+        "a3": "Da, koristimo bankovnu enkripciju i u potpunosti smo usklađeni s GDPR-om."
+      },
+      "application": {
+        "q1": "Koliko dugo traje zahtjev?",
+        "a1": "Oko 5 do 10 minuta online.",
+        "q2": "Koji dokumenti su potrebni?",
+        "a2": "Valjana osobna iskaznica, dokaz o prihodima, bankovni izvodi i dokaz o adresi.",
+        "q3": "Utječe li provjera stope na moju kreditnu ocjenu?",
+        "a3": "Ne, koristimo meku kreditnu provjeru.",
+        "q4": "Mogu li podnijeti zahtjev kao samostalni radnik?",
+        "a4": "Da! Samostalni radnici su dobrodošli.",
+        "q5": "Što ako je moj zahtjev odbijen?",
+        "a5": "Objasnit ćemo zašto i predložiti alternative."
+      },
+      "rates": {
+        "q1": "Koje kamatne stope nudite?",
+        "a1": "Od 2,9% EKS za kvalificirane zajmoprimce.",
+        "q2": "Kako se određuje moja kamatna stopa?",
+        "a2": "Na temelju kreditne ocjene, prihoda i iznosa zajma.",
+        "q3": "Jesu li stope fiksne ili varijabilne?",
+        "a3": "Svi naši zajmovi imaju fiksne stope.",
+        "q4": "Koji iznosi su dostupni?",
+        "a4": "Od 1.000€ do 75.000€.",
+        "q5": "Koja trajanja su dostupna?",
+        "a5": "Od 12 do 84 mjeseca.",
+        "q6": "Ima li naknada?",
+        "a6": "Ne naplaćujemo naknade za obradu."
+      },
+      "repayment": {
+        "q1": "Kako vršim plaćanja?",
+        "a1": "Automatska naplata s vašeg bankovnog računa.",
+        "q2": "Mogu li promijeniti datum plaćanja?",
+        "a2": "Da, kontaktirajte korisničku službu.",
+        "q3": "Mogu li prijevremeno otplatiti?",
+        "a3": "Da, bez kazni.",
+        "q4": "Što ako propustim plaćanje?",
+        "a4": "Odmah nas kontaktirajte.",
+        "q5": "Mogu li kasnije povećati iznos?",
+        "a5": "Ne jednom kada je aktivan, ali refinanciranje je moguće."
+      },
+      "credit": {
+        "q1": "Koja kreditna ocjena je potrebna?",
+        "a1": "Preferiramo ocjene iznad 650.",
+        "q2": "Mogu li podnijeti zahtjev s lošim kreditom?",
+        "a2": "Da, radimo sa svim kreditnim profilima.",
+        "q3": "Prihvaćate li suvozače?",
+        "a3": "Da, to može poboljšati vaše šanse.",
+        "q4": "Koji je minimalni prihod?",
+        "a4": "Morate dokazati dovoljan prihod."
+      },
+      "security": {
+        "q1": "Kako su moji podaci zaštićeni?",
+        "a1": "256-bitna SSL enkripcija i GDPR usklađenost.",
+        "q2": "Tko ima pristup mojim podacima?",
+        "a2": "Samo ovlašteno osoblje.",
+        "q3": "Koliko dugo čuvate moje podatke?",
+        "a3": "Prema zakonskim zahtjevima."
+      },
+      "special": {
+        "q1": "Mogu li podnijeti zahtjev kao umirovljenik?",
+        "a1": "Da!",
+        "q2": "Nudite li zajmove za studente?",
+        "a2": "Studenti s prihodima mogu podnijeti zahtjev.",
+        "q3": "Mogu li koristiti zajam za osnivanje tvrtke?",
+        "a3": "Preporučujemo naš Poslovni zajam.",
+        "q4": "Što ako sam u razvodu?",
+        "a4": "Možete podnijeti zahtjev s individualnim prihodima."
+      }
     },
     "glossary": {
       "title": "Pojmovnik Kredita",
@@ -18,50 +93,164 @@
       "searchPlaceholder": "Traži pojmove...",
       "noResults": "Nema pronađenih pojmova.",
       "terms": {
-        "apr": { "term": "EKS", "definition": "Godišnji trošak zajma u postotku." },
-        "amortization": { "term": "Amortizacija", "definition": "Proces otplate duga redovitim plaćanjima." },
-        "collateral": { "term": "Kolateral", "definition": "Imovina založena kao osiguranje." },
-        "creditScore": { "term": "Kreditna ocjena", "definition": "Numerička ocjena vaše kreditne sposobnosti." },
-        "consolidation": { "term": "Konsolidacija", "definition": "Spajanje više dugova u jedan zajam." },
-        "dti": { "term": "Omjer duga i prihoda", "definition": "Postotak prihoda za plaćanja duga." },
-        "default": { "term": "Neplaćanje", "definition": "Propust vraćanja zajma." },
-        "deferment": { "term": "Odgoda", "definition": "Mogućnost odgode plaćanja." },
-        "fixedRate": { "term": "Fiksna stopa", "definition": "Stopa koja ostaje konstantna." },
-        "gracePeriod": { "term": "Počekni rok", "definition": "Period nakon dospijeća bez kazne." },
-        "guarantor": { "term": "Jamac", "definition": "Osoba koja jamči plaćanje." },
-        "hardInquiry": { "term": "Tvrdi upit", "definition": "Kreditna provjera pri zahtjevu." },
-        "interestRate": { "term": "Kamatna stopa", "definition": "Postotak na glavnicu." },
-        "loanTerm": { "term": "Rok zajma", "definition": "Trajanje za otplatu." },
-        "originationFee": { "term": "Naknada za obradu", "definition": "Naknada za obradu zahtjeva." },
-        "preApproval": { "term": "Predodobrenje", "definition": "Preliminarna procjena iznosa." },
-        "principal": { "term": "Glavnica", "definition": "Izvorno posuđeni iznos." },
-        "refinancing": { "term": "Refinanciranje", "definition": "Zamjena postojećeg zajma novim." },
-        "securedLoan": { "term": "Osigurani zajam", "definition": "Zajam s kolateralom." },
-        "softInquiry": { "term": "Meki upit", "definition": "Provjera bez utjecaja na ocjenu." },
-        "unsecuredLoan": { "term": "Neosigurani zajam", "definition": "Zajam bez kolaterala." },
-        "variableRate": { "term": "Varijabilna stopa", "definition": "Stopa koja se može mijenjati." },
-        "borrowingCapacity": { "term": "Kapacitet zaduživanja", "definition": "Maksimalni iznos za posudbu." },
-        "coBorrower": { "term": "Suzajmoprimac", "definition": "Osoba koja zajedno traži zajam." },
-        "borrowerInsurance": { "term": "Osiguranje zajmoprimca", "definition": "Osiguranje za plaćanja." },
-        "prepaymentPenalty": { "term": "Kazna za prijevremenu otplatu", "definition": "Naknada za ranu otplatu. Mi nemamo kazni." },
-        "revolvingCredit": { "term": "Revolving kredit", "definition": "Kredit koji možete ponovno koristiti." },
-        "amortizationSchedule": { "term": "Plan amortizacije", "definition": "Detaljan pregled plaćanja." },
-        "nominalRate": { "term": "Nominalna stopa", "definition": "Osnovna stopa bez naknada." },
-        "interestOnly": { "term": "Razdoblje kamata", "definition": "Period plaćanja samo kamata." },
-        "debtRestructuring": { "term": "Restrukturiranje duga", "definition": "Izmjena uvjeta zajma." },
-        "affectedCredit": { "term": "Namjenski kredit", "definition": "Zajam vezan uz specifičnu kupnju." },
-        "unaffectedCredit": { "term": "Nenamjenski kredit", "definition": "Zajam za slobodnu upotrebu." }
+        "apr": {
+          "term": "EKS",
+          "definition": "Godišnji trošak zajma u postotku."
+        },
+        "amortization": {
+          "term": "Amortizacija",
+          "definition": "Proces otplate duga redovitim plaćanjima."
+        },
+        "collateral": {
+          "term": "Kolateral",
+          "definition": "Imovina založena kao osiguranje."
+        },
+        "creditScore": {
+          "term": "Kreditna ocjena",
+          "definition": "Numerička ocjena vaše kreditne sposobnosti."
+        },
+        "consolidation": {
+          "term": "Konsolidacija",
+          "definition": "Spajanje više dugova u jedan zajam."
+        },
+        "dti": {
+          "term": "Omjer duga i prihoda",
+          "definition": "Postotak prihoda za plaćanja duga."
+        },
+        "default": {
+          "term": "Neplaćanje",
+          "definition": "Propust vraćanja zajma."
+        },
+        "deferment": {
+          "term": "Odgoda",
+          "definition": "Mogućnost odgode plaćanja."
+        },
+        "fixedRate": {
+          "term": "Fiksna stopa",
+          "definition": "Stopa koja ostaje konstantna."
+        },
+        "gracePeriod": {
+          "term": "Počekni rok",
+          "definition": "Period nakon dospijeća bez kazne."
+        },
+        "guarantor": {
+          "term": "Jamac",
+          "definition": "Osoba koja jamči plaćanje."
+        },
+        "hardInquiry": {
+          "term": "Tvrdi upit",
+          "definition": "Kreditna provjera pri zahtjevu."
+        },
+        "interestRate": {
+          "term": "Kamatna stopa",
+          "definition": "Postotak na glavnicu."
+        },
+        "loanTerm": {
+          "term": "Rok zajma",
+          "definition": "Trajanje za otplatu."
+        },
+        "originationFee": {
+          "term": "Naknada za obradu",
+          "definition": "Naknada za obradu zahtjeva."
+        },
+        "preApproval": {
+          "term": "Predodobrenje",
+          "definition": "Preliminarna procjena iznosa."
+        },
+        "principal": {
+          "term": "Glavnica",
+          "definition": "Izvorno posuđeni iznos."
+        },
+        "refinancing": {
+          "term": "Refinanciranje",
+          "definition": "Zamjena postojećeg zajma novim."
+        },
+        "securedLoan": {
+          "term": "Osigurani zajam",
+          "definition": "Zajam s kolateralom."
+        },
+        "softInquiry": {
+          "term": "Meki upit",
+          "definition": "Provjera bez utjecaja na ocjenu."
+        },
+        "unsecuredLoan": {
+          "term": "Neosigurani zajam",
+          "definition": "Zajam bez kolaterala."
+        },
+        "variableRate": {
+          "term": "Varijabilna stopa",
+          "definition": "Stopa koja se može mijenjati."
+        },
+        "borrowingCapacity": {
+          "term": "Kapacitet zaduživanja",
+          "definition": "Maksimalni iznos za posudbu."
+        },
+        "coBorrower": {
+          "term": "Suzajmoprimac",
+          "definition": "Osoba koja zajedno traži zajam."
+        },
+        "borrowerInsurance": {
+          "term": "Osiguranje zajmoprimca",
+          "definition": "Osiguranje za plaćanja."
+        },
+        "prepaymentPenalty": {
+          "term": "Kazna za prijevremenu otplatu",
+          "definition": "Naknada za ranu otplatu. Mi nemamo kazni."
+        },
+        "revolvingCredit": {
+          "term": "Revolving kredit",
+          "definition": "Kredit koji možete ponovno koristiti."
+        },
+        "amortizationSchedule": {
+          "term": "Plan amortizacije",
+          "definition": "Detaljan pregled plaćanja."
+        },
+        "nominalRate": {
+          "term": "Nominalna stopa",
+          "definition": "Osnovna stopa bez naknada."
+        },
+        "interestOnly": {
+          "term": "Razdoblje kamata",
+          "definition": "Period plaćanja samo kamata."
+        },
+        "debtRestructuring": {
+          "term": "Restrukturiranje duga",
+          "definition": "Izmjena uvjeta zajma."
+        },
+        "affectedCredit": {
+          "term": "Namjenski kredit",
+          "definition": "Zajam vezan uz specifičnu kupnju."
+        },
+        "unaffectedCredit": {
+          "term": "Nenamjenski kredit",
+          "definition": "Zajam za slobodnu upotrebu."
+        }
       }
     },
     "creditGuide": {
       "title": "Vodič za Kredit",
       "subtitle": "Obrazovni resursi za informirane odluke o zajmu",
       "articles": {
-        "choosingLoan": { "title": "Odabir pravog zajma", "content": "Odaberite pravi zajam razmatrajući svoju financijsku situaciju i ciljeve. Usporedite EKS stope i provjerite sve naknade." },
-        "debtRatio": { "title": "Razumijevanje omjera duga", "content": "Vaš omjer duga i prihoda ključan je za kreditore. Držite ga ispod 36% za bolje uvjete." },
-        "comparingOffers": { "title": "Usporedba ponuda zajmova", "content": "Fokusirajte se na EKS, ukupne troškove i fleksibilnost pri usporedbi ponuda." },
-        "earlyRepayment": { "title": "Prijevremena otplata", "content": "Prijevremena otplata štedi kamate, ali prvo provjerite kazne." },
-        "buildingCredit": { "title": "Izgradnja dobrog kredita", "content": "Povijest plaćanja čini 35% vaše ocjene. Nikad ne propustite plaćanje." }
+        "choosingLoan": {
+          "title": "Odabir pravog zajma",
+          "content": "Odaberite pravi zajam razmatrajući svoju financijsku situaciju i ciljeve. Usporedite EKS stope i provjerite sve naknade."
+        },
+        "debtRatio": {
+          "title": "Razumijevanje omjera duga",
+          "content": "Vaš omjer duga i prihoda ključan je za kreditore. Držite ga ispod 36% za bolje uvjete."
+        },
+        "comparingOffers": {
+          "title": "Usporedba ponuda zajmova",
+          "content": "Fokusirajte se na EKS, ukupne troškove i fleksibilnost pri usporedbi ponuda."
+        },
+        "earlyRepayment": {
+          "title": "Prijevremena otplata",
+          "content": "Prijevremena otplata štedi kamate, ali prvo provjerite kazne."
+        },
+        "buildingCredit": {
+          "title": "Izgradnja dobrog kredita",
+          "content": "Povijest plaćanja čini 35% vaše ocjene. Nikad ne propustite plaćanje."
+        }
       }
     }
   },
@@ -80,7 +269,14 @@
     "myProfile": "Moj Profil",
     "login": "Prijava",
     "logout": "Odjava",
-    "admin": "Administracija"
+    "admin": "Administracija",
+    "network": "Mreža",
+    "networkMenu": {
+      "title": "Fundia Network",
+      "explore": "Istražite financijere",
+      "howItWorks": "Kako funkcionira",
+      "becomePartner": "Postanite financijski partner"
+    }
   },
   "languages": {
     "fr": "Français",
@@ -112,9 +308,18 @@
     },
     "features": {
       "title": "Zašto Odabrati Nas?",
-      "fast": { "title": "Brz Odgovor", "description": "Preliminarni odgovor u maksimalno 48 sati" },
-      "personalized": { "title": "Prilagođeno Rješenje", "description": "Ponude prilagođene vašoj situaciji" },
-      "secure": { "title": "100% Sigurno", "description": "Vaši podaci su zaštićeni" }
+      "fast": {
+        "title": "Brz Odgovor",
+        "description": "Preliminarni odgovor u maksimalno 48 sati"
+      },
+      "personalized": {
+        "title": "Prilagođeno Rješenje",
+        "description": "Ponude prilagođene vašoj situaciji"
+      },
+      "secure": {
+        "title": "100% Sigurno",
+        "description": "Vaši podaci su zaštićeni"
+      }
     },
     "featuresSection": {
       "title": "Zašto Odabrati Fundia Invest?",
@@ -122,10 +327,22 @@
     },
     "products": {
       "title": "Naša Kreditna Rješenja",
-      "personal": { "title": "Osobni Zajam", "description": "Za vaše osobne projekte" },
-      "auto": { "title": "Auto Kredit", "description": "Financirajte svoje vozilo" },
-      "home": { "title": "Kredit za Obnovu", "description": "Obnovite svoj dom" },
-      "consolidation": { "title": "Konsolidacija Dugova", "description": "Pojednostavite svoje otplate" }
+      "personal": {
+        "title": "Osobni Zajam",
+        "description": "Za vaše osobne projekte"
+      },
+      "auto": {
+        "title": "Auto Kredit",
+        "description": "Financirajte svoje vozilo"
+      },
+      "home": {
+        "title": "Kredit za Obnovu",
+        "description": "Obnovite svoj dom"
+      },
+      "consolidation": {
+        "title": "Konsolidacija Dugova",
+        "description": "Pojednostavite svoje otplate"
+      }
     },
     "productsSection": {
       "title": "Naši Kreditni Proizvodi",
@@ -135,18 +352,39 @@
     "howItWorks": {
       "title": "Kako Funkcionira?",
       "subtitle": "Jednostavan i brz proces u 4 koraka za dobivanje financiranja",
-      "step1": { "title": "Simulirajte svoj kredit", "description": "Koristite naš kalkulator za procjenu mjesečnih rata u sekundama" },
-      "step2": { "title": "Pošaljite svoj zahtjev", "description": "Ispunite naš siguran online obrazac za manje od 5 minuta" },
-      "step3": { "title": "Primite trenutni odgovor", "description": "Naš sustav daje vam neposredan preliminarni odgovor" },
-      "step4": { "title": "Primite svoja sredstva", "description": "Nakon odobrenja, primite novac u roku od 48h na svoj račun" },
+      "step1": {
+        "title": "Simulirajte svoj kredit",
+        "description": "Koristite naš kalkulator za procjenu mjesečnih rata u sekundama"
+      },
+      "step2": {
+        "title": "Pošaljite svoj zahtjev",
+        "description": "Ispunite naš siguran online obrazac za manje od 5 minuta"
+      },
+      "step3": {
+        "title": "Primite trenutni odgovor",
+        "description": "Naš sustav daje vam neposredan preliminarni odgovor"
+      },
+      "step4": {
+        "title": "Primite svoja sredstva",
+        "description": "Nakon odobrenja, primite novac u roku od 48h na svoj račun"
+      },
       "startNow": "Započni Sada"
     },
     "mission": {
       "title": "Naša Misija",
       "statement": "Učiniti financiranje jednostavnim, pristupačnim i sigurnim za sve.",
-      "accessibility": { "title": "Pristupačnost", "description": "Rješenja financiranja otvorena za sve, s pojednostavljenim i transparentnim procesima." },
-      "trust": { "title": "Povjerenje", "description": "Maksimalna sigurnost vaših podataka i personalizirana podrška u svakom koraku." },
-      "innovation": { "title": "Inovacija", "description": "Napredna tehnologija za brze odluke i konkurentne stope." }
+      "accessibility": {
+        "title": "Pristupačnost",
+        "description": "Rješenja financiranja otvorena za sve, s pojednostavljenim i transparentnim procesima."
+      },
+      "trust": {
+        "title": "Povjerenje",
+        "description": "Maksimalna sigurnost vaših podataka i personalizirana podrška u svakom koraku."
+      },
+      "innovation": {
+        "title": "Inovacija",
+        "description": "Napredna tehnologija za brze odluke i konkurentne stope."
+      }
     },
     "successStories": {
       "title": "Ostvarili su svoje projekte s nama",
@@ -166,8 +404,13 @@
         "location": "Pariz - Kredit od 15.000€"
       }
     },
-    "faqSection": { "title": "Često Postavljana Pitanja", "viewAll": "Pogledaj Cijeli FAQ" },
-    "partners": { "title": "Odobreno od vodećih financijskih institucija" },
+    "faqSection": {
+      "title": "Često Postavljana Pitanja",
+      "viewAll": "Pogledaj Cijeli FAQ"
+    },
+    "partners": {
+      "title": "Odobreno od vodećih financijskih institucija"
+    },
     "cta": {
       "title": "Spremni za Početak?",
       "description": "Pridružite se tisućama zadovoljnih klijenata koji su odabrali Fundia Invest za svoje potrebe financiranja.",
@@ -184,18 +427,32 @@
       "expertSupportDesc": "Posvećeni savjetnici dostupni da vas vode kroz svaki korak procesa."
     },
     "loanProducts": {
-      "personal": "Osobni Zajam", "personalDesc": "Od 1.000€ do 75.000€ za sve vaše osobne projekte", "personalRate": "Od 2,9% EKS",
-      "auto": "Auto Kredit", "autoDesc": "Financirajte svoj automobil iz snova s fleksibilnim opcijama plaćanja", "autoRate": "Od 3,2% EKS",
-      "home": "Kredit za Obnovu", "homeDesc": "Transformirajte svoj dom s našim kreditima za obnovu", "homeRate": "Od 3,5% EKS",
-      "consolidation": "Konsolidacija Dugova", "consolidationDesc": "Pojednostavite svoje financije konsolidacijom više dugova", "consolidationRate": "Od 4,2% EKS"
+      "personal": "Osobni Zajam",
+      "personalDesc": "Od 1.000€ do 75.000€ za sve vaše osobne projekte",
+      "personalRate": "Od 2,9% EKS",
+      "auto": "Auto Kredit",
+      "autoDesc": "Financirajte svoj automobil iz snova s fleksibilnim opcijama plaćanja",
+      "autoRate": "Od 3,2% EKS",
+      "home": "Kredit za Obnovu",
+      "homeDesc": "Transformirajte svoj dom s našim kreditima za obnovu",
+      "homeRate": "Od 3,5% EKS",
+      "consolidation": "Konsolidacija Dugova",
+      "consolidationDesc": "Pojednostavite svoje financije konsolidacijom više dugova",
+      "consolidationRate": "Od 4,2% EKS"
     },
     "faqs": {
-      "q1": "Koliko brzo mogu dobiti odobrenje svog zajma?", "a1": "Naš sustav trenutne odluke pruža preliminarno odobrenje za manje od 5 minuta. Konačno odobrenje obično traje 24 do 48 sati nakon provjere dokumenata.",
-      "q2": "Koja je minimalna potrebna kreditna ocjena?", "a2": "Prihvaćamo zahtjeve klijenata s različitim kreditnim profilima. Iako ocjena iznad 650 poboljšava vaše šanse, svaki zahtjev ocjenjujemo pojedinačno.",
-      "q3": "Mogu li otplatiti svoj zajam ranije bez kazni?", "a3": "Da, svi naši zajmovi dopuštaju prijevremenu otplatu bez kazni. Uštedit ćete na kamatama otplativši svoj zajam ranije.",
-      "q4": "Koje dokumente moram dostaviti za prijavu?", "a4": "Trebat će vam valjana osobna iskaznica, dokaz o prihodima (zadnje 3 platne liste), bankovni izvodi i dokaz o adresi. Dodatni dokumenti mogu biti zatraženi ovisno o vašoj situaciji.",
-      "q5": "Kako se izračunava moja mjesečna rata?", "a5": "Vaša mjesečna rata ovisi o iznosu zajma, trajanju i vašem EKS-u. Koristite naš simulator iznad za trenutni izračun prilagođen vašim potrebama.",
-      "q6": "Utječe li provjera stopa na moju kreditnu ocjenu?", "a6": "Ne, provjera vaše podobnosti ne utječe na vašu kreditnu ocjenu. Samo formalni zahtjev za kredit bit će evidentiran u vašoj kreditnoj povijesti."
+      "q1": "Koliko brzo mogu dobiti odobrenje svog zajma?",
+      "a1": "Naš sustav trenutne odluke pruža preliminarno odobrenje za manje od 5 minuta. Konačno odobrenje obično traje 24 do 48 sati nakon provjere dokumenata.",
+      "q2": "Koja je minimalna potrebna kreditna ocjena?",
+      "a2": "Prihvaćamo zahtjeve klijenata s različitim kreditnim profilima. Iako ocjena iznad 650 poboljšava vaše šanse, svaki zahtjev ocjenjujemo pojedinačno.",
+      "q3": "Mogu li otplatiti svoj zajam ranije bez kazni?",
+      "a3": "Da, svi naši zajmovi dopuštaju prijevremenu otplatu bez kazni. Uštedit ćete na kamatama otplativši svoj zajam ranije.",
+      "q4": "Koje dokumente moram dostaviti za prijavu?",
+      "a4": "Trebat će vam valjana osobna iskaznica, dokaz o prihodima (zadnje 3 platne liste), bankovni izvodi i dokaz o adresi. Dodatni dokumenti mogu biti zatraženi ovisno o vašoj situaciji.",
+      "q5": "Kako se izračunava moja mjesečna rata?",
+      "a5": "Vaša mjesečna rata ovisi o iznosu zajma, trajanju i vašem EKS-u. Koristite naš simulator iznad za trenutni izračun prilagođen vašim potrebama.",
+      "q6": "Utječe li provjera stopa na moju kreditnu ocjenu?",
+      "a6": "Ne, provjera vaše podobnosti ne utječe na vašu kreditnu ocjenu. Samo formalni zahtjev za kredit bit će evidentiran u vašoj kreditnoj povijesti."
     },
     "seoSection": {
       "title": "O Fundia Invest: Vaš pouzdani kreditni partner",
@@ -203,23 +460,66 @@
       "missionTitle": "Naša misija",
       "missionText": "Vjerujemo da pristup kreditu treba biti jednostavan, transparentan i bez stresa. Naša misija je demokratizirati zajmove korištenjem tehnologije za ponudu konkurentnih stopa, trenutnih odluka i besprijekornog digitalnog iskustva. Posvećeni smo financijskoj inkluziji i pomažemo našim klijentima donositi informirane odluke o zaduživanju.",
       "differenceTitle": "Zašto smo drugačiji",
-      "speed": { "title": "Brzina:", "text": "Naši napredni algoritmi pružaju preliminarno odobrenje za manje od 5 minuta, s sredstvima koja se obično isplaćuju unutar 48 sati od konačnog odobrenja." },
-      "transparency": { "title": "Transparentnost:", "text": "Bez skrivenih naknada, bez iznenađenja. Svi troškovi, stope i uvjeti jasno su prikazani prije nego se obvežete." },
-      "security": { "title": "Sigurnost:", "text": "Koristimo enkripciju razine banke i u potpunosti smo usklađeni s GDPR-om i francuskim bankarskim propisima." },
-      "flexibility": { "title": "Fleksibilnost:", "text": "Opcije prijevremene otplate bez penala, fleksibilni rokovi od 12 do 84 mjeseca i iznosi od 1.000€ do 75.000€." },
+      "speed": {
+        "title": "Brzina:",
+        "text": "Naši napredni algoritmi pružaju preliminarno odobrenje za manje od 5 minuta, s sredstvima koja se obično isplaćuju unutar 48 sati od konačnog odobrenja."
+      },
+      "transparency": {
+        "title": "Transparentnost:",
+        "text": "Bez skrivenih naknada, bez iznenađenja. Svi troškovi, stope i uvjeti jasno su prikazani prije nego se obvežete."
+      },
+      "security": {
+        "title": "Sigurnost:",
+        "text": "Koristimo enkripciju razine banke i u potpunosti smo usklađeni s GDPR-om i francuskim bankarskim propisima."
+      },
+      "flexibility": {
+        "title": "Fleksibilnost:",
+        "text": "Opcije prijevremene otplate bez penala, fleksibilni rokovi od 12 do 84 mjeseca i iznosi od 1.000€ do 75.000€."
+      },
       "loanTypesTitle": "Vrste zajmova koje nudimo",
       "loanTypesIntro": "U Fundia Invest razumijemo da je svaka financijska potreba jedinstvena. Zato nudimo sveobuhvatnu paletu kreditnih proizvoda dizajniranih da odgovaraju vašim specifičnim okolnostima:",
-      "personalLoan": { "title": "Osobni zajmovi", "text": "Savršeno za vjenčanja, godišnje odmore, medicinske troškove ili bilo koji osobni projekt. Pozajmite od 1.000€ do 75.000€ sa stopama od 2,9% EKS.", "example": "Primjer: 10.000€ na 48 mjeseci = 221€/mjesec (4,9% EKS, ukupni trošak: 10.608€)" },
-      "autoLoan": { "title": "Auto krediti", "text": "Financirajte nova ili rabljena vozila s konkurentnim stopama i fleksibilnim uvjetima. Stope od 3,2% EKS.", "example": "Primjer: 20.000€ na 60 mjeseci = 362€/mjesec (3,9% EKS, ukupni trošak: 21.720€)" },
-      "homeLoan": { "title": "Krediti za obnovu", "text": "Transformirajte svoj životni prostor s kreditima dizajniranim za renovacije, proširenja ili energetska poboljšanja.", "example": "Primjer: 15.000€ na 72 mjeseca = 238€/mjesec (4,5% EKS, ukupni trošak: 17.136€)" },
-      "consolidation": { "title": "Konsolidacija dugova", "text": "Pojednostavite više dugova u jednu jednostavnu mjesečnu uplatu, često po nižoj ukupnoj stopi.", "example": "Primjer: Konsolidirajte 25.000€ duga na 84 mjeseca = 351€/mjesec (5,2% EKS)" },
+      "personalLoan": {
+        "title": "Osobni zajmovi",
+        "text": "Savršeno za vjenčanja, godišnje odmore, medicinske troškove ili bilo koji osobni projekt. Pozajmite od 1.000€ do 75.000€ sa stopama od 2,9% EKS.",
+        "example": "Primjer: 10.000€ na 48 mjeseci = 221€/mjesec (4,9% EKS, ukupni trošak: 10.608€)"
+      },
+      "autoLoan": {
+        "title": "Auto krediti",
+        "text": "Financirajte nova ili rabljena vozila s konkurentnim stopama i fleksibilnim uvjetima. Stope od 3,2% EKS.",
+        "example": "Primjer: 20.000€ na 60 mjeseci = 362€/mjesec (3,9% EKS, ukupni trošak: 21.720€)"
+      },
+      "homeLoan": {
+        "title": "Krediti za obnovu",
+        "text": "Transformirajte svoj životni prostor s kreditima dizajniranim za renovacije, proširenja ili energetska poboljšanja.",
+        "example": "Primjer: 15.000€ na 72 mjeseca = 238€/mjesec (4,5% EKS, ukupni trošak: 17.136€)"
+      },
+      "consolidation": {
+        "title": "Konsolidacija dugova",
+        "text": "Pojednostavite više dugova u jednu jednostavnu mjesečnu uplatu, često po nižoj ukupnoj stopi.",
+        "example": "Primjer: Konsolidirajte 25.000€ duga na 84 mjeseca = 351€/mjesec (5,2% EKS)"
+      },
       "processTitle": "Kako funkcionira naš proces",
       "process": {
-        "step1": { "title": "Simulirajte svoj zajam:", "text": "Koristite naš interaktivni kalkulator za pregled procijenjenih mjesečnih uplata i ukupnih troškova." },
-        "step2": { "title": "Podnesite svoju prijavu:", "text": "Ispunite naš jednostavan online obrazac za samo nekoliko minuta." },
-        "step3": { "title": "Dobijte trenutnu odluku:", "text": "Naš sustav analizira vašu prijavu i odmah pruža preliminarno odobrenje." },
-        "step4": { "title": "Prenesite svoje dokumente:", "text": "Sigurno pošaljite potrebne dokumente putem naše platforme." },
-        "step5": { "title": "Primite svoja sredstva:", "text": "Nakon odobrenja, sredstva se prenose izravno na vaš bankovni račun unutar 48 sati." }
+        "step1": {
+          "title": "Simulirajte svoj zajam:",
+          "text": "Koristite naš interaktivni kalkulator za pregled procijenjenih mjesečnih uplata i ukupnih troškova."
+        },
+        "step2": {
+          "title": "Podnesite svoju prijavu:",
+          "text": "Ispunite naš jednostavan online obrazac za samo nekoliko minuta."
+        },
+        "step3": {
+          "title": "Dobijte trenutnu odluku:",
+          "text": "Naš sustav analizira vašu prijavu i odmah pruža preliminarno odobrenje."
+        },
+        "step4": {
+          "title": "Prenesite svoje dokumente:",
+          "text": "Sigurno pošaljite potrebne dokumente putem naše platforme."
+        },
+        "step5": {
+          "title": "Primite svoja sredstva:",
+          "text": "Nakon odobrenja, sredstva se prenose izravno na vaš bankovni račun unutar 48 sati."
+        }
       },
       "responsibleTitle": "Naša posvećenost odgovornom kreditiranju",
       "responsibleText": "Odgovorno kreditiranje shvaćamo ozbiljno. Prije odobrenja bilo kojeg zajma, pažljivo procjenjujemo vašu sposobnost otplate na temelju vaših prihoda, rashoda i postojećih dugova. Nikada nećemo odobriti zajam koji bi vas mogao dovesti u financijske poteškoće. Naši savjetnici su uvijek dostupni za razgovor o alternativama ako zajam nije pravo rješenje za vašu situaciju."
@@ -248,11 +548,26 @@
     },
     "whyChoose": {
       "title": "Zašto odabrati Fundia Invest?",
-      "online": { "title": "100% online proces:", "description": "Brza prijava i trenutna odluka iz udobnosti vašeg doma" },
-      "comparison": { "title": "Pametna usporedba:", "description": "Analiziramo desetke ponuda kako bismo pronašli najbolju za vas" },
-      "noCommitment": { "title": "Bez obveze:", "description": "Provjerite svoju podobnost bez utjecaja na vašu kreditnu ocjenu" },
-      "transparency": { "title": "Potpuna transparentnost:", "description": "Bez skrivenih naknada, svi uvjeti jasno prikazani" },
-      "support": { "title": "Posvećena podrška:", "description": "Tim stručnjaka na vašoj usluzi od ponedjeljka do subote" }
+      "online": {
+        "title": "100% online proces:",
+        "description": "Brza prijava i trenutna odluka iz udobnosti vašeg doma"
+      },
+      "comparison": {
+        "title": "Pametna usporedba:",
+        "description": "Analiziramo desetke ponuda kako bismo pronašli najbolju za vas"
+      },
+      "noCommitment": {
+        "title": "Bez obveze:",
+        "description": "Provjerite svoju podobnost bez utjecaja na vašu kreditnu ocjenu"
+      },
+      "transparency": {
+        "title": "Potpuna transparentnost:",
+        "description": "Bez skrivenih naknada, svi uvjeti jasno prikazani"
+      },
+      "support": {
+        "title": "Posvećena podrška:",
+        "description": "Tim stručnjaka na vašoj usluzi od ponedjeljka do subote"
+      }
     }
   },
   "contact": {
@@ -630,9 +945,22 @@
       "secure": "100% sigurno",
       "fromRate": "Od 2,9% EKS",
       "whyChoose": "Zašto izabrati naš osobni kredit?",
-      "benefits": { "noCollateral": "Bez jamstva", "flexibleTerms": "Fleksibilni rokovi (12-84 mjeseca)", "earlyRepayment": "Prijevremena otplata bez penala", "fastFunds": "Sredstva u 48 sati", "onlineProcess": "100% online proces", "transparentFees": "Transparentne naknade" },
+      "benefits": {
+        "noCollateral": "Bez jamstva",
+        "flexibleTerms": "Fleksibilni rokovi (12-84 mjeseca)",
+        "earlyRepayment": "Prijevremena otplata bez penala",
+        "fastFunds": "Sredstva u 48 sati",
+        "onlineProcess": "100% online proces",
+        "transparentFees": "Transparentne naknade"
+      },
       "examplesTitle": "Primjeri kredita",
-      "tableHeaders": { "amount": "Iznos", "duration": "Trajanje", "monthly": "Mjesečna rata", "apr": "EKS", "totalCost": "Ukupni trošak" },
+      "tableHeaders": {
+        "amount": "Iznos",
+        "duration": "Trajanje",
+        "monthly": "Mjesečna rata",
+        "apr": "EKS",
+        "totalCost": "Ukupni trošak"
+      },
       "examplesDisclaimer": "*Primjeri su indikativni.",
       "guideTitle": "Potpuni vodič za osobne kredite",
       "faqTitle": "FAQ Osobni Kredit"
@@ -641,7 +969,14 @@
       "title": "Auto Kredit",
       "description": "Vozite auto svojih snova s našim fleksibilnim opcijama financiranja.",
       "benefitsTitle": "Prednosti Auto Kredita",
-      "benefits": { "newUsed": "Financiranje novih ili rabljenih vozila", "competitiveRates": "Stope od 3,2% EKS", "upTo": "Do 50.000€", "flexibleTerms": "Rokovi: 12 do 72 mjeseca", "noDownPayment": "Bez predujma", "fastApproval": "Brzo odobrenje" },
+      "benefits": {
+        "newUsed": "Financiranje novih ili rabljenih vozila",
+        "competitiveRates": "Stope od 3,2% EKS",
+        "upTo": "Do 50.000€",
+        "flexibleTerms": "Rokovi: 12 do 72 mjeseca",
+        "noDownPayment": "Bez predujma",
+        "fastApproval": "Brzo odobrenje"
+      },
       "guideTitle": "Potpuni Vodič za Auto Kredit",
       "faqTitle": "FAQ Auto Kredit"
     },
@@ -649,9 +984,47 @@
       "title": "Poslovni Kredit",
       "description": "Fleksibilno financiranje za poduzetnike i male tvrtke.",
       "whyChoose": "Zašto izabrati naš Poslovni Kredit?",
-      "benefits": { "amounts": "Krediti od 5.000€ do 75.000€", "flexibleTerms": "Rokovi: 12 do 84 mjeseca", "fastApproval": "Brzo odobrenje", "anyProject": "Za bilo koji projekt", "competitiveRates": "Konkurentne stope", "preserveCash": "Očuvajte novčani tok" },
+      "benefits": {
+        "amounts": "Krediti od 5.000€ do 75.000€",
+        "flexibleTerms": "Rokovi: 12 do 84 mjeseca",
+        "fastApproval": "Brzo odobrenje",
+        "anyProject": "Za bilo koji projekt",
+        "competitiveRates": "Konkurentne stope",
+        "preserveCash": "Očuvajte novčani tok"
+      },
       "useCasesTitle": "Česte Primjene",
-      "useCases": { "workingCapital": { "title": "Obrtni Kapital", "description": "Pokriti operativne troškove", "typical": "10.000€ - 50.000€" }, "equipment": { "title": "Oprema", "description": "Strojevi, vozila", "typical": "15.000€ - 75.000€" }, "expansion": { "title": "Ekspanzija", "description": "Nove lokacije", "typical": "20.000€ - 75.000€" }, "marketing": { "title": "Marketing", "description": "Reklamne kampanje", "typical": "5.000€ - 30.000€" }, "inventory": { "title": "Zalihe", "description": "Proizvodi, materijali", "typical": "10.000€ - 50.000€" }, "refinancing": { "title": "Refinanciranje", "description": "Konsolidacija dugova", "typical": "15.000€ - 75.000€" } },
+      "useCases": {
+        "workingCapital": {
+          "title": "Obrtni Kapital",
+          "description": "Pokriti operativne troškove",
+          "typical": "10.000€ - 50.000€"
+        },
+        "equipment": {
+          "title": "Oprema",
+          "description": "Strojevi, vozila",
+          "typical": "15.000€ - 75.000€"
+        },
+        "expansion": {
+          "title": "Ekspanzija",
+          "description": "Nove lokacije",
+          "typical": "20.000€ - 75.000€"
+        },
+        "marketing": {
+          "title": "Marketing",
+          "description": "Reklamne kampanje",
+          "typical": "5.000€ - 30.000€"
+        },
+        "inventory": {
+          "title": "Zalihe",
+          "description": "Proizvodi, materijali",
+          "typical": "10.000€ - 50.000€"
+        },
+        "refinancing": {
+          "title": "Refinanciranje",
+          "description": "Konsolidacija dugova",
+          "typical": "15.000€ - 75.000€"
+        }
+      },
       "typicalAmount": "Tipični iznos",
       "guideTitle": "Potpuni Vodič za Poslovni Kredit",
       "guide": {
@@ -719,21 +1092,75 @@
       "description": "Spojite više dugova u jednu mjesečnu uplatu.",
       "reducePayments": "Smanjite svoje mjesečne uplate",
       "benefitsTitle": "Prednosti",
-      "benefits": { "singlePayment": "Jedna uplata", "lowerRate": "Potencijalno niža stopa", "simplified": "Pojednostavljeno upravljanje", "fixedPayment": "Fiksna rata", "improveCredit": "Poboljšava kreditnu ocjenu", "reduceStress": "Smanjuje stres" },
+      "benefits": {
+        "singlePayment": "Jedna uplata",
+        "lowerRate": "Potencijalno niža stopa",
+        "simplified": "Pojednostavljeno upravljanje",
+        "fixedPayment": "Fiksna rata",
+        "improveCredit": "Poboljšava kreditnu ocjenu",
+        "reduceStress": "Smanjuje stres"
+      },
       "whenToTitle": "Kada Razmotriti Konsolidaciju?",
-      "scenarios": { "highInterest": { "title": "Više Dugova", "description": "Imate više kartica ili kredita" }, "difficulty": { "title": "Poteškoće s Praćenjem", "description": "Upravljanje više datuma je teško" }, "goodCredit": { "title": "Dobra Ocjena", "description": "Kvalificirate se za bolju stopu" }, "stableIncome": { "title": "Stabilni Prihodi", "description": "Imate redovite prihode" } },
+      "scenarios": {
+        "highInterest": {
+          "title": "Više Dugova",
+          "description": "Imate više kartica ili kredita"
+        },
+        "difficulty": {
+          "title": "Poteškoće s Praćenjem",
+          "description": "Upravljanje više datuma je teško"
+        },
+        "goodCredit": {
+          "title": "Dobra Ocjena",
+          "description": "Kvalificirate se za bolju stopu"
+        },
+        "stableIncome": {
+          "title": "Stabilni Prihodi",
+          "description": "Imate redovite prihode"
+        }
+      },
       "guideTitle": "Potpuni Vodič",
       "risksTitle": "Upozorenja",
-      "risks": { "risk1": "Može produžiti rok otplate", "risk2": "Zatvaranje kartica može utjecati na kredit", "risk3": "Ne rješava navike potrošnje", "risk4": "Zahtijeva disciplinu", "risk5": "Može imati naknade" },
+      "risks": {
+        "risk1": "Može produžiti rok otplate",
+        "risk2": "Zatvaranje kartica može utjecati na kredit",
+        "risk3": "Ne rješava navike potrošnje",
+        "risk4": "Zahtijeva disciplinu",
+        "risk5": "Može imati naknade"
+      },
       "faqTitle": "FAQ Konsolidacija"
     },
     "homeImprovement": {
       "title": "Kredit za Renoviranje",
       "description": "Transformirajte svoj dom s našim fleksibilnim financiranjem.",
       "whyChoose": "Zašto izabrati naš Kredit za Renoviranje?",
-      "benefits": { "amounts": "Od 3.000€ do 75.000€", "rates": "Od 3,5% EKS", "terms": "Do 15 godina", "noCollateral": "Bez jamstva", "allProjects": "Za sve projekte", "fastApproval": "Brzo odobrenje" },
+      "benefits": {
+        "amounts": "Od 3.000€ do 75.000€",
+        "rates": "Od 3,5% EKS",
+        "terms": "Do 15 godina",
+        "noCollateral": "Bez jamstva",
+        "allProjects": "Za sve projekte",
+        "fastApproval": "Brzo odobrenje"
+      },
       "projectsTitle": "Primjeri Projekata",
-      "projects": { "kitchen": { "title": "Kuhinja", "description": "Namještaj, aparati" }, "bathroom": { "title": "Kupaonica", "description": "Sanitarije, pločice" }, "extension": { "title": "Proširenje", "description": "Dodatna soba" }, "energy": { "title": "Energetska Učinkovitost", "description": "Solarne ploče, izolacija" } },
+      "projects": {
+        "kitchen": {
+          "title": "Kuhinja",
+          "description": "Namještaj, aparati"
+        },
+        "bathroom": {
+          "title": "Kupaonica",
+          "description": "Sanitarije, pločice"
+        },
+        "extension": {
+          "title": "Proširenje",
+          "description": "Dodatna soba"
+        },
+        "energy": {
+          "title": "Energetska Učinkovitost",
+          "description": "Solarne ploče, izolacija"
+        }
+      },
       "loanAmount": "Iznos",
       "monthlyPayment": "Mjesečna Rata",
       "durationAt": "Trajanje {duration} uz ~{rate}% EKS",
@@ -744,10 +1171,25 @@
     "projectFinancing": {
       "title": "Zahtjev za Financiranje Projekta",
       "subtitle": "Ispunite ovaj obrazac. Naš tim će analizirati vaš zahtjev u 48 sati.",
-      "steps": { "project": "Vaš Projekt", "funding": "Financiranje", "company": "Tvrtka", "documents": "Dokumenti" },
-      "navigation": { "previous": "Prethodno", "next": "Sljedeće", "submit": "Podnesi zahtjev" },
-      "validation": { "validationError": "Greška validacije", "correctErrors": "Ispravite greške." },
-      "messages": { "success": "Zahtjev poslan!", "successDesc": "Vaš zahtjev je uspješno poslan." }
+      "steps": {
+        "project": "Vaš Projekt",
+        "funding": "Financiranje",
+        "company": "Tvrtka",
+        "documents": "Dokumenti"
+      },
+      "navigation": {
+        "previous": "Prethodno",
+        "next": "Sljedeće",
+        "submit": "Podnesi zahtjev"
+      },
+      "validation": {
+        "validationError": "Greška validacije",
+        "correctErrors": "Ispravite greške."
+      },
+      "messages": {
+        "success": "Zahtjev poslan!",
+        "successDesc": "Vaš zahtjev je uspješno poslan."
+      }
     }
   },
   "seo": {
@@ -756,5 +1198,133 @@
     "author": "Fundia Invest",
     "ogTitle": "Fundia Invest - Brzi Online Zajmovi i Kreditna Rješenja",
     "ogDescription": "Trenutno odobrenje, konkurentne kamatne stope od 2,9 % EKS, fleksibilni uvjeti. Vaš pouzdani kreditni partner."
+  },
+  "network": {
+    "nav": {
+      "badge": "NOVO"
+    },
+    "landing": {
+      "badge": "Privatni Pristup",
+      "title": "Vaš projekt zaslužuje prave ljude.",
+      "subtitle": "Povežite se izravno s zajmodavcima, investitorima i financijskim partnerima koji proučavaju vašu vrstu zahtjeva.",
+      "cta": "Pristupiti Mreži",
+      "ctaSecondary": "Istražiti financijere",
+      "disclaimer": "Fundia Network ne jamči financiranje. Samo olakšavamo uvođenje partnerima koji mogu razmotriti vaš zahtjev.",
+      "stats": {
+        "funders": "kvalificiranih financijera",
+        "responseTime": "Prosječni odgovor",
+        "responseValue": "48h",
+        "successRate": "Stopa uvođenja",
+        "members": "aktivnih članova"
+      }
+    },
+    "teaser": {
+      "badge": "NOVO — FUNDIA NETWORK",
+      "title": "Izravni pristup financijerima koji proučavaju vašu vrstu zahtjeva.",
+      "subtitle": "Naša privatna mreža verificiranih zajmodavaca, investitora i financijskih partnera čeka vas.",
+      "funders": "kvalificiranih financijera",
+      "verified": "Verificirano od Fundia",
+      "responseTime": "Prosječni odgovor u 48h",
+      "cta": "Otkriti Fundia Network",
+      "types": {
+        "lenders": "Privatni zajmodavci",
+        "angels": "Business Angels i fondovi",
+        "partners": "Specijalizirani financijski partneri"
+      }
+    },
+    "howItWorks": {
+      "title": "Kako funkcionira",
+      "step1": {
+        "title": "Ispunite profil",
+        "description": "Opišite projekt i traženo financiranje."
+      },
+      "step2": {
+        "title": "Istražite mrežu",
+        "description": "Filtrirajte financijere po specijalnosti, tiketu i regiji."
+      },
+      "step3": {
+        "title": "Kontaktirajte izravno",
+        "description": "Pošaljite zahtjev jednim klikom i pratite ga u stvarnom vremenu."
+      }
+    },
+    "funderTypes": {
+      "private": "Privatni Zajmodavci",
+      "investors": "Investitori",
+      "angels": "Business Angels",
+      "funds": "Specijalizirani Fondovi"
+    },
+    "badges": {
+      "verified": "Verificirano od Fundia",
+      "active": "Vrlo aktivan",
+      "topResponder": "Top Odgovarač",
+      "new": "Novo"
+    },
+    "pricing": {
+      "title": "Jedan pristup. Jedna jednostavna cijena.",
+      "subtitle": "Pridružite se Fundia Network i pristupite cijeloj mreži kvalificiranih financijera.",
+      "price": "19,90",
+      "period": "/ godina",
+      "monthly": "tj. 1,66 € / mjesec",
+      "cta": "Počnite odmah",
+      "guarantee": "Zadovoljni ili povrat novca u 30 dana",
+      "features": [
+        "Neograničen pristup 240+ profilima",
+        "Napredni filtri",
+        "Izravni kontakt",
+        "Praćenje u stvarnom vremenu",
+        "Verificirani bedž člana",
+        "Prioritetna podrška"
+      ],
+      "secure": "Sigurno plaćanje · Otkazivanje u bilo koje vrijeme · GDPR"
+    },
+    "trust": {
+      "noGuarantee": "Ne jamčimo financiranje",
+      "noGuaranteeDesc": "Fundia Network olakšava uvođenja. Odluka pripada financijerima.",
+      "verified": "Verificirani financijeri",
+      "verifiedDesc": "Svaki financijer je provjeren od našeg tima.",
+      "privacy": "Vaši podaci zaštićeni",
+      "privacyDesc": "Vaš profil nikad nije podijeljen bez vašeg izričitog pristanka."
+    },
+    "preview": {
+      "title": "Pregled mreže",
+      "subtitle": "Evo uzorka dostupnih financijera.",
+      "locked": "Profil otključan Premium pristupom",
+      "specialties": {
+        "real_estate": "Nekretnine",
+        "startup": "Startup",
+        "personal": "Osobno",
+        "professional": "Profesionalno",
+        "auto": "Auto",
+        "green": "Zeleni projekt"
+      },
+      "ticketFrom": "Tiket od",
+      "ticketTo": "do",
+      "contact": "Kontaktirati",
+      "viewProfile": "Pregledati profil"
+    },
+    "faq": {
+      "title": "Često postavljana pitanja",
+      "q1": "Jamči li Fundia Network financiranje?",
+      "a1": "Ne. Odluka pripada financijerima.",
+      "q2": "Tko su financijeri mreže?",
+      "a2": "Privatni zajmodavci, investitori, business angels i specijalizirani fondovi.",
+      "q3": "Dijele li se moji podaci?",
+      "a3": "Samo ako odlučite kontaktirati financijera.",
+      "q4": "Mogu li otkazati u bilo koje vrijeme?",
+      "a4": "Da, s jamstvom povrata novca od 30 dana.",
+      "q5": "Koliko financijera mogu kontaktirati?",
+      "a5": "Neograničen pristup. Preporučujemo selektivan pristup."
+    },
+    "dashboard": {
+      "upgradeTitle": "Fundia Network",
+      "upgradeSubtitle": "Pristup 240+ kvalificiranim financijerima.",
+      "upgradeFeature1": "Privatni zajmodavci",
+      "upgradeFeature2": "Kapitalni investitori",
+      "upgradeFeature3": "Verificirani specijalizirani fondovi",
+      "upgradeCta": "Aktivirati pristup — 19,90 €/god",
+      "activeTitle": "Fundia Network — Aktivan",
+      "activeSubtitle": "Vaš pristup mreži je aktivan.",
+      "exploreCta": "Istražiti mrežu"
+    }
   }
 }

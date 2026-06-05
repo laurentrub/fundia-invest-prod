@@ -93,50 +93,164 @@
       "searchPlaceholder": "Pesquisar termos...",
       "noResults": "Nenhum termo encontrado.",
       "terms": {
-        "apr": { "term": "TAEG", "definition": "O custo anual de um empréstimo em percentagem, incluindo juros e comissões." },
-        "amortization": { "term": "Amortização", "definition": "O processo de pagar uma dívida ao longo do tempo através de pagamentos regulares." },
-        "collateral": { "term": "Garantia", "definition": "Um ativo empenhado para garantir um empréstimo." },
-        "creditScore": { "term": "Pontuação de Crédito", "definition": "Uma representação numérica da sua solvabilidade." },
-        "consolidation": { "term": "Consolidação de Créditos", "definition": "Combinar múltiplas dívidas num único empréstimo." },
-        "dti": { "term": "Rácio de Endividamento", "definition": "A percentagem do seu rendimento mensal bruto destinada a pagamentos de dívida." },
-        "default": { "term": "Incumprimento", "definition": "Falha em reembolsar um empréstimo segundo as condições acordadas." },
-        "deferment": { "term": "Adiamento", "definition": "Uma funcionalidade que permite adiar pagamentos por um período especificado." },
-        "fixedRate": { "term": "Taxa de Juro Fixa", "definition": "Uma taxa que permanece constante durante toda a vida do empréstimo." },
-        "gracePeriod": { "term": "Período de Carência", "definition": "Um período após a data de vencimento durante o qual pode pagar sem penalizações." },
-        "guarantor": { "term": "Fiador", "definition": "Uma pessoa que concorda em pagar um empréstimo se o mutuário principal não o fizer." },
-        "hardInquiry": { "term": "Consulta Forte", "definition": "Uma verificação de crédito quando solicita um crédito." },
-        "interestRate": { "term": "Taxa de Juro", "definition": "A percentagem cobrada sobre o montante principal de um empréstimo." },
-        "loanTerm": { "term": "Prazo do Empréstimo", "definition": "A duração durante a qual deve reembolsar um empréstimo." },
-        "originationFee": { "term": "Comissão de Abertura", "definition": "Uma taxa cobrada pelos mutuantes para processar um novo pedido." },
-        "preApproval": { "term": "Pré-aprovação", "definition": "Uma avaliação preliminar indicando quanto pode ser elegível para pedir emprestado." },
-        "principal": { "term": "Capital", "definition": "O montante de dinheiro originalmente emprestado." },
-        "refinancing": { "term": "Refinanciamento", "definition": "Substituir um empréstimo existente por um novo com melhores condições." },
-        "securedLoan": { "term": "Empréstimo Garantido", "definition": "Um empréstimo apoiado por garantia." },
-        "softInquiry": { "term": "Consulta Suave", "definition": "Uma verificação de crédito que não afeta a sua pontuação." },
-        "unsecuredLoan": { "term": "Empréstimo Não Garantido", "definition": "Um empréstimo não apoiado por garantia." },
-        "variableRate": { "term": "Taxa de Juro Variável", "definition": "Uma taxa que pode mudar ao longo do tempo." },
-        "borrowingCapacity": { "term": "Capacidade de Endividamento", "definition": "O montante máximo que pode razoavelmente pedir emprestado." },
-        "coBorrower": { "term": "Co-mutuário", "definition": "Uma pessoa que pede um empréstimo consigo e partilha igual responsabilidade." },
-        "borrowerInsurance": { "term": "Seguro de Mutuário", "definition": "Um seguro que cobre pagamentos do empréstimo em caso de morte, invalidez ou perda de emprego." },
-        "prepaymentPenalty": { "term": "Penalização por Reembolso Antecipado", "definition": "Uma taxa cobrada se pagar o empréstimo antes do prazo. Na Fundia Invest não temos penalizações." },
-        "revolvingCredit": { "term": "Crédito Rotativo", "definition": "Um tipo de crédito onde pode pedir, pagar e voltar a pedir até um limite aprovado." },
-        "amortizationSchedule": { "term": "Plano de Amortização", "definition": "Um calendário detalhado mostrando cada pagamento do empréstimo." },
-        "nominalRate": { "term": "Taxa Nominal", "definition": "A taxa de juro base sem incluir comissões adicionais." },
-        "interestOnly": { "term": "Período de Carência", "definition": "O período inicial de um empréstimo durante o qual só paga juros." },
-        "debtRestructuring": { "term": "Reestruturação de Dívida", "definition": "Modificação das condições de um empréstimo existente." },
-        "affectedCredit": { "term": "Crédito Afetado", "definition": "Um empréstimo ligado à compra de um bem ou serviço específico." },
-        "unaffectedCredit": { "term": "Crédito Não Afetado", "definition": "Um empréstimo que não está ligado a uma compra específica." }
+        "apr": {
+          "term": "TAEG",
+          "definition": "O custo anual de um empréstimo em percentagem, incluindo juros e comissões."
+        },
+        "amortization": {
+          "term": "Amortização",
+          "definition": "O processo de pagar uma dívida ao longo do tempo através de pagamentos regulares."
+        },
+        "collateral": {
+          "term": "Garantia",
+          "definition": "Um ativo empenhado para garantir um empréstimo."
+        },
+        "creditScore": {
+          "term": "Pontuação de Crédito",
+          "definition": "Uma representação numérica da sua solvabilidade."
+        },
+        "consolidation": {
+          "term": "Consolidação de Créditos",
+          "definition": "Combinar múltiplas dívidas num único empréstimo."
+        },
+        "dti": {
+          "term": "Rácio de Endividamento",
+          "definition": "A percentagem do seu rendimento mensal bruto destinada a pagamentos de dívida."
+        },
+        "default": {
+          "term": "Incumprimento",
+          "definition": "Falha em reembolsar um empréstimo segundo as condições acordadas."
+        },
+        "deferment": {
+          "term": "Adiamento",
+          "definition": "Uma funcionalidade que permite adiar pagamentos por um período especificado."
+        },
+        "fixedRate": {
+          "term": "Taxa de Juro Fixa",
+          "definition": "Uma taxa que permanece constante durante toda a vida do empréstimo."
+        },
+        "gracePeriod": {
+          "term": "Período de Carência",
+          "definition": "Um período após a data de vencimento durante o qual pode pagar sem penalizações."
+        },
+        "guarantor": {
+          "term": "Fiador",
+          "definition": "Uma pessoa que concorda em pagar um empréstimo se o mutuário principal não o fizer."
+        },
+        "hardInquiry": {
+          "term": "Consulta Forte",
+          "definition": "Uma verificação de crédito quando solicita um crédito."
+        },
+        "interestRate": {
+          "term": "Taxa de Juro",
+          "definition": "A percentagem cobrada sobre o montante principal de um empréstimo."
+        },
+        "loanTerm": {
+          "term": "Prazo do Empréstimo",
+          "definition": "A duração durante a qual deve reembolsar um empréstimo."
+        },
+        "originationFee": {
+          "term": "Comissão de Abertura",
+          "definition": "Uma taxa cobrada pelos mutuantes para processar um novo pedido."
+        },
+        "preApproval": {
+          "term": "Pré-aprovação",
+          "definition": "Uma avaliação preliminar indicando quanto pode ser elegível para pedir emprestado."
+        },
+        "principal": {
+          "term": "Capital",
+          "definition": "O montante de dinheiro originalmente emprestado."
+        },
+        "refinancing": {
+          "term": "Refinanciamento",
+          "definition": "Substituir um empréstimo existente por um novo com melhores condições."
+        },
+        "securedLoan": {
+          "term": "Empréstimo Garantido",
+          "definition": "Um empréstimo apoiado por garantia."
+        },
+        "softInquiry": {
+          "term": "Consulta Suave",
+          "definition": "Uma verificação de crédito que não afeta a sua pontuação."
+        },
+        "unsecuredLoan": {
+          "term": "Empréstimo Não Garantido",
+          "definition": "Um empréstimo não apoiado por garantia."
+        },
+        "variableRate": {
+          "term": "Taxa de Juro Variável",
+          "definition": "Uma taxa que pode mudar ao longo do tempo."
+        },
+        "borrowingCapacity": {
+          "term": "Capacidade de Endividamento",
+          "definition": "O montante máximo que pode razoavelmente pedir emprestado."
+        },
+        "coBorrower": {
+          "term": "Co-mutuário",
+          "definition": "Uma pessoa que pede um empréstimo consigo e partilha igual responsabilidade."
+        },
+        "borrowerInsurance": {
+          "term": "Seguro de Mutuário",
+          "definition": "Um seguro que cobre pagamentos do empréstimo em caso de morte, invalidez ou perda de emprego."
+        },
+        "prepaymentPenalty": {
+          "term": "Penalização por Reembolso Antecipado",
+          "definition": "Uma taxa cobrada se pagar o empréstimo antes do prazo. Na Fundia Invest não temos penalizações."
+        },
+        "revolvingCredit": {
+          "term": "Crédito Rotativo",
+          "definition": "Um tipo de crédito onde pode pedir, pagar e voltar a pedir até um limite aprovado."
+        },
+        "amortizationSchedule": {
+          "term": "Plano de Amortização",
+          "definition": "Um calendário detalhado mostrando cada pagamento do empréstimo."
+        },
+        "nominalRate": {
+          "term": "Taxa Nominal",
+          "definition": "A taxa de juro base sem incluir comissões adicionais."
+        },
+        "interestOnly": {
+          "term": "Período de Carência",
+          "definition": "O período inicial de um empréstimo durante o qual só paga juros."
+        },
+        "debtRestructuring": {
+          "term": "Reestruturação de Dívida",
+          "definition": "Modificação das condições de um empréstimo existente."
+        },
+        "affectedCredit": {
+          "term": "Crédito Afetado",
+          "definition": "Um empréstimo ligado à compra de um bem ou serviço específico."
+        },
+        "unaffectedCredit": {
+          "term": "Crédito Não Afetado",
+          "definition": "Um empréstimo que não está ligado a uma compra específica."
+        }
       }
     },
     "creditGuide": {
       "title": "Guia de Crédito",
       "subtitle": "Recursos educativos para ajudá-lo a tomar decisões de empréstimo informadas",
       "articles": {
-        "choosingLoan": { "title": "Como escolher o empréstimo certo para as suas necessidades", "content": "Escolher o empréstimo certo requer uma consideração cuidadosa da sua situação financeira, objetivos e capacidade de reembolso. Comece por identificar a sua necessidade específica. Compare as taxas de juro de vários mutuantes, mas lembre-se que a TAEG é mais importante que a taxa de juro base. Avalie cuidadosamente as condições de reembolso e verifique as comissões." },
-        "debtRatio": { "title": "Compreender e calcular o seu rácio de endividamento", "content": "O seu rácio de endividamento é um dos fatores mais importantes que os mutuantes consideram. Mede qual percentagem do seu rendimento mensal bruto é destinada a pagamentos de dívida. A maioria dos mutuantes prefere um rácio inferior a 36%." },
-        "comparingOffers": { "title": "Como comparar ofertas de empréstimo eficazmente", "content": "Comparar ofertas de empréstimo requer olhar além da taxa de juro anunciada. Concentre-se na TAEG, compare os custos totais do empréstimo, examine todas as comissões cuidadosamente e verifique a flexibilidade de reembolso." },
-        "earlyRepayment": { "title": "A verdade sobre o reembolso antecipado", "content": "Pagar um empréstimo antecipadamente pode poupar significativamente em juros, mas nem sempre é a melhor decisão financeira. Verifique primeiro as penalizações por reembolso antecipado e considere o custo de oportunidade." },
-        "buildingCredit": { "title": "Construir e manter um bom crédito", "content": "A sua pontuação de crédito impacta todos os aspetos financeiros da sua vida. O histórico de pagamentos representa 35% da sua pontuação. Nunca falhe pagamentos e mantenha os saldos dos cartões de crédito baixos." }
+        "choosingLoan": {
+          "title": "Como escolher o empréstimo certo para as suas necessidades",
+          "content": "Escolher o empréstimo certo requer uma consideração cuidadosa da sua situação financeira, objetivos e capacidade de reembolso. Comece por identificar a sua necessidade específica. Compare as taxas de juro de vários mutuantes, mas lembre-se que a TAEG é mais importante que a taxa de juro base. Avalie cuidadosamente as condições de reembolso e verifique as comissões."
+        },
+        "debtRatio": {
+          "title": "Compreender e calcular o seu rácio de endividamento",
+          "content": "O seu rácio de endividamento é um dos fatores mais importantes que os mutuantes consideram. Mede qual percentagem do seu rendimento mensal bruto é destinada a pagamentos de dívida. A maioria dos mutuantes prefere um rácio inferior a 36%."
+        },
+        "comparingOffers": {
+          "title": "Como comparar ofertas de empréstimo eficazmente",
+          "content": "Comparar ofertas de empréstimo requer olhar além da taxa de juro anunciada. Concentre-se na TAEG, compare os custos totais do empréstimo, examine todas as comissões cuidadosamente e verifique a flexibilidade de reembolso."
+        },
+        "earlyRepayment": {
+          "title": "A verdade sobre o reembolso antecipado",
+          "content": "Pagar um empréstimo antecipadamente pode poupar significativamente em juros, mas nem sempre é a melhor decisão financeira. Verifique primeiro as penalizações por reembolso antecipado e considere o custo de oportunidade."
+        },
+        "buildingCredit": {
+          "title": "Construir e manter um bom crédito",
+          "content": "A sua pontuação de crédito impacta todos os aspetos financeiros da sua vida. O histórico de pagamentos representa 35% da sua pontuação. Nunca falhe pagamentos e mantenha os saldos dos cartões de crédito baixos."
+        }
       }
     }
   },
@@ -155,7 +269,14 @@
     "myProfile": "Meu Perfil",
     "login": "Entrar",
     "logout": "Sair",
-    "admin": "Administração"
+    "admin": "Administração",
+    "network": "Rede",
+    "networkMenu": {
+      "title": "Fundia Network",
+      "explore": "Explorar financiadores",
+      "howItWorks": "Como funciona",
+      "becomePartner": "Tornar-se parceiro financiador"
+    }
   },
   "languages": {
     "fr": "Français",
@@ -187,9 +308,18 @@
     },
     "features": {
       "title": "Por Que Nos Escolher?",
-      "fast": { "title": "Resposta Rápida", "description": "Uma resposta preliminar em 48 horas no máximo" },
-      "personalized": { "title": "Solução à Medida", "description": "Ofertas adaptadas à sua situação" },
-      "secure": { "title": "100% Seguro", "description": "Os seus dados estão protegidos" }
+      "fast": {
+        "title": "Resposta Rápida",
+        "description": "Uma resposta preliminar em 48 horas no máximo"
+      },
+      "personalized": {
+        "title": "Solução à Medida",
+        "description": "Ofertas adaptadas à sua situação"
+      },
+      "secure": {
+        "title": "100% Seguro",
+        "description": "Os seus dados estão protegidos"
+      }
     },
     "featuresSection": {
       "title": "Por Que Escolher a Fundia Invest?",
@@ -197,10 +327,22 @@
     },
     "products": {
       "title": "As Nossas Soluções de Crédito",
-      "personal": { "title": "Empréstimo Pessoal", "description": "Para os seus projetos pessoais" },
-      "auto": { "title": "Crédito Auto", "description": "Financie o seu veículo" },
-      "home": { "title": "Crédito Obras", "description": "Renove a sua casa" },
-      "consolidation": { "title": "Consolidação de Crédito", "description": "Simplifique os seus pagamentos" }
+      "personal": {
+        "title": "Empréstimo Pessoal",
+        "description": "Para os seus projetos pessoais"
+      },
+      "auto": {
+        "title": "Crédito Auto",
+        "description": "Financie o seu veículo"
+      },
+      "home": {
+        "title": "Crédito Obras",
+        "description": "Renove a sua casa"
+      },
+      "consolidation": {
+        "title": "Consolidação de Crédito",
+        "description": "Simplifique os seus pagamentos"
+      }
     },
     "productsSection": {
       "title": "Os Nossos Produtos de Crédito",
@@ -210,18 +352,39 @@
     "howItWorks": {
       "title": "Como Funciona?",
       "subtitle": "Um processo simples e rápido em 4 passos para obter o seu financiamento",
-      "step1": { "title": "Simule o seu crédito", "description": "Use a nossa calculadora para estimar as suas mensalidades em segundos" },
-      "step2": { "title": "Envie o seu pedido", "description": "Preencha o nosso formulário online seguro em menos de 5 minutos" },
-      "step3": { "title": "Receba uma resposta instantânea", "description": "O nosso sistema dá-lhe uma resposta preliminar imediata" },
-      "step4": { "title": "Receba os seus fundos", "description": "Uma vez aprovado, receba o seu dinheiro em 48h na sua conta" },
+      "step1": {
+        "title": "Simule o seu crédito",
+        "description": "Use a nossa calculadora para estimar as suas mensalidades em segundos"
+      },
+      "step2": {
+        "title": "Envie o seu pedido",
+        "description": "Preencha o nosso formulário online seguro em menos de 5 minutos"
+      },
+      "step3": {
+        "title": "Receba uma resposta instantânea",
+        "description": "O nosso sistema dá-lhe uma resposta preliminar imediata"
+      },
+      "step4": {
+        "title": "Receba os seus fundos",
+        "description": "Uma vez aprovado, receba o seu dinheiro em 48h na sua conta"
+      },
       "startNow": "Começar Agora"
     },
     "mission": {
       "title": "A Nossa Missão",
       "statement": "Tornar o financiamento simples, acessível e seguro para todos.",
-      "accessibility": { "title": "Acessibilidade", "description": "Soluções de financiamento abertas a todos, com processos simplificados e transparentes." },
-      "trust": { "title": "Confiança", "description": "Máxima segurança para os seus dados e acompanhamento personalizado em cada passo." },
-      "innovation": { "title": "Inovação", "description": "Tecnologia de ponta para decisões rápidas e taxas competitivas." }
+      "accessibility": {
+        "title": "Acessibilidade",
+        "description": "Soluções de financiamento abertas a todos, com processos simplificados e transparentes."
+      },
+      "trust": {
+        "title": "Confiança",
+        "description": "Máxima segurança para os seus dados e acompanhamento personalizado em cada passo."
+      },
+      "innovation": {
+        "title": "Inovação",
+        "description": "Tecnologia de ponta para decisões rápidas e taxas competitivas."
+      }
     },
     "successStories": {
       "title": "Realizaram os seus projetos connosco",
@@ -241,8 +404,13 @@
         "location": "Paris - Crédito de 15.000€"
       }
     },
-    "faqSection": { "title": "Perguntas Frequentes", "viewAll": "Ver FAQ Completa" },
-    "partners": { "title": "Aprovado pelas principais instituições financeiras" },
+    "faqSection": {
+      "title": "Perguntas Frequentes",
+      "viewAll": "Ver FAQ Completa"
+    },
+    "partners": {
+      "title": "Aprovado pelas principais instituições financeiras"
+    },
     "cta": {
       "title": "Pronto para Começar?",
       "description": "Junte-se a milhares de clientes satisfeitos que escolheram a Fundia Invest para as suas necessidades de financiamento.",
@@ -259,18 +427,32 @@
       "expertSupportDesc": "Consultores dedicados disponíveis para orientá-lo em cada etapa do processo."
     },
     "loanProducts": {
-      "personal": "Empréstimo Pessoal", "personalDesc": "De 1.000€ a 75.000€ para todos os seus projetos pessoais", "personalRate": "A partir de 2,9% TAEG",
-      "auto": "Crédito Auto", "autoDesc": "Financie o carro dos seus sonhos com opções de pagamento flexíveis", "autoRate": "A partir de 3,2% TAEG",
-      "home": "Crédito Obras", "homeDesc": "Transforme a sua casa com os nossos empréstimos para renovação", "homeRate": "A partir de 3,5% TAEG",
-      "consolidation": "Consolidação de Crédito", "consolidationDesc": "Simplifique as suas finanças consolidando várias dívidas", "consolidationRate": "A partir de 4,2% TAEG"
+      "personal": "Empréstimo Pessoal",
+      "personalDesc": "De 1.000€ a 75.000€ para todos os seus projetos pessoais",
+      "personalRate": "A partir de 2,9% TAEG",
+      "auto": "Crédito Auto",
+      "autoDesc": "Financie o carro dos seus sonhos com opções de pagamento flexíveis",
+      "autoRate": "A partir de 3,2% TAEG",
+      "home": "Crédito Obras",
+      "homeDesc": "Transforme a sua casa com os nossos empréstimos para renovação",
+      "homeRate": "A partir de 3,5% TAEG",
+      "consolidation": "Consolidação de Crédito",
+      "consolidationDesc": "Simplifique as suas finanças consolidando várias dívidas",
+      "consolidationRate": "A partir de 4,2% TAEG"
     },
     "faqs": {
-      "q1": "Quanto tempo demora para obter aprovação do meu empréstimo?", "a1": "O nosso sistema de decisão instantânea fornece uma aprovação preliminar em menos de 5 minutos. A aprovação final geralmente leva de 24 a 48 horas após verificação dos documentos.",
-      "q2": "Qual é a pontuação de crédito mínima necessária?", "a2": "Aceitamos pedidos de clientes com vários perfis de crédito. Embora uma pontuação acima de 650 melhore as suas chances, avaliamos cada pedido individualmente.",
-      "q3": "Posso pagar o meu empréstimo antecipadamente sem penalidades?", "a3": "Sim, todos os nossos empréstimos permitem pagamento antecipado sem penalidades. Poupará em juros ao pagar o seu empréstimo mais cedo.",
-      "q4": "Que documentos preciso fornecer para solicitar?", "a4": "Precisará de um documento de identificação válido, comprovativo de rendimentos (últimos 3 recibos de vencimento), extratos bancários e comprovativo de morada. Documentos adicionais podem ser solicitados conforme a sua situação.",
-      "q5": "Como é calculada a minha mensalidade?", "a5": "A sua mensalidade depende do valor do empréstimo, duração e da sua TAEG. Use o nosso simulador acima para um cálculo instantâneo adaptado às suas necessidades.",
-      "q6": "A verificação de taxas afeta a minha pontuação de crédito?", "a6": "Não, verificar a sua elegibilidade não afeta a sua pontuação de crédito. Apenas o pedido formal de crédito será registado no seu histórico de crédito."
+      "q1": "Quanto tempo demora para obter aprovação do meu empréstimo?",
+      "a1": "O nosso sistema de decisão instantânea fornece uma aprovação preliminar em menos de 5 minutos. A aprovação final geralmente leva de 24 a 48 horas após verificação dos documentos.",
+      "q2": "Qual é a pontuação de crédito mínima necessária?",
+      "a2": "Aceitamos pedidos de clientes com vários perfis de crédito. Embora uma pontuação acima de 650 melhore as suas chances, avaliamos cada pedido individualmente.",
+      "q3": "Posso pagar o meu empréstimo antecipadamente sem penalidades?",
+      "a3": "Sim, todos os nossos empréstimos permitem pagamento antecipado sem penalidades. Poupará em juros ao pagar o seu empréstimo mais cedo.",
+      "q4": "Que documentos preciso fornecer para solicitar?",
+      "a4": "Precisará de um documento de identificação válido, comprovativo de rendimentos (últimos 3 recibos de vencimento), extratos bancários e comprovativo de morada. Documentos adicionais podem ser solicitados conforme a sua situação.",
+      "q5": "Como é calculada a minha mensalidade?",
+      "a5": "A sua mensalidade depende do valor do empréstimo, duração e da sua TAEG. Use o nosso simulador acima para um cálculo instantâneo adaptado às suas necessidades.",
+      "q6": "A verificação de taxas afeta a minha pontuação de crédito?",
+      "a6": "Não, verificar a sua elegibilidade não afeta a sua pontuação de crédito. Apenas o pedido formal de crédito será registado no seu histórico de crédito."
     },
     "seoSection": {
       "title": "Sobre a Fundia Invest: O seu parceiro de crédito de confiança",
@@ -278,23 +460,66 @@
       "missionTitle": "A nossa missão",
       "missionText": "Acreditamos que o acesso ao crédito deve ser simples, transparente e sem stress. A nossa missão é democratizar o crédito através da tecnologia para oferecer taxas competitivas, decisões instantâneas e uma experiência digital fluida. Estamos comprometidos com a inclusão financeira e ajudamos os nossos clientes a tomar decisões de empréstimo informadas.",
       "differenceTitle": "Porquê somos diferentes",
-      "speed": { "title": "Rapidez:", "text": "Os nossos algoritmos avançados fornecem uma aprovação preliminar em menos de 5 minutos, com fundos geralmente desembolsados dentro de 48 horas após a aprovação final." },
-      "transparency": { "title": "Transparência:", "text": "Sem taxas ocultas, sem surpresas. Todos os custos, taxas e condições são claramente apresentados antes de se comprometer." },
-      "security": { "title": "Segurança:", "text": "Utilizamos encriptação de nível bancário e estamos totalmente em conformidade com o RGPD e os regulamentos bancários franceses." },
-      "flexibility": { "title": "Flexibilidade:", "text": "Opções de pagamento antecipado sem penalizações, prazos flexíveis de 12 a 84 meses e montantes de 1.000€ a 75.000€." },
+      "speed": {
+        "title": "Rapidez:",
+        "text": "Os nossos algoritmos avançados fornecem uma aprovação preliminar em menos de 5 minutos, com fundos geralmente desembolsados dentro de 48 horas após a aprovação final."
+      },
+      "transparency": {
+        "title": "Transparência:",
+        "text": "Sem taxas ocultas, sem surpresas. Todos os custos, taxas e condições são claramente apresentados antes de se comprometer."
+      },
+      "security": {
+        "title": "Segurança:",
+        "text": "Utilizamos encriptação de nível bancário e estamos totalmente em conformidade com o RGPD e os regulamentos bancários franceses."
+      },
+      "flexibility": {
+        "title": "Flexibilidade:",
+        "text": "Opções de pagamento antecipado sem penalizações, prazos flexíveis de 12 a 84 meses e montantes de 1.000€ a 75.000€."
+      },
       "loanTypesTitle": "Tipos de empréstimos que oferecemos",
       "loanTypesIntro": "Na Fundia Invest, compreendemos que cada necessidade financeira é única. Por isso, oferecemos uma gama completa de produtos de empréstimo concebidos para corresponder às suas circunstâncias específicas:",
-      "personalLoan": { "title": "Empréstimos pessoais", "text": "Perfeito para casamentos, férias, despesas médicas ou qualquer projeto pessoal. Empréstimos de 1.000€ a 75.000€ com taxas a partir de 2,9% TAEG.", "example": "Exemplo: 10.000€ em 48 meses = 221€/mês (TAEG 4,9%, custo total: 10.608€)" },
-      "autoLoan": { "title": "Créditos auto", "text": "Financie veículos novos ou usados com taxas competitivas e condições flexíveis. Taxas a partir de 3,2% TAEG.", "example": "Exemplo: 20.000€ em 60 meses = 362€/mês (TAEG 3,9%, custo total: 21.720€)" },
-      "homeLoan": { "title": "Créditos para obras", "text": "Transforme o seu espaço com empréstimos concebidos para renovações, extensões ou melhorias energéticas.", "example": "Exemplo: 15.000€ em 72 meses = 238€/mês (TAEG 4,5%, custo total: 17.136€)" },
-      "consolidation": { "title": "Consolidação de crédito", "text": "Simplifique várias dívidas num único pagamento mensal fácil, frequentemente a uma taxa global inferior.", "example": "Exemplo: Consolidar 25.000€ de dívidas em 84 meses = 351€/mês (TAEG 5,2%)" },
+      "personalLoan": {
+        "title": "Empréstimos pessoais",
+        "text": "Perfeito para casamentos, férias, despesas médicas ou qualquer projeto pessoal. Empréstimos de 1.000€ a 75.000€ com taxas a partir de 2,9% TAEG.",
+        "example": "Exemplo: 10.000€ em 48 meses = 221€/mês (TAEG 4,9%, custo total: 10.608€)"
+      },
+      "autoLoan": {
+        "title": "Créditos auto",
+        "text": "Financie veículos novos ou usados com taxas competitivas e condições flexíveis. Taxas a partir de 3,2% TAEG.",
+        "example": "Exemplo: 20.000€ em 60 meses = 362€/mês (TAEG 3,9%, custo total: 21.720€)"
+      },
+      "homeLoan": {
+        "title": "Créditos para obras",
+        "text": "Transforme o seu espaço com empréstimos concebidos para renovações, extensões ou melhorias energéticas.",
+        "example": "Exemplo: 15.000€ em 72 meses = 238€/mês (TAEG 4,5%, custo total: 17.136€)"
+      },
+      "consolidation": {
+        "title": "Consolidação de crédito",
+        "text": "Simplifique várias dívidas num único pagamento mensal fácil, frequentemente a uma taxa global inferior.",
+        "example": "Exemplo: Consolidar 25.000€ de dívidas em 84 meses = 351€/mês (TAEG 5,2%)"
+      },
       "processTitle": "Como funciona o nosso processo",
       "process": {
-        "step1": { "title": "Simule o seu empréstimo:", "text": "Use a nossa calculadora interativa para ver os pagamentos mensais estimados e os custos totais." },
-        "step2": { "title": "Submeta o seu pedido:", "text": "Complete o nosso simples formulário online em apenas alguns minutos." },
-        "step3": { "title": "Obtenha uma decisão instantânea:", "text": "O nosso sistema analisa o seu pedido e fornece uma aprovação preliminar imediatamente." },
-        "step4": { "title": "Carregue os seus documentos:", "text": "Submeta os documentos necessários de forma segura através da nossa plataforma." },
-        "step5": { "title": "Receba os seus fundos:", "text": "Uma vez aprovado, os fundos são transferidos diretamente para a sua conta bancária em 48 horas." }
+        "step1": {
+          "title": "Simule o seu empréstimo:",
+          "text": "Use a nossa calculadora interativa para ver os pagamentos mensais estimados e os custos totais."
+        },
+        "step2": {
+          "title": "Submeta o seu pedido:",
+          "text": "Complete o nosso simples formulário online em apenas alguns minutos."
+        },
+        "step3": {
+          "title": "Obtenha uma decisão instantânea:",
+          "text": "O nosso sistema analisa o seu pedido e fornece uma aprovação preliminar imediatamente."
+        },
+        "step4": {
+          "title": "Carregue os seus documentos:",
+          "text": "Submeta os documentos necessários de forma segura através da nossa plataforma."
+        },
+        "step5": {
+          "title": "Receba os seus fundos:",
+          "text": "Uma vez aprovado, os fundos são transferidos diretamente para a sua conta bancária em 48 horas."
+        }
       },
       "responsibleTitle": "O nosso compromisso com o crédito responsável",
       "responsibleText": "Levamos o crédito responsável a sério. Antes de aprovar qualquer empréstimo, avaliamos cuidadosamente a sua capacidade de pagamento com base nos seus rendimentos, despesas e dívidas existentes. Nunca aprovaremos um empréstimo que possa colocá-lo em dificuldades financeiras. Os nossos consultores estão sempre disponíveis para discutir alternativas se um empréstimo não for a solução certa para a sua situação."
@@ -323,11 +548,26 @@
     },
     "whyChoose": {
       "title": "Porquê escolher a Fundia Invest?",
-      "online": { "title": "Processo 100% online:", "description": "Pedido rápido e decisão instantânea a partir do conforto de sua casa" },
-      "comparison": { "title": "Comparação inteligente:", "description": "Analisamos dezenas de ofertas para encontrar a melhor para si" },
-      "noCommitment": { "title": "Sem compromisso:", "description": "Verifique a sua elegibilidade sem impactar a sua pontuação de crédito" },
-      "transparency": { "title": "Transparência total:", "description": "Sem taxas ocultas, todas as condições claramente apresentadas" },
-      "support": { "title": "Suporte dedicado:", "description": "Uma equipa de especialistas ao seu serviço de segunda a sábado" }
+      "online": {
+        "title": "Processo 100% online:",
+        "description": "Pedido rápido e decisão instantânea a partir do conforto de sua casa"
+      },
+      "comparison": {
+        "title": "Comparação inteligente:",
+        "description": "Analisamos dezenas de ofertas para encontrar a melhor para si"
+      },
+      "noCommitment": {
+        "title": "Sem compromisso:",
+        "description": "Verifique a sua elegibilidade sem impactar a sua pontuação de crédito"
+      },
+      "transparency": {
+        "title": "Transparência total:",
+        "description": "Sem taxas ocultas, todas as condições claramente apresentadas"
+      },
+      "support": {
+        "title": "Suporte dedicado:",
+        "description": "Uma equipa de especialistas ao seu serviço de segunda a sábado"
+      }
     }
   },
   "contact": {
@@ -767,9 +1007,22 @@
       "secure": "100% seguro",
       "fromRate": "Desde 2,9% TAEG",
       "whyChoose": "Porquê escolher o nosso crédito pessoal?",
-      "benefits": { "noCollateral": "Sem garantia", "flexibleTerms": "Prazos flexíveis (12-84 meses)", "earlyRepayment": "Reembolso antecipado sem penalizações", "fastFunds": "Fundos em 48 horas", "onlineProcess": "Processo 100% online", "transparentFees": "Taxas transparentes" },
+      "benefits": {
+        "noCollateral": "Sem garantia",
+        "flexibleTerms": "Prazos flexíveis (12-84 meses)",
+        "earlyRepayment": "Reembolso antecipado sem penalizações",
+        "fastFunds": "Fundos em 48 horas",
+        "onlineProcess": "Processo 100% online",
+        "transparentFees": "Taxas transparentes"
+      },
       "examplesTitle": "Exemplos de créditos",
-      "tableHeaders": { "amount": "Montante", "duration": "Duração", "monthly": "Mensalidade", "apr": "TAEG", "totalCost": "Custo total" },
+      "tableHeaders": {
+        "amount": "Montante",
+        "duration": "Duração",
+        "monthly": "Mensalidade",
+        "apr": "TAEG",
+        "totalCost": "Custo total"
+      },
       "examplesDisclaimer": "*Exemplos indicativos.",
       "guideTitle": "Guia completo de créditos pessoais",
       "faqTitle": "FAQ Crédito Pessoal"
@@ -778,7 +1031,14 @@
       "title": "Crédito Auto",
       "description": "Conduza o carro dos seus sonhos com as nossas opções de financiamento.",
       "benefitsTitle": "Vantagens do Crédito Auto",
-      "benefits": { "newUsed": "Financiamento de veículos novos ou usados", "competitiveRates": "Taxas desde 3,2% TAEG", "upTo": "Até 50.000€", "flexibleTerms": "Prazos: 12 a 72 meses", "noDownPayment": "Sem entrada", "fastApproval": "Aprovação rápida" },
+      "benefits": {
+        "newUsed": "Financiamento de veículos novos ou usados",
+        "competitiveRates": "Taxas desde 3,2% TAEG",
+        "upTo": "Até 50.000€",
+        "flexibleTerms": "Prazos: 12 a 72 meses",
+        "noDownPayment": "Sem entrada",
+        "fastApproval": "Aprovação rápida"
+      },
       "guideTitle": "Guia Completo do Crédito Auto",
       "faqTitle": "FAQ Crédito Auto"
     },
@@ -786,9 +1046,47 @@
       "title": "Crédito Empresarial",
       "description": "Financiamento flexível para empreendedores e PMEs.",
       "whyChoose": "Porquê escolher o nosso Crédito Empresarial?",
-      "benefits": { "amounts": "Créditos de 5.000€ a 75.000€", "flexibleTerms": "Prazos: 12 a 84 meses", "fastApproval": "Aprovação rápida", "anyProject": "Para qualquer projeto", "competitiveRates": "Taxas competitivas", "preserveCash": "Preserve a liquidez" },
+      "benefits": {
+        "amounts": "Créditos de 5.000€ a 75.000€",
+        "flexibleTerms": "Prazos: 12 a 84 meses",
+        "fastApproval": "Aprovação rápida",
+        "anyProject": "Para qualquer projeto",
+        "competitiveRates": "Taxas competitivas",
+        "preserveCash": "Preserve a liquidez"
+      },
       "useCasesTitle": "Usos Comuns",
-      "useCases": { "workingCapital": { "title": "Fundo de Maneio", "description": "Cobrir despesas operacionais", "typical": "10.000€ - 50.000€" }, "equipment": { "title": "Equipamentos", "description": "Máquinas, veículos", "typical": "15.000€ - 75.000€" }, "expansion": { "title": "Expansão", "description": "Novas instalações", "typical": "20.000€ - 75.000€" }, "marketing": { "title": "Marketing", "description": "Campanhas publicitárias", "typical": "5.000€ - 30.000€" }, "inventory": { "title": "Stock", "description": "Produtos, materiais", "typical": "10.000€ - 50.000€" }, "refinancing": { "title": "Refinanciamento", "description": "Consolidar dívidas", "typical": "15.000€ - 75.000€" } },
+      "useCases": {
+        "workingCapital": {
+          "title": "Fundo de Maneio",
+          "description": "Cobrir despesas operacionais",
+          "typical": "10.000€ - 50.000€"
+        },
+        "equipment": {
+          "title": "Equipamentos",
+          "description": "Máquinas, veículos",
+          "typical": "15.000€ - 75.000€"
+        },
+        "expansion": {
+          "title": "Expansão",
+          "description": "Novas instalações",
+          "typical": "20.000€ - 75.000€"
+        },
+        "marketing": {
+          "title": "Marketing",
+          "description": "Campanhas publicitárias",
+          "typical": "5.000€ - 30.000€"
+        },
+        "inventory": {
+          "title": "Stock",
+          "description": "Produtos, materiais",
+          "typical": "10.000€ - 50.000€"
+        },
+        "refinancing": {
+          "title": "Refinanciamento",
+          "description": "Consolidar dívidas",
+          "typical": "15.000€ - 75.000€"
+        }
+      },
       "typicalAmount": "Montante típico",
       "guideTitle": "Guia Completo do Crédito Empresarial",
       "guide": {
@@ -856,21 +1154,75 @@
       "description": "Agrupe múltiplas dívidas num único pagamento mensal.",
       "reducePayments": "Reduza os seus pagamentos mensais",
       "benefitsTitle": "Vantagens",
-      "benefits": { "singlePayment": "Um só pagamento", "lowerRate": "Taxa potencialmente menor", "simplified": "Gestão simplificada", "fixedPayment": "Prestação fixa", "improveCredit": "Melhora o crédito", "reduceStress": "Reduz o stress" },
+      "benefits": {
+        "singlePayment": "Um só pagamento",
+        "lowerRate": "Taxa potencialmente menor",
+        "simplified": "Gestão simplificada",
+        "fixedPayment": "Prestação fixa",
+        "improveCredit": "Melhora o crédito",
+        "reduceStress": "Reduz o stress"
+      },
       "whenToTitle": "Quando Considerar a Consolidação?",
-      "scenarios": { "highInterest": { "title": "Múltiplas Dívidas", "description": "Tem vários cartões ou créditos" }, "difficulty": { "title": "Dificuldade de Gestão", "description": "Gerir múltiplas datas é difícil" }, "goodCredit": { "title": "Bom Historial", "description": "Qualifica para melhor taxa" }, "stableIncome": { "title": "Rendimentos Estáveis", "description": "Tem rendimentos regulares" } },
+      "scenarios": {
+        "highInterest": {
+          "title": "Múltiplas Dívidas",
+          "description": "Tem vários cartões ou créditos"
+        },
+        "difficulty": {
+          "title": "Dificuldade de Gestão",
+          "description": "Gerir múltiplas datas é difícil"
+        },
+        "goodCredit": {
+          "title": "Bom Historial",
+          "description": "Qualifica para melhor taxa"
+        },
+        "stableIncome": {
+          "title": "Rendimentos Estáveis",
+          "description": "Tem rendimentos regulares"
+        }
+      },
       "guideTitle": "Guia Completo",
       "risksTitle": "Avisos",
-      "risks": { "risk1": "Pode prolongar o prazo", "risk2": "Fechar cartões pode afetar crédito", "risk3": "Não resolve hábitos de consumo", "risk4": "Requer disciplina", "risk5": "Pode ter comissões" },
+      "risks": {
+        "risk1": "Pode prolongar o prazo",
+        "risk2": "Fechar cartões pode afetar crédito",
+        "risk3": "Não resolve hábitos de consumo",
+        "risk4": "Requer disciplina",
+        "risk5": "Pode ter comissões"
+      },
       "faqTitle": "FAQ Consolidação"
     },
     "homeImprovement": {
       "title": "Crédito Obras",
       "description": "Transforme a sua casa com o nosso financiamento flexível.",
       "whyChoose": "Porquê escolher o nosso Crédito Obras?",
-      "benefits": { "amounts": "De 3.000€ a 75.000€", "rates": "Desde 3,5% TAEG", "terms": "Até 15 anos", "noCollateral": "Sem garantia", "allProjects": "Para todos os projetos", "fastApproval": "Aprovação rápida" },
+      "benefits": {
+        "amounts": "De 3.000€ a 75.000€",
+        "rates": "Desde 3,5% TAEG",
+        "terms": "Até 15 anos",
+        "noCollateral": "Sem garantia",
+        "allProjects": "Para todos os projetos",
+        "fastApproval": "Aprovação rápida"
+      },
       "projectsTitle": "Exemplos de Projetos",
-      "projects": { "kitchen": { "title": "Cozinha", "description": "Móveis, eletrodomésticos" }, "bathroom": { "title": "Casa de banho", "description": "Sanitários, azulejos" }, "extension": { "title": "Ampliação", "description": "Quarto adicional" }, "energy": { "title": "Eficiência Energética", "description": "Painéis solares, isolamento" } },
+      "projects": {
+        "kitchen": {
+          "title": "Cozinha",
+          "description": "Móveis, eletrodomésticos"
+        },
+        "bathroom": {
+          "title": "Casa de banho",
+          "description": "Sanitários, azulejos"
+        },
+        "extension": {
+          "title": "Ampliação",
+          "description": "Quarto adicional"
+        },
+        "energy": {
+          "title": "Eficiência Energética",
+          "description": "Painéis solares, isolamento"
+        }
+      },
       "loanAmount": "Montante",
       "monthlyPayment": "Prestação Mensal",
       "durationAt": "Prazo {duration} a ~{rate}% TAEG",
@@ -881,10 +1233,25 @@
     "projectFinancing": {
       "title": "Pedido de Financiamento de Projeto",
       "subtitle": "Complete este formulário. A nossa equipa analisará o seu pedido em 48 horas.",
-      "steps": { "project": "O Seu Projeto", "funding": "Financiamento", "company": "Empresa", "documents": "Documentos" },
-      "navigation": { "previous": "Anterior", "next": "Seguinte", "submit": "Enviar pedido" },
-      "validation": { "validationError": "Erro de validação", "correctErrors": "Corrija os erros." },
-      "messages": { "success": "Pedido enviado!", "successDesc": "O seu pedido foi enviado com sucesso." }
+      "steps": {
+        "project": "O Seu Projeto",
+        "funding": "Financiamento",
+        "company": "Empresa",
+        "documents": "Documentos"
+      },
+      "navigation": {
+        "previous": "Anterior",
+        "next": "Seguinte",
+        "submit": "Enviar pedido"
+      },
+      "validation": {
+        "validationError": "Erro de validação",
+        "correctErrors": "Corrija os erros."
+      },
+      "messages": {
+        "success": "Pedido enviado!",
+        "successDesc": "O seu pedido foi enviado com sucesso."
+      }
     }
   },
   "seo": {
@@ -893,5 +1260,133 @@
     "author": "Fundia Invest",
     "ogTitle": "Fundia Invest - Empréstimos Online Rápidos e Soluções de Crédito",
     "ogDescription": "Aprovação instantânea, taxas competitivas a partir de 2,9 % TAEG, condições flexíveis. O seu parceiro de crédito de confiança."
+  },
+  "network": {
+    "nav": {
+      "badge": "NOVO"
+    },
+    "landing": {
+      "badge": "Acesso Privado",
+      "title": "O seu projeto merece ser visto pelas pessoas certas.",
+      "subtitle": "Conecte-se diretamente com credores, investidores e parceiros financeiros que estudam o seu tipo de candidatura.",
+      "cta": "Aceder à Rede",
+      "ctaSecondary": "Explorar financiadores",
+      "disclaimer": "A Fundia Network não garante financiamento. Apenas facilitamos a apresentação a parceiros que possam analisar a sua candidatura.",
+      "stats": {
+        "funders": "financiadores qualificados",
+        "responseTime": "Resposta média",
+        "responseValue": "48h",
+        "successRate": "Taxa de apresentação",
+        "members": "membros ativos"
+      }
+    },
+    "teaser": {
+      "badge": "NOVO — FUNDIA NETWORK",
+      "title": "Acesso direto a financiadores que estudam o seu tipo de candidatura.",
+      "subtitle": "A nossa rede privada de credores, investidores e parceiros financeiros verificados está à sua espera.",
+      "funders": "financiadores qualificados",
+      "verified": "Verificado pela Fundia",
+      "responseTime": "Resposta média em 48h",
+      "cta": "Descobrir Fundia Network",
+      "types": {
+        "lenders": "Credores privados",
+        "angels": "Business Angels e fundos",
+        "partners": "Parceiros financeiros especializados"
+      }
+    },
+    "howItWorks": {
+      "title": "Como funciona",
+      "step1": {
+        "title": "Complete o seu perfil",
+        "description": "Descreva o seu projeto e o financiamento pretendido."
+      },
+      "step2": {
+        "title": "Explore a rede",
+        "description": "Filtre financiadores por especialidade, ticket e zona."
+      },
+      "step3": {
+        "title": "Contacte diretamente",
+        "description": "Envie a sua candidatura com um clique e acompanhe os seus pedidos."
+      }
+    },
+    "funderTypes": {
+      "private": "Credores Privados",
+      "investors": "Investidores",
+      "angels": "Business Angels",
+      "funds": "Fundos Especializados"
+    },
+    "badges": {
+      "verified": "Verificado pela Fundia",
+      "active": "Muito ativo",
+      "topResponder": "Top Respondedor",
+      "new": "Novo"
+    },
+    "pricing": {
+      "title": "Um acesso. Um preço simples.",
+      "subtitle": "Junte-se à Fundia Network e aceda a toda a rede de financiadores qualificados.",
+      "price": "19,90",
+      "period": "/ ano",
+      "monthly": "ou seja 1,66 € / mês",
+      "cta": "Começar agora",
+      "guarantee": "Satisfeito ou reembolsado em 30 dias",
+      "features": [
+        "Acesso ilimitado a 240+ perfis",
+        "Filtros avançados por especialidade e ticket",
+        "Contacto direto e ilimitado",
+        "Acompanhamento em tempo real",
+        "Badge de Membro Verificado",
+        "Suporte prioritário"
+      ],
+      "secure": "Pagamento seguro · Cancelamento a qualquer momento · RGPD"
+    },
+    "trust": {
+      "noGuarantee": "Não garantimos financiamento",
+      "noGuaranteeDesc": "A Fundia Network facilita as apresentações. A decisão pertence aos financiadores.",
+      "verified": "Financiadores verificados",
+      "verifiedDesc": "Cada financiador foi verificado pela nossa equipa.",
+      "privacy": "Os seus dados protegidos",
+      "privacyDesc": "O seu perfil nunca é partilhado sem o seu consentimento explícito."
+    },
+    "preview": {
+      "title": "Pré-visualização da rede",
+      "subtitle": "Aqui está uma amostra dos financiadores disponíveis.",
+      "locked": "Perfil desbloqueado com acesso Premium",
+      "specialties": {
+        "real_estate": "Imobiliário",
+        "startup": "Startup",
+        "personal": "Pessoal",
+        "professional": "Profissional",
+        "auto": "Auto",
+        "green": "Projeto verde"
+      },
+      "ticketFrom": "Ticket a partir de",
+      "ticketTo": "até",
+      "contact": "Contactar",
+      "viewProfile": "Ver perfil"
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "q1": "A Fundia Network garante financiamento?",
+      "a1": "Não. A decisão final pertence aos financiadores.",
+      "q2": "Quem são os financiadores?",
+      "a2": "Credores privados, investidores, business angels e fundos especializados.",
+      "q3": "Os meus dados são partilhados?",
+      "a3": "Apenas se decidir contactar um financiador.",
+      "q4": "Posso cancelar a qualquer momento?",
+      "a4": "Sim, com garantia de reembolso de 30 dias.",
+      "q5": "Quantos financiadores posso contactar?",
+      "a5": "Acesso ilimitado. Recomendamos ser seletivo."
+    },
+    "dashboard": {
+      "upgradeTitle": "Fundia Network",
+      "upgradeSubtitle": "Aceda a 240+ financiadores qualificados.",
+      "upgradeFeature1": "Credores privados",
+      "upgradeFeature2": "Investidores de capital",
+      "upgradeFeature3": "Fundos especializados verificados",
+      "upgradeCta": "Ativar acesso — 19,90 €/ano",
+      "activeTitle": "Fundia Network — Ativo",
+      "activeSubtitle": "O seu acesso à rede está ativo.",
+      "exploreCta": "Explorar a rede"
+    }
   }
 }

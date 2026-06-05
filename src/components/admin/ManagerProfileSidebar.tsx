@@ -26,6 +26,7 @@ import {
   Loader2,
   BarChart3,
   ShieldOff,
+  Network,
 } from 'lucide-react';
 import {
   Collapsible,
@@ -46,6 +47,7 @@ const menuItems = [
   { key: 'clientDocuments', path: '/admin/client-documents', icon: FolderOpen, adminOnly: false },
   { key: 'team', path: '/admin/team', icon: Users, adminOnly: true },
   { key: 'blockedUsers', path: '/admin/blocked-users', icon: ShieldOff, adminOnly: true },
+  { key: 'network', path: '/admin/network', icon: Network, adminOnly: false },
   { key: 'settings', path: '/admin/settings', icon: Settings, adminOnly: false },
 ];
 
