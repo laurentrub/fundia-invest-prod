@@ -117,7 +117,7 @@ const Footer = () => {
           </div>
           <div className="text-center space-y-2">
             <p className="text-xs text-primary-foreground/80 italic">
-              Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.
+              {t('footer.creditWarning')}
             </p>
             <p className="text-sm text-primary-foreground/60">{t('footer.copyright')}</p>
           </div>

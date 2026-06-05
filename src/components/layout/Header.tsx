@@ -67,7 +67,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="w-full bg-black py-1 px-4 text-center">
         <p className="text-xs text-white italic">
-          Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.
+          {t('footer.creditWarning')}
         </p>
       </div>
       <nav className="container mx-auto flex h-16 items-center justify-between px-4">
