@@ -9,11 +9,28 @@ import { Switch } from '@/components/ui/switch';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from '@/components/ui/dialog';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { Separator } from '@/components/ui/separator';
 import { toast } from 'sonner';
 import {
   Network, Plus, Pencil, Trash2, Loader2, BadgeCheck,
   Users, TrendingUp, Building2, Zap, Star, Eye, EyeOff,
+  CheckCircle, Clock, XCircle, CreditCard, Banknote, ExternalLink,
 } from 'lucide-react';
+
+interface Subscription {
+  id: string;
+  user_id: string;
+  status: string;
+  payment_method: string;
+  amount: number;
+  bank_transfer_reference: string | null;
+  proof_of_payment_path: string | null;
+  proof_of_payment_uploaded_at: string | null;
+  started_at: string | null;
+  expires_at: string | null;
+  created_at: string;
+}
 
 interface Funder {
   id: string;
@@ -96,7 +113,11 @@ export default function NetworkAdmin() {
   const [deletingId, setDeletingId] = useState<string | null>(null);
   const [specialtiesInput, setSpecialtiesInput] = useState('');
 
-  useEffect(() => { fetchFunders(); }, []);
+  const [subscriptions, setSubscriptions] = useState<Subscription[]>([]);
+  const [subsLoading, setSubsLoading] = useState(true);
+  const [confirmingId, setConfirmingId] = useState<string | null>(null);
+
+  useEffect(() => { fetchFunders(); fetchSubscriptions(); }, []);
 
   const fetchFunders = async () => {
     setLoading(true);
@@ -178,7 +199,92 @@ export default function NetworkAdmin() {
   const upd = <K extends keyof Omit<Funder, 'id'>>(k: K, v: Omit<Funder, 'id'>[K]) =>
     setForm(prev => ({ ...prev, [k]: v }));
 
+  const fetchSubscriptions = async () => {
+    setSubsLoading(true);
+    const { data } = await supabase
+      .from('network_subscriptions')
+      .select('id, user_id, status, payment_method, amount, bank_transfer_reference, proof_of_payment_path, proof_of_payment_uploaded_at, started_at, expires_at, created_at')
+      .order('created_at', { ascending: false });
+    setSubscriptions(data ?? []);
+    setSubsLoading(false);
+  };
+
+  const handleConfirm = async (subId: string) => {
+    setConfirmingId(subId);
+    try {
+      const now = new Date();
+      const expiresAt = new Date(now);
+      expiresAt.setFullYear(expiresAt.getFullYear() + 1);
+      const { error } = await supabase
+        .from('network_subscriptions')
+        .update({ status: 'active', started_at: now.toISOString(), expires_at: expiresAt.toISOString(), bank_transfer_confirmed_at: now.toISOString() })
+        .eq('id', subId);
+      if (error) throw error;
+      toast.success('Abonnement activé.');
+      fetchSubscriptions();
+    } catch {
+      toast.error('Erreur lors de la confirmation.');
+    } finally {
+      setConfirmingId(null);
+    }
+  };
+
+  const handleViewProof = async (path: string) => {
+    const { data } = await supabase.storage.from('network-payment-proofs').createSignedUrl(path, 60);
+    if (data?.signedUrl) window.open(data.signedUrl, '_blank');
+    else toast.error('Impossible d\'ouvrir la preuve.');
+  };
+
   const activeCount = funders.filter(f => f.is_active).length;
+
+  const pendingSubs = subscriptions.filter(s => s.status === 'pending');
+  const activeSubs = subscriptions.filter(s => s.status === 'active');
+
+  const STATUS_CONFIG: Record<string, { label: string; className: string; icon: typeof CheckCircle }> = {
+    pending: { label: 'En attente', className: 'bg-accent/10 text-accent border-accent/20', icon: Clock },
+    active: { label: 'Actif', className: 'bg-success/10 text-success border-success/20', icon: CheckCircle },
+    expired: { label: 'Expiré', className: 'bg-muted text-muted-foreground border-border', icon: XCircle },
+    cancelled: { label: 'Annulé', className: 'bg-destructive/10 text-destructive border-destructive/20', icon: XCircle },
+  };
+
+  const SubRow = ({ sub }: { sub: Subscription }) => {
+    const cfg = STATUS_CONFIG[sub.status] ?? STATUS_CONFIG.pending;
+    const Icon = cfg.icon;
+    return (
+      <div className="flex items-center gap-4 py-3 border-b border-border last:border-0">
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-2 flex-wrap">
+            <Badge variant="outline" className={`text-xs ${cfg.className}`}>
+              <Icon className="h-3 w-3 mr-1" />{cfg.label}
+            </Badge>
+            <Badge variant="outline" className="text-xs gap-1">
+              {sub.payment_method === 'bank_transfer' ? <Banknote className="h-3 w-3" /> : <CreditCard className="h-3 w-3" />}
+              {sub.payment_method === 'bank_transfer' ? 'Virement' : 'Carte'}
+            </Badge>
+            <span className="text-xs font-medium text-foreground">{sub.amount.toFixed(2)} €</span>
+          </div>
+          <div className="text-xs text-muted-foreground mt-1 space-y-0.5">
+            <div>ID utilisateur : <span className="font-mono">{sub.user_id.slice(0, 8)}…</span></div>
+            {sub.bank_transfer_reference && <div>Réf. virement : <span className="font-mono font-medium">{sub.bank_transfer_reference}</span></div>}
+            <div>Inscrit le {new Date(sub.created_at).toLocaleDateString('fr-FR')}{sub.expires_at ? ` · Expire le ${new Date(sub.expires_at).toLocaleDateString('fr-FR')}` : ''}</div>
+          </div>
+        </div>
+        <div className="flex items-center gap-2 flex-shrink-0">
+          {sub.proof_of_payment_path && (
+            <Button variant="outline" size="sm" className="gap-1.5 text-xs" onClick={() => handleViewProof(sub.proof_of_payment_path!)}>
+              <ExternalLink className="h-3.5 w-3.5" />Preuve
+            </Button>
+          )}
+          {sub.status === 'pending' && (
+            <Button size="sm" className="gap-1.5 text-xs" disabled={confirmingId === sub.id} onClick={() => handleConfirm(sub.id)}>
+              {confirmingId === sub.id ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <CheckCircle className="h-3.5 w-3.5" />}
+              Confirmer
+            </Button>
+          )}
+        </div>
+      </div>
+    );
+  };
 
   return (
     <div className="space-y-6">
@@ -283,6 +389,57 @@ export default function NetworkAdmin() {
           })}
         </div>
       )}
+
+      {/* Section Abonnements */}
+      <Separator />
+      <div>
+        <h2 className="text-xl font-bold flex items-center gap-2 mb-4">
+          <CreditCard className="h-5 w-5 text-accent" />
+          Abonnements
+          {pendingSubs.length > 0 && (
+            <Badge className="bg-accent text-accent-foreground text-xs">{pendingSubs.length} en attente</Badge>
+          )}
+        </h2>
+
+        {subsLoading ? (
+          <div className="flex justify-center py-10"><Loader2 className="h-6 w-6 animate-spin text-primary" /></div>
+        ) : subscriptions.length === 0 ? (
+          <Card><CardContent className="py-10 text-center text-muted-foreground text-sm">Aucun abonnement pour le moment.</CardContent></Card>
+        ) : (
+          <Tabs defaultValue="pending">
+            <TabsList className="mb-4">
+              <TabsTrigger value="pending">
+                Virements en attente
+                {pendingSubs.length > 0 && <span className="ml-1.5 bg-accent text-accent-foreground text-[10px] rounded-full px-1.5 py-0.5">{pendingSubs.length}</span>}
+              </TabsTrigger>
+              <TabsTrigger value="active">Actifs ({activeSubs.length})</TabsTrigger>
+              <TabsTrigger value="all">Tous ({subscriptions.length})</TabsTrigger>
+            </TabsList>
+
+            <TabsContent value="pending">
+              <Card><CardContent className="pt-4 pb-2">
+                {pendingSubs.length === 0 ? (
+                  <p className="text-sm text-muted-foreground py-4 text-center">Aucun virement en attente.</p>
+                ) : pendingSubs.map(sub => <SubRow key={sub.id} sub={sub} />)}
+              </CardContent></Card>
+            </TabsContent>
+
+            <TabsContent value="active">
+              <Card><CardContent className="pt-4 pb-2">
+                {activeSubs.length === 0 ? (
+                  <p className="text-sm text-muted-foreground py-4 text-center">Aucun abonnement actif.</p>
+                ) : activeSubs.map(sub => <SubRow key={sub.id} sub={sub} />)}
+              </CardContent></Card>
+            </TabsContent>
+
+            <TabsContent value="all">
+              <Card><CardContent className="pt-4 pb-2">
+                {subscriptions.map(sub => <SubRow key={sub.id} sub={sub} />)}
+              </CardContent></Card>
+            </TabsContent>
+          </Tabs>
+        )}
+      </div>
 
       {/* Dialog création / édition */}
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
