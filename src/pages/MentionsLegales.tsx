@@ -28,10 +28,7 @@ const MentionsLegales = () => {
               <ul className="list-none space-y-2 text-foreground mb-6">
                 <li><strong>Raison sociale :</strong> HEDGE FUNDS INVESTMENT MANAGEMENT LIMITED</li>
                 <li><strong>Numéro d'entreprise :</strong> 03591241</li>
-                <li><strong>FRN :</strong> 449528</li>
-                <li><strong>Adresse du siège social :</strong> C/O WAYSTONE MANAGEMENT (UK) LIMITED, 3rd Floor, Central Square, 29 Wellington Street, Leeds, LS1 4DL, Royaume-Uni</li>
-                <li><strong>Email :</strong> contact@fundia-invest.com</li>
-              </ul>
+                <li><strong>FRN :</strong> 449528</li>              </ul>
 
               <h2 className="text-2xl font-bold text-foreground mb-4">2. Hébergement</h2>
               <p className="text-foreground leading-relaxed mb-6">
@@ -103,7 +100,7 @@ const MentionsLegales = () => {
 
               <h2 className="text-2xl font-bold text-foreground mb-4">10. Contact</h2>
               <p className="text-foreground leading-relaxed">
-                Pour toute question relative aux présentes mentions légales, vous pouvez nous contacter à l'adresse suivante : <strong>contact@fundia-invest.com</strong>.
+                Pour toute question relative aux présentes mentions légales, vous pouvez nous contacter via ce <a href="/contact" className="text-primary hover:underline font-medium">formulaire</a>.
               </p>
 
             </div>
