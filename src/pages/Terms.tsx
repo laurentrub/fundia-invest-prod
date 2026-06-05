@@ -80,7 +80,7 @@ const Terms = () => {
 
               <h3 className="text-xl font-bold text-foreground mb-4">6. Droit applicable</h3>
               <p className="text-foreground leading-relaxed mb-6">
-                Les présentes CGU sont soumises au <strong>droit français</strong>.
+                Les présentes CGU sont soumises au <strong>droit anglais et gallois</strong>. En cas de litige, et à défaut de résolution amiable, les tribunaux d'Angleterre et du Pays de Galles seront seuls compétents.
               </p>
             </div>
           </Card>
