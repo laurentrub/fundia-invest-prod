@@ -5,7 +5,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, ArrowRight, Mail, Phone, Home } from "lucide-react";
+import { CheckCircle, ArrowRight, Mail, Home } from "lucide-react";
 
 interface ApplicationData {
   name: string;
@@ -178,18 +178,8 @@ const ApplyConfirmation = () => {
                 <Mail className="h-5 w-5 text-accent" />
                 <div>
                   <p className="text-sm text-muted-foreground">{t('contact.email')}</p>
-                  <a href="mailto:contact@privatequity.fr" className="text-sm font-medium text-foreground hover:text-accent">
-                    contact@privatequity.fr
-                  </a>
-                </div>
-              </div>
-              
-              <div className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-accent" />
-                <div>
-                  <p className="text-sm text-muted-foreground">{t('contact.phone')}</p>
-                  <a href="tel:+33123456789" className="text-sm font-medium text-foreground hover:text-accent">
-                    +33 1 23 45 67 89
+                  <a href={`mailto:${t('contact.emailAddress')}`} className="text-sm font-medium text-foreground hover:text-accent">
+                    {t('contact.emailAddress')}
                   </a>
                 </div>
               </div>

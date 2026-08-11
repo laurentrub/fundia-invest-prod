@@ -40,7 +40,7 @@
     "hero": {
       "title": "Get Your Financing Online",
       "subtitle": "Credit for individuals, businesses and innovative projects. Fast, transparent solutions tailored to your needs.",
-      "description": "Simulate your loan and receive a preliminary response in minutes. No commitment, 100% secure.",
+      "description": "Simulate your loan and receive a preliminary response in minutes. No commitment, Secure.",
       "applyButton": "Apply for Credit",
       "projectButton": "Finance My Project",
       "simulateButton": "Simulate My Credit"
@@ -62,7 +62,7 @@
         "description": "Offers adapted to your situation"
       },
       "secure": {
-        "title": "100% Secure",
+        "title": "Secure",
         "description": "Your data is protected"
       }
     },
@@ -159,12 +159,12 @@
     "cta": {
       "title": "Ready to Get Started?",
       "description": "Join thousands of satisfied customers who chose Fundia Invest for their financing needs.",
-      "button": "Apply Now - Instant Approval"
+      "button": "Apply Now - Instant Preliminary Decision"
     },
     "indexFeatures": {
       "fastApproval": "Fast Approval",
       "fastApprovalDesc": "Get your preliminary approval in less than 5 minutes with our instant decision system.",
-      "secure": "100% Secure",
+      "secure": "Secure",
       "secureDesc": "Bank-grade encryption and data protection. Your information is always safe.",
       "bestRates": "Best Rates",
       "bestRatesDesc": "Competitive interest rates starting from 2.9% APR. Compare and choose the best option.",
@@ -319,24 +319,26 @@
     "title": "Contact Us",
     "subtitle": "Our team is at your disposal to answer all your questions",
     "phone": "Phone",
-    "phoneNumber": "01 23 45 67 89",
-    "phoneHours": "Mon-Sat: 9am-6pm",
     "email": "Email",
     "emailAddress": "contact@fundia-invest.com",
     "emailResponse": "Response within 24h",
     "address": "Address",
-    "addressLine1": "5588 Rue Frontenac",
-    "addressLine2": "Montréal, QC H2H 2L9, Canada",
+    "addressLine1": "C/O WAYSTONE MANAGEMENT (UK) LIMITED",
+    "addressLine2": "29 Wellington Street, Leeds, LS1 4DL, United Kingdom",
     "form": {
       "title": "Send us a message",
       "name": "Full name",
       "email": "Email",
-      "phone": "Phone",
       "subject": "Subject",
       "message": "Message",
       "send": "Send message",
       "success": "Message sent!",
-      "successDesc": "We will respond as soon as possible."
+      "successDesc": "We will respond as soon as possible.",
+      "sending": "Sending...",
+      "errorDesc": "An error occurred while sending. Please try again.",
+      "consentPrefix": "I agree that my data will be used to process my request, in accordance with the",
+      "consentLink": "privacy policy",
+      "consentRequired": "Please accept the privacy policy to send your message."
     },
     "sidebar": {
       "hours": "Opening Hours",
@@ -355,10 +357,10 @@
   },
   "footer": {
     "company": "Company",
-    "description": "Fundia Invest has been supporting individuals and businesses in their financing projects for over 10 years. Our mission: to make credit accessible, transparent, and tailored to every situation.",
+    "description": "Fundia Invest supports individuals and businesses in their financing projects. Our mission: to make credit accessible, transparent, and tailored to every situation.",
     "addressLabel": "Address",
-    "addressLine1": "5588 Rue Frontenac",
-    "addressLine2": "Montréal, QC H2H 2L9, Canada",
+    "addressLine1": "C/O WAYSTONE MANAGEMENT (UK) LIMITED",
+    "addressLine2": "29 Wellington Street, Leeds, LS1 4DL, United Kingdom",
     "about": "About Us",
     "contact": "Contact",
     "legal": "Legal Notice",
@@ -370,7 +372,7 @@
     "glossary": "Glossary",
     "creditGuide": "Credit Guide",
     "newsletter": "Newsletter",
-    "copyright": "© 2012 Fundia Invest. All rights reserved.",
+    "copyright": "© {{year}} Fundia Invest. All rights reserved.",
     "creditWarning": "Credit commits you and must be repaid. Check your repayment capacity before committing."
   },
   "newsletter": {
@@ -383,7 +385,13 @@
     "invalidEmailDesc": "Please enter a valid email address.",
     "successTitle": "Successfully subscribed!",
     "successDesc": "You will soon receive our best loan offers.",
-    "noSpam": "No spam. Unsubscribe anytime."
+    "noSpam": "No spam. Unsubscribe anytime.",
+    "consentLabel": "I agree to receive communications from Fundia Invest by email.",
+    "consentLink": "privacy policy",
+    "consentRequired": "Please agree to receive our communications to subscribe.",
+    "alreadySubscribed": "This email is already subscribed to our newsletter.",
+    "errorTitle": "Error",
+    "errorDesc": "An error occurred. Please try again."
   },
   "testimonials": {
     "title": "What our clients say",
@@ -445,7 +453,7 @@
       "subtitle": "From €1,000 to €75,000",
       "description": "Finance your dreams with our flexible personal loans. Whether it's a wedding, vacation, medical expenses, or any personal project - we've got you covered.",
       "approvalTime": "5 min approval",
-      "secure": "100% secure",
+      "secure": "Secure",
       "fromRate": "From 2.9% APR",
       "whyChoose": "Why choose our personal loan?",
       "benefits": {
@@ -574,7 +582,7 @@
       "faqTitle": "Auto Loan FAQ",
       "faqs": {
         "q1": "What's the difference between your financing and dealer financing?",
-        "a1": "Getting pre-approved with Fundia Invest gives you a guaranteed rate and amount before your search, putting you in a stronger negotiating position.",
+        "a1": "Getting pre-approved with Fundia Invest gives you an indicative rate and amount before your search, putting you in a stronger negotiating position.",
         "q2": "Can I finance a used car from a private seller?",
         "a2": "Yes! We finance used vehicles from both dealerships and private sellers. For private sales, we'll need the vehicle's VIN, current mileage, and condition details.",
         "q3": "What's the maximum age for a used car to be financed?",
@@ -1014,14 +1022,19 @@
     "invalidResetLink": "Invalid or expired reset link",
     "resetPasswordTitle": "Reset Password",
     "resetPasswordDesc": "Please enter your new password",
-    "resetEmailSentTo": "A reset email has been sent to {{email}}"
+    "resetEmailSentTo": "A reset email has been sent to {{email}}",
+    "consentPrefix": "I accept the",
+    "consentTermsLink": "terms of service",
+    "consentAnd": "and the",
+    "consentPrivacyLink": "privacy policy",
+    "consentRequired": "Please accept the terms of service and privacy policy to create an account."
   },
   "seo": {
     "title": "Fundia Invest - Fast Online Loans | Personal, Auto & Business Financing",
-    "description": "Get instant loan approval from €1,000 to €75,000. Personal loans, auto financing, home improvement & debt consolidation. Rates from 2.9% APR. Apply in 5 minutes.",
+    "description": "Get an instant preliminary decision for financing from €1,000 to €75,000. Personal loans, auto financing, home improvement & debt consolidation. Rates from 2.9% APR. Apply in 5 minutes.",
     "author": "Fundia Invest",
     "ogTitle": "Fundia Invest - Fast Online Loans & Credit Solutions",
-    "ogDescription": "Instant approval, competitive rates from 2.9% APR, flexible terms. Your trusted credit partner."
+    "ogDescription": "Instant preliminary decision, competitive rates from 2.9% APR, flexible terms. Your credit matchmaking platform."
   },
   "network": {
     "nav": {

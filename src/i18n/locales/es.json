@@ -295,7 +295,7 @@
     "hero": {
       "title": "Obtenga Su Financiación Online",
       "subtitle": "Créditos para particulares, empresas y proyectos innovadores. Soluciones rápidas, transparentes y adaptadas a sus necesidades.",
-      "description": "Simule su préstamo y reciba una respuesta preliminar en minutos. Sin compromiso, 100% seguro.",
+      "description": "Simule su préstamo y reciba una respuesta preliminar en minutos. Sin compromiso, Seguro.",
       "applyButton": "Solicitar Crédito",
       "projectButton": "Financiar Mi Proyecto",
       "simulateButton": "Simular Mi Crédito"
@@ -317,7 +317,7 @@
         "description": "Ofertas adaptadas a su situación"
       },
       "secure": {
-        "title": "100% Seguro",
+        "title": "Seguro",
         "description": "Sus datos están protegidos"
       }
     },
@@ -414,12 +414,12 @@
     "cta": {
       "title": "¿Listo para Comenzar?",
       "description": "Únase a miles de clientes satisfechos que eligieron Fundia Invest para sus necesidades de financiación.",
-      "button": "Solicitar Ahora - Aprobación Instantánea"
+      "button": "Solicitar Ahora - Decisión Preliminar Instantánea"
     },
     "indexFeatures": {
       "fastApproval": "Aprobación Rápida",
       "fastApprovalDesc": "Obtenga su aprobación preliminar en menos de 5 minutos con nuestro sistema de decisión instantánea.",
-      "secure": "100% Seguro",
+      "secure": "Seguro",
       "secureDesc": "Cifrado bancario y protección de datos. Su información siempre está segura.",
       "bestRates": "Mejores Tasas",
       "bestRatesDesc": "Tasas de interés competitivas desde 2,9% TAE. Compare y elija la mejor opción.",
@@ -574,24 +574,26 @@
     "title": "Contáctenos",
     "subtitle": "Nuestro equipo está a su disposición para responder a todas sus preguntas",
     "phone": "Teléfono",
-    "phoneNumber": "01 23 45 67 89",
-    "phoneHours": "Lun-Sáb: 9h-18h",
     "email": "Correo Electrónico",
     "emailAddress": "contact@fundia-invest.com",
     "emailResponse": "Respuesta en 24h",
     "address": "Dirección",
-    "addressLine1": "5588 Rue Frontenac",
-    "addressLine2": "Montréal, QC H2H 2L9, Canadá",
+    "addressLine1": "C/O WAYSTONE MANAGEMENT (UK) LIMITED",
+    "addressLine2": "29 Wellington Street, Leeds, LS1 4DL, Reino Unido",
     "form": {
       "title": "Envíenos un mensaje",
       "name": "Nombre completo",
       "email": "Correo electrónico",
-      "phone": "Teléfono",
       "subject": "Asunto",
       "message": "Mensaje",
       "send": "Enviar mensaje",
       "success": "¡Mensaje enviado!",
-      "successDesc": "Responderemos lo antes posible."
+      "successDesc": "Responderemos lo antes posible.",
+      "sending": "Enviando...",
+      "errorDesc": "Se produjo un error al enviar. Inténtelo de nuevo.",
+      "consentPrefix": "Acepto que mis datos se utilicen para procesar mi solicitud, de acuerdo con la",
+      "consentLink": "política de privacidad",
+      "consentRequired": "Por favor acepte la política de privacidad para enviar su mensaje."
     },
     "sidebar": {
       "hours": "Horario de Atención",
@@ -610,10 +612,10 @@
   },
   "footer": {
     "company": "Empresa",
-    "description": "Fundia Invest acompaña a particulares y empresas en sus proyectos de financiación desde hace más de 10 años. Nuestra misión: hacer el crédito accesible, transparente y adaptado a cada situación.",
+    "description": "Fundia Invest acompaña a particulares y empresas en sus proyectos de financiación. Nuestra misión: hacer el crédito accesible, transparente y adaptado a cada situación.",
     "addressLabel": "Dirección",
-    "addressLine1": "5588 Rue Frontenac",
-    "addressLine2": "Montréal, QC H2H 2L9, Canadá",
+    "addressLine1": "C/O WAYSTONE MANAGEMENT (UK) LIMITED",
+    "addressLine2": "29 Wellington Street, Leeds, LS1 4DL, Reino Unido",
     "about": "Acerca de",
     "contact": "Contacto",
     "legal": "Aviso Legal",
@@ -625,7 +627,7 @@
     "glossary": "Glosario",
     "creditGuide": "Guía de Crédito",
     "newsletter": "Boletín",
-    "copyright": "© 2012 Fundia Invest. Todos los derechos reservados.",
+    "copyright": "© {{year}} Fundia Invest. Todos los derechos reservados.",
     "creditWarning": "Un crédito le compromete y debe ser reembolsado. Verifique su capacidad de reembolso antes de comprometerse."
   },
   "newsletter": {
@@ -638,7 +640,13 @@
     "invalidEmailDesc": "Por favor, introduzca una dirección de correo electrónico válida.",
     "successTitle": "¡Suscripción exitosa!",
     "successDesc": "Pronto recibirá nuestras mejores ofertas de crédito.",
-    "noSpam": "Sin spam. Darse de baja en cualquier momento."
+    "noSpam": "Sin spam. Darse de baja en cualquier momento.",
+    "consentLabel": "Acepto recibir comunicaciones de Fundia Invest por correo electrónico.",
+    "consentLink": "política de privacidad",
+    "consentRequired": "Por favor acepte recibir nuestras comunicaciones para inscribirse.",
+    "alreadySubscribed": "Este correo ya está inscrito en nuestra newsletter.",
+    "errorTitle": "Error",
+    "errorDesc": "Se produjo un error. Inténtelo de nuevo."
   },
   "testimonials": {
     "title": "Lo que dicen nuestros clientes",
@@ -749,7 +757,10 @@
       "emailLabel": "Email:",
       "phoneLabel": "Teléfono:",
       "incomeLabel": "Ingreso mensual:",
-      "disclaimer": "Al enviar este formulario, acepta que sus datos sean procesados en el marco de su solicitud de crédito. Su información es segura y confidencial."
+      "disclaimer": "Al enviar este formulario, acepta que sus datos sean procesados en el marco de su solicitud de crédito. Su información es segura y confidencial.",
+      "consentPrefix": "Acepto que mis datos se utilicen para procesar mi solicitud de crédito, de acuerdo con la",
+      "consentLink": "política de privacidad",
+      "consentRequired": "Por favor acepte la política de privacidad para enviar su solicitud."
     },
     "navigation": {
       "previous": "Anterior",
@@ -867,7 +878,12 @@
     "passwordUpdateSuccess": "¡Contraseña actualizada con éxito!",
     "invalidResetLink": "Enlace de restablecimiento inválido o expirado",
     "resetPasswordTitle": "Restablecimiento de contraseña",
-    "resetPasswordDesc": "Por favor ingrese su nueva contraseña"
+    "resetPasswordDesc": "Por favor ingrese su nueva contraseña",
+    "consentPrefix": "Acepto las",
+    "consentTermsLink": "condiciones generales",
+    "consentAnd": "y la",
+    "consentPrivacyLink": "política de privacidad",
+    "consentRequired": "Por favor acepte las condiciones generales y la política de privacidad para crear una cuenta."
   },
   "dashboard": {
     "userTitle": "Mis solicitudes de crédito",
@@ -1005,7 +1021,7 @@
       "subtitle": "De 1.000€ a 75.000€",
       "description": "Financia tus sueños con nuestros préstamos personales flexibles.",
       "approvalTime": "Aprobación en 5 min",
-      "secure": "100% seguro",
+      "secure": "Seguro",
       "fromRate": "Desde 2,9% TAE",
       "whyChoose": "¿Por qué elegir nuestro préstamo personal?",
       "benefits": {
@@ -1386,10 +1402,10 @@
   },
   "seo": {
     "title": "Fundia Invest - Préstamos Online Rápidos | Financiación Personal, Auto y Empresas",
-    "description": "Aprobación instantánea de 1.000 € a 75.000 €. Préstamos personales, financiación de autos, reformas y reunificación de deudas. Desde 2,9 % TAE. Solicita en 5 minutos.",
+    "description": "Decisión preliminar instantánea de 1.000 € a 75.000 €. Préstamos personales, financiación de autos, reformas y reunificación de deudas. Desde 2,9 % TAE. Solicita en 5 minutos.",
     "author": "Fundia Invest",
     "ogTitle": "Fundia Invest - Préstamos Online Rápidos y Soluciones de Crédito",
-    "ogDescription": "Aprobación instantánea, tasas competitivas desde 2,9 % TAE, condiciones flexibles. Su socio de crédito de confianza."
+    "ogDescription": "Decisión preliminar instantánea, tasas competitivas desde 2,9 % TAE, condiciones flexibles. Su plataforma de intermediación de crédito."
   },
   "network": {
     "nav": {

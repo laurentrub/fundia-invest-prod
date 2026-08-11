@@ -119,7 +119,7 @@ const Footer = () => {
             <p className="text-xs text-primary-foreground/80 italic">
               {t('footer.creditWarning')}
             </p>
-            <p className="text-sm text-primary-foreground/60">{t('footer.copyright')}</p>
+            <p className="text-sm text-primary-foreground/60">{t('footer.copyright', { year: currentYear })}</p>
           </div>
         </div>
       </div>

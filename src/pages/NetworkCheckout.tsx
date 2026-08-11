@@ -8,6 +8,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import {
   Network,
@@ -27,6 +29,10 @@ import {
 
 type PaymentMethod = "bank_transfer" | "card";
 
+// L'intégration Stripe n'est pas encore branchée (voir handleCardPayment) :
+// l'option carte reste visible mais désactivée tant que le paiement réel n'est pas fonctionnel.
+const CARD_PAYMENT_LIVE = false;
+
 interface PaymentSettings {
   card_enabled: boolean;
   bank_transfer_enabled: boolean;
@@ -42,7 +48,7 @@ const DEFAULT_SETTINGS: PaymentSettings = {
   bank_transfer_enabled: true,
   bank_iban: "FR76 XXXX XXXX XXXX XXXX XXXX XXX",
   bank_bic: "XXXXXXXX",
-  bank_beneficiary: "Fundia Invest SAS",
+  bank_beneficiary: "HEDGE FUNDS INVESTMENT MANAGEMENT LIMITED",
   bank_bank_name: "",
   price: 19.90,
 };
@@ -71,6 +77,7 @@ export default function NetworkCheckout() {
   const [transferRef, setTransferRef] = useState("");
   const [copied, setCopied] = useState<string | null>(null);
   const [existingSub, setExistingSub] = useState<{ status: string } | null>(null);
+  const [consent, setConsent] = useState(false);
 
   useEffect(() => {
     if (!authLoading && !user) {
@@ -94,9 +101,9 @@ export default function NetworkCheckout() {
     }
   }, [user]);
 
-  // Auto-select si un seul mode dispo
+  // Auto-select si un seul mode dispo (le paiement carte n'est pas encore fonctionnel)
   useEffect(() => {
-    if (!settings.bank_transfer_enabled && settings.card_enabled) {
+    if (!settings.bank_transfer_enabled && settings.card_enabled && CARD_PAYMENT_LIVE) {
       setSelectedMethod("card");
     } else {
       setSelectedMethod("bank_transfer");
@@ -273,17 +280,27 @@ export default function NetworkCheckout() {
                         <span className="text-xs text-muted-foreground">0% de frais</span>
                       </button>
 
-                      {/* CB */}
+                      {/* CB — intégration Stripe pas encore fonctionnelle */}
                       <button
                         type="button"
-                        onClick={() => setSelectedMethod("card")}
-                        className={`flex flex-col items-center gap-2 rounded-xl border-2 p-4 transition-all ${
-                          selectedMethod === "card"
-                            ? "border-primary/60 bg-primary/5"
-                            : "border-border hover:border-primary/30"
+                        onClick={() => CARD_PAYMENT_LIVE && setSelectedMethod("card")}
+                        disabled={!CARD_PAYMENT_LIVE}
+                        className={`relative flex flex-col items-center gap-2 rounded-xl border-2 p-4 transition-all ${
+                          !CARD_PAYMENT_LIVE
+                            ? "border-border opacity-50 cursor-not-allowed"
+                            : selectedMethod === "card"
+                              ? "border-primary/60 bg-primary/5"
+                              : "border-border hover:border-primary/30"
                         }`}
                       >
-                        <CreditCard className={`h-6 w-6 ${selectedMethod === "card" ? "text-primary" : "text-muted-foreground"}`} />
+                        {!CARD_PAYMENT_LIVE && (
+                          <span className="absolute -top-2.5 left-1/2 -translate-x-1/2">
+                            <Badge variant="outline" className="text-[10px] px-2 py-0 h-5 bg-background">
+                              Bientôt disponible
+                            </Badge>
+                          </span>
+                        )}
+                        <CreditCard className={`h-6 w-6 mt-1 ${selectedMethod === "card" && CARD_PAYMENT_LIVE ? "text-primary" : "text-muted-foreground"}`} />
                         <span className="text-sm font-medium text-foreground">Carte bancaire</span>
                         <span className="text-xs text-muted-foreground">Via Stripe</span>
                       </button>
@@ -375,12 +392,28 @@ export default function NetworkCheckout() {
                         <p>La référence <strong>{transferRef}</strong> est obligatoire dans le libellé. Sans elle, votre paiement ne pourra pas être identifié.</p>
                       </div>
 
+                      <div className="flex items-start gap-2">
+                        <Checkbox
+                          id="checkout-consent"
+                          checked={consent}
+                          onCheckedChange={(checked) => setConsent(checked === true)}
+                          className="mt-1"
+                        />
+                        <Label htmlFor="checkout-consent" className="text-xs font-normal leading-snug text-muted-foreground">
+                          J'accepte que mes données soient utilisées pour traiter mon abonnement, conformément à la{" "}
+                          <Link to="/privacy" className="text-primary hover:underline">
+                            politique de confidentialité
+                          </Link>
+                          . *
+                        </Label>
+                      </div>
+
                       <Button
                         variant="accent"
                         size="lg"
                         className="w-full gap-2"
                         onClick={handleBankTransfer}
-                        disabled={submitting}
+                        disabled={submitting || !consent}
                       >
                         {submitting
                           ? <Loader2 className="h-4 w-4 animate-spin" />
@@ -397,7 +430,7 @@ export default function NetworkCheckout() {
                 )}
 
                 {/* Formulaire CB */}
-                {selectedMethod === "card" && settings.card_enabled && (
+                {selectedMethod === "card" && settings.card_enabled && CARD_PAYMENT_LIVE && (
                   <Card>
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2 text-base">

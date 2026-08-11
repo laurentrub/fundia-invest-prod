@@ -4,13 +4,14 @@ import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { Checkbox } from '@/components/ui/checkbox';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { toast } from 'sonner';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams, Link } from 'react-router-dom';
 import { FileText } from 'lucide-react';
 
 export default function Auth() {
@@ -46,6 +47,7 @@ export default function Auth() {
 
   const [resetEmail, setResetEmail] = useState('');
   const [showResetPassword, setShowResetPassword] = useState(false);
+  const [signupConsent, setSignupConsent] = useState(false);
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -64,6 +66,12 @@ export default function Auth() {
 
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!signupConsent) {
+      toast.error(t('auth.consentRequired'));
+      return;
+    }
+
     setLoading(true);
 
     const { error } = await signUp(
@@ -220,7 +228,26 @@ export default function Auth() {
                         }
                       />
                     </div>
-                    <Button type="submit" className="w-full" disabled={loading}>
+                    <div className="flex items-start gap-2">
+                      <Checkbox
+                        id="signup-consent"
+                        checked={signupConsent}
+                        onCheckedChange={(checked) => setSignupConsent(checked === true)}
+                        className="mt-1"
+                      />
+                      <Label htmlFor="signup-consent" className="text-sm font-normal leading-snug text-muted-foreground">
+                        {t('auth.consentPrefix')}{" "}
+                        <Link to="/terms" className="text-primary hover:underline">
+                          {t('auth.consentTermsLink')}
+                        </Link>{" "}
+                        {t('auth.consentAnd')}{" "}
+                        <Link to="/privacy" className="text-primary hover:underline">
+                          {t('auth.consentPrivacyLink')}
+                        </Link>
+                        . *
+                      </Label>
+                    </div>
+                    <Button type="submit" className="w-full" disabled={loading || !signupConsent}>
                       {loading ? t('auth.creatingAccount') : t('auth.signupButton')}
                     </Button>
                   </form>

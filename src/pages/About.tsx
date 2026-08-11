@@ -22,6 +22,7 @@ const About = () => {
 
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-4xl">
+          {/* À FOURNIR: vérifier la date de fondation et tout chiffre client cité dans about.intro1/intro2 (src/i18n/locales/*.json) avant publication */}
           <div className="prose prose-lg max-w-none mb-12">
             <p className="text-lg text-foreground leading-relaxed mb-6">
               {t('about.intro1')}

@@ -244,7 +244,7 @@ function writeFooter(doc: jsPDF) {
     const footerY = doc.internal.pageSize.getHeight() - 12;
     doc.setFontSize(8);
     doc.setTextColor(128, 128, 128);
-    doc.text('Fundia Invest – 5588 Rue Frontenac, Montréal, QC H2H 2L9, Canada', pw / 2, footerY, { align: 'center' });
+    doc.text('Fundia Invest – HEDGE FUNDS INVESTMENT MANAGEMENT LIMITED – 29 Wellington Street, Leeds, LS1 4DL, Royaume-Uni', pw / 2, footerY, { align: 'center' });
     doc.text(`www.fundia-invest.com – Page ${i}/${pages}`, pw / 2, footerY + 4, { align: 'center' });
   }
 }

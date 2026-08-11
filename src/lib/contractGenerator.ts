@@ -101,7 +101,7 @@ export async function generateContractPDF(loanData: LoanData): Promise<Blob> {
   yPosition += 15;
   doc.setFontSize(18);
   doc.setTextColor(0, 0, 0);
-  doc.text(`CONTRAT DE ${template.loanTypeLabel.toUpperCase()}`, pageWidth / 2, yPosition, { align: 'center' });
+  doc.text(`CONTRAT DE MISE EN RELATION - ${template.loanTypeLabel.toUpperCase()}`, pageWidth / 2, yPosition, { align: 'center' });
 
   yPosition += 15;
   doc.setFontSize(10);
@@ -124,19 +124,19 @@ export async function generateContractPDF(loanData: LoanData): Promise<Blob> {
   doc.text('ENTRE LES SOUSSIGNÉS', margin, yPosition);
   yPosition += 10;
 
-  // Lender
+  // Platform
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(11);
-  doc.text('LE PRÊTEUR:', margin, yPosition);
+  doc.text('LA PLATEFORME (Fundia Invest):', margin, yPosition);
   yPosition += 6;
 
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(10);
-  doc.text('Fundia Invest', margin + 5, yPosition);
+  doc.text('HEDGE FUNDS INVESTMENT MANAGEMENT LIMITED (Fundia Invest)', margin + 5, yPosition);
   yPosition += 5;
-  doc.text('5588 Rue Frontenac', margin + 5, yPosition);
+  doc.text('C/O WAYSTONE MANAGEMENT (UK) LIMITED, 3rd Floor, Central Square', margin + 5, yPosition);
   yPosition += 5;
-  doc.text('Montréal, QC H2H 2L9, Canada', margin + 5, yPosition);
+  doc.text('29 Wellington Street, Leeds, LS1 4DL, Royaume-Uni', margin + 5, yPosition);
   yPosition += 10;
 
   // Borrower
@@ -170,7 +170,8 @@ export async function generateContractPDF(loanData: LoanData): Promise<Blob> {
 
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(10);
-  const introLines = doc.splitTextToSize(template.introduction, contentWidth);
+  const preambleText = `${template.introduction} Fundia Invest agit exclusivement en tant que plateforme de mise en relation entre l'emprunteur et les organismes de crédit ou financeurs partenaires. Fundia Invest n'est pas un établissement de crédit, n'est pas prêteur, et le présent document ne constitue pas une offre de crédit ferme. Les caractéristiques ci-dessous sont fournies à titre indicatif ; le contrat de financement définitif sera conclu directement entre l'emprunteur et le financeur ayant accepté le dossier.`;
+  const introLines = doc.splitTextToSize(preambleText, contentWidth);
   doc.text(introLines, margin, yPosition);
   yPosition += introLines.length * 5 + 10;
 
@@ -225,31 +226,31 @@ export async function generateContractPDF(loanData: LoanData): Promise<Blob> {
 
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(10);
-  const article1 = `Le prêteur s'engage à mettre à disposition de l'emprunteur la somme de ${loanData.amount.toLocaleString('fr-FR')} € (${numberToWords(loanData.amount)} euros) destinée à financer ${template.loanTypeLabel.toLowerCase()}.`;
+  const article1 = `Le présent document formalise la demande de financement de l'emprunteur, d'un montant indicatif de ${loanData.amount.toLocaleString('fr-FR')} € (${numberToWords(loanData.amount)} euros), destinée à financer ${template.loanTypeLabel.toLowerCase()}. Fundia Invest s'engage à transmettre ce dossier aux organismes de crédit et financeurs partenaires susceptibles de l'étudier. L'octroi effectif du financement reste soumis à l'accord d'un financeur et à la signature d'un contrat de crédit distinct entre celui-ci et l'emprunteur.`;
   const article1Lines = doc.splitTextToSize(article1, contentWidth);
   doc.text(article1Lines, margin, yPosition);
   yPosition += article1Lines.length * 5 + 10;
 
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(12);
-  doc.text('ARTICLE 2 - DURÉE ET REMBOURSEMENT', margin, yPosition);
+  doc.text('ARTICLE 2 - DURÉE ET REMBOURSEMENT (INDICATIFS)', margin, yPosition);
   yPosition += 7;
 
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(10);
-  const article2 = `Le prêt est consenti pour une durée de ${loanData.duration} mois. L'emprunteur s'engage à rembourser le capital emprunté selon un échéancier de ${loanData.duration} mensualités de ${loanData.monthlyPayment.toLocaleString('fr-FR')} €, incluant le capital et les intérêts.`;
+  const article2 = `Sur la base des informations communiquées, la durée envisagée est de ${loanData.duration} mois, avec un échéancier indicatif de ${loanData.duration} mensualités de ${loanData.monthlyPayment.toLocaleString('fr-FR')} €, incluant capital et intérêts. Ces conditions sont fournies à titre de simulation et seront confirmées ou ajustées par le financeur dans le contrat de crédit définitif.`;
   const article2Lines = doc.splitTextToSize(article2, contentWidth);
   doc.text(article2Lines, margin, yPosition);
   yPosition += article2Lines.length * 5 + 10;
 
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(12);
-  doc.text('ARTICLE 3 - TAUX D\'INTÉRÊT', margin, yPosition);
+  doc.text('ARTICLE 3 - TAUX D\'INTÉRÊT (INDICATIF)', margin, yPosition);
   yPosition += 7;
 
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(10);
-  const article3 = `Le taux d'intérêt annuel applicable est fixe et s'élève à ${loanData.interestRate.toFixed(2)}% (TAEG). Ce taux reste inchangé pendant toute la durée du prêt.`;
+  const article3 = `Le taux d'intérêt annuel indicatif (TAEG) est de ${loanData.interestRate.toFixed(2)}%, calculé sur la base des informations fournies par l'emprunteur. Ce taux est susceptible d'être ajusté par le financeur après examen complet du dossier et ne constitue pas un engagement ferme de Fundia Invest.`;
   const article3Lines = doc.splitTextToSize(article3, contentWidth);
   doc.text(article3Lines, margin, yPosition);
   yPosition += article3Lines.length * 5 + 10;
@@ -262,12 +263,12 @@ export async function generateContractPDF(loanData: LoanData): Promise<Blob> {
 
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(12);
-  doc.text('ARTICLE 4 - MODALITÉS DE PAIEMENT', margin, yPosition);
+  doc.text('ARTICLE 4 - MODALITÉS DE PAIEMENT (INDICATIVES)', margin, yPosition);
   yPosition += 7;
 
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(10);
-  const article4 = `Les mensualités seront prélevées automatiquement le 5 de chaque mois sur le compte bancaire de l'emprunteur. Le premier prélèvement interviendra le mois suivant la date de déblocage des fonds.`;
+  const article4 = `Les modalités de prélèvement des mensualités (date, compte bancaire, premier prélèvement) seront définies par le financeur dans le contrat de crédit définitif conclu avec l'emprunteur.`;
   const article4Lines = doc.splitTextToSize(article4, contentWidth);
   doc.text(article4Lines, margin, yPosition);
   yPosition += article4Lines.length * 5 + 10;
@@ -279,7 +280,7 @@ export async function generateContractPDF(loanData: LoanData): Promise<Blob> {
 
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(10);
-  const article5 = `L'emprunteur a la faculté de rembourser par anticipation, en totalité ou en partie, le capital restant dû, sans pénalité. Dans ce cas, les intérêts ne seront dus que jusqu'à la date du remboursement effectif.`;
+  const article5 = `Sauf disposition contraire du contrat de crédit définitif, l'emprunteur conserve généralement la faculté de rembourser par anticipation, en totalité ou en partie, le capital restant dû. Les conditions exactes (pénalités éventuelles, calcul des intérêts dus) sont fixées par le financeur dans le contrat de crédit définitif.`;
   const article5Lines = doc.splitTextToSize(article5, contentWidth);
   doc.text(article5Lines, margin, yPosition);
   yPosition += article5Lines.length * 5 + 10;
@@ -313,7 +314,7 @@ export async function generateContractPDF(loanData: LoanData): Promise<Blob> {
   doc.setFontSize(11);
   doc.text('Fait en deux exemplaires originaux', margin, yPosition);
   yPosition += 7;
-  doc.text(`À Montréal, le ${new Date().toLocaleDateString('fr-FR')}`, margin, yPosition);
+  doc.text(`À Leeds, le ${new Date().toLocaleDateString('fr-FR')}`, margin, yPosition);
 
   yPosition += 20;
 
@@ -322,8 +323,8 @@ export async function generateContractPDF(loanData: LoanData): Promise<Blob> {
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(10);
 
-  // Lender signature
-  doc.text('Le Prêteur', margin, yPosition);
+  // Platform signature
+  doc.text('La Plateforme', margin, yPosition);
   doc.rect(margin, yPosition + 5, signatureBoxWidth, 30);
   doc.setFont('helvetica', 'italic');
   doc.setFontSize(9);
@@ -346,7 +347,7 @@ export async function generateContractPDF(loanData: LoanData): Promise<Blob> {
   yPosition += 50;
   doc.setFontSize(8);
   doc.setTextColor(100, 100, 100);
-  doc.text('Fundia Invest - 5588 Rue Frontenac, Montréal, QC H2H 2L9, Canada', pageWidth / 2, yPosition, { align: 'center' });
+  doc.text('Fundia Invest - HEDGE FUNDS INVESTMENT MANAGEMENT LIMITED - 29 Wellington Street, Leeds, LS1 4DL, Royaume-Uni', pageWidth / 2, yPosition, { align: 'center' });
   yPosition += 4;
   doc.text('contact@fundia-invest.com - www.fundia-invest.com', pageWidth / 2, yPosition, { align: 'center' });
 

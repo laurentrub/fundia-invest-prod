@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
@@ -9,6 +9,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { CheckCircle, ArrowRight, ArrowLeft } from "lucide-react";
@@ -21,6 +22,7 @@ const ApplyPage = () => {
   const { user, loading: authLoading } = useAuth();
   const [step, setStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [consentGiven, setConsentGiven] = useState(false);
 
   // Schémas de validation par étape
   const step1Schema = z.object({
@@ -276,9 +278,17 @@ const ApplyPage = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateStep(4)) return;
-    
+
+    if (!consentGiven) {
+      toast({
+        variant: "destructive",
+        title: t('apply.step4.consentRequired'),
+      });
+      return;
+    }
+
     if (!user) {
       localStorage.setItem('pendingLoanApplication', JSON.stringify(formData));
 
@@ -805,6 +815,22 @@ const ApplyPage = () => {
                       Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.
                     </p>
                   </div>
+
+                  <div className="flex items-start gap-2 mt-4">
+                    <Checkbox
+                      id="apply-consent"
+                      checked={consentGiven}
+                      onCheckedChange={(checked) => setConsentGiven(checked === true)}
+                      className="mt-1"
+                    />
+                    <Label htmlFor="apply-consent" className="text-sm font-normal leading-snug text-muted-foreground">
+                      {t('apply.step4.consentPrefix')}{" "}
+                      <Link to="/privacy" className="text-primary hover:underline">
+                        {t('apply.step4.consentLink')}
+                      </Link>
+                      . *
+                    </Label>
+                  </div>
                 </div>
               )}
 
@@ -823,7 +849,7 @@ const ApplyPage = () => {
                     <ArrowRight className="h-4 w-4 ml-2" />
                   </Button>
                 ) : (
-                  <Button type="submit" className="ml-auto" disabled={isSubmitting}>
+                  <Button type="submit" className="ml-auto" disabled={isSubmitting || !consentGiven}>
                     {isSubmitting ? t('apply.navigation.submitting') : t('apply.navigation.submit')}
                   </Button>
                 )}

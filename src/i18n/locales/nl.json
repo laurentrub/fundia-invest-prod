@@ -295,7 +295,7 @@
     "hero": {
       "title": "Krijg Uw Financiering Online",
       "subtitle": "Kredieten voor particulieren, bedrijven en innovatieve projecten. Snelle, transparante oplossingen op maat van uw behoeften.",
-      "description": "Simuleer uw lening en ontvang een voorlopig antwoord in minuten. Vrijblijvend, 100% veilig.",
+      "description": "Simuleer uw lening en ontvang een voorlopig antwoord in minuten. Vrijblijvend, Veilig.",
       "applyButton": "Krediet Aanvragen",
       "projectButton": "Mijn Project Financieren",
       "simulateButton": "Simuleer Mijn Krediet"
@@ -317,7 +317,7 @@
         "description": "Aanbiedingen aangepast aan uw situatie"
       },
       "secure": {
-        "title": "100% Veilig",
+        "title": "Veilig",
         "description": "Uw gegevens zijn beschermd"
       }
     },
@@ -419,7 +419,7 @@
     "indexFeatures": {
       "fastApproval": "Snelle Goedkeuring",
       "fastApprovalDesc": "Ontvang uw voorlopige goedkeuring in minder dan 5 minuten met ons instant beslissingssysteem.",
-      "secure": "100% Veilig",
+      "secure": "Veilig",
       "secureDesc": "Bankversleuteling en gegevensbescherming. Uw informatie is altijd veilig.",
       "bestRates": "Beste Tarieven",
       "bestRatesDesc": "Concurrerende rentetarieven vanaf 2,9% JKP. Vergelijk en kies de beste optie.",
@@ -574,24 +574,26 @@
     "title": "Neem Contact Op",
     "subtitle": "Ons team staat tot uw beschikking om al uw vragen te beantwoorden",
     "phone": "Telefoon",
-    "phoneNumber": "01 23 45 67 89",
-    "phoneHours": "Ma-Za: 9u-18u",
     "email": "E-mail",
     "emailAddress": "contact@fundia-invest.com",
     "emailResponse": "Reactie binnen 24u",
     "address": "Adres",
-    "addressLine1": "5588 Rue Frontenac",
-    "addressLine2": "Montréal, QC H2H 2L9, Canada",
+    "addressLine1": "C/O WAYSTONE MANAGEMENT (UK) LIMITED",
+    "addressLine2": "29 Wellington Street, Leeds, LS1 4DL, Verenigd Koninkrijk",
     "form": {
       "title": "Stuur ons een bericht",
       "name": "Volledige naam",
       "email": "E-mail",
-      "phone": "Telefoon",
       "subject": "Onderwerp",
       "message": "Bericht",
       "send": "Bericht versturen",
       "success": "Bericht verzonden!",
-      "successDesc": "We reageren zo snel mogelijk."
+      "successDesc": "We reageren zo snel mogelijk.",
+      "sending": "Versturen...",
+      "errorDesc": "Er is een fout opgetreden bij het verzenden. Probeer het opnieuw.",
+      "consentPrefix": "Ik ga ermee akkoord dat mijn gegevens worden gebruikt om mijn aanvraag te verwerken, in overeenstemming met het",
+      "consentLink": "privacybeleid",
+      "consentRequired": "Accepteer het privacybeleid om uw bericht te verzenden."
     },
     "sidebar": {
       "hours": "Openingstijden",
@@ -610,10 +612,10 @@
   },
   "footer": {
     "company": "Bedrijf",
-    "description": "Fundia Invest begeleidt particulieren en bedrijven al meer dan 10 jaar bij hun financieringsprojecten. Onze missie: krediet toegankelijk, transparant en aangepast aan elke situatie maken.",
+    "description": "Fundia Invest begeleidt particulieren en bedrijven bij hun financieringsprojecten. Onze missie: krediet toegankelijk, transparant en aangepast aan elke situatie maken.",
     "addressLabel": "Adres",
-    "addressLine1": "5588 Rue Frontenac",
-    "addressLine2": "Montréal, QC H2H 2L9, Canada",
+    "addressLine1": "C/O WAYSTONE MANAGEMENT (UK) LIMITED",
+    "addressLine2": "29 Wellington Street, Leeds, LS1 4DL, Verenigd Koninkrijk",
     "about": "Over Ons",
     "contact": "Contact",
     "legal": "Juridische Kennisgeving",
@@ -625,7 +627,7 @@
     "glossary": "Woordenlijst",
     "creditGuide": "Kredietgids",
     "newsletter": "Nieuwsbrief",
-    "copyright": "© 2012 Fundia Invest. Alle rechten voorbehouden.",
+    "copyright": "© {{year}} Fundia Invest. Alle rechten voorbehouden.",
     "creditWarning": "Een krediet verbindt u en moet worden terugbetaald. Controleer uw terugbetalingscapaciteit voordat u zich verbindt."
   },
   "newsletter": {
@@ -638,7 +640,13 @@
     "invalidEmailDesc": "Voer een geldig e-mailadres in.",
     "successTitle": "Succesvol geabonneerd!",
     "successDesc": "U ontvangt binnenkort onze beste leningaanbiedingen.",
-    "noSpam": "Geen spam. Altijd opzegbaar."
+    "noSpam": "Geen spam. Altijd opzegbaar.",
+    "consentLabel": "Ik ga ermee akkoord communicatie van Fundia Invest per e-mail te ontvangen.",
+    "consentLink": "privacybeleid",
+    "consentRequired": "Ga akkoord met het ontvangen van onze communicatie om u aan te melden.",
+    "alreadySubscribed": "Dit e-mailadres is al aangemeld voor onze nieuwsbrief.",
+    "errorTitle": "Fout",
+    "errorDesc": "Er is een fout opgetreden. Probeer het opnieuw."
   },
   "testimonials": {
     "title": "Wat onze klanten zeggen",
@@ -749,7 +757,10 @@
       "emailLabel": "E-mail:",
       "phoneLabel": "Telefoon:",
       "incomeLabel": "Maandinkomen:",
-      "disclaimer": "Door dit formulier in te dienen, stemt u ermee in dat uw gegevens worden verwerkt in het kader van uw kredietaanvraag. Uw informatie is veilig en vertrouwelijk."
+      "disclaimer": "Door dit formulier in te dienen, stemt u ermee in dat uw gegevens worden verwerkt in het kader van uw kredietaanvraag. Uw informatie is veilig en vertrouwelijk.",
+      "consentPrefix": "Ik ga ermee akkoord dat mijn gegevens worden gebruikt om mijn kredietaanvraag te verwerken, in overeenstemming met het",
+      "consentLink": "privacybeleid",
+      "consentRequired": "Accepteer het privacybeleid om uw aanvraag in te dienen."
     },
     "navigation": {
       "previous": "Vorige",
@@ -867,7 +878,12 @@
     "passwordUpdateSuccess": "Wachtwoord succesvol bijgewerkt!",
     "invalidResetLink": "Ongeldige of verlopen resetlink",
     "resetPasswordTitle": "Wachtwoord resetten",
-    "resetPasswordDesc": "Voer uw nieuwe wachtwoord in"
+    "resetPasswordDesc": "Voer uw nieuwe wachtwoord in",
+    "consentPrefix": "Ik accepteer de",
+    "consentTermsLink": "algemene voorwaarden",
+    "consentAnd": "en het",
+    "consentPrivacyLink": "privacybeleid",
+    "consentRequired": "Accepteer de algemene voorwaarden en het privacybeleid om een account aan te maken."
   },
   "dashboard": {
     "userTitle": "Mijn kredietaanvragen",
@@ -1005,7 +1021,7 @@
       "subtitle": "Van €1.000 tot €75.000",
       "description": "Financier uw dromen met onze flexibele persoonlijke leningen.",
       "approvalTime": "Goedkeuring in 5 min",
-      "secure": "100% veilig",
+      "secure": "Veilig",
       "fromRate": "Vanaf 2,9% JKP",
       "whyChoose": "Waarom onze persoonlijke lening kiezen?",
       "benefits": {
@@ -1257,10 +1273,10 @@
   },
   "seo": {
     "title": "Fundia Invest - Snelle Online Leningen | Persoonlijke, Auto- & Zakelijke Financiering",
-    "description": "Directe goedkeuring van € 1.000 tot € 75.000. Persoonlijke leningen, autofinanciering, woningverbetering & schuldconsolidatie. Rente vanaf 2,9 % JKP. Aanvragen in 5 minuten.",
+    "description": "Directe voorlopige beslissing voor financiering van € 1.000 tot € 75.000. Persoonlijke leningen, autofinanciering, woningverbetering & schuldconsolidatie. Rente vanaf 2,9 % JKP. Aanvragen in 5 minuten.",
     "author": "Fundia Invest",
     "ogTitle": "Fundia Invest - Snelle Online Leningen & Kredietoplossingen",
-    "ogDescription": "Directe goedkeuring, concurrerende rente vanaf 2,9 % JKP, flexibele voorwaarden. Uw betrouwbare kredietpartner."
+    "ogDescription": "Directe voorlopige beslissing, concurrerende rente vanaf 2,9 % JKP, flexibele voorwaarden. Uw platform voor kredietbemiddeling."
   },
   "network": {
     "nav": {

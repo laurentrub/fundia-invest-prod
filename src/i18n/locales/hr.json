@@ -295,7 +295,7 @@
     "hero": {
       "title": "Dobijte Svoje Financiranje Online",
       "subtitle": "Krediti za građane, tvrtke i inovativne projekte. Brza, transparentna rješenja prilagođena vašim potrebama.",
-      "description": "Simulirajte svoj zajam i primite preliminarni odgovor za nekoliko minuta. Bez obveze, 100% sigurno.",
+      "description": "Simulirajte svoj zajam i primite preliminarni odgovor za nekoliko minuta. Bez obveze, Sigurno.",
       "applyButton": "Zatražite Kredit",
       "projectButton": "Financirajte Moj Projekt",
       "simulateButton": "Simuliraj Moj Kredit"
@@ -317,7 +317,7 @@
         "description": "Ponude prilagođene vašoj situaciji"
       },
       "secure": {
-        "title": "100% Sigurno",
+        "title": "Sigurno",
         "description": "Vaši podaci su zaštićeni"
       }
     },
@@ -419,7 +419,7 @@
     "indexFeatures": {
       "fastApproval": "Brzo Odobrenje",
       "fastApprovalDesc": "Dobijte preliminarno odobrenje za manje od 5 minuta s našim sustavom trenutne odluke.",
-      "secure": "100% Sigurno",
+      "secure": "Sigurno",
       "secureDesc": "Bankovna enkripcija i zaštita podataka. Vaše informacije su uvijek sigurne.",
       "bestRates": "Najbolje Stope",
       "bestRatesDesc": "Konkurentne kamatne stope od 2,9% EKS. Usporedite i odaberite najbolju opciju.",
@@ -574,24 +574,26 @@
     "title": "Kontaktirajte Nas",
     "subtitle": "Naš tim je na raspolaganju za odgovor na sva vaša pitanja",
     "phone": "Telefon",
-    "phoneNumber": "01 23 45 67 89",
-    "phoneHours": "Pon-Sub: 9-18h",
     "email": "Email",
     "emailAddress": "contact@fundia-invest.com",
     "emailResponse": "Odgovor u roku od 24h",
     "address": "Adresa",
-    "addressLine1": "5588 Rue Frontenac",
-    "addressLine2": "Montréal, QC H2H 2L9, Kanada",
+    "addressLine1": "C/O WAYSTONE MANAGEMENT (UK) LIMITED",
+    "addressLine2": "29 Wellington Street, Leeds, LS1 4DL, Ujedinjeno Kraljevstvo",
     "form": {
       "title": "Pošaljite nam poruku",
       "name": "Puno ime",
       "email": "Email",
-      "phone": "Telefon",
       "subject": "Predmet",
       "message": "Poruka",
       "send": "Pošalji poruku",
       "success": "Poruka poslana!",
-      "successDesc": "Odgovorit ćemo što je prije moguće."
+      "successDesc": "Odgovorit ćemo što je prije moguće.",
+      "sending": "Slanje...",
+      "errorDesc": "Došlo je do pogreške prilikom slanja. Molimo pokušajte ponovno.",
+      "consentPrefix": "Slažem se da se moji podaci koriste za obradu mog zahtjeva, u skladu s",
+      "consentLink": "politikom privatnosti",
+      "consentRequired": "Molimo prihvatite politiku privatnosti za slanje poruke."
     },
     "sidebar": {
       "hours": "Radno Vrijeme",
@@ -610,10 +612,10 @@
   },
   "footer": {
     "company": "Tvrtka",
-    "description": "Fundia Invest već više od 10 godina prati privatne osobe i tvrtke u njihovim projektima financiranja. Naša misija: učiniti kredit dostupnim, transparentnim i prilagođenim svakoj situaciji.",
+    "description": "Fundia Invest prati privatne osobe i tvrtke u njihovim projektima financiranja. Naša misija: učiniti kredit dostupnim, transparentnim i prilagođenim svakoj situaciji.",
     "addressLabel": "Adresa",
-    "addressLine1": "5588 Rue Frontenac",
-    "addressLine2": "Montréal, QC H2H 2L9, Kanada",
+    "addressLine1": "C/O WAYSTONE MANAGEMENT (UK) LIMITED",
+    "addressLine2": "29 Wellington Street, Leeds, LS1 4DL, Ujedinjeno Kraljevstvo",
     "about": "O Nama",
     "contact": "Kontakt",
     "legal": "Pravna Obavijest",
@@ -625,7 +627,7 @@
     "glossary": "Pojmovnik",
     "creditGuide": "Vodič za Kredit",
     "newsletter": "Newsletter",
-    "copyright": "© 2012 Fundia Invest. Sva prava pridržana.",
+    "copyright": "© {{year}} Fundia Invest. Sva prava pridržana.",
     "creditWarning": "Kredit vas obvezuje i mora biti vraćen. Provjerite svoju sposobnost otplate prije preuzimanja obveze."
   },
   "newsletter": {
@@ -638,7 +640,13 @@
     "invalidEmailDesc": "Molimo unesite važeću adresu e-pošte.",
     "successTitle": "Uspješno pretplaćeni!",
     "successDesc": "Uskoro ćete primiti naše najbolje ponude kredita.",
-    "noSpam": "Bez neželjene pošte. Otkažite pretplatu bilo kada."
+    "noSpam": "Bez neželjene pošte. Otkažite pretplatu bilo kada.",
+    "consentLabel": "Slažem se primati komunikaciju od Fundia Invest putem e-maila.",
+    "consentLink": "politikom privatnosti",
+    "consentRequired": "Molimo prihvatite primanje naših obavijesti za prijavu.",
+    "alreadySubscribed": "Ovaj email je već prijavljen na naš newsletter.",
+    "errorTitle": "Greška",
+    "errorDesc": "Došlo je do pogreške. Molimo pokušajte ponovno."
   },
   "testimonials": {
     "title": "Što kažu naši klijenti",
@@ -749,7 +757,10 @@
       "emailLabel": "E-mail:",
       "phoneLabel": "Telefon:",
       "incomeLabel": "Mjesečni prihod:",
-      "disclaimer": "Podnošenjem ovog obrasca pristajete da se vaši podaci obrađuju u okviru vašeg zahtjeva za kredit. Vaše informacije su sigurne i povjerljive."
+      "disclaimer": "Podnošenjem ovog obrasca pristajete da se vaši podaci obrađuju u okviru vašeg zahtjeva za kredit. Vaše informacije su sigurne i povjerljive.",
+      "consentPrefix": "Slažem se da se moji podaci koriste za obradu mog zahtjeva za kredit, u skladu s",
+      "consentLink": "politikom privatnosti",
+      "consentRequired": "Molimo prihvatite politiku privatnosti za slanje zahtjeva."
     },
     "navigation": {
       "previous": "Prethodno",
@@ -834,7 +845,12 @@
     "passwordUpdateSuccess": "Lozinka uspješno ažurirana!",
     "invalidResetLink": "Nevažeći ili istekao link za poništavanje",
     "resetPasswordTitle": "Poništavanje lozinke",
-    "resetPasswordDesc": "Molimo unesite svoju novu lozinku"
+    "resetPasswordDesc": "Molimo unesite svoju novu lozinku",
+    "consentPrefix": "Prihvaćam",
+    "consentTermsLink": "opće uvjete",
+    "consentAnd": "i",
+    "consentPrivacyLink": "politiku privatnosti",
+    "consentRequired": "Molimo prihvatite opće uvjete i politiku privatnosti za otvaranje računa."
   },
   "dashboard": {
     "userTitle": "Moji zahtjevi za kredit",
@@ -943,7 +959,7 @@
       "subtitle": "Od 1.000€ do 75.000€",
       "description": "Financirajte svoje snove s našim fleksibilnim osobnim kreditima.",
       "approvalTime": "Odobrenje u 5 min",
-      "secure": "100% sigurno",
+      "secure": "Sigurno",
       "fromRate": "Od 2,9% EKS",
       "whyChoose": "Zašto izabrati naš osobni kredit?",
       "benefits": {
@@ -1195,10 +1211,10 @@
   },
   "seo": {
     "title": "Fundia Invest - Brzi Online Zajmovi | Osobno, Auto i Poslovno Financiranje",
-    "description": "Trenutno odobrenje od 1.000 € do 75.000 €. Osobni zajmovi, auto financiranje, renoviranje i konsolidacija dugova. Kamatne stope od 2,9 % EKS. Prijavite se za 5 minuta.",
+    "description": "Trenutna preliminarna odluka za financiranje od 1.000 € do 75.000 €. Osobni zajmovi, auto financiranje, renoviranje i konsolidacija dugova. Kamatne stope od 2,9 % EKS. Prijavite se za 5 minuta.",
     "author": "Fundia Invest",
     "ogTitle": "Fundia Invest - Brzi Online Zajmovi i Kreditna Rješenja",
-    "ogDescription": "Trenutno odobrenje, konkurentne kamatne stope od 2,9 % EKS, fleksibilni uvjeti. Vaš pouzdani kreditni partner."
+    "ogDescription": "Trenutna preliminarna odluka, konkurentne kamatne stope od 2,9 % EKS, fleksibilni uvjeti. Vaša platforma za posredovanje kredita."
   },
   "network": {
     "nav": {

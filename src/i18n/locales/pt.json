@@ -295,7 +295,7 @@
     "hero": {
       "title": "Obtenha o Seu Financiamento Online",
       "subtitle": "Créditos para particulares, empresas e projetos inovadores. Soluções rápidas, transparentes e adaptadas às suas necessidades.",
-      "description": "Simule o seu empréstimo e receba uma resposta preliminar em minutos. Sem compromisso, 100% seguro.",
+      "description": "Simule o seu empréstimo e receba uma resposta preliminar em minutos. Sem compromisso, Seguro.",
       "applyButton": "Solicitar Crédito",
       "projectButton": "Financiar Meu Projeto",
       "simulateButton": "Simular Meu Crédito"
@@ -317,7 +317,7 @@
         "description": "Ofertas adaptadas à sua situação"
       },
       "secure": {
-        "title": "100% Seguro",
+        "title": "Seguro",
         "description": "Os seus dados estão protegidos"
       }
     },
@@ -414,12 +414,12 @@
     "cta": {
       "title": "Pronto para Começar?",
       "description": "Junte-se a milhares de clientes satisfeitos que escolheram a Fundia Invest para as suas necessidades de financiamento.",
-      "button": "Solicitar Agora - Aprovação Instantânea"
+      "button": "Solicitar Agora - Decisão Preliminar Instantânea"
     },
     "indexFeatures": {
       "fastApproval": "Aprovação Rápida",
       "fastApprovalDesc": "Obtenha a sua aprovação preliminar em menos de 5 minutos com o nosso sistema de decisão instantânea.",
-      "secure": "100% Seguro",
+      "secure": "Seguro",
       "secureDesc": "Criptografia bancária e proteção de dados. As suas informações estão sempre seguras.",
       "bestRates": "Melhores Taxas",
       "bestRatesDesc": "Taxas de juros competitivas a partir de 2,9% TAEG. Compare e escolha a melhor opção.",
@@ -574,24 +574,26 @@
     "title": "Contacte-nos",
     "subtitle": "A nossa equipa está à sua disposição para responder a todas as suas questões",
     "phone": "Telefone",
-    "phoneNumber": "01 23 45 67 89",
-    "phoneHours": "Seg-Sáb: 9h-18h",
     "email": "E-mail",
     "emailAddress": "contact@fundia-invest.com",
     "emailResponse": "Resposta em 24h",
     "address": "Morada",
-    "addressLine1": "5588 Rue Frontenac",
-    "addressLine2": "Montréal, QC H2H 2L9, Canadá",
+    "addressLine1": "C/O WAYSTONE MANAGEMENT (UK) LIMITED",
+    "addressLine2": "29 Wellington Street, Leeds, LS1 4DL, Reino Unido",
     "form": {
       "title": "Envie-nos uma mensagem",
       "name": "Nome completo",
       "email": "E-mail",
-      "phone": "Telefone",
       "subject": "Assunto",
       "message": "Mensagem",
       "send": "Enviar mensagem",
       "success": "Mensagem enviada!",
-      "successDesc": "Responderemos o mais breve possível."
+      "successDesc": "Responderemos o mais breve possível.",
+      "sending": "A enviar...",
+      "errorDesc": "Ocorreu um erro ao enviar. Por favor, tente novamente.",
+      "consentPrefix": "Aceito que os meus dados sejam utilizados para processar o meu pedido, de acordo com a",
+      "consentLink": "política de privacidade",
+      "consentRequired": "Por favor, aceite a política de privacidade para enviar a sua mensagem."
     },
     "sidebar": {
       "hours": "Horário de Atendimento",
@@ -610,10 +612,10 @@
   },
   "footer": {
     "company": "Empresa",
-    "description": "A Fundia Invest acompanha particulares e empresas nos seus projetos de financiamento há mais de 10 anos. A nossa missão: tornar o crédito acessível, transparente e adaptado a cada situação.",
+    "description": "A Fundia Invest acompanha particulares e empresas nos seus projetos de financiamento. A nossa missão: tornar o crédito acessível, transparente e adaptado a cada situação.",
     "addressLabel": "Morada",
-    "addressLine1": "5588 Rue Frontenac",
-    "addressLine2": "Montréal, QC H2H 2L9, Canadá",
+    "addressLine1": "C/O WAYSTONE MANAGEMENT (UK) LIMITED",
+    "addressLine2": "29 Wellington Street, Leeds, LS1 4DL, Reino Unido",
     "about": "Sobre Nós",
     "contact": "Contacto",
     "legal": "Aviso Legal",
@@ -625,7 +627,7 @@
     "glossary": "Glossário",
     "creditGuide": "Guia de Crédito",
     "newsletter": "Newsletter",
-    "copyright": "© 2012 Fundia Invest. Todos os direitos reservados.",
+    "copyright": "© {{year}} Fundia Invest. Todos os direitos reservados.",
     "creditWarning": "Um crédito compromete-o e deve ser reembolsado. Verifique a sua capacidade de reembolso antes de se comprometer."
   },
   "newsletter": {
@@ -638,7 +640,13 @@
     "invalidEmailDesc": "Por favor, insira um endereço de e-mail válido.",
     "successTitle": "Inscrição bem-sucedida!",
     "successDesc": "Em breve você receberá nossas melhores ofertas de crédito.",
-    "noSpam": "Sem spam. Cancele a inscrição a qualquer momento."
+    "noSpam": "Sem spam. Cancele a inscrição a qualquer momento.",
+    "consentLabel": "Aceito receber comunicações da Fundia Invest por email.",
+    "consentLink": "política de privacidade",
+    "consentRequired": "Por favor, aceite receber as nossas comunicações para se inscrever.",
+    "alreadySubscribed": "Este email já está inscrito na nossa newsletter.",
+    "errorTitle": "Erro",
+    "errorDesc": "Ocorreu um erro. Por favor, tente novamente."
   },
   "testimonials": {
     "title": "O que dizem nossos clientes",
@@ -749,7 +757,10 @@
       "emailLabel": "Email:",
       "phoneLabel": "Telefone:",
       "incomeLabel": "Rendimento mensal:",
-      "disclaimer": "Ao submeter este formulário, concorda que os seus dados sejam tratados no âmbito do seu pedido de crédito. As suas informações são seguras e confidenciais."
+      "disclaimer": "Ao submeter este formulário, concorda que os seus dados sejam tratados no âmbito do seu pedido de crédito. As suas informações são seguras e confidenciais.",
+      "consentPrefix": "Aceito que os meus dados sejam utilizados para processar o meu pedido de crédito, de acordo com a",
+      "consentLink": "política de privacidade",
+      "consentRequired": "Por favor, aceite a política de privacidade para submeter o seu pedido."
     },
     "navigation": {
       "previous": "Anterior",
@@ -867,7 +878,12 @@
     "passwordUpdateSuccess": "Palavra-passe atualizada com sucesso!",
     "invalidResetLink": "Link de redefinição inválido ou expirado",
     "resetPasswordTitle": "Redefinição de palavra-passe",
-    "resetPasswordDesc": "Por favor introduza a sua nova palavra-passe"
+    "resetPasswordDesc": "Por favor introduza a sua nova palavra-passe",
+    "consentPrefix": "Aceito os",
+    "consentTermsLink": "termos gerais",
+    "consentAnd": "e a",
+    "consentPrivacyLink": "política de privacidade",
+    "consentRequired": "Por favor, aceite os termos gerais e a política de privacidade para criar uma conta."
   },
   "dashboard": {
     "userTitle": "Os meus pedidos de crédito",
@@ -1005,7 +1021,7 @@
       "subtitle": "De 1.000€ a 75.000€",
       "description": "Financie os seus sonhos com os nossos créditos pessoais flexíveis.",
       "approvalTime": "Aprovação em 5 min",
-      "secure": "100% seguro",
+      "secure": "Seguro",
       "fromRate": "Desde 2,9% TAEG",
       "whyChoose": "Porquê escolher o nosso crédito pessoal?",
       "benefits": {
@@ -1257,10 +1273,10 @@
   },
   "seo": {
     "title": "Fundia Invest - Empréstimos Online Rápidos | Financiamento Pessoal, Auto e Empresas",
-    "description": "Aprovação instantânea de 1.000 € a 75.000 €. Empréstimos pessoais, financiamento auto, obras e consolidação de dívidas. Taxas a partir de 2,9 % TAEG. Solicite em 5 minutos.",
+    "description": "Decisão preliminar instantânea de 1.000 € a 75.000 €. Empréstimos pessoais, financiamento auto, obras e consolidação de dívidas. Taxas a partir de 2,9 % TAEG. Solicite em 5 minutos.",
     "author": "Fundia Invest",
     "ogTitle": "Fundia Invest - Empréstimos Online Rápidos e Soluções de Crédito",
-    "ogDescription": "Aprovação instantânea, taxas competitivas a partir de 2,9 % TAEG, condições flexíveis. O seu parceiro de crédito de confiança."
+    "ogDescription": "Decisão preliminar instantânea, taxas competitivas a partir de 2,9 % TAEG, condições flexíveis. A sua plataforma de intermediação de crédito."
   },
   "network": {
     "nav": {

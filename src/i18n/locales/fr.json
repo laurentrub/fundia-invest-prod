@@ -317,7 +317,7 @@
         "description": "Des offres adaptées à votre situation"
       },
       "secure": {
-        "title": "100% sécurisé",
+        "title": "Sécurisé",
         "description": "Vos données sont protégées"
       }
     },
@@ -414,12 +414,12 @@
     "cta": {
       "title": "Prêt à commencer ?",
       "description": "Rejoignez des milliers de clients satisfaits qui ont choisi Fundia Invest pour leurs besoins de financement.",
-      "button": "Demander maintenant - Approbation instantanée"
+      "button": "Demander maintenant - Décision préliminaire instantanée"
     },
     "indexFeatures": {
       "fastApproval": "Approbation rapide",
       "fastApprovalDesc": "Obtenez votre accord préliminaire en moins de 5 minutes avec notre système de décision instantanée.",
-      "secure": "100% sécurisé",
+      "secure": "Sécurisé",
       "secureDesc": "Chiffrement bancaire et protection des données. Vos informations sont toujours en sécurité.",
       "bestRates": "Meilleurs taux",
       "bestRatesDesc": "Taux d'intérêt compétitifs à partir de 2,9% TAEG. Comparez et choisissez la meilleure option.",
@@ -574,24 +574,26 @@
     "title": "Contactez-nous",
     "subtitle": "Notre équipe est à votre disposition pour répondre à toutes vos questions",
     "phone": "Téléphone",
-    "phoneNumber": "01 23 45 67 89",
-    "phoneHours": "Lun-Sam: 9h-18h",
     "email": "Email",
     "emailAddress": "contact@fundia-invest.com",
     "emailResponse": "Réponse sous 24h",
     "address": "Adresse",
-    "addressLine1": "5588 Rue Frontenac",
-    "addressLine2": "Montréal, QC H2H 2L9, Canada",
+    "addressLine1": "C/O WAYSTONE MANAGEMENT (UK) LIMITED",
+    "addressLine2": "29 Wellington Street, Leeds, LS1 4DL, Royaume-Uni",
     "form": {
       "title": "Envoyez-nous un message",
       "name": "Nom complet",
       "email": "Email",
-      "phone": "Téléphone",
       "subject": "Sujet",
       "message": "Message",
       "send": "Envoyer le message",
+      "sending": "Envoi en cours...",
       "success": "Message envoyé !",
-      "successDesc": "Nous vous répondrons dans les plus brefs délais."
+      "successDesc": "Nous vous répondrons dans les plus brefs délais.",
+      "errorDesc": "Une erreur est survenue lors de l'envoi. Veuillez réessayer.",
+      "consentPrefix": "J'accepte que mes données soient utilisées pour traiter ma demande, conformément à la",
+      "consentLink": "politique de confidentialité",
+      "consentRequired": "Merci d'accepter la politique de confidentialité pour envoyer votre message."
     },
     "sidebar": {
       "hours": "Horaires d'ouverture",
@@ -610,7 +612,7 @@
   },
   "footer": {
     "company": "Entreprise",
-    "description": "Fundia Invest accompagne les particuliers et les entreprises dans leurs projets de financement depuis plus de 10 ans. Notre mission : rendre le crédit accessible, transparent et adapté à chaque situation.",
+    "description": "Fundia Invest accompagne les particuliers et les entreprises dans leurs projets de financement. Notre mission : rendre le crédit accessible, transparent et adapté à chaque situation.",
     "addressLabel": "Adresse",
     "addressLine1": "C/O WAYSTONE MANAGEMENT (UK) LIMITED",
     "addressLine2": "29 Wellington Street, Leeds, LS1 4DL, Royaume-Uni",
@@ -625,7 +627,7 @@
     "glossary": "Glossaire",
     "creditGuide": "Guide du crédit",
     "newsletter": "Newsletter",
-    "copyright": "© 2012 Fundia Invest. Tous droits réservés.",
+    "copyright": "© {{year}} Fundia Invest. Tous droits réservés.",
     "creditWarning": "Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager."
   },
   "newsletter": {
@@ -638,7 +640,13 @@
     "invalidEmailDesc": "Veuillez entrer une adresse email valide.",
     "successTitle": "Inscription réussie !",
     "successDesc": "Vous recevrez bientôt nos meilleures offres de crédit.",
-    "noSpam": "Pas de spam. Désinscription possible à tout moment."
+    "noSpam": "Pas de spam. Désinscription possible à tout moment.",
+    "consentLabel": "J'accepte de recevoir des communications de Fundia Invest par email.",
+    "consentLink": "politique de confidentialité",
+    "consentRequired": "Merci d'accepter de recevoir nos communications pour vous inscrire.",
+    "alreadySubscribed": "Cet email est déjà inscrit à notre newsletter.",
+    "errorTitle": "Erreur",
+    "errorDesc": "Une erreur est survenue. Veuillez réessayer."
   },
   "testimonials": {
     "title": "Ce que disent nos clients",
@@ -674,7 +682,7 @@
     "rate": "Taux d'intérêt",
     "interestRate": "Taux d'intérêt (TAEG)",
     "getApproval": "Obtenir votre accord",
-    "disclaimer": "Sans engagement • Accord préliminaire instantané • 100% sécurisé"
+    "disclaimer": "Sans engagement • Accord préliminaire instantané • Sécurisé"
   },
   "apply": {
     "title": "Demande de Crédit",
@@ -740,7 +748,10 @@
       "emailLabel": "Email :",
       "phoneLabel": "Téléphone :",
       "incomeLabel": "Revenu mensuel :",
-      "disclaimer": "En soumettant ce formulaire, vous acceptez que vos données soient traitées dans le cadre de votre demande de crédit. Vos informations sont sécurisées et confidentielles."
+      "disclaimer": "En soumettant ce formulaire, vous acceptez que vos données soient traitées dans le cadre de votre demande de crédit. Vos informations sont sécurisées et confidentielles.",
+      "consentPrefix": "J'accepte que mes données soient utilisées pour traiter ma demande de crédit, conformément à la",
+      "consentLink": "politique de confidentialité",
+      "consentRequired": "Merci d'accepter la politique de confidentialité pour soumettre votre demande."
     },
     "loanTypes": {
       "personal": "Crédit Personnel",
@@ -888,7 +899,12 @@
     "passwordUpdateSuccess": "Mot de passe mis à jour avec succès !",
     "invalidResetLink": "Lien de réinitialisation invalide ou expiré",
     "resetPasswordTitle": "Réinitialisation du mot de passe",
-    "resetPasswordDesc": "Veuillez entrer votre nouveau mot de passe"
+    "resetPasswordDesc": "Veuillez entrer votre nouveau mot de passe",
+    "consentPrefix": "J'accepte les",
+    "consentTermsLink": "conditions générales",
+    "consentAnd": "et la",
+    "consentPrivacyLink": "politique de confidentialité",
+    "consentRequired": "Merci d'accepter les conditions générales et la politique de confidentialité pour créer un compte."
   },
   "dashboard": {
     "userTitle": "Mes demandes de crédit",
@@ -1308,7 +1324,7 @@
       "subtitle": "De 1 000€ à 75 000€",
       "description": "Financez vos rêves avec nos prêts personnels flexibles. Que ce soit pour un mariage, des vacances, des frais médicaux ou tout projet personnel - nous avons ce qu'il vous faut.",
       "approvalTime": "Approbation en 5 min",
-      "secure": "100% sécurisé",
+      "secure": "Sécurisé",
       "fromRate": "À partir de 2,9% TAEG",
       "whyChoose": "Pourquoi choisir notre prêt personnel ?",
       "benefits": {
@@ -1354,7 +1370,7 @@
           "documents": "Fournissent la documentation nécessaire (pièce d'identité, preuve de revenus, relevés bancaires)"
         },
         "aprTitle": "Comprendre les taux d'intérêt et le TAEG",
-        "aprIntro": "Le Taux Annuel Effectif Global (TAEG) est le coût annuel total de votre prêt exprimé en pourcentage. Il inclut à la fois le taux d'intérêt et tous les frais, vous donnant une image complète de ce que le prêt vous coûtera. Chez CreditPro, votre TAEG dépend de plusieurs facteurs :",
+        "aprIntro": "Le Taux Annuel Effectif Global (TAEG) est le coût annuel total de votre prêt exprimé en pourcentage. Il inclut à la fois le taux d'intérêt et tous les frais, vous donnant une image complète de ce que le prêt vous coûtera. Chez Fundia Invest, votre TAEG dépend de plusieurs facteurs :",
         "aprFactors": {
           "creditScore": "Score de crédit : Des scores plus élevés se qualifient généralement pour des taux plus bas",
           "loanAmount": "Montant du prêt : Les prêts plus importants peuvent avoir des structures de taux différentes",
@@ -1437,7 +1453,7 @@
       "faqTitle": "FAQ Crédit Auto",
       "faqs": {
         "q1": "Quelle est la différence entre votre financement et celui d'un concessionnaire ?",
-        "a1": "Obtenir une pré-approbation avec Fundia Invest vous donne un taux et un montant garantis avant vos recherches, vous plaçant dans une position de négociation plus forte. Le financement par concessionnaire est déterminé après avoir choisi une voiture, et les taux peuvent être moins compétitifs.",
+        "a1": "Obtenir une pré-approbation avec Fundia Invest vous donne un taux et un montant indicatifs avant vos recherches, vous plaçant dans une position de négociation plus forte. Le financement par concessionnaire est déterminé après avoir choisi une voiture, et les taux peuvent être moins compétitifs.",
         "q2": "Puis-je financer une voiture d'occasion auprès d'un vendeur particulier ?",
         "a2": "Oui ! Nous finançons les véhicules d'occasion provenant de concessionnaires et de vendeurs particuliers. Pour les ventes entre particuliers, nous aurons besoin du numéro VIN du véhicule, du kilométrage actuel et des détails sur l'état pour déterminer la valeur et finaliser votre prêt.",
         "q3": "Quel âge maximum peut avoir une voiture d'occasion pour être financée ?",
@@ -1802,10 +1818,10 @@
   },
   "seo": {
     "title": "Fundia Invest - Prêts en Ligne Rapides | Financement Personnel, Auto & Entreprise",
-    "description": "Obtenez une approbation instantanée de 1 000 € à 75 000 €. Prêts personnels, crédit auto, travaux & rachat de crédit. Taux à partir de 2,9 % TAEG. Demande en 5 minutes.",
+    "description": "Obtenez une décision préliminaire instantanée de 1 000 € à 75 000 €. Prêts personnels, crédit auto, travaux & rachat de crédit. Taux à partir de 2,9 % TAEG. Demande en 5 minutes.",
     "author": "Fundia Invest",
     "ogTitle": "Fundia Invest - Prêts en Ligne Rapides & Solutions de Crédit",
-    "ogDescription": "Approbation instantanée, taux compétitifs à partir de 2,9 % TAEG, conditions flexibles. Votre partenaire crédit de confiance."
+    "ogDescription": "Décision préliminaire instantanée, taux compétitifs à partir de 2,9 % TAEG, conditions flexibles. Votre plateforme de mise en relation crédit."
   },
   "network": {
     "nav": {

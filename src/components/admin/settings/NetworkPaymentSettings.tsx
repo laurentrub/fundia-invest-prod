@@ -35,7 +35,7 @@ const DEFAULT_SETTINGS: PaymentSettings = {
   bank_transfer_enabled: true,
   bank_iban: '',
   bank_bic: '',
-  bank_beneficiary: 'Fundia Invest SAS',
+  bank_beneficiary: 'HEDGE FUNDS INVESTMENT MANAGEMENT LIMITED',
   bank_bank_name: '',
   price: 19.90,
 };
@@ -322,7 +322,7 @@ export function NetworkPaymentSettings() {
               <Input
                 value={settings.bank_beneficiary}
                 onChange={e => update('bank_beneficiary', e.target.value)}
-                placeholder="Fundia Invest SAS"
+                placeholder="HEDGE FUNDS INVESTMENT MANAGEMENT LIMITED"
                 disabled={!settings.bank_transfer_enabled}
               />
             </div>

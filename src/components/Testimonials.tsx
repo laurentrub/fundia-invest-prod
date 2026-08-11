@@ -52,6 +52,7 @@ const Testimonials = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             {t('testimonials.title')}
           </h2>
+          {/* À FOURNIR: vérifier le chiffre client cité dans testimonials.subtitle (src/i18n/locales/*.json) avant publication */}
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {t('testimonials.subtitle')}
           </p>
