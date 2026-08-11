@@ -39,28 +39,26 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const { data: inserted, error } = await supabase
+      const contactMessageId = crypto.randomUUID();
+      const { error } = await supabase
         .from('contact_messages')
         .insert({
+          id: contactMessageId,
           name: formData.name,
           email: formData.email,
           subject: formData.subject,
           message: formData.message,
           consent_given: consent,
-        })
-        .select()
-        .single();
+        });
 
       if (error) throw error;
 
-      if (inserted) {
-        try {
-          await supabase.functions.invoke('send-contact-notification', {
-            body: { contactMessageId: inserted.id },
-          });
-        } catch (emailError) {
-          console.error('Error sending contact notification email:', emailError);
-        }
+      try {
+        await supabase.functions.invoke('send-contact-notification', {
+          body: { contactMessageId },
+        });
+      } catch (emailError) {
+        console.error('Error sending contact notification email:', emailError);
       }
 
       toast({
