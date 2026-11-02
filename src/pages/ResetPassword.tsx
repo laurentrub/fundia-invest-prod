@@ -12,7 +12,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function ResetPassword() {
   const { t } = useTranslation();
-  const { updatePassword, user } = useAuth();
+  const { updatePassword, user, loading: authLoading } = useAuth();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [passwords, setPasswords] = useState({
@@ -22,23 +22,23 @@ export default function ResetPassword() {
 
   // Redirect to auth page if no user session (invalid or expired token)
   useEffect(() => {
-    if (!user) {
-      toast.error(t('auth.resetLinkExpired'));
+    if (!authLoading && !user) {
+      toast.error(t('auth.invalidResetLink'));
       navigate('/auth');
     }
-  }, [user, navigate, t]);
+  }, [user, authLoading, navigate, t]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     // Validation
     if (passwords.newPassword !== passwords.confirmPassword) {
-      toast.error(t('profile.passwordMismatch'));
+      toast.error(t('auth.passwordMismatch'));
       return;
     }
 
     if (passwords.newPassword.length < 6) {
-      toast.error(t('profile.passwordTooShort'));
+      toast.error(t('auth.passwordTooShort'));
       return;
     }
 
@@ -49,7 +49,7 @@ export default function ResetPassword() {
     if (error) {
       toast.error(error.message);
     } else {
-      toast.success(t('profile.passwordUpdateSuccess'));
+      toast.success(t('auth.passwordUpdateSuccess'));
       setTimeout(() => {
         navigate('/auth');
       }, 2000);
@@ -66,13 +66,13 @@ export default function ResetPassword() {
           <CardHeader>
             <CardTitle>{t('auth.resetPassword')}</CardTitle>
             <CardDescription>
-              {t('auth.enterNewPassword')}
+              {t('auth.resetPasswordDesc')}
             </CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="new-password">{t('profile.newPassword')}</Label>
+                <Label htmlFor="new-password">{t('auth.newPassword')}</Label>
                 <Input
                   id="new-password"
                   type="password"
@@ -82,11 +82,11 @@ export default function ResetPassword() {
                   onChange={(e) =>
                     setPasswords({ ...passwords, newPassword: e.target.value })
                   }
-                  placeholder={t('auth.minCharacters', { count: 6 })}
+                  placeholder={t('auth.passwordMinLength')}
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="confirm-password">{t('profile.confirmPassword')}</Label>
+                <Label htmlFor="confirm-password">{t('auth.confirmPassword')}</Label>
                 <Input
                   id="confirm-password"
                   type="password"
@@ -100,7 +100,7 @@ export default function ResetPassword() {
                 />
               </div>
               <Button type="submit" className="w-full" disabled={loading}>
-                {loading ? t('common.updating') : t('auth.resetPasswordButton')}
+                {loading ? t('auth.updating') : t('auth.resetPasswordButton')}
               </Button>
             </form>
           </CardContent>

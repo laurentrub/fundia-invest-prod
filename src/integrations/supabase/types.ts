@@ -131,6 +131,7 @@ export type Database = {
           monthly_income: number | null
           monthly_mortgage: number | null
           postal_code: string | null
+          project_details: Json | null
           purpose: string | null
           amount: number
           created_at: string
@@ -161,6 +162,7 @@ export type Database = {
           monthly_income?: number | null
           monthly_mortgage?: number | null
           postal_code?: string | null
+          project_details?: Json | null
           purpose?: string | null
           amount: number
           created_at?: string
@@ -191,6 +193,7 @@ export type Database = {
           monthly_income?: number | null
           monthly_mortgage?: number | null
           postal_code?: string | null
+          project_details?: Json | null
           purpose?: string | null
           amount?: number
           created_at?: string

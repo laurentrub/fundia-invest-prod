@@ -41,6 +41,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog';
+import type { Json } from '@/integrations/supabase/types';
 import { cn } from '@/lib/utils';
 import { toast } from 'sonner';
 
@@ -73,7 +74,19 @@ interface LoanRequest {
   city: string | null;
   postal_code: string | null;
   country: string | null;
+  project_details: Json | null;
 }
+
+// Valeurs du formulaire de financement de projet et leur libellé
+const PROJECT_LABEL_KEYS: Record<string, Record<string, string>> = {
+  projectType: { startup: 'startup', development: 'development', acquisition: 'acquisition', 'real-estate': 'realEstate', innovation: 'innovation', expansion: 'expansion', other: 'other' },
+  projectSector: { tech: 'tech', retail: 'retail', services: 'services', industry: 'industry', health: 'health', food: 'food', 'real-estate': 'realEstate', energy: 'energy', education: 'education', tourism: 'tourism', other: 'other' },
+  projectDuration: { '0-6': 'short', '6-12': 'medium', '12-24': 'long', '24+': 'veryLong' },
+  companyStatus: { ae: 'ae', sarl: 'sarl', sas: 'sas', sa: 'sa', ei: 'ei', creation: 'creation' },
+  employeeCount: { '1': 'solo', '1-5': 'small', '6-20': 'medium', '21-50': 'large', '50+': 'veryLarge' },
+  annualRevenue: { 'pre-revenue': 'preRevenue', '0-50k': 'small', '50k-200k': 'medium', '200k-500k': 'large', '500k-1m': 'veryLarge', '1m+': 'enterprise' },
+  document: { available: 'available', 'in-progress': 'inProgress', 'not-available': 'notAvailable' },
+};
 
 interface StatusHistoryItem {
   id: string;
@@ -550,6 +563,36 @@ export default function RequestDetail() {
     .filter(Boolean)
     .join(', ');
 
+  const project = (request.project_details ?? {}) as Record<string, string>;
+  const pf = 'products.projectFinancing';
+  const projectLabel = (group: string, prefix: string, value?: string) => {
+    const key = value && PROJECT_LABEL_KEYS[group][value];
+    return key ? t(`${pf}.${prefix}${key}`) : value;
+  };
+  const projectEuros = (value?: string) => value && `${Number(value).toLocaleString('fr-FR')} €`;
+  const projectDetails = request.project_details ? [
+    { label: t(`${pf}.step1.projectName`), value: project.projectName },
+    { label: t(`${pf}.step1.projectType`), value: projectLabel('projectType', 'step1.projectTypes.', project.projectType) },
+    { label: t(`${pf}.step1.projectSector`), value: projectLabel('projectSector', 'step1.sectors.', project.projectSector) },
+    { label: t(`${pf}.step1.projectLocation`), value: project.projectLocation },
+    { label: t(`${pf}.step1.projectDescription`), value: project.projectDescription },
+    { label: t(`${pf}.step2.fundingPurpose`), value: project.fundingPurpose },
+    { label: t(`${pf}.step2.ownContribution`), value: projectEuros(project.ownContribution) },
+    { label: t(`${pf}.step2.expectedRevenue`), value: projectEuros(project.expectedRevenue) },
+    { label: t(`${pf}.step2.projectDuration`), value: projectLabel('projectDuration', 'step2.durationOptions.', project.projectDuration) },
+    { label: t(`${pf}.step2.breakEvenDate`), value: project.breakEvenDate && formatDate(project.breakEvenDate) },
+    { label: t(`${pf}.step3.companyName`), value: project.companyName },
+    { label: t(`${pf}.step3.companyStatus`), value: projectLabel('companyStatus', 'step3.statusOptions.', project.companyStatus) },
+    { label: t(`${pf}.step3.siret`), value: project.siret },
+    { label: t(`${pf}.step3.creationDate`), value: project.creationDate && formatDate(project.creationDate) },
+    { label: t(`${pf}.step3.employeeCount`), value: projectLabel('employeeCount', 'step3.employeeOptions.', project.employeeCount) },
+    { label: t(`${pf}.step3.annualRevenue`), value: projectLabel('annualRevenue', 'step3.revenueOptions.', project.annualRevenue) },
+    { label: t(`${pf}.step4.businessPlan`), value: projectLabel('document', 'step4.', project.businessPlan) },
+    { label: t(`${pf}.step4.financialProjections`), value: projectLabel('document', 'step4.', project.financialProjections) },
+    { label: t(`${pf}.step4.marketStudy`), value: projectLabel('document', 'step4.', project.marketStudy) },
+    { label: t(`${pf}.step4.additionalInfo`), value: project.additionalInfo },
+  ] : [];
+
   // Les demandes antérieures n'ont pas ces informations : seuls les champs renseignés s'affichent
   const applicationDetails = [
     { label: t('apply.step1.purpose'), value: request.purpose },
@@ -565,6 +608,7 @@ export default function RequestDetail() {
     { label: t('apply.step3.leaseStartDate'), value: formatDate(request.lease_start_date) },
     { label: t('apply.step3.hasMortgage'), value: request.has_mortgage === null ? null : t(request.has_mortgage ? 'common.yes' : 'common.no') },
     { label: t('apply.step3.monthlyMortgage'), value: formatEuros(request.monthly_mortgage) },
+    ...projectDetails,
   ].filter((detail) => detail.value);
 
   return (

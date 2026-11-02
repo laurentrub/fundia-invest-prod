@@ -28,8 +28,11 @@ const Index = () => {
 
   // Le lien de confirmation peut ramener ici : on reprend la demande en attente
   useEffect(() => {
-    if (!authLoading && user && localStorage.getItem('pendingLoanApplication')) {
+    if (authLoading || !user) return;
+    if (localStorage.getItem('pendingLoanApplication')) {
       navigate('/apply', { replace: true });
+    } else if (localStorage.getItem('pendingProjectApplication')) {
+      navigate('/project-financing', { replace: true });
     }
   }, [user, authLoading, navigate]);
 

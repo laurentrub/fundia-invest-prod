@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { User } from "@supabase/supabase-js";
-import { useAuth } from "@/hooks/useAuth";
+import { useApplicationAccount } from "@/hooks/useApplicationAccount";
+import { ApplicationAccountFields, AwaitingEmailConfirmation } from "@/components/credit/ApplicationAccount";
 import { supabase } from "@/integrations/supabase/client";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -13,48 +14,19 @@ import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { CheckCircle, ArrowRight, ArrowLeft, Mail } from "lucide-react";
+import { CheckCircle, ArrowRight, ArrowLeft } from "lucide-react";
 import { z } from "zod";
-
-const PENDING_APPLICATION_KEY = 'pendingLoanApplication';
-const PENDING_APPLICATION_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000;
 
 const textOrNull = (value: string) => value.trim() || null;
 const numberOrNull = (value: string) => (value === "" ? null : Number(value));
-
-const readPendingApplication = () => {
-  const savedData = localStorage.getItem(PENDING_APPLICATION_KEY);
-  if (!savedData) return null;
-
-  try {
-    const parsed = JSON.parse(savedData);
-    // Ancien format : les champs du formulaire directement, sans consentement enregistré
-    if (!parsed.form) return { form: parsed, consent: false };
-    if (Date.now() - parsed.savedAt > PENDING_APPLICATION_MAX_AGE_MS) {
-      localStorage.removeItem(PENDING_APPLICATION_KEY);
-      return null;
-    }
-    return { form: parsed.form, consent: parsed.consent === true };
-  } catch (error) {
-    console.error('Error restoring form data:', error);
-    localStorage.removeItem(PENDING_APPLICATION_KEY);
-    return null;
-  }
-};
 
 const ApplyPage = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
   const { t } = useTranslation();
-  const { user, loading: authLoading } = useAuth();
   const [step, setStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [consentGiven, setConsentGiven] = useState(false);
-  const [accountMode, setAccountMode] = useState<"signup" | "login">("signup");
-  const [accountEmail, setAccountEmail] = useState("");
-  const [accountPassword, setAccountPassword] = useState("");
-  const [termsAccepted, setTermsAccepted] = useState(false);
-  const [awaitingConfirmation, setAwaitingConfirmation] = useState(false);
 
   // Schémas de validation par étape
   const step1Schema = z.object({
@@ -191,39 +163,6 @@ const ApplyPage = () => {
     country: z.string().min(1, { message: t('apply.validation.countryRequired') }),
   });
   
-  // Reprend la demande sauvegardée : retour de lien de confirmation, connexion ou bandeau d'accueil
-  useEffect(() => {
-    if (authLoading) return;
-
-    const pending = readPendingApplication();
-    if (!pending) {
-      // La demande a déjà été envoyée depuis l'onglet ouvert par le lien de confirmation
-      if (user && awaitingConfirmation) navigate('/dashboard');
-      return;
-    }
-
-    setFormData(pending.form);
-    setAccountEmail(pending.form.email);
-    setConsentGiven(pending.consent);
-    setAwaitingConfirmation(false);
-    setStep(4);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-
-    if (user) {
-      localStorage.removeItem(PENDING_APPLICATION_KEY);
-      if (pending.consent) {
-        submitApplication(user, pending.form);
-        return;
-      }
-    }
-
-    toast({
-      title: t('apply.messages.dataRestored'),
-      description: t('apply.messages.dataRestoredDesc'),
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user, authLoading]); // Only depend on user and authLoading to avoid multiple triggers
-  
   const [formData, setFormData] = useState({
     loanType: "",
     amount: "",
@@ -249,6 +188,20 @@ const ApplyPage = () => {
     postalCode: "",
     country: "France",
   });
+
+  const account = useApplicationAccount<typeof formData>({
+    pendingKey: 'pendingLoanApplication',
+    returnPath: '/apply',
+    setIsSubmitting,
+    getEmail: (form) => form.email,
+    onRestore: (form, consent) => {
+      setFormData(form);
+      setConsentGiven(consent);
+      setStep(4);
+    },
+    onSubmit: (currentUser, form) => submitApplication(currentUser, form),
+  });
+  const { user } = account;
 
   const updateFormData = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
@@ -307,7 +260,7 @@ const ApplyPage = () => {
 
   const handleNext = () => {
     if (validateStep(step)) {
-      if (step === 3) setAccountEmail(formData.email);
+      if (step === 3) account.setEmail(formData.email);
       if (step < 4) setStep(step + 1);
     }
   };
@@ -330,116 +283,11 @@ const ApplyPage = () => {
     }
 
     if (!user) {
-      await authenticateAndResume();
+      await account.authenticateAndResume(formData, formData.firstName, formData.lastName);
       return;
     }
 
     await submitApplication(user, formData);
-  };
-
-  const emailRedirectTo = () => `${window.location.origin}/apply`;
-
-  // Une fois authentifié, l'effet de reprise envoie la demande sauvegardée
-  const authenticateAndResume = async () => {
-    if (accountPassword.length < 6) {
-      toast({ variant: "destructive", title: t('auth.passwordTooShort') });
-      return;
-    }
-
-    if (accountMode === "signup" && !termsAccepted) {
-      toast({ variant: "destructive", title: t('auth.consentRequired') });
-      return;
-    }
-
-    // Une fois connecté, l'envoi prend le relais : le bouton reste désactivé
-    let resuming = false;
-    setIsSubmitting(true);
-    localStorage.setItem(PENDING_APPLICATION_KEY, JSON.stringify({
-      form: formData,
-      consent: true,
-      savedAt: Date.now(),
-    }));
-
-    try {
-      if (accountMode === "login") {
-        const { error } = await supabase.auth.signInWithPassword({
-          email: accountEmail,
-          password: accountPassword,
-        });
-        if (error) {
-          if (error.message.toLowerCase().includes('not confirmed')) {
-            setAwaitingConfirmation(true);
-            return;
-          }
-          localStorage.removeItem(PENDING_APPLICATION_KEY);
-          toast({
-            variant: "destructive",
-            title: t('common.error'),
-            description: t('apply.account.invalidCredentials'),
-          });
-          return;
-        }
-        resuming = true;
-        return;
-      }
-
-      const { data, error } = await supabase.auth.signUp({
-        email: accountEmail,
-        password: accountPassword,
-        options: {
-          emailRedirectTo: emailRedirectTo(),
-          data: { first_name: formData.firstName, last_name: formData.lastName },
-        },
-      });
-
-      if (error) {
-        localStorage.removeItem(PENDING_APPLICATION_KEY);
-        toast({ variant: "destructive", title: t('common.error'), description: error.message });
-        return;
-      }
-
-      // Supabase masque les comptes existants : l'utilisateur renvoyé n'a aucune identité
-      if (data.user?.identities?.length === 0) {
-        localStorage.removeItem(PENDING_APPLICATION_KEY);
-        setAccountMode("login");
-        setAccountPassword("");
-        toast({ title: t('apply.account.emailExists') });
-        return;
-      }
-
-      if (!data.session) {
-        setAwaitingConfirmation(true);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        return;
-      }
-
-      resuming = true;
-
-      // Send welcome email only when a user session exists (JWT required by function)
-      try {
-        await supabase.functions.invoke('send-welcome-email', {
-          body: { firstName: formData.firstName, lastName: formData.lastName },
-        });
-      } catch (emailError) {
-        console.error('Error sending welcome email:', emailError);
-      }
-    } finally {
-      if (!resuming) setIsSubmitting(false);
-    }
-  };
-
-  const handleResendConfirmation = async () => {
-    const { error } = await supabase.auth.resend({
-      type: 'signup',
-      email: accountEmail,
-      options: { emailRedirectTo: emailRedirectTo() },
-    });
-
-    if (error) {
-      toast({ variant: "destructive", title: t('common.error'), description: error.message });
-    } else {
-      toast({ title: t('apply.account.confirmationResent') });
-    }
   };
 
   const submitApplication = async (currentUser: User, application: typeof formData) => {
@@ -520,7 +368,7 @@ const ApplyPage = () => {
       }
       
       // Clear saved application data
-      localStorage.removeItem(PENDING_APPLICATION_KEY);
+      account.clearPending();
       
       sessionStorage.setItem('applicationData', JSON.stringify({
         name: application.firstName,
@@ -601,30 +449,8 @@ const ApplyPage = () => {
             </div>
           </div>
 
-          {awaitingConfirmation ? (
-          <Card className="p-8 text-center space-y-4">
-            <Mail className="h-12 w-12 text-accent mx-auto" />
-            <h2 className="text-2xl font-bold text-foreground">{t('apply.account.awaitingTitle')}</h2>
-            <p className="text-muted-foreground">
-              {t('apply.account.awaitingDesc', { email: accountEmail })}
-            </p>
-            <p className="text-sm text-muted-foreground">{t('apply.account.awaitingHint')}</p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
-              <Button type="button" variant="outline" onClick={handleResendConfirmation}>
-                {t('auth.resendEmail')}
-              </Button>
-              <Button
-                type="button"
-                onClick={() => {
-                  setAwaitingConfirmation(false);
-                  setAccountMode("login");
-                  setAccountPassword("");
-                }}
-              >
-                {t('apply.account.alreadyConfirmed')}
-              </Button>
-            </div>
-          </Card>
+          {account.awaitingConfirmation ? (
+          <AwaitingEmailConfirmation account={account} />
           ) : (
           <Card className="p-8">
             <form onSubmit={handleSubmit}>
@@ -1029,78 +855,7 @@ const ApplyPage = () => {
 
                   {/* Compte créé directement dans le formulaire */}
                   {!user && (
-                    <div className="border rounded-lg p-6 mt-4 space-y-4">
-                      <div>
-                        <h3 className="font-semibold text-foreground">
-                          {t(accountMode === "signup" ? 'apply.account.signupTitle' : 'apply.account.loginTitle')}
-                        </h3>
-                        <p className="text-sm text-muted-foreground mt-1">
-                          {t(accountMode === "signup" ? 'apply.account.signupDesc' : 'apply.account.loginDesc')}
-                        </p>
-                      </div>
-
-                      <div>
-                        <Label htmlFor="account-email">{t('auth.email')} *</Label>
-                        <Input
-                          id="account-email"
-                          type="email"
-                          autoComplete="email"
-                          required
-                          value={accountEmail}
-                          onChange={(e) => setAccountEmail(e.target.value)}
-                        />
-                      </div>
-
-                      <div>
-                        <Label htmlFor="account-password">{t('auth.password')} *</Label>
-                        <Input
-                          id="account-password"
-                          type="password"
-                          autoComplete={accountMode === "signup" ? "new-password" : "current-password"}
-                          required
-                          minLength={6}
-                          value={accountPassword}
-                          onChange={(e) => setAccountPassword(e.target.value)}
-                        />
-                      </div>
-
-                      {accountMode === "signup" && (
-                        <div className="flex items-start gap-2">
-                          <Checkbox
-                            id="account-terms"
-                            checked={termsAccepted}
-                            onCheckedChange={(checked) => setTermsAccepted(checked === true)}
-                            className="mt-1"
-                          />
-                          <Label htmlFor="account-terms" className="text-sm font-normal leading-snug text-muted-foreground">
-                            {t('auth.consentPrefix')}{" "}
-                            <Link to="/terms" className="text-primary hover:underline">
-                              {t('auth.consentTermsLink')}
-                            </Link>{" "}
-                            {t('auth.consentAnd')}{" "}
-                            <Link to="/privacy" className="text-primary hover:underline">
-                              {t('auth.consentPrivacyLink')}
-                            </Link>
-                            . *
-                          </Label>
-                        </div>
-                      )}
-
-                      <div className="flex flex-wrap justify-between gap-2 text-sm">
-                        <button
-                          type="button"
-                          className="text-primary hover:underline"
-                          onClick={() => setAccountMode(accountMode === "signup" ? "login" : "signup")}
-                        >
-                          {t(accountMode === "signup" ? 'apply.account.switchToLogin' : 'apply.account.switchToSignup')}
-                        </button>
-                        {accountMode === "login" && (
-                          <Link to="/auth" className="text-primary hover:underline">
-                            {t('auth.forgotPassword')}
-                          </Link>
-                        )}
-                      </div>
-                    </div>
+                    <ApplicationAccountFields account={account} />
                   )}
                 </div>
               )}
@@ -1123,7 +878,7 @@ const ApplyPage = () => {
                   <Button
                     type="submit"
                     className="ml-auto"
-                    disabled={isSubmitting || !consentGiven || (!user && accountMode === "signup" && !termsAccepted)}
+                    disabled={isSubmitting || !consentGiven || account.termsMissing}
                   >
                     {isSubmitting ? t('apply.navigation.submitting') : t('apply.navigation.submit')}
                   </Button>

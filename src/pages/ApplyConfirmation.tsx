@@ -52,6 +52,7 @@ const ApplyConfirmation = () => {
       home: t('apply.loanTypes.home'),
       consolidation: t('apply.loanTypes.consolidation'),
       business: t('apply.loanTypes.business'),
+      project: t('dashboard.loanTypes.project'),
     };
     return types[type] || type;
   };

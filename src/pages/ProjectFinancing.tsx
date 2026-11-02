@@ -1,13 +1,18 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { z } from "zod";
+import { User } from "@supabase/supabase-js";
+import { supabase } from "@/integrations/supabase/client";
+import { useApplicationAccount } from "@/hooks/useApplicationAccount";
+import { ApplicationAccountFields, AwaitingEmailConfirmation } from "@/components/credit/ApplicationAccount";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Card } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { useToast } from "@/hooks/use-toast";
@@ -27,12 +32,22 @@ import {
   ArrowLeft,
 } from "lucide-react";
 
+// La colonne duration attend un nombre de mois : la tranche exacte reste dans project_details
+const PROJECT_DURATION_MONTHS: Record<string, number> = {
+  "0-6": 6,
+  "6-12": 12,
+  "12-24": 24,
+  "24+": 24,
+};
+
 const ProjectFinancing = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const { toast } = useToast();
   const [currentStep, setCurrentStep] = useState(1);
   const totalSteps = 4;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [consentGiven, setConsentGiven] = useState(false);
 
   // Validation schemas with translations
   const step1Schema = z.object({
@@ -44,7 +59,7 @@ const ProjectFinancing = () => {
   });
 
   const step2Schema = z.object({
-    fundingAmount: z.string().min(1, t("products.projectFinancing.validation.fundingAmountRequired")),
+    fundingAmount: z.string().refine((value) => Number(value) > 0, t("products.projectFinancing.validation.fundingAmountRequired")),
     fundingPurpose: z.string().min(1, t("products.projectFinancing.validation.fundingPurposeRequired")),
     expectedRevenue: z.string().min(1, t("products.projectFinancing.validation.expectedRevenueRequired")),
     projectDuration: z.string().min(1, t("products.projectFinancing.validation.projectDurationRequired")),
@@ -101,6 +116,20 @@ const ProjectFinancing = () => {
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
+
+  const account = useApplicationAccount<typeof formData>({
+    pendingKey: "pendingProjectApplication",
+    returnPath: "/project-financing",
+    setIsSubmitting,
+    getEmail: (form) => form.founderEmail,
+    onRestore: (form, consent) => {
+      setFormData(form);
+      setConsentGiven(consent);
+      setCurrentStep(totalSteps);
+    },
+    onSubmit: (currentUser, form) => submitApplication(currentUser, form),
+  });
+  const { user } = account;
 
   const updateFormData = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -171,6 +200,7 @@ const ProjectFinancing = () => {
 
   const handleNext = () => {
     if (validateStep(currentStep)) {
+      if (currentStep === 3) account.setEmail(formData.founderEmail);
       setCurrentStep((prev) => Math.min(prev + 1, totalSteps));
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
@@ -187,20 +217,127 @@ const ProjectFinancing = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const handleSubmit = () => {
-    if (validateStep(4)) {
-      sessionStorage.setItem("projectFinancingData", JSON.stringify(formData));
-      toast({
-        title: t("products.projectFinancing.messages.success"),
-        description: t("products.projectFinancing.messages.successDesc"),
-      });
-      navigate("/apply/confirmation");
-    } else {
+  const handleSubmit = async () => {
+    if (!validateStep(4)) {
       toast({
         title: t("products.projectFinancing.validation.validationError"),
         description: t("products.projectFinancing.validation.correctErrors"),
         variant: "destructive",
       });
+      return;
+    }
+
+    if (!consentGiven) {
+      toast({ variant: "destructive", title: t("apply.step4.consentRequired") });
+      return;
+    }
+
+    if (!user) {
+      await account.authenticateAndResume(formData, formData.founderFirstName, formData.founderLastName);
+      return;
+    }
+
+    await submitApplication(user, formData);
+  };
+
+  const submitApplication = async (currentUser: User, project: typeof formData) => {
+    setIsSubmitting(true);
+
+    // Check if user is blocked from submitting new requests
+    const { data: profile } = await supabase
+      .from("profiles")
+      .select("is_blocked")
+      .eq("id", currentUser.id)
+      .maybeSingle();
+
+    if (profile?.is_blocked) {
+      toast({
+        variant: "destructive",
+        title: t("apply.messages.blockedTitle"),
+        description: t("apply.messages.blockedDesc"),
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      const { data: insertedData, error } = await supabase
+        .from("loan_requests")
+        .insert({
+          user_id: currentUser.id,
+          loan_type: "project",
+          amount: parseFloat(project.fundingAmount),
+          duration: PROJECT_DURATION_MONTHS[project.projectDuration],
+          first_name: project.founderFirstName,
+          last_name: project.founderLastName,
+          email: project.founderEmail,
+          phone: project.founderPhone,
+          status: "pending",
+          project_details: {
+            projectType: project.projectType,
+            projectName: project.projectName,
+            projectDescription: project.projectDescription,
+            projectSector: project.projectSector,
+            projectLocation: project.projectLocation,
+            fundingPurpose: project.fundingPurpose,
+            expectedRevenue: project.expectedRevenue,
+            projectDuration: project.projectDuration,
+            breakEvenDate: project.breakEvenDate,
+            ownContribution: project.ownContribution,
+            companyName: project.companyName,
+            companyStatus: project.companyStatus,
+            siret: project.siret,
+            creationDate: project.creationDate,
+            employeeCount: project.employeeCount,
+            annualRevenue: project.annualRevenue,
+            businessPlan: project.businessPlan,
+            financialProjections: project.financialProjections,
+            marketStudy: project.marketStudy,
+            additionalInfo: project.additionalInfo,
+          },
+        })
+        .select()
+        .single();
+
+      if (error) throw error;
+
+      // Send application confirmation email
+      try {
+        const { error: emailError } = await supabase.functions.invoke("send-application-confirmation", {
+          body: { loanRequestId: insertedData.id },
+        });
+        if (emailError) throw emailError;
+      } catch (emailError) {
+        console.error("Error sending confirmation email:", emailError);
+        toast({
+          variant: "destructive",
+          title: t("common.error"),
+          description: t("apply.messages.emailFailed"),
+        });
+      }
+
+      account.clearPending();
+
+      sessionStorage.setItem("applicationData", JSON.stringify({
+        name: project.founderFirstName,
+        email: project.founderEmail,
+        loanType: "project",
+        amount: project.fundingAmount,
+        duration: project.projectDuration,
+        submittedAt: insertedData.created_at,
+        reference: insertedData.id.substring(0, 8).toUpperCase(),
+      }));
+
+      navigate("/apply/confirmation");
+    } catch (error) {
+      console.error("Erreur lors de la soumission:", error);
+      toast({
+        variant: "destructive",
+        title: t("common.error"),
+        description: t("apply.messages.errorDesc"),
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -264,6 +401,9 @@ const ProjectFinancing = () => {
         </div>
 
         {/* Form Steps */}
+        {account.awaitingConfirmation ? (
+        <AwaitingEmailConfirmation account={account} />
+        ) : (
         <Card className="p-8">
           {currentStep === 1 && (
             <div className="space-y-6">
@@ -758,6 +898,30 @@ const ProjectFinancing = () => {
                     rows={4}
                   />
                 </div>
+
+                <div className="bg-accent/10 border border-accent/30 rounded-lg p-4">
+                  <p className="text-xs text-muted-foreground italic">
+                    {t("apply.step4.creditWarning")}
+                  </p>
+                </div>
+
+                <div className="flex items-start gap-2">
+                  <Checkbox
+                    id="project-consent"
+                    checked={consentGiven}
+                    onCheckedChange={(checked) => setConsentGiven(checked === true)}
+                    className="mt-1"
+                  />
+                  <Label htmlFor="project-consent" className="text-sm font-normal leading-snug text-muted-foreground">
+                    {t("apply.step4.consentPrefix")}{" "}
+                    <Link to="/privacy" className="text-primary hover:underline">
+                      {t("apply.step4.consentLink")}
+                    </Link>
+                    . *
+                  </Label>
+                </div>
+
+                {!user && <ApplicationAccountFields account={account} />}
               </div>
             </div>
           )}
@@ -768,7 +932,7 @@ const ProjectFinancing = () => {
               type="button"
               variant="outline"
               onClick={handlePrevious}
-              disabled={currentStep === 1}
+              disabled={currentStep === 1 || isSubmitting}
               className="flex items-center gap-2"
             >
               <ArrowLeft className="h-4 w-4" />
@@ -788,14 +952,16 @@ const ProjectFinancing = () => {
               <Button
                 type="button"
                 onClick={handleSubmit}
+                disabled={isSubmitting || !consentGiven || account.termsMissing}
                 className="flex items-center gap-2"
               >
-                {t("products.projectFinancing.navigation.submit")}
+                {isSubmitting ? t("apply.navigation.submitting") : t("products.projectFinancing.navigation.submit")}
                 <CheckCircle className="h-4 w-4" />
               </Button>
             )}
           </div>
         </Card>
+        )}
       </div>
 
       <Footer />
