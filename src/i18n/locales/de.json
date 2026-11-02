@@ -902,7 +902,8 @@
     "consentTermsLink": "Allgemeinen Geschäftsbedingungen",
     "consentAnd": "und die",
     "consentPrivacyLink": "Datenschutzrichtlinie",
-    "consentRequired": "Bitte akzeptieren Sie die AGB und die Datenschutzrichtlinie, um ein Konto zu erstellen."
+    "consentRequired": "Bitte akzeptieren Sie die AGB und die Datenschutzrichtlinie, um ein Konto zu erstellen.",
+    "resetEmailSentTo": "Eine E-Mail zum Zurücksetzen wurde an {{email}} gesendet. Prüfen Sie auch Ihren Spam-Ordner."
   },
   "dashboard": {
     "userTitle": "Meine Kreditanträge",

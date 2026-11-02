@@ -936,7 +936,8 @@
     "consentTermsLink": "algemene voorwaarden",
     "consentAnd": "en het",
     "consentPrivacyLink": "privacybeleid",
-    "consentRequired": "Accepteer de algemene voorwaarden en het privacybeleid om een account aan te maken."
+    "consentRequired": "Accepteer de algemene voorwaarden en het privacybeleid om een account aan te maken.",
+    "resetEmailSentTo": "Er is een herstelmail verzonden naar {{email}}. Controleer ook uw spammap."
   },
   "dashboard": {
     "userTitle": "Mijn kredietaanvragen",

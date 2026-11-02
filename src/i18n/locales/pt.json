@@ -936,7 +936,8 @@
     "consentTermsLink": "termos gerais",
     "consentAnd": "e a",
     "consentPrivacyLink": "política de privacidade",
-    "consentRequired": "Por favor, aceite os termos gerais e a política de privacidade para criar uma conta."
+    "consentRequired": "Por favor, aceite os termos gerais e a política de privacidade para criar uma conta.",
+    "resetEmailSentTo": "Foi enviado um e-mail de redefinição para {{email}}. Verifique também a pasta de spam."
   },
   "dashboard": {
     "userTitle": "Os meus pedidos de crédito",
