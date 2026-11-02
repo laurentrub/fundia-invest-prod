@@ -890,7 +890,8 @@
     "help": {
       "title": "Hulp nodig?"
     },
-    "backHome": "Terug naar home"
+    "backHome": "Terug naar home",
+    "trackRequest": "Mijn aanvraag volgen"
   },
   "auth": {
     "welcome": "Welkom",

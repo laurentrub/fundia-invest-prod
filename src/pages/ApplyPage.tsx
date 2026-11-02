@@ -522,12 +522,17 @@ const ApplyPage = () => {
       // Clear saved application data
       localStorage.removeItem(PENDING_APPLICATION_KEY);
       
-      toast({
-        title: t('apply.messages.success'),
-        description: t('apply.messages.successDesc'),
-      });
-      
-      navigate('/dashboard');
+      sessionStorage.setItem('applicationData', JSON.stringify({
+        name: application.firstName,
+        email: application.email,
+        loanType: application.loanType,
+        amount: application.amount,
+        duration: application.duration,
+        submittedAt: insertedData.created_at,
+        reference: insertedData.id.substring(0, 8).toUpperCase(),
+      }));
+
+      navigate('/apply/confirmation');
     } catch (error: any) {
       console.error('Erreur lors de la soumission:', error);
       toast({

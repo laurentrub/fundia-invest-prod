@@ -1640,5 +1640,39 @@
       "activeSubtitle": "Ihr Netzwerkzugang ist aktiv.",
       "exploreCta": "Netzwerk erkunden"
     }
+  },
+  "confirmation": {
+    "title": "Antrag erfolgreich gesendet!",
+    "thankYou": "Vielen Dank {{name}}, Ihr Kreditantrag ist bei uns eingegangen.",
+    "summary": "Zusammenfassung Ihres Antrags",
+    "loanType": "Kreditart",
+    "amount": "Beantragter Betrag",
+    "duration": "Laufzeit",
+    "submittedAt": "Eingangsdatum",
+    "reference": "Referenznummer",
+    "nextSteps": {
+      "title": "Nächste Schritte",
+      "step1": {
+        "title": "Prüfung Ihres Antrags",
+        "description": "Unser Team prüft Ihren Antrag innerhalb der nächsten 24 Stunden."
+      },
+      "step2": {
+        "title": "Bestätigung per E-Mail",
+        "description": "Sie erhalten eine Bestätigung an {{email}} mit den Einzelheiten Ihres Antrags und den einzureichenden Unterlagen."
+      },
+      "step3": {
+        "title": "Kontakt durch unser Team",
+        "description": "Ein Berater wird Sie kontaktieren, um Ihre Unterlagen abzuschließen und Ihre Fragen zu beantworten."
+      },
+      "step4": {
+        "title": "Endgültige Entscheidung",
+        "description": "Nach vollständiger Prüfung Ihrer Unterlagen erhalten Sie innerhalb von 2-5 Werktagen eine endgültige Antwort."
+      }
+    },
+    "help": {
+      "title": "Brauchen Sie Hilfe?"
+    },
+    "backHome": "Zurück zur Startseite",
+    "trackRequest": "Meinen Antrag verfolgen"
   }
 }

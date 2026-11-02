@@ -1333,5 +1333,39 @@
       "alreadyConfirmed": "I have confirmed my email",
       "confirmationResent": "Confirmation email sent again."
     }
+  },
+  "confirmation": {
+    "title": "Application Sent Successfully!",
+    "thankYou": "Thank you {{name}}, your credit application has been received.",
+    "summary": "Summary of your application",
+    "loanType": "Credit type",
+    "amount": "Amount requested",
+    "duration": "Term",
+    "submittedAt": "Submission date",
+    "reference": "Reference number",
+    "nextSteps": {
+      "title": "Next Steps",
+      "step1": {
+        "title": "Review of your application",
+        "description": "Our team will review your application within the next 24 hours."
+      },
+      "step2": {
+        "title": "Email confirmation",
+        "description": "You will receive a confirmation email at {{email}} with the details of your application and the documents to provide."
+      },
+      "step3": {
+        "title": "Contact from our team",
+        "description": "An advisor will contact you to finalize your file and answer your questions."
+      },
+      "step4": {
+        "title": "Final decision",
+        "description": "After a full review of your file, you will receive a final answer within 2-5 business days."
+      }
+    },
+    "help": {
+      "title": "Need help?"
+    },
+    "backHome": "Back to home",
+    "trackRequest": "Track my application"
   }
 }

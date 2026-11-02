@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useAuth } from "@/hooks/useAuth";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Card } from "@/components/ui/card";
@@ -14,11 +15,13 @@ interface ApplicationData {
   amount: string;
   duration: string;
   submittedAt: string;
+  reference: string;
 }
 
 const ApplyConfirmation = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
+  const { user } = useAuth();
   const [applicationData, setApplicationData] = useState<ApplicationData | null>(null);
 
   useEffect(() => {
@@ -32,7 +35,6 @@ const ApplyConfirmation = () => {
     try {
       const data = JSON.parse(storedData);
       setApplicationData(data);
-      sessionStorage.removeItem('applicationData');
     } catch (error) {
       console.error('Erreur lors du parsing des données:', error);
       navigate('/apply');
@@ -111,7 +113,7 @@ const ApplyConfirmation = () => {
 
               <div className="bg-accent/10 border border-accent/30 rounded-lg p-4 mt-6">
                 <p className="text-sm text-foreground">
-                  <strong>{t('confirmation.reference')}:</strong> {applicationData.submittedAt.replace(/[-:T.Z]/g, '').substring(0, 12)}
+                  <strong>{t('confirmation.reference')}:</strong> {applicationData.reference}
                 </p>
               </div>
             </div>
@@ -187,10 +189,18 @@ const ApplyConfirmation = () => {
           </Card>
 
           <p className="text-xs text-center text-primary-foreground/70 italic mt-6">
-            Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager.
+            {t('apply.step4.creditWarning')}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
+            {user && (
+              <Button asChild className="flex-1">
+                <Link to="/dashboard">
+                  {t('confirmation.trackRequest')}
+                </Link>
+              </Button>
+            )}
+
             <Button asChild className="flex-1">
               <Link to="/">
                 <Home className="h-4 w-4 mr-2" />

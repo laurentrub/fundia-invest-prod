@@ -881,7 +881,8 @@
     "help": {
       "title": "Besoin d'aide ?"
     },
-    "backHome": "Retour à l'accueil"
+    "backHome": "Retour à l'accueil",
+    "trackRequest": "Suivre ma demande"
   },
   "auth": {
     "welcome": "Bienvenue",

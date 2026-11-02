@@ -890,7 +890,8 @@
     "help": {
       "title": "Precisa de ajuda?"
     },
-    "backHome": "Voltar ao início"
+    "backHome": "Voltar ao início",
+    "trackRequest": "Acompanhar o meu pedido"
   },
   "auth": {
     "welcome": "Bem-vindo",

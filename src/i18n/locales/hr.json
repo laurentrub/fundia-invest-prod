@@ -1399,5 +1399,39 @@
       "activeSubtitle": "Vaš pristup mreži je aktivan.",
       "exploreCta": "Istražiti mrežu"
     }
+  },
+  "confirmation": {
+    "title": "Zahtjev je uspješno poslan!",
+    "thankYou": "Hvala, {{name}}, zaprimili smo vaš zahtjev za kredit.",
+    "summary": "Sažetak vašeg zahtjeva",
+    "loanType": "Vrsta kredita",
+    "amount": "Traženi iznos",
+    "duration": "Trajanje",
+    "submittedAt": "Datum podnošenja",
+    "reference": "Referentni broj",
+    "nextSteps": {
+      "title": "Sljedeći koraci",
+      "step1": {
+        "title": "Provjera vašeg zahtjeva",
+        "description": "Naš će tim pregledati vaš zahtjev u sljedeća 24 sata."
+      },
+      "step2": {
+        "title": "Potvrda e-poštom",
+        "description": "Na {{email}} ćete primiti potvrdu s pojedinostima zahtjeva i dokumentima koje trebate dostaviti."
+      },
+      "step3": {
+        "title": "Kontakt našeg tima",
+        "description": "Savjetnik će vas kontaktirati kako bi dovršio vaš predmet i odgovorio na vaša pitanja."
+      },
+      "step4": {
+        "title": "Konačna odluka",
+        "description": "Nakon cjelovite provjere predmeta konačan odgovor dobit ćete u roku od 2 do 5 radnih dana."
+      }
+    },
+    "help": {
+      "title": "Trebate pomoć?"
+    },
+    "backHome": "Povratak na početnu",
+    "trackRequest": "Prati moj zahtjev"
   }
 }
