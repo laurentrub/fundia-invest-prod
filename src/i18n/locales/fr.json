@@ -751,7 +751,8 @@
       "disclaimer": "En soumettant ce formulaire, vous acceptez que vos données soient traitées dans le cadre de votre demande de crédit. Vos informations sont sécurisées et confidentielles.",
       "consentPrefix": "J'accepte que mes données soient utilisées pour traiter ma demande de crédit, conformément à la",
       "consentLink": "politique de confidentialité",
-      "consentRequired": "Merci d'accepter la politique de confidentialité pour soumettre votre demande."
+      "consentRequired": "Merci d'accepter la politique de confidentialité pour soumettre votre demande.",
+      "creditWarning": "Un crédit vous engage et doit être remboursé. Vérifiez vos capacités de remboursement avant de vous engager."
     },
     "loanTypes": {
       "personal": "Crédit Personnel",
@@ -813,7 +814,12 @@
       "postalCodeInvalid": "Code postal invalide",
       "postalCodeMax": "Maximum 10 caractères",
       "countryRequired": "Le pays est requis",
-      "validationError": "Erreur de validation"
+      "validationError": "Erreur de validation",
+      "contractTypeRequired": "Le type de contrat est requis",
+      "invalidEmail": "Adresse e-mail invalide",
+      "invalidPhone": "Numéro de téléphone invalide",
+      "invalidPostalCode": "Code postal invalide",
+      "maxCharacters": "Maximum {{count}} caractères"
     },
     "messages": {
       "dataRestored": "Données restaurées",
@@ -825,7 +831,23 @@
       "error": "Erreur",
       "errorDesc": "Une erreur est survenue lors de l'envoi de votre demande",
       "blockedTitle": "Demande impossible",
-      "blockedDesc": "Votre compte ne permet plus de soumettre de nouvelles demandes de crédit. Veuillez contacter notre service client pour plus d'informations."
+      "blockedDesc": "Votre compte ne permet plus de soumettre de nouvelles demandes de crédit. Veuillez contacter notre service client pour plus d'informations.",
+      "emailFailed": "La demande a été enregistrée, mais l'envoi de l'email de confirmation a échoué."
+    },
+    "account": {
+      "signupTitle": "Créez votre compte pour envoyer la demande",
+      "signupDesc": "Il vous permettra de suivre votre dossier. Vos informations sont conservées.",
+      "loginTitle": "Connectez-vous pour envoyer la demande",
+      "loginDesc": "Votre demande sera envoyée dès votre connexion.",
+      "switchToLogin": "Vous avez déjà un compte ? Se connecter",
+      "switchToSignup": "Pas encore de compte ? En créer un",
+      "invalidCredentials": "Email ou mot de passe incorrect.",
+      "emailExists": "Un compte existe déjà avec cet email. Connectez-vous pour envoyer votre demande.",
+      "awaitingTitle": "Plus qu'une étape : confirmez votre email",
+      "awaitingDesc": "Nous avons envoyé un lien à {{email}}. Cliquez dessus et votre demande sera envoyée automatiquement.",
+      "awaitingHint": "Vos informations sont sauvegardées sur cet appareil : ouvrez le lien depuis cet appareil. Pensez à vérifier vos spams.",
+      "alreadyConfirmed": "J'ai confirmé mon email",
+      "confirmationResent": "Email de confirmation renvoyé."
     }
   },
   "confirmation": {
@@ -1101,7 +1123,9 @@
       "duration": "Durée",
       "date": "Date de demande",
       "historyTab": "Historique",
-      "notesTab": "Notes internes"
+      "notesTab": "Notes internes",
+      "applicationFile": "Dossier du demandeur",
+      "noApplicationFile": "Ces informations n'ont pas été conservées pour cette demande."
     },
     "messages": {
       "loadError": "Erreur lors du chargement des données",

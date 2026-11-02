@@ -760,7 +760,8 @@
       "disclaimer": "Ao submeter este formulário, concorda que os seus dados sejam tratados no âmbito do seu pedido de crédito. As suas informações são seguras e confidenciais.",
       "consentPrefix": "Aceito que os meus dados sejam utilizados para processar o meu pedido de crédito, de acordo com a",
       "consentLink": "política de privacidade",
-      "consentRequired": "Por favor, aceite a política de privacidade para submeter o seu pedido."
+      "consentRequired": "Por favor, aceite a política de privacidade para submeter o seu pedido.",
+      "creditWarning": "Um crédito compromete-o e tem de ser reembolsado. Verifique a sua capacidade de reembolso antes de se comprometer."
     },
     "navigation": {
       "previous": "Anterior",
@@ -794,7 +795,19 @@
       "postalCodeInvalid": "Código postal inválido",
       "postalCodeMax": "Máximo 10 caracteres",
       "countryRequired": "O país é obrigatório",
-      "validationError": "Erro de validação"
+      "validationError": "Erro de validação",
+      "annualRevenueRequired": "O volume de negócios anual é obrigatório",
+      "contractEndDateRequired": "A data de fim do contrato é obrigatória",
+      "contractStartDateRequired": "A data de início do contrato é obrigatória",
+      "leaseStartDateRequired": "A data de início do arrendamento é obrigatória",
+      "monthlyIncomeRequired": "O rendimento mensal é obrigatório",
+      "monthlyMortgageRequired": "A prestação mensal do crédito à habitação é obrigatória",
+      "mortgageStatusRequired": "Indique se tem um crédito à habitação",
+      "contractTypeRequired": "O tipo de contrato é obrigatório",
+      "invalidEmail": "E-mail inválido",
+      "invalidPhone": "Número de telefone inválido",
+      "invalidPostalCode": "Código postal inválido",
+      "maxCharacters": "Máximo de {{count}} caracteres"
     },
     "messages": {
       "dataRestored": "Dados restaurados",
@@ -804,7 +817,46 @@
       "success": "Pedido enviado!",
       "successDesc": "O seu pedido de crédito foi submetido com sucesso",
       "error": "Erro",
-      "errorDesc": "Ocorreu um erro ao enviar o seu pedido"
+      "errorDesc": "Ocorreu um erro ao enviar o seu pedido",
+      "blockedDesc": "A sua conta já não permite enviar novos pedidos de crédito. Contacte o nosso serviço de apoio ao cliente.",
+      "blockedTitle": "Pedido impossível",
+      "emailFailed": "O pedido foi registado, mas não foi possível enviar o e-mail de confirmação."
+    },
+    "account": {
+      "signupTitle": "Crie a sua conta para enviar o pedido",
+      "signupDesc": "Permite-lhe acompanhar o seu processo. Os seus dados ficam guardados.",
+      "loginTitle": "Inicie sessão para enviar o pedido",
+      "loginDesc": "O seu pedido será enviado assim que iniciar sessão.",
+      "switchToLogin": "Já tem conta? Iniciar sessão",
+      "switchToSignup": "Ainda não tem conta? Criar uma",
+      "invalidCredentials": "E-mail ou palavra-passe incorretos.",
+      "emailExists": "Já existe uma conta com este e-mail. Inicie sessão para enviar o seu pedido.",
+      "awaitingTitle": "Último passo: confirme o seu e-mail",
+      "awaitingDesc": "Enviámos uma ligação para {{email}}. Clique nela e o seu pedido será enviado automaticamente.",
+      "awaitingHint": "Os seus dados estão guardados neste dispositivo: abra a ligação neste dispositivo. Verifique também a pasta de spam.",
+      "alreadyConfirmed": "Já confirmei o meu e-mail",
+      "confirmationResent": "E-mail de confirmação reenviado."
+    },
+    "durations": {
+      "months": "{{count}} meses"
+    },
+    "employmentTypes": {
+      "cdd": "Contrato a termo",
+      "cdi": "Contrato sem termo",
+      "retired": "Reformado/a",
+      "selfEmployed": "Trabalhador/a independente"
+    },
+    "housingTypes": {
+      "other": "Outro",
+      "owner": "Proprietário/a",
+      "renter": "Inquilino/a"
+    },
+    "loanTypes": {
+      "auto": "Crédito automóvel",
+      "business": "Crédito profissional",
+      "consolidation": "Consolidação de créditos",
+      "home": "Crédito para obras",
+      "personal": "Crédito pessoal"
     }
   },
   "confirmation": {

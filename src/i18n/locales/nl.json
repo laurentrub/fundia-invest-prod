@@ -760,7 +760,8 @@
       "disclaimer": "Door dit formulier in te dienen, stemt u ermee in dat uw gegevens worden verwerkt in het kader van uw kredietaanvraag. Uw informatie is veilig en vertrouwelijk.",
       "consentPrefix": "Ik ga ermee akkoord dat mijn gegevens worden gebruikt om mijn kredietaanvraag te verwerken, in overeenstemming met het",
       "consentLink": "privacybeleid",
-      "consentRequired": "Accepteer het privacybeleid om uw aanvraag in te dienen."
+      "consentRequired": "Accepteer het privacybeleid om uw aanvraag in te dienen.",
+      "creditWarning": "Een lening verplicht u tot terugbetaling. Controleer of u de lening kunt terugbetalen voordat u zich verbindt."
     },
     "navigation": {
       "previous": "Vorige",
@@ -794,7 +795,19 @@
       "postalCodeInvalid": "Ongeldige postcode",
       "postalCodeMax": "Maximaal 10 tekens",
       "countryRequired": "Land is vereist",
-      "validationError": "Validatiefout"
+      "validationError": "Validatiefout",
+      "annualRevenueRequired": "De jaaromzet is verplicht",
+      "contractEndDateRequired": "De einddatum van het contract is verplicht",
+      "contractStartDateRequired": "De begindatum van het contract is verplicht",
+      "leaseStartDateRequired": "De begindatum van de huur is verplicht",
+      "monthlyIncomeRequired": "Het maandinkomen is verplicht",
+      "monthlyMortgageRequired": "Het maandbedrag van de hypotheek is verplicht",
+      "mortgageStatusRequired": "Geef aan of u een hypotheek heeft",
+      "contractTypeRequired": "Het type contract is verplicht",
+      "invalidEmail": "Ongeldig e-mailadres",
+      "invalidPhone": "Ongeldig telefoonnummer",
+      "invalidPostalCode": "Ongeldige postcode",
+      "maxCharacters": "Maximaal {{count}} tekens"
     },
     "messages": {
       "dataRestored": "Gegevens hersteld",
@@ -804,7 +817,46 @@
       "success": "Aanvraag verzonden!",
       "successDesc": "Uw kredietaanvraag is succesvol ingediend",
       "error": "Fout",
-      "errorDesc": "Er is een fout opgetreden bij het verzenden van uw aanvraag"
+      "errorDesc": "Er is een fout opgetreden bij het verzenden van uw aanvraag",
+      "blockedDesc": "Met uw account kunt u geen nieuwe kredietaanvragen meer indienen. Neem contact op met onze klantenservice.",
+      "blockedTitle": "Aanvraag niet mogelijk",
+      "emailFailed": "De aanvraag is opgeslagen, maar de bevestigingsmail kon niet worden verzonden."
+    },
+    "account": {
+      "signupTitle": "Maak uw account aan om de aanvraag te verzenden",
+      "signupDesc": "Zo kunt u uw aanvraag volgen. Uw gegevens blijven bewaard.",
+      "loginTitle": "Log in om de aanvraag te verzenden",
+      "loginDesc": "Uw aanvraag wordt verzonden zodra u bent ingelogd.",
+      "switchToLogin": "Heeft u al een account? Inloggen",
+      "switchToSignup": "Nog geen account? Maak er een aan",
+      "invalidCredentials": "Onjuist e-mailadres of wachtwoord.",
+      "emailExists": "Er bestaat al een account met dit e-mailadres. Log in om uw aanvraag te verzenden.",
+      "awaitingTitle": "Nog één stap: bevestig uw e-mailadres",
+      "awaitingDesc": "We hebben een link naar {{email}} gestuurd. Klik erop en uw aanvraag wordt automatisch verzonden.",
+      "awaitingHint": "Uw gegevens zijn op dit apparaat bewaard: open de link dus op dit apparaat. Controleer ook uw spammap.",
+      "alreadyConfirmed": "Ik heb mijn e-mailadres bevestigd",
+      "confirmationResent": "Bevestigingsmail opnieuw verzonden."
+    },
+    "durations": {
+      "months": "{{count}} maanden"
+    },
+    "employmentTypes": {
+      "cdd": "Tijdelijk contract",
+      "cdi": "Vast contract",
+      "retired": "Gepensioneerd",
+      "selfEmployed": "Zelfstandige"
+    },
+    "housingTypes": {
+      "other": "Overig",
+      "owner": "Eigenaar",
+      "renter": "Huurder"
+    },
+    "loanTypes": {
+      "auto": "Autolening",
+      "business": "Zakelijke lening",
+      "consolidation": "Kredietconsolidatie",
+      "home": "Renovatielening",
+      "personal": "Persoonlijke lening"
     }
   },
   "confirmation": {

@@ -760,7 +760,8 @@
       "disclaimer": "Podnošenjem ovog obrasca pristajete da se vaši podaci obrađuju u okviru vašeg zahtjeva za kredit. Vaše informacije su sigurne i povjerljive.",
       "consentPrefix": "Slažem se da se moji podaci koriste za obradu mog zahtjeva za kredit, u skladu s",
       "consentLink": "politikom privatnosti",
-      "consentRequired": "Molimo prihvatite politiku privatnosti za slanje zahtjeva."
+      "consentRequired": "Molimo prihvatite politiku privatnosti za slanje zahtjeva.",
+      "creditWarning": "Kredit vas obvezuje i mora se otplatiti. Prije preuzimanja obveze provjerite svoju sposobnost otplate."
     },
     "navigation": {
       "previous": "Prethodno",
@@ -794,7 +795,19 @@
       "postalCodeInvalid": "Neispravan poštanski broj",
       "postalCodeMax": "Maksimalno 10 znakova",
       "countryRequired": "Država je obavezna",
-      "validationError": "Greška pri validaciji"
+      "validationError": "Greška pri validaciji",
+      "annualRevenueRequired": "Godišnji prihod je obavezan",
+      "contractEndDateRequired": "Datum završetka ugovora je obavezan",
+      "contractStartDateRequired": "Datum početka ugovora je obavezan",
+      "leaseStartDateRequired": "Datum početka najma je obavezan",
+      "monthlyIncomeRequired": "Mjesečni prihod je obavezan",
+      "monthlyMortgageRequired": "Mjesečna rata stambenog kredita je obavezna",
+      "mortgageStatusRequired": "Navedite imate li stambeni kredit",
+      "contractTypeRequired": "Vrsta ugovora je obavezna",
+      "invalidEmail": "Nevažeća e-mail adresa",
+      "invalidPhone": "Nevažeći telefonski broj",
+      "invalidPostalCode": "Nevažeći poštanski broj",
+      "maxCharacters": "Najviše {{count}} znakova"
     },
     "messages": {
       "dataRestored": "Podaci vraćeni",
@@ -804,7 +817,46 @@
       "success": "Zahtjev poslan!",
       "successDesc": "Vaš zahtjev za kredit je uspješno podnesen",
       "error": "Greška",
-      "errorDesc": "Došlo je do greške pri slanju vašeg zahtjeva"
+      "errorDesc": "Došlo je do greške pri slanju vašeg zahtjeva",
+      "blockedDesc": "Vaš račun više ne omogućuje slanje novih zahtjeva za kredit. Obratite se našoj korisničkoj službi.",
+      "blockedTitle": "Zahtjev nije moguć",
+      "emailFailed": "Zahtjev je spremljen, ali e-mail s potvrdom nije bilo moguće poslati."
+    },
+    "account": {
+      "signupTitle": "Izradite račun kako biste poslali zahtjev",
+      "signupDesc": "Omogućuje vam praćenje zahtjeva. Vaši su podaci spremljeni.",
+      "loginTitle": "Prijavite se kako biste poslali zahtjev",
+      "loginDesc": "Vaš će zahtjev biti poslan čim se prijavite.",
+      "switchToLogin": "Već imate račun? Prijavite se",
+      "switchToSignup": "Još nemate račun? Izradite ga",
+      "invalidCredentials": "Netočan e-mail ili lozinka.",
+      "emailExists": "Račun s ovom e-mail adresom već postoji. Prijavite se kako biste poslali zahtjev.",
+      "awaitingTitle": "Još jedan korak: potvrdite svoju e-mail adresu",
+      "awaitingDesc": "Poslali smo poveznicu na {{email}}. Kliknite je i vaš će zahtjev biti automatski poslan.",
+      "awaitingHint": "Vaši su podaci spremljeni na ovom uređaju, stoga poveznicu otvorite na njemu. Provjerite i mapu neželjene pošte.",
+      "alreadyConfirmed": "Potvrdio/la sam e-mail adresu",
+      "confirmationResent": "E-mail za potvrdu ponovno je poslan."
+    },
+    "durations": {
+      "months": "{{count}} mjeseci"
+    },
+    "employmentTypes": {
+      "cdd": "Ugovor na određeno",
+      "cdi": "Ugovor na neodređeno",
+      "retired": "Umirovljenik/ca",
+      "selfEmployed": "Samozaposlen/a"
+    },
+    "housingTypes": {
+      "other": "Ostalo",
+      "owner": "Vlasnik/ca",
+      "renter": "Podstanar/ka"
+    },
+    "loanTypes": {
+      "auto": "Kredit za vozilo",
+      "business": "Poslovni kredit",
+      "consolidation": "Konsolidacija kredita",
+      "home": "Kredit za obnovu",
+      "personal": "Osobni kredit"
     }
   },
   "auth": {
@@ -951,7 +1003,11 @@
     "required": "Obavezno",
     "learnMore": "Saznaj više",
     "apply": "Podnesi zahtjev",
-    "perMonth": "/mjesec"
+    "perMonth": "/mjesec",
+    "validationError": "Pogreška provjere",
+    "select": "Odaberite",
+    "yes": "Da",
+    "no": "Ne"
   },
   "products": {
     "personalLoan": {

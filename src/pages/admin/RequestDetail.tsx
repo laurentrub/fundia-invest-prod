@@ -57,6 +57,22 @@ interface LoanRequest {
   status: string;
   created_at: string;
   updated_at: string;
+  purpose: string | null;
+  birth_date: string | null;
+  employment_status: string | null;
+  contract_start_date: string | null;
+  contract_end_date: string | null;
+  monthly_income: number | null;
+  annual_revenue: number | null;
+  bank_name: string | null;
+  housing_status: string | null;
+  lease_start_date: string | null;
+  has_mortgage: boolean | null;
+  monthly_mortgage: number | null;
+  address: string | null;
+  city: string | null;
+  postal_code: string | null;
+  country: string | null;
 }
 
 interface StatusHistoryItem {
@@ -516,6 +532,41 @@ export default function RequestDetail() {
 
   const StatusIcon = statusIcons[request.status] || Clock;
 
+
+  const formatDate = (date: string | null) => date && new Date(date).toLocaleDateString('fr-FR');
+  const formatEuros = (value: number | null) => value !== null && `${value.toLocaleString('fr-FR')} €`;
+  const employmentLabels: Record<string, string> = {
+    cdi: t('apply.employmentTypes.cdi'),
+    cdd: t('apply.employmentTypes.cdd'),
+    'self-employed': t('apply.employmentTypes.selfEmployed'),
+    retired: t('apply.employmentTypes.retired'),
+  };
+  const housingLabels: Record<string, string> = {
+    owner: t('apply.housingTypes.owner'),
+    renter: t('apply.housingTypes.renter'),
+    other: t('apply.housingTypes.other'),
+  };
+  const fullAddress = [request.address, [request.postal_code, request.city].filter(Boolean).join(' '), request.country]
+    .filter(Boolean)
+    .join(', ');
+
+  // Les demandes antérieures n'ont pas ces informations : seuls les champs renseignés s'affichent
+  const applicationDetails = [
+    { label: t('apply.step1.purpose'), value: request.purpose },
+    { label: t('apply.step2.birthDate'), value: formatDate(request.birth_date) },
+    { label: t('apply.step4.address'), value: fullAddress },
+    { label: t('apply.step3.employmentStatus'), value: request.employment_status && employmentLabels[request.employment_status] },
+    { label: t('apply.step3.contractStartDate'), value: formatDate(request.contract_start_date) },
+    { label: t('apply.step3.contractEndDate'), value: formatDate(request.contract_end_date) },
+    { label: t('apply.step3.monthlyIncome'), value: formatEuros(request.monthly_income) },
+    { label: t('apply.step3.annualRevenue'), value: formatEuros(request.annual_revenue) },
+    { label: t('apply.step3.bankName'), value: request.bank_name },
+    { label: t('apply.step3.housingStatus'), value: request.housing_status && housingLabels[request.housing_status] },
+    { label: t('apply.step3.leaseStartDate'), value: formatDate(request.lease_start_date) },
+    { label: t('apply.step3.hasMortgage'), value: request.has_mortgage === null ? null : t(request.has_mortgage ? 'common.yes' : 'common.no') },
+    { label: t('apply.step3.monthlyMortgage'), value: formatEuros(request.monthly_mortgage) },
+  ].filter((detail) => detail.value);
+
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -622,6 +673,30 @@ export default function RequestDetail() {
                   </div>
                 </div>
               </div>
+            </CardContent>
+          </Card>
+
+          {/* Application file */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <FileText className="h-5 w-5" />
+                {t('admin.request.applicationFile')}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              {applicationDetails.length > 0 ? (
+                <dl className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {applicationDetails.map(({ label, value }) => (
+                    <div key={label}>
+                      <dt className="text-sm text-muted-foreground">{label}</dt>
+                      <dd className="font-medium break-words">{value}</dd>
+                    </div>
+                  ))}
+                </dl>
+              ) : (
+                <p className="text-sm text-muted-foreground">{t('admin.request.noApplicationFile')}</p>
+              )}
             </CardContent>
           </Card>
 

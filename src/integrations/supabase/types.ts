@@ -116,6 +116,22 @@ export type Database = {
       }
       loan_requests: {
         Row: {
+          address: string | null
+          annual_revenue: number | null
+          bank_name: string | null
+          birth_date: string | null
+          city: string | null
+          contract_end_date: string | null
+          contract_start_date: string | null
+          country: string | null
+          employment_status: string | null
+          has_mortgage: boolean | null
+          housing_status: string | null
+          lease_start_date: string | null
+          monthly_income: number | null
+          monthly_mortgage: number | null
+          postal_code: string | null
+          purpose: string | null
           amount: number
           created_at: string
           duration: number
@@ -130,6 +146,22 @@ export type Database = {
           user_id: string
         }
         Insert: {
+          address?: string | null
+          annual_revenue?: number | null
+          bank_name?: string | null
+          birth_date?: string | null
+          city?: string | null
+          contract_end_date?: string | null
+          contract_start_date?: string | null
+          country?: string | null
+          employment_status?: string | null
+          has_mortgage?: boolean | null
+          housing_status?: string | null
+          lease_start_date?: string | null
+          monthly_income?: number | null
+          monthly_mortgage?: number | null
+          postal_code?: string | null
+          purpose?: string | null
           amount: number
           created_at?: string
           duration: number
@@ -144,6 +176,22 @@ export type Database = {
           user_id: string
         }
         Update: {
+          address?: string | null
+          annual_revenue?: number | null
+          bank_name?: string | null
+          birth_date?: string | null
+          city?: string | null
+          contract_end_date?: string | null
+          contract_start_date?: string | null
+          country?: string | null
+          employment_status?: string | null
+          has_mortgage?: boolean | null
+          housing_status?: string | null
+          lease_start_date?: string | null
+          monthly_income?: number | null
+          monthly_mortgage?: number | null
+          postal_code?: string | null
+          purpose?: string | null
           amount?: number
           created_at?: string
           duration?: number

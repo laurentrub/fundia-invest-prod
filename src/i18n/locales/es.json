@@ -760,7 +760,8 @@
       "disclaimer": "Al enviar este formulario, acepta que sus datos sean procesados en el marco de su solicitud de crédito. Su información es segura y confidencial.",
       "consentPrefix": "Acepto que mis datos se utilicen para procesar mi solicitud de crédito, de acuerdo con la",
       "consentLink": "política de privacidad",
-      "consentRequired": "Por favor acepte la política de privacidad para enviar su solicitud."
+      "consentRequired": "Por favor acepte la política de privacidad para enviar su solicitud.",
+      "creditWarning": "Un crédito le compromete y debe devolverse. Compruebe su capacidad de reembolso antes de comprometerse."
     },
     "navigation": {
       "previous": "Anterior",
@@ -794,7 +795,19 @@
       "postalCodeInvalid": "Código postal inválido",
       "postalCodeMax": "Máximo 10 caracteres",
       "countryRequired": "El país es requerido",
-      "validationError": "Error de validación"
+      "validationError": "Error de validación",
+      "annualRevenueRequired": "La facturación anual es obligatoria",
+      "contractEndDateRequired": "La fecha de fin del contrato es obligatoria",
+      "contractStartDateRequired": "La fecha de inicio del contrato es obligatoria",
+      "leaseStartDateRequired": "La fecha de inicio del alquiler es obligatoria",
+      "monthlyIncomeRequired": "Los ingresos mensuales son obligatorios",
+      "monthlyMortgageRequired": "La cuota mensual de la hipoteca es obligatoria",
+      "mortgageStatusRequired": "Indique si tiene una hipoteca",
+      "contractTypeRequired": "El tipo de contrato es obligatorio",
+      "invalidEmail": "Correo electrónico no válido",
+      "invalidPhone": "Número de teléfono no válido",
+      "invalidPostalCode": "Código postal no válido",
+      "maxCharacters": "Máximo {{count}} caracteres"
     },
     "messages": {
       "dataRestored": "Datos restaurados",
@@ -804,7 +817,46 @@
       "success": "¡Solicitud enviada!",
       "successDesc": "Su solicitud de crédito ha sido enviada con éxito",
       "error": "Error",
-      "errorDesc": "Ocurrió un error al enviar su solicitud"
+      "errorDesc": "Ocurrió un error al enviar su solicitud",
+      "blockedDesc": "Su cuenta ya no permite enviar nuevas solicitudes de crédito. Póngase en contacto con nuestro servicio de atención al cliente.",
+      "blockedTitle": "Solicitud imposible",
+      "emailFailed": "La solicitud se ha registrado, pero no se ha podido enviar el correo de confirmación."
+    },
+    "account": {
+      "signupTitle": "Cree su cuenta para enviar la solicitud",
+      "signupDesc": "Le permitirá seguir su expediente. Sus datos se conservan.",
+      "loginTitle": "Inicie sesión para enviar la solicitud",
+      "loginDesc": "Su solicitud se enviará en cuanto inicie sesión.",
+      "switchToLogin": "¿Ya tiene una cuenta? Iniciar sesión",
+      "switchToSignup": "¿Aún no tiene cuenta? Crear una",
+      "invalidCredentials": "Correo electrónico o contraseña incorrectos.",
+      "emailExists": "Ya existe una cuenta con este correo electrónico. Inicie sesión para enviar su solicitud.",
+      "awaitingTitle": "Un último paso: confirme su correo electrónico",
+      "awaitingDesc": "Hemos enviado un enlace a {{email}}. Haga clic en él y su solicitud se enviará automáticamente.",
+      "awaitingHint": "Sus datos están guardados en este dispositivo: abra el enlace desde este dispositivo. Revise también la carpeta de spam.",
+      "alreadyConfirmed": "Ya he confirmado mi correo electrónico",
+      "confirmationResent": "Correo de confirmación reenviado."
+    },
+    "durations": {
+      "months": "{{count}} meses"
+    },
+    "employmentTypes": {
+      "cdd": "Contrato temporal",
+      "cdi": "Contrato indefinido",
+      "retired": "Jubilado/a",
+      "selfEmployed": "Trabajador/a autónomo/a"
+    },
+    "housingTypes": {
+      "other": "Otro",
+      "owner": "Propietario/a",
+      "renter": "Inquilino/a"
+    },
+    "loanTypes": {
+      "auto": "Crédito para vehículo",
+      "business": "Crédito profesional",
+      "consolidation": "Reunificación de créditos",
+      "home": "Crédito para reformas",
+      "personal": "Crédito personal"
     }
   },
   "confirmation": {

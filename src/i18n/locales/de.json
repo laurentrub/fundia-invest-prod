@@ -760,7 +760,8 @@
       "disclaimer": "Mit dem Absenden dieses Formulars stimmen Sie zu, dass Ihre Daten im Rahmen Ihres Kreditantrags verarbeitet werden. Ihre Informationen sind sicher und vertraulich.",
       "consentPrefix": "Ich stimme zu, dass meine Daten zur Bearbeitung meines Kreditantrags gemäß der",
       "consentLink": "Datenschutzrichtlinie",
-      "consentRequired": "Bitte akzeptieren Sie die Datenschutzrichtlinie, um Ihren Antrag einzureichen."
+      "consentRequired": "Bitte akzeptieren Sie die Datenschutzrichtlinie, um Ihren Antrag einzureichen.",
+      "creditWarning": "Ein Kredit verpflichtet Sie und muss zurückgezahlt werden. Prüfen Sie Ihre Rückzahlungsfähigkeit, bevor Sie sich verpflichten."
     },
     "navigation": {
       "previous": "Zurück",
@@ -794,7 +795,19 @@
       "postalCodeInvalid": "Ungültige Postleitzahl",
       "postalCodeMax": "Maximal 10 Zeichen",
       "countryRequired": "Land erforderlich",
-      "validationError": "Validierungsfehler"
+      "validationError": "Validierungsfehler",
+      "annualRevenueRequired": "Der Jahresumsatz ist erforderlich",
+      "contractEndDateRequired": "Das Vertragsende ist erforderlich",
+      "contractStartDateRequired": "Der Vertragsbeginn ist erforderlich",
+      "leaseStartDateRequired": "Der Mietbeginn ist erforderlich",
+      "monthlyIncomeRequired": "Das monatliche Einkommen ist erforderlich",
+      "monthlyMortgageRequired": "Die monatliche Hypothekenrate ist erforderlich",
+      "mortgageStatusRequired": "Bitte geben Sie an, ob Sie eine Hypothek haben",
+      "contractTypeRequired": "Die Vertragsart ist erforderlich",
+      "invalidEmail": "Ungültige E-Mail-Adresse",
+      "invalidPhone": "Ungültige Telefonnummer",
+      "invalidPostalCode": "Ungültige Postleitzahl",
+      "maxCharacters": "Maximal {{count}} Zeichen"
     },
     "messages": {
       "dataRestored": "Daten wiederhergestellt",
@@ -804,7 +817,46 @@
       "success": "Antrag gesendet!",
       "successDesc": "Ihr Kreditantrag wurde erfolgreich übermittelt",
       "error": "Fehler",
-      "errorDesc": "Bei der Übermittlung Ihres Antrags ist ein Fehler aufgetreten"
+      "errorDesc": "Bei der Übermittlung Ihres Antrags ist ein Fehler aufgetreten",
+      "blockedDesc": "Mit Ihrem Konto können keine neuen Kreditanträge mehr gestellt werden. Bitte wenden Sie sich an unseren Kundenservice.",
+      "blockedTitle": "Antrag nicht möglich",
+      "emailFailed": "Der Antrag wurde gespeichert, die Bestätigungs-E-Mail konnte jedoch nicht gesendet werden."
+    },
+    "account": {
+      "signupTitle": "Erstellen Sie Ihr Konto, um den Antrag zu senden",
+      "signupDesc": "So können Sie Ihren Antrag verfolgen. Ihre Angaben bleiben erhalten.",
+      "loginTitle": "Melden Sie sich an, um den Antrag zu senden",
+      "loginDesc": "Ihr Antrag wird gesendet, sobald Sie angemeldet sind.",
+      "switchToLogin": "Bereits ein Konto? Anmelden",
+      "switchToSignup": "Noch kein Konto? Jetzt erstellen",
+      "invalidCredentials": "E-Mail oder Passwort ist falsch.",
+      "emailExists": "Mit dieser E-Mail-Adresse besteht bereits ein Konto. Melden Sie sich an, um Ihren Antrag zu senden.",
+      "awaitingTitle": "Ein letzter Schritt: Bestätigen Sie Ihre E-Mail-Adresse",
+      "awaitingDesc": "Wir haben einen Link an {{email}} gesendet. Klicken Sie darauf, und Ihr Antrag wird automatisch gesendet.",
+      "awaitingHint": "Ihre Angaben sind auf diesem Gerät gespeichert. Öffnen Sie den Link daher auf diesem Gerät und prüfen Sie auch Ihren Spam-Ordner.",
+      "alreadyConfirmed": "Ich habe meine E-Mail-Adresse bestätigt",
+      "confirmationResent": "Bestätigungs-E-Mail erneut gesendet."
+    },
+    "durations": {
+      "months": "{{count}} Monate"
+    },
+    "employmentTypes": {
+      "cdd": "Befristeter Vertrag",
+      "cdi": "Unbefristeter Vertrag",
+      "retired": "Im Ruhestand",
+      "selfEmployed": "Selbstständig"
+    },
+    "housingTypes": {
+      "other": "Sonstiges",
+      "owner": "Eigentümer/in",
+      "renter": "Mieter/in"
+    },
+    "loanTypes": {
+      "auto": "Autokredit",
+      "business": "Geschäftskredit",
+      "consolidation": "Umschuldung",
+      "home": "Renovierungskredit",
+      "personal": "Privatkredit"
     }
   },
   "auth": {
@@ -951,7 +1003,11 @@
     "required": "Erforderlich",
     "learnMore": "Mehr erfahren",
     "apply": "Jetzt beantragen",
-    "perMonth": "/Monat"
+    "perMonth": "/Monat",
+    "validationError": "Validierungsfehler",
+    "select": "Auswählen",
+    "yes": "Ja",
+    "no": "Nein"
   },
   "products": {
     "personalLoan": {

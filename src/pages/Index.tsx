@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import CreditSimulator from "@/components/credit/CreditSimulator";
@@ -22,7 +23,16 @@ const Index = () => {
   const { t } = useTranslation();
   const [hasPendingApplication, setHasPendingApplication] = useState(false);
   const [showResumeBar, setShowResumeBar] = useState(true);
-  
+  const { user, loading: authLoading } = useAuth();
+  const navigate = useNavigate();
+
+  // Le lien de confirmation peut ramener ici : on reprend la demande en attente
+  useEffect(() => {
+    if (!authLoading && user && localStorage.getItem('pendingLoanApplication')) {
+      navigate('/apply', { replace: true });
+    }
+  }, [user, authLoading, navigate]);
+
   useEffect(() => {
     const savedData = localStorage.getItem('pendingLoanApplication');
     if (savedData) {

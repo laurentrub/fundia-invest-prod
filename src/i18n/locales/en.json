@@ -445,7 +445,11 @@
     "required": "Required",
     "learnMore": "Learn more",
     "apply": "Apply now",
-    "perMonth": "/month"
+    "perMonth": "/month",
+    "validationError": "Validation error",
+    "select": "Select",
+    "yes": "Yes",
+    "no": "No"
   },
   "products": {
     "personalLoan": {
@@ -1162,6 +1166,172 @@
       "activeTitle": "Fundia Network — Active",
       "activeSubtitle": "Your network access is active.",
       "exploreCta": "Explore the network"
+    }
+  },
+  "apply": {
+    "title": "Credit Application",
+    "subtitle": "Complete the form below to get your instant pre-approval",
+    "steps": {
+      "creditDetails": "Credit details",
+      "personalInfo": "Personal information",
+      "financialInfo": "Financial information",
+      "addressReview": "Address & review"
+    },
+    "step1": {
+      "title": "Credit Details",
+      "loanType": "Credit type",
+      "loanTypePlaceholder": "Select the credit type",
+      "personal": "Personal Loan",
+      "auto": "Auto Loan",
+      "home": "Home Improvement Loan",
+      "consolidation": "Debt Consolidation",
+      "business": "Business Loan",
+      "amount": "Credit amount (€)",
+      "amountHint": "Between €1,000 and €75,000",
+      "duration": "Term (months)",
+      "durationPlaceholder": "Select the term",
+      "purpose": "Purpose of the credit",
+      "purposePlaceholder": "E.g. wedding, car purchase, renovation"
+    },
+    "step2": {
+      "title": "Personal Information",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email address",
+      "phone": "Phone number",
+      "birthDate": "Date of birth"
+    },
+    "step3": {
+      "title": "Financial Information",
+      "employmentStatus": "Contract type",
+      "employmentPlaceholder": "Select your contract",
+      "contractStartDate": "Contract start date",
+      "contractEndDate": "Contract end date",
+      "monthlyIncome": "Net monthly income (€)",
+      "annualRevenue": "Annual revenue (€)",
+      "bankName": "What is your bank?",
+      "bankPlaceholder": "E.g. BNP Paribas, Crédit Agricole...",
+      "housingStatus": "Housing status",
+      "housingPlaceholder": "Select your status",
+      "leaseStartDate": "Lease start date",
+      "hasMortgage": "Do you have a mortgage?",
+      "monthlyMortgage": "Monthly mortgage payment (€)"
+    },
+    "step4": {
+      "title": "Address",
+      "address": "Address",
+      "addressPlaceholder": "123 Rue de la Paix",
+      "city": "City",
+      "postalCode": "Postal code",
+      "country": "Country",
+      "summary": "Summary of your application",
+      "loanTypeLabel": "Credit type:",
+      "amountLabel": "Amount:",
+      "durationLabel": "Term:",
+      "nameLabel": "Name:",
+      "emailLabel": "Email:",
+      "phoneLabel": "Phone:",
+      "incomeLabel": "Monthly income:",
+      "disclaimer": "By submitting this form, you agree that your data will be processed as part of your credit application. Your information is secure and confidential.",
+      "consentPrefix": "I agree that my data will be used to process my credit application, in accordance with the",
+      "consentLink": "privacy policy",
+      "consentRequired": "Please accept the privacy policy to submit your application.",
+      "creditWarning": "A loan is a commitment and must be repaid. Check that you can afford the repayments before committing."
+    },
+    "loanTypes": {
+      "personal": "Personal Loan",
+      "auto": "Auto Loan",
+      "home": "Home Improvement Loan",
+      "consolidation": "Debt Consolidation",
+      "business": "Business Loan"
+    },
+    "durations": {
+      "months": "{{count}} months"
+    },
+    "employmentTypes": {
+      "cdi": "Permanent contract",
+      "cdd": "Fixed-term contract",
+      "selfEmployed": "Self-employed",
+      "retired": "Retired"
+    },
+    "housingTypes": {
+      "owner": "Owner",
+      "renter": "Tenant",
+      "other": "Other"
+    },
+    "navigation": {
+      "previous": "Previous",
+      "next": "Next",
+      "submit": "Submit application",
+      "submitting": "Sending..."
+    },
+    "validation": {
+      "loanTypeRequired": "The credit type is required",
+      "amountRequired": "The amount is required",
+      "amountRange": "The amount must be between €1,000 and €75,000",
+      "durationRequired": "The term is required",
+      "purposeMax": "Maximum 500 characters",
+      "firstNameMin": "First name must be at least 2 characters",
+      "firstNameMax": "Maximum 50 characters",
+      "lastNameMin": "Last name must be at least 2 characters",
+      "lastNameMax": "Maximum 50 characters",
+      "emailInvalid": "Invalid email",
+      "emailMax": "Maximum 255 characters",
+      "phoneInvalid": "Invalid phone number",
+      "phoneMax": "Maximum 20 characters",
+      "birthDateRequired": "Date of birth is required",
+      "employmentRequired": "The contract type is required",
+      "contractStartDateRequired": "The contract start date is required",
+      "contractEndDateRequired": "The contract end date is required",
+      "monthlyIncomeRequired": "Monthly income is required",
+      "annualRevenueRequired": "Annual revenue is required",
+      "bankRequired": "The bank name is required",
+      "housingRequired": "Housing status is required",
+      "leaseStartDateRequired": "The lease start date is required",
+      "mortgageStatusRequired": "Please indicate whether you have a mortgage",
+      "monthlyMortgageRequired": "The monthly mortgage payment is required",
+      "fillRequiredFields": "Please fill in all required fields for your situation",
+      "addressMin": "Address must be at least 5 characters",
+      "addressMax": "Maximum 200 characters",
+      "cityMin": "City must be at least 2 characters",
+      "cityMax": "Maximum 100 characters",
+      "postalCodeInvalid": "Invalid postal code",
+      "postalCodeMax": "Maximum 10 characters",
+      "countryRequired": "The country is required",
+      "validationError": "Validation error",
+      "contractTypeRequired": "The contract type is required",
+      "invalidEmail": "Invalid email address",
+      "invalidPhone": "Invalid phone number",
+      "invalidPostalCode": "Invalid postal code",
+      "maxCharacters": "Maximum {{count}} characters"
+    },
+    "messages": {
+      "dataRestored": "Information restored",
+      "dataRestoredDesc": "You can now submit your application",
+      "loginRequired": "Login required",
+      "loginRequiredDesc": "Please log in or create an account to submit your application",
+      "success": "Application sent!",
+      "successDesc": "Your credit application has been submitted successfully",
+      "error": "Error",
+      "errorDesc": "An error occurred while sending your application",
+      "blockedTitle": "Application not possible",
+      "blockedDesc": "Your account can no longer submit new credit applications. Please contact our customer service for more information.",
+      "emailFailed": "Your application has been saved, but the confirmation email could not be sent."
+    },
+    "account": {
+      "signupTitle": "Create your account to send your application",
+      "signupDesc": "It lets you track your application. Your information is saved.",
+      "loginTitle": "Log in to send your application",
+      "loginDesc": "Your application will be sent as soon as you log in.",
+      "switchToLogin": "Already have an account? Log in",
+      "switchToSignup": "No account yet? Create one",
+      "invalidCredentials": "Incorrect email or password.",
+      "emailExists": "An account already exists with this email. Log in to send your application.",
+      "awaitingTitle": "One last step: confirm your email",
+      "awaitingDesc": "We sent a link to {{email}}. Click it and your application will be sent automatically.",
+      "awaitingHint": "Your information is saved on this device, so open the link on this device. Remember to check your spam folder.",
+      "alreadyConfirmed": "I have confirmed my email",
+      "confirmationResent": "Confirmation email sent again."
     }
   }
 }
